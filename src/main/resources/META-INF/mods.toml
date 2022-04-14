@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[39,)"
+license="MIT License"
+issueTrackerURL="https://github.com/brdle/ModName/issues"
+
+
+[[mods]]
+modId="modname"
+version="${file.jarVersion}"
+displayName="ModName"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/modname"
+updateJSONURL="https://brdle.net/modname/update.json"
+logoFile="modname.png"
+logoBlur=false
+credits=""
+authors="brdle"
+description=""
+itemIcon="minecraft:dirt"
+configBackground="minecraft:textures/block/dirt.png"
+
+[[dependencies.modname]]
+    modId="forge"
+    mandatory=true
+    versionRange="[39,)"
+    ordering="NONE"
+    side="BOTH"

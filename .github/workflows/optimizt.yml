@@ -1,0 +1,49 @@
+name: optimizt
+
+on:
+  # Triggers the workflow on push events but only for the “main” branch
+  # and only when there's JPEG/PNG in the commmit
+  push:
+    branches:
+      - 1.18.1
+    paths:
+      - "**.jpe?g"
+      - "**.png"
+  
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Install Node.js to avoid EACCESS errors upon install packages
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install Optimizt
+        run: npm install --global @funboxteam/optimizt
+
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+          fetch-depth: 0 # get all commits (only the last one fetched by default)
+
+      - name: Run Optimizt
+        run: optimizt --lossless --verbose .
+
+      - name: Commit changes
+        run: |
+          git add -A
+          git config --local user.email "actions@github.com"
+          git config --local user.name "github-actions[bot]"
+          git diff --quiet && git diff --staged --quiet \
+            || git commit -am "Optimize Assets (lossless)"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
