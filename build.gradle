@@ -15,8 +15,8 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
 version = "${mc_version}-${mod_version}"
-group = 'net.onvoid.modname' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'ModName'
+group = 'net.onvoid.delightful' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = 'Delightful'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
@@ -31,9 +31,10 @@ minecraft {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
-
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
             mods {
-                modname {
+                delightful {
                     source sourceSets.main
                 }
             }
@@ -43,9 +44,10 @@ minecraft {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
-
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
             mods {
-                modname {
+                delightful {
                     source sourceSets.main
                 }
             }
@@ -57,10 +59,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            args '--mod', 'modname', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', 'delightful', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
             mods {
-                modname {
+                delightful {
                     source sourceSets.main
                 }
             }
@@ -79,6 +81,11 @@ repositories {
         }
     }
     maven {
+        // location of the maven that hosts JEI files
+        name = "Progwml6 maven"
+        url = "https://dvs1.progwml6.com/files/maven/"
+    }
+    maven {
         url = "https://maven.jaackson.me"
     }
 
@@ -90,13 +97,17 @@ repositories {
 
 dependencies {
     minecraft "net.minecraftforge:forge:${mc_version}-${forge_version}"
+    implementation fg.deobf("curse.maven:farmers-delight-398521:${farmers_delight_version}")
+    compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api")
+    // at runtime, use the full JEI jar
+    runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}")
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
 jar {
     manifest {
         attributes([
-                "Specification-Title"     : "modname",
+                "Specification-Title"     : "delightful",
                 "Specification-Vendor"    : "brdle",
                 "Specification-Version"   : "1", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,

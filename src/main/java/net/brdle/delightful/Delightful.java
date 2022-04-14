@@ -1,20 +1,21 @@
-package net.brdle.modname;
+package net.brdle.delightful;
 
+import net.brdle.delightful.proxy.ClientProxy;
+import net.brdle.delightful.proxy.CommonProxy;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.registries.ForgeRegistries;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-@Mod(ModName.MODID)
-public class ModName
+@Mod(Delightful.MODID)
+public class Delightful
 {
-    public static final String MODID = "modname";
-    public static ModName instance;
+    public static final String MODID = "delightful";
+    public static Delightful instance;
     public static CommonProxy proxy;
     private static final Logger LOGGER = LogManager.getLogger();
 
-    public ModName() {
+    public Delightful() {
         instance = this;
         proxy = DistExecutor.safeRunForDist(() -> ClientProxy::new, () -> CommonProxy::new);
         proxy.start();

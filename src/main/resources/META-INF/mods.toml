@@ -1,16 +1,16 @@
 modLoader="javafml"
 loaderVersion="[39,)"
 license="MIT License"
-issueTrackerURL="https://github.com/brdle/ModName/issues"
+issueTrackerURL="https://github.com/brdle/Delightful/issues"
 
 
 [[mods]]
-modId="modname"
+modId="delightful"
 version="${file.jarVersion}"
-displayName="ModName"
-displayURL="https://www.curseforge.com/minecraft/mc-mods/modname"
-updateJSONURL="https://brdle.net/modname/update.json"
-logoFile="modname.png"
+displayName="Delightful"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/delightful"
+updateJSONURL="https://brdle.net/delightful/update.json"
+logoFile="delightful.png"
 logoBlur=false
 credits=""
 authors="brdle"
@@ -18,9 +18,16 @@ description=""
 itemIcon="minecraft:dirt"
 configBackground="minecraft:textures/block/dirt.png"
 
-[[dependencies.modname]]
+[[dependencies.delightful]]
     modId="forge"
     mandatory=true
     versionRange="[39,)"
     ordering="NONE"
+    side="BOTH"
+
+[[dependencies.delightful]]
+    modId="farmersdelight"
+    mandatory=true
+    versionRange="[0,)"
+    ordering="AFTER"
     side="BOTH"
