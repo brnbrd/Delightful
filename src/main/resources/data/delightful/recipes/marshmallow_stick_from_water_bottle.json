@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:sugar"
+    },
+    {
+      "item": "minecraft:potion",
+      "tag": {"Potion": "minecraft:water"}
+    },
+    {
+      "tag": "forge:stick"
+    },
+    {
+      "tag": "forge:stick"
+    }
+  ],
+  "result": {
+    "item": "delightful:marshmallow_stick",
+    "count": 2
+  }
+}

@@ -99,8 +99,11 @@ dependencies {
     minecraft "net.minecraftforge:forge:${mc_version}-${forge_version}"
     implementation fg.deobf("curse.maven:farmers-delight-398521:${farmers_delight_version}")
     compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api")
-    // at runtime, use the full JEI jar
     runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}")
+    runtimeOnly fg.deobf("curse.maven:mysterious-mountain-lib-368098:${mmlib_version}")
+    runtimeOnly fg.deobf("curse.maven:corn-delight-577805:${corn_delight_version}")
+    runtimeOnly fg.deobf("curse.maven:immersive-engineering-231951:${immersive_engineering_version}")
+    runtimeOnly fg.deobf("curse.maven:enderite-lieonlion-550532:${enderite_version}")
 }
 
 // Example for how to get properties into the manifest for reading at runtime.

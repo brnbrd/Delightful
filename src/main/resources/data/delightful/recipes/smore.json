@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "farmersdelight:honey_cookie"
+    },
+    {
+      "item": "minecraft:cocoa_beans"
+    },
+    {
+      "tag": "forge:milk"
+    },
+    {
+      "tag": "forge:sugar"
+    },
+    {
+      "item": "delightful:cooked_marshmallow_stick"
+    },
+    {
+      "item": "farmersdelight:honey_cookie"
+    }
+  ],
+  "result": {
+    "item": "delightful:smore"
+  }
+}
