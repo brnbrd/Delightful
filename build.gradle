@@ -104,6 +104,7 @@ dependencies {
     runtimeOnly fg.deobf("curse.maven:corn-delight-577805:${corn_delight_version}")
     runtimeOnly fg.deobf("curse.maven:immersive-engineering-231951:${immersive_engineering_version}")
     runtimeOnly fg.deobf("curse.maven:enderite-lieonlion-550532:${enderite_version}")
+    runtimeOnly fg.deobf("curse.maven:appleskin-248787:${appleskin_version}")
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
