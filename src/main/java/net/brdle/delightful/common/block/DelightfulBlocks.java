@@ -24,7 +24,7 @@ public class DelightfulBlocks {
     public static final RegistryObject<Block> PIZZA_STONE = registerBlock("pizza_stone", new PizzaStoneBlock(BlockBehaviour.Properties.of(Material.STONE).strength(0.5F, 6.0F).sound(SoundType.STONE).noOcclusion()));
     public static final RegistryObject<Block> PIZZA_PEEL = registerBlock("pizza_peel", new PizzaPeelBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(0.5F, 6.0F).sound(SoundType.WOOD).noOcclusion()));
 
-    private static RegistryObject<Block> registerBlock(String name, Block block) {
+    public static RegistryObject<Block> registerBlock(String name, Block block) {
         var returnBlock = BLOCKS.register(name, () -> block);
         registerBlockItem(name, block);
         return returnBlock;
