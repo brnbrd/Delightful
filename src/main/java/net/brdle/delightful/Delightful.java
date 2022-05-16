@@ -20,4 +20,8 @@ public class Delightful
         proxy = DistExecutor.safeRunForDist(() -> ClientProxy::new, () -> CommonProxy::new);
         proxy.start();
     }
+
+    public static Logger getLogger() {
+        return LOGGER;
+    }
 }

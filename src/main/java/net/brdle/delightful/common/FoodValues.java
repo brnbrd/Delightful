@@ -11,5 +11,5 @@ public class FoodValues {
             .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 240, 0), 1.0F).build();
     public static final FoodProperties MARSHMALLOW_STICK = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.3F).build();
     public static final FoodProperties COOKED_MARSHMALLOW_STICK = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.4F).build();
-    public static final FoodProperties SMORE = (new FoodProperties.Builder()).nutrition(7).saturationMod(0.5F).build();
+    public static final FoodProperties SMORE = (new FoodProperties.Builder()).nutrition(9).saturationMod(0.5F).build();
 }

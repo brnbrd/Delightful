@@ -5,7 +5,7 @@ import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.MethodsReturnNonnullByDefault;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.registration.IRecipeRegistration;
-import net.brdle.delightful.common.DelightfulItems;
+import net.brdle.delightful.common.item.DelightfulItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
