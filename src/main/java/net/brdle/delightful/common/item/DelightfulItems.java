@@ -30,10 +30,11 @@ public class DelightfulItems {
     public static final RegistryObject<Item> MARSHMALLOW_STICK = registerFood("marshmallow_stick", FoodValues.MARSHMALLOW_STICK, Items.STICK);
     public static final RegistryObject<Item> COOKED_MARSHMALLOW_STICK = registerFood("cooked_marshmallow_stick", FoodValues.COOKED_MARSHMALLOW_STICK, Items.STICK);
     public static final RegistryObject<Item> SMORE = registerFood("smore", FoodValues.SMORE);
+    public static final RegistryObject<Item> PIZZA = registerItem("pizza", new PizzaItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
 
     // Registers a knife to Farmer's Delight tab
     public static RegistryObject<Item> registerKnife(String name, Tier tier, float attackDamageIn, float attackSpeedIn) {
-        return registerItem(name, new KnifeItem(tier, attackDamageIn, attackSpeedIn, new Item.Properties().tab(FarmersDelight.CREATIVE_TAB)));
+        return registerItem(name, new KnifeItem(tier, attackDamageIn, attackSpeedIn, (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
     }
 
     // Registers a food to Farmer's Delight tab, optional craftRemainder
