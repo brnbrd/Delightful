@@ -22,8 +22,8 @@ public class ClientProxy extends CommonProxy {
 
     @SubscribeEvent
     public void setupClient(FMLClientSetupEvent e){
-        ItemBlockRenderTypes.setRenderLayer(DelightfulBlocks.PIZZA_STONE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DelightfulBlocks.PIZZA_PEEL.get(), RenderType.cutout());
+        //ItemBlockRenderTypes.setRenderLayer(DelightfulBlocks.PIZZA_STONE.get(), RenderType.cutout());
+        //ItemBlockRenderTypes.setRenderLayer(DelightfulBlocks.PIZZA_PEEL.get(), RenderType.cutout());
     }
 
     @SubscribeEvent

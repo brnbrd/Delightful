@@ -35,7 +35,7 @@ public class JEIPlugin implements IModPlugin
     public void registerRecipes(IRecipeRegistration registration) {
         Arrays.stream(knives)
             .map(ItemStack::new)
-            .forEach((k -> registration.addIngredientInfo(k, VanillaTypes.ITEM, TextUtils.getTranslation("jei.info.knife"))));
+            .forEach((k -> registration.addIngredientInfo(k, VanillaTypes.ITEM_STACK, TextUtils.getTranslation("jei.info.knife"))));
     }
 
     @Override
