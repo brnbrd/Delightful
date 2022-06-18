@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[39,)"
+loaderVersion="[40,)"
 license="MIT License"
 issueTrackerURL="https://github.com/brdle/Delightful/issues"
 
@@ -21,13 +21,13 @@ configBackground="minecraft:textures/block/dirt.png"
 [[dependencies.delightful]]
     modId="forge"
     mandatory=true
-    versionRange="[39,)"
+    versionRange="[40,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.delightful]]
     modId="farmersdelight"
     mandatory=true
-    versionRange="[0,)"
+    versionRange="[1.1,)"
     ordering="AFTER"
     side="BOTH"

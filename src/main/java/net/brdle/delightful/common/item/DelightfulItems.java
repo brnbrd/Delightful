@@ -14,9 +14,12 @@ import net.minecraftforge.registries.RegistryObject;
 import vectorwing.farmersdelight.FarmersDelight;
 import vectorwing.farmersdelight.common.item.KnifeItem;
 
+import java.util.ArrayList;
+
 public class DelightfulItems {
 
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Delightful.MODID);
+    public static final ArrayList<KnifeItem> KNIVES = new ArrayList<>();
 
     // Knives
     public static final RegistryObject<Item> COPPER_KNIFE = registerKnife("copper_knife", DelightfulTiers.COPPER, 0.5F, -2.0F);
@@ -34,7 +37,9 @@ public class DelightfulItems {
 
     // Registers a knife to Farmer's Delight tab
     public static RegistryObject<Item> registerKnife(String name, Tier tier, float attackDamageIn, float attackSpeedIn) {
-        return registerItem(name, new KnifeItem(tier, attackDamageIn, attackSpeedIn, (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
+        var knife = new KnifeItem(tier, attackDamageIn, attackSpeedIn, (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB));
+        KNIVES.add(knife);
+        return registerItem(name, knife);
     }
 
     // Registers a food to Farmer's Delight tab, optional craftRemainder

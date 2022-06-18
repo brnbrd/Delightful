@@ -14,8 +14,8 @@ public class CommonProxy {
     public void start() {
         final IEventBus modBus = FMLJavaModLoadingContext.get().getModEventBus();
         //final IEventBus forgeBus = MinecraftForge.EVENT_BUS;
-        DelightfulTiles.create(modBus);
-        DelightfulBlocks.create(modBus);
+        //DelightfulTiles.create(modBus);
+        //DelightfulBlocks.create(modBus);
         DelightfulItems.create(modBus);
         modBus.addListener(this::setup);
     }
