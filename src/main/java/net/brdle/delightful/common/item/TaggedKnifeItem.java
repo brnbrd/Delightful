@@ -41,8 +41,16 @@ public class TaggedKnifeItem extends KnifeItem {
     @Override
     public void fillItemCategory(CreativeModeTab pCategory, NonNullList<ItemStack> pItems) {
         if (this.isTag()
-                && (pCategory == FarmersDelight.CREATIVE_TAB) || this.allowdedIn(pCategory)) {
+                && (pCategory == FarmersDelight.CREATIVE_TAB ||
+                pCategory == CreativeModeTab.TAB_SEARCH ||
+                this.allowdedIn(pCategory))) {
             pItems.add(new ItemStack(this));
         }
+    }
+
+    @Override
+    protected boolean allowdedIn(CreativeModeTab pCategory) {
+        return this.isTag() && (pCategory == FarmersDelight.CREATIVE_TAB ||
+                pCategory == CreativeModeTab.TAB_SEARCH);
     }
 }

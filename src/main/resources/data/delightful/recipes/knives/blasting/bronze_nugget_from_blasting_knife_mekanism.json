@@ -1,0 +1,22 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "mekanism:nugget_bronze"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:blasting",
+        "ingredient": {
+          "item": "delightful:bronze_knife"
+        },
+        "result": "mekanism:nugget_bronze",
+        "experience": 0.1,
+        "cookingtime": 100
+      }
+    }
+  ]
+}

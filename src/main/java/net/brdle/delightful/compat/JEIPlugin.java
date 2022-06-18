@@ -28,7 +28,12 @@ public class JEIPlugin implements IModPlugin
         DelightfulItems.COPPER_KNIFE.get(),
         DelightfulItems.STEEL_KNIFE.get(),
         DelightfulItems.ENDERITE_KNIFE.get(),
-        DelightfulItems.OBSIDIAN_INFUSED_ENDERITE_KNIFE.get()
+        DelightfulItems.OBSIDIAN_INFUSED_ENDERITE_KNIFE.get(),
+        DelightfulItems.BRONZE_KNIFE.get(),
+        DelightfulItems.LAPIS_LAZULI_KNIFE.get(),
+        DelightfulItems.OSMIUM_KNIFE.get(),
+        DelightfulItems.REFINED_OBSIDIAN_KNIFE.get(),
+        DelightfulItems.REFINED_OBSIDIAN_KNIFE.get()
     };
 
     @Override
