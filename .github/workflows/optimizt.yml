@@ -5,7 +5,7 @@ on:
   # and only when there's JPEG/PNG in the commmit
   push:
     branches:
-      - 1.18.1
+      - 1.18.2
     paths:
       - "**.jpe?g"
       - "**.png"
