@@ -10,5 +10,10 @@ public class DelightfulIngredients {
     public static final Supplier<Ingredient> steel = () -> Ingredient.of(TagKey.create(ForgeRegistries.ITEMS.getRegistryKey(), new ResourceLocation("forge", "ingots/steel")));
     public static final Supplier<Ingredient> enderite = () -> Ingredient.of(TagKey.create(ForgeRegistries.ITEMS.getRegistryKey(), new ResourceLocation("forge", "ingots/enderite")));
     public static final Supplier<Ingredient> obsidianInfusedEnderite = () -> Ingredient.of(TagKey.create(ForgeRegistries.ITEMS.getRegistryKey(), new ResourceLocation("forge", "ingots/obsidian_infused_enderite")));
+    public static final Supplier<Ingredient> bronze = () -> Ingredient.of(TagKey.create(ForgeRegistries.ITEMS.getRegistryKey(), new ResourceLocation("forge", "ingots/bronze")));
+    public static final Supplier<Ingredient> osmium = () -> Ingredient.of(TagKey.create(ForgeRegistries.ITEMS.getRegistryKey(), new ResourceLocation("forge", "ingots/osmium")));
+    public static final Supplier<Ingredient> refinedGlowstone = () -> Ingredient.of(TagKey.create(ForgeRegistries.ITEMS.getRegistryKey(), new ResourceLocation("forge", "ingots/refined_glowstone")));
+    public static final Supplier<Ingredient> refinedObsidian = () -> Ingredient.of(TagKey.create(ForgeRegistries.ITEMS.getRegistryKey(), new ResourceLocation("forge", "ingots/refined_obsidian")));
     public static final Supplier<Ingredient> lapis = () -> Ingredient.of(TagKey.create(ForgeRegistries.ITEMS.getRegistryKey(), new ResourceLocation("forge", "gems/lapis")));
+
 }
