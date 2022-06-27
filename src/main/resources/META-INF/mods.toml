@@ -16,7 +16,7 @@ credits=""
 authors="brdle"
 description=""
 itemIcon="delightful:smore"
-configBackground="minecraft:textures/block/dirt.png"
+configBackground="farmersdelight:textures/block/tatami.png"
 
 [[dependencies.delightful]]
     modId="forge"
