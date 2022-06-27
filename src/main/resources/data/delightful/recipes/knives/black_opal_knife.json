@@ -1,0 +1,34 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:gems/black_opal"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          " m",
+          "s "
+        ],
+        "key": {
+          "m": {
+            "tag": "forge:gems/black_opal"
+          },
+          "s": {
+            "tag": "forge:rods/wooden"
+          }
+        },
+        "result": {
+          "item": "delightful:black_opal_knife"
+        }
+      }
+    }
+  ]
+}

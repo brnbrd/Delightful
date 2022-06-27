@@ -124,6 +124,102 @@
           }
         ]
       }
+    },
+    "bronze_knife": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:bronze_knife"
+            ]
+          }
+        ]
+      }
+    },
+    "lapis_lazuli_knife": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:lapis_lazuli_knife"
+            ]
+          }
+        ]
+      }
+    },
+    "osmium_knife": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:osmium_knife"
+            ]
+          }
+        ]
+      }
+    },
+    "refined_glowstone_knife": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:refined_glowstone_knife"
+            ]
+          }
+        ]
+      }
+    },
+    "refined_obsidian_knife": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:refined_obsidian_knife"
+            ]
+          }
+        ]
+      }
+    },
+    "large_amethyst_knife": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:large_amethyst_knife"
+            ]
+          }
+        ]
+      }
+    },
+    "black_opal_knife": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:black_opal_knife"
+            ]
+          }
+        ]
+      }
+    },
+    "netherite_opal_knife": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:netherite_opal_knife"
+            ]
+          }
+        ]
+      }
     }
   },
   "requirements": [
@@ -136,7 +232,15 @@
       "copper_knife",
       "steel_knife",
       "enderite_knife",
-      "obsidian_infused_enderite_knife"
+      "obsidian_infused_enderite_knife",
+      "bronze_knife",
+      "lapis_lazuli_knife",
+      "osmium_knife",
+      "refined_glowstone_knife",
+      "refined_obsidian_knife",
+      "large_amethyst_knife",
+      "black_opal_knife",
+      "netherite_opal_knife"
     ]
   ]
 }

@@ -1,0 +1,28 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:gems/black_opal"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:smithing",
+        "base": {
+          "item": "delightful:black_opal_knife"
+        },
+        "addition": {
+          "tag": "forge:ingots/netherite"
+        },
+        "result": {
+          "item": "delightful:netherite_opal_knife"
+        }
+      }
+    }
+  ]
+}

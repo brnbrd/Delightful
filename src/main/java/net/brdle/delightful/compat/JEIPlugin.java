@@ -17,7 +17,6 @@ import java.util.Arrays;
 
 @JeiPlugin
 @ParametersAreNonnullByDefault
-@MethodsReturnNonnullByDefault
 @SuppressWarnings("unused")
 public class JEIPlugin implements IModPlugin
 {
@@ -25,15 +24,18 @@ public class JEIPlugin implements IModPlugin
     private static final Minecraft MC = Minecraft.getInstance();
 
     public static final Item[] knives = new Item[]{
-        DelightfulItems.COPPER_KNIFE.get(),
-        DelightfulItems.STEEL_KNIFE.get(),
-        DelightfulItems.ENDERITE_KNIFE.get(),
-        DelightfulItems.OBSIDIAN_INFUSED_ENDERITE_KNIFE.get(),
-        DelightfulItems.BRONZE_KNIFE.get(),
-        DelightfulItems.LAPIS_LAZULI_KNIFE.get(),
-        DelightfulItems.OSMIUM_KNIFE.get(),
-        DelightfulItems.REFINED_OBSIDIAN_KNIFE.get(),
-        DelightfulItems.REFINED_OBSIDIAN_KNIFE.get()
+            DelightfulItems.COPPER_KNIFE.get(),
+            DelightfulItems.STEEL_KNIFE.get(),
+            DelightfulItems.ENDERITE_KNIFE.get(),
+            DelightfulItems.OBSIDIAN_INFUSED_ENDERITE_KNIFE.get(),
+            DelightfulItems.BRONZE_KNIFE.get(),
+            DelightfulItems.LAPIS_LAZULI_KNIFE.get(),
+            DelightfulItems.OSMIUM_KNIFE.get(),
+            DelightfulItems.REFINED_OBSIDIAN_KNIFE.get(),
+            DelightfulItems.REFINED_OBSIDIAN_KNIFE.get(),
+            DelightfulItems.LARGE_AMETHYST_KNIFE.get(),
+            DelightfulItems.BLACK_OPAL_KNIFE.get(),
+            DelightfulItems.NETHERITE_OPAL_KNIFE.get()
     };
 
     @Override

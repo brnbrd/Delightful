@@ -102,6 +102,7 @@ dependencies {
     runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}")
     runtimeOnly fg.deobf("curse.maven:mysterious-mountain-lib-368098:${mmlib_version}")
     runtimeOnly fg.deobf("curse.maven:corn-delight-577805:${corn_delight_version}")
+    runtimeOnly fg.deobf("curse.maven:cultural-delights-574622:${cultural_delights_version}")
     runtimeOnly fg.deobf("curse.maven:immersive-engineering-231951:${immersive_engineering_version}")
     runtimeOnly fg.deobf("curse.maven:enderite-lieonlion-550532:${enderite_version}")
     runtimeOnly fg.deobf("curse.maven:ores-above-diamonds-351339:${oad_version}")

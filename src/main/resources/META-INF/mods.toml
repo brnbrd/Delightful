@@ -15,7 +15,7 @@ logoBlur=false
 credits=""
 authors="brdle"
 description=""
-itemIcon="minecraft:dirt"
+itemIcon="delightful:smore"
 configBackground="minecraft:textures/block/dirt.png"
 
 [[dependencies.delightful]]

@@ -15,5 +15,7 @@ public class DelightfulIngredients {
     public static final Supplier<Ingredient> refinedGlowstone = () -> Ingredient.of(TagKey.create(ForgeRegistries.ITEMS.getRegistryKey(), new ResourceLocation("forge", "ingots/refined_glowstone")));
     public static final Supplier<Ingredient> refinedObsidian = () -> Ingredient.of(TagKey.create(ForgeRegistries.ITEMS.getRegistryKey(), new ResourceLocation("forge", "ingots/refined_obsidian")));
     public static final Supplier<Ingredient> lapis = () -> Ingredient.of(TagKey.create(ForgeRegistries.ITEMS.getRegistryKey(), new ResourceLocation("forge", "gems/lapis")));
+    public static final Supplier<Ingredient> largeAmethyst = () -> Ingredient.of(TagKey.create(ForgeRegistries.ITEMS.getRegistryKey(), new ResourceLocation("forge", "gems/large_amethyst")));
+    public static final Supplier<Ingredient> blackOpal = () -> Ingredient.of(TagKey.create(ForgeRegistries.ITEMS.getRegistryKey(), new ResourceLocation("forge", "gems/black_opal")));
 
 }
