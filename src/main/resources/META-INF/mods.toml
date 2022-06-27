@@ -31,17 +31,3 @@ configBackground="minecraft:textures/block/dirt.png"
     versionRange="[1.1,)"
     ordering="AFTER"
     side="BOTH"
-
-[[dependencies.delightful]]
-    modId="lolenderite"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="BEFORE"
-    side="BOTH"
-
-[[dependencies.delightful]]
-    modId="immersiveengineering"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="BEFORE"
-    side="BOTH"
