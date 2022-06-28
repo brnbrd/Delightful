@@ -110,6 +110,7 @@ dependencies {
     runtimeOnly fg.deobf("curse.maven:mekanism-268560:${mekanism_version}")
     runtimeOnly fg.deobf("curse.maven:mekanism-tools-268567:${mekanism_tools_version}")
     runtimeOnly fg.deobf("curse.maven:ecologics-570463:${ecologics_version}")
+    runtimeOnly fg.deobf("curse.maven:rotten-leather-231487:${rl_version}")
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
