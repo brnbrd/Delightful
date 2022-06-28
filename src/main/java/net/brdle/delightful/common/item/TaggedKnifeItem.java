@@ -1,6 +1,5 @@
 package net.brdle.delightful.common.item;
 
-import net.brdle.delightful.Delightful;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
