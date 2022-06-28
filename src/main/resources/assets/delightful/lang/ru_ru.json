@@ -4,10 +4,13 @@
   "item.delightful.marshmallow_stick": "Зефир на палочке",
   "item.delightful.cooked_marshmallow_stick": "Приготовленный зефир на палочке",
   "item.delightful.smore": "S'more",
+  "item.delightful.crab_rangoon": "Краб и сыр вонтон",
+  "item.delightful.prickly_pear_juice": "Сок опунции",
   "block.delightful.pizza_stone": "Камень для пиццы",
   "block.delightful.pizza_peel": "Пицца Пил",
   "item.delightful.pizza": "Пицца",
   "item.delightful.copper_knife": "Медный нож",
+  "item.delightful.tin_knife": "Оловянный нож",
   "item.delightful.steel_knife": "Стальной нож",
   "item.delightful.enderite_knife": "Эндеритовый нож",
   "item.delightful.obsidian_infused_enderite_knife": "Обсидианово-вкрапленный эндеритовый нож",
@@ -18,5 +21,6 @@
   "item.delightful.refined_obsidian_knife": "Улучшенный обсидиановый нож",
   "item.delightful.large_amethyst_knife": "Аметист нож",
   "item.delightful.black_opal_knife": "Черный опал нож",
-  "item.delightful.netherite_opal_knife": "Нетеритовый опал нож"
+  "item.delightful.netherite_opal_knife": "Нетеритовый опал нож",
+  "farmersdelight.tooltip.prickly_pear_juice": "Очень насыщенный"
 }

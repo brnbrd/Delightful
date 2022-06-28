@@ -89,6 +89,18 @@
         ]
       }
     },
+    "tin_knife": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:tin_knife"
+            ]
+          }
+        ]
+      }
+    },
     "steel_knife": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
@@ -230,6 +242,7 @@
       "golden_knife",
       "netherite_knife",
       "copper_knife",
+      "tin_knife",
       "steel_knife",
       "enderite_knife",
       "obsidian_infused_enderite_knife",

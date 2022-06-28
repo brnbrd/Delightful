@@ -10,6 +10,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 
 public enum DelightfulTiers implements Tier {
     COPPER(2, 150, 5.0F, 1.5F, 14, () -> Ingredient.of(Items.COPPER_INGOT)),
+    TIN(2, 140, 5.0F, 1.5F, 10, DelightfulIngredients.tin),
     STEEL(2, 484, 6.5F, 2.5F, 16, DelightfulIngredients.steel),
     ENDERITE(5, 2401, 10.0F, 5.0F, 15, DelightfulIngredients.enderite),
     OBSIDIAN_INFUSED_ENDERITE(5, 2771, 11.0F, 6.0F, 15, DelightfulIngredients.obsidianInfusedEnderite),

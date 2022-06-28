@@ -25,6 +25,7 @@ public class JEIPlugin implements IModPlugin
 
     public static final Item[] knives = new Item[]{
             DelightfulItems.COPPER_KNIFE.get(),
+            DelightfulItems.TIN_KNIFE.get(),
             DelightfulItems.STEEL_KNIFE.get(),
             DelightfulItems.ENDERITE_KNIFE.get(),
             DelightfulItems.OBSIDIAN_INFUSED_ENDERITE_KNIFE.get(),

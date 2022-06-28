@@ -1,0 +1,33 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:cooked_crab"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "farmersdelight:wheat_dough"
+          },
+          {
+            "tag": "forge:cheese_or_milk"
+          },
+          {
+            "tag": "forge:cooked_crab"
+          }
+        ],
+        "result": {
+          "item": "delightful:crab_rangoon"
+        }
+      }
+    }
+  ]
+}

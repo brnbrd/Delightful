@@ -1,0 +1,42 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:crops/prickly_pear"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "tag": "forge:crops/prickly_pear"
+          },
+          {
+            "tag": "forge:crops/prickly_pear"
+          },
+          {
+            "item": "minecraft:sugar"
+          },
+          {
+            "tag": "forge:crops/prickly_pear"
+          },
+          {
+            "tag": "forge:crops/prickly_pear"
+          },
+          {
+            "item": "minecraft:glass_bottle"
+          }
+        ],
+        "result": {
+          "item": "delightful:prickly_pear_juice"
+        }
+      }
+    }
+  ]
+}
