@@ -58,6 +58,7 @@ public class DelightfulItems {
     public static final RegistryObject<Item> SMORE = registerFood("smore", FoodValues.SMORE);
     public static final RegistryObject<Item> CRAB_RANGOON = registerFood("crab_rangoon", FoodValues.CRAB_RANGOON);
     public static final RegistryObject<Item> PRICKLY_PEAR_JUICE = registerItem("prickly_pear_juice", () -> new PricklyPearJuiceItem((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16).tab(FarmersDelight.CREATIVE_TAB)));
+    public static final RegistryObject<Item> CHUNKWICH = registerFood("chunkwich", FoodValues.CHUNKWICH);
     public static final RegistryObject<Item> PIZZA = registerItem("pizza", () -> new PizzaItem((new Item.Properties())
             //.tab(FarmersDelight.CREATIVE_TAB) WIP
     ));

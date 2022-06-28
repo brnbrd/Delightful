@@ -1,0 +1,27 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "rottenleather"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "tag": "forge:bread"
+          },
+          {
+            "item": "rottenleather:sweetened_chunk"
+          }
+        ],
+        "result": {
+          "item": "delightful:chunkwich"
+        }
+      }
+    }
+  ]
+}
