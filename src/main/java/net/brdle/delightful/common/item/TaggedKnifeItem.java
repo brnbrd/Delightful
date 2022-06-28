@@ -1,5 +1,6 @@
 package net.brdle.delightful.common.item;
 
+import net.brdle.delightful.Delightful;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
@@ -40,17 +41,10 @@ public class TaggedKnifeItem extends KnifeItem {
 
     @Override
     public void fillItemCategory(CreativeModeTab pCategory, NonNullList<ItemStack> pItems) {
-        if (this.isTag()
-                && (pCategory == FarmersDelight.CREATIVE_TAB ||
-                pCategory == CreativeModeTab.TAB_SEARCH ||
-                this.allowdedIn(pCategory))) {
-            pItems.add(new ItemStack(this));
+        if (this.isTag()) {
+            if (pCategory == FarmersDelight.CREATIVE_TAB || pCategory == CreativeModeTab.TAB_SEARCH) {
+                pItems.add(new ItemStack(this));
+            }
         }
-    }
-
-    @Override
-    protected boolean allowdedIn(CreativeModeTab pCategory) {
-        return this.isTag() && (pCategory == FarmersDelight.CREATIVE_TAB ||
-                pCategory == CreativeModeTab.TAB_SEARCH);
     }
 }
