@@ -1,10 +1,7 @@
 {
   "replace": false,
   "values": [
-    {
-      "id": "#forge:cheese",
-      "required": false
-    },
+    "#forge:cheese",
     "#forge:milk"
   ]
 }
