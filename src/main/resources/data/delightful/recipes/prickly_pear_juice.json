@@ -4,30 +4,27 @@
     {
       "conditions": [
         {
-          "type": "forge:not",
-          "value": {
-            "type": "forge:tag_empty",
-            "tag": "forge:crops/prickly_pear"
-          }
+          "type": "forge:mod_loaded",
+          "modid": "ecologics"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shapeless",
         "ingredients": [
           {
-            "tag": "forge:crops/prickly_pear"
+            "item": "ecologics:cooked_prickly_pear"
           },
           {
-            "tag": "forge:crops/prickly_pear"
+            "item": "ecologics:cooked_prickly_pear"
           },
           {
             "item": "minecraft:sugar"
           },
           {
-            "tag": "forge:crops/prickly_pear"
+            "item": "ecologics:cooked_prickly_pear"
           },
           {
-            "tag": "forge:crops/prickly_pear"
+            "item": "ecologics:cooked_prickly_pear"
           },
           {
             "item": "minecraft:glass_bottle"

@@ -20,12 +20,16 @@ public class CompatKnifeItem extends KnifeItem {
         this.modid = modid;
     }
 
+    public boolean isLoaded() {
+        return ModList.get().isLoaded(this.modid);
+    }
+
     @Override
     /**
      * allows items to add custom lines of information to the mouseover description
      */
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> tool, TooltipFlag pIsAdvanced) {
-        if (!ModList.get().isLoaded(modid)) {
+        if (!this.isLoaded()) {
             tool.add(new TextComponent("Requires modid:"));
             tool.add(new TextComponent(modid).withStyle(ChatFormatting.UNDERLINE));
         }

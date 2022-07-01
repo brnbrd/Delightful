@@ -6,11 +6,11 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import vectorwing.farmersdelight.common.item.DrinkableItem;
+import vectorwing.farmersdelight.common.item.MelonJuiceItem;
 
-public class PricklyPearJuiceItem extends DrinkableItem {
+public class PricklyPearJuiceItem extends MelonJuiceItem {
     public PricklyPearJuiceItem(Item.Properties properties) {
-        super(properties, false, true);
+        super(properties);
     }
 
     @Override

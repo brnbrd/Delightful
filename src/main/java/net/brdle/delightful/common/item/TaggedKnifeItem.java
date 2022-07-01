@@ -23,14 +23,14 @@ public class TaggedKnifeItem extends KnifeItem {
     }
 
     // Returns true if there is an entry within the tag
-    private boolean isTag() {
+    public boolean isTag() {
         return !ForgeRegistries.ITEMS.tags().getTag(this.tag).isEmpty();
     }
 
-    @Override
     /**
      * allows items to add custom lines of information to the mouseover description
      */
+    @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> tool, TooltipFlag pIsAdvanced) {
         if (!this.isTag()) {
             tool.add(new TextComponent("Requires non-empty tag:"));
@@ -40,10 +40,10 @@ public class TaggedKnifeItem extends KnifeItem {
 
     @Override
     public void fillItemCategory(CreativeModeTab pCategory, NonNullList<ItemStack> pItems) {
-        if (this.isTag()) {
+        //if (this.isTag()) { // This is not registered in time
             if (pCategory == FarmersDelight.CREATIVE_TAB || pCategory == CreativeModeTab.TAB_SEARCH) {
                 pItems.add(new ItemStack(this));
             }
-        }
+        //}
     }
 }

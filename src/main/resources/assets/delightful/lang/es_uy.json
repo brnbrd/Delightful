@@ -7,6 +7,8 @@
   "item.delightful.crab_rangoon": "Wontón de cangrejo y queso",
   "item.delightful.prickly_pear_juice": "Jugo de higo chumbo",
   "item.delightful.chunkwich": "Sándwich de pedazo",
+  "item.delightful.jelly_bottle": "Botella de gelatina",
+  "item.delightful.nut_butter_bottle": "Botella de mantequilla de nuez",
   "block.delightful.pizza_stone": "Piedra para pizza",
   "block.delightful.pizza_peel": "Cáscara de pizza",
   "item.delightful.pizza": "Pizza",
@@ -23,5 +25,7 @@
   "item.delightful.large_amethyst_knife": "Cuchillo de amatista",
   "item.delightful.black_opal_knife": "Cuchillo de ópalo negro",
   "item.delightful.netherite_opal_knife": "Cuchillo de ópalo netherita",
+  "item.delightful.silver_knife": "Cuchillo de ópalo plata",
+  "item.delightful.brass_knife": "Cuchillo de ópalo latón",
   "farmersdelight.tooltip.prickly_pear_juice": "Muy saturante"
 }

@@ -7,6 +7,8 @@
   "item.delightful.crab_rangoon": "Краб и сыр вонтон",
   "item.delightful.prickly_pear_juice": "Сок опунции",
   "item.delightful.chunkwich": "Сэндвич с кусочками",
+  "item.delightful.jelly_bottle": "Желейная бутылка",
+  "item.delightful.nut_butter_bottle": "Бутылка орехового масла",
   "block.delightful.pizza_stone": "Камень для пиццы",
   "block.delightful.pizza_peel": "Пицца Пил",
   "item.delightful.pizza": "Пицца",
@@ -23,5 +25,7 @@
   "item.delightful.large_amethyst_knife": "Аметист нож",
   "item.delightful.black_opal_knife": "Черный опал нож",
   "item.delightful.netherite_opal_knife": "Нетеритовый опал нож",
+  "item.delightful.silver_knife": "Серебряный нож",
+  "item.delightful.brass_knife": "Латунный нож",
   "farmersdelight.tooltip.prickly_pear_juice": "Очень насыщенный"
 }

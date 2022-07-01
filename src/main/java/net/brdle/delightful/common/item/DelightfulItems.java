@@ -30,6 +30,10 @@ public class DelightfulItems {
             new ResourceLocation("forge", "ingots/tin"));
     public static final RegistryObject<Item> STEEL_KNIFE = registerTaggedKnife("steel_knife", DelightfulTiers.STEEL, 0.5F, -2.0F,
             new ResourceLocation("forge", "ingots/steel"));
+    public static final RegistryObject<Item> SILVER_KNIFE = registerTaggedKnife("silver_knife", DelightfulTiers.SILVER, 0.5F, -2.0F,
+            new ResourceLocation("forge", "ingots/silver"));
+    public static final RegistryObject<Item> BRASS_KNIFE = registerTaggedKnife("brass_knife", DelightfulTiers.BRASS, 0.5F, -2.0F,
+            new ResourceLocation("forge", "ingots/brass"));
     public static final RegistryObject<Item> ENDERITE_KNIFE = registerTaggedKnife("enderite_knife", DelightfulTiers.ENDERITE, 0.5F, -2.0F,
             new ResourceLocation("forge", "ingots/enderite"));
     public static final RegistryObject<Item> OBSIDIAN_INFUSED_ENDERITE_KNIFE = registerCompatKnife("obsidian_infused_enderite_knife", DelightfulTiers.OBSIDIAN_INFUSED_ENDERITE, 0.5F, -2.0F,
@@ -60,6 +64,7 @@ public class DelightfulItems {
     public static final RegistryObject<Item> CRAB_RANGOON = registerFood("crab_rangoon", FoodValues.CRAB_RANGOON);
     public static final RegistryObject<Item> PRICKLY_PEAR_JUICE = registerItem("prickly_pear_juice", () -> new PricklyPearJuiceItem((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16).tab(FarmersDelight.CREATIVE_TAB)));
     public static final RegistryObject<Item> CHUNKWICH = registerFood("chunkwich", FoodValues.CHUNKWICH);
+    public static final RegistryObject<Item> JELLY_BOTTLE = registerFood("jelly_bottle", FoodValues.JELLY_BOTTLE, Items.GLASS_BOTTLE);
     public static final RegistryObject<Item> PIZZA = registerItem("pizza", () -> new PizzaItem((new Item.Properties())
             //.tab(FarmersDelight.CREATIVE_TAB) WIP
     ));
