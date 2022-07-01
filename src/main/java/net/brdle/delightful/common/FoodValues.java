@@ -16,4 +16,6 @@ public class FoodValues {
     public static final FoodProperties CHUNKWICH = (new FoodProperties.Builder()).nutrition(11).saturationMod(0.3F)
             .effect(() -> new MobEffectInstance(MobEffects.HUNGER, 10, 0), 0.5F).build();
     public static final FoodProperties JELLY_BOTTLE = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.3F).build();
+
+    public static final FoodProperties NUT_BUTTER_BOTTLE = (new FoodProperties.Builder()).nutrition(10).saturationMod(0.3F).build();
 }

@@ -7,6 +7,8 @@ import net.minecraft.world.item.crafting.Ingredient;
 
 public enum DelightfulTiers implements Tier {
     COPPER(2, 150, 5.0F, 1.5F, 14, () -> Ingredient.of(Items.COPPER_INGOT)),
+
+    BONE(1, 190, 5.0F, 1.5F, 9, () -> Ingredient.of(Items.BONE)),
     TIN(2, 140, 5.0F, 1.5F, 10, DelightfulIngredients.tin),
     STEEL(2, 484, 6.5F, 2.5F, 16, DelightfulIngredients.steel),
     SILVER(2, 484, 6.0F, 2.0F, 16, DelightfulIngredients.silver),

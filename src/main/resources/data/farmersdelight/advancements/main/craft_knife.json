@@ -256,6 +256,18 @@
           }
         ]
       }
+    },
+    "bone_knife": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:bone_knife"
+            ]
+          }
+        ]
+      }
     }
   },
   "requirements": [
@@ -279,7 +291,8 @@
       "black_opal_knife",
       "netherite_opal_knife",
       "silver_knife",
-      "brass_knife"
+      "brass_knife",
+      "bone_knife"
     ]
   ]
 }

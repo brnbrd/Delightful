@@ -2,19 +2,13 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "tag": "minecraft_empty_bottle"
-    },
-    {
       "tag": "forge:nuts"
     },
     {
-      "tag": "forge:nuts"
-    },
-    {
-      "tag": "forge:sugars"
+      "item": "minecraft:honey_bottle"
     }
   ],
   "result": {
-    "item": "delightful:nut_butter"
+    "item": "delightful:nut_butter_bottle"
   }
 }
