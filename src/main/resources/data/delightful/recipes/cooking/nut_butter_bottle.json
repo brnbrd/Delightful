@@ -1,0 +1,16 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "tag": "forge:nuts"
+    },
+    {
+      "tag": "forge:sugar"
+    }
+  ],
+  "result": {
+    "item": "delightful:nut_butter_bottle"
+  },
+  "experience": 0.35,
+  "cookingtime": 200
+}
