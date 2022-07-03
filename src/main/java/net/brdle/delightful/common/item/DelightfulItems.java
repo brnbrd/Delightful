@@ -14,6 +14,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import vectorwing.farmersdelight.FarmersDelight;
+import vectorwing.farmersdelight.common.item.ConsumableItem;
 import vectorwing.farmersdelight.common.item.KnifeItem;
 import java.util.ArrayList;
 import java.util.function.Supplier;
@@ -56,8 +57,8 @@ public class DelightfulItems {
             "oresabovediamonds");
 
     // Foods
-    public static final RegistryObject<Item> CHEESEBURGER = registerFood("cheeseburger", FoodValues.CHEESEBURGER);
-    public static final RegistryObject<Item> DELUXE_CHEESEBURGER = registerFood("deluxe_cheeseburger", FoodValues.DELUXE_CHEESEBURGER);
+    public static final RegistryObject<Item> CHEESEBURGER = registerItem("cheeseburger", () -> new ConsumableItem((new Item.Properties()).food(FoodValues.CHEESEBURGER).tab(FarmersDelight.CREATIVE_TAB), true));
+    public static final RegistryObject<Item> DELUXE_CHEESEBURGER = registerItem("deluxe_cheeseburger", () -> new ConsumableItem((new Item.Properties()).food(FoodValues.DELUXE_CHEESEBURGER).tab(FarmersDelight.CREATIVE_TAB), true));
     public static final RegistryObject<Item> MARSHMALLOW_STICK = registerFood("marshmallow_stick", FoodValues.MARSHMALLOW_STICK, Items.STICK);
     public static final RegistryObject<Item> COOKED_MARSHMALLOW_STICK = registerFood("cooked_marshmallow_stick", FoodValues.COOKED_MARSHMALLOW_STICK, Items.STICK);
     public static final RegistryObject<Item> SMORE = registerFood("smore", FoodValues.SMORE);
@@ -66,6 +67,7 @@ public class DelightfulItems {
     public static final RegistryObject<Item> CHUNKWICH = registerFood("chunkwich", FoodValues.CHUNKWICH);
     public static final RegistryObject<Item> JELLY_BOTTLE = registerFood("jelly_bottle", FoodValues.JELLY_BOTTLE, Items.GLASS_BOTTLE);
     public static final RegistryObject<Item> NUT_BUTTER_BOTTLE = registerFood("nut_butter_bottle", FoodValues.NUT_BUTTER_BOTTLE, Items.GLASS_BOTTLE);
+    public static final RegistryObject<Item> NUT_BUTTER_AND_JELLY_SANDWICH = registerItem("nut_butter_and_jelly_sandwich", () -> new ConsumableItem((new Item.Properties()).food(FoodValues.NUT_BUTTER_AND_JELLY_SANDWICH).tab(FarmersDelight.CREATIVE_TAB), true));
     public static final RegistryObject<Item> PIZZA = registerItem("pizza", () -> new PizzaItem((new Item.Properties())
             //.tab(FarmersDelight.CREATIVE_TAB) WIP
     ));
