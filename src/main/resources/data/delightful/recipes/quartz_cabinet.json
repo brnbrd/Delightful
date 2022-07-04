@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "qqq",
+    "qcq",
+    "qqq"
+  ],
+  "key": {
+    "q": {
+      "tag": "forge:gems/quartz"
+    },
+    "c": {
+      "tag": "farmersdelight:cabinets/wooden"
+    }
+  },
+  "result": {
+    "item": "delightful:quartz_cabinet"
+  }
+}
