@@ -62,12 +62,16 @@ public class DelightfulItems {
     public static final RegistryObject<Item> MARSHMALLOW_STICK = registerFood("marshmallow_stick", FoodValues.MARSHMALLOW_STICK, Items.STICK);
     public static final RegistryObject<Item> COOKED_MARSHMALLOW_STICK = registerFood("cooked_marshmallow_stick", FoodValues.COOKED_MARSHMALLOW_STICK, Items.STICK);
     public static final RegistryObject<Item> SMORE = registerFood("smore", FoodValues.SMORE);
-    public static final RegistryObject<Item> CRAB_RANGOON = registerFood("crab_rangoon", FoodValues.CRAB_RANGOON);
-    public static final RegistryObject<Item> PRICKLY_PEAR_JUICE = registerItem("prickly_pear_juice", () -> new PricklyPearJuiceItem((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16).tab(FarmersDelight.CREATIVE_TAB)));
-    public static final RegistryObject<Item> CHUNKWICH = registerFood("chunkwich", FoodValues.CHUNKWICH);
+    public static final RegistryObject<Item> CRAB_RANGOON = registerCompatFood("crab_rangoon", "ecologics", FoodValues.CRAB_RANGOON);
+    public static final RegistryObject<Item> PRICKLY_PEAR_JUICE = registerCompatItem("prickly_pear_juice", "ecologics",
+            () -> new PricklyPearJuiceItem((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16).tab(FarmersDelight.CREATIVE_TAB)),
+            () -> new PricklyPearJuiceItem((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16)));
+    public static final RegistryObject<Item> CHUNKWICH = registerCompatFood("chunkwich", "rottenleather", FoodValues.CHUNKWICH);
     public static final RegistryObject<Item> JELLY_BOTTLE = registerFood("jelly_bottle", FoodValues.JELLY_BOTTLE, Items.GLASS_BOTTLE);
     public static final RegistryObject<Item> NUT_BUTTER_BOTTLE = registerFood("nut_butter_bottle", FoodValues.NUT_BUTTER_BOTTLE, Items.GLASS_BOTTLE);
     public static final RegistryObject<Item> NUT_BUTTER_AND_JELLY_SANDWICH = registerItem("nut_butter_and_jelly_sandwich", () -> new ConsumableItem((new Item.Properties()).food(FoodValues.NUT_BUTTER_AND_JELLY_SANDWICH).tab(FarmersDelight.CREATIVE_TAB), true));
+    public static final RegistryObject<Item> ENDER_NECTAR = registerItem("ender_nectar", () -> new EnderNectarItem((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16).tab(FarmersDelight.CREATIVE_TAB)));
+
     public static final RegistryObject<Item> PIZZA = registerItem("pizza", () -> new PizzaItem((new Item.Properties())
             //.tab(FarmersDelight.CREATIVE_TAB) WIP
     ));
@@ -106,6 +110,22 @@ public class DelightfulItems {
     // Sets creative tab to Farmer's Delight
     public static RegistryObject<Item> registerItem(String name, Item.Properties props) {
         return registerItem(name, () -> new Item(props.tab(FarmersDelight.CREATIVE_TAB)));
+    }
+
+    // Sets no creative tab
+    public static RegistryObject<Item> registerCompatFood(String name, String modid, FoodProperties food) {
+        if (ModList.get().isLoaded(modid)) {
+            return registerItem(name, () -> new Item((new Item.Properties().food(food).tab(FarmersDelight.CREATIVE_TAB))));
+        }
+        return registerItem(name, () -> new Item((new Item.Properties().food(food))));
+    }
+
+    // Sets no creative tab
+    public static RegistryObject<Item> registerCompatItem(String name, String modid, Supplier<Item> loaded, Supplier<Item> notLoaded) {
+        if (ModList.get().isLoaded(modid)) {
+            return registerItem(name, loaded);
+        }
+        return registerItem(name, notLoaded);
     }
 
     // Creative tab should be set before calling this function

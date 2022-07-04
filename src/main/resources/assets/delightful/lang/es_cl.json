@@ -10,6 +10,7 @@
   "item.delightful.jelly_bottle": "Botella de mermelada",
   "item.delightful.nut_butter_bottle": "Botella de mantequilla de nuez",
   "item.delightful.nut_butter_and_jelly_sandwich": "Sándwich de mantequilla de nuez y mermelada",
+  "item.delightful.ender_nectar": "Néctar de ender",
   "block.delightful.pizza_stone": "Piedra para pizza",
   "block.delightful.pizza_peel": "Cáscara de pizza",
   "item.delightful.pizza": "Pizza",
@@ -29,5 +30,6 @@
   "item.delightful.netherite_opal_knife": "Cuchillo de ópalo netherita",
   "item.delightful.silver_knife": "Cuchillo de ópalo plata",
   "item.delightful.brass_knife": "Cuchillo de ópalo latón",
-  "farmersdelight.tooltip.prickly_pear_juice": "Muy saturante"
+  "farmersdelight.tooltip.prickly_pear_juice": "Muy saturante",
+  "farmersdelight.tooltip.ender_nectar": "De otro mundo"
 }

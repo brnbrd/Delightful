@@ -15,16 +15,18 @@ import javax.annotation.Nullable;
 import java.util.List;
 
 public class TaggedKnifeItem extends KnifeItem {
-    private final TagKey<Item> tag;
+    private final ResourceLocation tag;
 
     public TaggedKnifeItem(Tier tier, float attackDamageIn, float attackSpeedIn, Item.Properties properties, ResourceLocation resTag) {
         super(tier, attackDamageIn, attackSpeedIn, properties);
-        this.tag = TagKey.create(ForgeRegistries.ITEMS.getRegistryKey(), resTag);
+        this.tag = resTag;
     }
 
     // Returns true if there is an entry within the tag
     public boolean isTag() {
-        return !ForgeRegistries.ITEMS.tags().getTag(this.tag).isEmpty();
+        return !ForgeRegistries.ITEMS.tags().getTag(
+                TagKey.create(ForgeRegistries.ITEMS.getRegistryKey(), this.tag))
+                .isEmpty();
     }
 
     /**
@@ -34,16 +36,16 @@ public class TaggedKnifeItem extends KnifeItem {
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> tool, TooltipFlag pIsAdvanced) {
         if (!this.isTag()) {
             tool.add(new TextComponent("Requires non-empty tag:"));
-            tool.add(new TextComponent(this.tag.location().getNamespace() + ":" + this.tag.location().getPath()).withStyle(ChatFormatting.UNDERLINE));
+            tool.add(new TextComponent(this.tag.getNamespace() + ":" + this.tag.getPath()).withStyle(ChatFormatting.UNDERLINE));
         }
     }
 
     @Override
     public void fillItemCategory(CreativeModeTab pCategory, NonNullList<ItemStack> pItems) {
-        //if (this.isTag()) { // This is not registered in time
-            if (pCategory == FarmersDelight.CREATIVE_TAB || pCategory == CreativeModeTab.TAB_SEARCH) {
+        if (this.isTag()) {
+            if (pCategory == FarmersDelight.CREATIVE_TAB || pCategory == CreativeModeTab.TAB_SEARCH) { // Will not work for search
                 pItems.add(new ItemStack(this));
             }
-        //}
+        }
     }
 }

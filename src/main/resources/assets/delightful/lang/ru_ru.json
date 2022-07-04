@@ -10,6 +10,7 @@
   "item.delightful.jelly_bottle": "Желейная бутылка",
   "item.delightful.nut_butter_bottle": "Бутылка орехового масла",
   "item.delightful.nut_butter_and_jelly_sandwich": "Сэндвич с ореховым маслом и желе",
+  "item.delightful.ender_nectar": "Нектар Эндер",
   "block.delightful.pizza_stone": "Камень для пиццы",
   "block.delightful.pizza_peel": "Пицца Пил",
   "item.delightful.pizza": "Пицца",
@@ -29,5 +30,6 @@
   "item.delightful.netherite_opal_knife": "Нетеритовый опал нож",
   "item.delightful.silver_knife": "Серебряный нож",
   "item.delightful.brass_knife": "Латунный нож",
-  "farmersdelight.tooltip.prickly_pear_juice": "Очень насыщенный"
+  "farmersdelight.tooltip.prickly_pear_juice": "Очень насыщенный",
+  "farmersdelight.tooltip.ender_nectar": "потусторонний"
 }
