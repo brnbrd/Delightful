@@ -3,7 +3,6 @@ package net.brdle.delightful.proxy;
 import net.brdle.delightful.Delightful;
 import net.brdle.delightful.common.block.DelightfulBlocks;
 import net.brdle.delightful.common.item.DelightfulItems;
-import net.brdle.delightful.data.DataGenerators;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -22,7 +21,6 @@ public class CommonProxy {
         DelightfulBlocks.create(modBus);
         DelightfulItems.create(modBus);
         modBus.register(this);
-        modBus.register(DataGenerators.class);
     }
 
     /*@SubscribeEvent
