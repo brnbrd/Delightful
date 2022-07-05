@@ -111,8 +111,8 @@ dependencies {
     runtimeOnly fg.deobf("curse.maven:mekanism-tools-268567:${mekanism_tools_version}")
     runtimeOnly fg.deobf("curse.maven:ecologics-570463:${ecologics_version}")
     runtimeOnly fg.deobf("curse.maven:rotten-leather-231487:${rl_version}")
-    runtimeOnly fg.deobf("curse.maven:brewin-and-chewin-637808:${brewin_chewin_version}")
-    runtimeOnly fg.deobf("curse.maven:bone-equipment-508347:${bone_equipment_version}")
+    //runtimeOnly fg.deobf("curse.maven:brewin-and-chewin-637808:${brewin_chewin_version}")
+    // fg.deobf("curse.maven:bone-equipment-508347:${bone_equipment_version}")
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
