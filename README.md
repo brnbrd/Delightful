@@ -1,4 +1,4 @@
-# Delightful
+# [Delightful](https://www.curseforge.com/minecraft/mc-mods/delightful)
 Farmer's Delight addon with immersive new content.
 
 <img src="https://onvoid.net/delightful/logo.png" height="50px" />
