@@ -8,7 +8,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 public enum DelightfulTiers implements Tier {
     COPPER(2, 150, 5.0F, 1.5F, 14, () -> Ingredient.of(Items.COPPER_INGOT)),
     BONE(1, 190, 5.0F, 1.5F, 9, () -> Ingredient.of(Items.BONE)),
-    TIN(2, 140, 5.0F, 1.5F, 10, DelightfulIngredients.tin),
+    TIN(1, 120, 13.0F, 1.5F, 18, DelightfulIngredients.tin),
     STEEL(2, 484, 6.5F, 2.5F, 16, DelightfulIngredients.steel),
     SILVER(2, 484, 6.0F, 2.0F, 16, DelightfulIngredients.silver),
     BRASS(2, 484, 6.0F, 2.5F, 16, DelightfulIngredients.brass),
@@ -21,7 +21,12 @@ public enum DelightfulTiers implements Tier {
     LAPIS_LAZULI(1, 128, 4.0F, 1.0F, 32, DelightfulIngredients.lapis),
     LARGE_AMETHYST(4, 2625, 12.0F, 4.0F, 35, DelightfulIngredients.largeAmethyst),
     BLACK_OPAL(5, 5250, 16.0F, 5.0F, 15, DelightfulIngredients.blackOpal),
-    NETHERITE_OPAL(6, 6300, 16.0F, 6.0F, 20, DelightfulIngredients.blackOpal);
+    NETHERITE_OPAL(6, 6300, 16.0F, 6.0F, 20, DelightfulIngredients.blackOpal),
+    CONSTANTAN(2, 250, 5.5F, 2.0F, 10, DelightfulIngredients.constantan),
+    ELECTRUM(2, 96, 13.0F, 2.0F, 28, DelightfulIngredients.electrum),
+    INVAR(2, 300, 7.0F, 2.5F, 13, DelightfulIngredients.invar),
+    LEAD(1, 130, 12.0F, 1.5F, 16, DelightfulIngredients.lead),
+    NICKEL(2, 225, 7.0F, 2.5F, 12, DelightfulIngredients.nickel);
 
     private final int level;
     private final int uses;

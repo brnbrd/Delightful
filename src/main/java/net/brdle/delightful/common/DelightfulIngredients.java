@@ -20,6 +20,11 @@ public class DelightfulIngredients {
     public static final Supplier<Ingredient> lapis = getGem("lapis");
     public static final Supplier<Ingredient> largeAmethyst = getGem("large_amethyst");
     public static final Supplier<Ingredient> blackOpal = getGem("black_opal");
+    public static final Supplier<Ingredient> constantan = getIngot("constantan");
+    public static final Supplier<Ingredient> electrum = getIngot("electrum");
+    public static final Supplier<Ingredient> invar = getIngot("invar");
+    public static final Supplier<Ingredient> lead = getIngot("lead");
+    public static final Supplier<Ingredient> nickel = getIngot("nickel");
 
     private static final Supplier<Ingredient> getIngot(String name) {
         return () -> Ingredient.of(TagKey.create(ForgeRegistries.ITEMS.getRegistryKey(), new ResourceLocation("forge", "ingots/" + name)));

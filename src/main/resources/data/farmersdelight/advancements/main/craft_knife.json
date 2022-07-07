@@ -268,6 +268,66 @@
           }
         ]
       }
+    },
+    "constantan_knife": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:constantan_knife"
+            ]
+          }
+        ]
+      }
+    },
+    "electrum_knife": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:electrum_knife"
+            ]
+          }
+        ]
+      }
+    },
+    "invar_knife": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:invar_knife"
+            ]
+          }
+        ]
+      }
+    },
+    "lead_knife": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:lead_knife"
+            ]
+          }
+        ]
+      }
+    },
+    "nickel_knife": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:nickel_knife"
+            ]
+          }
+        ]
+      }
     }
   },
   "requirements": [
@@ -292,7 +352,12 @@
       "netherite_opal_knife",
       "silver_knife",
       "brass_knife",
-      "bone_knife"
+      "bone_knife",
+      "constantan_knife",
+      "electrum_knife",
+      "invar_knife",
+      "lead_knife",
+      "nickel_knife"
     ]
   ]
 }
