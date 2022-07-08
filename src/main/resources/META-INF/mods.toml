@@ -3,7 +3,6 @@ loaderVersion="[40,)"
 license="MIT License"
 issueTrackerURL="https://github.com/brdle/Delightful/issues"
 
-
 [[mods]]
 modId="delightful"
 version="${file.jarVersion}"
@@ -29,5 +28,19 @@ configBackground="farmersdelight:textures/block/tatami.png"
     modId="farmersdelight"
     mandatory=true
     versionRange="[1.1,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.delightful]]
+    modId="ecologics"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.delightful]]
+    modId="lolenderite"
+    mandatory=false
+    versionRange="[0,)"
     ordering="AFTER"
     side="BOTH"

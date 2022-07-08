@@ -1,15 +1,21 @@
 package net.brdle.delightful.proxy;
 
 import net.brdle.delightful.Delightful;
+import net.brdle.delightful.common.config.BlockEnabledCondition;
+import net.brdle.delightful.common.config.FoodEnabledCondition;
+import net.brdle.delightful.common.config.KnifeEnabledCondition;
 import net.brdle.delightful.common.block.DelightfulBlocks;
 import net.brdle.delightful.common.item.DelightfulItems;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.block.Block;
+import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
+
 import java.util.List;
 
 public class CommonProxy {
@@ -60,5 +66,13 @@ public class CommonProxy {
                 }
             }
         }
+    }
+
+    // Adds delightful conditions
+    @SubscribeEvent
+    public void registerSerializers(RegistryEvent.Register<RecipeSerializer<?>> event) {
+        CraftingHelper.register(KnifeEnabledCondition.Serializer.INSTANCE);
+        CraftingHelper.register(FoodEnabledCondition.Serializer.INSTANCE);
+        CraftingHelper.register(BlockEnabledCondition.Serializer.INSTANCE);
     }
 }

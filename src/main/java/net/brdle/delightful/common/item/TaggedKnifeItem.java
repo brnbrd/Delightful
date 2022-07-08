@@ -1,5 +1,6 @@
 package net.brdle.delightful.common.item;
 
+import net.brdle.delightful.common.config.DelightfulConfig;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
@@ -34,18 +35,11 @@ public class TaggedKnifeItem extends KnifeItem {
      */
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> tool, TooltipFlag pIsAdvanced) {
-        if (!this.isTag()) {
+        if (!DelightfulConfig.CONFIG.knives.get(this.getRegistryName().getPath()).get()) {
+            tool.add(new TextComponent("Disabled.").withStyle(ChatFormatting.UNDERLINE));
+        } else if (!this.isTag()) {
             tool.add(new TextComponent("Requires non-empty tag:"));
             tool.add(new TextComponent(this.tag.getNamespace() + ":" + this.tag.getPath()).withStyle(ChatFormatting.UNDERLINE));
-        }
-    }
-
-    @Override
-    public void fillItemCategory(CreativeModeTab pCategory, NonNullList<ItemStack> pItems) {
-        if (this.isTag()) {
-            if (pCategory == FarmersDelight.CREATIVE_TAB || pCategory == CreativeModeTab.TAB_SEARCH) { // Will not work for search
-                pItems.add(new ItemStack(this));
-            }
         }
     }
 }

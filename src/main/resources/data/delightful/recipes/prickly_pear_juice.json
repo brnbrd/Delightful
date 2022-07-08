@@ -4,8 +4,17 @@
     {
       "conditions": [
         {
-          "type": "forge:mod_loaded",
-          "modid": "ecologics"
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "forge:mod_loaded",
+              "modid": "ecologics"
+            },
+            {
+              "type": "delightful:food",
+              "value": "prickly_pear_juice"
+            }
+          ]
         }
       ],
       "recipe": {

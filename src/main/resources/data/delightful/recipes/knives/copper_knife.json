@@ -1,18 +1,31 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    " m",
-    "s "
-  ],
-  "key": {
-    "m": {
-      "tag": "forge:ingots/copper"
-    },
-    "s": {
-      "tag": "forge:rods/wooden"
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:knife",
+          "value": "copper"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          " m",
+          "s "
+        ],
+        "key": {
+          "m": {
+            "tag": "forge:ingots/copper"
+          },
+          "s": {
+            "tag": "forge:rods/wooden"
+          }
+        },
+        "result": {
+          "item": "delightful:copper_knife"
+        }
+      }
     }
-  },
-  "result": {
-    "item": "delightful:copper_knife"
-  }
+  ]
 }

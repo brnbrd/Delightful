@@ -1,5 +1,6 @@
 package net.brdle.delightful.common.item;
 
+import net.brdle.delightful.common.config.DelightfulConfig;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
@@ -24,12 +25,14 @@ public class CompatKnifeItem extends KnifeItem {
         return ModList.get().isLoaded(this.modid);
     }
 
-    @Override
     /**
      * allows items to add custom lines of information to the mouseover description
      */
+    @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> tool, TooltipFlag pIsAdvanced) {
-        if (!this.isLoaded()) {
+        if (!DelightfulConfig.CONFIG.knives.get(this.getRegistryName().getPath()).get()) {
+            tool.add(new TextComponent("Disabled.").withStyle(ChatFormatting.UNDERLINE));
+        } else if (!this.isLoaded()) {
             tool.add(new TextComponent("Requires modid:"));
             tool.add(new TextComponent(modid).withStyle(ChatFormatting.UNDERLINE));
         }

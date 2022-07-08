@@ -4,8 +4,17 @@
     {
       "conditions": [
         {
-          "type": "forge:item_exists",
-          "item": "mekanism:nugget_tin"
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "forge:item_exists",
+              "item": "mekanism:nugget_tin"
+            },
+            {
+              "type": "delightful:knife",
+              "value": "tin"
+            }
+          ]
         }
       ],
       "recipe": {

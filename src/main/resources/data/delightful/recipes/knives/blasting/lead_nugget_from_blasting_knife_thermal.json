@@ -1,0 +1,31 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "forge:item_exists",
+              "item": "thermal:lead_nugget"
+            },
+            {
+              "type": "delightful:knife",
+              "value": "lead"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:blasting",
+        "ingredient": {
+          "item": "delightful:lead_knife"
+        },
+        "result": "thermal:lead_nugget",
+        "experience": 0.1,
+        "cookingtime": 100
+      }
+    }
+  ]
+}

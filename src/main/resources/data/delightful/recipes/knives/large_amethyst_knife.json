@@ -4,11 +4,20 @@
     {
       "conditions": [
         {
-          "type": "forge:not",
-          "value": {
-            "type": "forge:tag_empty",
-            "tag": "forge:gems/large_amethyst"
-          }
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:gems/large_amethyst"
+              }
+            },
+            {
+              "type": "delightful:knife",
+              "value": "large_amethyst"
+            }
+          ]
         }
       ],
       "recipe": {

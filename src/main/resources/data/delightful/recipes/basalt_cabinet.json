@@ -1,19 +1,32 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "qqq",
-    "qcq",
-    "qqq"
-  ],
-  "key": {
-    "q": {
-      "item": "minecraft:basalt"
-    },
-    "c": {
-      "tag": "farmersdelight:cabinets/wooden"
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:block",
+          "value": "basalt_cabinet"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "qqq",
+          "qcq",
+          "qqq"
+        ],
+        "key": {
+          "q": {
+            "item": "minecraft:basalt"
+          },
+          "c": {
+            "tag": "farmersdelight:cabinets/wooden"
+          }
+        },
+        "result": {
+          "item": "delightful:basalt_cabinet"
+        }
+      }
     }
-  },
-  "result": {
-    "item": "delightful:basalt_cabinet"
-  }
+  ]
 }

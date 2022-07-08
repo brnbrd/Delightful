@@ -4,8 +4,17 @@
     {
       "conditions": [
         {
-          "type": "forge:item_exists",
-          "item": "copperized:copper_nugget"
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "forge:item_exists",
+              "item": "copperized:copper_nugget"
+            },
+            {
+              "type": "delightful:knife",
+              "value": "copper"
+            }
+          ]
         }
       ],
       "recipe": {

@@ -4,6 +4,10 @@
     {
       "id": "ecologics:crab_meat",
       "required": false
+    },
+    {
+      "id": "quark:cooked_crab_leg",
+      "required": false
     }
   ]
 }

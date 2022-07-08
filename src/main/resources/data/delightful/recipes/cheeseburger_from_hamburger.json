@@ -1,14 +1,27 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
+  "type": "forge:conditional",
+  "recipes": [
     {
-      "item": "farmersdelight:hamburger"
-    },
-    {
-      "tag": "forge:cheese_or_milk"
+      "conditions": [
+        {
+          "type": "delightful:food",
+          "value": "cheeseburger"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "farmersdelight:hamburger"
+          },
+          {
+            "tag": "forge:cheese_or_milk"
+          }
+        ],
+        "result": {
+          "item": "delightful:cheeseburger"
+        }
+      }
     }
-  ],
-  "result": {
-    "item": "delightful:cheeseburger"
-  }
+  ]
 }

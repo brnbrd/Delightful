@@ -1,26 +1,39 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
+  "type": "forge:conditional",
+  "recipes": [
     {
-      "tag": "forge:bread"
-    },
-    {
-      "item": "farmersdelight:beef_patty"
-    },
-    {
-      "tag": "forge:cheese_or_milk"
-    },
-    {
-      "tag": "forge:salad_ingredients"
-    },
-    {
-      "tag": "forge:crops/tomato"
-    },
-    {
-      "tag": "forge:crops/onion"
+      "conditions": [
+        {
+          "type": "delightful:food",
+          "value": "cheeseburger"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "tag": "forge:bread"
+          },
+          {
+            "item": "farmersdelight:beef_patty"
+          },
+          {
+            "tag": "forge:cheese_or_milk"
+          },
+          {
+            "tag": "forge:salad_ingredients"
+          },
+          {
+            "tag": "forge:crops/tomato"
+          },
+          {
+            "tag": "forge:crops/onion"
+          }
+        ],
+        "result": {
+          "item": "delightful:cheeseburger"
+        }
+      }
     }
-  ],
-  "result": {
-    "item": "delightful:cheeseburger"
-  }
+  ]
 }

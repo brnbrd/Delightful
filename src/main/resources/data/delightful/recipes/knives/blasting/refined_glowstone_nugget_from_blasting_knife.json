@@ -4,8 +4,17 @@
     {
       "conditions": [
         {
-          "type": "forge:item_exists",
-          "item": "mekanism:nugget_refined_glowstone"
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "forge:item_exists",
+              "item": "mekanism:nugget_refined_glowstone"
+            },
+            {
+              "type": "delightful:knife",
+              "value": "refined_glowstone"
+            }
+          ]
         }
       ],
       "recipe": {

@@ -4,8 +4,17 @@
     {
       "conditions": [
         {
-          "type": "forge:item_exists",
-          "item": "simplysteel:steel_nugget"
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "forge:item_exists",
+              "item": "simplysteel:steel_nugget"
+            },
+            {
+              "type": "delightful:knife",
+              "value": "steel"
+            }
+          ]
         }
       ],
       "recipe": {

@@ -4,11 +4,20 @@
     {
       "conditions": [
         {
-          "type": "forge:not",
-          "value": {
-            "type": "forge:tag_empty",
-            "tag": "forge:gems/black_opal"
-          }
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:gems/black_opal"
+              }
+            },
+            {
+              "type": "delightful:knife",
+              "value": "netherite_opal"
+            }
+          ]
         }
       ],
       "recipe": {

@@ -4,8 +4,17 @@
     {
       "conditions": [
         {
-          "type": "forge:mod_loaded",
-          "modid": "rottenleather"
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "forge:mod_loaded",
+              "modid": "rottenleather"
+            },
+            {
+              "type": "delightful:food",
+              "value": "chunkwich"
+            }
+          ]
         }
       ],
       "recipe": {

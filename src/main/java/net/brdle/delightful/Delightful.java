@@ -1,9 +1,12 @@
 package net.brdle.delightful;
 
+import net.brdle.delightful.common.config.DelightfulConfig;
 import net.brdle.delightful.proxy.ClientProxy;
 import net.brdle.delightful.proxy.CommonProxy;
 import net.minecraftforge.fml.DistExecutor;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -19,6 +22,7 @@ public class Delightful
         instance = this;
         proxy = DistExecutor.safeRunForDist(() -> ClientProxy::new, () -> CommonProxy::new);
         proxy.start();
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, DelightfulConfig.SPEC);
     }
 
     public static Logger getLogger() {

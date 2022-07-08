@@ -1,0 +1,31 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "forge:item_exists",
+              "item": "thermal:tin_nugget"
+            },
+            {
+              "type": "delightful:knife",
+              "value": "tin"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:blasting",
+        "ingredient": {
+          "item": "delightful:tin_knife"
+        },
+        "result": "thermal:tin_nugget",
+        "experience": 0.1,
+        "cookingtime": 100
+      }
+    }
+  ]
+}

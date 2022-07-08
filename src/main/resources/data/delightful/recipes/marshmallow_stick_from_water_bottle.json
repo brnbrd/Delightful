@@ -5,8 +5,7 @@
       "tag": "forge:sugar"
     },
     {
-      "item": "minecraft:potion",
-      "tag": {"Potion": "minecraft:water"}
+      "item": "minecraft:potion"
     },
     {
       "tag": "forge:stick"

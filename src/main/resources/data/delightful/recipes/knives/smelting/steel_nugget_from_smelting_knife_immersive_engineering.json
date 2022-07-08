@@ -4,8 +4,17 @@
     {
       "conditions": [
         {
-          "type": "forge:item_exists",
-          "item": "immersiveengineering:nugget_steel"
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "forge:item_exists",
+              "item": "immersiveengineering:nugget_steel"
+            },
+            {
+              "type": "delightful:knife",
+              "value": "steel"
+            }
+          ]
         }
       ],
       "recipe": {

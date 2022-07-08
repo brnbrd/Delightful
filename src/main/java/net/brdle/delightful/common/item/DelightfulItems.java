@@ -10,7 +10,6 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Tier;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.registries.DeferredRegister;
@@ -18,7 +17,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import vectorwing.farmersdelight.FarmersDelight;
 import vectorwing.farmersdelight.common.item.ConsumableItem;
-import vectorwing.farmersdelight.common.item.KnifeItem;
 import java.util.ArrayList;
 import java.util.function.Supplier;
 
@@ -105,7 +103,7 @@ public class DelightfulItems {
     public static RegistryObject<Item> registerCompatKnife(String name, Tier tier, float attackDamageIn, float attackSpeedIn, String modid) {
         var knife = registerItem(name, () ->
                 ModList.get().isLoaded(modid) ?
-                        new KnifeItem(tier, attackDamageIn, attackSpeedIn, (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)) :
+                        new CompatKnifeItem(tier, attackDamageIn, attackSpeedIn, (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB), modid) :
                         new CompatKnifeItem(tier, attackDamageIn, attackSpeedIn, (new Item.Properties()), modid));
         knives.add(knife);
         return knife;
@@ -113,14 +111,14 @@ public class DelightfulItems {
 
     // Registers a knife to Farmer's Delight tab, requiring non-empty tag
     public static RegistryObject<Item> registerTaggedKnife(String name, Tier tier, float attackDamageIn, float attackSpeedIn, ResourceLocation tag) {
-        var knife = registerItem(name, () -> new TaggedKnifeItem(tier, attackDamageIn, attackSpeedIn, (new Item.Properties()), tag));
+        var knife = registerItem(name, () -> new TaggedKnifeItem(tier, attackDamageIn, attackSpeedIn, (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB), tag));
         knives.add(knife);
         return knife;
     }
 
     // Registers a knife to Farmer's Delight tab
     public static RegistryObject<Item> registerKnife(String name, Tier tier, float attackDamageIn, float attackSpeedIn) {
-        var knife = registerItem(name, () -> new KnifeItem(tier, attackDamageIn, attackSpeedIn, (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
+        var knife = registerItem(name, () -> new DelightfulKnifeItem(tier, attackDamageIn, attackSpeedIn, (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
         knives.add(knife);
         return knife;
     }

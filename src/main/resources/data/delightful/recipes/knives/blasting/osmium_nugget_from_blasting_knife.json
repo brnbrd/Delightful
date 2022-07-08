@@ -4,8 +4,17 @@
     {
       "conditions": [
         {
-          "type": "forge:item_exists",
-          "item": "mekanism:nugget_osmium"
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "forge:item_exists",
+              "item": "mekanism:nugget_osmium"
+            },
+            {
+              "type": "delightful:knife",
+              "value": "osmium"
+            }
+          ]
         }
       ],
       "recipe": {

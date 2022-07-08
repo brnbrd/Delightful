@@ -4,11 +4,20 @@
     {
       "conditions": [
         {
-          "type": "forge:not",
-          "value": {
-            "type": "forge:tag_empty",
-            "tag": "forge:ingots/enderite"
-          }
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:ingots/enderite"
+              }
+            },
+            {
+              "type": "delightful:knife",
+              "value": "enderite"
+            }
+          ]
         }
       ],
       "recipe": {

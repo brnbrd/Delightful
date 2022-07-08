@@ -4,8 +4,17 @@
     {
       "conditions": [
         {
-          "type": "forge:mod_loaded",
-          "modid": "mekanismtools"
+          "type": "forge:or",
+          "values": [
+            {
+              "type": "forge:mod_loaded",
+              "modid": "mekanismtools"
+            },
+            {
+              "type": "delightful:knife",
+              "value": "lapis_lazuli"
+            }
+          ]
         }
       ],
       "recipe": {

@@ -4,11 +4,20 @@
     {
       "conditions": [
         {
-          "type": "forge:not",
-          "value": {
-            "type": "forge:tag_empty",
-            "tag": "forge:ingots/obsidian_infused_enderite"
-          }
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:ingots/obsidian_infused_enderite"
+              }
+            },
+            {
+              "type": "delightful:knife",
+              "value": "obsidian_infused_enderite"
+            }
+          ]
         }
       ],
       "recipe": {

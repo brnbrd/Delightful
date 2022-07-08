@@ -1,0 +1,31 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "forge:item_exists",
+              "item": "thermal:electrum_nugget"
+            },
+            {
+              "type": "delightful:knife",
+              "value": "electrum"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:blasting",
+        "ingredient": {
+          "item": "delightful:electrum_knife"
+        },
+        "result": "thermal:electrum_nugget",
+        "experience": 0.1,
+        "cookingtime": 100
+      }
+    }
+  ]
+}
