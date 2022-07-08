@@ -4,7 +4,6 @@ import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.registration.IRecipeRegistration;
-import net.brdle.delightful.Delightful;
 import net.brdle.delightful.common.config.DelightfulConfig;
 import net.brdle.delightful.common.item.CompatKnifeItem;
 import net.brdle.delightful.common.item.DelightfulItems;
@@ -30,13 +29,10 @@ public class JEIPlugin implements IModPlugin
         DelightfulItems.knives.stream()
             .map(RegistryObject::get)
             .filter(k -> {
-                boolean isEnabled = DelightfulConfig.CONFIG.knives.get(k.getRegistryName().getPath()).get();
-                Delightful.getLogger().warn(k.getRegistryName().getPath() + " enabledDD: " + isEnabled);
+                var isEnabled = DelightfulConfig.CONFIG.knives.get(k.getRegistryName().getPath()).get();
                 if (k instanceof TaggedKnifeItem tki) {
-                    Delightful.getLogger().warn(k.getRegistryName().getPath() + " tag: " + tki.isTag());
                     return isEnabled && tki.isTag();
                 } else if (k instanceof CompatKnifeItem cki) {
-                    Delightful.getLogger().warn(k.getRegistryName().getPath() + " load: " + cki.isLoaded());
                     return isEnabled && cki.isLoaded();
                 }
                 return isEnabled;

@@ -2,7 +2,6 @@ package net.brdle.delightful.common.config;
 
 import net.brdle.delightful.common.item.DelightfulItems;
 import net.minecraftforge.common.ForgeConfigSpec;
-import org.apache.commons.lang3.tuple.Pair;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,7 +9,6 @@ public class DelightfulConfig {
 
     public static final DelightfulConfig CONFIG;
     public static final ForgeConfigSpec SPEC;
-
     public final Map<String, ForgeConfigSpec.ConfigValue<Boolean>> knives;
     public final Map<String, ForgeConfigSpec.ConfigValue<Boolean>> foods;
     public final Map<String, ForgeConfigSpec.ConfigValue<Boolean>> blocks;
@@ -50,7 +48,7 @@ public class DelightfulConfig {
     }
 
     static {
-        Pair<DelightfulConfig, ForgeConfigSpec> pair = new ForgeConfigSpec.Builder().configure(DelightfulConfig::new);
+        var pair = new ForgeConfigSpec.Builder().configure(DelightfulConfig::new);
         SPEC = pair.getRight();
         CONFIG = pair.getLeft();
     }
