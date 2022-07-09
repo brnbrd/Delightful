@@ -5,6 +5,7 @@ import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.registration.IRecipeRegistration;
 import net.brdle.delightful.common.config.DelightfulConfig;
+import net.brdle.delightful.common.item.IConfigured;
 import net.brdle.delightful.common.item.knife.CompatKnifeItem;
 import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.item.knife.TaggedKnifeItem;
@@ -29,13 +30,14 @@ public class JEIPlugin implements IModPlugin
         DelightfulItems.knives.stream()
             .map(RegistryObject::get)
             .filter(k -> {
-                var isEnabled = DelightfulConfig.CONFIG.knives.get(k.getRegistryName().getPath()).get();
                 if (k instanceof TaggedKnifeItem tki) {
-                    return isEnabled && tki.isTag();
+                    return tki.isEnabled() && tki.isTag();
                 } else if (k instanceof CompatKnifeItem cki) {
-                    return isEnabled && cki.isLoaded();
+                    return cki.isEnabled() && cki.isLoaded();
+                } else if (k instanceof IConfigured configured) {
+                    return configured.isEnabled();
                 }
-                return isEnabled;
+                return false;
             })
             .map(ItemStack::new)
             .forEach((k -> registration.addIngredientInfo(k, VanillaTypes.ITEM_STACK, TextUtils.getTranslation("jei.info.knife"))));

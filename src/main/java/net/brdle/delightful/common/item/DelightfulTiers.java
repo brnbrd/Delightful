@@ -3,12 +3,11 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 import org.jetbrains.annotations.NotNull;
-
 import java.util.function.Supplier;
 
 public enum DelightfulTiers implements Tier {
-    COPPER(2, 150, 5.0F, 1.5F, 14, () -> Ingredient.of(Items.COPPER_INGOT)),
     BONE(1, 190, 5.0F, 1.5F, 9, () -> Ingredient.of(Items.BONE)),
+    COPPER(2, 150, 5.0F, 1.5F, 14, DelightfulItems.getIngot("copper")),
     TIN(1, 120, 13.0F, 1.5F, 18, DelightfulItems.getIngot("tin")),
     STEEL(2, 484, 6.5F, 2.5F, 16, DelightfulItems.getIngot("steel")),
     SILVER(2, 484, 6.0F, 2.0F, 16, DelightfulItems.getIngot("silver")),
