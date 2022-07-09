@@ -1,16 +1,22 @@
 package net.brdle.delightful.common.item;
 
 import net.brdle.delightful.Delightful;
-import net.brdle.delightful.common.DelightfulIngredients;
-import net.brdle.delightful.common.DelightfulTiers;
-import net.brdle.delightful.common.FoodValues;
+import net.brdle.delightful.common.item.food.FoodValues;
 import net.brdle.delightful.common.block.DelightfulBlocks;
+import net.brdle.delightful.common.item.food.EnderNectarItem;
+import net.brdle.delightful.common.item.food.PizzaItem;
+import net.brdle.delightful.common.item.food.PricklyPearJuiceItem;
+import net.brdle.delightful.common.item.knife.CompatKnifeItem;
+import net.brdle.delightful.common.item.knife.DelightfulKnifeItem;
+import net.brdle.delightful.common.item.knife.TaggedKnifeItem;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.registries.DeferredRegister;
@@ -30,29 +36,29 @@ public class DelightfulItems {
     public static final RegistryObject<Item> COPPER_KNIFE = registerKnife("copper_knife", DelightfulTiers.COPPER, 0.5F, -2.0F);
     public static final RegistryObject<Item> BONE_KNIFE = registerKnife("bone_knife", DelightfulTiers.BONE, 0.5F, -2.0F);
     public static final RegistryObject<Item> BLACK_OPAL_KNIFE = registerTaggedKnife("black_opal_knife", DelightfulTiers.BLACK_OPAL, 0.5F, -2.0F,
-            DelightfulIngredients.gem("black_opal"));
+            gem("black_opal"));
     public static final RegistryObject<Item> TIN_KNIFE = registerTaggedKnife("tin_knife", DelightfulTiers.TIN, 0.5F, -2.0F,
-            DelightfulIngredients.ingot("tin"));
+            ingot("tin"));
     public static final RegistryObject<Item> STEEL_KNIFE = registerTaggedKnife("steel_knife", DelightfulTiers.STEEL, 0.5F, -2.0F,
-            DelightfulIngredients.ingot("steel"));
+            ingot("steel"));
     public static final RegistryObject<Item> SILVER_KNIFE = registerTaggedKnife("silver_knife", DelightfulTiers.SILVER, 0.5F, -2.0F,
-            DelightfulIngredients.ingot("silver"));
+            ingot("silver"));
     public static final RegistryObject<Item> BRASS_KNIFE = registerTaggedKnife("brass_knife", DelightfulTiers.BRASS, 0.5F, -2.0F,
-            DelightfulIngredients.ingot("brass"));
+            ingot("brass"));
     public static final RegistryObject<Item> ENDERITE_KNIFE = registerTaggedKnife("enderite_knife", DelightfulTiers.ENDERITE, 0.5F, -2.0F,
-            DelightfulIngredients.ingot("enderite"));
+            ingot("enderite"));
     public static final RegistryObject<Item> BRONZE_KNIFE = registerTaggedKnife("bronze_knife", DelightfulTiers.BRONZE, 0.5F, -2.0F,
-            DelightfulIngredients.ingot("bronze"));
+            ingot("bronze"));
     public static final RegistryObject<Item> CONSTANTAN_KNIFE = registerTaggedKnife("constantan_knife", DelightfulTiers.CONSTANTAN, 0.5F, -2.0F,
-            DelightfulIngredients.ingot("constantan"));
+            ingot("constantan"));
     public static final RegistryObject<Item> ELECTRUM_KNIFE = registerTaggedKnife("electrum_knife", DelightfulTiers.ELECTRUM, 0.5F, -2.0F,
-            DelightfulIngredients.ingot("electrum"));
+            ingot("electrum"));
     public static final RegistryObject<Item> INVAR_KNIFE = registerTaggedKnife("invar_knife", DelightfulTiers.INVAR, 0.5F, -2.0F,
-            DelightfulIngredients.ingot("invar"));
+            ingot("invar"));
     public static final RegistryObject<Item> LEAD_KNIFE = registerTaggedKnife("lead_knife", DelightfulTiers.LEAD, 0.5F, -2.0F,
-            DelightfulIngredients.ingot("lead"));
+            ingot("lead"));
     public static final RegistryObject<Item> NICKEL_KNIFE = registerTaggedKnife("nickel_knife", DelightfulTiers.NICKEL, 0.5F, -2.0F,
-            DelightfulIngredients.ingot("nickel"));
+            ingot("nickel"));
 
     public static final RegistryObject<Item> OBSIDIAN_INFUSED_ENDERITE_KNIFE = registerCompatKnife("obsidian_infused_enderite_knife", DelightfulTiers.OBSIDIAN_INFUSED_ENDERITE, 0.5F, -2.0F,
             "lolenderite");
@@ -153,6 +159,22 @@ public class DelightfulItems {
     // Creative tab should be set before calling this function
     public static RegistryObject<Item> registerItem(String name, Supplier<Item> item) {
         return ITEMS.register(name, item);
+    }
+
+    public static final ResourceLocation ingot(String name) {
+        return new ResourceLocation("forge", "ingots/" + name);
+    }
+
+    public static final ResourceLocation gem(String name) {
+        return new ResourceLocation("forge", "gems/" + name);
+    }
+
+    public static final Supplier<Ingredient> getIngot(String name) {
+        return () -> Ingredient.of(TagKey.create(ForgeRegistries.ITEMS.getRegistryKey(), ingot(name)));
+    }
+
+    public static final Supplier<Ingredient> getGem(String name) {
+        return () -> Ingredient.of(TagKey.create(ForgeRegistries.ITEMS.getRegistryKey(), gem(name)));
     }
 
     public static void create(IEventBus bus) {

@@ -1,4 +1,4 @@
-package net.brdle.delightful.common.item;
+package net.brdle.delightful.common.item.food;
 
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.server.level.ServerPlayer;

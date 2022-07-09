@@ -1,4 +1,4 @@
-package net.brdle.delightful.common.item;
+package net.brdle.delightful.common.item.food;
 
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;

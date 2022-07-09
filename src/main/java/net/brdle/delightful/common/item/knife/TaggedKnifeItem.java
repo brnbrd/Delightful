@@ -1,8 +1,6 @@
-package net.brdle.delightful.common.item;
+package net.brdle.delightful.common.item.knife;
 
-import net.brdle.delightful.common.config.DelightfulConfig;
 import net.minecraft.ChatFormatting;
-import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.resources.ResourceLocation;
@@ -10,8 +8,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.registries.ForgeRegistries;
-import vectorwing.farmersdelight.FarmersDelight;
-import vectorwing.farmersdelight.common.item.KnifeItem;
+
 import javax.annotation.Nullable;
 import java.util.List;
 

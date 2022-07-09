@@ -1,4 +1,4 @@
-package net.brdle.delightful.common.item;
+package net.brdle.delightful.common.item.knife;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;

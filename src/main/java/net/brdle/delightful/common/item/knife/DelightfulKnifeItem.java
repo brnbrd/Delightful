@@ -1,6 +1,7 @@
-package net.brdle.delightful.common.item;
+package net.brdle.delightful.common.item.knife;
 
 import net.brdle.delightful.common.config.DelightfulConfig;
+import net.brdle.delightful.common.item.IConfigured;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
