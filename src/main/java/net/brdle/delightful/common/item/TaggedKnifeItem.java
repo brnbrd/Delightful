@@ -15,7 +15,7 @@ import vectorwing.farmersdelight.common.item.KnifeItem;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class TaggedKnifeItem extends KnifeItem {
+public class TaggedKnifeItem extends DelightfulKnifeItem {
     private final ResourceLocation tag;
 
     public TaggedKnifeItem(Tier tier, float attackDamageIn, float attackSpeedIn, Item.Properties properties, ResourceLocation resTag) {
@@ -35,9 +35,8 @@ public class TaggedKnifeItem extends KnifeItem {
      */
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> tool, TooltipFlag pIsAdvanced) {
-        if (!DelightfulConfig.CONFIG.knives.get(this.getRegistryName().getPath()).get()) {
-            tool.add(new TextComponent("Disabled.").withStyle(ChatFormatting.UNDERLINE));
-        } else if (!this.isTag()) {
+        super.appendHoverText(pStack, pLevel, tool, pIsAdvanced);
+        if (!this.isTag()) {
             tool.add(new TextComponent("Requires non-empty tag:"));
             tool.add(new TextComponent(this.tag.getNamespace() + ":" + this.tag.getPath()).withStyle(ChatFormatting.UNDERLINE));
         }

@@ -12,7 +12,7 @@ import vectorwing.farmersdelight.common.item.KnifeItem;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class DelightfulKnifeItem extends KnifeItem {
+public class DelightfulKnifeItem extends KnifeItem implements IConfigured {
     public DelightfulKnifeItem(Tier tier, float attackDamageIn, float attackSpeedIn, Properties properties) {
         super(tier, attackDamageIn, attackSpeedIn, properties);
     }
@@ -25,5 +25,10 @@ public class DelightfulKnifeItem extends KnifeItem {
         if (!DelightfulConfig.CONFIG.knives.get(this.getRegistryName().getPath()).get()) {
             tool.add(new TextComponent("Disabled.").withStyle(ChatFormatting.UNDERLINE));
         }
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return DelightfulConfig.CONFIG.knives.get(this.getRegistryName().getPath()).get();
     }
 }

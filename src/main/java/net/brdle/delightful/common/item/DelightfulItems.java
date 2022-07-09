@@ -1,6 +1,7 @@
 package net.brdle.delightful.common.item;
 
 import net.brdle.delightful.Delightful;
+import net.brdle.delightful.common.DelightfulIngredients;
 import net.brdle.delightful.common.DelightfulTiers;
 import net.brdle.delightful.common.FoodValues;
 import net.brdle.delightful.common.block.DelightfulBlocks;
@@ -26,32 +27,32 @@ public class DelightfulItems {
 
     // Knives
     public static final ArrayList<RegistryObject<Item>> knives = new ArrayList<>();
-
     public static final RegistryObject<Item> COPPER_KNIFE = registerKnife("copper_knife", DelightfulTiers.COPPER, 0.5F, -2.0F);
     public static final RegistryObject<Item> BONE_KNIFE = registerKnife("bone_knife", DelightfulTiers.BONE, 0.5F, -2.0F);
-
+    public static final RegistryObject<Item> BLACK_OPAL_KNIFE = registerTaggedKnife("black_opal_knife", DelightfulTiers.BLACK_OPAL, 0.5F, -2.0F,
+            DelightfulIngredients.gem("black_opal"));
     public static final RegistryObject<Item> TIN_KNIFE = registerTaggedKnife("tin_knife", DelightfulTiers.TIN, 0.5F, -2.0F,
-            new ResourceLocation("forge", "ingots/tin"));
+            DelightfulIngredients.ingot("tin"));
     public static final RegistryObject<Item> STEEL_KNIFE = registerTaggedKnife("steel_knife", DelightfulTiers.STEEL, 0.5F, -2.0F,
-            new ResourceLocation("forge", "ingots/steel"));
+            DelightfulIngredients.ingot("steel"));
     public static final RegistryObject<Item> SILVER_KNIFE = registerTaggedKnife("silver_knife", DelightfulTiers.SILVER, 0.5F, -2.0F,
-            new ResourceLocation("forge", "ingots/silver"));
+            DelightfulIngredients.ingot("silver"));
     public static final RegistryObject<Item> BRASS_KNIFE = registerTaggedKnife("brass_knife", DelightfulTiers.BRASS, 0.5F, -2.0F,
-            new ResourceLocation("forge", "ingots/brass"));
+            DelightfulIngredients.ingot("brass"));
     public static final RegistryObject<Item> ENDERITE_KNIFE = registerTaggedKnife("enderite_knife", DelightfulTiers.ENDERITE, 0.5F, -2.0F,
-            new ResourceLocation("forge", "ingots/enderite"));
+            DelightfulIngredients.ingot("enderite"));
     public static final RegistryObject<Item> BRONZE_KNIFE = registerTaggedKnife("bronze_knife", DelightfulTiers.BRONZE, 0.5F, -2.0F,
-            new ResourceLocation("forge", "ingots/bronze"));
+            DelightfulIngredients.ingot("bronze"));
     public static final RegistryObject<Item> CONSTANTAN_KNIFE = registerTaggedKnife("constantan_knife", DelightfulTiers.CONSTANTAN, 0.5F, -2.0F,
-            new ResourceLocation("forge", "ingots/constantan"));
+            DelightfulIngredients.ingot("constantan"));
     public static final RegistryObject<Item> ELECTRUM_KNIFE = registerTaggedKnife("electrum_knife", DelightfulTiers.ELECTRUM, 0.5F, -2.0F,
-            new ResourceLocation("forge", "ingots/electrum"));
+            DelightfulIngredients.ingot("electrum"));
     public static final RegistryObject<Item> INVAR_KNIFE = registerTaggedKnife("invar_knife", DelightfulTiers.INVAR, 0.5F, -2.0F,
-            new ResourceLocation("forge", "ingots/invar"));
+            DelightfulIngredients.ingot("invar"));
     public static final RegistryObject<Item> LEAD_KNIFE = registerTaggedKnife("lead_knife", DelightfulTiers.LEAD, 0.5F, -2.0F,
-            new ResourceLocation("forge", "ingots/lead"));
+            DelightfulIngredients.ingot("lead"));
     public static final RegistryObject<Item> NICKEL_KNIFE = registerTaggedKnife("nickel_knife", DelightfulTiers.NICKEL, 0.5F, -2.0F,
-            new ResourceLocation("forge", "ingots/nickel"));
+            DelightfulIngredients.ingot("nickel"));
 
     public static final RegistryObject<Item> OBSIDIAN_INFUSED_ENDERITE_KNIFE = registerCompatKnife("obsidian_infused_enderite_knife", DelightfulTiers.OBSIDIAN_INFUSED_ENDERITE, 0.5F, -2.0F,
             "lolenderite");
@@ -65,8 +66,6 @@ public class DelightfulItems {
             "mekanismtools");
     public static final RegistryObject<Item> LARGE_AMETHYST_KNIFE = registerCompatKnife("large_amethyst_knife", DelightfulTiers.LARGE_AMETHYST, 0.5F, -2.0F,
             "oresabovediamonds");
-    public static final RegistryObject<Item> BLACK_OPAL_KNIFE = registerTaggedKnife("black_opal_knife", DelightfulTiers.BLACK_OPAL, 0.5F, -2.0F,
-            new ResourceLocation("forge", "gems/black_opal"));
     public static final RegistryObject<Item> NETHERITE_OPAL_KNIFE = registerCompatKnife("netherite_opal_knife", DelightfulTiers.NETHERITE_OPAL, 0.5F, -2.0F,
             "oresabovediamonds");
 
