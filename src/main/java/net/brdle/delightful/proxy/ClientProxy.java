@@ -1,8 +1,5 @@
 package net.brdle.delightful.proxy;
 
-import net.brdle.delightful.common.block.DelightfulBlocks;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -16,18 +13,17 @@ public class ClientProxy extends CommonProxy {
         super.start();
         final IEventBus modBus = FMLJavaModLoadingContext.get().getModEventBus();
         //final IEventBus forgeBus = MinecraftForge.EVENT_BUS;
-        modBus.addListener(this::setupClient);
-        modBus.addListener(this::onRegisterRenderers);
+        modBus.register(this);
     }
 
     @SubscribeEvent
-    public void setupClient(FMLClientSetupEvent e){
+    public static void setupClient(FMLClientSetupEvent e){
         //ItemBlockRenderTypes.setRenderLayer(DelightfulBlocks.PIZZA_STONE.get(), RenderType.cutout());
         //ItemBlockRenderTypes.setRenderLayer(DelightfulBlocks.PIZZA_PEEL.get(), RenderType.cutout());
     }
 
     @SubscribeEvent
-    public void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers e) {
+    public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers e) {
         //e.registerBlockEntityRenderer(DelightfulTiles.PIZZA_STONE.get(), PizzaStoneRenderer::new);
         //e.registerBlockEntityRenderer(DelightfulTiles.PIZZA_PEEL.get(), PizzaPeelRenderer::new);
     }

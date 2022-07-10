@@ -4,7 +4,6 @@ import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.registration.IRecipeRegistration;
-import net.brdle.delightful.common.config.DelightfulConfig;
 import net.brdle.delightful.common.item.IConfigured;
 import net.brdle.delightful.common.item.knife.CompatKnifeItem;
 import net.brdle.delightful.common.item.DelightfulItems;

@@ -15,7 +15,7 @@ credits=""
 authors="brdle"
 description=""
 itemIcon="delightful:smore"
-configBackground="farmersdelight:textures/block/tatami.png"
+configBackground="farmersdelight:textures/block/tatami_mat_half.png"
 
 [[dependencies.delightful]]
     modId="forge"

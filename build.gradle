@@ -7,15 +7,19 @@ buildscript {
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
         classpath 'org.parchmentmc:librarian:1.+'
+        // MixinGradle:
+        classpath 'org.spongepowered:mixingradle:0.7.+'
     }
 }
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
+// MixinGradle:
+apply plugin: 'org.spongepowered.mixin'
 
 version = "${mc_version}-${mod_version}"
-group = 'net.onvoid.delightful' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+group = 'net.brdle.delightful' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'Delightful'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
@@ -31,8 +35,6 @@ minecraft {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
-            property 'mixin.env.remapRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
             mods {
                 delightful {
                     source sourceSets.main
@@ -44,8 +46,6 @@ minecraft {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
-            property 'mixin.env.remapRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
             mods {
                 delightful {
                     source sourceSets.main
@@ -101,20 +101,21 @@ dependencies {
     compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api")
     runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}")
     runtimeOnly fg.deobf("curse.maven:appleskin-248787:${appleskin_version}")
-    runtimeOnly fg.deobf("curse.maven:mysterious-mountain-lib-368098:${mmlib_version}")
-    runtimeOnly fg.deobf("curse.maven:corn-delight-577805:${corn_delight_version}")
-    runtimeOnly fg.deobf("curse.maven:cultural-delights-574622:${cultural_delights_version}")
-    runtimeOnly fg.deobf("curse.maven:immersive-engineering-231951:${immersive_engineering_version}")
-    runtimeOnly fg.deobf("curse.maven:enderite-lieonlion-550532:${enderite_version}")
-    runtimeOnly fg.deobf("curse.maven:ores-above-diamonds-351339:${oad_version}")
-    runtimeOnly fg.deobf("curse.maven:mekanism-268560:${mekanism_version}")
-    runtimeOnly fg.deobf("curse.maven:mekanism-tools-268567:${mekanism_tools_version}")
-    runtimeOnly fg.deobf("curse.maven:ecologics-570463:${ecologics_version}")
-    runtimeOnly fg.deobf("curse.maven:rotten-leather-231487:${rl_version}")
+    //runtimeOnly fg.deobf("curse.maven:mysterious-mountain-lib-368098:${mmlib_version}")
+    //runtimeOnly fg.deobf("curse.maven:corn-delight-577805:${corn_delight_version}")
+    //runtimeOnly fg.deobf("curse.maven:cultural-delights-574622:${cultural_delights_version}")
+    //runtimeOnly fg.deobf("curse.maven:immersive-engineering-231951:${immersive_engineering_version}")
+    //runtimeOnly fg.deobf("curse.maven:enderite-lieonlion-550532:${enderite_version}")
+    //runtimeOnly fg.deobf("curse.maven:ores-above-diamonds-351339:${oad_version}")
+    //runtimeOnly fg.deobf("curse.maven:mekanism-268560:${mekanism_version}")
+    //runtimeOnly fg.deobf("curse.maven:mekanism-tools-268567:${mekanism_tools_version}")
+    //runtimeOnly fg.deobf("curse.maven:ecologics-570463:${ecologics_version}")
+    //runtimeOnly fg.deobf("curse.maven:rotten-leather-231487:${rl_version}")
     //runtimeOnly fg.deobf("curse.maven:brewin-and-chewin-637808:${brewin_chewin_version}") //broken
     // fg.deobf("curse.maven:bone-equipment-508347:${bone_equipment_version}")
-    runtimeOnly fg.deobf("curse.maven:cofh-core-69162:${cofh_version}")
-    runtimeOnly fg.deobf("curse.maven:thermal-foundation-222880:${thermal_version}")
+    //runtimeOnly fg.deobf("curse.maven:cofh-core-69162:${cofh_version}")
+    //runtimeOnly fg.deobf("curse.maven:thermal-foundation-222880:${thermal_version}")
+    runtimeOnly fg.deobf("curse.maven:configured-457570:${configured_version}")
 }
 
 // Example for how to get properties into the manifest for reading at runtime.

@@ -28,7 +28,7 @@ import java.util.function.Supplier;
 
 public class DelightfulItems {
 
-    private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Delightful.MODID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Delightful.MODID);
 
     // Knives
     public static final ArrayList<RegistryObject<Item>> knives = new ArrayList<>();
