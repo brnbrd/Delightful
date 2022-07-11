@@ -1,0 +1,43 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "lead_knife",
+              "type": "delightful:enabled"
+            },
+            {
+              "value": {
+                "tag": "forge:ingots/lead",
+                "type": "forge:tag_empty"
+              },
+              "type": "forge:not"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          " m",
+          "s "
+        ],
+        "key": {
+          "m": {
+            "tag": "forge:ingots/lead"
+          },
+          "s": {
+            "tag": "forge:rods/wooden"
+          }
+        },
+        "result": {
+          "item": "delightful:lead_knife"
+        }
+      }
+    }
+  ]
+}

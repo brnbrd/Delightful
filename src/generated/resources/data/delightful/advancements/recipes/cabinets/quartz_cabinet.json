@@ -1,0 +1,44 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "value": "quartz_cabinet",
+          "type": "delightful:enabled"
+        }
+      ],
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:quartz_cabinet"
+          ]
+        },
+        "criteria": {
+          "has_cabinet": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+              "items": [
+                {
+                  "tag": "farmersdelight:cabinets"
+                }
+              ]
+            }
+          },
+          "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+              "recipe": "delightful:quartz_cabinet"
+            }
+          }
+        },
+        "requirements": [
+          [
+            "has_cabinet",
+            "has_the_recipe"
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "silver_knife",
+              "type": "delightful:enabled"
+            },
+            {
+              "value": {
+                "tag": "forge:ingots/silver",
+                "type": "forge:tag_empty"
+              },
+              "type": "forge:not"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          " m",
+          "s "
+        ],
+        "key": {
+          "m": {
+            "tag": "forge:ingots/silver"
+          },
+          "s": {
+            "tag": "forge:rods/wooden"
+          }
+        },
+        "result": {
+          "item": "delightful:silver_knife"
+        }
+      }
+    }
+  ]
+}

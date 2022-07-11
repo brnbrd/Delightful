@@ -1,0 +1,47 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "lapis_lazuli_knife",
+              "type": "delightful:enabled"
+            },
+            {
+              "modid": "mekanismtools",
+              "type": "forge:mod_loaded"
+            },
+            {
+              "value": {
+                "tag": "forge:gems/lapis",
+                "type": "forge:tag_empty"
+              },
+              "type": "forge:not"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          " m",
+          "s "
+        ],
+        "key": {
+          "m": {
+            "tag": "forge:gems/lapis"
+          },
+          "s": {
+            "tag": "forge:rods/wooden"
+          }
+        },
+        "result": {
+          "item": "delightful:lapis_lazuli_knife"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "nickel_knife",
+              "type": "delightful:enabled"
+            },
+            {
+              "item": "immersiveengineering:nugget_nickel",
+              "type": "forge:item_exists"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:knives/smelting/nickel_immersiveengineering"
+          ]
+        },
+        "criteria": {
+          "has_nickel_knife": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+              "items": [
+                {
+                  "items": [
+                    "delightful:nickel_knife"
+                  ]
+                }
+              ]
+            }
+          },
+          "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+              "recipe": "delightful:knives/smelting/nickel_immersiveengineering"
+            }
+          }
+        },
+        "requirements": [
+          [
+            "has_nickel_knife",
+            "has_the_recipe"
+          ]
+        ]
+      }
+    }
+  ]
+}

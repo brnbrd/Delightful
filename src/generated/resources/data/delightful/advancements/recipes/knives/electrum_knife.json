@@ -1,0 +1,56 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "electrum_knife",
+              "type": "delightful:enabled"
+            },
+            {
+              "value": {
+                "tag": "forge:ingots/electrum",
+                "type": "forge:tag_empty"
+              },
+              "type": "forge:not"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:electrum_knife"
+          ]
+        },
+        "criteria": {
+          "has_electrum": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+              "items": [
+                {
+                  "tag": "forge:ingots/electrum"
+                }
+              ]
+            }
+          },
+          "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+              "recipe": "delightful:electrum_knife"
+            }
+          }
+        },
+        "requirements": [
+          [
+            "has_electrum",
+            "has_the_recipe"
+          ]
+        ]
+      }
+    }
+  ]
+}

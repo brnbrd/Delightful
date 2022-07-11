@@ -1,0 +1,37 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "netherite_opal_knife",
+              "type": "delightful:enabled"
+            },
+            {
+              "value": {
+                "tag": "forge:ingots/netherite",
+                "type": "forge:tag_empty"
+              },
+              "type": "forge:not"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:smithing",
+        "base": {
+          "item": "delightful:black_opal_knife"
+        },
+        "addition": {
+          "tag": "forge:ingots/netherite"
+        },
+        "result": {
+          "item": "delightful:netherite_opal_knife"
+        }
+      }
+    }
+  ]
+}

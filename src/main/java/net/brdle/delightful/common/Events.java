@@ -1,9 +1,7 @@
 package net.brdle.delightful.common;
 
 import net.brdle.delightful.Delightful;
-import net.brdle.delightful.common.config.BlockEnabledCondition;
-import net.brdle.delightful.common.config.FoodEnabledCondition;
-import net.brdle.delightful.common.config.KnifeEnabledCondition;
+import net.brdle.delightful.common.config.EnabledCondition;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -53,9 +51,7 @@ public class Events {
     // Adds delightful conditions
     @SubscribeEvent
     public static void registerSerializers(RegistryEvent.Register<RecipeSerializer<?>> event) {
-        CraftingHelper.register(KnifeEnabledCondition.Serializer.INSTANCE);
-        CraftingHelper.register(FoodEnabledCondition.Serializer.INSTANCE);
-        CraftingHelper.register(BlockEnabledCondition.Serializer.INSTANCE);
+        CraftingHelper.register(EnabledCondition.Serializer.INSTANCE);
     }
 
 }

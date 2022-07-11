@@ -15,6 +15,7 @@ public class Generators {
         var helper = e.getExistingFileHelper();
         if (e.includeServer()) {
             e.getGenerator().addProvider(new DelightfulLootTableProvider(gen));
+            e.getGenerator().addProvider(new DelightfulRecipeProvider(gen));
         }
         if (e.includeClient()) {
             e.getGenerator().addProvider(new DelightfulBlockStateProvider(gen, helper));

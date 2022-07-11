@@ -1,0 +1,56 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "black_opal_knife",
+              "type": "delightful:enabled"
+            },
+            {
+              "value": {
+                "tag": "forge:gems/black_opal",
+                "type": "forge:tag_empty"
+              },
+              "type": "forge:not"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:black_opal_knife"
+          ]
+        },
+        "criteria": {
+          "has_black_opal": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+              "items": [
+                {
+                  "tag": "forge:gems/black_opal"
+                }
+              ]
+            }
+          },
+          "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+              "recipe": "delightful:black_opal_knife"
+            }
+          }
+        },
+        "requirements": [
+          [
+            "has_black_opal",
+            "has_the_recipe"
+          ]
+        ]
+      }
+    }
+  ]
+}

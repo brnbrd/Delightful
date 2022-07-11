@@ -1,0 +1,37 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "obsidian_infused_enderite_knife",
+              "type": "delightful:enabled"
+            },
+            {
+              "value": {
+                "tag": "forge:ingots/obsidian_infused_enderite",
+                "type": "forge:tag_empty"
+              },
+              "type": "forge:not"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:smithing",
+        "base": {
+          "item": "delightful:enderite_knife"
+        },
+        "addition": {
+          "tag": "forge:ingots/obsidian_infused_enderite"
+        },
+        "result": {
+          "item": "delightful:obsidian_infused_enderite_knife"
+        }
+      }
+    }
+  ]
+}

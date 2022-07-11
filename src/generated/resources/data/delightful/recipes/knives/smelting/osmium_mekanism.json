@@ -1,0 +1,31 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "osmium_knife",
+              "type": "delightful:enabled"
+            },
+            {
+              "item": "mekanism:nugget_osmium",
+              "type": "forge:item_exists"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:smelting",
+        "ingredient": {
+          "item": "delightful:osmium_knife"
+        },
+        "result": "mekanism:nugget_osmium",
+        "experience": 0.1,
+        "cookingtime": 200
+      }
+    }
+  ]
+}

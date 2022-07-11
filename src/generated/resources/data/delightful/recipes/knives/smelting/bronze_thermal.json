@@ -1,0 +1,31 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "bronze_knife",
+              "type": "delightful:enabled"
+            },
+            {
+              "item": "thermal:bronze_nugget",
+              "type": "forge:item_exists"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:smelting",
+        "ingredient": {
+          "item": "delightful:bronze_knife"
+        },
+        "result": "thermal:bronze_nugget",
+        "experience": 0.1,
+        "cookingtime": 200
+      }
+    }
+  ]
+}

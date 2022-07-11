@@ -1,0 +1,56 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "large_amethyst_knife",
+              "type": "delightful:enabled"
+            },
+            {
+              "value": {
+                "tag": "forge:gems/large_amethyst",
+                "type": "forge:tag_empty"
+              },
+              "type": "forge:not"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:large_amethyst_knife"
+          ]
+        },
+        "criteria": {
+          "has_large_amethyst": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+              "items": [
+                {
+                  "tag": "forge:gems/large_amethyst"
+                }
+              ]
+            }
+          },
+          "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+              "recipe": "delightful:large_amethyst_knife"
+            }
+          }
+        },
+        "requirements": [
+          [
+            "has_large_amethyst",
+            "has_the_recipe"
+          ]
+        ]
+      }
+    }
+  ]
+}

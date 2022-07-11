@@ -1,7 +1,10 @@
 package net.brdle.delightful.common.config;
 
 import net.brdle.delightful.common.item.DelightfulItems;
+import net.brdle.delightful.common.item.knife.DelightfulKnifeItem;
 import net.minecraftforge.common.ForgeConfigSpec;
+import net.minecraftforge.registries.RegistryObject;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -9,35 +12,35 @@ public class DelightfulConfig {
 
     public static final DelightfulConfig CONFIG;
     public static final ForgeConfigSpec SPEC;
-    public final Map<String, ForgeConfigSpec.ConfigValue<Boolean>> knives;
-    public final Map<String, ForgeConfigSpec.ConfigValue<Boolean>> foods;
-    public final Map<String, ForgeConfigSpec.ConfigValue<Boolean>> blocks;
+    public final Map<String, ForgeConfigSpec.ConfigValue<Boolean>> stuff;
 
     DelightfulConfig(ForgeConfigSpec.Builder builder) {
+        var items = DelightfulItems.ITEMS.getEntries();
         builder.comment(" Let's Configure Delightful");
+        stuff = new HashMap<>();
         builder.push("Knives");
-            knives = new HashMap<>();
-            DelightfulItems.knives.stream()
-                    .map(r -> r.getId().getPath())
+            items.stream()
+                .map(obj -> obj.getId().getPath())
+                .filter(path -> path.contains("_knife"))
+                .sorted()
+                .forEach(knife -> put(builder, stuff, knife, switch (knife) {
+                    case "disabled_knife" -> false;
+                    default -> true;
+                }));
+        builder.pop();
+        builder.push("Cabinets");
+            items.stream()
+                    .map(obj -> obj.getId().getPath())
+                    .filter(path -> path.contains("_cabinet"))
                     .sorted()
-                    .forEach(knife -> put(builder, knives, knife, switch (knife) {
-                        case "disabled_knife" -> false;
-                        default -> true;
-                    }));
+                    .forEach(cabinet -> put(builder, stuff, cabinet, true));
         builder.pop();
-        builder.push("Foods");
-            foods = new HashMap<>();
-            put(builder, foods, "cheeseburger", true);
-            put(builder, foods, "deluxe_cheeseburger", true);
-            put(builder, foods, "ender_nectar", true);
-            put(builder, foods, "crab_rangoon", true);
-            put(builder, foods, "prickly_pear_juice", true);
-            put(builder, foods, "chunkwich", true);
-        builder.pop();
-        builder.push("Blocks");
-            blocks = new HashMap<>();
-            put(builder, blocks, "basalt_cabinet", true);
-            put(builder, blocks, "quartz_cabinet", true);
+        builder.push("Other");
+            items.stream()
+                    .map(obj -> obj.getId().getPath())
+                    .filter(path -> !path.contains("_knife") && !path.contains("_cabinet"))
+                    .sorted()
+                    .forEach(not -> put(builder, stuff, not, true));
         builder.pop();
     }
 

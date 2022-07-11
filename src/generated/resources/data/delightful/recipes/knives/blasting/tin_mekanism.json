@@ -1,0 +1,31 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "tin_knife",
+              "type": "delightful:enabled"
+            },
+            {
+              "item": "mekanism:nugget_tin",
+              "type": "forge:item_exists"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:blasting",
+        "ingredient": {
+          "item": "delightful:tin_knife"
+        },
+        "result": "mekanism:nugget_tin",
+        "experience": 0.1,
+        "cookingtime": 100
+      }
+    }
+  ]
+}

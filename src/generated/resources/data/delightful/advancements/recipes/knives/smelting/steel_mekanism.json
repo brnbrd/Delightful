@@ -1,0 +1,55 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "steel_knife",
+              "type": "delightful:enabled"
+            },
+            {
+              "item": "mekanism:nugget_steel",
+              "type": "forge:item_exists"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:knives/smelting/steel_mekanism"
+          ]
+        },
+        "criteria": {
+          "has_steel_knife": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+              "items": [
+                {
+                  "items": [
+                    "delightful:steel_knife"
+                  ]
+                }
+              ]
+            }
+          },
+          "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+              "recipe": "delightful:knives/smelting/steel_mekanism"
+            }
+          }
+        },
+        "requirements": [
+          [
+            "has_steel_knife",
+            "has_the_recipe"
+          ]
+        ]
+      }
+    }
+  ]
+}

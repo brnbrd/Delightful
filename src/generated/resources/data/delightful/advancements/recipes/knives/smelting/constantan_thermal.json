@@ -1,0 +1,55 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "constantan_knife",
+              "type": "delightful:enabled"
+            },
+            {
+              "item": "thermal:constantan_nugget",
+              "type": "forge:item_exists"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:knives/smelting/constantan_thermal"
+          ]
+        },
+        "criteria": {
+          "has_constantan_knife": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+              "items": [
+                {
+                  "items": [
+                    "delightful:constantan_knife"
+                  ]
+                }
+              ]
+            }
+          },
+          "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+              "recipe": "delightful:knives/smelting/constantan_thermal"
+            }
+          }
+        },
+        "requirements": [
+          [
+            "has_constantan_knife",
+            "has_the_recipe"
+          ]
+        ]
+      }
+    }
+  ]
+}

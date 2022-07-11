@@ -4,10 +4,8 @@ import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.registration.IRecipeRegistration;
-import net.brdle.delightful.common.item.IConfigured;
-import net.brdle.delightful.common.item.knife.CompatKnifeItem;
 import net.brdle.delightful.common.item.DelightfulItems;
-import net.brdle.delightful.common.item.knife.TaggedKnifeItem;
+import net.brdle.delightful.common.item.knife.DelightfulKnifeItem;
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
@@ -26,18 +24,9 @@ public class JEIPlugin implements IModPlugin
 
     @Override
     public void registerRecipes(IRecipeRegistration registration) {
-        DelightfulItems.knives.stream()
+        DelightfulItems.ITEMS.getEntries().stream()
             .map(RegistryObject::get)
-            .filter(k -> {
-                if (k instanceof TaggedKnifeItem tki) {
-                    return tki.isEnabled() && tki.isTag();
-                } else if (k instanceof CompatKnifeItem cki) {
-                    return cki.isEnabled() && cki.isLoaded();
-                } else if (k instanceof IConfigured configured) {
-                    return configured.isEnabled();
-                }
-                return false;
-            })
+            .filter(k -> k instanceof DelightfulKnifeItem && ((DelightfulKnifeItem) k).isEnabled())
             .map(ItemStack::new)
             .forEach((k -> registration.addIngredientInfo(k, VanillaTypes.ITEM_STACK, TextUtils.getTranslation("jei.info.knife"))));
     }

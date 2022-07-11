@@ -1,0 +1,55 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "tin_knife",
+              "type": "delightful:enabled"
+            },
+            {
+              "item": "thermal:tin_nugget",
+              "type": "forge:item_exists"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:knives/blasting/tin_thermal"
+          ]
+        },
+        "criteria": {
+          "has_tin_knife": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+              "items": [
+                {
+                  "items": [
+                    "delightful:tin_knife"
+                  ]
+                }
+              ]
+            }
+          },
+          "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+              "recipe": "delightful:knives/blasting/tin_thermal"
+            }
+          }
+        },
+        "requirements": [
+          [
+            "has_tin_knife",
+            "has_the_recipe"
+          ]
+        ]
+      }
+    }
+  ]
+}

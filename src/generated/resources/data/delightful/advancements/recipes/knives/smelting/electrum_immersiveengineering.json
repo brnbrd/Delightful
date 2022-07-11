@@ -1,0 +1,55 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "electrum_knife",
+              "type": "delightful:enabled"
+            },
+            {
+              "item": "immersiveengineering:nugget_electrum",
+              "type": "forge:item_exists"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:knives/smelting/electrum_immersiveengineering"
+          ]
+        },
+        "criteria": {
+          "has_electrum_knife": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+              "items": [
+                {
+                  "items": [
+                    "delightful:electrum_knife"
+                  ]
+                }
+              ]
+            }
+          },
+          "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+              "recipe": "delightful:knives/smelting/electrum_immersiveengineering"
+            }
+          }
+        },
+        "requirements": [
+          [
+            "has_electrum_knife",
+            "has_the_recipe"
+          ]
+        ]
+      }
+    }
+  ]
+}

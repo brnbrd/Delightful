@@ -2,20 +2,26 @@ package net.brdle.delightful.common.item.knife;
 
 import net.brdle.delightful.common.config.DelightfulConfig;
 import net.brdle.delightful.common.item.IConfigured;
+import net.brdle.delightful.common.item.ISingleIngredient;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import vectorwing.farmersdelight.common.item.KnifeItem;
 import javax.annotation.Nullable;
 import java.util.List;
+import java.util.function.Supplier;
 
-public class DelightfulKnifeItem extends KnifeItem implements IConfigured {
-    public DelightfulKnifeItem(Tier tier, float attackDamageIn, float attackSpeedIn, Properties properties) {
+public class DelightfulKnifeItem extends KnifeItem implements IConfigured, ISingleIngredient {
+    private final Supplier<Ingredient> ingredient;
+
+    public DelightfulKnifeItem(Supplier<Ingredient> ingredient, Tier tier, float attackDamageIn, float attackSpeedIn, Properties properties) {
         super(tier, attackDamageIn, attackSpeedIn, properties);
+        this.ingredient = ingredient;
     }
 
     /**
@@ -23,13 +29,18 @@ public class DelightfulKnifeItem extends KnifeItem implements IConfigured {
      */
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> tool, TooltipFlag pIsAdvanced) {
-        if (!DelightfulConfig.CONFIG.knives.get(this.getRegistryName().getPath()).get()) {
+        if (!DelightfulConfig.CONFIG.stuff.get(this.getRegistryName().getPath()).get()) {
             tool.add(new TextComponent("Disabled.").withStyle(ChatFormatting.UNDERLINE));
         }
     }
 
     @Override
+    public Supplier<Ingredient> getIngredient() {
+        return this.ingredient;
+    }
+
+    @Override
     public boolean isEnabled() {
-        return DelightfulConfig.CONFIG.knives.get(this.getRegistryName().getPath()).get();
+        return DelightfulConfig.CONFIG.stuff.get(this.getRegistryName().getPath()).get();
     }
 }

@@ -1,0 +1,56 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "obsidian_infused_enderite_knife",
+              "type": "delightful:enabled"
+            },
+            {
+              "value": {
+                "tag": "forge:ingots/obsidian_infused_enderite",
+                "type": "forge:tag_empty"
+              },
+              "type": "forge:not"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:obsidian_infused_enderite_knife_smithing"
+          ]
+        },
+        "criteria": {
+          "has_metal": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+              "items": [
+                {
+                  "tag": "forge:ingots/obsidian_infused_enderite"
+                }
+              ]
+            }
+          },
+          "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+              "recipe": "delightful:obsidian_infused_enderite_knife_smithing"
+            }
+          }
+        },
+        "requirements": [
+          [
+            "has_metal",
+            "has_the_recipe"
+          ]
+        ]
+      }
+    }
+  ]
+}
