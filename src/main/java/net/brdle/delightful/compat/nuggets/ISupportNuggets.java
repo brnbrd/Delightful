@@ -13,9 +13,9 @@ public interface ISupportNuggets {
     String getFormat();
 
     /**
-     * The format with METAL replaced by @param metal
+     * The format with METAL replaced
      *
-     * @param metal
+     * @param metal Replaces METAL in the format
      **/
     default String formatMetal(String metal) {
         return this.getFormat().replace("METAL", metal);

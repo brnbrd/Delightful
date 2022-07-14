@@ -14,7 +14,7 @@ import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.TagKey;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.Tags;
@@ -47,6 +47,9 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             .map(item -> (DelightfulKnifeItem) item)
             .forEach(k -> knife(k, finished));
         knifeSmeltAndBlast((DelightfulKnifeItem) DelightfulItems.BONE_KNIFE.get(), "bone/knife", Items.BONE_MEAL.getRegistryName(), finished);
+
+        // Foods
+
     }
 
     private void cabinet(DelightfulCabinetBlock block, Consumer<FinishedRecipe> finished) {
@@ -55,12 +58,12 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             .addCondition(new EnabledCondition(path))
             .addRecipe(f -> ShapedRecipeBuilder.shaped(block)
                 .define('b', block.getIngredient().get())
-                .define('c', TagKey.create(ForgeRegistries.ITEMS.getRegistryKey(), new ResourceLocation("farmersdelight", "cabinets/wooden")))
+                .define('c', ItemTags.create(new ResourceLocation("farmersdelight", "cabinets/wooden")))
                 .pattern("bbb")
                 .pattern("bcb")
                 .pattern("bbb")
                 .unlockedBy("has_cabinet", inventoryTrigger(ItemPredicate.Builder.item()
-                    .of(TagKey.create(ForgeRegistries.ITEMS.getRegistryKey(), new ResourceLocation("farmersdelight", "cabinets"))).build()))
+                    .of(ItemTags.create(new ResourceLocation("farmersdelight", "cabinets"))).build()))
                 .save(f))
             .generateAdvancement()
             .build(finished, Delightful.MODID, "cabinets/" + path);
@@ -73,17 +76,17 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
         }
         String path = knife.getRegistryName().getPath();
         ConditionalRecipe.builder()
-                .addCondition(and(new EnabledCondition(path)))
-                .addRecipe(f -> ShapedRecipeBuilder.shaped(knife)
-                        .define('m', knife.getIngredient().get())
-                        .define('s', Tags.Items.RODS_WOODEN)
-                        .pattern(" m")
-                        .pattern("s ")
-                        .unlockedBy("has_" + path.replace("_knife", ""), inventoryTrigger(ItemPredicate.Builder.item()
-                                .of(knife.getIngredient().get().getItems()[0].getItem()).build()))
-                        .save(f))
-                .generateAdvancement()
-                .build(finished, Delightful.MODID, "knives/" + path);
+            .addCondition(and(new EnabledCondition(path)))
+            .addRecipe(f -> ShapedRecipeBuilder.shaped(knife)
+                .define('m', knife.getIngredient().get())
+                .define('s', Tags.Items.RODS_WOODEN)
+                .pattern(" m")
+                .pattern("s ")
+                .unlockedBy("has_" + path.replace("_knife", ""), inventoryTrigger(ItemPredicate.Builder.item()
+                    .of(knife.getIngredient().get().getItems()[0].getItem()).build()))
+                .save(f))
+            .generateAdvancement()
+            .build(finished, Delightful.MODID, "knives/" + path);
     }
 
     private void taggedKnife(TaggedKnifeItem knife, Consumer<FinishedRecipe> finished) {
@@ -98,44 +101,44 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             }
         });
         String path = knife.getRegistryName().getPath();
-        var add = TagKey.create(ForgeRegistries.ITEMS.getRegistryKey(), knife.getTag());
+        var add = ItemTags.create(knife.getTag());
         var cond = (knife instanceof CompatKnifeItem cki) ?
                 and(new EnabledCondition(path), modLoaded(cki.getModid()), not(tagEmpty(add))) :
                 and(new EnabledCondition(path), not(tagEmpty(add)));
         ConditionalRecipe.builder()
-                .addCondition(cond)
-                .addRecipe(f -> ShapedRecipeBuilder.shaped(knife)
-                        .define('m', knife.getIngredient().get())
-                        .define('s', Tags.Items.RODS_WOODEN)
-                        .pattern(" m")
-                        .pattern("s ")
-                        .unlockedBy("has_" + path.replace("_knife", ""), inventoryTrigger(ItemPredicate.Builder.item()
-                                .of(TagKey.create(ForgeRegistries.ITEMS.getRegistryKey(), knife.getTag())).build()))
-                        .save(f))
-                .generateAdvancement()
-                .build(finished, Delightful.MODID, "knives/" + path);
+            .addCondition(cond)
+            .addRecipe(f -> ShapedRecipeBuilder.shaped(knife)
+                .define('m', knife.getIngredient().get())
+                .define('s', Tags.Items.RODS_WOODEN)
+                .pattern(" m")
+                .pattern("s ")
+                .unlockedBy("has_" + path.replace("_knife", ""), inventoryTrigger(ItemPredicate.Builder.item()
+                    .of(ItemTags.create(knife.getTag())).build()))
+                .save(f))
+            .generateAdvancement()
+            .build(finished, Delightful.MODID, "knives/" + path);
     }
 
     private void knifeSmeltAndBlast(DelightfulKnifeItem knife, String metal, ResourceLocation nugget, Consumer<FinishedRecipe> finished) {
         ConditionalRecipe.builder()
-                .addCondition(and(new EnabledCondition(knife.getRegistryName().getPath()), itemExists(nugget.getNamespace(), nugget.getPath())))
-                .addRecipe(f -> SimpleCookingRecipeBuilder.smelting(Ingredient.of(knife), Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(nugget)), 0.1F, 200)
-                    .unlockedBy("has_" + metal + "_knife", InventoryChangeTrigger.TriggerInstance.hasItems(knife))
-                    .save(f, new ResourceLocation(Delightful.MODID, "knives/smelting/" + metal + "_" + nugget.getNamespace())))
-                .generateAdvancement()
-                .build(finished, Delightful.MODID, "knives/smelting/" + metal + "_" + nugget.getNamespace());
+            .addCondition(and(new EnabledCondition(knife.getRegistryName().getPath()), itemExists(nugget.getNamespace(), nugget.getPath())))
+            .addRecipe(f -> SimpleCookingRecipeBuilder.smelting(Ingredient.of(knife), Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(nugget)), 0.1F, 200)
+                .unlockedBy("has_" + metal + "_knife", InventoryChangeTrigger.TriggerInstance.hasItems(knife))
+                .save(f, new ResourceLocation(Delightful.MODID, "knives/smelting/" + metal + "_" + nugget.getNamespace())))
+            .generateAdvancement()
+            .build(finished, Delightful.MODID, "knives/smelting/" + metal + "_" + nugget.getNamespace());
         ConditionalRecipe.builder()
-                .addCondition(and(new EnabledCondition(knife.getRegistryName().getPath()), itemExists(nugget.getNamespace(), nugget.getPath())))
-                .addRecipe(f -> SimpleCookingRecipeBuilder.blasting(Ingredient.of(knife), Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(nugget)), 0.1F, 100)
-                    .unlockedBy("has_" + metal + "_knife", InventoryChangeTrigger.TriggerInstance.hasItems(knife))
-                    .save(f, new ResourceLocation(Delightful.MODID, "knives/blasting/" + metal + "_" + nugget.getNamespace())))
-                .generateAdvancement()
-                .build(finished, Delightful.MODID, "knives/blasting/" + metal + "_" + nugget.getNamespace());
+            .addCondition(and(new EnabledCondition(knife.getRegistryName().getPath()), itemExists(nugget.getNamespace(), nugget.getPath())))
+            .addRecipe(f -> SimpleCookingRecipeBuilder.blasting(Ingredient.of(knife), Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(nugget)), 0.1F, 100)
+                .unlockedBy("has_" + metal + "_knife", InventoryChangeTrigger.TriggerInstance.hasItems(knife))
+                .save(f, new ResourceLocation(Delightful.MODID, "knives/blasting/" + metal + "_" + nugget.getNamespace())))
+            .generateAdvancement()
+            .build(finished, Delightful.MODID, "knives/blasting/" + metal + "_" + nugget.getNamespace());
     }
 
     private void knifeSmith(TaggedKnifeItem knife, Consumer<FinishedRecipe> finished) {
         String path = knife.getRegistryName().getPath();
-        var add = TagKey.create(ForgeRegistries.ITEMS.getRegistryKey(), knife.getTag());
+        var add = ItemTags.create(knife.getTag());
         ConditionalRecipe.builder()
             .addCondition(and(new EnabledCondition(path), not(tagEmpty(add))))
             .addRecipe(f -> UpgradeRecipeBuilder.smithing(knife.getIngredient().get(), Ingredient.of(add), knife)

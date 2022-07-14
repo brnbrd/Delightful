@@ -10,6 +10,7 @@ import net.brdle.delightful.common.item.knife.CompatKnifeItem;
 import net.brdle.delightful.common.item.knife.DelightfulKnifeItem;
 import net.brdle.delightful.common.item.knife.TaggedKnifeItem;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
@@ -167,11 +168,11 @@ public class DelightfulItems {
     }
 
     public static final Supplier<Ingredient> getIngot(String name) {
-        return () -> Ingredient.of(TagKey.create(ForgeRegistries.ITEMS.getRegistryKey(), ingot(name)));
+        return () -> Ingredient.of(ItemTags.create(ingot(name)));
     }
 
     public static final Supplier<Ingredient> getGem(String name) {
-        return () -> Ingredient.of(TagKey.create(ForgeRegistries.ITEMS.getRegistryKey(), gem(name)));
+        return () -> Ingredient.of(ItemTags.create(gem(name)));
     }
 
     public static void create(IEventBus bus) {

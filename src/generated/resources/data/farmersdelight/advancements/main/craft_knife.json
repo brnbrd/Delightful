@@ -77,6 +77,18 @@
         ]
       }
     },
+    "bone_knife": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:bone_knife"
+            ]
+          }
+        ]
+      }
+    },
     "copper_knife": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
@@ -84,6 +96,18 @@
           {
             "items": [
               "delightful:copper_knife"
+            ]
+          }
+        ]
+      }
+    },
+    "black_opal_knife": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:black_opal_knife"
             ]
           }
         ]
@@ -113,25 +137,25 @@
         ]
       }
     },
-    "enderite_knife": {
+    "silver_knife": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "delightful:enderite_knife"
+              "delightful:silver_knife"
             ]
           }
         ]
       }
     },
-    "obsidian_infused_enderite_knife": {
+    "brass_knife": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "delightful:enderite_knife"
+              "delightful:brass_knife"
             ]
           }
         ]
@@ -144,6 +168,66 @@
           {
             "items": [
               "delightful:bronze_knife"
+            ]
+          }
+        ]
+      }
+    },
+    "constantan_knife": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:constantan_knife"
+            ]
+          }
+        ]
+      }
+    },
+    "electrum_knife": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:electrum_knife"
+            ]
+          }
+        ]
+      }
+    },
+    "invar_knife": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:invar_knife"
+            ]
+          }
+        ]
+      }
+    },
+    "lead_knife": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:lead_knife"
+            ]
+          }
+        ]
+      }
+    },
+    "nickel_knife": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:nickel_knife"
             ]
           }
         ]
@@ -209,13 +293,25 @@
         ]
       }
     },
-    "black_opal_knife": {
+    "enderite_knife": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "delightful:black_opal_knife"
+              "delightful:enderite_knife"
+            ]
+          }
+        ]
+      }
+    },
+    "obsidian_infused_enderite_knife": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:obsidian_infused_enderite_knife"
             ]
           }
         ]
@@ -232,102 +328,6 @@
           }
         ]
       }
-    },
-    "silver_knife": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "delightful:silver_knife"
-            ]
-          }
-        ]
-      }
-    },
-    "brass_knife": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "delightful:brass_knife"
-            ]
-          }
-        ]
-      }
-    },
-    "bone_knife": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "delightful:bone_knife"
-            ]
-          }
-        ]
-      }
-    },
-    "constantan_knife": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "delightful:constantan_knife"
-            ]
-          }
-        ]
-      }
-    },
-    "electrum_knife": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "delightful:electrum_knife"
-            ]
-          }
-        ]
-      }
-    },
-    "invar_knife": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "delightful:invar_knife"
-            ]
-          }
-        ]
-      }
-    },
-    "lead_knife": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "delightful:lead_knife"
-            ]
-          }
-        ]
-      }
-    },
-    "nickel_knife": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "delightful:nickel_knife"
-            ]
-          }
-        ]
-      }
     }
   },
   "requirements": [
@@ -337,27 +337,27 @@
       "diamond_knife",
       "golden_knife",
       "netherite_knife",
+      "bone_knife",
       "copper_knife",
+      "black_opal_knife",
       "tin_knife",
       "steel_knife",
-      "enderite_knife",
-      "obsidian_infused_enderite_knife",
+      "silver_knife",
+      "brass_knife",
       "bronze_knife",
+      "constantan_knife",
+      "electrum_knife",
+      "invar_knife",
+      "lead_knife",
+      "nickel_knife",
       "lapis_lazuli_knife",
       "osmium_knife",
       "refined_glowstone_knife",
       "refined_obsidian_knife",
       "large_amethyst_knife",
-      "black_opal_knife",
-      "netherite_opal_knife",
-      "silver_knife",
-      "brass_knife",
-      "bone_knife",
-      "constantan_knife",
-      "electrum_knife",
-      "invar_knife",
-      "lead_knife",
-      "nickel_knife"
+      "enderite_knife",
+      "obsidian_infused_enderite_knife",
+      "netherite_opal_knife"
     ]
   ]
 }

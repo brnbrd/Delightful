@@ -16,6 +16,7 @@ public class Generators {
         if (e.includeServer()) {
             e.getGenerator().addProvider(new DelightfulLootTableProvider(gen));
             e.getGenerator().addProvider(new DelightfulRecipeProvider(gen));
+            e.getGenerator().addProvider(new DelightfulAdvancementProvider(gen, helper));
         }
         if (e.includeClient()) {
             e.getGenerator().addProvider(new DelightfulBlockStateProvider(gen, helper));
