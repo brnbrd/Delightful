@@ -57,7 +57,6 @@ public class DelightfulAdvancementProvider extends AdvancementProvider {
         DelightfulItems.ITEMS.getEntries().stream()
             .map(RegistryObject::get)
             .filter(item -> item instanceof DelightfulKnifeItem)
-            .map(item -> (DelightfulKnifeItem) item)
             .forEach(k -> huntAndGatherB.addCriterion(k.getRegistryName().getPath(), InventoryChangeTrigger.TriggerInstance.hasItems(k)));
         Advancement huntAndGather = huntAndGatherB.requirements(RequirementsStrategy.OR).save(consumer, getNameId("main/craft_knife"));
     }

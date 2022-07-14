@@ -1,0 +1,34 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "value": "marshmallow_stick",
+          "type": "delightful:enabled"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "tag": "forge:sugar"
+          },
+          {
+            "tag": "forge:water"
+          },
+          {
+            "tag": "forge:rods/wooden"
+          },
+          {
+            "tag": "forge:rods/wooden"
+          }
+        ],
+        "result": {
+          "item": "delightful:marshmallow_stick",
+          "count": 2
+        }
+      }
+    }
+  ]
+}

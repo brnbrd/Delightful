@@ -1,0 +1,46 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "value": "smore",
+          "type": "delightful:enabled"
+        }
+      ],
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:smore"
+          ]
+        },
+        "criteria": {
+          "has_cooked_marshmallow_stick": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+              "items": [
+                {
+                  "items": [
+                    "delightful:cooked_marshmallow_stick"
+                  ]
+                }
+              ]
+            }
+          },
+          "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+              "recipe": "delightful:smore"
+            }
+          }
+        },
+        "requirements": [
+          [
+            "has_cooked_marshmallow_stick",
+            "has_the_recipe"
+          ]
+        ]
+      }
+    }
+  ]
+}

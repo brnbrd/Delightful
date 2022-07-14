@@ -1,0 +1,58 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "nut_butter_and_jelly_sandwich",
+              "type": "delightful:enabled"
+            },
+            {
+              "value": {
+                "tag": "forge:nuts",
+                "type": "forge:tag_empty"
+              },
+              "type": "forge:not"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:nut_butter_and_jelly_sandwich"
+          ]
+        },
+        "criteria": {
+          "has_nut_butter": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+              "items": [
+                {
+                  "items": [
+                    "delightful:nut_butter_bottle"
+                  ]
+                }
+              ]
+            }
+          },
+          "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+              "recipe": "delightful:nut_butter_and_jelly_sandwich"
+            }
+          }
+        },
+        "requirements": [
+          [
+            "has_nut_butter",
+            "has_the_recipe"
+          ]
+        ]
+      }
+    }
+  ]
+}

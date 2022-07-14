@@ -1,0 +1,46 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "value": "cheeseburger",
+          "type": "delightful:enabled"
+        }
+      ],
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:cheeseburger"
+          ]
+        },
+        "criteria": {
+          "has_hamburger": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+              "items": [
+                {
+                  "items": [
+                    "farmersdelight:hamburger"
+                  ]
+                }
+              ]
+            }
+          },
+          "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+              "recipe": "delightful:cheeseburger"
+            }
+          }
+        },
+        "requirements": [
+          [
+            "has_hamburger",
+            "has_the_recipe"
+          ]
+        ]
+      }
+    }
+  ]
+}

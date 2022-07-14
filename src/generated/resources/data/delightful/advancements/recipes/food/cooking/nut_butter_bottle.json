@@ -1,0 +1,24 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "nut_butter_bottle",
+              "type": "delightful:enabled"
+            },
+            {
+              "value": {
+                "tag": "forge:nuts",
+                "type": "forge:tag_empty"
+              },
+              "type": "forge:not"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ]
+    }
+  ]
+}

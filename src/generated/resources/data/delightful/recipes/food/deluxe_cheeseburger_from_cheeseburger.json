@@ -1,0 +1,33 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "value": "deluxe_cheeseburger",
+          "type": "delightful:enabled"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "delightful:cheeseburger"
+          },
+          {
+            "item": "farmersdelight:beef_patty"
+          },
+          {
+            "tag": "forge:cheese_or_milk"
+          },
+          {
+            "item": "farmersdelight:cooked_bacon"
+          }
+        ],
+        "result": {
+          "item": "delightful:deluxe_cheeseburger"
+        }
+      }
+    }
+  ]
+}

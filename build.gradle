@@ -109,8 +109,8 @@ dependencies {
     //runtimeOnly fg.deobf("curse.maven:ores-above-diamonds-351339:${oad_version}")
     implementation fg.deobf("curse.maven:mekanism-268560:${mekanism_version}")
     //runtimeOnly fg.deobf("curse.maven:mekanism-tools-268567:${mekanism_tools_version}")
-    //runtimeOnly fg.deobf("curse.maven:ecologics-570463:${ecologics_version}")
-    //runtimeOnly fg.deobf("curse.maven:rotten-leather-231487:${rl_version}")
+    implementation fg.deobf("curse.maven:ecologics-570463:${ecologics_version}")
+    implementation fg.deobf("curse.maven:rotten-leather-231487:${rl_version}")
     //runtimeOnly fg.deobf("curse.maven:brewin-and-chewin-637808:${brewin_chewin_version}") //broken
     // fg.deobf("curse.maven:bone-equipment-508347:${bone_equipment_version}")
     implementation fg.deobf("curse.maven:cofh-core-69162:${cofh_version}")

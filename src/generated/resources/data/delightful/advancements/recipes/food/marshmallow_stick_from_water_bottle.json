@@ -1,0 +1,46 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "value": "marshmallow_stick",
+          "type": "delightful:enabled"
+        }
+      ],
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:marshmallow_stick"
+          ]
+        },
+        "criteria": {
+          "has_sugar": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+              "items": [
+                {
+                  "items": [
+                    "minecraft:sugar"
+                  ]
+                }
+              ]
+            }
+          },
+          "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+              "recipe": "delightful:marshmallow_stick"
+            }
+          }
+        },
+        "requirements": [
+          [
+            "has_sugar",
+            "has_the_recipe"
+          ]
+        ]
+      }
+    }
+  ]
+}

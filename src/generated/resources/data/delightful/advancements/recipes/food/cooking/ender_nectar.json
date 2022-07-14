@@ -1,0 +1,12 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "value": "ender_nectar",
+          "type": "delightful:enabled"
+        }
+      ]
+    }
+  ]
+}

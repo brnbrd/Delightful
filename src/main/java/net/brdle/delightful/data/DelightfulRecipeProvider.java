@@ -8,21 +8,36 @@ import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.item.knife.CompatKnifeItem;
 import net.brdle.delightful.common.item.knife.DelightfulKnifeItem;
 import net.brdle.delightful.common.item.knife.TaggedKnifeItem;
+import net.brdle.delightful.common.tag.DelightfulItemTags;
 import net.brdle.delightful.compat.nuggets.Nugget;
+import net.minecraft.advancements.CriterionTriggerInstance;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.PotionItem;
+import net.minecraft.world.item.alchemy.PotionUtils;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.ConditionalRecipe;
+import net.minecraftforge.common.crafting.NBTIngredient;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.onvoid.rottenleather.common.RottenLeatherItems;
 import org.jetbrains.annotations.NotNull;
+import vectorwing.farmersdelight.common.registry.ModItems;
+import vectorwing.farmersdelight.common.tag.ForgeTags;
+import vectorwing.farmersdelight.data.builder.CookingPotRecipeBuilder;
+import vectorwing.farmersdelight.data.recipe.CookingRecipes;
+
 import java.util.Arrays;
 import java.util.Objects;
 import java.util.function.Consumer;
@@ -49,7 +64,192 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
         knifeSmeltAndBlast((DelightfulKnifeItem) DelightfulItems.BONE_KNIFE.get(), "bone/knife", Items.BONE_MEAL.getRegistryName(), finished);
 
         // Foods
+        // Cooking
+        ConditionalRecipe.builder()
+            .addCondition(new EnabledCondition("ender_nectar"))
+            .addRecipe(f -> CookingPotRecipeBuilder.cookingPotRecipe(
+                DelightfulItems.ENDER_NECTAR.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
+                .addIngredient(Items.ENDER_EYE)
+                .addIngredient(ForgeTags.MILK)
+                .addIngredient(DelightfulItemTags.SUGAR)
+                .build(f))
+            .generateAdvancement()
+            .build(finished, Delightful.MODID, "food/cooking/ender_nectar");
+        ConditionalRecipe.builder()
+            .addCondition(new EnabledCondition("jelly_bottle"))
+            .addRecipe(f -> CookingPotRecipeBuilder.cookingPotRecipe(
+                    DelightfulItems.JELLY_BOTTLE.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
+                .addIngredient(DelightfulItemTags.FRUITS_SWEET)
+                .addIngredient(DelightfulItemTags.FRUITS_SWEET)
+                .addIngredient(DelightfulItemTags.SUGARS)
+                .addIngredient(DelightfulItemTags.SUGARS)
+                .build(f))
+            .generateAdvancement()
+            .build(finished, Delightful.MODID, "food/cooking/jelly_bottle");
+        ConditionalRecipe.builder()
+            .addCondition(and(new EnabledCondition("nut_butter_bottle"), not(tagEmpty(DelightfulItemTags.NUTS))))
+            .addRecipe(f -> CookingPotRecipeBuilder.cookingPotRecipe(
+                    DelightfulItems.NUT_BUTTER_BOTTLE.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
+                .addIngredient(DelightfulItemTags.NUTS)
+                .addIngredient(DelightfulItemTags.SUGAR)
+                .build(f))
+            .generateAdvancement()
+            .build(finished, Delightful.MODID, "food/cooking/nut_butter_bottle");
+        ConditionalRecipe.builder()
+            .addCondition(and(new EnabledCondition("nut_butter_bottle"), not(tagEmpty(DelightfulItemTags.NUTS))))
+            .addRecipe(f -> ShapelessRecipeBuilder.shapeless(DelightfulItems.NUT_BUTTER_BOTTLE.get(), 3)
+                .requires(DelightfulItemTags.NUTS)
+                .requires(DelightfulItemTags.NUTS)
+                .requires(DelightfulItemTags.NUTS)
+                .requires(Items.HONEY_BOTTLE)
+                .requires(Items.GLASS_BOTTLE)
+                .requires(Items.GLASS_BOTTLE)
+                .unlockedBy("has_honey", has(Items.HONEY_BOTTLE))
+                .save(f))
+            .generateAdvancement()
+            .build(finished, Delightful.MODID, "food/nut_butter_bottle");
+        ConditionalRecipe.builder()
+            .addCondition(and(new EnabledCondition("nut_butter_and_jelly_sandwich"), not(tagEmpty(DelightfulItemTags.NUTS))))
+            .addRecipe(f -> ShapelessRecipeBuilder.shapeless(DelightfulItems.NUT_BUTTER_AND_JELLY_SANDWICH.get())
+                .requires(ForgeTags.BREAD)
+                .requires(DelightfulItems.NUT_BUTTER_BOTTLE.get())
+                .requires(DelightfulItems.JELLY_BOTTLE.get())
+                .unlockedBy("has_nut_butter", has(DelightfulItems.NUT_BUTTER_BOTTLE.get()))
+                .save(f))
+            .generateAdvancement()
+            .build(finished, Delightful.MODID, "food/nut_butter_and_jelly_sandwich");
+        ConditionalRecipe.builder()
+            .addCondition(new EnabledCondition("cheeseburger"))
+            .addRecipe(f -> ShapelessRecipeBuilder.shapeless(DelightfulItems.CHEESEBURGER.get())
+                .requires(ForgeTags.BREAD)
+                .requires(ModItems.BEEF_PATTY.get())
+                .requires(DelightfulItemTags.CHEESE_OR_MILK)
+                .requires(ForgeTags.SALAD_INGREDIENTS)
+                .requires(ForgeTags.CROPS_TOMATO)
+                .requires(ForgeTags.CROPS_ONION)
+                .unlockedBy("has_beef_patty_and_cheese", has(ModItems.BEEF_PATTY.get(), Items.MILK_BUCKET))
+                .save(f))
+            .generateAdvancement()
+            .build(finished, Delightful.MODID, "food/cheeseburger");
+        ConditionalRecipe.builder()
+            .addCondition(new EnabledCondition("cheeseburger"))
+            .addRecipe(f -> ShapelessRecipeBuilder.shapeless(DelightfulItems.CHEESEBURGER.get())
+                .requires(ModItems.HAMBURGER.get())
+                .requires(DelightfulItemTags.CHEESE_OR_MILK)
+                .unlockedBy("has_hamburger", has(ModItems.HAMBURGER.get()))
+                .save(f))
+            .generateAdvancement()
+            .build(finished, Delightful.MODID, "food/cheeseburger_from_hamburger");
+        ConditionalRecipe.builder()
+            .addCondition(new EnabledCondition("deluxe_cheeseburger"))
+            .addRecipe(f -> ShapelessRecipeBuilder.shapeless(DelightfulItems.DELUXE_CHEESEBURGER.get())
+                .requires(ForgeTags.BREAD)
+                .requires(ModItems.BEEF_PATTY.get())
+                .requires(DelightfulItemTags.CHEESE_OR_MILK)
+                .requires(ModItems.BEEF_PATTY.get())
+                .requires(DelightfulItemTags.CHEESE_OR_MILK)
+                .requires(ModItems.COOKED_BACON.get())
+                .requires(ForgeTags.SALAD_INGREDIENTS)
+                .requires(ForgeTags.CROPS_TOMATO)
+                .requires(ForgeTags.CROPS_ONION)
+                .unlockedBy("has_bacon", has(ModItems.COOKED_BACON.get()))
+                .save(f))
+            .generateAdvancement()
+            .build(finished, Delightful.MODID, "food/deluxe_cheeseburger");
+        ConditionalRecipe.builder()
+            .addCondition(new EnabledCondition("deluxe_cheeseburger"))
+            .addRecipe(f -> ShapelessRecipeBuilder.shapeless(DelightfulItems.DELUXE_CHEESEBURGER.get())
+                .requires(DelightfulItems.CHEESEBURGER.get())
+                .requires(ModItems.BEEF_PATTY.get())
+                .requires(DelightfulItemTags.CHEESE_OR_MILK)
+                .requires(ModItems.COOKED_BACON.get())
+                .unlockedBy("has_cheeseburger", has(DelightfulItems.CHEESEBURGER.get()))
+                .save(f))
+            .generateAdvancement()
+            .build(finished, Delightful.MODID, "food/deluxe_cheeseburger_from_cheeseburger");
+        ConditionalRecipe.builder()
+            .addCondition(new EnabledCondition("marshmallow_stick"))
+            .addRecipe(f -> ShapelessRecipeBuilder.shapeless(DelightfulItems.MARSHMALLOW_STICK.get(), 2)
+                .requires(DelightfulItemTags.SUGAR)
+                .requires(DelightfulItemTags.WATER)
+                .requires(Tags.Items.RODS_WOODEN)
+                .requires(Tags.Items.RODS_WOODEN)
+                .unlockedBy("has_sugar", has(Items.SUGAR))
+                .save(f))
+            .generateAdvancement()
+            .build(finished, Delightful.MODID, "food/marshmallow_stick");
+        ConditionalRecipe.builder()
+            .addCondition(new EnabledCondition("marshmallow_stick"))
+            .addRecipe(f -> ShapelessRecipeBuilder.shapeless(DelightfulItems.MARSHMALLOW_STICK.get(), 2)
+                .requires(DelightfulItemTags.SUGAR)
+                .requires(NBTIngredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
+                .requires(Tags.Items.RODS_WOODEN)
+                .requires(Tags.Items.RODS_WOODEN)
+                .unlockedBy("has_sugar", has(Items.SUGAR))
+                .save(f))
+            .generateAdvancement()
+            .build(finished, Delightful.MODID, "food/marshmallow_stick_from_water_bottle");
+        ConditionalRecipe.builder()
+            .addCondition(new EnabledCondition("smore"))
+            .addRecipe(f -> ShapelessRecipeBuilder.shapeless(DelightfulItems.SMORE.get())
+                .requires(ModItems.HONEY_COOKIE.get())
+                .requires(Items.COCOA_BEANS)
+                .requires(ForgeTags.MILK)
+                .requires(DelightfulItemTags.SUGAR)
+                .requires(DelightfulItems.COOKED_MARSHMALLOW_STICK.get())
+                .requires(ModItems.HONEY_COOKIE.get())
+                .unlockedBy("has_cooked_marshmallow_stick", has(DelightfulItems.COOKED_MARSHMALLOW_STICK.get()))
+                .save(f))
+            .generateAdvancement()
+            .build(finished, Delightful.MODID, "food/smore");
+        ConditionalRecipe.builder()
+            .addCondition(and(new EnabledCondition("prickly_pear_juice"), itemExists("ecologics", "cooked_prickly_pear")))
+            .addRecipe(f -> ShapelessRecipeBuilder.shapeless(DelightfulItems.PRICKLY_PEAR_JUICE.get())
+                .requires(DelightfulItemTags.COOKED_PRICKLY_PEAR)
+                .requires(DelightfulItemTags.COOKED_PRICKLY_PEAR)
+                .requires(DelightfulItemTags.SUGAR)
+                .requires(DelightfulItemTags.COOKED_PRICKLY_PEAR)
+                .requires(DelightfulItemTags.COOKED_PRICKLY_PEAR)
+                .requires(Items.GLASS_BOTTLE)
+                .unlockedBy("has_cooked_prickly_pear", has(modItem("ecologics", "cooked_prickly_pear")))
+                .save(f))
+            .generateAdvancement()
+            .build(finished, Delightful.MODID, "food/prickly_pear_juice");
+        ConditionalRecipe.builder()
+            .addCondition(and(new EnabledCondition("crab_rangoon"), not(tagEmpty(DelightfulItemTags.COOKED_CRAB))))
+            .addRecipe(f -> ShapelessRecipeBuilder.shapeless(DelightfulItems.CRAB_RANGOON.get())
+                .requires(ModItems.WHEAT_DOUGH.get())
+                .requires(DelightfulItemTags.CHEESE_OR_MILK)
+                .requires(DelightfulItemTags.COOKED_CRAB)
+                .unlockedBy("has_wheat_dough", has(ModItems.WHEAT_DOUGH.get()))
+                .save(f))
+            .generateAdvancement()
+            .build(finished, Delightful.MODID, "food/crab_rangoon");
+        ConditionalRecipe.builder()
+            .addCondition(and(new EnabledCondition("chunkwich"), itemExists("rottenleather", "sweetened_chunk")))
+            .addRecipe(f -> ShapelessRecipeBuilder.shapeless(DelightfulItems.CHUNKWICH.get())
+                .requires(ForgeTags.BREAD)
+                .requires(RottenLeatherItems.SWEETENED_CHUNK.get())
+                .unlockedBy("has_sweetened_chunk", has(RottenLeatherItems.SWEETENED_CHUNK.get()))
+                .save(f))
+            .generateAdvancement()
+            .build(finished, Delightful.MODID, "food/chunkwich");
+        ConditionalRecipe.builder()
+            .addCondition(new EnabledCondition("cooked_marshmallow_stick"))
+            .addRecipe(f -> SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(DelightfulItems.MARSHMALLOW_STICK.get()),
+                DelightfulItems.COOKED_MARSHMALLOW_STICK.get(), 0.5F, 600)
+                .unlockedBy("has_marshmallow_stick", has(DelightfulItems.MARSHMALLOW_STICK.get()))
+                .save(f))
+            .generateAdvancement()
+            .build(finished, Delightful.MODID, "food/cooked_marshmallow_stick");
+    }
 
+    private InventoryChangeTrigger.TriggerInstance has(ItemLike... items) {
+        return InventoryChangeTrigger.TriggerInstance.hasItems(items);
+    }
+
+    private Item modItem(String modid, String path) {
+        return ForgeRegistries.ITEMS.getValue(new ResourceLocation(modid, path));
     }
 
     private void cabinet(DelightfulCabinetBlock block, Consumer<FinishedRecipe> finished) {

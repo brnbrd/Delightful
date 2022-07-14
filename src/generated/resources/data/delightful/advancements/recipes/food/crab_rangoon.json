@@ -1,0 +1,58 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "crab_rangoon",
+              "type": "delightful:enabled"
+            },
+            {
+              "value": {
+                "tag": "forge:cooked_crab",
+                "type": "forge:tag_empty"
+              },
+              "type": "forge:not"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:crab_rangoon"
+          ]
+        },
+        "criteria": {
+          "has_wheat_dough": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+              "items": [
+                {
+                  "items": [
+                    "farmersdelight:wheat_dough"
+                  ]
+                }
+              ]
+            }
+          },
+          "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+              "recipe": "delightful:crab_rangoon"
+            }
+          }
+        },
+        "requirements": [
+          [
+            "has_wheat_dough",
+            "has_the_recipe"
+          ]
+        ]
+      }
+    }
+  ]
+}

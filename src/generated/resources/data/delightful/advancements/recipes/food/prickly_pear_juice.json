@@ -1,0 +1,55 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "prickly_pear_juice",
+              "type": "delightful:enabled"
+            },
+            {
+              "item": "ecologics:cooked_prickly_pear",
+              "type": "forge:item_exists"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:prickly_pear_juice"
+          ]
+        },
+        "criteria": {
+          "has_cooked_prickly_pear": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+              "items": [
+                {
+                  "items": [
+                    "ecologics:cooked_prickly_pear"
+                  ]
+                }
+              ]
+            }
+          },
+          "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+              "recipe": "delightful:prickly_pear_juice"
+            }
+          }
+        },
+        "requirements": [
+          [
+            "has_cooked_prickly_pear",
+            "has_the_recipe"
+          ]
+        ]
+      }
+    }
+  ]
+}

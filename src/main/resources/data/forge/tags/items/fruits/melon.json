@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    {
-      "id": "minecraft:melon_slice",
-      "required": false
-    }
-  ]
-}

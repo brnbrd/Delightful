@@ -1,0 +1,51 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "value": "cheeseburger",
+          "type": "delightful:enabled"
+        }
+      ],
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:cheeseburger"
+          ]
+        },
+        "criteria": {
+          "has_beef_patty_and_cheese": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+              "items": [
+                {
+                  "items": [
+                    "farmersdelight:beef_patty"
+                  ]
+                },
+                {
+                  "items": [
+                    "minecraft:milk_bucket"
+                  ]
+                }
+              ]
+            }
+          },
+          "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+              "recipe": "delightful:cheeseburger"
+            }
+          }
+        },
+        "requirements": [
+          [
+            "has_beef_patty_and_cheese",
+            "has_the_recipe"
+          ]
+        ]
+      }
+    }
+  ]
+}

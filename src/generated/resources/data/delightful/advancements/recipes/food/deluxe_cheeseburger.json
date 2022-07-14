@@ -1,0 +1,46 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "value": "deluxe_cheeseburger",
+          "type": "delightful:enabled"
+        }
+      ],
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:deluxe_cheeseburger"
+          ]
+        },
+        "criteria": {
+          "has_bacon": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+              "items": [
+                {
+                  "items": [
+                    "farmersdelight:cooked_bacon"
+                  ]
+                }
+              ]
+            }
+          },
+          "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+              "recipe": "delightful:deluxe_cheeseburger"
+            }
+          }
+        },
+        "requirements": [
+          [
+            "has_bacon",
+            "has_the_recipe"
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "value": "jelly_bottle",
+          "type": "delightful:enabled"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "ingredients": [
+          {
+            "tag": "forge:fruits/sweet"
+          },
+          {
+            "tag": "forge:fruits/sweet"
+          },
+          {
+            "tag": "forge:sugars"
+          },
+          {
+            "tag": "forge:sugars"
+          }
+        ],
+        "result": {
+          "item": "delightful:jelly_bottle"
+        },
+        "experience": 0.35,
+        "cookingtime": 200
+      }
+    }
+  ]
+}
