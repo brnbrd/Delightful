@@ -7,10 +7,14 @@
   "item.delightful.crab_rangoon": "Краб и сыр вонтон",
   "item.delightful.prickly_pear_juice": "Сок опунции",
   "item.delightful.chunkwich": "Сэндвич с кусочками",
+  "item.delightful.chunk_nugget": "Кусок самородка",
   "item.delightful.jelly_bottle": "Желейная бутылка",
   "item.delightful.nut_butter_bottle": "Бутылка орехового масла",
   "item.delightful.nut_butter_and_jelly_sandwich": "Сэндвич с ореховым маслом и желе",
   "item.delightful.ender_nectar": "Нектар Эндер",
+  "item.delightful.azalea_tea": "Чай из азалии",
+  "item.delightful.honey_glazed_walnut": "Орех глазированный медом",
+  "item.delightful.green_tea_leaf": "Лист зеленого чая",
   "block.delightful.pizza_stone": "Камень для пиццы",
   "block.delightful.pizza_peel": "Пицца Пил",
   "item.delightful.pizza": "Пицца",
@@ -36,7 +40,9 @@
   "item.delightful.lead_knife": "Свинцовый нож",
   "item.delightful.nickel_knife": "Никелевый нож",
   "farmersdelight.tooltip.prickly_pear_juice": "Очень насыщенный",
+  "farmersdelight.tooltip.azalea_tea": "Здоровый",
   "farmersdelight.tooltip.ender_nectar": "потусторонний",
   "block.delightful.quartz_cabinet": "Кварцевый шкаф",
-  "block.delightful.basalt_cabinet": "Базальтовый кабинет"
+  "block.delightful.basalt_cabinet": "Базальтовый кабинет",
+  "delightful.green_tea_leaf.desc": "Получается случайно при использовании ножа на любом блоке листьев."
 }

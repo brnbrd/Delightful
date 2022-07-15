@@ -38,16 +38,14 @@ public class DelightfulConfig {
         builder.push("Other");
             items.stream()
                     .map(obj -> obj.getId().getPath())
-                    .filter(path -> !path.contains("_knife") && !path.contains("_cabinet"))
+                    .filter(path -> !path.contains("_knife") && !path.contains("_cabinet") && !path.equals("pizza"))
                     .sorted()
                     .forEach(not -> put(builder, stuff, not, true));
         builder.pop();
     }
 
     private static void put(ForgeConfigSpec.Builder builder, Map<String, ForgeConfigSpec.ConfigValue<Boolean>> map, String name, boolean def) {
-        map.put(name, builder
-                //.comment(name + " enabled") // redundant info
-                .define(name, def));
+        map.put(name, builder.define(name, def));
     }
 
     static {

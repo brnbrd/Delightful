@@ -7,10 +7,14 @@
   "item.delightful.crab_rangoon": "Crab Rangoon",
   "item.delightful.prickly_pear_juice": "Prickly Pear Juice",
   "item.delightful.chunkwich": "Chunkwich",
+  "item.delightful.chunk_nugget": "Chunk Nugget",
   "item.delightful.jelly_bottle": "Jelly Bottle",
   "item.delightful.nut_butter_bottle": "Nut Butter Bottle",
   "item.delightful.nut_butter_and_jelly_sandwich": "Nut Butter and Jelly Sandwich",
   "item.delightful.ender_nectar": "Ender Nectar",
+  "item.delightful.azalea_tea": "Azalea Tea",
+  "item.delightful.honey_glazed_walnut": "Honey Glazed Walnut",
+  "item.delightful.green_tea_leaf": "Green Tea Leaf",
   "block.delightful.pizza_stone": "Pizza Stone",
   "block.delightful.pizza_peel": "Pizza Peel",
   "item.delightful.pizza": "Pizza",
@@ -36,7 +40,9 @@
   "item.delightful.lead_knife": "Lead Knife",
   "item.delightful.nickel_knife": "Nickel Knife",
   "farmersdelight.tooltip.prickly_pear_juice": "Very Saturating",
+  "farmersdelight.tooltip.azalea_tea": "Healthy",
   "farmersdelight.tooltip.ender_nectar": "Otherworldly",
   "block.delightful.quartz_cabinet": "Quartz Cabinet",
-  "block.delightful.basalt_cabinet": "Basalt Cabinet"
+  "block.delightful.basalt_cabinet": "Basalt Cabinet",
+  "delightful.green_tea_leaf.desc": "Acquired by chance from using a Knife on any Leaves block."
 }

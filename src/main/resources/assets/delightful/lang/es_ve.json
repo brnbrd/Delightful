@@ -7,10 +7,14 @@
   "item.delightful.crab_rangoon": "Wontón de cangrejo y queso",
   "item.delightful.prickly_pear_juice": "Jugo de higo chumbo",
   "item.delightful.chunkwich": "Sándwich de pedazo",
+  "item.delightful.chunk_nugget": "Pepita de pedazo",
   "item.delightful.jelly_bottle": "Botella de mermelada",
   "item.delightful.nut_butter_bottle": "Botella de mantequilla de nuez",
   "item.delightful.nut_butter_and_jelly_sandwich": "Sándwich de mantequilla de nuez y mermelada",
   "item.delightful.ender_nectar": "Néctar de ender",
+  "item.delightful.azalea_tea": "Té de azalea",
+  "item.delightful.honey_glazed_walnut": "Nuez glaseada con miel",
+  "item.delightful.green_tea_leaf": "Hoja de té verde",
   "block.delightful.pizza_stone": "Piedra para pizza",
   "block.delightful.pizza_peel": "Cáscara de pizza",
   "item.delightful.pizza": "Pizza",
@@ -36,7 +40,9 @@
   "item.delightful.lead_knife": "Cuchillo de plomo",
   "item.delightful.nickel_knife": "Cuchillo de níquel",
   "farmersdelight.tooltip.prickly_pear_juice": "Muy saturante",
+  "farmersdelight.tooltip.azalea_tea": "Saludable",
   "farmersdelight.tooltip.ender_nectar": "De otro mundo",
   "block.delightful.quartz_cabinet": "Despensa de cuarzo",
-  "block.delightful.basalt_cabinet": "Despensa de basalto"
+  "block.delightful.basalt_cabinet": "Despensa de basalto",
+  "delightful.green_tea_leaf.desc": "Adquirido por casualidad al usar un cuchillo en cualquier bloque de hojas."
 }

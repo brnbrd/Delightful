@@ -11,20 +11,17 @@ public class EnabledCondition implements ICondition {
     private static final ResourceLocation NAME = new ResourceLocation(Delightful.MODID, "enabled");
     private final String value;
 
-    public EnabledCondition(String value)
-    {
+    public EnabledCondition(String value) {
         this.value = value;
     }
 
     @Override
-    public ResourceLocation getID()
-    {
+    public ResourceLocation getID() {
         return NAME;
     }
 
     @Override
-    public boolean test(IContext context)
-    {
+    public boolean test(IContext context) {
         return this.test();
     }
 
@@ -32,6 +29,7 @@ public class EnabledCondition implements ICondition {
      * @deprecated Use {@linkplain #test(IContext) the other more general overload}.
      */
     @Override
+    @SuppressWarnings("deprecated")
     @Deprecated
     public boolean test() {
         return DelightfulConfig.CONFIG.stuff.containsKey(this.value) &&
@@ -44,25 +42,21 @@ public class EnabledCondition implements ICondition {
         return "enabled(\"" + this.value + "\")";
     }
 
-    public static class Serializer implements IConditionSerializer<EnabledCondition>
-    {
+    public static class Serializer implements IConditionSerializer<EnabledCondition> {
         public static final EnabledCondition.Serializer INSTANCE = new EnabledCondition.Serializer();
 
         @Override
-        public void write(JsonObject json, EnabledCondition condition)
-        {
+        public void write(JsonObject json, EnabledCondition condition) {
             json.addProperty("value", condition.value);
         }
 
         @Override
-        public EnabledCondition read(JsonObject json)
-        {
+        public EnabledCondition read(JsonObject json) {
             return new EnabledCondition(GsonHelper.getAsString(json, "value"));
         }
 
         @Override
-        public ResourceLocation getID()
-        {
+        public ResourceLocation getID() {
             return EnabledCondition.NAME;
         }
     }

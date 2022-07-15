@@ -3,6 +3,7 @@ package net.brdle.delightful.data;
 import net.brdle.delightful.Delightful;
 import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.item.knife.DelightfulKnifeItem;
+import net.brdle.delightful.common.tag.DelightfulBlockTags;
 import net.brdle.delightful.common.tag.DelightfulItemTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
@@ -12,7 +13,6 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
-import vectorwing.farmersdelight.common.registry.ModItems;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
 import vectorwing.farmersdelight.common.tag.ModTags;
 
@@ -25,7 +25,10 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 	protected void addTags() {
 
 		// Farmer's Delight
-		this.tag(DelightfulItemTags.CABINETS_WOODEN)
+		this.copy(DelightfulBlockTags.CABINETS_WOODEN, DelightfulItemTags.CABINETS_WOODEN);
+		this.copy(DelightfulBlockTags.CABINETS_STONE, DelightfulItemTags.CABINETS_STONE);
+		this.copy(DelightfulBlockTags.CABINETS, DelightfulItemTags.CABINETS);
+		/*this.tag(DelightfulItemTags.CABINETS_WOODEN)
 			.add(ModItems.ACACIA_CABINET.get())
 			.add(ModItems.CRIMSON_CABINET.get())
 			.add(ModItems.BIRCH_CABINET.get())
@@ -37,7 +40,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.CABINETS_STONE)
 			.add(DelightfulItems.BASALT_CABINET.get())
 			.add(DelightfulItems.QUARTZ_CABINET.get());
-		this.tag(DelightfulItemTags.CABINETS).addTag(DelightfulItemTags.CABINETS_WOODEN).addTag(DelightfulItemTags.CABINETS_STONE);
+		this.tag(DelightfulItemTags.CABINETS).addTag(DelightfulItemTags.CABINETS_WOODEN).addTag(DelightfulItemTags.CABINETS_STONE);*/
 
 		// Forge
 		this.tag(DelightfulItemTags.FRUITS_APPLE).add(Items.APPLE);

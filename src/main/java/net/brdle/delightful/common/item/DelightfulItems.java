@@ -1,17 +1,17 @@
 package net.brdle.delightful.common.item;
 
 import net.brdle.delightful.Delightful;
+import net.brdle.delightful.common.item.food.DrinkItem;
 import net.brdle.delightful.common.item.food.FoodValues;
 import net.brdle.delightful.common.block.DelightfulBlocks;
 import net.brdle.delightful.common.item.food.EnderNectarItem;
 import net.brdle.delightful.common.item.food.PizzaItem;
-import net.brdle.delightful.common.item.food.PricklyPearJuiceItem;
 import net.brdle.delightful.common.item.knife.CompatKnifeItem;
 import net.brdle.delightful.common.item.knife.DelightfulKnifeItem;
 import net.brdle.delightful.common.item.knife.TaggedKnifeItem;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.TagKey;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -26,7 +26,6 @@ import net.minecraftforge.registries.RegistryObject;
 import vectorwing.farmersdelight.FarmersDelight;
 import vectorwing.farmersdelight.common.item.ConsumableItem;
 import vectorwing.farmersdelight.common.registry.ModItems;
-
 import java.util.function.Supplier;
 
 public class DelightfulItems {
@@ -74,8 +73,8 @@ public class DelightfulItems {
     public static final RegistryObject<Item> CRAB_RANGOON = registerCompatFood("crab_rangoon", "ecologics",
             FoodValues.CRAB_RANGOON);
     public static final RegistryObject<Item> PRICKLY_PEAR_JUICE = registerCompatItem("prickly_pear_juice", "ecologics",
-            () -> new PricklyPearJuiceItem((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16).tab(FarmersDelight.CREATIVE_TAB)),
-            () -> new PricklyPearJuiceItem((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16)));
+            () -> new DrinkItem((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16).tab(FarmersDelight.CREATIVE_TAB), () -> MobEffects.SATURATION, 400, 1),
+            () -> new DrinkItem((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16), () -> MobEffects.SATURATION, 400, 1));
     public static final RegistryObject<Item> CHUNKWICH = registerCompatFood("chunkwich", "rottenleather",
             FoodValues.CHUNKWICH);
     public static final RegistryObject<Item> JELLY_BOTTLE = registerItem("jelly_bottle",
@@ -88,6 +87,15 @@ public class DelightfulItems {
             () -> new ConsumableItem((new Item.Properties()).food(FoodValues.NUT_BUTTER_AND_JELLY_SANDWICH).tab(FarmersDelight.CREATIVE_TAB), true));
     public static final RegistryObject<Item> ENDER_NECTAR = registerItem("ender_nectar",
             () -> new EnderNectarItem((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16).tab(FarmersDelight.CREATIVE_TAB)));
+    public static final RegistryObject<Item> AZALEA_TEA = registerCompatItem("azalea_tea", "ecologics",
+        () -> new DrinkItem((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16).tab(FarmersDelight.CREATIVE_TAB), () -> MobEffects.SATURATION, 100, 1, 2.0F),
+        () -> new DrinkItem((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16), () -> MobEffects.SATURATION, 100, 1, 2.0F));
+    public static final RegistryObject<Item> HONEY_GLAZED_WALNUT = registerFood("honey_glazed_walnut",
+        FoodValues.HONEY_GLAZED_WALNUT);
+    public static final RegistryObject<Item> CHUNK_NUGGET = registerFood("chunk_nugget",
+        FoodValues.CHUNK_NUGGET);
+    public static final RegistryObject<Item> GREEN_TEA_LEAF = registerFood("green_tea_leaf",
+        FoodValues.GREEN_TEA_LEAF);
 
     // WIP
     public static final RegistryObject<Item> PIZZA = registerItem("pizza",

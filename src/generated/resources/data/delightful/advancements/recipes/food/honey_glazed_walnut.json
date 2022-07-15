@@ -5,12 +5,12 @@
         {
           "values": [
             {
-              "value": "nut_butter_bottle",
+              "value": "honey_glazed_walnut",
               "type": "delightful:enabled"
             },
             {
               "value": {
-                "tag": "forge:nuts",
+                "tag": "forge:nuts/walnut",
                 "type": "forge:tag_empty"
               },
               "type": "forge:not"
@@ -23,7 +23,7 @@
         "parent": "minecraft:recipes/root",
         "rewards": {
           "recipes": [
-            "delightful:nut_butter_bottle"
+            "delightful:honey_glazed_walnut"
           ]
         },
         "criteria": {
@@ -42,7 +42,7 @@
           "has_the_recipe": {
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-              "recipe": "delightful:nut_butter_bottle"
+              "recipe": "delightful:honey_glazed_walnut"
             }
           }
         },

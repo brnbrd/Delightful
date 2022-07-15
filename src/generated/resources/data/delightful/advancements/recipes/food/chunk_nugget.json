@@ -1,0 +1,21 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "chunk_nugget",
+              "type": "delightful:enabled"
+            },
+            {
+              "item": "rottenleather:sweetened_chunk",
+              "type": "forge:item_exists"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ]
+    }
+  ]
+}

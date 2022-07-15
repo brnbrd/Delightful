@@ -10,7 +10,6 @@ import net.brdle.delightful.common.item.knife.DelightfulKnifeItem;
 import net.brdle.delightful.common.item.knife.TaggedKnifeItem;
 import net.brdle.delightful.common.tag.DelightfulItemTags;
 import net.brdle.delightful.compat.nuggets.Nugget;
-import net.minecraft.advancements.CriterionTriggerInstance;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.DataGenerator;
@@ -20,7 +19,6 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.PotionItem;
 import net.minecraft.world.item.alchemy.PotionUtils;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -37,7 +35,6 @@ import vectorwing.farmersdelight.common.registry.ModItems;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
 import vectorwing.farmersdelight.data.builder.CookingPotRecipeBuilder;
 import vectorwing.farmersdelight.data.recipe.CookingRecipes;
-
 import java.util.Arrays;
 import java.util.Objects;
 import java.util.function.Consumer;
@@ -95,19 +92,6 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .build(f))
             .generateAdvancement()
             .build(finished, Delightful.MODID, "food/cooking/nut_butter_bottle");
-        ConditionalRecipe.builder()
-            .addCondition(and(new EnabledCondition("nut_butter_bottle"), not(tagEmpty(DelightfulItemTags.NUTS))))
-            .addRecipe(f -> ShapelessRecipeBuilder.shapeless(DelightfulItems.NUT_BUTTER_BOTTLE.get(), 3)
-                .requires(DelightfulItemTags.NUTS)
-                .requires(DelightfulItemTags.NUTS)
-                .requires(DelightfulItemTags.NUTS)
-                .requires(Items.HONEY_BOTTLE)
-                .requires(Items.GLASS_BOTTLE)
-                .requires(Items.GLASS_BOTTLE)
-                .unlockedBy("has_honey", has(Items.HONEY_BOTTLE))
-                .save(f))
-            .generateAdvancement()
-            .build(finished, Delightful.MODID, "food/nut_butter_bottle");
         ConditionalRecipe.builder()
             .addCondition(and(new EnabledCondition("nut_butter_and_jelly_sandwich"), not(tagEmpty(DelightfulItemTags.NUTS))))
             .addRecipe(f -> ShapelessRecipeBuilder.shapeless(DelightfulItems.NUT_BUTTER_AND_JELLY_SANDWICH.get())
@@ -235,6 +219,16 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             .generateAdvancement()
             .build(finished, Delightful.MODID, "food/chunkwich");
         ConditionalRecipe.builder()
+            .addCondition(and(new EnabledCondition("chunk_nugget"), itemExists("rottenleather", "sweetened_chunk")))
+            .addRecipe(f -> CookingPotRecipeBuilder.cookingPotRecipe(
+                DelightfulItems.CHUNK_NUGGET.get(), 6, CookingRecipes.FAST_COOKING, 0.25F)
+                .addIngredient(ForgeTags.BREAD)
+                .addIngredient(RottenLeatherItems.SWEETENED_CHUNK.get())
+                .addIngredient(RottenLeatherItems.SWEETENED_CHUNK.get())
+                .build(f))
+            .generateAdvancement()
+            .build(finished, Delightful.MODID, "food/chunk_nugget");
+        ConditionalRecipe.builder()
             .addCondition(new EnabledCondition("cooked_marshmallow_stick"))
             .addRecipe(f -> SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(DelightfulItems.MARSHMALLOW_STICK.get()),
                 DelightfulItems.COOKED_MARSHMALLOW_STICK.get(), 0.5F, 600)
@@ -242,6 +236,37 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .save(f))
             .generateAdvancement()
             .build(finished, Delightful.MODID, "food/cooked_marshmallow_stick");
+        ConditionalRecipe.builder()
+            .addCondition(and(new EnabledCondition("azalea_tea"), itemExists("ecologics", "azalea_flower")))
+            .addRecipe(f -> CookingPotRecipeBuilder.cookingPotRecipe(
+                DelightfulItems.AZALEA_TEA.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
+                .addIngredient(DelightfulItemTags.WATER)
+                .addIngredient(DelightfulItems.GREEN_TEA_LEAF.get())
+                .addIngredient(modItem("ecologics", "azalea_flower"))
+                .build(f))
+            .generateAdvancement()
+            .build(finished, Delightful.MODID, "food/azalea_tea");
+        ConditionalRecipe.builder()
+            .addCondition(and(new EnabledCondition("azalea_tea"), itemExists("ecologics", "azalea_flower")))
+            .addRecipe(f -> CookingPotRecipeBuilder.cookingPotRecipe(
+                    DelightfulItems.AZALEA_TEA.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
+                .addIngredient(NBTIngredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
+                .addIngredient(DelightfulItems.GREEN_TEA_LEAF.get())
+                .addIngredient(modItem("ecologics", "azalea_flower"))
+                .build(f))
+            .generateAdvancement()
+            .build(finished, Delightful.MODID, "food/azalea_tea_from_water_bottle");
+        ConditionalRecipe.builder()
+            .addCondition(and(new EnabledCondition("honey_glazed_walnut"), not(tagEmpty(DelightfulItemTags.NUTS_WALNUT))))
+            .addRecipe(f -> ShapelessRecipeBuilder.shapeless(DelightfulItems.HONEY_GLAZED_WALNUT.get(), 3)
+                .requires(DelightfulItemTags.NUTS_WALNUT)
+                .requires(DelightfulItemTags.NUTS_WALNUT)
+                .requires(DelightfulItemTags.NUTS_WALNUT)
+                .requires(Items.HONEY_BOTTLE)
+                .unlockedBy("has_honey", has(Items.HONEY_BOTTLE))
+                .save(f))
+            .generateAdvancement()
+            .build(finished, Delightful.MODID, "food/honey_glazed_walnut");
     }
 
     private InventoryChangeTrigger.TriggerInstance has(ItemLike... items) {

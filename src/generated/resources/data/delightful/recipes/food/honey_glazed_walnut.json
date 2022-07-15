@@ -6,12 +6,12 @@
         {
           "values": [
             {
-              "value": "nut_butter_bottle",
+              "value": "honey_glazed_walnut",
               "type": "delightful:enabled"
             },
             {
               "value": {
-                "tag": "forge:nuts",
+                "tag": "forge:nuts/walnut",
                 "type": "forge:tag_empty"
               },
               "type": "forge:not"
@@ -24,26 +24,20 @@
         "type": "minecraft:crafting_shapeless",
         "ingredients": [
           {
-            "tag": "forge:nuts"
+            "tag": "forge:nuts/walnut"
           },
           {
-            "tag": "forge:nuts"
+            "tag": "forge:nuts/walnut"
           },
           {
-            "tag": "forge:nuts"
+            "tag": "forge:nuts/walnut"
           },
           {
             "item": "minecraft:honey_bottle"
-          },
-          {
-            "item": "minecraft:glass_bottle"
-          },
-          {
-            "item": "minecraft:glass_bottle"
           }
         ],
         "result": {
-          "item": "delightful:nut_butter_bottle",
+          "item": "delightful:honey_glazed_walnut",
           "count": 3
         }
       }
