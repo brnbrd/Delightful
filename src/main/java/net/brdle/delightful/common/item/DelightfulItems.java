@@ -94,8 +94,18 @@ public class DelightfulItems {
         FoodValues.HONEY_GLAZED_WALNUT);
     public static final RegistryObject<Item> CHUNK_NUGGET = registerFood("chunk_nugget",
         FoodValues.CHUNK_NUGGET);
+    public static final RegistryObject<Item> SALMONBERRY = registerFood("salmonberry",
+        FoodValues.SALMONBERRY);
     public static final RegistryObject<Item> GREEN_TEA_LEAF = registerFood("green_tea_leaf",
         FoodValues.GREEN_TEA_LEAF);
+    public static final RegistryObject<Item> MATCHA_LATTE = registerItem("matcha_latte",
+        () -> new DrinkItem((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16).tab(FarmersDelight.CREATIVE_TAB), () -> MobEffects.SATURATION, 100, 1, 2.0F));
+    public static final RegistryObject<Item> BERRY_MATCHA_LATTE = registerItem("berry_matcha_latte",
+        () -> new DrinkItem((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16).tab(FarmersDelight.CREATIVE_TAB), () -> MobEffects.SATURATION, 400, 1, 2.0F));
+
+    public static final RegistryObject<Item> MATCHA = registerItem("matcha", () -> new Item((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
+    public static final RegistryObject<Item> ANIMAL_FAT = registerItem("animal_fat", () -> new Item((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
+    public static final RegistryObject<Item> ANIMAL_OIL_BOTTLE = registerItem("animal_oil_bottle", () -> new Item((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE).tab(FarmersDelight.CREATIVE_TAB)));
 
     // WIP
     public static final RegistryObject<Item> PIZZA = registerItem("pizza",

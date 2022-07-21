@@ -1,0 +1,12 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "value": "animal_oil_bottle",
+          "type": "delightful:enabled"
+        }
+      ]
+    }
+  ]
+}

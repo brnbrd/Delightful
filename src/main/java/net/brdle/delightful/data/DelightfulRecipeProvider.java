@@ -1,5 +1,8 @@
 package net.brdle.delightful.data;
 
+import com.farmersrespite.core.registry.FRItems;
+import com.farmersrespite.data.builder.FRCookingPotRecipeBuilder;
+import com.farmersrespite.data.builder.KettleRecipeBuilder;
 import net.brdle.delightful.Delightful;
 import net.brdle.delightful.common.block.DelightfulBlocks;
 import net.brdle.delightful.common.block.DelightfulCabinetBlock;
@@ -72,6 +75,15 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .build(f))
             .generateAdvancement()
             .build(finished, Delightful.MODID, "food/cooking/ender_nectar");
+        ConditionalRecipe.builder()
+            .addCondition(new EnabledCondition("animal_oil_bottle"))
+            .addRecipe(f -> CookingPotRecipeBuilder.cookingPotRecipe(
+                    DelightfulItems.ANIMAL_OIL_BOTTLE.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
+                .addIngredient(DelightfulItems.ANIMAL_FAT.get())
+                .addIngredient(DelightfulItems.ANIMAL_FAT.get())
+                .build(f))
+            .generateAdvancement()
+            .build(finished, Delightful.MODID, "cooking/animal_oil_bottle");
         ConditionalRecipe.builder()
             .addCondition(new EnabledCondition("jelly_bottle"))
             .addRecipe(f -> CookingPotRecipeBuilder.cookingPotRecipe(
@@ -239,23 +251,21 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
         ConditionalRecipe.builder()
             .addCondition(and(new EnabledCondition("azalea_tea"), itemExists("ecologics", "azalea_flower")))
             .addRecipe(f -> CookingPotRecipeBuilder.cookingPotRecipe(
-                DelightfulItems.AZALEA_TEA.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
-                .addIngredient(DelightfulItemTags.WATER)
-                .addIngredient(DelightfulItems.GREEN_TEA_LEAF.get())
-                .addIngredient(modItem("ecologics", "azalea_flower"))
-                .build(f))
-            .generateAdvancement()
-            .build(finished, Delightful.MODID, "food/azalea_tea");
-        ConditionalRecipe.builder()
-            .addCondition(and(new EnabledCondition("azalea_tea"), itemExists("ecologics", "azalea_flower")))
-            .addRecipe(f -> CookingPotRecipeBuilder.cookingPotRecipe(
                     DelightfulItems.AZALEA_TEA.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
                 .addIngredient(NBTIngredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
-                .addIngredient(DelightfulItems.GREEN_TEA_LEAF.get())
+                .addIngredient(DelightfulItemTags.TEA_LEAVES_GREEN)
                 .addIngredient(modItem("ecologics", "azalea_flower"))
                 .build(f))
             .generateAdvancement()
             .build(finished, Delightful.MODID, "food/azalea_tea_from_water_bottle");
+        ConditionalRecipe.builder()
+            .addCondition(and(new EnabledCondition("azalea_tea"), itemExists("ecologics", "azalea_flower"), modLoaded("farmersrespite")))
+            .addRecipe(f -> KettleRecipeBuilder.kettleRecipe(DelightfulItems.AZALEA_TEA.get(), 1, 2400, 0.35F, false, Items.GLASS_BOTTLE)
+                .addIngredient(DelightfulItemTags.TEA_LEAVES_GREEN)
+                .addIngredient(modItem("ecologics", "azalea_flower"))
+                .build(f))
+            .generateAdvancement()
+            .build(finished, Delightful.MODID, "food/kettle/azalea_tea_from_water_bottle");
         ConditionalRecipe.builder()
             .addCondition(and(new EnabledCondition("honey_glazed_walnut"), not(tagEmpty(DelightfulItemTags.NUTS_WALNUT))))
             .addRecipe(f -> ShapelessRecipeBuilder.shapeless(DelightfulItems.HONEY_GLAZED_WALNUT.get(), 3)
@@ -267,7 +277,55 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .save(f))
             .generateAdvancement()
             .build(finished, Delightful.MODID, "food/honey_glazed_walnut");
-    }
+        ConditionalRecipe.builder()
+            .addCondition(new EnabledCondition("matcha_latte"))
+            .addRecipe(f ->  ShapelessRecipeBuilder.shapeless(DelightfulItems.MATCHA_LATTE.get(), 1)
+                .requires(Items.GLASS_BOTTLE)
+                .requires(ForgeTags.MILK)
+                .requires(Items.HONEY_BOTTLE)
+                .requires(DelightfulItems.MATCHA.get())
+                .unlockedBy("has_matcha", has(DelightfulItems.MATCHA.get()))
+                .save(f))
+            .generateAdvancement()
+            .build(finished, Delightful.MODID, "food/matcha_latte");
+        ConditionalRecipe.builder()
+            .addCondition(new EnabledCondition("berry_matcha_latte"))
+            .addRecipe(f -> ShapelessRecipeBuilder.shapeless(DelightfulItems.BERRY_MATCHA_LATTE.get(), 1)
+                .requires(Items.GLASS_BOTTLE)
+                .requires(DelightfulItemTags.FRUITS_BERRIES)
+                .requires(ForgeTags.MILK)
+                .requires(Items.HONEY_BOTTLE)
+                .requires(DelightfulItems.MATCHA.get())
+                .unlockedBy("has_matcha_latte", has(DelightfulItems.MATCHA_LATTE.get()))
+                .save(f))
+            .generateAdvancement()
+            .build(finished, Delightful.MODID, "food/berry_matcha_latte");
+        ConditionalRecipe.builder()
+            .addCondition(new EnabledCondition("matcha"))
+            .addRecipe(f -> SimpleCookingRecipeBuilder.smelting(Ingredient.of(DelightfulItemTags.TEA_LEAVES_GREEN),
+                DelightfulItems.MATCHA.get(), 0.1F, 200)
+                .unlockedBy("has_green_tea_leaf", has(DelightfulItems.GREEN_TEA_LEAF.get()))
+                .save(f, new ResourceLocation(Delightful.MODID, "smelting/green_tea_leaf")))
+            .generateAdvancement()
+            .build(finished, Delightful.MODID, "smelting/green_tea_leaf");
+        ConditionalRecipe.builder()
+            .addCondition(new EnabledCondition("matcha"))
+            .addRecipe(f -> SimpleCookingRecipeBuilder.blasting(Ingredient.of(DelightfulItemTags.TEA_LEAVES_GREEN),
+                    DelightfulItems.MATCHA.get(), 0.1F, 100)
+                .unlockedBy("has_green_tea_leaf", has(DelightfulItems.GREEN_TEA_LEAF.get()))
+                .save(f, new ResourceLocation(Delightful.MODID, "blasting/green_tea_leaf")))
+            .generateAdvancement()
+            .build(finished, Delightful.MODID, "blasting/green_tea_leaf");
+        ConditionalRecipe.builder()
+            .addCondition(itemExists("farmersrespite", "green_tea_leaves"))
+            .addRecipe(f -> ShapelessRecipeBuilder.shapeless(FRItems.GREEN_TEA_LEAVES.get(), 2)
+                .requires(DelightfulItems.GREEN_TEA_LEAF.get())
+                .requires(DelightfulItems.GREEN_TEA_LEAF.get())
+                .unlockedBy("has_green_tea_leaf", has(DelightfulItems.GREEN_TEA_LEAF.get()))
+                .save(f))
+            .generateAdvancement()
+            .build(finished, Delightful.MODID, "green_tea_leaves_from_green_tea_leaf");
+        }
 
     private InventoryChangeTrigger.TriggerInstance has(ItemLike... items) {
         return InventoryChangeTrigger.TriggerInstance.hasItems(items);

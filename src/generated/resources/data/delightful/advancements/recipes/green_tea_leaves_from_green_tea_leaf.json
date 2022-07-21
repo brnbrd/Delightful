@@ -1,0 +1,46 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "item": "farmersrespite:green_tea_leaves",
+          "type": "forge:item_exists"
+        }
+      ],
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "farmersrespite:green_tea_leaves"
+          ]
+        },
+        "criteria": {
+          "has_green_tea_leaf": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+              "items": [
+                {
+                  "items": [
+                    "delightful:green_tea_leaf"
+                  ]
+                }
+              ]
+            }
+          },
+          "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+              "recipe": "farmersrespite:green_tea_leaves"
+            }
+          }
+        },
+        "requirements": [
+          [
+            "has_green_tea_leaf",
+            "has_the_recipe"
+          ]
+        ]
+      }
+    }
+  ]
+}

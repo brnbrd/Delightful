@@ -23,4 +23,5 @@ public class FoodValues {
             .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3600, 0), 1.0F).build();
     public static final FoodProperties HONEY_GLAZED_WALNUT = (new FoodProperties.Builder()).nutrition(5).saturationMod(0.3F).build();
     public static final FoodProperties GREEN_TEA_LEAF = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.2F).build();
+    public static final FoodProperties SALMONBERRY = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.3F).build();
 }

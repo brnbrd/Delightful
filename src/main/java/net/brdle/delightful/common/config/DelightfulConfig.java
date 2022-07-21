@@ -12,7 +12,8 @@ public class DelightfulConfig {
 
     public static final DelightfulConfig CONFIG;
     public static final ForgeConfigSpec SPEC;
-    public final Map<String, ForgeConfigSpec.ConfigValue<Boolean>> stuff;
+    public final Map<String, ForgeConfigSpec.BooleanValue> stuff;
+    public static ForgeConfigSpec.IntValue CHANCE_WILD_SALMONBERRIES;
 
     DelightfulConfig(ForgeConfigSpec.Builder builder) {
         var items = DelightfulItems.ITEMS.getEntries();
@@ -35,16 +36,20 @@ public class DelightfulConfig {
                     .sorted()
                     .forEach(cabinet -> put(builder, stuff, cabinet, true));
         builder.pop();
-        builder.push("Other");
+        builder.push("Foods and Other Items");
             items.stream()
                     .map(obj -> obj.getId().getPath())
                     .filter(path -> !path.contains("_knife") && !path.contains("_cabinet") && !path.equals("pizza"))
                     .sorted()
                     .forEach(not -> put(builder, stuff, not, true));
         builder.pop();
+        builder.push("Generation");
+        CHANCE_WILD_SALMONBERRIES = builder.comment("Chance of generating clusters. Smaller value = more frequent.")
+            .defineInRange("chance_wild_salmonberries", 30, 0, Integer.MAX_VALUE);
+        builder.pop();
     }
 
-    private static void put(ForgeConfigSpec.Builder builder, Map<String, ForgeConfigSpec.ConfigValue<Boolean>> map, String name, boolean def) {
+    private static void put(ForgeConfigSpec.Builder builder, Map<String, ForgeConfigSpec.BooleanValue> map, String name, boolean def) {
         map.put(name, builder.define(name, def));
     }
 

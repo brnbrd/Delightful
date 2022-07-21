@@ -11,6 +11,10 @@
             {
               "item": "ecologics:azalea_flower",
               "type": "forge:item_exists"
+            },
+            {
+              "modid": "farmersrespite",
+              "type": "forge:mod_loaded"
             }
           ],
           "type": "forge:and"

@@ -1,20 +1,35 @@
 package net.brdle.delightful.common;
 
 import net.brdle.delightful.Delightful;
+import net.brdle.delightful.common.config.DelightfulConfig;
 import net.brdle.delightful.common.config.EnabledCondition;
+import net.brdle.delightful.common.world.DelightfulWildCropGeneration;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraftforge.common.crafting.CraftingHelper;
+import net.minecraftforge.common.world.BiomeGenerationSettingsBuilder;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 import java.util.List;
 
 @Mod.EventBusSubscriber(modid=Delightful.MODID)
 public class Events {
+
+    @SubscribeEvent
+    public static void setup(FMLCommonSetupEvent e) {
+        e.enqueueWork(() -> {
+            DelightfulWildCropGeneration.registerWildCropGeneration();
+            //Flammables
+        });
+    }
 
     private static final List<String> portedMods = List.of("coppersdelight", "steelsdelight", "enderitesdelight");
 

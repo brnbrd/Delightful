@@ -1,0 +1,36 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "value": "berry_matcha_latte",
+          "type": "delightful:enabled"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "minecraft:glass_bottle"
+          },
+          {
+            "tag": "forge:fruits/berries"
+          },
+          {
+            "tag": "forge:milk"
+          },
+          {
+            "item": "minecraft:honey_bottle"
+          },
+          {
+            "item": "delightful:matcha"
+          }
+        ],
+        "result": {
+          "item": "delightful:berry_matcha_latte"
+        }
+      }
+    }
+  ]
+}

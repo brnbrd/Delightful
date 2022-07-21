@@ -46,6 +46,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.FRUITS_APPLE).add(Items.APPLE);
 		this.tag(DelightfulItemTags.FRUITS_MELON).add(Items.MELON_SLICE);
 		this.tag(DelightfulItemTags.FRUITS_SWEET_BERRIES).add(Items.SWEET_BERRIES);
+		this.tag(DelightfulItemTags.FRUITS_SALMONBERRY).add(DelightfulItems.SALMONBERRY.get());
 		this.tag(DelightfulItemTags.FRUITS_KIWI).addOptional(new ResourceLocation("hedgehog", "kiwi"));
 		this.tag(DelightfulItemTags.FRUITS_PRICKLY_PEAR).addOptional(new ResourceLocation("ecologics", "prickly_pear"));
 		this.tag(DelightfulItemTags.FRUITS)
@@ -53,13 +54,18 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_KIWI)
 			.addTag(DelightfulItemTags.FRUITS_MELON)
 			.addTag(DelightfulItemTags.FRUITS_PRICKLY_PEAR)
-			.addTag(DelightfulItemTags.FRUITS_SWEET_BERRIES);
+			.addTag(DelightfulItemTags.FRUITS_SWEET_BERRIES)
+			.addTag(DelightfulItemTags.FRUITS_SALMONBERRY);
 		this.tag(DelightfulItemTags.FRUITS_SWEET)
 			.addTag(DelightfulItemTags.FRUITS_APPLE)
 			.addTag(DelightfulItemTags.FRUITS_KIWI)
 			.addTag(DelightfulItemTags.FRUITS_MELON)
 			.addTag(DelightfulItemTags.FRUITS_PRICKLY_PEAR)
-			.addTag(DelightfulItemTags.FRUITS_SWEET_BERRIES);
+			.addTag(DelightfulItemTags.FRUITS_SWEET_BERRIES)
+			.addTag(DelightfulItemTags.FRUITS_SALMONBERRY);
+		this.tag(DelightfulItemTags.FRUITS_BERRIES)
+			.addTag(DelightfulItemTags.FRUITS_SWEET_BERRIES)
+			.addTag(DelightfulItemTags.FRUITS_SALMONBERRY);
 		this.tag(DelightfulItemTags.NUTS_WALNUT).addOptional(new ResourceLocation("ecologics", "walnut"));
 		this.tag(DelightfulItemTags.NUTS).addTag(DelightfulItemTags.NUTS_WALNUT);
 		this.tag(DelightfulItemTags.INGOTS_STEEL).addOptional(new ResourceLocation("simplysteel", "steel_ingot"));
@@ -76,6 +82,9 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.CHEESE_OR_MILK)
 			.addTag(DelightfulItemTags.CHEESE)
 			.addTag(ForgeTags.MILK);
+		this.tag(DelightfulItemTags.TEA_LEAVES_GREEN)
+			.add(DelightfulItems.GREEN_TEA_LEAF.get())
+			.addOptional(new ResourceLocation("farmersrespite", "green_tea_leaves"));
 
 		// Minecraft
 		this.tag(ItemTags.PIGLIN_LOVED).add(DelightfulItems.REFINED_GLOWSTONE_KNIFE.get());

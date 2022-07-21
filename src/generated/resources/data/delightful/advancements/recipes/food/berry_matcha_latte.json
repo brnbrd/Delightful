@@ -1,0 +1,46 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "value": "berry_matcha_latte",
+          "type": "delightful:enabled"
+        }
+      ],
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:berry_matcha_latte"
+          ]
+        },
+        "criteria": {
+          "has_matcha_latte": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+              "items": [
+                {
+                  "items": [
+                    "delightful:matcha_latte"
+                  ]
+                }
+              ]
+            }
+          },
+          "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+              "recipe": "delightful:berry_matcha_latte"
+            }
+          }
+        },
+        "requirements": [
+          [
+            "has_matcha_latte",
+            "has_the_recipe"
+          ]
+        ]
+      }
+    }
+  ]
+}

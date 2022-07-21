@@ -21,9 +21,11 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> FRUITS_KIWI = bind("forge", "fruits/kiwi");
 	public static final TagKey<Item> FRUITS_MELON = bind("forge", "fruits/melon");
 	public static final TagKey<Item> FRUITS_SWEET_BERRIES = bind("forge", "fruits/sweet_berries");
+	public static final TagKey<Item> FRUITS_SALMONBERRY = bind("forge", "fruits/salmonberry");
 	public static final TagKey<Item> FRUITS_SWEET = bind("forge", "fruits/sweet");
 	public static final TagKey<Item> FRUITS_PRICKLY_PEAR = bind("forge", "fruits/prickly_pear");
 	public static final TagKey<Item> COOKED_PRICKLY_PEAR = bind("ecologics", "cooked_prickly_pear");
+	public static final TagKey<Item> FRUITS_BERRIES = bind("forge", "fruits/berries");
 	public static final TagKey<Item> CHEESE = bind("forge", "cheese");
 	public static final TagKey<Item> CHEESE_OR_MILK = bind("forge", "cheese_or_milk");
 	public static final TagKey<Item> COOKED_CRAB = bind("forge", "cooked_crab");
@@ -33,6 +35,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> SUGARS = bind("forge", "sugars");
 	public static final TagKey<Item> WATER = bind("forge", "water");
 	public static final TagKey<Item> INGOTS_STEEL = bind("forge", "ingots/steel");
+	public static final TagKey<Item> TEA_LEAVES_GREEN = bind("forge", "tea_leaves/green");
 
 	// Minecraft
 

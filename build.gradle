@@ -59,7 +59,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            args '--mod', 'delightful', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', 'delightful', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/'), '--existing-mod', 'farmersdelight'
 
             mods {
                 delightful {
@@ -112,6 +112,7 @@ dependencies {
     implementation fg.deobf("curse.maven:ecologics-570463:${ecologics_version}")
     implementation fg.deobf("curse.maven:rotten-leather-231487:${rl_version}")
     //runtimeOnly fg.deobf("curse.maven:brewin-and-chewin-637808:${brewin_chewin_version}") //broken
+    implementation fg.deobf("curse.maven:farmers-respite-551453:${farmers_respite_version}")
     // fg.deobf("curse.maven:bone-equipment-508347:${bone_equipment_version}")
     implementation fg.deobf("curse.maven:cofh-core-69162:${cofh_version}")
     implementation fg.deobf("curse.maven:thermal-foundation-222880:${thermal_version}")

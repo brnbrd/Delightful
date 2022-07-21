@@ -56,6 +56,7 @@ public enum DelightfulTiers implements Tier {
         return this.damage;
     }
 
+    @SuppressWarnings("deprecation")
     public int getLevel() {
         return this.level;
     }
