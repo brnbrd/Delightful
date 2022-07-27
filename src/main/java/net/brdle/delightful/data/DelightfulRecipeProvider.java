@@ -1,7 +1,6 @@
 package net.brdle.delightful.data;
 
 import com.farmersrespite.core.registry.FRItems;
-import com.farmersrespite.data.builder.FRCookingPotRecipeBuilder;
 import com.farmersrespite.data.builder.KettleRecipeBuilder;
 import net.brdle.delightful.Delightful;
 import net.brdle.delightful.common.block.DelightfulBlocks;
@@ -325,6 +324,21 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .save(f))
             .generateAdvancement()
             .build(finished, Delightful.MODID, "green_tea_leaves_from_green_tea_leaf");
+        CookingPotRecipeBuilder.cookingPotRecipe(
+              Items.MILK_BUCKET, 1, CookingRecipes.NORMAL_COOKING, 0.35F, Items.BUCKET)
+            .addIngredient(DelightfulItemTags.WATER)
+            .addIngredient(DelightfulItemTags.NUTS)
+            .addIngredient(DelightfulItemTags.NUTS)
+            .addIngredient(DelightfulItemTags.SUGAR)
+            .build(finished);
+        ShapedRecipeBuilder.shaped(Items.TORCH, 8)
+          .define('o', DelightfulItems.ANIMAL_OIL_BOTTLE.get())
+          .define('s', Tags.Items.RODS_WOODEN)
+          .pattern("o")
+          .pattern("s")
+          .unlockedBy("has_oil_bottle", inventoryTrigger(ItemPredicate.Builder.item()
+            .of(DelightfulItems.ANIMAL_OIL_BOTTLE.get()).build()))
+          .save(finished, "torch_from_animal_oil_bottle");
         }
 
     private InventoryChangeTrigger.TriggerInstance has(ItemLike... items) {

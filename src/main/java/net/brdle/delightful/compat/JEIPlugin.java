@@ -32,6 +32,8 @@ public class JEIPlugin implements IModPlugin
             .forEach((k -> registration.addIngredientInfo(k, VanillaTypes.ITEM_STACK, TextUtils.getTranslation("jei.info.knife"))));
         registration.addIngredientInfo(DelightfulItems.GREEN_TEA_LEAF.get().getDefaultInstance(), VanillaTypes.ITEM_STACK, new TranslatableComponent("delightful.green_tea_leaf.desc"));
         registration.addIngredientInfo(DelightfulItems.SALMONBERRY.get().getDefaultInstance(), VanillaTypes.ITEM_STACK, new TranslatableComponent("delightful.salmonberry.desc"));
+        registration.addIngredientInfo(DelightfulItems.ANIMAL_FAT.get().getDefaultInstance(), VanillaTypes.ITEM_STACK, new TranslatableComponent("delightful.animal_fat.desc"));
+        registration.addIngredientInfo(DelightfulItems.ANIMAL_OIL_BOTTLE.get().getDefaultInstance(), VanillaTypes.ITEM_STACK, new TranslatableComponent("delightful.animal_oil_bottle.desc"));
     }
 
     @Override

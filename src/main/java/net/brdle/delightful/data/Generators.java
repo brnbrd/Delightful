@@ -21,6 +21,7 @@ public class Generators {
             DelightfulBlockTagProvider blockTag = new DelightfulBlockTagProvider(gen, helper);
             e.getGenerator().addProvider(blockTag);
             e.getGenerator().addProvider(new DelightfulItemTagProvider(gen, blockTag, helper));
+            e.getGenerator().addProvider(new DelightfulEntityTagProvider(gen, helper));
             e.getGenerator().addProvider(new DelightfulLootModifierProvider(gen));
         }
         if (e.includeClient()) {

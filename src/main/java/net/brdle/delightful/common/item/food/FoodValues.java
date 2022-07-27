@@ -24,4 +24,5 @@ public class FoodValues {
     public static final FoodProperties HONEY_GLAZED_WALNUT = (new FoodProperties.Builder()).nutrition(5).saturationMod(0.3F).build();
     public static final FoodProperties GREEN_TEA_LEAF = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.2F).build();
     public static final FoodProperties SALMONBERRY = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.3F).build();
+    public static final FoodProperties ANIMAL_FAT = (new FoodProperties.Builder()).nutrition(1).saturationMod(2.0F).alwaysEat().fast().build();
 }

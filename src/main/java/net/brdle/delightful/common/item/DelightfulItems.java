@@ -99,13 +99,13 @@ public class DelightfulItems {
     public static final RegistryObject<Item> GREEN_TEA_LEAF = registerFood("green_tea_leaf",
         FoodValues.GREEN_TEA_LEAF);
     public static final RegistryObject<Item> MATCHA_LATTE = registerItem("matcha_latte",
-        () -> new DrinkItem((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16).tab(FarmersDelight.CREATIVE_TAB), () -> MobEffects.SATURATION, 100, 1, 2.0F));
+        () -> new DrinkItem((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16).tab(FarmersDelight.CREATIVE_TAB), () -> MobEffects.SATURATION, 100, 1, 2.0F, 7));
     public static final RegistryObject<Item> BERRY_MATCHA_LATTE = registerItem("berry_matcha_latte",
-        () -> new DrinkItem((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16).tab(FarmersDelight.CREATIVE_TAB), () -> MobEffects.SATURATION, 400, 1, 2.0F));
+        () -> new DrinkItem((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16).tab(FarmersDelight.CREATIVE_TAB), () -> MobEffects.SATURATION, 200, 1, 2.0F, 9));
 
     public static final RegistryObject<Item> MATCHA = registerItem("matcha", () -> new Item((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
-    public static final RegistryObject<Item> ANIMAL_FAT = registerItem("animal_fat", () -> new Item((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
-    public static final RegistryObject<Item> ANIMAL_OIL_BOTTLE = registerItem("animal_oil_bottle", () -> new Item((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE).tab(FarmersDelight.CREATIVE_TAB)));
+    public static final RegistryObject<Item> ANIMAL_FAT = registerFood("animal_fat", FoodValues.ANIMAL_FAT);
+    public static final RegistryObject<Item> ANIMAL_OIL_BOTTLE = registerItem("animal_oil_bottle", () -> new FurnaceFuelItem((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE).tab(FarmersDelight.CREATIVE_TAB), 3200));
 
     // WIP
     public static final RegistryObject<Item> PIZZA = registerItem("pizza",

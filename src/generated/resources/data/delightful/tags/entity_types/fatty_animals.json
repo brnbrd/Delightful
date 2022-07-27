@@ -1,0 +1,44 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:cat",
+    "minecraft:wolf",
+    "minecraft:cod",
+    "minecraft:salmon",
+    "minecraft:cow",
+    "minecraft:dolphin",
+    "minecraft:donkey",
+    "minecraft:fox",
+    "minecraft:glow_squid",
+    "minecraft:squid",
+    "minecraft:goat",
+    "minecraft:hoglin",
+    "minecraft:horse",
+    "minecraft:llama",
+    "minecraft:mooshroom",
+    "minecraft:mule",
+    "minecraft:ocelot",
+    "minecraft:panda",
+    "minecraft:pig",
+    "minecraft:piglin",
+    "minecraft:piglin_brute",
+    "minecraft:polar_bear",
+    "minecraft:pufferfish",
+    "minecraft:rabbit",
+    "minecraft:sheep",
+    "minecraft:tropical_fish",
+    "minecraft:turtle",
+    {
+      "id": "ecologics:camel",
+      "required": false
+    },
+    {
+      "id": "ecologics:penguin",
+      "required": false
+    },
+    {
+      "id": "ecologics:squirrel",
+      "required": false
+    }
+  ]
+}
