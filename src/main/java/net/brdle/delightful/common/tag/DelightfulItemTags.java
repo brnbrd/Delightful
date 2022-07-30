@@ -20,9 +20,12 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> FRUITS_APPLE = bind("forge", "fruits/apple");
 	public static final TagKey<Item> FRUITS_KIWI = bind("forge", "fruits/kiwi");
 	public static final TagKey<Item> FRUITS_MELON = bind("forge", "fruits/melon");
+	public static final TagKey<Item> FRUITS_CHORUS = bind("forge", "fruits/chorus");
 	public static final TagKey<Item> FRUITS_SWEET_BERRIES = bind("forge", "fruits/sweet_berries");
 	public static final TagKey<Item> FRUITS_GLOW_BERRIES = bind("forge", "fruits/glow_berries");
-	public static final TagKey<Item> FRUITS_SALMONBERRY = bind("forge", "fruits/salmonberry");
+	public static final TagKey<Item> FRUITS_SALMONBERRIES = bind("forge", "fruits/salmonberries");
+	public static final TagKey<Item> FRUITS_STRAWBERRIES = bind("forge", "fruits/strawberries");
+	public static final TagKey<Item> FRUITS_BANANA = bind("forge", "fruits/banana");
 	public static final TagKey<Item> FRUITS_SWEET = bind("forge", "fruits/sweet");
 	public static final TagKey<Item> FRUITS_PRICKLY_PEAR = bind("forge", "fruits/prickly_pear");
 	public static final TagKey<Item> COOKED_PRICKLY_PEAR = bind("ecologics", "cooked_prickly_pear");

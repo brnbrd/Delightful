@@ -1,0 +1,39 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "cactus_flesh",
+              "type": "delightful:enabled"
+            },
+            {
+              "item": "quark:cactus_block",
+              "type": "forge:item_exists"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "quark:cactus_block"
+          }
+        ],
+        "tool": {
+          "tag": "forge:tools/knives"
+        },
+        "result": [
+          {
+            "item": "delightful:cactus_flesh",
+            "count": 18
+          }
+        ]
+      }
+    }
+  ]
+}

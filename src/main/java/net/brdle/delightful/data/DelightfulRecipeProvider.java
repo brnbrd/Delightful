@@ -441,6 +441,14 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
           .build(f))
         .build(finished, Delightful.MODID, "cactus_flesh");
         ConditionalRecipe.builder()
+          .addCondition(and(enabled("cactus_flesh"), itemExists("quark", "cactus_block")))
+          .addRecipe(f -> CuttingBoardRecipeBuilder.cuttingRecipe(
+              Ingredient.of(modItem("quark", "cactus_block")),
+              Ingredient.of(ForgeTags.TOOLS_KNIVES),
+              DelightfulItems.CACTUS_FLESH.get(), 18)
+            .build(f))
+          .build(finished, Delightful.MODID, "cactus_flesh_from_cactus_block");
+        ConditionalRecipe.builder()
           .addCondition(and(enabled("cactus_flesh"), itemExists("biomemakeover", "barrel_cactus")))
           .addRecipe(f -> CuttingBoardRecipeBuilder.cuttingRecipe(
               Ingredient.of(modItem("biomemakeover", "barrel_cactus")),
@@ -479,7 +487,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             .requires(DelightfulItems.CHOPPED_CLOVER.get())
             .requires(DelightfulItems.CACTUS_STEAK.get())
             .requires(Items.CARROT)
-            .requires(DelightfulItemTags.FRUITS_SALMONBERRY)
+            .requires(DelightfulItemTags.FRUITS_SALMONBERRIES)
             .unlockedBy("has_chopped_clover", has(DelightfulItems.CHOPPED_CLOVER.get()))
             .save(f))
           .generateAdvancement()
@@ -492,7 +500,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             .requires(ForgeTags.SALAD_INGREDIENTS_CABBAGE)
             .requires(DelightfulItems.CACTUS_STEAK.get())
             .requires(Items.CARROT)
-            .requires(DelightfulItemTags.FRUITS_SALMONBERRY)
+            .requires(DelightfulItemTags.FRUITS_SALMONBERRIES)
             .unlockedBy("has_cactus_steak", has(DelightfulItems.CACTUS_STEAK.get()))
             .save(f))
           .generateAdvancement()
@@ -502,6 +510,30 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
               Ingredient.of(ForgeTags.TOOLS_KNIVES),
               Items.MELON_SLICE, 6)
           .build(finished);
+        ConditionalRecipe.builder()
+          .addCondition(enabled("salmonberry_sack"))
+          .addRecipe(f -> ShapelessRecipeBuilder.shapeless(DelightfulItems.SALMONBERRY_SACK.get(), 1)
+            .requires(DelightfulItemTags.FRUITS_SALMONBERRIES)
+            .requires(DelightfulItemTags.FRUITS_SALMONBERRIES)
+            .requires(DelightfulItemTags.FRUITS_SALMONBERRIES)
+            .requires(DelightfulItemTags.FRUITS_SALMONBERRIES)
+            .requires(DelightfulItemTags.FRUITS_SALMONBERRIES)
+            .requires(DelightfulItemTags.FRUITS_SALMONBERRIES)
+            .requires(DelightfulItemTags.FRUITS_SALMONBERRIES)
+            .requires(DelightfulItemTags.FRUITS_SALMONBERRIES)
+            .requires(DelightfulItemTags.FRUITS_SALMONBERRIES)
+            .unlockedBy("has_salmonberries", has(DelightfulItems.SALMONBERRIES.get()))
+            .save(f))
+          .generateAdvancement()
+          .build(finished, Delightful.MODID, "storage/salmonberries");
+        ConditionalRecipe.builder()
+          .addCondition(enabled("salmonberry_sack"))
+          .addRecipe(f -> ShapelessRecipeBuilder.shapeless(DelightfulItems.SALMONBERRIES.get(), 9)
+            .requires(DelightfulItems.SALMONBERRY_SACK.get())
+            .unlockedBy("has_salmonberry_sack", has(DelightfulItems.SALMONBERRY_SACK.get()))
+            .save(f))
+          .generateAdvancement()
+          .build(finished, Delightful.MODID, "storage/unpack_salmonberries");
         }
 
     private InventoryChangeTrigger.TriggerInstance has(ItemLike... items) {

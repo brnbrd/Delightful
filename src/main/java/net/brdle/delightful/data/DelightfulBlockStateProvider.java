@@ -21,6 +21,11 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
                 .filter(entry -> entry.get() instanceof CabinetBlock)
                 .forEach(cab -> cabinet(cab.get()));
         this.wildCropBlock(DelightfulBlocks.WILD_SALMONBERRIES.get());
+        this.simpleBlock(DelightfulBlocks.SALMONBERRY_SACK.get(),
+          models().cubeBottomTop("salmonberry_sack",
+            new ResourceLocation(Delightful.MODID, "block/salmonberry_sack"),
+            new ResourceLocation(Delightful.MODID, "block/salmonberry_sack_bottom"),
+            new ResourceLocation(Delightful.MODID, "block/salmonberry_sack_top")));
     }
 
     public void wildCropBlock(Block block) {

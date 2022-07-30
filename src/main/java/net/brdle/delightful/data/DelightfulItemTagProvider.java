@@ -32,28 +32,38 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		// Forge
 		this.tag(DelightfulItemTags.FRUITS_APPLE).add(Items.APPLE);
 		this.tag(DelightfulItemTags.FRUITS_MELON).add(Items.MELON_SLICE);
+		this.tag(DelightfulItemTags.FRUITS_CHORUS).add(Items.CHORUS_FRUIT);
 		this.tag(DelightfulItemTags.FRUITS_SWEET_BERRIES).add(Items.SWEET_BERRIES);
 		this.tag(DelightfulItemTags.FRUITS_GLOW_BERRIES).add(Items.GLOW_BERRIES);
-		this.tag(DelightfulItemTags.FRUITS_SALMONBERRY).add(DelightfulItems.SALMONBERRY.get());
+		this.tag(DelightfulItemTags.FRUITS_SALMONBERRIES).add(DelightfulItems.SALMONBERRIES.get());
 		this.tag(DelightfulItemTags.FRUITS_KIWI).addOptional(new ResourceLocation("hedgehog", "kiwi"));
 		this.tag(DelightfulItemTags.FRUITS_PRICKLY_PEAR).addOptional(new ResourceLocation("ecologics", "prickly_pear"));
+		this.tag(DelightfulItemTags.FRUITS_STRAWBERRIES)
+			.addOptional(new ResourceLocation("neapolitan", "strawberries"))
+			.addOptional(new ResourceLocation("neapolitan", "white_strawberries"));
+		this.tag(DelightfulItemTags.FRUITS_BANANA)
+			.addOptional(new ResourceLocation("neapolitan", "banana"));
 		this.tag(DelightfulItemTags.FRUITS_BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_SWEET_BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_GLOW_BERRIES)
-			.addTag(DelightfulItemTags.FRUITS_SALMONBERRY);
+			.addTag(DelightfulItemTags.FRUITS_SALMONBERRIES)
+			.addTag(DelightfulItemTags.FRUITS_STRAWBERRIES);
 		this.tag(DelightfulItemTags.FRUITS)
 			.addTag(DelightfulItemTags.FRUITS_APPLE)
 			.addTag(DelightfulItemTags.FRUITS_KIWI)
 			.addTag(DelightfulItemTags.FRUITS_MELON)
 			.addTag(DelightfulItemTags.FRUITS_PRICKLY_PEAR)
-			.addTag(DelightfulItemTags.FRUITS_BERRIES);
+			.addTag(DelightfulItemTags.FRUITS_BERRIES)
+			.addTag(DelightfulItemTags.FRUITS_CHORUS);
 		this.tag(DelightfulItemTags.FRUITS_SWEET)
 			.addTag(DelightfulItemTags.FRUITS_APPLE)
 			.addTag(DelightfulItemTags.FRUITS_KIWI)
 			.addTag(DelightfulItemTags.FRUITS_MELON)
 			.addTag(DelightfulItemTags.FRUITS_PRICKLY_PEAR)
 			.addTag(DelightfulItemTags.FRUITS_SWEET_BERRIES)
-			.addTag(DelightfulItemTags.FRUITS_SALMONBERRY);
+			.addTag(DelightfulItemTags.FRUITS_SALMONBERRIES)
+			.addTag(DelightfulItemTags.FRUITS_STRAWBERRIES)
+			.addTags(DelightfulItemTags.FRUITS_BANANA);
 
 		this.tag(DelightfulItemTags.NUTS_WALNUT).addOptional(new ResourceLocation("ecologics", "walnut"));
 		this.tag(DelightfulItemTags.NUTS).addTag(DelightfulItemTags.NUTS_WALNUT);

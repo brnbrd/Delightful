@@ -34,6 +34,8 @@ public class DelightfulBlocks {
       () -> new WildCropBlock(MobEffects.REGENERATION, 6, Block.Properties.copy(Blocks.TALL_GRASS), false));
     public static final RegistryObject<Block> MINI_MELON = BLOCKS.register("mini_melon",
       () -> new MiniMelonBlock(BlockBehaviour.Properties.copy(Blocks.MELON).noOcclusion()));
+    public static final RegistryObject<Block> SALMONBERRY_SACK = BLOCKS.register("salmonberry_sack",
+      () -> new Block(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK)));
 
     public static RegistryObject<Block> registerBlock(String name, Supplier<Block> block) {
         return BLOCKS.register(name, block);

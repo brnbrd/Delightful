@@ -3,6 +3,7 @@ package net.brdle.delightful.common;
 import net.brdle.delightful.Delightful;
 import net.brdle.delightful.common.config.DelightfulConfig;
 import net.brdle.delightful.common.config.EnabledCondition;
+import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.world.DelightfulWildCropGeneration;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
@@ -59,6 +60,9 @@ public class Events {
                 } else {
                     mapping.warn();
                 }
+            } else if (mapping.key.getNamespace().equals(Delightful.MODID) &&
+              mapping.key.getPath().equals("salmonberry")) {
+                mapping.remap(DelightfulItems.SALMONBERRIES.get());
             }
         }
     }

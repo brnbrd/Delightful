@@ -1,0 +1,46 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "value": "salmonberry_sack",
+          "type": "delightful:enabled"
+        }
+      ],
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:salmonberries"
+          ]
+        },
+        "criteria": {
+          "has_salmonberry_sack": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+              "items": [
+                {
+                  "items": [
+                    "delightful:salmonberry_sack"
+                  ]
+                }
+              ]
+            }
+          },
+          "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+              "recipe": "delightful:salmonberries"
+            }
+          }
+        },
+        "requirements": [
+          [
+            "has_salmonberry_sack",
+            "has_the_recipe"
+          ]
+        ]
+      }
+    }
+  ]
+}

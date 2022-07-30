@@ -126,6 +126,9 @@ dependencies {
     implementation fg.deobf("curse.maven:goodall-613215:${goodall_version}")
     implementation fg.deobf("curse.maven:architectury-api-419699:${arch_version}")
     implementation fg.deobf("curse.maven:biome-makeover-forge-567709:${bm_version}")
+    implementation fg.deobf("curse.maven:cofh-core-69162:${cofh_version}")
+    implementation fg.deobf("curse.maven:autoreglib-250363:${arl_version}")
+    implementation fg.deobf("curse.maven:quark-243121:${quark_version}")
 }
 
 // Example for how to get properties into the manifest for reading at runtime.

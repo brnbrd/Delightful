@@ -32,10 +32,11 @@ public class DelightfulBlockLoot extends BlockLoot {
         this.dropSelf(DelightfulBlocks.PIZZA_PEEL.get());
         this.dropSelf(DelightfulBlocks.PIZZA_STONE.get());
         this.dropSelf(DelightfulBlocks.MINI_MELON.get());
+        this.dropSelf(DelightfulBlocks.SALMONBERRY_SACK.get());
         this.add(DelightfulBlocks.WILD_SALMONBERRIES.get(), (p_124096_) ->
             applyExplosionDecay(p_124096_, LootTable.lootTable()
                 .withPool(LootPool.lootPool()
-                    .add(LootItem.lootTableItem(DelightfulItems.SALMONBERRY.get()))
+                    .add(LootItem.lootTableItem(DelightfulItems.SALMONBERRIES.get()))
                     .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F)))
                     .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE)))));
     }

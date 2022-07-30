@@ -39,7 +39,7 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 		));
 		add("animal_fat", DelightfulLootModifiers.ADD_ITEM.get(), new AddItemLootModifier(
 			new LootItemCondition[]{
-				LootItemRandomChanceCondition.randomChance(1.0F).build(),
+				LootItemRandomChanceCondition.randomChance(0.3F).build(),
 				LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.KILLER_PLAYER,
 					EntityPredicate.Builder.entity().equipment(
 					EntityEquipmentPredicate.Builder.equipment().mainhand(ItemPredicate.Builder.item().of(ForgeTags.TOOLS_KNIVES).build()).build()).build()).build(),
