@@ -15,9 +15,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import vectorwing.farmersdelight.common.block.CabinetBlock;
 import vectorwing.farmersdelight.common.block.WildCropBlock;
-
 import java.util.function.Supplier;
 
 public class DelightfulBlocks {
@@ -35,7 +33,7 @@ public class DelightfulBlocks {
     public static final RegistryObject<Block> WILD_SALMONBERRIES = BLOCKS.register("wild_salmonberries",
       () -> new WildCropBlock(MobEffects.REGENERATION, 6, Block.Properties.copy(Blocks.TALL_GRASS), false));
     public static final RegistryObject<Block> MINI_MELON = BLOCKS.register("mini_melon",
-      () -> new MiniBlock(BlockBehaviour.Properties.copy(Blocks.MELON).noOcclusion()));
+      () -> new MiniMelonBlock(BlockBehaviour.Properties.copy(Blocks.MELON).noOcclusion()));
 
     public static RegistryObject<Block> registerBlock(String name, Supplier<Block> block) {
         return BLOCKS.register(name, block);
