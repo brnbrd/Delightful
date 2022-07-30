@@ -1,0 +1,55 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "field_salad",
+              "type": "delightful:enabled"
+            },
+            {
+              "modid": "biomesoplenty",
+              "type": "forge:mod_loaded"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:field_salad"
+          ]
+        },
+        "criteria": {
+          "has_chopped_clover": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+              "items": [
+                {
+                  "items": [
+                    "delightful:chopped_clover"
+                  ]
+                }
+              ]
+            }
+          },
+          "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+              "recipe": "delightful:field_salad"
+            }
+          }
+        },
+        "requirements": [
+          [
+            "has_chopped_clover",
+            "has_the_recipe"
+          ]
+        ]
+      }
+    }
+  ]
+}

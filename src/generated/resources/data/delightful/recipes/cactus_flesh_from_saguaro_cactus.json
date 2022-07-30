@@ -1,0 +1,39 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "cactus_flesh",
+              "type": "delightful:enabled"
+            },
+            {
+              "item": "biomemakeover:saguaro_cactus",
+              "type": "forge:item_exists"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "biomemakeover:saguaro_cactus"
+          }
+        ],
+        "tool": {
+          "tag": "forge:tools/knives"
+        },
+        "result": [
+          {
+            "item": "delightful:cactus_flesh",
+            "count": 2
+          }
+        ]
+      }
+    }
+  ]
+}

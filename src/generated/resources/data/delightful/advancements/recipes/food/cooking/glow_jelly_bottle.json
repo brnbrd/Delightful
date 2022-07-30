@@ -1,0 +1,12 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "value": "glow_jelly_bottle",
+          "type": "delightful:enabled"
+        }
+      ]
+    }
+  ]
+}

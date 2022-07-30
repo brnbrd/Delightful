@@ -4,18 +4,18 @@
     {
       "conditions": [
         {
-          "value": "matcha",
+          "value": "cactus_steak",
           "type": "delightful:enabled"
         }
       ],
       "recipe": {
-        "type": "minecraft:blasting",
+        "type": "minecraft:smelting",
         "ingredient": {
-          "tag": "forge:tea_leaves/green"
+          "item": "delightful:cactus_flesh"
         },
-        "result": "delightful:matcha",
+        "result": "delightful:cactus_steak",
         "experience": 0.1,
-        "cookingtime": 100
+        "cookingtime": 200
       }
     }
   ]

@@ -18,6 +18,8 @@ public class FoodValues {
             .effect(() -> new MobEffectInstance(MobEffects.HUNGER, 10, 0), 0.5F).build();
     public static final FoodProperties CHUNK_NUGGET = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.4F).build();
     public static final FoodProperties JELLY_BOTTLE = (new FoodProperties.Builder()).nutrition(5).saturationMod(0.3F).build();
+    public static final FoodProperties GLOW_JELLY_BOTTLE = (new FoodProperties.Builder()).nutrition(5).saturationMod(0.3F)
+            .effect(() -> new MobEffectInstance(MobEffects.GLOWING, 900, 0), 1.0F).build();
     public static final FoodProperties NUT_BUTTER_BOTTLE = (new FoodProperties.Builder()).nutrition(5).saturationMod(0.3F).build();
     public static final FoodProperties NUT_BUTTER_AND_JELLY_SANDWICH = (new FoodProperties.Builder()).nutrition(10).saturationMod(0.5F)
             .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3600, 0), 1.0F).build();
@@ -25,4 +27,9 @@ public class FoodValues {
     public static final FoodProperties GREEN_TEA_LEAF = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.2F).build();
     public static final FoodProperties SALMONBERRY = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.3F).build();
     public static final FoodProperties ANIMAL_FAT = (new FoodProperties.Builder()).nutrition(1).saturationMod(2.0F).alwaysEat().fast().build();
+    public static final FoodProperties CHOPPED_CLOVER = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.3F).fast().build();
+    public static final FoodProperties CACTUS_FLESH = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.3F).build();
+    public static final FoodProperties CACTUS_STEAK = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.4F).build();
+    public static final FoodProperties FIELD_SALAD = (new FoodProperties.Builder()).nutrition(14).saturationMod(0.4F).build();
+    public static final FoodProperties ROCK_CANDY = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.2F).fast().build();
 }

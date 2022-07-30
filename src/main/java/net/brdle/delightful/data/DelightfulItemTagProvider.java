@@ -28,34 +28,25 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.copy(DelightfulBlockTags.CABINETS_WOODEN, DelightfulItemTags.CABINETS_WOODEN);
 		this.copy(DelightfulBlockTags.CABINETS_STONE, DelightfulItemTags.CABINETS_STONE);
 		this.copy(DelightfulBlockTags.CABINETS, DelightfulItemTags.CABINETS);
-		/*this.tag(DelightfulItemTags.CABINETS_WOODEN)
-			.add(ModItems.ACACIA_CABINET.get())
-			.add(ModItems.CRIMSON_CABINET.get())
-			.add(ModItems.BIRCH_CABINET.get())
-			.add(ModItems.DARK_OAK_CABINET.get())
-			.add(ModItems.JUNGLE_CABINET.get())
-			.add(ModItems.OAK_CABINET.get())
-			.add(ModItems.SPRUCE_CABINET.get())
-			.add(ModItems.WARPED_CABINET.get());
-		this.tag(DelightfulItemTags.CABINETS_STONE)
-			.add(DelightfulItems.BASALT_CABINET.get())
-			.add(DelightfulItems.QUARTZ_CABINET.get());
-		this.tag(DelightfulItemTags.CABINETS).addTag(DelightfulItemTags.CABINETS_WOODEN).addTag(DelightfulItemTags.CABINETS_STONE);*/
 
 		// Forge
 		this.tag(DelightfulItemTags.FRUITS_APPLE).add(Items.APPLE);
 		this.tag(DelightfulItemTags.FRUITS_MELON).add(Items.MELON_SLICE);
 		this.tag(DelightfulItemTags.FRUITS_SWEET_BERRIES).add(Items.SWEET_BERRIES);
+		this.tag(DelightfulItemTags.FRUITS_GLOW_BERRIES).add(Items.GLOW_BERRIES);
 		this.tag(DelightfulItemTags.FRUITS_SALMONBERRY).add(DelightfulItems.SALMONBERRY.get());
 		this.tag(DelightfulItemTags.FRUITS_KIWI).addOptional(new ResourceLocation("hedgehog", "kiwi"));
 		this.tag(DelightfulItemTags.FRUITS_PRICKLY_PEAR).addOptional(new ResourceLocation("ecologics", "prickly_pear"));
+		this.tag(DelightfulItemTags.FRUITS_BERRIES)
+			.addTag(DelightfulItemTags.FRUITS_SWEET_BERRIES)
+			.addTag(DelightfulItemTags.FRUITS_GLOW_BERRIES)
+			.addTag(DelightfulItemTags.FRUITS_SALMONBERRY);
 		this.tag(DelightfulItemTags.FRUITS)
 			.addTag(DelightfulItemTags.FRUITS_APPLE)
 			.addTag(DelightfulItemTags.FRUITS_KIWI)
 			.addTag(DelightfulItemTags.FRUITS_MELON)
 			.addTag(DelightfulItemTags.FRUITS_PRICKLY_PEAR)
-			.addTag(DelightfulItemTags.FRUITS_SWEET_BERRIES)
-			.addTag(DelightfulItemTags.FRUITS_SALMONBERRY);
+			.addTag(DelightfulItemTags.FRUITS_BERRIES);
 		this.tag(DelightfulItemTags.FRUITS_SWEET)
 			.addTag(DelightfulItemTags.FRUITS_APPLE)
 			.addTag(DelightfulItemTags.FRUITS_KIWI)
@@ -63,17 +54,15 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_PRICKLY_PEAR)
 			.addTag(DelightfulItemTags.FRUITS_SWEET_BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_SALMONBERRY);
-		this.tag(DelightfulItemTags.FRUITS_BERRIES)
-			.addTag(DelightfulItemTags.FRUITS_SWEET_BERRIES)
-			.addTag(DelightfulItemTags.FRUITS_SALMONBERRY);
+
 		this.tag(DelightfulItemTags.NUTS_WALNUT).addOptional(new ResourceLocation("ecologics", "walnut"));
 		this.tag(DelightfulItemTags.NUTS).addTag(DelightfulItemTags.NUTS_WALNUT);
 		this.tag(DelightfulItemTags.INGOTS_STEEL).addOptional(new ResourceLocation("simplysteel", "steel_ingot"));
 		this.tag(DelightfulItemTags.WATER).add(Items.WATER_BUCKET);
+		this.tag(DelightfulItemTags.JELLY)
+			.add(DelightfulItems.JELLY_BOTTLE.get())
+			.add(DelightfulItems.GLOW_JELLY_BOTTLE.get());
 		this.tag(DelightfulItemTags.SUGAR).add(Items.SUGAR);
-		this.tag(DelightfulItemTags.SUGARS)
-			.addTag(DelightfulItemTags.SUGAR)
-			.add(Items.HONEY_BOTTLE);
 		this.tag(DelightfulItemTags.COOKED_CRAB)
 			.addOptional(new ResourceLocation("ecologics", "crab_meat"))
 			.addOptional(new ResourceLocation("quark", "cooked_crab_leg"));
@@ -85,6 +74,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.TEA_LEAVES_GREEN)
 			.add(DelightfulItems.GREEN_TEA_LEAF.get())
 			.addOptional(new ResourceLocation("farmersrespite", "green_tea_leaves"));
+		this.tag(ForgeTags.RAW_FISHES).addOptional(new ResourceLocation("biomemakeover", "glowfish"));
+		this.tag(ForgeTags.COOKED_FISHES).addOptional(new ResourceLocation("biomemakeover", "cooked_glowfish"));
 
 		// Minecraft
 		this.tag(ItemTags.PIGLIN_LOVED).add(DelightfulItems.REFINED_GLOWSTONE_KNIFE.get());

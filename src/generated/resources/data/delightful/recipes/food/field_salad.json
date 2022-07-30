@@ -1,0 +1,45 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "field_salad",
+              "type": "delightful:enabled"
+            },
+            {
+              "modid": "biomesoplenty",
+              "type": "forge:mod_loaded"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "delightful:chopped_clover"
+          },
+          {
+            "item": "delightful:chopped_clover"
+          },
+          {
+            "item": "delightful:cactus_steak"
+          },
+          {
+            "item": "minecraft:carrot"
+          },
+          {
+            "tag": "forge:fruits/salmonberry"
+          }
+        ],
+        "result": {
+          "item": "delightful:field_salad"
+        }
+      }
+    }
+  ]
+}

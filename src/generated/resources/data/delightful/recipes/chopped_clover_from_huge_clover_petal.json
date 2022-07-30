@@ -1,0 +1,39 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "chopped_clover",
+              "type": "delightful:enabled"
+            },
+            {
+              "item": "biomesoplenty:huge_clover_petal",
+              "type": "forge:item_exists"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "biomesoplenty:huge_clover_petal"
+          }
+        ],
+        "tool": {
+          "tag": "forge:tools/knives"
+        },
+        "result": [
+          {
+            "item": "delightful:chopped_clover",
+            "count": 4
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -30,7 +30,7 @@
             "item": "delightful:nut_butter_bottle"
           },
           {
-            "item": "delightful:jelly_bottle"
+            "tag": "forge:jelly"
           }
         ],
         "result": {

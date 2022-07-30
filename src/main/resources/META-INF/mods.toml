@@ -39,6 +39,13 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
     side="BOTH"
 
 [[dependencies.delightful]]
+    modId="biomemakeover"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.delightful]]
     modId="lolenderite"
     mandatory=false
     versionRange="[0,)"

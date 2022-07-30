@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:candle_from_animal_fat"
+    ]
+  },
+  "criteria": {
+    "has_fat": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:animal_fat"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:candle_from_animal_fat"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_fat",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -3,25 +3,34 @@
     {
       "conditions": [
         {
-          "value": "matcha",
-          "type": "delightful:enabled"
+          "values": [
+            {
+              "value": "rock_candy",
+              "type": "delightful:enabled"
+            },
+            {
+              "item": "biomesoplenty:rose_quartz_shard",
+              "type": "forge:item_exists"
+            }
+          ],
+          "type": "forge:and"
         }
       ],
       "advancement": {
         "parent": "minecraft:recipes/root",
         "rewards": {
           "recipes": [
-            "delightful:blasting/green_tea_leaf"
+            "delightful:rock_candy"
           ]
         },
         "criteria": {
-          "has_green_tea_leaf": {
+          "has_sugar": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
               "items": [
                 {
                   "items": [
-                    "delightful:green_tea_leaf"
+                    "minecraft:sugar"
                   ]
                 }
               ]
@@ -30,13 +39,13 @@
           "has_the_recipe": {
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-              "recipe": "delightful:blasting/green_tea_leaf"
+              "recipe": "delightful:rock_candy"
             }
           }
         },
         "requirements": [
           [
-            "has_green_tea_leaf",
+            "has_sugar",
             "has_the_recipe"
           ]
         ]

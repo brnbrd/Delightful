@@ -1,0 +1,51 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "field_salad",
+              "type": "delightful:enabled"
+            },
+            {
+              "value": {
+                "modid": "biomesoplenty",
+                "type": "forge:mod_loaded"
+              },
+              "type": "forge:not"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "minecraft:bowl"
+          },
+          {
+            "tag": "forge:salad_ingredients/cabbage"
+          },
+          {
+            "tag": "forge:salad_ingredients/cabbage"
+          },
+          {
+            "item": "delightful:cactus_steak"
+          },
+          {
+            "item": "minecraft:carrot"
+          },
+          {
+            "tag": "forge:fruits/salmonberry"
+          }
+        ],
+        "result": {
+          "item": "delightful:field_salad"
+        }
+      }
+    }
+  ]
+}

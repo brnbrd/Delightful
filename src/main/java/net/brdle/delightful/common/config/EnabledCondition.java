@@ -4,6 +4,7 @@ import com.google.gson.JsonObject;
 import net.brdle.delightful.Delightful;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
+import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.crafting.conditions.ICondition;
 import net.minecraftforge.common.crafting.conditions.IConditionSerializer;
 

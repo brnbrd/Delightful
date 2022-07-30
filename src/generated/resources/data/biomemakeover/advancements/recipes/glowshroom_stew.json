@@ -1,0 +1,12 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "item": "biomemakeover:glowshroom_stew",
+          "type": "forge:item_exists"
+        }
+      ]
+    }
+  ]
+}

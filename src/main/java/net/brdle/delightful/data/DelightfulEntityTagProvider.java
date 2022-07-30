@@ -1,24 +1,12 @@
 package net.brdle.delightful.data;
 
 import net.brdle.delightful.Delightful;
-import net.brdle.delightful.common.item.DelightfulItems;
-import net.brdle.delightful.common.item.knife.DelightfulKnifeItem;
-import net.brdle.delightful.common.tag.DelightfulBlockTags;
 import net.brdle.delightful.common.tag.DelightfulEntityTags;
-import net.brdle.delightful.common.tag.DelightfulItemTags;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.data.tags.EntityTypeTagsProvider;
-import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.item.Items;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.RegistryObject;
-import vectorwing.farmersdelight.common.tag.ForgeTags;
-import vectorwing.farmersdelight.common.tag.ModTags;
-import vectorwing.farmersdelight.data.EntityTags;
 
 public class DelightfulEntityTagProvider extends EntityTypeTagsProvider {
 	public DelightfulEntityTagProvider(DataGenerator gen, ExistingFileHelper existingFileHelper) {
@@ -57,7 +45,12 @@ public class DelightfulEntityTagProvider extends EntityTypeTagsProvider {
 			.add(EntityType.TURTLE)
 			.addOptional(mod("ecologics", "camel"))
 			.addOptional(mod("ecologics", "penguin"))
-			.addOptional(mod("ecologics", "squirrel"));
+			.addOptional(mod("ecologics", "squirrel"))
+			.addOptional(mod("goodall", "dumbo_octopus"))
+			.addOptional(mod("goodall", "manatee"))
+			.addOptional(mod("goodall", "red_deer"))
+			.addOptional(mod("goodall", "seal"))
+			.addOptional(mod("goodall", "white_tailed_deer"));
 	}
 
 	/**

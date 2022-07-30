@@ -38,6 +38,7 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 
 		// Minecraft
 		this.tag(BlockTags.MINEABLE_WITH_PICKAXE).addTag(DelightfulBlockTags.CABINETS_STONE);
+		this.tag(BlockTags.MINEABLE_WITH_AXE).add(DelightfulBlocks.MINI_MELON.get());
 	}
 
 	/**
