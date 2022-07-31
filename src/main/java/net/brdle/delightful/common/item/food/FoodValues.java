@@ -30,6 +30,6 @@ public class FoodValues {
     public static final FoodProperties CHOPPED_CLOVER = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.3F).fast().build();
     public static final FoodProperties CACTUS_FLESH = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.3F).build();
     public static final FoodProperties CACTUS_STEAK = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.4F).build();
-    public static final FoodProperties FIELD_SALAD = (new FoodProperties.Builder()).nutrition(14).saturationMod(0.4F).build();
+    public static final FoodProperties FIELD_SALAD = (new FoodProperties.Builder()).nutrition(13).saturationMod(0.4F).build();
     public static final FoodProperties ROCK_CANDY = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.2F).fast().build();
 }
