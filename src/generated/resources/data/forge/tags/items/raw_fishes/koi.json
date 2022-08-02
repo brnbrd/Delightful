@@ -2,11 +2,11 @@
   "replace": false,
   "values": [
     {
-      "id": "brewinandchewin:flaxen_cheese_wedge",
+      "id": "environmental:koi",
       "required": false
     },
     {
-      "id": "farmlife:tribull_cheese_wedge",
+      "id": "crittersandcompanions:koi_fish",
       "required": false
     }
   ]

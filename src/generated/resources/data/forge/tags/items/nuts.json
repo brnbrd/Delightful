@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "#forge:nuts/walnut"
+    "#forge:nuts/walnut",
+    "#forge:nuts/peanut"
   ]
 }

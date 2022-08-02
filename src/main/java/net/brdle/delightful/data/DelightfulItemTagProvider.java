@@ -13,6 +13,7 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
+import org.jetbrains.annotations.NotNull;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
 import vectorwing.farmersdelight.common.tag.ModTags;
 
@@ -63,10 +64,12 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_SWEET_BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_SALMONBERRIES)
 			.addTag(DelightfulItemTags.FRUITS_STRAWBERRIES)
-			.addTags(DelightfulItemTags.FRUITS_BANANA);
-
+			.addTag(DelightfulItemTags.FRUITS_BANANA);
 		this.tag(DelightfulItemTags.NUTS_WALNUT).addOptional(new ResourceLocation("ecologics", "walnut"));
-		this.tag(DelightfulItemTags.NUTS).addTag(DelightfulItemTags.NUTS_WALNUT);
+		this.tag(DelightfulItemTags.NUTS_PEANUT).addOptional(new ResourceLocation("sprout", "peanut"));
+		this.tag(DelightfulItemTags.NUTS)
+			.addTag(DelightfulItemTags.NUTS_WALNUT)
+			.addTag(DelightfulItemTags.NUTS_PEANUT);
 		this.tag(DelightfulItemTags.INGOTS_STEEL).addOptional(new ResourceLocation("simplysteel", "steel_ingot"));
 		this.tag(DelightfulItemTags.WATER).add(Items.WATER_BUCKET);
 		this.tag(DelightfulItemTags.JELLY)
@@ -76,16 +79,31 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.COOKED_CRAB)
 			.addOptional(new ResourceLocation("ecologics", "crab_meat"))
 			.addOptional(new ResourceLocation("quark", "cooked_crab_leg"));
-		this.tag(DelightfulItemTags.CHEESE).addOptional(new ResourceLocation("brewinandchewin", "flaxen_cheese_wedge"));
-		this.tag(ForgeTags.MILK).add(Items.MILK_BUCKET);
+		this.tag(DelightfulItemTags.CHEESE)
+			.addOptional(new ResourceLocation("brewinandchewin", "flaxen_cheese_wedge"))
+			.addOptional(new ResourceLocation("farmlife", "tribull_cheese_wedge"));
+		this.tag(ForgeTags.MILK)
+			.addOptional(new ResourceLocation("dracovitadelight", "tribull_milk"));
 		this.tag(DelightfulItemTags.CHEESE_OR_MILK)
 			.addTag(DelightfulItemTags.CHEESE)
 			.addTag(ForgeTags.MILK);
 		this.tag(DelightfulItemTags.TEA_LEAVES_GREEN)
 			.add(DelightfulItems.GREEN_TEA_LEAF.get())
 			.addOptional(new ResourceLocation("farmersrespite", "green_tea_leaves"));
-		this.tag(ForgeTags.RAW_FISHES).addOptional(new ResourceLocation("biomemakeover", "glowfish"));
-		this.tag(ForgeTags.COOKED_FISHES).addOptional(new ResourceLocation("biomemakeover", "cooked_glowfish"));
+		this.tag(DelightfulItemTags.RAW_FISHES_KOI)
+			.addOptional(new ResourceLocation("environmental", "koi"))
+			.addOptional(new ResourceLocation("crittersandcompanions", "koi_fish"));
+		this.tag(DelightfulItemTags.RAW_FISHES_GLOWFISH)
+			.addOptional(new ResourceLocation("biomemakeover", "glowfish"));
+		this.tag(ForgeTags.RAW_FISHES)
+			.addTag(DelightfulItemTags.RAW_FISHES_KOI)
+			.addTag(DelightfulItemTags.RAW_FISHES_GLOWFISH);
+		this.tag(ForgeTags.COOKED_FISHES)
+			.addOptional(new ResourceLocation("biomemakeover", "cooked_glowfish"));
+		this.tag(DelightfulItemTags.CATTAIL)
+			.addOptional(new ResourceLocation("sprout", "cattail"))
+			.addOptional(new ResourceLocation("biomesoplenty", "cattail"))
+			.addOptional(new ResourceLocation("biomemakeover", "cattail"));
 
 		// Minecraft
 		this.tag(ItemTags.PIGLIN_LOVED).add(DelightfulItems.REFINED_GLOWSTONE_KNIFE.get());
@@ -104,7 +122,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 	 * Gets a name for this provider, to use in logging.
 	 */
 	@Override
-	public String getName() {
+	public @NotNull String getName() {
 		return Delightful.MODID;
 	}
 }

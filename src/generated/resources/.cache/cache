@@ -297,7 +297,8 @@ ef44e8797b4db645d861583142578bd3fbed21ac data/farmersdelight/recipes/cutting/min
 270c1683a954b76f5ccebc226a4dff03f44b77e5 data/farmersdelight/tags/items/cabinets/wooden.json
 3a32003f353368cb839e9c3960fd135e91f11f81 data/farmersdelight/tags/items/tools/knives.json
 18b7f6401b509bcff38f505956df5513f792d1d3 data/forge/loot_modifiers/global_loot_modifiers.json
-50c4377fd6883b964e720bb90412ee1c472592a1 data/forge/tags/items/cheese.json
+36d1a96eeee4bb800dfe450389a59c2473cbf0a6 data/forge/tags/items/cattail.json
+6af4aeff9308be7909abf7fd1ceaf2c12e05da5b data/forge/tags/items/cheese.json
 4110cbf5e863422ea19111d99bd9a8ef85b12eb1 data/forge/tags/items/cheese_or_milk.json
 7e1620a992ec5622f93222bbac832440a463b373 data/forge/tags/items/cooked_crab.json
 33259b315600b877a1ff7b41b4dc0b75aa1bbe58 data/forge/tags/items/cooked_fishes.json
@@ -316,10 +317,13 @@ aaabff20968e0b39e0a18b5dc64d039a1bf1dbcb data/forge/tags/items/fruits/apple.json
 471f912ddcaad82c4e635a23ba1316c7c48df73e data/forge/tags/items/fruits/sweet_berries.json
 d60885d9481245a228f7e3ecdf77340dc9bbea14 data/forge/tags/items/ingots/steel.json
 87e7f1c76041fde23479c5957996e68b62e8df02 data/forge/tags/items/jelly.json
-cf6b2c1f26e7f70858f5e3d8ebd2e13534bb2142 data/forge/tags/items/milk.json
-5bcd7fcabb6d420fc28ed7600bb9a2d468f3d788 data/forge/tags/items/nuts.json
+af4579016a924b064edd52bbe7a44288417e0c1a data/forge/tags/items/milk.json
+90e5a56e089273f4717c6459396556135083055e data/forge/tags/items/nuts.json
+610874fb6daa8a2bd05e84feb4041e54ab62c299 data/forge/tags/items/nuts/peanut.json
 968e93f2124ee113f062cc22b909a63e59388fa6 data/forge/tags/items/nuts/walnut.json
-796923460a2e60c023051a9c73dc679a2bc62c4f data/forge/tags/items/raw_fishes.json
+d39ccaf1dc881a408f7d2ebd3af8425572761c97 data/forge/tags/items/raw_fishes.json
+796923460a2e60c023051a9c73dc679a2bc62c4f data/forge/tags/items/raw_fishes/glowfish.json
+fc9ea7e2db8c7724d360014d4db81f84a4d0a6d0 data/forge/tags/items/raw_fishes/koi.json
 d9e7fdae290b5783994452dbae8ccd569f521240 data/forge/tags/items/sugar.json
 be2a15e5323ce43949da1a8e74b229cec5597d58 data/forge/tags/items/tea_leaves/green.json
 d69c7f77c9f395881dc13e7fde263d59394c516b data/forge/tags/items/tools/knives.json

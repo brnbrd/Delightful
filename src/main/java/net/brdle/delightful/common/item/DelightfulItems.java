@@ -13,6 +13,7 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -23,6 +24,8 @@ import net.minecraftforge.registries.RegistryObject;
 import vectorwing.farmersdelight.FarmersDelight;
 import vectorwing.farmersdelight.common.item.ConsumableItem;
 import vectorwing.farmersdelight.common.registry.ModItems;
+
+import java.util.Locale;
 import java.util.function.Supplier;
 
 public class DelightfulItems {
@@ -132,27 +135,27 @@ public class DelightfulItems {
 
     // Registers a knife to Farmer's Delight tab, requiring modid
     public static RegistryObject<Item> registerCompatKnife(String name, String modid, ResourceLocation tag) {
-        return registerItem(name + "_knife", () -> new CompatKnifeItem(modid, tag, DelightfulTiers.valueOf(name.toUpperCase()), 0.5F, -2.0F, (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
+        return registerItem(name + "_knife", () -> new CompatKnifeItem(modid, tag, DelightfulTiers.valueOf(name.toUpperCase(Locale.ROOT)), 0.5F, -2.0F, (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
     }
 
     // Registers a knife to Farmer's Delight tab, requiring non-empty ingot tag
     public static RegistryObject<Item> registerIngotKnife(String name) {
-        return registerItem(name + "_knife", () -> new TaggedKnifeItem(ingot(name), DelightfulTiers.valueOf(name.toUpperCase()), 0.5F, -2.0F, (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
+        return registerItem(name + "_knife", () -> new TaggedKnifeItem(ingot(name), DelightfulTiers.valueOf(name.toUpperCase(Locale.ROOT)), 0.5F, -2.0F, (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
     }
 
     // Registers a knife to Farmer's Delight tab, requiring non-empty gem tag
     public static RegistryObject<Item> registerGemKnife(String name) {
-        return registerItem(name + "_knife", () -> new TaggedKnifeItem(gem(name), DelightfulTiers.valueOf(name.toUpperCase()), 0.5F, -2.0F, (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
+        return registerItem(name + "_knife", () -> new TaggedKnifeItem(gem(name), DelightfulTiers.valueOf(name.toUpperCase(Locale.ROOT)), 0.5F, -2.0F, (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
     }
 
     // Registers a knife to Farmer's Delight tab, requiring non-empty ingot tag
     public static RegistryObject<Item> registerSmithedKnife(String name, Supplier<Ingredient> base, ResourceLocation addition) {
-        return registerItem(name + "_knife", () -> new TaggedKnifeItem(base, addition, DelightfulTiers.valueOf(name.toUpperCase()), 0.5F, -2.0F, (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
+        return registerItem(name + "_knife", () -> new TaggedKnifeItem(base, addition, DelightfulTiers.valueOf(name.toUpperCase(Locale.ROOT)), 0.5F, -2.0F, (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
     }
 
     // Registers a knife to Farmer's Delight tab
     public static RegistryObject<Item> registerKnife(String name, Supplier<Ingredient> ingredient) {
-        return registerItem(name + "_knife", () -> new DelightfulKnifeItem(ingredient, DelightfulTiers.valueOf(name.toUpperCase()), 0.5F, -2.0F, (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
+        return registerItem(name + "_knife", () -> new DelightfulKnifeItem(ingredient, DelightfulTiers.valueOf(name.toUpperCase(Locale.ROOT)), 0.5F, -2.0F, (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
     }
 
     // Registers a food to Farmer's Delight tab, optional craftRemainder

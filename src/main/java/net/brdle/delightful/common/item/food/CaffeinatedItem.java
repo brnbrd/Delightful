@@ -18,7 +18,7 @@ public class CaffeinatedItem extends DrinkItem {
   public void affectConsumer(ItemStack stack, Level worldIn, LivingEntity consumer) {
     super.affectConsumer(stack, worldIn, consumer);
     if (ModList.get().isLoaded("farmersrespite")) {
-      consumer.addEffect(new MobEffectInstance(CompatEffects.CAFFEINATED.get(), 60, 0));
+      consumer.addEffect(new MobEffectInstance(CompatEffects.CAFFEINATED.get(), 1200, 0));
     }
   }
 }

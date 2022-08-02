@@ -1,9 +1,7 @@
 {
   "replace": false,
   "values": [
-    {
-      "id": "biomemakeover:glowfish",
-      "required": false
-    }
+    "#forge:raw_fishes/koi",
+    "#forge:raw_fishes/glowfish"
   ]
 }
