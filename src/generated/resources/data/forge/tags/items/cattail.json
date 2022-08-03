@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "sprout:cattail",
+      "required": false
+    },
+    {
+      "id": "biomesoplenty:cattail",
+      "required": false
+    },
+    {
+      "id": "biomemakeover:cattail",
+      "required": false
+    }
+  ]
+}
