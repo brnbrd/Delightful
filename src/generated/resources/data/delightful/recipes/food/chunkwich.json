@@ -4,17 +4,17 @@
     {
       "conditions": [
         {
+          "type": "forge:and",
           "values": [
             {
-              "value": "chunkwich",
-              "type": "delightful:enabled"
+              "type": "delightful:enabled",
+              "value": "chunkwich"
             },
             {
-              "item": "rottenleather:sweetened_chunk",
-              "type": "forge:item_exists"
+              "type": "forge:item_exists",
+              "item": "rottenleather:sweetened_chunk"
             }
-          ],
-          "type": "forge:and"
+          ]
         }
       ],
       "recipe": {

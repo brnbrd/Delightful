@@ -4,8 +4,8 @@
     {
       "conditions": [
         {
-          "value": "smore",
-          "type": "delightful:enabled"
+          "type": "delightful:enabled",
+          "value": "smore"
         }
       ],
       "recipe": {

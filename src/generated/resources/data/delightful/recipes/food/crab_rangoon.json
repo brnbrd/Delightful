@@ -4,20 +4,20 @@
     {
       "conditions": [
         {
+          "type": "forge:and",
           "values": [
             {
-              "value": "crab_rangoon",
-              "type": "delightful:enabled"
+              "type": "delightful:enabled",
+              "value": "crab_rangoon"
             },
             {
+              "type": "forge:not",
               "value": {
-                "tag": "forge:cooked_crab",
-                "type": "forge:tag_empty"
-              },
-              "type": "forge:not"
+                "type": "forge:tag_empty",
+                "tag": "forge:cooked_crab"
+              }
             }
-          ],
-          "type": "forge:and"
+          ]
         }
       ],
       "recipe": {

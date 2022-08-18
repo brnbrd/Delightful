@@ -1,24 +1,49 @@
 {
-  "type": "culturaldelights:mat_rolling",
-  "ingredients": [
+  "type": "forge:conditional",
+  "recipes": [
     {
-      "item": "minecraft:dried_kelp"
-    },
-    {
-      "item": "farmersdelight:cooked_rice"
-    },
-    {
-      "tag": "forge:raw_fishes/koi"
-    },
-    {
-      "tag": "forge:raw_fishes/koi"
-    },
-    {
-      "tag": "forge:raw_fishes/koi"
+      "conditions": [
+        {
+          "values": [
+            {
+              "modid": "culturaldelights",
+              "type": "forge:mod_loaded"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:raw_fishes/koi"
+              }
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
+      "recipe": {
+        "type": "culturaldelights:mat_rolling",
+        "ingredients": [
+          {
+            "item": "minecraft:dried_kelp"
+          },
+          {
+            "item": "farmersdelight:cooked_rice"
+          },
+          {
+            "tag": "forge:raw_fishes/koi"
+          },
+          {
+            "tag": "forge:raw_fishes/koi"
+          },
+          {
+            "tag": "forge:raw_fishes/koi"
+          }
+        ],
+        "output": {
+          "item": "culturaldelights:koi_nigiri",
+          "count": 4
+        }
+      }
     }
-  ],
-  "output": {
-    "item": "culturaldelights:koi_nigiri",
-    "count": 4
-  }
+  ]
 }

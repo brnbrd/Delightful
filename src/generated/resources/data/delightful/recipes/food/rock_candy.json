@@ -4,27 +4,30 @@
     {
       "conditions": [
         {
+          "type": "forge:and",
           "values": [
             {
-              "value": "rock_candy",
-              "type": "delightful:enabled"
+              "type": "delightful:enabled",
+              "value": "rock_candy"
             },
             {
-              "item": "biomesoplenty:rose_quartz_shard",
-              "type": "forge:item_exists"
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:gems/rose_quartz"
+              }
             }
-          ],
-          "type": "forge:and"
+          ]
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shapeless",
         "ingredients": [
           {
-            "item": "biomesoplenty:rose_quartz_shard"
+            "tag": "forge:gems/rose_quartz"
           },
           {
-            "item": "biomesoplenty:rose_quartz_shard"
+            "tag": "forge:gems/rose_quartz"
           },
           {
             "tag": "forge:sugar"

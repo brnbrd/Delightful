@@ -1,0 +1,38 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "values": [
+            {
+              "modid": "create",
+              "type": "forge:mod_loaded"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:gems/rose_quartz"
+              }
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
+      "recipe": {
+        "type": "create:sandpaper_polishing",
+        "ingredients": [
+          {
+            "tag": "forge:gems/rose_quartz"
+          }
+        ],
+        "results": [
+          {
+            "item": "create:polished_rose_quartz"
+          }
+        ]
+      }
+    }
+  ]
+}

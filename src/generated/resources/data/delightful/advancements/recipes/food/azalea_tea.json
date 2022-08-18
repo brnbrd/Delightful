@@ -3,17 +3,17 @@
     {
       "conditions": [
         {
+          "type": "forge:and",
           "values": [
             {
-              "value": "azalea_tea",
-              "type": "delightful:enabled"
+              "type": "delightful:enabled",
+              "value": "azalea_tea"
             },
             {
-              "item": "ecologics:azalea_flower",
-              "type": "forge:item_exists"
+              "type": "forge:item_exists",
+              "item": "ecologics:azalea_flower"
             }
-          ],
-          "type": "forge:and"
+          ]
         }
       ]
     }

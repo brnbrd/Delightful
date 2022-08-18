@@ -4,20 +4,20 @@
     {
       "conditions": [
         {
+          "type": "forge:and",
           "values": [
             {
-              "value": "nut_butter_and_jelly_sandwich",
-              "type": "delightful:enabled"
+              "type": "delightful:enabled",
+              "value": "nut_butter_and_jelly_sandwich"
             },
             {
+              "type": "forge:not",
               "value": {
-                "tag": "forge:nuts",
-                "type": "forge:tag_empty"
-              },
-              "type": "forge:not"
+                "type": "forge:tag_empty",
+                "tag": "forge:nuts"
+              }
             }
-          ],
-          "type": "forge:and"
+          ]
         }
       ],
       "recipe": {

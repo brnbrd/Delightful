@@ -4,12 +4,14 @@
     {
       "conditions": [
         {
-          "value": "animal_oil_bottle",
-          "type": "delightful:enabled"
+          "type": "delightful:enabled",
+          "value": "animal_oil_bottle"
         }
       ],
       "recipe": {
         "type": "farmersdelight:cooking",
+        "cookingtime": 200,
+        "experience": 0.35,
         "ingredients": [
           {
             "item": "delightful:animal_fat"
@@ -20,9 +22,7 @@
         ],
         "result": {
           "item": "delightful:animal_oil_bottle"
-        },
-        "experience": 0.35,
-        "cookingtime": 200
+        }
       }
     }
   ]

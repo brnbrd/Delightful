@@ -3,8 +3,8 @@
     {
       "conditions": [
         {
-          "value": "animal_oil_bottle",
-          "type": "delightful:enabled"
+          "type": "delightful:enabled",
+          "value": "animal_oil_bottle"
         }
       ]
     }

@@ -4,18 +4,18 @@
     {
       "conditions": [
         {
-          "value": "cooked_marshmallow_stick",
-          "type": "delightful:enabled"
+          "type": "delightful:enabled",
+          "value": "cooked_marshmallow_stick"
         }
       ],
       "recipe": {
         "type": "minecraft:campfire_cooking",
+        "cookingtime": 600,
+        "experience": 0.5,
         "ingredient": {
           "item": "delightful:marshmallow_stick"
         },
-        "result": "delightful:cooked_marshmallow_stick",
-        "experience": 0.5,
-        "cookingtime": 600
+        "result": "delightful:cooked_marshmallow_stick"
       }
     }
   ]

@@ -1,7 +1,7 @@
 {
-  "replace": false,
   "entries": [
     "delightful:green_tea_leaf",
     "delightful:animal_fat"
-  ]
+  ],
+  "replace": false
 }

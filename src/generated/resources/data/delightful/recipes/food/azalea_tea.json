@@ -4,26 +4,28 @@
     {
       "conditions": [
         {
+          "type": "forge:and",
           "values": [
             {
-              "value": "azalea_tea",
-              "type": "delightful:enabled"
+              "type": "delightful:enabled",
+              "value": "azalea_tea"
             },
             {
-              "item": "ecologics:azalea_flower",
-              "type": "forge:item_exists"
+              "type": "forge:item_exists",
+              "item": "ecologics:azalea_flower"
             }
-          ],
-          "type": "forge:and"
+          ]
         }
       ],
       "recipe": {
         "type": "farmersdelight:cooking",
+        "cookingtime": 200,
+        "experience": 0.35,
         "ingredients": [
           {
             "type": "forge:nbt",
-            "item": "minecraft:potion",
             "count": 1,
+            "item": "minecraft:potion",
             "nbt": "{Potion:\"minecraft:water\"}"
           },
           {
@@ -35,9 +37,7 @@
         ],
         "result": {
           "item": "delightful:azalea_tea"
-        },
-        "experience": 0.35,
-        "cookingtime": 200
+        }
       }
     }
   ]

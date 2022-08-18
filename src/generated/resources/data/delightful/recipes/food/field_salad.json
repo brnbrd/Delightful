@@ -4,17 +4,17 @@
     {
       "conditions": [
         {
+          "type": "forge:and",
           "values": [
             {
-              "value": "field_salad",
-              "type": "delightful:enabled"
+              "type": "delightful:enabled",
+              "value": "field_salad"
             },
             {
-              "modid": "biomesoplenty",
-              "type": "forge:mod_loaded"
+              "type": "forge:mod_loaded",
+              "modid": "biomesoplenty"
             }
-          ],
-          "type": "forge:and"
+          ]
         }
       ],
       "recipe": {

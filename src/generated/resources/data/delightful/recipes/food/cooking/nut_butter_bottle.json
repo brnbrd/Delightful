@@ -4,24 +4,26 @@
     {
       "conditions": [
         {
+          "type": "forge:and",
           "values": [
             {
-              "value": "nut_butter_bottle",
-              "type": "delightful:enabled"
+              "type": "delightful:enabled",
+              "value": "nut_butter_bottle"
             },
             {
+              "type": "forge:not",
               "value": {
-                "tag": "forge:nuts",
-                "type": "forge:tag_empty"
-              },
-              "type": "forge:not"
+                "type": "forge:tag_empty",
+                "tag": "forge:nuts"
+              }
             }
-          ],
-          "type": "forge:and"
+          ]
         }
       ],
       "recipe": {
         "type": "farmersdelight:cooking",
+        "cookingtime": 200,
+        "experience": 0.35,
         "ingredients": [
           {
             "tag": "forge:nuts"
@@ -32,9 +34,7 @@
         ],
         "result": {
           "item": "delightful:nut_butter_bottle"
-        },
-        "experience": 0.35,
-        "cookingtime": 200
+        }
       }
     }
   ]

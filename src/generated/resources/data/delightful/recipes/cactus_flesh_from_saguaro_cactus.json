@@ -4,17 +4,17 @@
     {
       "conditions": [
         {
+          "type": "forge:and",
           "values": [
             {
-              "value": "cactus_flesh",
-              "type": "delightful:enabled"
+              "type": "delightful:enabled",
+              "value": "cactus_flesh"
             },
             {
-              "item": "biomemakeover:saguaro_cactus",
-              "type": "forge:item_exists"
+              "type": "forge:item_exists",
+              "item": "biomemakeover:saguaro_cactus"
             }
-          ],
-          "type": "forge:and"
+          ]
         }
       ],
       "recipe": {
@@ -24,15 +24,15 @@
             "item": "biomemakeover:saguaro_cactus"
           }
         ],
-        "tool": {
-          "tag": "forge:tools/knives"
-        },
         "result": [
           {
-            "item": "delightful:cactus_flesh",
-            "count": 2
+            "count": 2,
+            "item": "delightful:cactus_flesh"
           }
-        ]
+        ],
+        "tool": {
+          "tag": "forge:tools/knives"
+        }
       }
     }
   ]

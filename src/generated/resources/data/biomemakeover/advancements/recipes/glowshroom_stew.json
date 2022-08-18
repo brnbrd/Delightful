@@ -3,8 +3,8 @@
     {
       "conditions": [
         {
-          "item": "biomemakeover:glowshroom_stew",
-          "type": "forge:item_exists"
+          "type": "forge:item_exists",
+          "item": "biomemakeover:glowshroom_stew"
         }
       ]
     }

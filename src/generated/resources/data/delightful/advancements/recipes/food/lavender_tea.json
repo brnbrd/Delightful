@@ -3,17 +3,17 @@
     {
       "conditions": [
         {
+          "type": "forge:and",
           "values": [
             {
-              "value": "lavender_tea",
-              "type": "delightful:enabled"
+              "type": "delightful:enabled",
+              "value": "lavender_tea"
             },
             {
-              "item": "biomesoplenty:lavender",
-              "type": "forge:item_exists"
+              "type": "forge:item_exists",
+              "item": "biomesoplenty:lavender"
             }
-          ],
-          "type": "forge:and"
+          ]
         }
       ]
     }

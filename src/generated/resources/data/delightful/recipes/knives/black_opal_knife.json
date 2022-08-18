@@ -4,28 +4,24 @@
     {
       "conditions": [
         {
+          "type": "forge:and",
           "values": [
             {
-              "value": "black_opal_knife",
-              "type": "delightful:enabled"
+              "type": "delightful:enabled",
+              "value": "black_opal_knife"
             },
             {
+              "type": "forge:not",
               "value": {
-                "tag": "forge:gems/black_opal",
-                "type": "forge:tag_empty"
-              },
-              "type": "forge:not"
+                "type": "forge:tag_empty",
+                "tag": "forge:gems/black_opal"
+              }
             }
-          ],
-          "type": "forge:and"
+          ]
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          " m",
-          "s "
-        ],
         "key": {
           "m": {
             "tag": "forge:gems/black_opal"
@@ -34,6 +30,10 @@
             "tag": "forge:rods/wooden"
           }
         },
+        "pattern": [
+          " m",
+          "s "
+        ],
         "result": {
           "item": "delightful:black_opal_knife"
         }

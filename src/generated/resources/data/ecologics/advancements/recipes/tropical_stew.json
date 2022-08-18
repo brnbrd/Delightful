@@ -3,8 +3,8 @@
     {
       "conditions": [
         {
-          "item": "ecologics:tropical_stew",
-          "type": "forge:item_exists"
+          "type": "forge:item_exists",
+          "item": "ecologics:tropical_stew"
         }
       ]
     }

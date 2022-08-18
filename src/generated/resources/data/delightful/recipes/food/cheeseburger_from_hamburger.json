@@ -4,8 +4,8 @@
     {
       "conditions": [
         {
-          "value": "cheeseburger",
-          "type": "delightful:enabled"
+          "type": "delightful:enabled",
+          "value": "cheeseburger"
         }
       ],
       "recipe": {

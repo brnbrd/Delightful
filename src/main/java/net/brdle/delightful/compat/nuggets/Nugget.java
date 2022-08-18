@@ -3,9 +3,9 @@ package net.brdle.delightful.compat.nuggets;
 import com.google.common.collect.ImmutableList;
 
 public enum Nugget implements ISupportNuggets {
-    COPPERIZED("copperized", TYPICAL, ImmutableList.of("copper")),
-    THERMAL("thermal", TYPICAL, ImmutableList.of("copper", "tin", "lead", "silver", "nickel", "bronze", "electrum", "invar", "constantan")),
-    IMMERSIVEENGINEERING("immersiveengineering", REVERSED, ImmutableList.of("copper", "lead", "silver", "nickel", "electrum", "steel", "constantan")),
+    //COPPERIZED("copperized", TYPICAL, ImmutableList.of("copper")),
+    //THERMAL("thermal", TYPICAL, ImmutableList.of("copper", "tin", "lead", "silver", "nickel", "bronze", "electrum", "invar", "constantan")),
+    //IMMERSIVEENGINEERING("immersiveengineering", REVERSED, ImmutableList.of("copper", "lead", "silver", "nickel", "electrum", "steel", "constantan")),
     MEKANISM("mekanism", REVERSED, ImmutableList.of("bronze", "steel", "tin", "osmium"));
 
     private final String modid;

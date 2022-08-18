@@ -119,7 +119,7 @@ dependencies {
     //implementation fg.deobf("curse.maven:thermal-foundation-222880:${thermal_version}")
     runtimeOnly fg.deobf("curse.maven:configured-457570:${configured_version}")
     //implementation fg.deobf("curse.maven:copperized-567666:${copperized_version}")
-    implementation fg.deobf("curse.maven:selene-499980:${selene_version}")
+    //implementation fg.deobf("curse.maven:selene-499980:${selene_version}")
     //implementation fg.deobf("curse.maven:supplementaries-412082:${supplementaries_version}")
     implementation fg.deobf("curse.maven:terrablender-563928:${terrablender_version}")
     implementation fg.deobf("curse.maven:biomes-o-plenty-220318:${bop_version}")

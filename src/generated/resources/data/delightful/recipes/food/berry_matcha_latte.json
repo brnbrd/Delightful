@@ -4,8 +4,8 @@
     {
       "conditions": [
         {
-          "value": "berry_matcha_latte",
-          "type": "delightful:enabled"
+          "type": "delightful:enabled",
+          "value": "berry_matcha_latte"
         }
       ],
       "recipe": {

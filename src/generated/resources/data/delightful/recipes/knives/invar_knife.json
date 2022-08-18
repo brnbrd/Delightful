@@ -4,28 +4,24 @@
     {
       "conditions": [
         {
+          "type": "forge:and",
           "values": [
             {
-              "value": "invar_knife",
-              "type": "delightful:enabled"
+              "type": "delightful:enabled",
+              "value": "invar_knife"
             },
             {
+              "type": "forge:not",
               "value": {
-                "tag": "forge:ingots/invar",
-                "type": "forge:tag_empty"
-              },
-              "type": "forge:not"
+                "type": "forge:tag_empty",
+                "tag": "forge:ingots/invar"
+              }
             }
-          ],
-          "type": "forge:and"
+          ]
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          " m",
-          "s "
-        ],
         "key": {
           "m": {
             "tag": "forge:ingots/invar"
@@ -34,6 +30,10 @@
             "tag": "forge:rods/wooden"
           }
         },
+        "pattern": [
+          " m",
+          "s "
+        ],
         "result": {
           "item": "delightful:invar_knife"
         }

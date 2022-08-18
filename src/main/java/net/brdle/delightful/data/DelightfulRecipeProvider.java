@@ -1,7 +1,5 @@
 package net.brdle.delightful.data;
 
-import com.farmersrespite.core.registry.FRItems;
-import com.farmersrespite.data.builder.KettleRecipeBuilder;
 import net.brdle.delightful.Delightful;
 import net.brdle.delightful.Util;
 import net.brdle.delightful.common.block.DelightfulBlocks;
@@ -12,7 +10,6 @@ import net.brdle.delightful.common.item.knife.CompatKnifeItem;
 import net.brdle.delightful.common.item.knife.DelightfulKnifeItem;
 import net.brdle.delightful.common.item.knife.TaggedKnifeItem;
 import net.brdle.delightful.common.tag.DelightfulItemTags;
-import net.brdle.delightful.compat.nuggets.Nugget;
 import net.brdle.rottenleather.common.RottenLeatherItems;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.advancements.critereon.ItemPredicate;
@@ -39,7 +36,6 @@ import vectorwing.farmersdelight.common.tag.ForgeTags;
 import vectorwing.farmersdelight.data.builder.CookingPotRecipeBuilder;
 import vectorwing.farmersdelight.data.builder.CuttingBoardRecipeBuilder;
 import vectorwing.farmersdelight.data.recipe.CookingRecipes;
-import java.util.Arrays;
 import java.util.Objects;
 import java.util.function.Consumer;
 
@@ -270,14 +266,14 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .build(f))
             .generateAdvancement()
             .build(finished, Delightful.MODID, "food/azalea_tea");
-        ConditionalRecipe.builder()
+        /*ConditionalRecipe.builder()
             .addCondition(and(enabled("azalea_tea"), itemExists("ecologics", "azalea_flower"), modLoaded("farmersrespite")))
             .addRecipe(f -> KettleRecipeBuilder.kettleRecipe(DelightfulItems.AZALEA_TEA.get(), 1, 2400, 0.35F, false, Items.GLASS_BOTTLE)
                 .addIngredient(DelightfulItemTags.TEA_LEAVES_GREEN)
                 .addIngredient(modItem("ecologics", "azalea_flower"))
                 .build(f))
             .generateAdvancement()
-            .build(finished, Delightful.MODID, "food/kettle/azalea_tea");
+            .build(finished, Delightful.MODID, "food/kettle/azalea_tea");*/
         ConditionalRecipe.builder()
           .addCondition(and(enabled("lavender_tea"), itemExists("biomesoplenty", "lavender")))
           .addRecipe(f -> CookingPotRecipeBuilder.cookingPotRecipe(
@@ -288,14 +284,14 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             .build(f))
           .generateAdvancement()
           .build(finished, Delightful.MODID, "food/lavender_tea");
-        ConditionalRecipe.builder()
+        /*ConditionalRecipe.builder()
           .addCondition(and(enabled("lavender_tea"), itemExists("biomesoplenty", "lavender"), modLoaded("farmersrespite")))
           .addRecipe(f -> KettleRecipeBuilder.kettleRecipe(DelightfulItems.LAVENDER_TEA.get(), 1, 2400, 0.35F, false, Items.GLASS_BOTTLE)
             .addIngredient(DelightfulItemTags.TEA_LEAVES_GREEN)
             .addIngredient(modItem("biomesoplenty", "lavender"))
             .build(f))
           .generateAdvancement()
-          .build(finished, Delightful.MODID, "food/kettle/lavender_tea");
+          .build(finished, Delightful.MODID, "food/kettle/lavender_tea");*/
         ConditionalRecipe.builder()
             .addCondition(and(enabled("honey_glazed_walnut"), not(tagEmpty(DelightfulItemTags.NUTS_WALNUT))))
             .addRecipe(f -> ShapelessRecipeBuilder.shapeless(DelightfulItems.HONEY_GLAZED_WALNUT.get(), 3)
@@ -338,7 +334,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .save(f, new ResourceLocation(Delightful.MODID, "smelting/green_tea_leaf")))
             .generateAdvancement()
             .build(finished, Delightful.MODID, "smelting/green_tea_leaf");
-        ConditionalRecipe.builder()
+        /*ConditionalRecipe.builder()
             .addCondition(itemExists("farmersrespite", "green_tea_leaves"))
             .addRecipe(f -> ShapelessRecipeBuilder.shapeless(FRItems.GREEN_TEA_LEAVES.get(), 2)
                 .requires(DelightfulItems.GREEN_TEA_LEAF.get())
@@ -346,7 +342,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .unlockedBy("has_green_tea_leaf", has(DelightfulItems.GREEN_TEA_LEAF.get()))
                 .save(f))
             .generateAdvancement()
-            .build(finished, Delightful.MODID, "green_tea_leaves_from_green_tea_leaf");
+            .build(finished, Delightful.MODID, "green_tea_leaves_from_green_tea_leaf");*/
         ConditionalRecipe.builder()
           .addCondition(enabled("nut_milk"))
           .addRecipe(f ->
@@ -376,10 +372,10 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             .of(DelightfulItems.ANIMAL_FAT.get()).build()))
           .save(finished, "candle_from_animal_fat");
         ConditionalRecipe.builder()
-          .addCondition(and(enabled("rock_candy"), itemExists("biomesoplenty", "rose_quartz_shard")))
+          .addCondition(and(enabled("rock_candy"), not(tagEmpty(DelightfulItemTags.GEMS_ROSE_QUARTZ))))
           .addRecipe(f -> ShapelessRecipeBuilder.shapeless(DelightfulItems.ROCK_CANDY.get(), 1)
-            .requires(modItem("biomesoplenty", "rose_quartz_shard"))
-            .requires(modItem("biomesoplenty", "rose_quartz_shard"))
+            .requires(DelightfulItemTags.GEMS_ROSE_QUARTZ)
+            .requires(DelightfulItemTags.GEMS_ROSE_QUARTZ)
             .requires(DelightfulItemTags.SUGAR)
             .requires(Tags.Items.RODS_WOODEN)
             .unlockedBy("has_sugar", has(Items.SUGAR))
@@ -585,12 +581,12 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             knifeSmith(knife, finished);
             return;
         }
-        Arrays.stream(Nugget.values()).forEach(mod -> {
+        /*Arrays.stream(Nugget.values()).forEach(mod -> {
             String metal = knife.getTag().getPath().replace("_knife", "").replace("ingots/", "").trim();
             if (mod.getMetals().contains(metal)) {
                 knifeSmeltAndBlast(knife, metal, new ResourceLocation(mod.getModid(), mod.formatMetal(metal)), finished);
             }
-        });
+        });*/
         String path = Util.name(knife);
         var add = ItemTags.create(knife.getTag());
         var cond = (knife instanceof CompatKnifeItem cki) ?

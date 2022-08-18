@@ -1,31 +1,30 @@
 {
+  "type": "delightful:add_item",
   "conditions": [
     {
-      "condition": "minecraft:random_chance",
-      "chance": 0.3
+      "chance": 0.3,
+      "condition": "minecraft:random_chance"
     },
     {
       "condition": "minecraft:entity_properties",
+      "entity": "killer_player",
       "predicate": {
         "equipment": {
           "mainhand": {
             "tag": "forge:tools/knives"
           }
         }
-      },
-      "entity": "killer_player"
+      }
     },
     {
       "condition": "minecraft:entity_properties",
+      "entity": "this",
       "predicate": {
         "type": "#delightful:fatty_animals"
-      },
-      "entity": "this"
+      }
     }
   ],
   "item": "delightful:animal_fat",
-  "minAmount": 1,
-  "maxAmount": 2,
-  "unique": true,
-  "type": "delightful:add_item"
+  "minAmount": 2,
+  "unique": true
 }

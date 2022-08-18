@@ -4,12 +4,17 @@
     {
       "conditions": [
         {
-          "item": "biomemakeover:glowshroom_stew",
-          "type": "forge:item_exists"
+          "type": "forge:item_exists",
+          "item": "biomemakeover:glowshroom_stew"
         }
       ],
       "recipe": {
         "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:bowl"
+        },
+        "cookingtime": 200,
+        "experience": 0.35,
         "ingredients": [
           {
             "item": "biomemakeover:purple_glowshroom"
@@ -23,12 +28,7 @@
         ],
         "result": {
           "item": "biomemakeover:glowshroom_stew"
-        },
-        "container": {
-          "item": "minecraft:bowl"
-        },
-        "experience": 0.35,
-        "cookingtime": 200
+        }
       }
     }
   ]

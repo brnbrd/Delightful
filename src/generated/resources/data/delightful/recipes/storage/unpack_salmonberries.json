@@ -4,8 +4,8 @@
     {
       "conditions": [
         {
-          "value": "salmonberry_sack",
-          "type": "delightful:enabled"
+          "type": "delightful:enabled",
+          "value": "salmonberry_sack"
         }
       ],
       "recipe": {
@@ -16,8 +16,8 @@
           }
         ],
         "result": {
-          "item": "delightful:salmonberries",
-          "count": 9
+          "count": 9,
+          "item": "delightful:salmonberries"
         }
       }
     }

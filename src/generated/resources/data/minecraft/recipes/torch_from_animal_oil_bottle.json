@@ -1,9 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "o",
-    "s"
-  ],
   "key": {
     "o": {
       "item": "delightful:animal_oil_bottle"
@@ -12,8 +8,12 @@
       "tag": "forge:rods/wooden"
     }
   },
+  "pattern": [
+    "o",
+    "s"
+  ],
   "result": {
-    "item": "minecraft:torch",
-    "count": 8
+    "count": 8,
+    "item": "minecraft:torch"
   }
 }

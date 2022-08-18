@@ -3,8 +3,8 @@
     {
       "conditions": [
         {
-          "value": "ender_nectar",
-          "type": "delightful:enabled"
+          "type": "delightful:enabled",
+          "value": "ender_nectar"
         }
       ]
     }

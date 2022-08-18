@@ -4,21 +4,23 @@
     {
       "conditions": [
         {
+          "type": "forge:and",
           "values": [
             {
-              "value": "chunk_nugget",
-              "type": "delightful:enabled"
+              "type": "delightful:enabled",
+              "value": "chunk_nugget"
             },
             {
-              "item": "rottenleather:sweetened_chunk",
-              "type": "forge:item_exists"
+              "type": "forge:item_exists",
+              "item": "rottenleather:sweetened_chunk"
             }
-          ],
-          "type": "forge:and"
+          ]
         }
       ],
       "recipe": {
         "type": "farmersdelight:cooking",
+        "cookingtime": 100,
+        "experience": 0.25,
         "ingredients": [
           {
             "tag": "forge:bread"
@@ -31,11 +33,9 @@
           }
         ],
         "result": {
-          "item": "delightful:chunk_nugget",
-          "count": 6
-        },
-        "experience": 0.25,
-        "cookingtime": 100
+          "count": 6,
+          "item": "delightful:chunk_nugget"
+        }
       }
     }
   ]

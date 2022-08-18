@@ -47,6 +47,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> RAW_FISHES_KOI = forge("raw_fishes/koi");
 	public static final TagKey<Item> RAW_FISHES_GLOWFISH = forge("raw_fishes/glowfish");
 	public static final TagKey<Item> CATTAIL = forge( "cattail");
+	public static final TagKey<Item> GEMS_ROSE_QUARTZ = forge("gems/rose_quartz");
 
 	// Minecraft
 

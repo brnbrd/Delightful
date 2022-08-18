@@ -4,8 +4,8 @@
     {
       "conditions": [
         {
-          "value": "marshmallow_stick",
-          "type": "delightful:enabled"
+          "type": "delightful:enabled",
+          "value": "marshmallow_stick"
         }
       ],
       "recipe": {
@@ -16,8 +16,8 @@
           },
           {
             "type": "forge:nbt",
-            "item": "minecraft:potion",
             "count": 1,
+            "item": "minecraft:potion",
             "nbt": "{Potion:\"minecraft:water\"}"
           },
           {
@@ -28,8 +28,8 @@
           }
         ],
         "result": {
-          "item": "delightful:marshmallow_stick",
-          "count": 2
+          "count": 2,
+          "item": "delightful:marshmallow_stick"
         }
       }
     }

@@ -4,17 +4,17 @@
     {
       "conditions": [
         {
+          "type": "forge:and",
           "values": [
             {
-              "value": "prickly_pear_juice",
-              "type": "delightful:enabled"
+              "type": "delightful:enabled",
+              "value": "prickly_pear_juice"
             },
             {
-              "item": "ecologics:cooked_prickly_pear",
-              "type": "forge:item_exists"
+              "type": "forge:item_exists",
+              "item": "ecologics:cooked_prickly_pear"
             }
-          ],
-          "type": "forge:and"
+          ]
         }
       ],
       "recipe": {

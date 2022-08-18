@@ -104,6 +104,9 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(new ResourceLocation("sprout", "cattail"))
 			.addOptional(new ResourceLocation("biomesoplenty", "cattail"))
 			.addOptional(new ResourceLocation("biomemakeover", "cattail"));
+		this.tag(DelightfulItemTags.GEMS_ROSE_QUARTZ)
+			.addOptional(new ResourceLocation("biomesoplenty", "rose_quartz_shard"))
+			.addOptional(new ResourceLocation("create", "rose_quartz"));
 
 		// Minecraft
 		this.tag(ItemTags.PIGLIN_LOVED).add(DelightfulItems.REFINED_GLOWSTONE_KNIFE.get());
