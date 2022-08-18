@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[40,)"
+loaderVersion="[41,)"
 license="MIT License"
 issueTrackerURL="https://github.com/brdle/Delightful/issues"
 
@@ -20,14 +20,14 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
 [[dependencies.delightful]]
     modId="forge"
     mandatory=true
-    versionRange="[40,)"
+    versionRange="[41.1.0,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.delightful]]
     modId="farmersdelight"
     mandatory=true
-    versionRange="[1.1,)"
+    versionRange="[1.1.2,)"
     ordering="AFTER"
     side="BOTH"
 

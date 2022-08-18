@@ -2,18 +2,15 @@ package net.brdle.delightful.common.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.BonemealableBlock;
-import net.minecraft.world.level.block.MelonBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.common.ForgeHooks;
-import java.util.Random;
 
 public class MiniMelonBlock extends MelonBlock implements BonemealableBlock {
 
@@ -34,7 +31,7 @@ public class MiniMelonBlock extends MelonBlock implements BonemealableBlock {
   }
 
   @Override
-  public void randomTick(BlockState pState, ServerLevel pLevel, BlockPos pPos, Random pRandom) {
+  public void randomTick(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRandom) {
     if (!pLevel.isAreaLoaded(pPos, 1)) return; // Forge: prevent loading unloaded chunks when checking neighbor's light
     if (pLevel.getRawBrightness(pPos, 0) >= 5 &&
       pLevel.getBlockState(pPos.below()).is(Blocks.DIRT) &&
@@ -57,16 +54,16 @@ public class MiniMelonBlock extends MelonBlock implements BonemealableBlock {
   }
 
   @Override
-  public boolean isBonemealSuccess(Level pLevel, Random pRandom, BlockPos pPos, BlockState pState) {
+  public boolean isBonemealSuccess(Level level, RandomSource random, BlockPos pos, BlockState state) {
     return true;
   }
 
   @Override
-  public void performBonemeal(ServerLevel pLevel, Random pRandom, BlockPos pPos, BlockState pState) {
-    if (!pLevel.isAreaLoaded(pPos, 1)) return; // Forge: prevent loading unloaded chunks when checking neighbor's light
-    if (ForgeHooks.onCropsGrowPre(pLevel, pPos, pState, true)) {
-      pLevel.setBlock(pPos, Blocks.MELON.withPropertiesOf(pState), 2);
-      ForgeHooks.onCropsGrowPost(pLevel, pPos, pState);
+  public void performBonemeal(ServerLevel level, RandomSource random, BlockPos pos, BlockState state) {
+    if (!level.isAreaLoaded(pos, 1)) return; // Forge: prevent loading unloaded chunks when checking neighbor's light
+    if (ForgeHooks.onCropsGrowPre(level, pos, state, true)) {
+      level.setBlock(pos, Blocks.MELON.withPropertiesOf(state), 2);
+      ForgeHooks.onCropsGrowPost(level, pos, state);
     }
   }
 }

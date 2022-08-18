@@ -2,7 +2,6 @@ package net.brdle.delightful.common.item.knife;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.*;
@@ -56,8 +55,8 @@ public class TaggedKnifeItem extends DelightfulKnifeItem {
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> tool, TooltipFlag pIsAdvanced) {
         super.appendHoverText(pStack, pLevel, tool, pIsAdvanced);
         if (!this.isTag()) {
-            tool.add(new TextComponent("Requires non-empty tag:"));
-            tool.add(new TextComponent(this.tag.getNamespace() + ":" + this.tag.getPath()).withStyle(ChatFormatting.UNDERLINE));
+            tool.add(Component.translatable("Requires non-empty tag:"));
+            tool.add(Component.translatable(this.tag.getNamespace() + ":" + this.tag.getPath()).withStyle(ChatFormatting.UNDERLINE));
         }
     }
 }

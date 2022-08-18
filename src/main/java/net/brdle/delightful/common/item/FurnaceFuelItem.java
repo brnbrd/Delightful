@@ -2,7 +2,6 @@ package net.brdle.delightful.common.item;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.ContainerData;
@@ -31,8 +30,8 @@ public class FurnaceFuelItem extends Item {
 
   @Override
   public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> comps, TooltipFlag pIsAdvanced) {
-    comps.add(new TextComponent("Sneak Right Click:").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.UNDERLINE));
-    comps.add(new TextComponent("Applies " + (this.getFuelTime() / 20) + "s of burn time"));
+    comps.add(Component.translatable("Sneak Right Click:").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.UNDERLINE));
+    comps.add(Component.translatable("Applies " + (this.getFuelTime() / 20) + "s of burn time"));
   }
 
   @Override
@@ -57,7 +56,7 @@ public class FurnaceFuelItem extends Item {
   }
 
   private static void shrinkAdd(Player p, ItemStack i) {
-    if (i.hasContainerItem()) p.addItem(i.getContainerItem());
+    if (i.hasCraftingRemainingItem()) p.addItem(i.getCraftingRemainingItem());
     i.shrink(1);
   }
 }

@@ -2,7 +2,6 @@ package net.brdle.delightful.common.item.knife;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Tier;
@@ -47,8 +46,8 @@ public class CompatKnifeItem extends TaggedKnifeItem {
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> tool, TooltipFlag pIsAdvanced) {
         super.appendHoverText(pStack, pLevel, tool, pIsAdvanced);
         if (!this.isLoaded()) {
-            tool.add(new TextComponent("Requires modid:"));
-            tool.add(new TextComponent(modid).withStyle(ChatFormatting.UNDERLINE));
+            tool.add(Component.literal("Requires modid:"));
+            tool.add(Component.literal(modid).withStyle(ChatFormatting.UNDERLINE));
         }
     }
 }

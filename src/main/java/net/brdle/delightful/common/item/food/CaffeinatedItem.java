@@ -1,6 +1,6 @@
 package net.brdle.delightful.common.item.food;
 
-import net.brdle.delightful.compat.CompatEffects;
+import net.brdle.delightful.compat.FRCompat;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
@@ -18,7 +18,7 @@ public class CaffeinatedItem extends DrinkItem {
   public void affectConsumer(ItemStack stack, Level worldIn, LivingEntity consumer) {
     super.affectConsumer(stack, worldIn, consumer);
     if (ModList.get().isLoaded("farmersrespite")) {
-      consumer.addEffect(new MobEffectInstance(CompatEffects.CAFFEINATED.get(), 1200, 0));
+      consumer.addEffect(new MobEffectInstance(FRCompat.CAFFEINATED.get(), 1200, 0));
     }
   }
 }

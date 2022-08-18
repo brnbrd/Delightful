@@ -3,7 +3,6 @@ package net.brdle.delightful.data;
 import net.brdle.delightful.Delightful;
 import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.loot.AddItemLootModifier;
-import net.brdle.delightful.common.loot.DelightfulLootModifiers;
 import net.brdle.delightful.common.loot.LootItemBlockIsTagCondition;
 import net.brdle.delightful.common.tag.DelightfulEntityTags;
 import net.minecraft.advancements.critereon.EntityEquipmentPredicate;
@@ -29,7 +28,7 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 	 */
 	@Override
 	protected void start() {
-		add("green_tea_leaf", DelightfulLootModifiers.ADD_ITEM.get(), new AddItemLootModifier(
+		add("green_tea_leaf", new AddItemLootModifier(
 			new LootItemCondition[]{
 				LootItemRandomChanceCondition.randomChance(0.12F).build(),
 				MatchTool.toolMatches(ItemPredicate.Builder.item().of(ForgeTags.TOOLS_KNIVES)).build(),
@@ -37,7 +36,7 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 			},
 			DelightfulItems.GREEN_TEA_LEAF.get(), 1, 1, true
 		));
-		add("animal_fat", DelightfulLootModifiers.ADD_ITEM.get(), new AddItemLootModifier(
+		add("animal_fat", new AddItemLootModifier(
 			new LootItemCondition[]{
 				LootItemRandomChanceCondition.randomChance(0.3F).build(),
 				LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.KILLER_PLAYER,

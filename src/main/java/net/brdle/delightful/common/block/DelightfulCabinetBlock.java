@@ -1,5 +1,6 @@
 package net.brdle.delightful.common.block;
 
+import net.brdle.delightful.Util;
 import net.brdle.delightful.common.config.DelightfulConfig;
 import net.brdle.delightful.common.item.IConfigured;
 import net.brdle.delightful.common.item.ISingleIngredient;
@@ -22,6 +23,6 @@ public class DelightfulCabinetBlock extends CabinetBlock implements IConfigured,
 
     @Override
     public boolean isEnabled() {
-        return DelightfulConfig.CONFIG.stuff.get(this.getRegistryName().getPath()).get();
+        return DelightfulConfig.CONFIG.stuff.get(Util.name(this)).get();
     }
 }

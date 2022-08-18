@@ -1,6 +1,7 @@
 package net.brdle.delightful.data;
 
 import net.brdle.delightful.Delightful;
+import net.brdle.delightful.Util;
 import net.brdle.delightful.common.block.DelightfulBlocks;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
@@ -29,7 +30,7 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
     }
 
     public void wildCropBlock(Block block) {
-        this.simpleBlock(block, models().singleTexture(block.getRegistryName().getPath(), new ResourceLocation(FarmersDelight.MODID, "bush_crop"), "crop", resourceBlock(block.getRegistryName().getPath())));
+        this.simpleBlock(block, models().singleTexture(Util.name(block), new ResourceLocation(FarmersDelight.MODID, "bush_crop"), "crop", resourceBlock(Util.name(block))).renderType("cutout"));
     }
 
     // Adapted from: https://github.com/vectorwing/FarmersDelight/blob/1.18.2/src/main/java/vectorwing/farmersdelight/data/BlockStates.java
@@ -39,7 +40,7 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
 
     // Adapted from: https://github.com/vectorwing/FarmersDelight/blob/1.18.2/src/main/java/vectorwing/farmersdelight/data/BlockStates.java
     public void cabinet(Block block) {
-        String path = block.getRegistryName().getPath();
+        String path = Util.name(block);
         String type = path.replace("_cabinet", "").trim();
         this.horizontalBlock(block, state -> {
             String suffix = state.getValue(CabinetBlock.OPEN) ? "_open" : "";

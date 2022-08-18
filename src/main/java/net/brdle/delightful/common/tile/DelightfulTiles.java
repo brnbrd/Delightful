@@ -10,7 +10,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class DelightfulTiles {
 
-    private static final DeferredRegister<BlockEntityType<?>> TILES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, Delightful.MODID);
+    private static final DeferredRegister<BlockEntityType<?>> TILES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, Delightful.MODID);
 
     public static final RegistryObject<BlockEntityType<PizzaStoneBlockEntity>> PIZZA_STONE = TILES.register("pizza_stone",
             () -> BlockEntityType.Builder.of(PizzaStoneBlockEntity::new, DelightfulBlocks.PIZZA_STONE.get()).build(null));

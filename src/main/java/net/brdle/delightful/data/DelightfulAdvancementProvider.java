@@ -1,5 +1,6 @@
 package net.brdle.delightful.data;
 
+import net.brdle.delightful.Util;
 import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.item.knife.DelightfulKnifeItem;
 import net.minecraft.advancements.Advancement;
@@ -8,7 +9,6 @@ import net.minecraft.advancements.RequirementsStrategy;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.advancements.AdvancementProvider;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -16,7 +16,6 @@ import net.minecraftforge.registries.RegistryObject;
 import vectorwing.farmersdelight.FarmersDelight;
 import vectorwing.farmersdelight.common.registry.ModItems;
 import vectorwing.farmersdelight.common.utility.TextUtils;
-
 import java.util.function.Consumer;
 
 public class DelightfulAdvancementProvider extends AdvancementProvider {
@@ -57,7 +56,7 @@ public class DelightfulAdvancementProvider extends AdvancementProvider {
         DelightfulItems.ITEMS.getEntries().stream()
             .map(RegistryObject::get)
             .filter(item -> item instanceof DelightfulKnifeItem)
-            .forEach(k -> huntAndGatherB.addCriterion(k.getRegistryName().getPath(), InventoryChangeTrigger.TriggerInstance.hasItems(k)));
+            .forEach(k -> huntAndGatherB.addCriterion(Util.name(k), InventoryChangeTrigger.TriggerInstance.hasItems(k)));
         Advancement huntAndGather = huntAndGatherB.requirements(RequirementsStrategy.OR).save(consumer, getNameId("main/craft_knife"));
     }
 

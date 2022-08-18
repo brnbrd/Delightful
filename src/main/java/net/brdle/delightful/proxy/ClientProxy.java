@@ -1,10 +1,5 @@
 package net.brdle.delightful.proxy;
 
-import net.brdle.delightful.common.block.DelightfulBlocks;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.data.loot.BlockLoot;
-import net.minecraft.data.loot.LootTableProvider;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -23,7 +18,7 @@ public class ClientProxy extends CommonProxy {
 
     @SubscribeEvent
     public void setupClient(FMLClientSetupEvent e){
-        ItemBlockRenderTypes.setRenderLayer(DelightfulBlocks.WILD_SALMONBERRIES.get(), RenderType.cutout());
+        //ItemBlockRenderTypes.setRenderLayer(DelightfulBlocks.WILD_SALMONBERRIES.get(), RenderType.cutout());
         //ItemBlockRenderTypes.setRenderLayer(DelightfulBlocks.PIZZA_PEEL.get(), RenderType.cutout());
     }
 

@@ -1,18 +1,31 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "#X#"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:wheat"
-    },
-    "X": {
-      "item": "delightful:nut_butter_bottle"
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "sprout:peanut_butter_cookie"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "#X#"
+        ],
+        "key": {
+          "#": {
+            "item": "minecraft:wheat"
+          },
+          "X": {
+            "item": "delightful:nut_butter_bottle"
+          }
+        },
+        "result": {
+          "item": "sprout:peanut_butter_cookie",
+          "count": 8
+        }
+      }
     }
-  },
-  "result": {
-    "item": "sprout:peanut_butter_cookie",
-    "count": 8
-  }
+  ]
 }

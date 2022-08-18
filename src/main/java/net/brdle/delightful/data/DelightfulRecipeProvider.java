@@ -3,9 +3,9 @@ package net.brdle.delightful.data;
 import com.farmersrespite.core.registry.FRItems;
 import com.farmersrespite.data.builder.KettleRecipeBuilder;
 import net.brdle.delightful.Delightful;
+import net.brdle.delightful.Util;
 import net.brdle.delightful.common.block.DelightfulBlocks;
 import net.brdle.delightful.common.block.DelightfulCabinetBlock;
-import net.brdle.delightful.common.config.DelightfulConfig;
 import net.brdle.delightful.common.config.EnabledCondition;
 import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.item.knife.CompatKnifeItem;
@@ -13,6 +13,7 @@ import net.brdle.delightful.common.item.knife.DelightfulKnifeItem;
 import net.brdle.delightful.common.item.knife.TaggedKnifeItem;
 import net.brdle.delightful.common.tag.DelightfulItemTags;
 import net.brdle.delightful.compat.nuggets.Nugget;
+import net.brdle.rottenleather.common.RottenLeatherItems;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.DataGenerator;
@@ -26,14 +27,12 @@ import net.minecraft.world.item.alchemy.PotionUtils;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
-import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.ConditionalRecipe;
-import net.minecraftforge.common.crafting.NBTIngredient;
+import net.minecraftforge.common.crafting.StrictNBTIngredient;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import net.onvoid.rottenleather.common.RottenLeatherItems;
 import org.jetbrains.annotations.NotNull;
 import vectorwing.farmersdelight.common.registry.ModItems;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
@@ -63,7 +62,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             .filter(item -> item instanceof DelightfulKnifeItem)
             .map(item -> (DelightfulKnifeItem) item)
             .forEach(k -> knife(k, finished));
-        knifeSmeltAndBlast((DelightfulKnifeItem) DelightfulItems.BONE_KNIFE.get(), "bone/knife", Items.BONE_MEAL.getRegistryName(), finished);
+        knifeSmeltAndBlast((DelightfulKnifeItem) DelightfulItems.BONE_KNIFE.get(), "bone/knife", ForgeRegistries.ITEMS.getKey(Items.BONE_MEAL), finished);
 
         // Foods
         // Cooking
@@ -191,7 +190,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             .addCondition(enabled("marshmallow_stick"))
             .addRecipe(f -> ShapelessRecipeBuilder.shapeless(DelightfulItems.MARSHMALLOW_STICK.get(), 2)
                 .requires(DelightfulItemTags.SUGAR)
-                .requires(NBTIngredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
+                .requires(StrictNBTIngredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
                 .requires(Tags.Items.RODS_WOODEN)
                 .requires(Tags.Items.RODS_WOODEN)
                 .unlockedBy("has_sugar", has(Items.SUGAR))
@@ -265,7 +264,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             .addCondition(and(enabled("azalea_tea"), itemExists("ecologics", "azalea_flower")))
             .addRecipe(f -> CookingPotRecipeBuilder.cookingPotRecipe(
                     DelightfulItems.AZALEA_TEA.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
-                .addIngredient(NBTIngredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
+                .addIngredient(StrictNBTIngredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
                 .addIngredient(DelightfulItemTags.TEA_LEAVES_GREEN)
                 .addIngredient(modItem("ecologics", "azalea_flower"))
                 .build(f))
@@ -283,7 +282,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
           .addCondition(and(enabled("lavender_tea"), itemExists("biomesoplenty", "lavender")))
           .addRecipe(f -> CookingPotRecipeBuilder.cookingPotRecipe(
               DelightfulItems.LAVENDER_TEA.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
-            .addIngredient(NBTIngredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
+            .addIngredient(StrictNBTIngredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
             .addIngredient(DelightfulItemTags.TEA_LEAVES_GREEN)
             .addIngredient(modItem("biomesoplenty", "lavender"))
             .build(f))
@@ -545,7 +544,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
     }
 
     private void cabinet(DelightfulCabinetBlock block, Consumer<FinishedRecipe> finished) {
-        String path = block.getRegistryName().getPath();
+        String path = Util.name(block);
         ConditionalRecipe.builder()
             .addCondition(enabled(path))
             .addRecipe(f -> ShapedRecipeBuilder.shaped(block)
@@ -566,7 +565,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             taggedKnife(tki, finished);
             return;
         }
-        String path = knife.getRegistryName().getPath();
+        String path = Util.name(knife);
         ConditionalRecipe.builder()
             .addCondition(and(enabled(path)))
             .addRecipe(f -> ShapedRecipeBuilder.shaped(knife)
@@ -592,7 +591,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 knifeSmeltAndBlast(knife, metal, new ResourceLocation(mod.getModid(), mod.formatMetal(metal)), finished);
             }
         });
-        String path = knife.getRegistryName().getPath();
+        String path = Util.name(knife);
         var add = ItemTags.create(knife.getTag());
         var cond = (knife instanceof CompatKnifeItem cki) ?
                 and(enabled(path), modLoaded(cki.getModid()), not(tagEmpty(add))) :
@@ -613,14 +612,14 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 
     private void knifeSmeltAndBlast(DelightfulKnifeItem knife, String metal, ResourceLocation nugget, Consumer<FinishedRecipe> finished) {
         ConditionalRecipe.builder()
-            .addCondition(and(enabled(knife.getRegistryName().getPath()), itemExists(nugget.getNamespace(), nugget.getPath())))
+            .addCondition(and(enabled(Util.name(knife)), itemExists(nugget.getNamespace(), nugget.getPath())))
             .addRecipe(f -> SimpleCookingRecipeBuilder.smelting(Ingredient.of(knife), Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(nugget)), 0.1F, 200)
                 .unlockedBy("has_" + metal + "_knife", InventoryChangeTrigger.TriggerInstance.hasItems(knife))
                 .save(f, new ResourceLocation(Delightful.MODID, "knives/smelting/" + metal + "_" + nugget.getNamespace())))
             .generateAdvancement()
             .build(finished, Delightful.MODID, "knives/smelting/" + metal + "_" + nugget.getNamespace());
         ConditionalRecipe.builder()
-            .addCondition(and(enabled(knife.getRegistryName().getPath()), itemExists(nugget.getNamespace(), nugget.getPath())))
+            .addCondition(and(enabled(Util.name(knife)), itemExists(nugget.getNamespace(), nugget.getPath())))
             .addRecipe(f -> SimpleCookingRecipeBuilder.blasting(Ingredient.of(knife), Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(nugget)), 0.1F, 100)
                 .unlockedBy("has_" + metal + "_knife", InventoryChangeTrigger.TriggerInstance.hasItems(knife))
                 .save(f, new ResourceLocation(Delightful.MODID, "knives/blasting/" + metal + "_" + nugget.getNamespace())))
@@ -629,7 +628,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
     }
 
     private void knifeSmith(TaggedKnifeItem knife, Consumer<FinishedRecipe> finished) {
-        String path = knife.getRegistryName().getPath();
+        String path = Util.name(knife);
         var add = ItemTags.create(knife.getTag());
         ConditionalRecipe.builder()
             .addCondition(and(enabled(path), not(tagEmpty(add))))

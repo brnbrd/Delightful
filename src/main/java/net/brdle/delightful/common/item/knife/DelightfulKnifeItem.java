@@ -1,11 +1,11 @@
 package net.brdle.delightful.common.item.knife;
 
+import net.brdle.delightful.Util;
 import net.brdle.delightful.common.config.DelightfulConfig;
 import net.brdle.delightful.common.item.IConfigured;
 import net.brdle.delightful.common.item.ISingleIngredient;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.TooltipFlag;
@@ -29,8 +29,8 @@ public class DelightfulKnifeItem extends KnifeItem implements IConfigured, ISing
      */
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> tool, TooltipFlag pIsAdvanced) {
-        if (!DelightfulConfig.CONFIG.stuff.get(this.getRegistryName().getPath()).get()) {
-            tool.add(new TextComponent("Disabled.").withStyle(ChatFormatting.UNDERLINE));
+        if (!DelightfulConfig.CONFIG.stuff.get(Util.name(this)).get()) {
+            tool.add(Component.literal("Disabled.").withStyle(ChatFormatting.UNDERLINE));
         }
     }
 
@@ -41,6 +41,6 @@ public class DelightfulKnifeItem extends KnifeItem implements IConfigured, ISing
 
     @Override
     public boolean isEnabled() {
-        return DelightfulConfig.CONFIG.stuff.get(this.getRegistryName().getPath()).get();
+        return DelightfulConfig.CONFIG.stuff.get(Util.name(this)).get();
     }
 }

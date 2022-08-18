@@ -4,7 +4,6 @@ import com.google.gson.JsonObject;
 import net.brdle.delightful.Delightful;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
-import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.crafting.conditions.ICondition;
 import net.minecraftforge.common.crafting.conditions.IConditionSerializer;
 
@@ -23,18 +22,8 @@ public class EnabledCondition implements ICondition {
 
     @Override
     public boolean test(IContext context) {
-        return this.test();
-    }
-
-    /**
-     * @deprecated Use {@linkplain #test(IContext) the other more general overload}.
-     */
-    @Override
-    @SuppressWarnings("deprecated")
-    @Deprecated
-    public boolean test() {
         return DelightfulConfig.CONFIG.stuff.containsKey(this.value) &&
-                DelightfulConfig.CONFIG.stuff.get(this.value).get();
+          DelightfulConfig.CONFIG.stuff.get(this.value).get();
     }
 
     @Override
