@@ -10,8 +10,11 @@
               "type": "delightful:enabled"
             },
             {
-              "item": "biomesoplenty:rose_quartz_shard",
-              "type": "forge:item_exists"
+              "value": {
+                "tag": "forge:gems/rose_quartz",
+                "type": "forge:tag_empty"
+              },
+              "type": "forge:not"
             }
           ],
           "type": "forge:and"
@@ -21,10 +24,10 @@
         "type": "minecraft:crafting_shapeless",
         "ingredients": [
           {
-            "item": "biomesoplenty:rose_quartz_shard"
+            "tag": "forge:gems/rose_quartz"
           },
           {
-            "item": "biomesoplenty:rose_quartz_shard"
+            "tag": "forge:gems/rose_quartz"
           },
           {
             "tag": "forge:sugar"

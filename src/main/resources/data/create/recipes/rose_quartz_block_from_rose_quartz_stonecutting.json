@@ -1,0 +1,33 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "values": [
+            {
+              "modid": "create",
+              "type": "forge:mod_loaded"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:gems/rose_quartz"
+              }
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "tag": "forge:gems/rose_quartz"
+        },
+        "result": "create:rose_quartz_block",
+        "count": 2
+      }
+    }
+  ]
+}

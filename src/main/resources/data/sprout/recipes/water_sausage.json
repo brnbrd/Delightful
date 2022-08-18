@@ -1,14 +1,27 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
+  "type": "forge:conditional",
+  "recipes": [
     {
-      "item": "minecraft:bread"
-    },
-    {
-      "tag": "forge:cattail"
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "sprout:water_sausage"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "minecraft:bread"
+          },
+          {
+            "tag": "forge:cattail"
+          }
+        ],
+        "result": {
+          "item": "sprout:water_sausage"
+        }
+      }
     }
-  ],
-  "result": {
-    "item": "sprout:water_sausage"
-  }
+  ]
 }

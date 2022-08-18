@@ -1,11 +1,24 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
+  "type": "forge:conditional",
+  "recipes": [
     {
-      "item": "minecraft:air"
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "override:this_recipe"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "minecraft:dirt"
+          }
+        ],
+        "result": {
+          "item": "minecraft:dirt"
+        }
+      }
     }
-  ],
-  "result": {
-    "item": "minecraft:air"
-  }
+  ]
 }

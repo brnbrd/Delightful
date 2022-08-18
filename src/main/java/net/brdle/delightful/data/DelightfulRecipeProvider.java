@@ -377,10 +377,10 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             .of(DelightfulItems.ANIMAL_FAT.get()).build()))
           .save(finished, "candle_from_animal_fat");
         ConditionalRecipe.builder()
-          .addCondition(and(enabled("rock_candy"), itemExists("biomesoplenty", "rose_quartz_shard")))
+          .addCondition(and(enabled("rock_candy"), not(tagEmpty(DelightfulItemTags.GEMS_ROSE_QUARTZ))))
           .addRecipe(f -> ShapelessRecipeBuilder.shapeless(DelightfulItems.ROCK_CANDY.get(), 1)
-            .requires(modItem("biomesoplenty", "rose_quartz_shard"))
-            .requires(modItem("biomesoplenty", "rose_quartz_shard"))
+            .requires(DelightfulItemTags.GEMS_ROSE_QUARTZ)
+            .requires(DelightfulItemTags.GEMS_ROSE_QUARTZ)
             .requires(DelightfulItemTags.SUGAR)
             .requires(Tags.Items.RODS_WOODEN)
             .unlockedBy("has_sugar", has(Items.SUGAR))

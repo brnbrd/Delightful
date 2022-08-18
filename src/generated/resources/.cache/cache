@@ -93,7 +93,7 @@ a5195b88269ae25748d25a5292fb43b446af0961 data/delightful/advancements/recipes/fo
 bd801b9ef2d1d5d4888a7f3368c29497ba82e675 data/delightful/advancements/recipes/food/matcha_latte.json
 a18dfbb4d0cbca19359e9ce4f63595d74d5ff7f9 data/delightful/advancements/recipes/food/nut_butter_and_jelly_sandwich.json
 3e7527ae7ab3ebc9a8156e63d7ee8dcb5a0e9c08 data/delightful/advancements/recipes/food/prickly_pear_juice.json
-8b043cf86d2812ceb409c750c8e8554f17097aa1 data/delightful/advancements/recipes/food/rock_candy.json
+59b0045a6d872b6b2df5801c2c7236890c36c5a2 data/delightful/advancements/recipes/food/rock_candy.json
 9c01fb9e63a5372edaf5a219e9e5fc5d5cb9d0dd data/delightful/advancements/recipes/food/smore.json
 129809a3ceb08733322e4f8b720612304c980afa data/delightful/advancements/recipes/green_tea_leaves_from_green_tea_leaf.json
 29577999acb2c731e10c56af11ff5bb0c78f339a data/delightful/advancements/recipes/knives/black_opal_knife.json
@@ -210,7 +210,7 @@ f5a694911e209f7097a7dfd0b97628937a2cd93a data/delightful/recipes/food/marshmallo
 7ed5b79078091436232830454870c028fce2509d data/delightful/recipes/food/matcha_latte.json
 c6bc3d3ba9d669eba7b4cb070212d1ff1e501fc5 data/delightful/recipes/food/nut_butter_and_jelly_sandwich.json
 8d09512599614c2f793822d34ed4ff74fa0939db data/delightful/recipes/food/prickly_pear_juice.json
-b1c2a6e3a0349fd670e8332613013478d9e0d58f data/delightful/recipes/food/rock_candy.json
+e61272eaa9b6628914f5fb42e2d10ddb2a34bfe8 data/delightful/recipes/food/rock_candy.json
 f389ae4b519f249f1422b14a6079b1949ea93777 data/delightful/recipes/food/smore.json
 d3a8decfbe8e612b82030ce9e1ff6489e717d93b data/delightful/recipes/green_tea_leaves_from_green_tea_leaf.json
 ded863febf054e11d9e7e97277e76e607c68114e data/delightful/recipes/knives/black_opal_knife.json
@@ -315,6 +315,7 @@ aaabff20968e0b39e0a18b5dc64d039a1bf1dbcb data/forge/tags/items/fruits/apple.json
 37c61304bf4cae4d1df17626b1be6e8318c08a2c data/forge/tags/items/fruits/strawberries.json
 716e034f59c28d332417b0ef761f951274dbeeee data/forge/tags/items/fruits/sweet.json
 471f912ddcaad82c4e635a23ba1316c7c48df73e data/forge/tags/items/fruits/sweet_berries.json
+12fee4e980d924f5d9fac7ddd1b0fb2e0677411a data/forge/tags/items/gems/rose_quartz.json
 d60885d9481245a228f7e3ecdf77340dc9bbea14 data/forge/tags/items/ingots/steel.json
 87e7f1c76041fde23479c5957996e68b62e8df02 data/forge/tags/items/jelly.json
 af4579016a924b064edd52bbe7a44288417e0c1a data/forge/tags/items/milk.json
