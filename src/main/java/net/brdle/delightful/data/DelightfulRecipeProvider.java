@@ -463,6 +463,11 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
               Ingredient.of(ForgeTags.TOOLS_KNIVES),
               Items.MELON_SLICE, 6)
           .build(finished);
+        ShapelessRecipeBuilder.shapeless(Items.MELON_SLICE, 3)
+          .requires(DelightfulItems.MINI_MELON.get())
+          .requires(ForgeTags.TOOLS_KNIVES)
+          .unlockedBy("has_mini_melon", has(DelightfulItems.MINI_MELON.get()))
+          .save(finished);
         ConditionalRecipe.builder()
           .addCondition(enabled("salmonberry_sack"))
           .addRecipe(f -> ShapelessRecipeBuilder.shapeless(DelightfulItems.SALMONBERRY_SACK.get(), 1)

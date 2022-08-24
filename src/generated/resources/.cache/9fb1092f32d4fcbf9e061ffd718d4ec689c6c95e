@@ -1,4 +1,4 @@
-// 1.19	2022-08-24T13:52:25.000594	Recipes
+// 1.19	2022-08-24T14:12:11.659554	Recipes
 60ffe246fc7cd82d396e8dc65184da554be1a88a data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 2cf937c163d47a583b4eb63671b5c4e3055179cc data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
 5d0d5aa5a6eaa52a4cce3cbf808e9782cc09269f data/delightful/advancements/recipes/cooking/animal_oil_bottle.json
@@ -119,5 +119,7 @@ dcad4611b602b1bc4b2e4fe17e3815cbd0cb83db data/ecologics/recipes/tropical_stew.js
 292b5d18863768344c8fe9c27e370b08c46c717f data/farmersdelight/recipes/cutting/mini_melon.json
 beba348b9bdc97ce07d33c74ad748236b3b35bd0 data/minecraft/advancements/recipes/decorations/candle_from_animal_fat.json
 5bf85464458eef454a0b4e02e59425953f0bdcc3 data/minecraft/advancements/recipes/decorations/torch_from_animal_oil_bottle.json
+745ef5c1cd57972cf6619d9a42938202f4e15583 data/minecraft/advancements/recipes/food/melon_slice.json
 069f9d4a8a1cf09ce44c6da2b78a411dd7dffd3d data/minecraft/recipes/candle_from_animal_fat.json
+86d51e102f28acffd9029e54bce5a5dce2c272c4 data/minecraft/recipes/melon_slice.json
 6ff45ea83a2136032559c113a5fb650c0d141248 data/minecraft/recipes/torch_from_animal_oil_bottle.json
