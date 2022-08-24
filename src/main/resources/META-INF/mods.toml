@@ -30,31 +30,3 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
     versionRange="[1.1.2,)"
     ordering="AFTER"
     side="BOTH"
-
-[[dependencies.delightful]]
-    modId="ecologics"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="AFTER"
-    side="BOTH"
-
-[[dependencies.delightful]]
-    modId="biomemakeover"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="AFTER"
-    side="BOTH"
-
-[[dependencies.delightful]]
-    modId="sprout"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="AFTER"
-    side="BOTH"
-
-[[dependencies.delightful]]
-    modId="lolenderite"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="AFTER"
-    side="BOTH"
