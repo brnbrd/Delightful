@@ -3,9 +3,6 @@
   "ingredients": [
     {
       "item": "delightful:mini_melon"
-    },
-    {
-      "tag": "forge:tools/knives"
     }
   ],
   "result": {
