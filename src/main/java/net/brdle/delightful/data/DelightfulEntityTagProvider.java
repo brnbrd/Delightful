@@ -50,7 +50,21 @@ public class DelightfulEntityTagProvider extends EntityTypeTagsProvider {
 			.addOptional(mod("goodall", "manatee"))
 			.addOptional(mod("goodall", "red_deer"))
 			.addOptional(mod("goodall", "seal"))
-			.addOptional(mod("goodall", "white_tailed_deer"));
+			.addOptional(mod("goodall", "white_tailed_deer"))
+			.addOptional(mod("neapolitan", "chimpanzee"))
+			.addOptional(mod("naturalist", "bear"))
+			.addOptional(mod("naturalist", "boar"))
+			.addOptional(mod("naturalist", "deer"))
+			.addOptional(mod("naturalist", "elephant"))
+			.addOptional(mod("naturalist", "giraffe"))
+			.addOptional(mod("naturalist", "hippo"))
+			.addOptional(mod("naturalist", "lion"))
+			.addOptional(mod("naturalist", "rhino"))
+			.addOptional(mod("naturalist", "zebra"))
+			.addOptional(mod("duckling", "duck"))
+			.addOptional(mod("duckling", "quackling"))
+			.addOptional(mod("buzzier_bees", "moobloom"))
+			.addOptional(mod("buzzier_bees", "grizzly_bear"));
 	}
 
 	/**
