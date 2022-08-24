@@ -59,6 +59,62 @@
     {
       "id": "goodall:white_tailed_deer",
       "required": false
+    },
+    {
+      "id": "neapolitan:chimpanzee",
+      "required": false
+    },
+    {
+      "id": "naturalist:bear",
+      "required": false
+    },
+    {
+      "id": "naturalist:boar",
+      "required": false
+    },
+    {
+      "id": "naturalist:deer",
+      "required": false
+    },
+    {
+      "id": "naturalist:elephant",
+      "required": false
+    },
+    {
+      "id": "naturalist:giraffe",
+      "required": false
+    },
+    {
+      "id": "naturalist:hippo",
+      "required": false
+    },
+    {
+      "id": "naturalist:lion",
+      "required": false
+    },
+    {
+      "id": "naturalist:rhino",
+      "required": false
+    },
+    {
+      "id": "naturalist:zebra",
+      "required": false
+    },
+    {
+      "id": "duckling:duck",
+      "required": false
+    },
+    {
+      "id": "duckling:quackling",
+      "required": false
+    },
+    {
+      "id": "buzzier_bees:moobloom",
+      "required": false
+    },
+    {
+      "id": "buzzier_bees:grizzly_bear",
+      "required": false
     }
   ]
 }

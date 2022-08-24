@@ -4,6 +4,10 @@
     "#forge:fruits/sweet_berries",
     "#forge:fruits/glow_berries",
     "#forge:fruits/salmonberries",
-    "#forge:fruits/strawberries"
+    "#forge:fruits/strawberries",
+    {
+      "id": "twilightforest:torchberries",
+      "required": false
+    }
   ]
 }
