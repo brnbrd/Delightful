@@ -393,16 +393,6 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
           .generateAdvancement()
           .build(finished, "ecologics", "tropical_stew");
         ConditionalRecipe.builder()
-          .addCondition(itemExists("biomemakeover", "glowshroom_stew"))
-          .addRecipe(f -> CookingPotRecipeBuilder.cookingPotRecipe(
-            modItem("biomemakeover", "glowshroom_stew"), 1, CookingRecipes.NORMAL_COOKING, 0.35F, Items.BOWL)
-            .addIngredient(modItem("biomemakeover", "purple_glowshroom"))
-            .addIngredient(modItem("biomemakeover", "green_glowshroom"))
-            .addIngredient(modItem("biomemakeover", "orange_glowshroom"))
-            .build(f))
-          .generateAdvancement()
-          .build(finished, "biomemakeover", "glowshroom_stew");
-        ConditionalRecipe.builder()
           .addCondition(and(enabled("chopped_clover"), itemExists("biomesoplenty", "clover")))
           .addRecipe(f -> CuttingBoardRecipeBuilder.cuttingRecipe(
               Ingredient.of(modItem("biomesoplenty", "clover")),
@@ -435,38 +425,6 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
               DelightfulItems.CACTUS_FLESH.get(), 2)
           .build(f))
         .build(finished, Delightful.MODID, "cactus_flesh");
-        ConditionalRecipe.builder()
-          .addCondition(and(enabled("cactus_flesh"), itemExists("quark", "cactus_block")))
-          .addRecipe(f -> CuttingBoardRecipeBuilder.cuttingRecipe(
-              Ingredient.of(modItem("quark", "cactus_block")),
-              Ingredient.of(ForgeTags.TOOLS_KNIVES),
-              DelightfulItems.CACTUS_FLESH.get(), 18)
-            .build(f))
-          .build(finished, Delightful.MODID, "cactus_flesh_from_cactus_block");
-        ConditionalRecipe.builder()
-          .addCondition(and(enabled("cactus_flesh"), itemExists("biomemakeover", "barrel_cactus")))
-          .addRecipe(f -> CuttingBoardRecipeBuilder.cuttingRecipe(
-              Ingredient.of(modItem("biomemakeover", "barrel_cactus")),
-              Ingredient.of(ForgeTags.TOOLS_KNIVES),
-              DelightfulItems.CACTUS_FLESH.get(), 1)
-            .build(f))
-          .build(finished, Delightful.MODID, "cactus_flesh_from_barrel_cactus");
-        ConditionalRecipe.builder()
-          .addCondition(and(enabled("cactus_flesh"), itemExists("biomemakeover", "barrel_cactus_flowered")))
-          .addRecipe(f -> CuttingBoardRecipeBuilder.cuttingRecipe(
-              Ingredient.of(modItem("biomemakeover", "barrel_cactus_flowered")),
-              Ingredient.of(ForgeTags.TOOLS_KNIVES),
-              DelightfulItems.CACTUS_FLESH.get(), 1)
-            .build(f))
-          .build(finished, Delightful.MODID, "cactus_flesh_from_barrel_cactus_flowered");
-        ConditionalRecipe.builder()
-          .addCondition(and(enabled("cactus_flesh"), itemExists("biomemakeover", "saguaro_cactus")))
-          .addRecipe(f -> CuttingBoardRecipeBuilder.cuttingRecipe(
-              Ingredient.of(modItem("biomemakeover", "saguaro_cactus")),
-              Ingredient.of(ForgeTags.TOOLS_KNIVES),
-              DelightfulItems.CACTUS_FLESH.get(), 2)
-            .build(f))
-          .build(finished, Delightful.MODID, "cactus_flesh_from_saguaro_cactus");
         ConditionalRecipe.builder()
           .addCondition(enabled("cactus_steak"))
           .addRecipe(f -> SimpleCookingRecipeBuilder.smelting(Ingredient.of(DelightfulItems.CACTUS_FLESH.get()),

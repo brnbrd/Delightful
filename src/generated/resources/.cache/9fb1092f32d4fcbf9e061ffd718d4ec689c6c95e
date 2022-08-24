@@ -1,6 +1,4 @@
-// 1.19	2022-08-18T23:29:06.85121	Recipes
-2a18775facf4e2cc75404952272260197feaa21a data/biomemakeover/advancements/recipes/glowshroom_stew.json
-0e59adee128dc3113a7f30bbc7b156c939c50e8f data/biomemakeover/recipes/glowshroom_stew.json
+// 1.19	2022-08-24T13:52:25.000594	Recipes
 60ffe246fc7cd82d396e8dc65184da554be1a88a data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 2cf937c163d47a583b4eb63671b5c4e3055179cc data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
 5d0d5aa5a6eaa52a4cce3cbf808e9782cc09269f data/delightful/advancements/recipes/cooking/animal_oil_bottle.json
@@ -59,10 +57,6 @@ b548e02dc410dd6488d6e08b4e594188d602a763 data/delightful/advancements/recipes/st
 caebb4125fcf89916965a85d84d8b9f5c952fde2 data/delightful/recipes/cabinets/basalt_cabinet.json
 9c559ef7e05961f3abe4b06901228ca7e14a77c8 data/delightful/recipes/cabinets/quartz_cabinet.json
 0d5d2333e9578ece744fac84ca2681fba2fcbef3 data/delightful/recipes/cactus_flesh.json
-4cc20c4dee0298bc7b97b20c5a28a04804aa4b3f data/delightful/recipes/cactus_flesh_from_barrel_cactus.json
-8a48110944a1db68efd3b3aa9fe67ad70a7f3da8 data/delightful/recipes/cactus_flesh_from_barrel_cactus_flowered.json
-cce9636e260498822a84ba7a509e3689ffb95d8a data/delightful/recipes/cactus_flesh_from_cactus_block.json
-6407022cf6100259c98c505491f3836881cc8241 data/delightful/recipes/cactus_flesh_from_saguaro_cactus.json
 2f06da60b250add588b9672750022de70927ce6f data/delightful/recipes/chopped_clover.json
 89fe492df718bf934a4d5161b513af752bfbe0ca data/delightful/recipes/chopped_clover_from_huge_clover_petal.json
 e4effe42d4c7a98e3a8e6ba29363aa4145107e48 data/delightful/recipes/clover_honey.json
