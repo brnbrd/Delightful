@@ -25,6 +25,7 @@
     }
   ],
   "item": "delightful:animal_fat",
+  "maxAmount": 3,
   "minAmount": 2,
   "unique": true
 }

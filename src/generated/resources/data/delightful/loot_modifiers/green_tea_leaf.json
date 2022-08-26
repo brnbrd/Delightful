@@ -17,6 +17,7 @@
     }
   ],
   "item": "delightful:green_tea_leaf",
+  "maxAmount": 1,
   "minAmount": 1,
   "unique": true
 }

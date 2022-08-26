@@ -44,7 +44,7 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 					EntityEquipmentPredicate.Builder.equipment().mainhand(ItemPredicate.Builder.item().of(ForgeTags.TOOLS_KNIVES).build()).build()).build()).build(),
 				LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS, EntityPredicate.Builder.entity().of(DelightfulEntityTags.FATTY_ANIMALS)).build()
 			},
-			DelightfulItems.ANIMAL_FAT.get(), 1, 2, true
+			DelightfulItems.ANIMAL_FAT.get(), 2, 3, true
 		));
 	}
 }

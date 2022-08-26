@@ -17,7 +17,7 @@ public class AddItemLootModifier extends LootModifier {
     public static final Codec<AddItemLootModifier> CODEC = RecordCodecBuilder.create(inst -> codecStart(inst)
       .and(ForgeRegistries.ITEMS.getCodec().fieldOf("item").forGetter(g -> g.item))
       .and(Codec.INT.fieldOf("minAmount").forGetter(g -> g.minAmount))
-      .and(Codec.INT.fieldOf("minAmount").forGetter(g -> g.maxAmount))
+      .and(Codec.INT.fieldOf("maxAmount").forGetter(g -> g.maxAmount))
       .and(Codec.BOOL.fieldOf("unique").forGetter(g -> g.unique))
       .apply(inst, AddItemLootModifier::new));
     private final Item item;
