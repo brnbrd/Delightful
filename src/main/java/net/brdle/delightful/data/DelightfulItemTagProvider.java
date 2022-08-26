@@ -41,6 +41,10 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.FRUITS_PRICKLY_PEAR).addOptional(new ResourceLocation("ecologics", "prickly_pear"));
 		this.tag(DelightfulItemTags.FRUITS_TORCHBERRIES).addOptional(new ResourceLocation("twilightforest", "torchberries"));
 		this.tag(DelightfulItemTags.FRUITS_SOURCEBERRY).addOptional(new ResourceLocation("ars_nouveau", "source_berry"));
+		this.tag(DelightfulItemTags.FRUITS_ELDERBERRY).addOptional(new ResourceLocation("rootsclassic", "elderberry"));
+		this.tag(DelightfulItemTags.FRUITS_BLACKCURRANT).addOptional(new ResourceLocation("rootsclassic", "blackcurrant"));
+		this.tag(DelightfulItemTags.FRUITS_REDCURRANT).addOptional(new ResourceLocation("rootsclassic", "redcurrant"));
+		this.tag(DelightfulItemTags.FRUITS_WHITECURRANT).addOptional(new ResourceLocation("rootsclassic", "whitecurrant"));
 		this.tag(DelightfulItemTags.FRUITS_STRAWBERRIES)
 			.addOptional(new ResourceLocation("neapolitan", "strawberries"))
 			.addOptional(new ResourceLocation("neapolitan", "white_strawberries"));
@@ -52,7 +56,11 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_SALMONBERRIES)
 			.addTag(DelightfulItemTags.FRUITS_STRAWBERRIES)
 			.addTag(DelightfulItemTags.FRUITS_TORCHBERRIES)
-			.addTag(DelightfulItemTags.FRUITS_SOURCEBERRY);
+			.addTag(DelightfulItemTags.FRUITS_SOURCEBERRY)
+			.addTag(DelightfulItemTags.FRUITS_ELDERBERRY)
+			.addTag(DelightfulItemTags.FRUITS_BLACKCURRANT)
+			.addTag(DelightfulItemTags.FRUITS_REDCURRANT)
+			.addTag(DelightfulItemTags.FRUITS_WHITECURRANT);
 		this.tag(DelightfulItemTags.FRUITS)
 			.addTag(DelightfulItemTags.FRUITS_APPLE)
 			.addTag(DelightfulItemTags.FRUITS_KIWI)
@@ -113,6 +121,10 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.GEMS_ROSE_QUARTZ)
 			.addOptional(new ResourceLocation("biomesoplenty", "rose_quartz_shard"))
 			.addOptional(new ResourceLocation("create", "rose_quartz"));
+		this.tag(DelightfulItemTags.CHOCOLATE)
+			.addOptional(new ResourceLocation("neapolitan", "chocolate_bar"));
+		this.tag(ForgeTags.SALAD_INGREDIENTS)
+			.add(DelightfulItems.CHOPPED_CLOVER.get());
 
 		// Minecraft
 		this.tag(ItemTags.PIGLIN_LOVED).add(DelightfulItems.REFINED_GLOWSTONE_KNIFE.get());

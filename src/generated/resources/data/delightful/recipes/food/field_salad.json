@@ -9,10 +9,6 @@
             {
               "type": "delightful:enabled",
               "value": "field_salad"
-            },
-            {
-              "type": "forge:mod_loaded",
-              "modid": "biomesoplenty"
             }
           ]
         }
@@ -21,10 +17,13 @@
         "type": "minecraft:crafting_shapeless",
         "ingredients": [
           {
-            "item": "delightful:chopped_clover"
+            "item": "minecraft:bowl"
           },
           {
-            "item": "delightful:chopped_clover"
+            "tag": "forge:salad_ingredients"
+          },
+          {
+            "tag": "forge:salad_ingredients"
           },
           {
             "item": "delightful:cactus_steak"

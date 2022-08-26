@@ -29,9 +29,11 @@ import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.ConditionalRecipe;
 import net.minecraftforge.common.crafting.StrictNBTIngredient;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
+import net.minecraftforge.common.data.ForgeRecipeProvider;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
+import vectorwing.farmersdelight.FarmersDelight;
 import vectorwing.farmersdelight.common.registry.ModItems;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
 import vectorwing.farmersdelight.data.builder.CookingPotRecipeBuilder;
@@ -435,34 +437,22 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
           .generateAdvancement()
           .build(finished, Delightful.MODID, "smelting/cactus_flesh");
         ConditionalRecipe.builder()
-          .addCondition(and(enabled("field_salad"), modLoaded("biomesoplenty")))
-          .addRecipe(f -> ShapelessRecipeBuilder.shapeless(DelightfulItems.FIELD_SALAD.get(), 1)
-            .requires(DelightfulItems.CHOPPED_CLOVER.get())
-            .requires(DelightfulItems.CHOPPED_CLOVER.get())
-            .requires(DelightfulItems.CACTUS_STEAK.get())
-            .requires(Items.CARROT)
-            .requires(DelightfulItemTags.FRUITS_SALMONBERRIES)
-            .unlockedBy("has_chopped_clover", has(DelightfulItems.CHOPPED_CLOVER.get()))
-            .save(f))
-          .generateAdvancement()
-          .build(finished, Delightful.MODID, "food/field_salad");
-        ConditionalRecipe.builder()
-          .addCondition(and(enabled("field_salad"), not(modLoaded("biomesoplenty"))))
+          .addCondition(and(enabled("field_salad")))
           .addRecipe(f -> ShapelessRecipeBuilder.shapeless(DelightfulItems.FIELD_SALAD.get(), 1)
             .requires(Items.BOWL)
-            .requires(ForgeTags.SALAD_INGREDIENTS_CABBAGE)
-            .requires(ForgeTags.SALAD_INGREDIENTS_CABBAGE)
+            .requires(ForgeTags.SALAD_INGREDIENTS)
+            .requires(ForgeTags.SALAD_INGREDIENTS)
             .requires(DelightfulItems.CACTUS_STEAK.get())
             .requires(Items.CARROT)
             .requires(DelightfulItemTags.FRUITS_SALMONBERRIES)
             .unlockedBy("has_cactus_steak", has(DelightfulItems.CACTUS_STEAK.get()))
             .save(f))
           .generateAdvancement()
-          .build(finished, Delightful.MODID, "food/field_salad_no_biomesoplenty");
+          .build(finished, Delightful.MODID, "food/field_salad");
         CuttingBoardRecipeBuilder.cuttingRecipe(
-              Ingredient.of(DelightfulItems.MINI_MELON.get()),
-              Ingredient.of(ForgeTags.TOOLS_KNIVES),
-              Items.MELON_SLICE, 6)
+          Ingredient.of(DelightfulItems.MINI_MELON.get()),
+          Ingredient.of(ForgeTags.TOOLS_KNIVES),
+          Items.MELON_SLICE, 6)
           .build(finished);
         ShapelessRecipeBuilder.shapeless(Items.MELON_SLICE, 3)
           .requires(DelightfulItems.MINI_MELON.get())
@@ -492,10 +482,39 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             .save(f))
           .generateAdvancement()
           .build(finished, Delightful.MODID, "storage/unpack_salmonberries");
-        ShapelessRecipeBuilder.shapeless(DelightfulItems.SALMONBERRY_PIPS.get())
-          .requires(DelightfulItems.SALMONBERRIES.get())
-          .unlockedBy("has_salmonberries", has(DelightfulItems.SALMONBERRIES.get()))
-          .save(finished);
+        ConditionalRecipe.builder()
+          .addCondition(enabled("salmonberry_pips"))
+          .addRecipe(f -> ShapelessRecipeBuilder.shapeless(DelightfulItems.SALMONBERRY_PIPS.get())
+            .requires(DelightfulItems.SALMONBERRIES.get())
+            .unlockedBy("has_salmonberries", has(DelightfulItems.SALMONBERRIES.get()))
+            .save(f))
+          .generateAdvancement()
+          .build(finished, Delightful.MODID, "salmonberry_pips");
+        ConditionalRecipe.builder()
+          .addCondition(not(tagEmpty(DelightfulItemTags.CHOCOLATE)))
+          .addRecipe(f -> ShapedRecipeBuilder.shaped(ModItems.CHOCOLATE_PIE.get(), 1)
+            .pattern("ccc")
+            .pattern("mmm")
+            .pattern("xOx")
+            .define('c', DelightfulItemTags.CHOCOLATE)
+            .define('m', ForgeTags.MILK)
+            .define('x', Items.SUGAR)
+            .define('O', ModItems.PIE_CRUST.get())
+            .unlockedBy("has_pie_crust", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.PIE_CRUST.get()))
+            .save(f))
+          .addCondition(tagEmpty(DelightfulItemTags.CHOCOLATE))
+          .addRecipe(f -> ShapedRecipeBuilder.shaped(ModItems.CHOCOLATE_PIE.get(), 1)
+            .pattern("ccc")
+            .pattern("mmm")
+            .pattern("xOx")
+            .define('c', Items.COCOA_BEANS)
+            .define('m', ForgeTags.MILK)
+            .define('x', Items.SUGAR)
+            .define('O', ModItems.PIE_CRUST.get())
+            .unlockedBy("has_pie_crust", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.PIE_CRUST.get()))
+            .save(f))
+          .generateAdvancement()
+          .build(finished, FarmersDelight.MODID, "chocolate_pie");
         }
 
     private InventoryChangeTrigger.TriggerInstance has(ItemLike... items) {

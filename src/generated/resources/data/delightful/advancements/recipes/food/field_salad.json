@@ -4,12 +4,12 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_chopped_clover": {
+          "has_cactus_steak": {
             "conditions": {
               "items": [
                 {
                   "items": [
-                    "delightful:chopped_clover"
+                    "delightful:cactus_steak"
                   ]
                 }
               ]
@@ -25,7 +25,7 @@
         },
         "requirements": [
           [
-            "has_chopped_clover",
+            "has_cactus_steak",
             "has_the_recipe"
           ]
         ],
@@ -42,10 +42,6 @@
             {
               "type": "delightful:enabled",
               "value": "field_salad"
-            },
-            {
-              "type": "forge:mod_loaded",
-              "modid": "biomesoplenty"
             }
           ]
         }

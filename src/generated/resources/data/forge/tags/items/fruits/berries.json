@@ -5,6 +5,10 @@
     "#forge:fruits/salmonberries",
     "#forge:fruits/strawberries",
     "#forge:fruits/torchberries",
-    "#forge:fruits/sourceberry"
+    "#forge:fruits/sourceberry",
+    "#forge:fruits/elderberry",
+    "#forge:fruits/blackcurrant",
+    "#forge:fruits/redcurrant",
+    "#forge:fruits/whitecurrant"
   ]
 }

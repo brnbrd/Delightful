@@ -31,10 +31,15 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> FRUITS_STRAWBERRIES = forge( "fruits/strawberries");
 	public static final TagKey<Item> FRUITS_TORCHBERRIES = forge( "fruits/torchberries");
 	public static final TagKey<Item> FRUITS_SOURCEBERRY = forge("fruits/sourceberry");
+	public static final TagKey<Item> FRUITS_ELDERBERRY = forge("fruits/elderberry");
+	public static final TagKey<Item> FRUITS_REDCURRANT = forge("fruits/redcurrant");
+	public static final TagKey<Item> FRUITS_BLACKCURRANT = forge("fruits/blackcurrant");
+	public static final TagKey<Item> FRUITS_WHITECURRANT = forge("fruits/whitecurrant");
 	public static final TagKey<Item> FRUITS_BANANA = forge( "fruits/banana");
 	public static final TagKey<Item> FRUITS_SWEET = forge( "fruits/sweet");
 	public static final TagKey<Item> FRUITS_PRICKLY_PEAR = forge( "fruits/prickly_pear");
 	public static final TagKey<Item> FRUITS_BERRIES = forge( "fruits/berries");
+	public static final TagKey<Item> CHOCOLATE = forge("chocolate");
 	public static final TagKey<Item> CHEESE = forge( "cheese");
 	public static final TagKey<Item> CHEESE_OR_MILK = forge( "cheese_or_milk");
 	public static final TagKey<Item> COOKED_CRAB = forge( "cooked_crab");
