@@ -1,5 +1,9 @@
-// 1.19	2022-08-24T13:52:25.004394	Block Models: delightful
+// 1.19	2022-08-25T18:43:51.823554	Block Models: delightful
 9fb58e1b1fd3a12096d9c8680233d7e7d599a21d assets/delightful/models/block/basalt_cabinet.json
 b824a4dbf88022a19ff128a01e892059461dd7f7 assets/delightful/models/block/basalt_cabinet_open.json
 dc023404eeebdec36e75c7c3af6e4749476b8e7d assets/delightful/models/block/quartz_cabinet.json
 a88f3dbcb1f234d25d238388427626255b44f190 assets/delightful/models/block/quartz_cabinet_open.json
+d9d66ce4fd63348d5b54006dc0357df9c46a6dfe assets/delightful/models/block/salmonberry_bush_stage0.json
+56a5bf205801458edba474278c11cd30617925b2 assets/delightful/models/block/salmonberry_bush_stage1.json
+886f34c296bac81042bc6a0f740b1a8c57eded71 assets/delightful/models/block/salmonberry_bush_stage2.json
+561a85f8de37e54c7d384769b7bde71e9a7ce1a8 assets/delightful/models/block/salmonberry_bush_stage3.json

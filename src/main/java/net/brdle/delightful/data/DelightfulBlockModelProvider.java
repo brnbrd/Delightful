@@ -18,7 +18,14 @@ public class DelightfulBlockModelProvider extends BlockModelProvider {
         DelightfulBlocks.BLOCKS.getEntries().stream()
                 .filter(entry -> entry.get() instanceof CabinetBlock)
                 .forEach(cab -> cabinet(cab.getId().getPath()));
-        //DelightfulBlocks.WILD_SALMONBERRIES.get();
+        bush("salmonberry");
+    }
+
+    public void bush(String name) {
+        for (int i = 0; i <= 3; i++) {
+            String stage = "block/" + name + "_bush_stage" + i;
+            cross(stage, new ResourceLocation(this.modid, stage)).renderType("cutout");
+        }
     }
 
     public void cabinet(String name) {

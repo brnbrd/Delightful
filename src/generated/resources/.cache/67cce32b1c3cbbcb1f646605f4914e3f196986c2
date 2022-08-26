@@ -1,8 +1,9 @@
-// 1.19	2022-08-24T13:52:24.996356	LootTables
+// 1.19	2022-08-25T18:35:36.783252	LootTables
 62cbeb0a30f5f33b67702bfadbaedd2bb20f0fa8 data/delightful/loot_tables/blocks/basalt_cabinet.json
 beb16c9931636dfdbf425e98ffd9bd106f819fbe data/delightful/loot_tables/blocks/mini_melon.json
 2b2a4bde1a1c86393b28fa3ff9b81ef1ddeed22d data/delightful/loot_tables/blocks/pizza_peel.json
 2b2a4bde1a1c86393b28fa3ff9b81ef1ddeed22d data/delightful/loot_tables/blocks/pizza_stone.json
 c757c24723646c2f4bddb31c62a5dbb00f79c685 data/delightful/loot_tables/blocks/quartz_cabinet.json
+dcfff6c94647e344508c3e4e05e6db464f478781 data/delightful/loot_tables/blocks/salmonberry_bush.json
 221f7db930398a28ff073931185e90e2f906d964 data/delightful/loot_tables/blocks/salmonberry_sack.json
 af284f901206d43b229d96b5119ecca2398f74ba data/delightful/loot_tables/blocks/wild_salmonberries.json

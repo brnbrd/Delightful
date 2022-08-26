@@ -24,6 +24,7 @@ import net.minecraft.world.item.alchemy.PotionUtils;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.ConditionalRecipe;
 import net.minecraftforge.common.crafting.StrictNBTIngredient;
@@ -491,6 +492,10 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             .save(f))
           .generateAdvancement()
           .build(finished, Delightful.MODID, "storage/unpack_salmonberries");
+        ShapelessRecipeBuilder.shapeless(DelightfulItems.SALMONBERRY_PIPS.get())
+          .requires(DelightfulItems.SALMONBERRIES.get())
+          .unlockedBy("has_salmonberries", has(DelightfulItems.SALMONBERRIES.get()))
+          .save(finished);
         }
 
     private InventoryChangeTrigger.TriggerInstance has(ItemLike... items) {

@@ -1,7 +1,8 @@
-// 1.19	2022-08-24T15:02:05.696275	Recipes
+// 1.19	2022-08-25T18:47:01.235618	Recipes
 60ffe246fc7cd82d396e8dc65184da554be1a88a data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 2cf937c163d47a583b4eb63671b5c4e3055179cc data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
 5d0d5aa5a6eaa52a4cce3cbf808e9782cc09269f data/delightful/advancements/recipes/cooking/animal_oil_bottle.json
+4820a549d29eb7fd7d55c8c97bf6271c51e520c5 data/delightful/advancements/recipes/farmersdelight/salmonberry_pips.json
 099f8de201c9c76943d1030b13881c614f3673fb data/delightful/advancements/recipes/food/azalea_tea.json
 de6fe3a1394647c427c93221a8d7fd8a7bf39ee0 data/delightful/advancements/recipes/food/berry_matcha_latte.json
 6f9a4ec508e6bb9e24693e3fdff5ce8f83c7909b data/delightful/advancements/recipes/food/cheeseburger.json
@@ -110,6 +111,7 @@ e0c2f30f4371148b6421bef48ebd55e298de6f8c data/delightful/recipes/knives/smelting
 70400e16af3b0510198dbec9b6b124bc73ef1034 data/delightful/recipes/knives/steel_knife.json
 6837150cf1092c74aec38a33e1c830562b84dd18 data/delightful/recipes/knives/tin_knife.json
 49dd27476a29a44325c894d344c6b1dd02989207 data/delightful/recipes/nut_milk.json
+58b70412d4a65d4aad3faf3f255753993e936175 data/delightful/recipes/salmonberry_pips.json
 cbb7286e1ae2186545d049c8e4ae7f06da94bca3 data/delightful/recipes/smelting/cactus_flesh.json
 9b8701d65b367ef9f7e2fea132e7d590b645a5cc data/delightful/recipes/smelting/green_tea_leaf.json
 3dd3a7619f21d6c5c359f3435b97400ebf3feaf1 data/delightful/recipes/storage/salmonberries.json

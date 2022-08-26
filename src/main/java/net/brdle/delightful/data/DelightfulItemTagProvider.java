@@ -40,6 +40,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.FRUITS_KIWI).addOptional(new ResourceLocation("hedgehog", "kiwi"));
 		this.tag(DelightfulItemTags.FRUITS_PRICKLY_PEAR).addOptional(new ResourceLocation("ecologics", "prickly_pear"));
 		this.tag(DelightfulItemTags.FRUITS_TORCHBERRIES).addOptional(new ResourceLocation("twilightforest", "torchberries"));
+		this.tag(DelightfulItemTags.FRUITS_SOURCEBERRY).addOptional(new ResourceLocation("ars_nouveau", "source_berry"));
 		this.tag(DelightfulItemTags.FRUITS_STRAWBERRIES)
 			.addOptional(new ResourceLocation("neapolitan", "strawberries"))
 			.addOptional(new ResourceLocation("neapolitan", "white_strawberries"));
@@ -50,14 +51,17 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_GLOW_BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_SALMONBERRIES)
 			.addTag(DelightfulItemTags.FRUITS_STRAWBERRIES)
-			.addTag(DelightfulItemTags.FRUITS_TORCHBERRIES);
+			.addTag(DelightfulItemTags.FRUITS_TORCHBERRIES)
+			.addTag(DelightfulItemTags.FRUITS_SOURCEBERRY);
 		this.tag(DelightfulItemTags.FRUITS)
 			.addTag(DelightfulItemTags.FRUITS_APPLE)
 			.addTag(DelightfulItemTags.FRUITS_KIWI)
 			.addTag(DelightfulItemTags.FRUITS_MELON)
 			.addTag(DelightfulItemTags.FRUITS_PRICKLY_PEAR)
 			.addTag(DelightfulItemTags.FRUITS_BERRIES)
-			.addTag(DelightfulItemTags.FRUITS_CHORUS);
+			.addTag(DelightfulItemTags.FRUITS_CHORUS)
+			.addOptional(new ResourceLocation("ars_nouveau", "mendosteen_pod"))
+			.addOptional(new ResourceLocation("ars_nouveau", "bastion_pod"));
 		this.tag(DelightfulItemTags.FRUITS_SWEET)
 			.addTag(DelightfulItemTags.FRUITS_APPLE)
 			.addTag(DelightfulItemTags.FRUITS_KIWI)

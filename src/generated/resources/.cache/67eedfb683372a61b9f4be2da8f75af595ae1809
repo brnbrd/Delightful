@@ -1,4 +1,4 @@
-// 1.19	2022-08-24T13:52:25.003074	Item Models: delightful
+// 1.19	2022-08-25T18:35:36.779546	Item Models: delightful
 10002ab669e30e6913dbadd7f1b102cbba1d50da assets/delightful/models/item/animal_fat.json
 2f8e763b0d8cf51b8f59eadb69a29192ac4c4cc6 assets/delightful/models/item/animal_oil_bottle.json
 8dedf79dc59783dee44fc9309ba04b9918316029 assets/delightful/models/item/azalea_tea.json
@@ -49,6 +49,7 @@ e9b93faeae778f437bb62e17e05d285cc3cbfa0f assets/delightful/models/item/quartz_ca
 968c8a7f52ddf50eac76fdd73df1e0e344323dc2 assets/delightful/models/item/refined_obsidian_knife.json
 4bbc4f55b55a3700f7b4ef2f843ea72304a8333f assets/delightful/models/item/rock_candy.json
 e8851e8a9cf72237cbcb58703316f012d965c5ae assets/delightful/models/item/salmonberries.json
+929deaa04cf179dc86268dc6d88494287c8fc874 assets/delightful/models/item/salmonberry_pips.json
 6b35ac1bf0de23c9caa5f9e4c1ed5ff4d74bb5ed assets/delightful/models/item/salmonberry_sack.json
 9237d5d2471b27d3a50ae884058d50d852402629 assets/delightful/models/item/silver_knife.json
 9ebe6608541b10993820aa5e687f060023f515b9 assets/delightful/models/item/smore.json

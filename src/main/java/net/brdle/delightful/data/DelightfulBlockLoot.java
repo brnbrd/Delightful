@@ -39,6 +39,7 @@ public class DelightfulBlockLoot extends BlockLoot {
                     .add(LootItem.lootTableItem(DelightfulItems.SALMONBERRIES.get()))
                     .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F)))
                     .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE)))));
+        this.dropSelf(DelightfulBlocks.SALMONBERRY_BUSH.get());
     }
 
     @Override

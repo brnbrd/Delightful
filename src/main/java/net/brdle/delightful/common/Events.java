@@ -2,7 +2,9 @@ package net.brdle.delightful.common;
 
 import net.brdle.delightful.Delightful;
 import net.brdle.delightful.common.config.EnabledCondition;
+import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.world.DelightfulWildCropGeneration;
+import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -18,6 +20,9 @@ public class Events {
         e.enqueueWork(() -> {
             DelightfulWildCropGeneration.registerWildCropGeneration();
             //Flammables
+
+            //Compostables
+            ComposterBlock.COMPOSTABLES.put(DelightfulItems.SALMONBERRIES.get(), 0.3F);
         });
     }
 

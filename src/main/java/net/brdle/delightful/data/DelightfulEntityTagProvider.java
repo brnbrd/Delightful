@@ -64,7 +64,19 @@ public class DelightfulEntityTagProvider extends EntityTypeTagsProvider {
 			.addOptional(mod("duckling", "duck"))
 			.addOptional(mod("duckling", "quackling"))
 			.addOptional(mod("buzzier_bees", "moobloom"))
-			.addOptional(mod("buzzier_bees", "grizzly_bear"));
+			.addOptional(mod("buzzier_bees", "grizzly_bear"))
+			.addOptional(mod("fishofthieves", "ancientscale"))
+			.addOptional(mod("fishofthieves", "battlegill"))
+			.addOptional(mod("fishofthieves", "devilfish"))
+			.addOptional(mod("fishofthieves", "islehopper"))
+			.addOptional(mod("fishofthieves", "plentifin"))
+			.addOptional(mod("fishofthieves", "pondie"))
+			.addOptional(mod("fishofthieves", "splashtail"))
+			.addOptional(mod("fishofthieves", "stormfish"))
+			.addOptional(mod("fishofthieves", "wildsplash"))
+			.addOptional(mod("fishofthieves", "wrecker"))
+			.addOptional(mod("ars_nouveau", "starbuncle"))
+			.addOptional(mod("aqcaracal", "caracal"));
 	}
 
 	/**

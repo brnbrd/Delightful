@@ -5,6 +5,14 @@
     "#forge:fruits/melon",
     "#forge:fruits/prickly_pear",
     "#forge:fruits/berries",
-    "#forge:fruits/chorus"
+    "#forge:fruits/chorus",
+    {
+      "id": "ars_nouveau:mendosteen_pod",
+      "required": false
+    },
+    {
+      "id": "ars_nouveau:bastion_pod",
+      "required": false
+    }
   ]
 }
