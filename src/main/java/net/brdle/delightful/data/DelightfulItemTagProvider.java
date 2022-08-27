@@ -81,7 +81,9 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_BANANA);
 		this.tag(DelightfulItemTags.NUTS_WALNUT).addOptional(new ResourceLocation("ecologics", "walnut"));
 		this.tag(DelightfulItemTags.NUTS_PEANUT).addOptional(new ResourceLocation("sprout", "peanut"));
+		this.tag(DelightfulItemTags.NUTS_ACORN).add(DelightfulItems.ACORN.get());
 		this.tag(DelightfulItemTags.NUTS)
+			.addTag(DelightfulItemTags.NUTS_ACORN)
 			.addTag(DelightfulItemTags.NUTS_WALNUT)
 			.addTag(DelightfulItemTags.NUTS_PEANUT);
 		this.tag(DelightfulItemTags.INGOTS_STEEL).addOptional(new ResourceLocation("simplysteel", "steel_ingot"));

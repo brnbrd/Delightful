@@ -46,6 +46,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> NUTS = forge( "nuts");
 	public static final TagKey<Item> NUTS_WALNUT = forge( "nuts/walnut");
 	public static final TagKey<Item> NUTS_PEANUT = forge( "nuts/peanut");
+	public static final TagKey<Item> NUTS_ACORN = forge( "nuts/acorn");
 	public static final TagKey<Item> SUGAR = forge( "sugar");
 	public static final TagKey<Item> WATER = forge( "water");
 	public static final TagKey<Item> INGOTS_STEEL = forge( "ingots/steel");

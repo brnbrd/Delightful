@@ -1,7 +1,9 @@
 {
   "entries": [
+    "delightful:acorn_from_squirrel",
     "delightful:green_tea_leaf",
-    "delightful:animal_fat"
+    "delightful:animal_fat",
+    "delightful:acorn"
   ],
   "replace": false
 }

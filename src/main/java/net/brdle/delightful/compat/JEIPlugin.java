@@ -31,6 +31,7 @@ public class JEIPlugin implements IModPlugin
             .map(ItemStack::new)
             .forEach((k -> registration.addIngredientInfo(k, VanillaTypes.ITEM_STACK, TextUtils.getTranslation("jei.info.knife"))));
         registration.addIngredientInfo(DelightfulItems.GREEN_TEA_LEAF.get().getDefaultInstance(), VanillaTypes.ITEM_STACK, Component.translatable("delightful.green_tea_leaf.desc"));
+        registration.addIngredientInfo(DelightfulItems.ACORN.get().getDefaultInstance(), VanillaTypes.ITEM_STACK, Component.translatable("delightful.acorn.desc"));
         registration.addIngredientInfo(DelightfulItems.SALMONBERRIES.get().getDefaultInstance(), VanillaTypes.ITEM_STACK, Component.translatable("delightful.salmonberries.desc"));
         registration.addIngredientInfo(DelightfulItems.MINI_MELON.get().getDefaultInstance(), VanillaTypes.ITEM_STACK, Component.translatable("delightful.mini_melon.desc"));
         registration.addIngredientInfo(DelightfulItems.ANIMAL_FAT.get().getDefaultInstance(), VanillaTypes.ITEM_STACK, Component.translatable("delightful.animal_fat.desc"));

@@ -1,5 +1,6 @@
 {
   "values": [
+    "#forge:nuts/acorn",
     "#forge:nuts/walnut",
     "#forge:nuts/peanut"
   ]

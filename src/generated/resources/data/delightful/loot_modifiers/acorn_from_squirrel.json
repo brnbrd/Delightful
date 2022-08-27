@@ -2,22 +2,19 @@
   "type": "delightful:add_item",
   "conditions": [
     {
-      "chance": 0.12,
+      "chance": 0.4,
       "condition": "minecraft:random_chance_with_looting",
       "looting_multiplier": 2.0
     },
     {
-      "condition": "minecraft:match_tool",
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
       "predicate": {
-        "tag": "forge:tools/knives"
+        "type": "#delightful:drops_acorn"
       }
-    },
-    {
-      "condition": "delightful:is_tag",
-      "tag": "minecraft:leaves"
     }
   ],
-  "item": "delightful:green_tea_leaf",
+  "item": "delightful:acorn",
   "maxAmount": 1,
   "minAmount": 1,
   "unique": true

@@ -69,24 +69,26 @@ public class DelightfulItems {
     public static final RegistryObject<Item> NUT_BUTTER_AND_JELLY_SANDWICH = registerItem("nut_butter_and_jelly_sandwich",
       () -> new ConsumableItem((new Item.Properties()).food(FoodValues.NUT_BUTTER_AND_JELLY_SANDWICH).tab(FarmersDelight.CREATIVE_TAB), true));
     public static final RegistryObject<Item> CHEESEBURGER = registerItem("cheeseburger",
-            () -> new ConsumableItem((new Item.Properties()).food(FoodValues.CHEESEBURGER).tab(FarmersDelight.CREATIVE_TAB), true));
+      () -> new ConsumableItem((new Item.Properties()).food(FoodValues.CHEESEBURGER).tab(FarmersDelight.CREATIVE_TAB), true));
     public static final RegistryObject<Item> DELUXE_CHEESEBURGER = registerItem("deluxe_cheeseburger",
-            () -> new ConsumableItem((new Item.Properties()).food(FoodValues.DELUXE_CHEESEBURGER).tab(FarmersDelight.CREATIVE_TAB), true));
+      () -> new ConsumableItem((new Item.Properties()).food(FoodValues.DELUXE_CHEESEBURGER).tab(FarmersDelight.CREATIVE_TAB), true));
     public static final RegistryObject<Item> CHUNKWICH = registerCompatFood("chunkwich", "rottenleather",
       FoodValues.CHUNKWICH);
     public static final RegistryObject<Item> CHUNK_NUGGET = registerFood("chunk_nugget",
       FoodValues.CHUNK_NUGGET);
     public static final RegistryObject<Item> ROCK_CANDY = registerFood("rock_candy", FoodValues.ROCK_CANDY, Items.STICK);
     public static final RegistryObject<Item> MARSHMALLOW_STICK = registerFood("marshmallow_stick",
-            FoodValues.MARSHMALLOW_STICK, Items.STICK);
+      FoodValues.MARSHMALLOW_STICK, Items.STICK);
     public static final RegistryObject<Item> COOKED_MARSHMALLOW_STICK = registerFood("cooked_marshmallow_stick",
-            FoodValues.COOKED_MARSHMALLOW_STICK, Items.STICK);
+      FoodValues.COOKED_MARSHMALLOW_STICK, Items.STICK);
     public static final RegistryObject<Item> SMORE = registerFood("smore",
-            FoodValues.SMORE);
+      FoodValues.SMORE);
     public static final RegistryObject<Item> CRAB_RANGOON = registerCompatFood("crab_rangoon", "ecologics",
-            FoodValues.CRAB_RANGOON);
+      FoodValues.CRAB_RANGOON);
     public static final RegistryObject<Item> HONEY_GLAZED_WALNUT = registerFood("honey_glazed_walnut",
-        FoodValues.HONEY_GLAZED_WALNUT);
+      FoodValues.HONEY_GLAZED_WALNUT);
+    public static final RegistryObject<Item> ACORN = registerFood("acorn",
+      FoodValues.ACORN);
     public static final RegistryObject<Item> MINI_MELON = registerItem("mini_melon", () ->
       new BlockItem(DelightfulBlocks.MINI_MELON.get(), (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
     public static final RegistryObject<Item> SALMONBERRY_SACK = registerItem("salmonberry_sack", () ->

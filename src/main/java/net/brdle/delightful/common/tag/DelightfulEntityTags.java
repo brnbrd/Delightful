@@ -9,6 +9,7 @@ import net.minecraft.world.entity.EntityType;
 public class DelightfulEntityTags {
 
 	public static final TagKey<EntityType<?>> FATTY_ANIMALS = create("fatty_animals");
+	public static final TagKey<EntityType<?>> DROPS_ACORN = create("drops_acorn");
 
 	private static TagKey<EntityType<?>> create(String pName) {
 		return TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation(Delightful.MODID, pName));

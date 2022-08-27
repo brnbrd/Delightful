@@ -24,6 +24,7 @@ public class FoodValues {
     public static final FoodProperties NUT_BUTTER_AND_JELLY_SANDWICH = (new FoodProperties.Builder()).nutrition(10).saturationMod(0.5F)
             .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3600, 0), 1.0F).build();
     public static final FoodProperties HONEY_GLAZED_WALNUT = (new FoodProperties.Builder()).nutrition(5).saturationMod(0.3F).build();
+    public static final FoodProperties ACORN = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.2F).build();
     public static final FoodProperties GREEN_TEA_LEAF = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.2F).build();
     public static final FoodProperties SALMONBERRIES = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.3F).build();
     public static final FoodProperties ANIMAL_FAT = (new FoodProperties.Builder()).nutrition(1).saturationMod(2.0F).alwaysEat().fast().build();
