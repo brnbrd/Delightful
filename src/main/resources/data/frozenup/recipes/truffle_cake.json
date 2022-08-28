@@ -1,0 +1,42 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "frozenup:truffle_cake"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "###",
+          "CEC",
+          "WBW"
+        ],
+        "key": {
+          "#": {
+            "tag": "forge:milk"
+          },
+          "C": {
+            "item": "minecraft:cocoa_beans"
+          },
+          "E": {
+            "tag": "forge:eggs"
+          },
+          "W": {
+            "item": "minecraft:wheat"
+          },
+          "B": {
+            "item": "frozenup:truffle"
+          }
+        },
+        "result": {
+          "item": "frozenup:truffle_cake",
+          "count": 1
+        }
+      }
+    }
+  ]
+}
