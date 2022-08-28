@@ -96,7 +96,6 @@ dependencies {
     compileOnly fg.deobf("curse.maven:farmers-respite-551453:${farmers_respite_version}")
     implementation fg.deobf("curse.maven:terrablender-563928:${terrablender_version}")
     implementation fg.deobf("curse.maven:biomes-o-plenty-220318:${bop_version}")
-    implementation fg.deobf("curse.maven:frozen-up-430652:3952740")
 }
 
 task updateJson {
