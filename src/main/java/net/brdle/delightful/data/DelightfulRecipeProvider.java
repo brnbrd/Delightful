@@ -474,14 +474,10 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             .save(f))
           .generateAdvancement()
           .build(finished, Delightful.MODID, "storage/salmonberries");
-        ConditionalRecipe.builder()
-          .addCondition(enabled("salmonberry_sack"))
-          .addRecipe(f -> ShapelessRecipeBuilder.shapeless(DelightfulItems.SALMONBERRIES.get(), 9)
-            .requires(DelightfulItems.SALMONBERRY_SACK.get())
-            .unlockedBy("has_salmonberry_sack", has(DelightfulItems.SALMONBERRY_SACK.get()))
-            .save(f))
-          .generateAdvancement()
-          .build(finished, Delightful.MODID, "storage/unpack_salmonberries");
+        wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.SALMONBERRIES.get(), 9)
+          .requires(DelightfulItems.SALMONBERRY_SACK.get())
+          .unlockedBy("has_salmonberry_sack", has(DelightfulItems.SALMONBERRY_SACK.get())),
+          "storage/unpack_salmonberry_sack", "salmonberry_sack", finished);
         ConditionalRecipe.builder()
           .addCondition(enabled("salmonberry_pips"))
           .addRecipe(f -> ShapelessRecipeBuilder.shapeless(DelightfulItems.SALMONBERRY_PIPS.get())
@@ -519,6 +515,16 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 
     private InventoryChangeTrigger.TriggerInstance has(ItemLike... items) {
         return InventoryChangeTrigger.TriggerInstance.hasItems(items);
+    }
+
+    private void wrap(RecipeBuilder builder, String name, String enabledCond, Consumer<FinishedRecipe> consumer) {
+        ResourceLocation loc = new ResourceLocation(Delightful.MODID, name);
+        var cond = ConditionalRecipe.builder().addCondition(enabled(enabledCond));
+        FinishedRecipe[] recipe = new FinishedRecipe[1];
+        builder.save(f -> recipe[0] = f, loc);
+        cond.addRecipe(recipe[0])
+          .generateAdvancement()
+          .build(consumer, loc);
     }
 
     private Item modItem(String modid, String path) {

@@ -2,9 +2,8 @@
   "type": "delightful:add_item",
   "conditions": [
     {
-      "chance": 0.05,
-      "condition": "minecraft:random_chance_with_looting",
-      "looting_multiplier": 3.0
+      "chance": 0.07,
+      "condition": "minecraft:random_chance"
     },
     {
       "condition": "minecraft:inverted",
