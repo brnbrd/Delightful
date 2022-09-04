@@ -1,5 +1,9 @@
 {
   "values": [
-    "delightful:chopped_clover"
+    "delightful:chopped_clover",
+    {
+      "id": "sprout:sprouts",
+      "required": false
+    }
   ]
 }

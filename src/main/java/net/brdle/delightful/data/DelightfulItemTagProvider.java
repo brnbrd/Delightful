@@ -126,7 +126,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.CHOCOLATE)
 			.addOptional(new ResourceLocation("neapolitan", "chocolate_bar"));
 		this.tag(ForgeTags.SALAD_INGREDIENTS)
-			.add(DelightfulItems.CHOPPED_CLOVER.get());
+			.add(DelightfulItems.CHOPPED_CLOVER.get())
+			.addOptional(new ResourceLocation("sprout", "sprouts"));
 
 		// Minecraft
 		this.tag(ItemTags.PIGLIN_LOVED).add(DelightfulItems.REFINED_GLOWSTONE_KNIFE.get());

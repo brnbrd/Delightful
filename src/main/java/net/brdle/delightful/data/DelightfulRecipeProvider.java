@@ -337,6 +337,14 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .save(f, new ResourceLocation(Delightful.MODID, "smelting/green_tea_leaf")))
             .generateAdvancement()
             .build(finished, Delightful.MODID, "smelting/green_tea_leaf");
+        ConditionalRecipe.builder()
+          .addCondition(enabled("matcha"))
+          .addRecipe(f -> SimpleCookingRecipeBuilder.blasting(Ingredient.of(DelightfulItemTags.TEA_LEAVES_GREEN),
+              DelightfulItems.MATCHA.get(), 0.1F, 100)
+            .unlockedBy("has_green_tea_leaf", has(DelightfulItems.GREEN_TEA_LEAF.get()))
+            .save(f, new ResourceLocation(Delightful.MODID, "blasting/green_tea_leaf")))
+          .generateAdvancement()
+          .build(finished, Delightful.MODID, "blasting/green_tea_leaf");
         /*ConditionalRecipe.builder()
             .addCondition(itemExists("farmersrespite", "green_tea_leaves"))
             .addRecipe(f -> ShapelessRecipeBuilder.shapeless(FRItems.GREEN_TEA_LEAVES.get(), 2)

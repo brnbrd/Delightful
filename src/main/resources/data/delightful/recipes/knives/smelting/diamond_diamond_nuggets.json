@@ -1,0 +1,22 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "item": "diamond_nuggets:diamond_nugget",
+          "type": "forge:item_exists"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:smelting",
+        "ingredient": {
+          "item": "farmersdelight:diamond_knife"
+        },
+        "result": "diamond_nuggets:diamond_nugget",
+        "experience": 0.1,
+        "cookingtime": 200
+      }
+    }
+  ]
+}
