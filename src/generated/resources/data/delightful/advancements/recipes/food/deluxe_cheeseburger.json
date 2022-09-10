@@ -37,8 +37,20 @@
       },
       "conditions": [
         {
-          "type": "delightful:enabled",
-          "value": "deluxe_cheeseburger"
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "deluxe_cheeseburger"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:item_exists",
+                "item": "some_assembly_required:burger_bun"
+              }
+            }
+          ]
         }
       ]
     }

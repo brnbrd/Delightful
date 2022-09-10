@@ -126,7 +126,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             .generateAdvancement()
             .build(finished, Delightful.MODID, "food/nut_butter_and_jelly_sandwich");
         ConditionalRecipe.builder()
-            .addCondition(enabled("cheeseburger"))
+            .addCondition(and(enabled("cheeseburger"), not(itemExists("some_assembly_required", "burger_bun"))))
             .addRecipe(f -> ShapelessRecipeBuilder.shapeless(DelightfulItems.CHEESEBURGER.get())
                 .requires(ForgeTags.BREAD)
                 .requires(ModItems.BEEF_PATTY.get())
@@ -148,7 +148,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             .generateAdvancement()
             .build(finished, Delightful.MODID, "food/cheeseburger_from_hamburger");
         ConditionalRecipe.builder()
-            .addCondition(enabled("deluxe_cheeseburger"))
+            .addCondition(and(enabled("deluxe_cheeseburger"), not(itemExists("some_assembly_required", "burger_bun"))))
             .addRecipe(f -> ShapelessRecipeBuilder.shapeless(DelightfulItems.DELUXE_CHEESEBURGER.get())
                 .requires(ForgeTags.BREAD)
                 .requires(ModItems.BEEF_PATTY.get())

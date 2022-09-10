@@ -4,8 +4,20 @@
     {
       "conditions": [
         {
-          "type": "delightful:enabled",
-          "value": "cheeseburger"
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "cheeseburger"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:item_exists",
+                "item": "some_assembly_required:burger_bun"
+              }
+            }
+          ]
         }
       ],
       "recipe": {

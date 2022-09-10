@@ -8,14 +8,11 @@
           "values": [
             {
               "type": "delightful:enabled",
-              "value": "deluxe_cheeseburger"
+              "value": "cheeseburger"
             },
             {
-              "type": "forge:not",
-              "value": {
-                "type": "forge:item_exists",
-                "item": "some_assembly_required:burger_bun"
-              }
+              "type": "forge:item_exists",
+              "item": "some_assembly_required:burger_bun"
             }
           ]
         }
@@ -24,22 +21,13 @@
         "type": "minecraft:crafting_shapeless",
         "ingredients": [
           {
-            "tag": "forge:bread"
+            "item": "some_assembly_required:burger_bun"
           },
           {
             "item": "farmersdelight:beef_patty"
           },
           {
             "tag": "forge:cheese_or_milk"
-          },
-          {
-            "item": "farmersdelight:beef_patty"
-          },
-          {
-            "tag": "forge:cheese_or_milk"
-          },
-          {
-            "item": "farmersdelight:cooked_bacon"
           },
           {
             "tag": "forge:salad_ingredients"
@@ -52,7 +40,7 @@
           }
         ],
         "result": {
-          "item": "delightful:deluxe_cheeseburger"
+          "item": "delightful:cheeseburger"
         }
       }
     }
