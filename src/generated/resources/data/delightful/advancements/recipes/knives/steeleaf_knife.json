@@ -1,0 +1,60 @@
+{
+  "advancements": [
+    {
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "criteria": {
+          "has_steeleaf": {
+            "conditions": {
+              "items": [
+                {
+                  "tag": "forge:ingots/steeleaf"
+                }
+              ]
+            },
+            "trigger": "minecraft:inventory_changed"
+          },
+          "has_the_recipe": {
+            "conditions": {
+              "recipe": "delightful:steeleaf_knife"
+            },
+            "trigger": "minecraft:recipe_unlocked"
+          }
+        },
+        "requirements": [
+          [
+            "has_steeleaf",
+            "has_the_recipe"
+          ]
+        ],
+        "rewards": {
+          "recipes": [
+            "delightful:steeleaf_knife"
+          ]
+        }
+      },
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "steeleaf_knife"
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "twilightforest"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:ingots/steeleaf"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

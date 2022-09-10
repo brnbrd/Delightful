@@ -6,6 +6,7 @@ import net.brdle.delightful.common.block.DelightfulBlocks;
 import net.brdle.delightful.common.item.knife.CompatKnifeItem;
 import net.brdle.delightful.common.item.knife.DelightfulKnifeItem;
 import net.brdle.delightful.common.item.knife.TaggedKnifeItem;
+import net.brdle.delightful.common.tag.DelightfulItemTags;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.effect.MobEffects;
@@ -133,6 +134,10 @@ public class DelightfulItems {
       () -> Ingredient.of(ENDERITE_KNIFE.get()), ingot("obsidian_infused_enderite"));
     public static final RegistryObject<Item> NETHERITE_OPAL_KNIFE = registerSmithedKnife("netherite_opal",
       () -> Ingredient.of(BLACK_OPAL_KNIFE.get()), Tags.Items.INGOTS_NETHERITE.location());
+    public static final RegistryObject<Item> FIERY_KNIFE = registerCompatKnife("fiery", "twilightforest", new ResourceLocation("forge", "ingots/fiery"));
+    public static final RegistryObject<Item> IRONWOOD_KNIFE = registerCompatKnife("ironwood", "twilightforest", new ResourceLocation("forge", "ingots/ironwood"));
+    public static final RegistryObject<Item> KNIGHTMETAL_KNIFE = registerCompatKnife("knightmetal", "twilightforest", new ResourceLocation("forge", "ingots/knightmetal"));
+    public static final RegistryObject<Item> STEELEAF_KNIFE = registerCompatKnife("steeleaf", "twilightforest", new ResourceLocation("forge", "ingots/steeleaf"));
 
     // Registers a knife to Farmer's Delight tab, requiring modid
     public static RegistryObject<Item> registerCompatKnife(String name, String modid, ResourceLocation tag) {

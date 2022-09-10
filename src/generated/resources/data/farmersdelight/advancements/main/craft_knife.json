@@ -109,6 +109,18 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "fiery_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:fiery_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "flint_knife": {
       "conditions": {
         "items": [
@@ -151,6 +163,30 @@
           {
             "items": [
               "farmersdelight:iron_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "ironwood_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:ironwood_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "knightmetal_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:knightmetal_knife"
             ]
           }
         ]
@@ -301,6 +337,18 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "steeleaf_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:steeleaf_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "tin_knife": {
       "conditions": {
         "items": [
@@ -357,7 +405,11 @@
       "large_amethyst_knife",
       "enderite_knife",
       "obsidian_infused_enderite_knife",
-      "netherite_opal_knife"
+      "netherite_opal_knife",
+      "fiery_knife",
+      "ironwood_knife",
+      "knightmetal_knife",
+      "steeleaf_knife"
     ]
   ]
 }

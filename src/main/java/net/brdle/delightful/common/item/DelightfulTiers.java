@@ -2,6 +2,7 @@ package net.brdle.delightful.common.item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraftforge.common.TierSortingRegistry;
 import org.jetbrains.annotations.NotNull;
 import java.util.function.Supplier;
 
@@ -26,7 +27,11 @@ public enum DelightfulTiers implements Tier {
     ELECTRUM(2, 96, 13.0F, 2.0F, 28, DelightfulItems.getIngot("electrum")),
     INVAR(2, 300, 7.0F, 2.5F, 13, DelightfulItems.getIngot("invar")),
     LEAD(1, 130, 12.0F, 1.5F, 16, DelightfulItems.getIngot("lead")),
-    NICKEL(2, 225, 7.0F, 2.5F, 12, DelightfulItems.getIngot("nickel"));
+    NICKEL(2, 225, 7.0F, 2.5F, 12, DelightfulItems.getIngot("nickel")),
+    IRONWOOD(2, 512, 6.5F, 2, 25, DelightfulItems.getIngot("ironwood")),
+    FIERY(4, 1024, 9F, 4, 10, DelightfulItems.getIngot("fiery")),
+    STEELEAF(3, 131, 8.0F, 3, 9, DelightfulItems.getIngot("steeleaf")),
+    KNIGHTMETAL(3, 512, 8.0F, 3, 8, DelightfulItems.getIngot("knightmetal"));
 
     private final int level;
     private final int uses;

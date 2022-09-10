@@ -1,4 +1,4 @@
-// 1.19	2022-09-10T00:45:01.316397	Recipes
+// 1.19	2022-09-10T01:30:45.537745	Recipes
 2008bf684d83272701a8032bfb2deb03b22b94b7 data/delightful/advancements/recipes/blasting/green_tea_leaf.json
 60ffe246fc7cd82d396e8dc65184da554be1a88a data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 2cf937c163d47a583b4eb63671b5c4e3055179cc data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
@@ -36,7 +36,10 @@ ab39223fc2013749810761e16352d28ef9e5fdd5 data/delightful/advancements/recipes/kn
 22e5f6a1243fb26615d54098403b082371dcec35 data/delightful/advancements/recipes/knives/copper_knife.json
 abc67c3b74a2788ae06426169ab6113b093fbd9c data/delightful/advancements/recipes/knives/electrum_knife.json
 f59633002a959d9ffa14ca568c204164296139a6 data/delightful/advancements/recipes/knives/enderite_knife_smithing.json
+ee27f075e2abd6f1df0aedcc47622c8d12962bf2 data/delightful/advancements/recipes/knives/fiery_knife.json
 99b7bc82499a44375522245f63976b8ea4844e34 data/delightful/advancements/recipes/knives/invar_knife.json
+5dba28bc58611ea72ed2aec19e3c4cac41a33463 data/delightful/advancements/recipes/knives/ironwood_knife.json
+df8c8caddfd92d5e8e026b97ac7a50ea10f22909 data/delightful/advancements/recipes/knives/knightmetal_knife.json
 9d0e2c4427df1a4e38cfd66a53fc52098ded9d50 data/delightful/advancements/recipes/knives/lapis_lazuli_knife.json
 79554ace6622379f477db6148f88da60552ee84b data/delightful/advancements/recipes/knives/large_amethyst_knife.json
 20d3f51bfe4678b1823069a8968c846f91a1ea70 data/delightful/advancements/recipes/knives/lead_knife.json
@@ -49,6 +52,7 @@ a18b66ca01ef151716e2fd21fb1512fd48923c38 data/delightful/advancements/recipes/kn
 e74d5636c3c35d84b086deb797282337e5a14845 data/delightful/advancements/recipes/knives/silver_knife.json
 43e9b1138cc4538159693dbd4d78ea6045c2c774 data/delightful/advancements/recipes/knives/smelting/bone/knife_minecraft.json
 3b94f601587b28928077c348d4ae986fa4f7bc85 data/delightful/advancements/recipes/knives/steel_knife.json
+1d4702dad4cf329b969c51fa1d04386786a21065 data/delightful/advancements/recipes/knives/steeleaf_knife.json
 2cbf1b8603218ae75f6bffeef7d6cdfef456c997 data/delightful/advancements/recipes/knives/tin_knife.json
 afa5d50b81c06331676e50469972161100bb328b data/delightful/advancements/recipes/salmonberry_pips.json
 b4d669b7fc98fc39280624bfc61925742e5bbc6a data/delightful/advancements/recipes/smelting/cactus_flesh.json
@@ -96,7 +100,10 @@ e41c9610ed4da742a39193d2a7bd49916fe989fd data/delightful/recipes/knives/constant
 e51c38684ff5cf7e9a4cfbabbceb2492bc8edc16 data/delightful/recipes/knives/copper_knife.json
 bef794669d2e667eb6eb8aea7479f7e7bbff1baf data/delightful/recipes/knives/electrum_knife.json
 3f09d81ad06207b832d8bcccf4d776ace8cecec3 data/delightful/recipes/knives/enderite_knife_smithing.json
+d6978ef4afa341158977e0b623c9df57ddfdb371 data/delightful/recipes/knives/fiery_knife.json
 75c87105076c4bb56d74496547475b1fbf733a43 data/delightful/recipes/knives/invar_knife.json
+8ccd4bcca3e480305ab814c09733ed0e9d43f91a data/delightful/recipes/knives/ironwood_knife.json
+60d3c0f8d64cf320a06b57134ea22cf137ae4c90 data/delightful/recipes/knives/knightmetal_knife.json
 833a8e6c3389273daba1a7c7e86126c25310ce44 data/delightful/recipes/knives/lapis_lazuli_knife.json
 efee898ec3e87851c0492ae4f09c09fbae3e3920 data/delightful/recipes/knives/large_amethyst_knife.json
 3217dd897caeff7fbe8427188ac35c15df7b15d6 data/delightful/recipes/knives/lead_knife.json
@@ -109,6 +116,7 @@ a20351a7e8f59cfe36e2f16370effc86edb11573 data/delightful/recipes/knives/refined_
 06a222228f8f07f9c3df734c10ba4944b685d5b1 data/delightful/recipes/knives/silver_knife.json
 e0c2f30f4371148b6421bef48ebd55e298de6f8c data/delightful/recipes/knives/smelting/bone/knife_minecraft.json
 70400e16af3b0510198dbec9b6b124bc73ef1034 data/delightful/recipes/knives/steel_knife.json
+457164922ee1220c9a98d3d3a32fdef2550fac47 data/delightful/recipes/knives/steeleaf_knife.json
 6837150cf1092c74aec38a33e1c830562b84dd18 data/delightful/recipes/knives/tin_knife.json
 49dd27476a29a44325c894d344c6b1dd02989207 data/delightful/recipes/nut_milk.json
 43eeb578521e58d82693eace8ad42cec524df673 data/delightful/recipes/salmonberry_pips.json
