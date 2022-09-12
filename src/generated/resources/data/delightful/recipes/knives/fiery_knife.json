@@ -31,7 +31,7 @@
             "tag": "forge:ingots/fiery"
           },
           "s": {
-            "tag": "forge:rods/wooden"
+            "item": "minecraft:blaze_rod"
           }
         },
         "pattern": [

@@ -6,9 +6,7 @@ import net.brdle.delightful.common.block.DelightfulBlocks;
 import net.brdle.delightful.common.block.DelightfulCabinetBlock;
 import net.brdle.delightful.common.config.EnabledCondition;
 import net.brdle.delightful.common.item.DelightfulItems;
-import net.brdle.delightful.common.item.knife.CompatKnifeItem;
-import net.brdle.delightful.common.item.knife.DelightfulKnifeItem;
-import net.brdle.delightful.common.item.knife.TaggedKnifeItem;
+import net.brdle.delightful.common.item.knife.*;
 import net.brdle.delightful.common.tag.DelightfulItemTags;
 import net.brdle.rottenleather.common.RottenLeatherItems;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
@@ -39,6 +37,8 @@ import vectorwing.farmersdelight.common.tag.ForgeTags;
 import vectorwing.farmersdelight.data.builder.CookingPotRecipeBuilder;
 import vectorwing.farmersdelight.data.builder.CuttingBoardRecipeBuilder;
 import vectorwing.farmersdelight.data.recipe.CookingRecipes;
+
+import java.util.List;
 import java.util.Objects;
 import java.util.function.Consumer;
 
@@ -60,6 +60,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             .map(RegistryObject::get)
             .filter(item -> item instanceof DelightfulKnifeItem)
             .map(item -> (DelightfulKnifeItem) item)
+            .filter(k -> !(k instanceof IronwoodKnifeItem) && !(k instanceof SteeleafKnifeItem))
             .forEach(k -> knife(k, finished));
         knifeSmeltAndBlast((DelightfulKnifeItem) DelightfulItems.BONE_KNIFE.get(), "bone/knife", ForgeRegistries.ITEMS.getKey(Items.BONE_MEAL), finished);
 
@@ -566,7 +567,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             .addCondition(and(enabled(path)))
             .addRecipe(f -> ShapedRecipeBuilder.shaped(knife)
                 .define('m', knife.getIngredient().get())
-                .define('s', Tags.Items.RODS_WOODEN)
+                .define('s', knife.getRod().get())
                 .pattern(" m")
                 .pattern("s ")
                 .unlockedBy("has_" + path.replace("_knife", ""), inventoryTrigger(ItemPredicate.Builder.item()
@@ -590,13 +591,13 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
         String path = Util.name(knife);
         var add = ItemTags.create(knife.getTag());
         var cond = (knife instanceof CompatKnifeItem cki) ?
-                and(enabled(path), modLoaded(cki.getModid()), not(tagEmpty(add))) :
-                and(enabled(path), not(tagEmpty(add)));
+            and(enabled(path), modLoaded(cki.getModid()), not(tagEmpty(add))) :
+            and(enabled(path), not(tagEmpty(add)));
         ConditionalRecipe.builder()
             .addCondition(cond)
             .addRecipe(f -> ShapedRecipeBuilder.shaped(knife)
                 .define('m', knife.getIngredient().get())
-                .define('s', Tags.Items.RODS_WOODEN)
+                .define('s', knife.getRod().get())
                 .pattern(" m")
                 .pattern("s ")
                 .unlockedBy("has_" + path.replace("_knife", ""), inventoryTrigger(ItemPredicate.Builder.item()

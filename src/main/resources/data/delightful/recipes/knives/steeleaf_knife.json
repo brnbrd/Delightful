@@ -8,7 +8,7 @@
           "values": [
             {
               "type": "delightful:enabled",
-              "value": "ironwood_knife"
+              "value": "steeleaf_knife"
             },
             {
               "type": "forge:mod_loaded",
@@ -18,7 +18,7 @@
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
-                "tag": "forge:ingots/ironwood"
+                "tag": "forge:ingots/steeleaf"
               }
             }
           ]
@@ -28,7 +28,7 @@
         "type": "minecraft:crafting_shaped",
         "key": {
           "m": {
-            "tag": "forge:ingots/ironwood"
+            "tag": "forge:ingots/steeleaf"
           },
           "s": {
             "tag": "forge:rods/wooden"
@@ -39,7 +39,9 @@
           "s "
         ],
         "result": {
-          "item": "delightful:ironwood_knife"
+          "nbt": "{Enchantments:[{lvl:2s,id:\"minecraft:smite\"}]}",
+          "item": "delightful:steeleaf_knife",
+          "type": "minecraft:item_nbt"
         }
       }
     }

@@ -8,7 +8,7 @@
           "values": [
             {
               "type": "delightful:enabled",
-              "value": "steeleaf_knife"
+              "value": "ironwood_knife"
             },
             {
               "type": "forge:mod_loaded",
@@ -18,7 +18,7 @@
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
-                "tag": "forge:ingots/steeleaf"
+                "tag": "forge:ingots/ironwood"
               }
             }
           ]
@@ -28,7 +28,7 @@
         "type": "minecraft:crafting_shaped",
         "key": {
           "m": {
-            "tag": "forge:ingots/steeleaf"
+            "tag": "forge:ingots/ironwood"
           },
           "s": {
             "tag": "forge:rods/wooden"
@@ -39,7 +39,9 @@
           "s "
         ],
         "result": {
-          "item": "delightful:steeleaf_knife"
+          "nbt": "{Enchantments:[{lvl:1s,id:\"farmersdelight:backstabbing\"}]}",
+          "item": "delightful:ironwood_knife",
+          "type": "minecraft:item_nbt"
         }
       }
     }

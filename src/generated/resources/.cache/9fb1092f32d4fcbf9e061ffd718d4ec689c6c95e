@@ -1,4 +1,4 @@
-// 1.19	2022-09-10T01:30:45.537745	Recipes
+// 1.19	2022-09-10T21:50:06.226947	Recipes
 2008bf684d83272701a8032bfb2deb03b22b94b7 data/delightful/advancements/recipes/blasting/green_tea_leaf.json
 60ffe246fc7cd82d396e8dc65184da554be1a88a data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 2cf937c163d47a583b4eb63671b5c4e3055179cc data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
@@ -100,7 +100,7 @@ e41c9610ed4da742a39193d2a7bd49916fe989fd data/delightful/recipes/knives/constant
 e51c38684ff5cf7e9a4cfbabbceb2492bc8edc16 data/delightful/recipes/knives/copper_knife.json
 bef794669d2e667eb6eb8aea7479f7e7bbff1baf data/delightful/recipes/knives/electrum_knife.json
 3f09d81ad06207b832d8bcccf4d776ace8cecec3 data/delightful/recipes/knives/enderite_knife_smithing.json
-d6978ef4afa341158977e0b623c9df57ddfdb371 data/delightful/recipes/knives/fiery_knife.json
+c4b914961b645f5f083c2d979584cd93f07ae1fe data/delightful/recipes/knives/fiery_knife.json
 75c87105076c4bb56d74496547475b1fbf733a43 data/delightful/recipes/knives/invar_knife.json
 8ccd4bcca3e480305ab814c09733ed0e9d43f91a data/delightful/recipes/knives/ironwood_knife.json
 60d3c0f8d64cf320a06b57134ea22cf137ae4c90 data/delightful/recipes/knives/knightmetal_knife.json

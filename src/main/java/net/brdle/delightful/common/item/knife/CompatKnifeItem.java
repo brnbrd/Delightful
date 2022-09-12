@@ -15,15 +15,24 @@ import java.util.function.Supplier;
 
 public class CompatKnifeItem extends TaggedKnifeItem {
     private final String modid;
+    private final Component tool;
 
     public CompatKnifeItem(String modid, ResourceLocation tag, Tier tier, float attackDamageIn, float attackSpeedIn, Properties properties) {
         super(tag, tier, attackDamageIn, attackSpeedIn, properties);
         this.modid = modid;
+        this.tool = Component.empty();
+    }
+
+    public CompatKnifeItem(String modid, ResourceLocation tag, Tier tier, float attackDamageIn, float attackSpeedIn, Properties properties, Component tool) {
+        super(tag, tier, attackDamageIn, attackSpeedIn, properties);
+        this.modid = modid;
+        this.tool = tool;
     }
 
     public CompatKnifeItem(String modid, Supplier<Ingredient> base, ResourceLocation tag, Tier tier, float attackDamageIn, float attackSpeedIn, Properties properties) {
         super(base, tag, tier, attackDamageIn, attackSpeedIn, properties);
         this.modid = modid;
+        this.tool = Component.empty();
     }
 
     public String getModid() {
@@ -44,10 +53,11 @@ public class CompatKnifeItem extends TaggedKnifeItem {
      */
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> tool, TooltipFlag pIsAdvanced) {
-        super.appendHoverText(pStack, pLevel, tool, pIsAdvanced);
         if (!this.isLoaded()) {
             tool.add(Component.literal("Requires modid:"));
             tool.add(Component.literal(modid).withStyle(ChatFormatting.UNDERLINE));
+        } else if (!this.tool.equals(Component.empty())) {
+            tool.add(this.tool);
         }
     }
 }

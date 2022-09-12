@@ -11,6 +11,7 @@ import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
+import net.minecraftforge.common.Tags;
 import vectorwing.farmersdelight.common.item.KnifeItem;
 import javax.annotation.Nullable;
 import java.util.List;
@@ -42,5 +43,9 @@ public class DelightfulKnifeItem extends KnifeItem implements IConfigured, ISing
     @Override
     public boolean isEnabled() {
         return DelightfulConfig.CONFIG.stuff.get(Util.name(this)).get();
+    }
+
+    public Supplier<Ingredient> getRod() {
+        return () -> Ingredient.of(Tags.Items.RODS_WOODEN);
     }
 }
