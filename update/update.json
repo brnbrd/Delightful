@@ -21,12 +21,12 @@
   "1.19": {
     "2.0": "Updated to 1.19",
     "2.1": "Added some compat mobs to fatty_animals tag. Add Twilight Forest's Torchberries to berries tag. Removed Cultural Delights recipe override.",
-    "2.3": "No changelog."
+    "2.4": "No changelog."
   },
   "promos": {
     "1.18.2-latest": "2.0",
     "1.18.2-recommended": "2.0",
-    "1.19-latest": "2.3",
-    "1.19-recommended": "2.3"
+    "1.19-latest": "2.4",
+    "1.19-recommended": "2.4"
   }
 }
