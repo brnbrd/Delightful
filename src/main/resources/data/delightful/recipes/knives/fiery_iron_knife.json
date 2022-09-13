@@ -1,0 +1,49 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "fiery_knife"
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "twilightforest"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:ingots/fiery"
+              }
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "farmersdelight:iron_knife"
+          },
+          {
+            "tag": "twilightforest:fiery_vial"
+          },
+          {
+            "tag": "twilightforest:fiery_vial"
+          },
+          {
+            "tag": "forge:rods/blaze"
+          }
+        ],
+        "result": {
+          "item": "delightful:fiery_knife"
+        }
+      }
+    }
+  ]
+}
