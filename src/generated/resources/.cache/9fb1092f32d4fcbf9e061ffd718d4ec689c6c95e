@@ -1,4 +1,4 @@
-// 1.19	2022-09-15T18:52:54.2665223	Recipes
+// 1.19	2022-09-16T09:34:00.4761672	Recipes
 2008bf684d83272701a8032bfb2deb03b22b94b7 data/delightful/advancements/recipes/blasting/green_tea_leaf.json
 60ffe246fc7cd82d396e8dc65184da554be1a88a data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 2cf937c163d47a583b4eb63671b5c4e3055179cc data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
@@ -7,7 +7,7 @@
 c26b26d568505a5c76f3dc4e436d4c644bbdb75c data/delightful/advancements/recipes/food/berry_matcha_latte.json
 8d6514e68e5527bb8afa0f9dd2998f42c114a34c data/delightful/advancements/recipes/food/cheeseburger.json
 0ef85cd58241a71e145764647e9d6da3696ade23 data/delightful/advancements/recipes/food/cheeseburger_from_hamburger.json
-b3998e008a233a9351e930812ddcd707fbe96b8b data/delightful/advancements/recipes/food/chunkwich.json
+459aed1aa4e9d3cb1ea5358c9d1a96003bbd5793 data/delightful/advancements/recipes/food/chunkwich.json
 7645ba852beb02027f7dc178e503659a0143ac51 data/delightful/advancements/recipes/food/chunk_nugget.json
 f56d3525d7402caffae799f6299850bcd0b6b2b7 data/delightful/advancements/recipes/food/cooked_marshmallow_stick.json
 2e4668bffa9aa7e7c8d7176c5ea73c5dce519f71 data/delightful/advancements/recipes/food/cooking/ender_nectar.json
@@ -73,7 +73,7 @@ c9bc74cdce6dbcc894cf7a15128d06a10fd6fc77 data/delightful/recipes/food/azalea_tea
 08b7cb739ce093082a2d2ce39e8642647f4d93b9 data/delightful/recipes/food/berry_matcha_latte.json
 be5fea5bc89a3b71c435531416239bb7be7e0a3c data/delightful/recipes/food/cheeseburger.json
 2bff03a783fa78311d7dc629c4e20a33fe9e70ff data/delightful/recipes/food/cheeseburger_from_hamburger.json
-1c8ca09519e21e894074c8793b296af2e2cb2d44 data/delightful/recipes/food/chunkwich.json
+0ec3bd3ff08b7b5089aee67280bbe9fc3b96c3c1 data/delightful/recipes/food/chunkwich.json
 08776b51436dd153ffd7616487d8b1d9bd8ca39d data/delightful/recipes/food/chunk_nugget.json
 74fb91b34d7ef31552e85d171c65f320d815662b data/delightful/recipes/food/cooked_marshmallow_stick.json
 d0505d91081ce5073207fb1de6d70dd345850a9b data/delightful/recipes/food/cooking/ender_nectar.json

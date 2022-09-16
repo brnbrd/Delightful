@@ -46,6 +46,13 @@
             {
               "type": "forge:item_exists",
               "item": "rottenleather:sweetened_chunk"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:item_exists",
+                "item": "some_assembly_required:burger_bun"
+              }
             }
           ]
         }

@@ -154,7 +154,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             .requires(ForgeTags.BREAD)
             .requires(RottenLeatherItems.SWEETENED_CHUNK.get())
             .unlockedBy("has_sweetened_chunk", has(RottenLeatherItems.SWEETENED_CHUNK.get())),
-            "food/chunkwich", finished, enabled("chunkwich"), itemExists("rottenleather", "sweetened_chunk"));
+            "food/chunkwich", finished, enabled("chunkwich"), itemExists("rottenleather", "sweetened_chunk"), not(itemExists("some_assembly_required", "burger_bun")));
         wrap(SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(DelightfulItems.MARSHMALLOW_STICK.get()),
             DelightfulItems.COOKED_MARSHMALLOW_STICK.get(), 0.5F, 600)
             .unlockedBy("has_marshmallow_stick", has(DelightfulItems.MARSHMALLOW_STICK.get())),

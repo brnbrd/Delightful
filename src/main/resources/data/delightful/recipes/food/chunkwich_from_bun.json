@@ -15,11 +15,8 @@
               "item": "rottenleather:sweetened_chunk"
             },
             {
-              "type": "forge:not",
-              "value": {
-                "type": "forge:item_exists",
-                "item": "some_assembly_required:burger_bun"
-              }
+              "type": "forge:item_exists",
+              "item": "some_assembly_required:burger_bun"
             }
           ]
         }
@@ -28,7 +25,7 @@
         "type": "minecraft:crafting_shapeless",
         "ingredients": [
           {
-            "tag": "forge:bread"
+            "item": "some_assembly_required:burger_bun"
           },
           {
             "item": "rottenleather:sweetened_chunk"
