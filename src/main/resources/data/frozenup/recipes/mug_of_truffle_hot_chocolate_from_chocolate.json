@@ -1,0 +1,43 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "values": [
+            {
+              "type": "forge:not",
+              "value": {
+                "tag": "forge:chocolate",
+                "type": "forge:tag_empty"
+              }
+            },
+            {
+              "type": "forge:item_exists",
+              "item": "frozenup:mug_of_milk"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "frozenup:mug_of_milk"
+          },
+          {
+            "tag": "forge:chocolate"
+          },
+          {
+            "item": "frozenup:truffle"
+          }
+        ],
+        "result": {
+          "item": "frozenup:mug_of_truffle_hot_chocolate",
+          "count": 1
+        }
+      }
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-// 1.19	2022-09-15T17:42:20.9069911	Recipes
+// 1.19	2022-09-15T18:52:54.2665223	Recipes
 2008bf684d83272701a8032bfb2deb03b22b94b7 data/delightful/advancements/recipes/blasting/green_tea_leaf.json
 60ffe246fc7cd82d396e8dc65184da554be1a88a data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 2cf937c163d47a583b4eb63671b5c4e3055179cc data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
@@ -51,6 +51,7 @@ df8c8caddfd92d5e8e026b97ac7a50ea10f22909 data/delightful/advancements/recipes/kn
 3df629361884e70c35be8e92d16dcee32f021765 data/delightful/advancements/recipes/knives/osmium_knife.json
 78c557c3862e851e31775f45ddd2457f57315f41 data/delightful/advancements/recipes/knives/refined_glowstone_knife.json
 b352b7abb74e0ac8a16742208ccb90158ea77bed data/delightful/advancements/recipes/knives/refined_obsidian_knife.json
+251c38694aa358f5d284a94980efa47198a1fff0 data/delightful/advancements/recipes/knives/reinforced_deorum_knife_smithing.json
 e74d5636c3c35d84b086deb797282337e5a14845 data/delightful/advancements/recipes/knives/silver_knife.json
 43e9b1138cc4538159693dbd4d78ea6045c2c774 data/delightful/advancements/recipes/knives/smelting/bone/knife_minecraft.json
 3b94f601587b28928077c348d4ae986fa4f7bc85 data/delightful/advancements/recipes/knives/steel_knife.json
@@ -116,6 +117,7 @@ ffa734ef6d9941356b333569a7ac59389e067783 data/delightful/recipes/knives/nickel_k
 97a6d185a52afed2905b8d208b737555abafee8b data/delightful/recipes/knives/osmium_knife.json
 8198c767dd4217eeff6fb1c337ca4b6db03cbe63 data/delightful/recipes/knives/refined_glowstone_knife.json
 6c4871c3751a5a53be6230e460d586effc32b453 data/delightful/recipes/knives/refined_obsidian_knife.json
+db62f4182a5cb87751904deddefb602c9b9ffd2a data/delightful/recipes/knives/reinforced_deorum_knife_smithing.json
 06a222228f8f07f9c3df734c10ba4944b685d5b1 data/delightful/recipes/knives/silver_knife.json
 e0c2f30f4371148b6421bef48ebd55e298de6f8c data/delightful/recipes/knives/smelting/bone/knife_minecraft.json
 70400e16af3b0510198dbec9b6b124bc73ef1034 data/delightful/recipes/knives/steel_knife.json

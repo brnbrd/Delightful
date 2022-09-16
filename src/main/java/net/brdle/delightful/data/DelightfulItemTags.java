@@ -59,8 +59,10 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> GEMS_ROSE_QUARTZ = forge("gems/rose_quartz");
 
 	// Forbidden and Arcanus
+	public static final TagKey<Item> STELLARITE_PIECE = bind("forbidden_arcanus", "stellarite_piece");
 	public static final TagKey<Item> DRAGON_SCALE = bind("forbidden_arcanus", "dragon_scale");
 	public static final TagKey<Item> DRACO_ARCANUS_STAFF = bind("forbidden_arcanus", "draco_arcanus_staff");
+	public static final TagKey<Item> INGOTS_DEORUM = forge("ingots/deorum");
 
 	private static TagKey<Item> forge(String name) {
 		return bind("forge", name);

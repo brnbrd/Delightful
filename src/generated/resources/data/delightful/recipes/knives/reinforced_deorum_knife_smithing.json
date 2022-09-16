@@ -1,0 +1,37 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "reinforced_deorum_knife"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forbidden_arcanus:stellarite_piece"
+              }
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:smithing",
+        "addition": {
+          "tag": "forbidden_arcanus:stellarite_piece"
+        },
+        "base": {
+          "item": "delightful:deorum_knife"
+        },
+        "result": {
+          "item": "delightful:reinforced_deorum_knife"
+        }
+      }
+    }
+  ]
+}

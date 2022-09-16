@@ -253,6 +253,18 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "living_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:living_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "netherite_knife": {
       "conditions": {
         "items": [
@@ -331,6 +343,18 @@
           {
             "items": [
               "delightful:refined_obsidian_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "reinforced_deorum_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:reinforced_deorum_knife"
             ]
           }
         ]
@@ -424,6 +448,7 @@
       "nickel_knife",
       "enderite_knife",
       "deorum_knife",
+      "reinforced_deorum_knife",
       "draco_arcanus_knife",
       "lapis_lazuli_knife",
       "osmium_knife",
@@ -435,7 +460,8 @@
       "fiery_knife",
       "ironwood_knife",
       "knightmetal_knife",
-      "steeleaf_knife"
+      "steeleaf_knife",
+      "living_knife"
     ]
   ]
 }

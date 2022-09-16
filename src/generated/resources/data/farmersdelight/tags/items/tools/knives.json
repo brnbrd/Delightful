@@ -15,6 +15,7 @@
     "delightful:nickel_knife",
     "delightful:enderite_knife",
     "delightful:deorum_knife",
+    "delightful:reinforced_deorum_knife",
     "delightful:draco_arcanus_knife",
     "delightful:lapis_lazuli_knife",
     "delightful:osmium_knife",
@@ -26,6 +27,7 @@
     "delightful:fiery_knife",
     "delightful:ironwood_knife",
     "delightful:knightmetal_knife",
-    "delightful:steeleaf_knife"
+    "delightful:steeleaf_knife",
+    "delightful:living_knife"
   ]
 }

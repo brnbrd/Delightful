@@ -148,8 +148,10 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.COOKED_PRICKLY_PEAR).addOptional(new ResourceLocation("ecologics", "cooked_prickly_pear"));
 
 		// Forbidden and Arcanus
+		this.tag(DelightfulItemTags.STELLARITE_PIECE).addOptional(new ResourceLocation("forbidden_arcanus", "stellarite_piece"));
 		this.tag(DelightfulItemTags.DRACO_ARCANUS_STAFF).addOptional(new ResourceLocation("forbidden_arcanus", "draco_arcanus_staff"));
 		this.tag(DelightfulItemTags.DRAGON_SCALE).addOptional(new ResourceLocation("forbidden_arcanus", "dragon_scale"));
+		this.tag(DelightfulItemTags.INGOTS_DEORUM).addOptional(new ResourceLocation("forbidden_arcanus", "deorum_ingot"));
 	}
 
 	/**

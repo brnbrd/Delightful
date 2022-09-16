@@ -1,11 +1,12 @@
-// 1.19	2022-09-15T17:42:20.9099931	delightful
+// 1.19	2022-09-15T19:26:17.8223115	delightful
 c0cf341570512d0061c8b1d58e603b18fa4678bd data/ecologics/tags/items/cooked_prickly_pear.json
 fdb05f17c99ce890bb9e0cfce094276bef597cbf data/farmersdelight/tags/items/cabinets.json
 56652c93f5e1505b2c4875c8d14635f2a2c72350 data/farmersdelight/tags/items/cabinets/stone.json
 dc7d2a04d17423f47c386c8faa21d1069a56d1ae data/farmersdelight/tags/items/cabinets/wooden.json
-d364638f6911c304f79687f149386441045be42f data/farmersdelight/tags/items/tools/knives.json
+e50d6d68de7d4b986b39fad0df3876386ae050e7 data/farmersdelight/tags/items/tools/knives.json
 a1edebb3bd4f7f3d7e73d53c915b2fe3203614aa data/forbidden_arcanus/tags/items/draco_arcanus_staff.json
 67b8f22c3fbfa7142b71a6a27d583be2b01e8ceb data/forbidden_arcanus/tags/items/dragon_scale.json
+bc0d2f9713a6dad4f628cff66b39b0e49f09e3aa data/forbidden_arcanus/tags/items/stellarite_piece.json
 72eaab1ff623df1fd6d815418fec865bb72c52ac data/forge/tags/items/cattail.json
 2dc2ff267b12e78a5958666ee091476760dda390 data/forge/tags/items/cheese.json
 2debae0ad1988b33c3b1f4dfe9fa8e60d7db5521 data/forge/tags/items/cheese_or_milk.json
@@ -33,6 +34,7 @@ e31d34ae9b51b6348b2d11d68dc6fae7d5817187 data/forge/tags/items/fruits/sweet.json
 ef58bcce9f0d3d6e68fdc0afe94d732282c43dba data/forge/tags/items/fruits/torchberries.json
 4fbda205b7c5ed3a2d9763485710d97ba308840f data/forge/tags/items/fruits/whitecurrant.json
 adaf54eec1412d48f7620cde4ee0a483dbe56bbb data/forge/tags/items/gems/rose_quartz.json
+a7bc19c2e1e0313dd1e42237af5b8fb21e732196 data/forge/tags/items/ingots/deorum.json
 df21ab79976e7373593d2fce09cfbf66c595e447 data/forge/tags/items/ingots/steel.json
 141ced3812a57c60e6bc14245cea3118b7c7a7e4 data/forge/tags/items/jelly.json
 381db8c8245ab6fbfd68fb9ec9b724ebe8b23ae2 data/forge/tags/items/milk.json

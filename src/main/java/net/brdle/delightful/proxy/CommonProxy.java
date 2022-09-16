@@ -1,13 +1,16 @@
 package net.brdle.delightful.proxy;
 
+import net.brdle.delightful.Delightful;
 import net.brdle.delightful.common.Events;
 import net.brdle.delightful.common.ForgeEvents;
 import net.brdle.delightful.common.block.DelightfulBlocks;
 import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.loot.DelightfulLootItemConditions;
 import net.brdle.delightful.common.loot.DelightfulLootModifiers;
+import net.brdle.delightful.compat.RootsCompat;
 import net.brdle.delightful.data.gen.Generators;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 public class CommonProxy {
@@ -23,5 +26,8 @@ public class CommonProxy {
         DelightfulItems.create(modBus);
         DelightfulLootItemConditions.create(modBus);
         DelightfulLootModifiers.create(modBus);
+        if (ModList.get().isLoaded("rootsclassic")) {
+            (new RootsCompat()).init();
+        }
     }
 }

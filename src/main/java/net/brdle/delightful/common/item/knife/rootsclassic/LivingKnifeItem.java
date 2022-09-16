@@ -22,4 +22,9 @@ public class LivingKnifeItem extends CompatKnifeItem {
 	public boolean isValidRepairItem(ItemStack toRepair, ItemStack repair) {
 		return false;
 	}
+
+	@Override
+	public boolean isEnabled() {
+		return this.isLoaded();
+	}
 }
