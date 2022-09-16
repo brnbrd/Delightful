@@ -6,8 +6,11 @@
         {
           "values": [
             {
-              "tag": "forge:chocolate",
-              "type": "forge:tag_empty"
+              "type": "forge:not",
+              "value": {
+                "tag": "forge:chocolate",
+                "type": "forge:tag_empty"
+              }
             },
             {
               "type": "forge:item_exists",
@@ -21,15 +24,12 @@
         "type": "minecraft:crafting_shaped",
         "pattern": [
           "###",
-          "CEC",
+          "#E#",
           "WBW"
         ],
         "key": {
           "#": {
-            "tag": "forge:milk"
-          },
-          "C": {
-            "item": "minecraft:cocoa_beans"
+            "tag": "forge:chocolate"
           },
           "E": {
             "tag": "forge:eggs"
