@@ -4,6 +4,10 @@ import net.brdle.delightful.Delightful;
 import net.brdle.delightful.common.block.DelightfulBlocks;
 import net.brdle.delightful.common.item.food.*;
 import net.brdle.delightful.common.item.knife.*;
+import net.brdle.delightful.common.item.knife.forbidden_arcanus.DracoArcanusKnifeItem;
+import net.brdle.delightful.common.item.knife.twilightforest.FieryKnifeItem;
+import net.brdle.delightful.common.item.knife.twilightforest.IronwoodKnifeItem;
+import net.brdle.delightful.common.item.knife.twilightforest.SteeleafKnifeItem;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -38,7 +42,7 @@ public class DelightfulItems {
       FoodValues.SALMONBERRIES);
     public static final RegistryObject<Item> GREEN_TEA_LEAF = registerFood("green_tea_leaf",
       FoodValues.GREEN_TEA_LEAF);
-    public static final RegistryObject<Item> MATCHA = registerItem("matcha", () -> new Item((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
+    public static final RegistryObject<Item> MATCHA = registerItem("matcha", () -> new DescriptItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB), Component.translatable("delightful.matcha.desc").withStyle(ChatFormatting.GRAY)));
     public static final RegistryObject<Item> CHOPPED_CLOVER = registerFood("chopped_clover", FoodValues.CHOPPED_CLOVER);
     public static final RegistryObject<Item> CACTUS_FLESH = registerFood("cactus_flesh", FoodValues.CACTUS_FLESH);
     public static final RegistryObject<Item> CACTUS_STEAK = registerFood("cactus_steak", FoodValues.CACTUS_STEAK);
@@ -123,30 +127,31 @@ public class DelightfulItems {
     public static final RegistryObject<Item> INVAR_KNIFE = registerIngotKnife("invar");
     public static final RegistryObject<Item> LEAD_KNIFE = registerIngotKnife("lead");
     public static final RegistryObject<Item> NICKEL_KNIFE = registerIngotKnife("nickel");
-    public static final RegistryObject<Item> LAPIS_LAZULI_KNIFE = registerCompatKnife("lapis_lazuli", "mekanismtools", Tags.Items.GEMS_LAPIS.location());
-    public static final RegistryObject<Item> OSMIUM_KNIFE = registerIngotKnife("osmium");
-    public static final RegistryObject<Item> REFINED_GLOWSTONE_KNIFE = registerIngotKnife("refined_glowstone");
-    public static final RegistryObject<Item> REFINED_OBSIDIAN_KNIFE = registerIngotKnife("refined_obsidian");
-    public static final RegistryObject<Item> LARGE_AMETHYST_KNIFE = registerGemKnife("large_amethyst");
     public static final RegistryObject<Item> ENDERITE_KNIFE = registerSmithedKnife("enderite",
-      () -> Ingredient.of(ModItems.NETHERITE_KNIFE.get()), ingot("enderite"));
+        () -> Ingredient.of(ModItems.NETHERITE_KNIFE.get()), ingot("enderite"));
+    public static final RegistryObject<Item> DEORUM_KNIFE = registerCompatKnife("deorum", "forbidden_arcanus", ingot("deorum"));
+    public static final RegistryObject<Item> DRACO_ARCANUS_KNIFE = registerItem("draco_arcanus_knife", () -> new DracoArcanusKnifeItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
+    public static final RegistryObject<Item> LAPIS_LAZULI_KNIFE = registerCompatKnife("lapis_lazuli", "mekanismtools", Tags.Items.GEMS_LAPIS.location());
+    public static final RegistryObject<Item> OSMIUM_KNIFE = registerCompatKnife("osmium", "mekanismtools", ingot("osmium"));
+    public static final RegistryObject<Item> REFINED_GLOWSTONE_KNIFE = registerCompatKnife("refined_glowstone", "mekanismtools", ingot("refined_glowstone"));
+    public static final RegistryObject<Item> REFINED_OBSIDIAN_KNIFE = registerCompatKnife("refined_obsidian", "mekanismtools", ingot("refined_obsidian"));
     public static final RegistryObject<Item> OBSIDIAN_INFUSED_ENDERITE_KNIFE = registerSmithedKnife("obsidian_infused_enderite",
-      () -> Ingredient.of(ENDERITE_KNIFE.get()), ingot("obsidian_infused_enderite"));
+      () -> Ingredient.of(ENDERITE_KNIFE.get()), ingot("obsidian_infused_enderite"), "lolenderite");
     public static final RegistryObject<Item> NETHERITE_OPAL_KNIFE = registerSmithedKnife("netherite_opal",
-      () -> Ingredient.of(BLACK_OPAL_KNIFE.get()), Tags.Items.INGOTS_NETHERITE.location());
+      () -> Ingredient.of(BLACK_OPAL_KNIFE.get()), Tags.Items.INGOTS_NETHERITE.location(), "oresabovediamonds");
+    public static final RegistryObject<Item> LARGE_AMETHYST_KNIFE = registerCompatKnife("large_amethyst", "oresabovediamonds", gem("large_amethyst"));
     public static final RegistryObject<Item> FIERY_KNIFE = registerItem("fiery_knife", () -> new FieryKnifeItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
     public static final RegistryObject<Item> IRONWOOD_KNIFE = registerItem("ironwood_knife", () -> new IronwoodKnifeItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
-    public static final RegistryObject<Item> KNIGHTMETAL_KNIFE = registerCompatKnife("knightmetal", "twilightforest", new ResourceLocation("forge", "ingots/knightmetal"), Component.translatable("item.twilightforest.knightmetal_sword.tooltip").withStyle(ChatFormatting.GRAY));
+    public static final RegistryObject<Item> KNIGHTMETAL_KNIFE = registerCompatKnife("knightmetal", "twilightforest", ingot("knightmetal"), Component.translatable("item.twilightforest.knightmetal_sword.tooltip").withStyle(ChatFormatting.GRAY));
     public static final RegistryObject<Item> STEELEAF_KNIFE = registerItem("steeleaf_knife", () -> new SteeleafKnifeItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
 
     // Registers a knife to Farmer's Delight tab, requiring modid
-    public static RegistryObject<Item> registerCompatKnife(String name, String modid, ResourceLocation tag) {
-        return registerItem(name + "_knife", () -> new CompatKnifeItem(modid, tag, DelightfulTiers.valueOf(name.toUpperCase(Locale.ROOT)), 0.5F, -2.0F, (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
-    }
-
-    // Registers a knife to Farmer's Delight tab, requiring modid
-    public static RegistryObject<Item> registerCompatKnife(String name, String modid, ResourceLocation tag, Component tool) {
-        return registerItem(name + "_knife", () -> new CompatKnifeItem(modid, tag, DelightfulTiers.valueOf(name.toUpperCase(Locale.ROOT)), 0.5F, -2.0F, (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB), tool));
+    public static RegistryObject<Item> registerCompatKnife(String name, String modid, ResourceLocation tag, Component... tool) {
+        if (tool.length > 0) {
+            return registerItem(name + "_knife", () -> new CompatKnifeItem(modid, tag, DelightfulTiers.valueOf(name.toUpperCase(Locale.ROOT)), 0.5F, -2.0F, (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB), tool[0]));
+        } else {
+            return registerItem(name + "_knife", () -> new CompatKnifeItem(modid, tag, DelightfulTiers.valueOf(name.toUpperCase(Locale.ROOT)), 0.5F, -2.0F, (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
+        }
     }
 
     // Registers a knife to Farmer's Delight tab, requiring non-empty ingot tag
@@ -160,8 +165,12 @@ public class DelightfulItems {
     }
 
     // Registers a knife to Farmer's Delight tab, requiring non-empty ingot tag
-    public static RegistryObject<Item> registerSmithedKnife(String name, Supplier<Ingredient> base, ResourceLocation addition) {
-        return registerItem(name + "_knife", () -> new TaggedKnifeItem(base, addition, DelightfulTiers.valueOf(name.toUpperCase(Locale.ROOT)), 0.5F, -2.0F, (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
+    public static RegistryObject<Item> registerSmithedKnife(String name, Supplier<Ingredient> base, ResourceLocation addition, String... modid) {
+        if (modid.length > 0) {
+            return registerItem(name + "_knife", () -> new CompatKnifeItem(modid[0], base, addition, DelightfulTiers.valueOf(name.toUpperCase(Locale.ROOT)), 0.5F, -2.0F, (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
+        } else {
+            return registerItem(name + "_knife", () -> new TaggedKnifeItem(base, addition, DelightfulTiers.valueOf(name.toUpperCase(Locale.ROOT)), 0.5F, -2.0F, (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
+        }
     }
 
     // Registers a knife to Farmer's Delight tab
@@ -202,19 +211,19 @@ public class DelightfulItems {
         return ITEMS.register(name, item);
     }
 
-    public static final ResourceLocation ingot(String name) {
+    public static ResourceLocation ingot(String name) {
         return new ResourceLocation("forge", "ingots/" + name);
     }
 
-    public static final ResourceLocation gem(String name) {
+    public static ResourceLocation gem(String name) {
         return new ResourceLocation("forge", "gems/" + name);
     }
 
-    public static final Supplier<Ingredient> getIngot(String name) {
+    public static Supplier<Ingredient> getIngot(String name) {
         return () -> Ingredient.of(ItemTags.create(ingot(name)));
     }
 
-    public static final Supplier<Ingredient> getGem(String name) {
+    public static Supplier<Ingredient> getGem(String name) {
         return () -> Ingredient.of(ItemTags.create(gem(name)));
     }
 

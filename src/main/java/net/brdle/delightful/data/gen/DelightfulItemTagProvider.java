@@ -1,10 +1,9 @@
-package net.brdle.delightful.data;
+package net.brdle.delightful.data.gen;
 
 import net.brdle.delightful.Delightful;
 import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.item.knife.DelightfulKnifeItem;
-import net.brdle.delightful.common.tag.DelightfulBlockTags;
-import net.brdle.delightful.common.tag.DelightfulItemTags;
+import net.brdle.delightful.data.DelightfulItemTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.data.tags.ItemTagsProvider;
@@ -50,6 +49,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(new ResourceLocation("neapolitan", "white_strawberries"));
 		this.tag(DelightfulItemTags.FRUITS_BANANA)
 			.addOptional(new ResourceLocation("neapolitan", "banana"));
+		this.tag(DelightfulItemTags.FRUITS_CHERRY)
+			.addOptional(new ResourceLocation("forbidden_arcanus", "cherry_peach"));
 		this.tag(DelightfulItemTags.FRUITS_BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_SWEET_BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_GLOW_BERRIES)
@@ -60,7 +61,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_ELDERBERRY)
 			.addTag(DelightfulItemTags.FRUITS_BLACKCURRANT)
 			.addTag(DelightfulItemTags.FRUITS_REDCURRANT)
-			.addTag(DelightfulItemTags.FRUITS_WHITECURRANT);
+			.addTag(DelightfulItemTags.FRUITS_WHITECURRANT)
+			.addTag(DelightfulItemTags.FRUITS_CHERRY);
 		this.tag(DelightfulItemTags.FRUITS)
 			.addTag(DelightfulItemTags.FRUITS_APPLE)
 			.addTag(DelightfulItemTags.FRUITS_KIWI)
@@ -78,7 +80,11 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_SWEET_BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_SALMONBERRIES)
 			.addTag(DelightfulItemTags.FRUITS_STRAWBERRIES)
-			.addTag(DelightfulItemTags.FRUITS_BANANA);
+			.addTag(DelightfulItemTags.FRUITS_BANANA)
+			.addTag(DelightfulItemTags.FRUITS_CHERRY)
+			.addOptional(new ResourceLocation("forge", "fruits/orange"))
+			.addOptional(new ResourceLocation("forge", "fruits/mandarin"))
+			.addOptional(new ResourceLocation("forge", "fruits/redlove"));
 		this.tag(DelightfulItemTags.NUTS_WALNUT).addOptional(new ResourceLocation("ecologics", "walnut"));
 		this.tag(DelightfulItemTags.NUTS_PEANUT).addOptional(new ResourceLocation("sprout", "peanut"));
 		this.tag(DelightfulItemTags.NUTS_ACORN).add(DelightfulItems.ACORN.get());
@@ -140,6 +146,10 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 
 		// Ecologics
 		this.tag(DelightfulItemTags.COOKED_PRICKLY_PEAR).addOptional(new ResourceLocation("ecologics", "cooked_prickly_pear"));
+
+		// Forbidden and Arcanus
+		this.tag(DelightfulItemTags.DRACO_ARCANUS_STAFF).addOptional(new ResourceLocation("forbidden_arcanus", "draco_arcanus_staff"));
+		this.tag(DelightfulItemTags.DRAGON_SCALE).addOptional(new ResourceLocation("forbidden_arcanus", "dragon_scale"));
 	}
 
 	/**

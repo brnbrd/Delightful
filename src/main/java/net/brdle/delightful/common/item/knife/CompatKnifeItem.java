@@ -3,6 +3,7 @@ package net.brdle.delightful.common.item.knife;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.TooltipFlag;
@@ -45,7 +46,7 @@ public class CompatKnifeItem extends TaggedKnifeItem {
 
     @Override
     public boolean isEnabled() {
-        return super.isEnabled() || this.isLoaded();
+        return super.isEnabled() && this.isLoaded();
     }
 
     /**
@@ -53,11 +54,18 @@ public class CompatKnifeItem extends TaggedKnifeItem {
      */
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> tool, TooltipFlag pIsAdvanced) {
-        if (!this.isLoaded()) {
+        if (!this.config()) {
+            tool.add(Component.literal("Disabled.").withStyle(ChatFormatting.UNDERLINE));
+        } else if (!this.isLoaded()) {
             tool.add(Component.literal("Requires modid:"));
             tool.add(Component.literal(modid).withStyle(ChatFormatting.UNDERLINE));
         } else if (!this.tool.equals(Component.empty())) {
             tool.add(this.tool);
         }
+    }
+
+    @Override
+    protected boolean allowedIn(CreativeModeTab cat) {
+        return super.allowedIn(cat) && this.isEnabled();
     }
 }

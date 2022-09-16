@@ -1,4 +1,4 @@
-// 1.19	2022-09-10T01:30:45.536302	Item Models: delightful
+// 1.19	2022-09-15T17:42:20.9059901	Item Models: delightful
 f9af973b19b45f34017d8db4e6e54de90668031e assets/delightful/models/item/acorn.json
 10002ab669e30e6913dbadd7f1b102cbba1d50da assets/delightful/models/item/animal_fat.json
 2f8e763b0d8cf51b8f59eadb69a29192ac4c4cc6 assets/delightful/models/item/animal_oil_bottle.json
@@ -13,16 +13,18 @@ ab75016d7fcf2094294c9eeaae9bdf5360b3cabb assets/delightful/models/item/bronze_kn
 93c2e681be221d6845388544480e718e884fef69 assets/delightful/models/item/cactus_steak.json
 f27ba77606c1ed18944838b5945589a5d207bf41 assets/delightful/models/item/cheeseburger.json
 277fc9fc32d17bb07955cd8444911097c121c17d assets/delightful/models/item/chopped_clover.json
-4be16da279f529ceca4bdb6b7ed330555bdf5fa0 assets/delightful/models/item/chunk_nugget.json
 2f49d8a8d17a8d3a2a95b545696c0f205cdaa020 assets/delightful/models/item/chunkwich.json
+4be16da279f529ceca4bdb6b7ed330555bdf5fa0 assets/delightful/models/item/chunk_nugget.json
 fc4c3957d96b6b504a51ba879ebd5e86175127f7 assets/delightful/models/item/constantan_knife.json
 daae20918d102a64c9a5640874194768968a1b67 assets/delightful/models/item/cooked_marshmallow_stick.json
 c67fa17031c56df9771e897fe80eb64768b9d943 assets/delightful/models/item/copper_knife.json
 f8c415a412361a11d9969ce96c931d9ece975c0f assets/delightful/models/item/crab_rangoon.json
 178e937739c494c695ad811e18919cd7a743d1c2 assets/delightful/models/item/deluxe_cheeseburger.json
+d4c53e11736f5a7535b76cb4959fa0914eab5ad3 assets/delightful/models/item/deorum_knife.json
+cec9462db9cff0f2de979a618ff81d1a161be96e assets/delightful/models/item/draco_arcanus_knife.json
 f1300eed11a010fb5ebdb1ca13c61b2774ef3dd3 assets/delightful/models/item/electrum_knife.json
-5ee06700582f1a011e84784bec29d11a649210d5 assets/delightful/models/item/ender_nectar.json
 c38d236743a64d63ee375914b0b1f9bc2432579b assets/delightful/models/item/enderite_knife.json
+5ee06700582f1a011e84784bec29d11a649210d5 assets/delightful/models/item/ender_nectar.json
 205eb524f185fe9ba73267e1dc89e4d2ad4ee733 assets/delightful/models/item/field_salad.json
 25c13e2b88acb8d2ed914397474b48b475e15b95 assets/delightful/models/item/fiery_knife.json
 171299ca7d7d0aff6c1be58322c6ef55e4b8a429 assets/delightful/models/item/glow_jelly_bottle.json
@@ -57,6 +59,6 @@ e8851e8a9cf72237cbcb58703316f012d965c5ae assets/delightful/models/item/salmonber
 6b35ac1bf0de23c9caa5f9e4c1ed5ff4d74bb5ed assets/delightful/models/item/salmonberry_sack.json
 9237d5d2471b27d3a50ae884058d50d852402629 assets/delightful/models/item/silver_knife.json
 9ebe6608541b10993820aa5e687f060023f515b9 assets/delightful/models/item/smore.json
-c71a511008ea6c461cf238a608d1af76ccb86fca assets/delightful/models/item/steel_knife.json
 6052229eacd9c6def0260ec4c1b2c56c89c1b2d8 assets/delightful/models/item/steeleaf_knife.json
+c71a511008ea6c461cf238a608d1af76ccb86fca assets/delightful/models/item/steel_knife.json
 031f9e90ab6aa3f11ffffd752368608b4ff7cec7 assets/delightful/models/item/tin_knife.json

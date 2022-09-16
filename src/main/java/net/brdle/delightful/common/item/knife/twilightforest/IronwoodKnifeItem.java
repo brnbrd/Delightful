@@ -1,6 +1,7 @@
-package net.brdle.delightful.common.item.knife;
+package net.brdle.delightful.common.item.knife.twilightforest;
 
 import net.brdle.delightful.common.item.DelightfulTiers;
+import net.brdle.delightful.common.item.knife.CompatKnifeItem;
 import net.minecraft.core.NonNullList;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;

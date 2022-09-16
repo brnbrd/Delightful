@@ -1,8 +1,7 @@
-package net.brdle.delightful.data;
+package net.brdle.delightful.data.gen;
 
 import net.brdle.delightful.Delightful;
 import net.brdle.delightful.common.block.DelightfulBlocks;
-import net.brdle.delightful.common.tag.DelightfulBlockTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.tags.BlockTags;

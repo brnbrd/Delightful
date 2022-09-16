@@ -6,8 +6,7 @@ import net.brdle.delightful.common.block.DelightfulBlocks;
 import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.loot.DelightfulLootItemConditions;
 import net.brdle.delightful.common.loot.DelightfulLootModifiers;
-import net.brdle.delightful.data.Generators;
-import net.minecraft.world.item.Items;
+import net.brdle.delightful.data.gen.Generators;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 

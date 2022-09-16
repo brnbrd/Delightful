@@ -4,34 +4,32 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_honey": {
+          "has_the_recipe": {
+            "conditions": {
+              "recipe": "delightful:food/honey_glazed_walnut"
+            },
+            "trigger": "minecraft:recipe_unlocked"
+          },
+          "has_walnut": {
             "conditions": {
               "items": [
                 {
-                  "items": [
-                    "minecraft:honey_bottle"
-                  ]
+                  "tag": "forge:nuts/walnut"
                 }
               ]
             },
             "trigger": "minecraft:inventory_changed"
-          },
-          "has_the_recipe": {
-            "conditions": {
-              "recipe": "delightful:honey_glazed_walnut"
-            },
-            "trigger": "minecraft:recipe_unlocked"
           }
         },
         "requirements": [
           [
-            "has_honey",
+            "has_walnut",
             "has_the_recipe"
           ]
         ],
         "rewards": {
           "recipes": [
-            "delightful:honey_glazed_walnut"
+            "delightful:food/honey_glazed_walnut"
           ]
         }
       },

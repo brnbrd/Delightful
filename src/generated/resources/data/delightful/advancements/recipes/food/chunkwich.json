@@ -18,7 +18,7 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:chunkwich"
+              "recipe": "delightful:food/chunkwich"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
@@ -31,7 +31,7 @@
         ],
         "rewards": {
           "recipes": [
-            "delightful:chunkwich"
+            "delightful:food/chunkwich"
           ]
         }
       },

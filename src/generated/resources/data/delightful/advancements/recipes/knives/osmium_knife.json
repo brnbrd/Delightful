@@ -42,6 +42,10 @@
               "value": "osmium_knife"
             },
             {
+              "type": "forge:mod_loaded",
+              "modid": "mekanismtools"
+            },
+            {
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",

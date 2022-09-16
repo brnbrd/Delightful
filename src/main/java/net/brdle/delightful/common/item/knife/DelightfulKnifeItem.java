@@ -30,7 +30,7 @@ public class DelightfulKnifeItem extends KnifeItem implements IConfigured, ISing
      */
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> tool, TooltipFlag pIsAdvanced) {
-        if (!DelightfulConfig.CONFIG.stuff.get(Util.name(this)).get()) {
+        if (!this.config()) {
             tool.add(Component.literal("Disabled.").withStyle(ChatFormatting.UNDERLINE));
         }
     }
@@ -40,9 +40,13 @@ public class DelightfulKnifeItem extends KnifeItem implements IConfigured, ISing
         return this.ingredient;
     }
 
+    public boolean config() {
+        return DelightfulConfig.CONFIG.stuff.get(Util.name(this)).get();
+    }
+
     @Override
     public boolean isEnabled() {
-        return DelightfulConfig.CONFIG.stuff.get(Util.name(this)).get();
+        return this.config();
     }
 
     public Supplier<Ingredient> getRod() {

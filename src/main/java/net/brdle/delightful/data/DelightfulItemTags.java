@@ -1,4 +1,4 @@
-package net.brdle.delightful.common.tag;
+package net.brdle.delightful.data;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
@@ -35,7 +35,8 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> FRUITS_REDCURRANT = forge("fruits/redcurrant");
 	public static final TagKey<Item> FRUITS_BLACKCURRANT = forge("fruits/blackcurrant");
 	public static final TagKey<Item> FRUITS_WHITECURRANT = forge("fruits/whitecurrant");
-	public static final TagKey<Item> FRUITS_BANANA = forge( "fruits/banana");
+	public static final TagKey<Item> FRUITS_BANANA = forge("fruits/banana");
+	public static final TagKey<Item> FRUITS_CHERRY = forge("fruits/cherry");
 	public static final TagKey<Item> FRUITS_SWEET = forge( "fruits/sweet");
 	public static final TagKey<Item> FRUITS_PRICKLY_PEAR = forge( "fruits/prickly_pear");
 	public static final TagKey<Item> FRUITS_BERRIES = forge( "fruits/berries");
@@ -57,7 +58,9 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> CATTAIL = forge( "cattail");
 	public static final TagKey<Item> GEMS_ROSE_QUARTZ = forge("gems/rose_quartz");
 
-	// Minecraft
+	// Forbidden and Arcanus
+	public static final TagKey<Item> DRAGON_SCALE = bind("forbidden_arcanus", "dragon_scale");
+	public static final TagKey<Item> DRACO_ARCANUS_STAFF = bind("forbidden_arcanus", "draco_arcanus_staff");
 
 	private static TagKey<Item> forge(String name) {
 		return bind("forge", name);

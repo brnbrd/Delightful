@@ -8,9 +8,7 @@
             "conditions": {
               "items": [
                 {
-                  "items": [
-                    "ecologics:cooked_prickly_pear"
-                  ]
+                  "tag": "ecologics:cooked_prickly_pear"
                 }
               ]
             },
@@ -18,7 +16,7 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:prickly_pear_juice"
+              "recipe": "delightful:food/prickly_pear_juice"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
@@ -31,7 +29,7 @@
         ],
         "rewards": {
           "recipes": [
-            "delightful:prickly_pear_juice"
+            "delightful:food/prickly_pear_juice"
           ]
         }
       },
@@ -44,8 +42,11 @@
               "value": "prickly_pear_juice"
             },
             {
-              "type": "forge:item_exists",
-              "item": "ecologics:cooked_prickly_pear"
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "ecologics:cooked_prickly_pear"
+              }
             }
           ]
         }

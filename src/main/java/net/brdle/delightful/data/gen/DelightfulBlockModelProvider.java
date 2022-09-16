@@ -1,4 +1,4 @@
-package net.brdle.delightful.data;
+package net.brdle.delightful.data.gen;
 
 import net.brdle.delightful.Delightful;
 import net.brdle.delightful.common.block.DelightfulBlocks;

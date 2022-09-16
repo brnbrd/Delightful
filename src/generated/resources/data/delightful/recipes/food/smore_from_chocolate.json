@@ -1,0 +1,45 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "smore"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:chocolate"
+              }
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "farmersdelight:honey_cookie"
+          },
+          {
+            "tag": "forge:chocolate"
+          },
+          {
+            "item": "delightful:cooked_marshmallow_stick"
+          },
+          {
+            "item": "farmersdelight:honey_cookie"
+          }
+        ],
+        "result": {
+          "item": "delightful:smore"
+        }
+      }
+    }
+  ]
+}

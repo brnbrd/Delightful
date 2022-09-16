@@ -4,11 +4,11 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_steeleaf": {
+          "has_draco_arcanus": {
             "conditions": {
               "items": [
                 {
-                  "tag": "forge:ingots/steeleaf"
+                  "tag": "forbidden_arcanus:dragon_scale"
                 }
               ]
             },
@@ -16,20 +16,20 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:steeleaf_knife"
+              "recipe": "delightful:draco_arcanus_knife"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
         },
         "requirements": [
           [
-            "has_steeleaf",
+            "has_draco_arcanus",
             "has_the_recipe"
           ]
         ],
         "rewards": {
           "recipes": [
-            "delightful:steeleaf_knife"
+            "delightful:draco_arcanus_knife"
           ]
         }
       },
@@ -39,17 +39,17 @@
           "values": [
             {
               "type": "delightful:enabled",
-              "value": "steeleaf_knife"
+              "value": "draco_arcanus_knife"
             },
             {
               "type": "forge:mod_loaded",
-              "modid": "twilightforest"
+              "modid": "forbidden_arcanus"
             },
             {
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
-                "tag": "forge:ingots/steeleaf"
+                "tag": "forbidden_arcanus:dragon_scale"
               }
             }
           ]

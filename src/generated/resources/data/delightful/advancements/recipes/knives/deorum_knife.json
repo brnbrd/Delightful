@@ -4,11 +4,11 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_ironwood": {
+          "has_deorum": {
             "conditions": {
               "items": [
                 {
-                  "tag": "forge:ingots/ironwood"
+                  "tag": "forge:ingots/deorum"
                 }
               ]
             },
@@ -16,20 +16,20 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:ironwood_knife"
+              "recipe": "delightful:deorum_knife"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
         },
         "requirements": [
           [
-            "has_ironwood",
+            "has_deorum",
             "has_the_recipe"
           ]
         ],
         "rewards": {
           "recipes": [
-            "delightful:ironwood_knife"
+            "delightful:deorum_knife"
           ]
         }
       },
@@ -39,17 +39,17 @@
           "values": [
             {
               "type": "delightful:enabled",
-              "value": "ironwood_knife"
+              "value": "deorum_knife"
             },
             {
               "type": "forge:mod_loaded",
-              "modid": "twilightforest"
+              "modid": "forbidden_arcanus"
             },
             {
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
-                "tag": "forge:ingots/ironwood"
+                "tag": "forge:ingots/deorum"
               }
             }
           ]

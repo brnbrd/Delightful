@@ -4,13 +4,8 @@
     {
       "conditions": [
         {
-          "type": "forge:and",
-          "values": [
-            {
-              "type": "delightful:enabled",
-              "value": "field_salad"
-            }
-          ]
+          "type": "delightful:enabled",
+          "value": "field_salad"
         }
       ],
       "recipe": {

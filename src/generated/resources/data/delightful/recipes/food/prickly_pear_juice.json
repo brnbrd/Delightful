@@ -11,8 +11,11 @@
               "value": "prickly_pear_juice"
             },
             {
-              "type": "forge:item_exists",
-              "item": "ecologics:cooked_prickly_pear"
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "ecologics:cooked_prickly_pear"
+              }
             }
           ]
         }

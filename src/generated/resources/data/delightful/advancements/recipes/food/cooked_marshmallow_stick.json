@@ -18,7 +18,7 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:cooked_marshmallow_stick"
+              "recipe": "delightful:food/cooked_marshmallow_stick"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
@@ -31,7 +31,7 @@
         ],
         "rewards": {
           "recipes": [
-            "delightful:cooked_marshmallow_stick"
+            "delightful:food/cooked_marshmallow_stick"
           ]
         }
       },

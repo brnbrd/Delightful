@@ -8,9 +8,7 @@
             "conditions": {
               "items": [
                 {
-                  "items": [
-                    "minecraft:sugar"
-                  ]
+                  "tag": "forge:sugar"
                 }
               ]
             },
@@ -18,7 +16,7 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:marshmallow_stick"
+              "recipe": "delightful:food/marshmallow_stick"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
@@ -31,7 +29,7 @@
         ],
         "rewards": {
           "recipes": [
-            "delightful:marshmallow_stick"
+            "delightful:food/marshmallow_stick"
           ]
         }
       },

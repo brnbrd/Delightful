@@ -18,7 +18,7 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:salmonberry_sack"
+              "recipe": "delightful:storage/salmonberry_sack"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
@@ -31,7 +31,7 @@
         ],
         "rewards": {
           "recipes": [
-            "delightful:salmonberry_sack"
+            "delightful:storage/salmonberry_sack"
           ]
         }
       },

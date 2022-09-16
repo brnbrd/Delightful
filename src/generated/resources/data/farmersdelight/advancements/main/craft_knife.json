@@ -73,12 +73,36 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "deorum_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:deorum_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "diamond_knife": {
       "conditions": {
         "items": [
           {
             "items": [
               "farmersdelight:diamond_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "draco_arcanus_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:draco_arcanus_knife"
             ]
           }
         ]
@@ -398,14 +422,16 @@
       "invar_knife",
       "lead_knife",
       "nickel_knife",
+      "enderite_knife",
+      "deorum_knife",
+      "draco_arcanus_knife",
       "lapis_lazuli_knife",
       "osmium_knife",
       "refined_glowstone_knife",
       "refined_obsidian_knife",
-      "large_amethyst_knife",
-      "enderite_knife",
       "obsidian_infused_enderite_knife",
       "netherite_opal_knife",
+      "large_amethyst_knife",
       "fiery_knife",
       "ironwood_knife",
       "knightmetal_knife",

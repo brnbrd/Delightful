@@ -1,6 +1,7 @@
-package net.brdle.delightful.common.item.knife;
+package net.brdle.delightful.common.item.knife.twilightforest;
 
 import net.brdle.delightful.common.item.DelightfulTiers;
+import net.brdle.delightful.common.item.knife.CompatKnifeItem;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;

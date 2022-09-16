@@ -18,7 +18,7 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:nut_butter_and_jelly_sandwich"
+              "recipe": "delightful:food/nut_butter_and_jelly_sandwich"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
@@ -31,7 +31,7 @@
         ],
         "rewards": {
           "recipes": [
-            "delightful:nut_butter_and_jelly_sandwich"
+            "delightful:food/nut_butter_and_jelly_sandwich"
           ]
         }
       },

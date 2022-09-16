@@ -1,4 +1,4 @@
-package net.brdle.delightful.data;
+package net.brdle.delightful.data.gen;
 
 import com.google.common.collect.ImmutableList;
 import com.mojang.datafixers.util.Pair;

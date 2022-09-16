@@ -1,4 +1,4 @@
-package net.brdle.delightful.common.tag;
+package net.brdle.delightful.data.gen;
 
 import net.brdle.delightful.Delightful;
 import net.minecraft.core.Registry;

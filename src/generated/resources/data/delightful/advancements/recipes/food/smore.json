@@ -18,7 +18,7 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:smore"
+              "recipe": "delightful:food/smore"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
@@ -31,14 +31,23 @@
         ],
         "rewards": {
           "recipes": [
-            "delightful:smore"
+            "delightful:food/smore"
           ]
         }
       },
       "conditions": [
         {
-          "type": "delightful:enabled",
-          "value": "smore"
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "smore"
+            },
+            {
+              "type": "forge:tag_empty",
+              "tag": "forge:chocolate"
+            }
+          ]
         }
       ]
     }

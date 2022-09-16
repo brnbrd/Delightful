@@ -18,7 +18,7 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:deluxe_cheeseburger"
+              "recipe": "delightful:food/deluxe_cheeseburger_from_cheeseburger"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
@@ -31,7 +31,7 @@
         ],
         "rewards": {
           "recipes": [
-            "delightful:deluxe_cheeseburger"
+            "delightful:food/deluxe_cheeseburger_from_cheeseburger"
           ]
         }
       },

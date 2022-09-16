@@ -1,10 +1,9 @@
-package net.brdle.delightful.data;
+package net.brdle.delightful.data.gen;
 
 import net.brdle.delightful.Delightful;
 import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.loot.AddItemLootModifier;
 import net.brdle.delightful.common.loot.LootItemBlockIsTagCondition;
-import net.brdle.delightful.common.tag.DelightfulEntityTags;
 import net.minecraft.advancements.critereon.*;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.tags.ItemTags;
