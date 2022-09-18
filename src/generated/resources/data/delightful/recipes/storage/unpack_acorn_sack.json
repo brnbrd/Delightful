@@ -1,0 +1,25 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "acorn_sack"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "delightful:acorn_sack"
+          }
+        ],
+        "result": {
+          "count": 9,
+          "item": "delightful:acorn"
+        }
+      }
+    }
+  ]
+}

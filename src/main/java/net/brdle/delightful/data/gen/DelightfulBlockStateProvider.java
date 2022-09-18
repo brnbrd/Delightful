@@ -27,6 +27,11 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
             new ResourceLocation(Delightful.MODID, "block/salmonberry_sack"),
             new ResourceLocation(Delightful.MODID, "block/salmonberry_sack_bottom"),
             new ResourceLocation(Delightful.MODID, "block/salmonberry_sack_top")));
+        this.simpleBlock(DelightfulBlocks.ACORN_SACK.get(),
+            models().cubeBottomTop("acorn_sack",
+                new ResourceLocation(Delightful.MODID, "block/acorn_sack"),
+                new ResourceLocation(Delightful.MODID, "block/acorn_sack_bottom"),
+                new ResourceLocation(Delightful.MODID, "block/acorn_sack_top")));
     }
 
     public void wildCropBlock(Block block) {

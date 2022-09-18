@@ -4,11 +4,11 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_salmonberries": {
+          "has_acorn": {
             "conditions": {
               "items": [
                 {
-                  "tag": "forge:fruits/salmonberries"
+                  "tag": "forge:nuts/acorn"
                 }
               ]
             },
@@ -16,27 +16,27 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:salmonberry_pips"
+              "recipe": "delightful:storage/acorn_sack"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
         },
         "requirements": [
           [
-            "has_salmonberries",
+            "has_acorn",
             "has_the_recipe"
           ]
         ],
         "rewards": {
           "recipes": [
-            "delightful:salmonberry_pips"
+            "delightful:storage/acorn_sack"
           ]
         }
       },
       "conditions": [
         {
           "type": "delightful:enabled",
-          "value": "salmonberry_pips"
+          "value": "acorn_sack"
         }
       ]
     }

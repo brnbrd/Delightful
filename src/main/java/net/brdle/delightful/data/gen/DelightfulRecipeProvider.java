@@ -227,8 +227,24 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
           "storage/unpack_salmonberry_sack", finished, enabled("salmonberry_sack"));
         wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.SALMONBERRY_PIPS.get())
             .requires(DelightfulItems.SALMONBERRIES.get())
-            .unlockedBy("has_salmonberries", has(DelightfulItems.SALMONBERRIES.get())),
+            .unlockedBy("has_salmonberries", has(DelightfulItemTags.FRUITS_SALMONBERRIES)),
             "salmonberry_pips", finished, enabled("salmonberry_pips"));
+        wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.ACORN_SACK.get(), 1)
+                .requires(DelightfulItemTags.NUTS_ACORN)
+                .requires(DelightfulItemTags.NUTS_ACORN)
+                .requires(DelightfulItemTags.NUTS_ACORN)
+                .requires(DelightfulItemTags.NUTS_ACORN)
+                .requires(DelightfulItemTags.NUTS_ACORN)
+                .requires(DelightfulItemTags.NUTS_ACORN)
+                .requires(DelightfulItemTags.NUTS_ACORN)
+                .requires(DelightfulItemTags.NUTS_ACORN)
+                .requires(DelightfulItemTags.NUTS_ACORN)
+                .unlockedBy("has_acorn", has(DelightfulItemTags.NUTS_ACORN)),
+            "storage/acorn_sack", finished, enabled("acorn_sack"));
+        wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.ACORN.get(), 9)
+                .requires(DelightfulItems.ACORN_SACK.get())
+                .unlockedBy("has_acorn_sack", has(DelightfulItems.ACORN_SACK.get())),
+            "storage/unpack_acorn_sack", finished, enabled("acorn_sack"));
 
         // Unwrappables (FinishedRecipe)
         ConditionalRecipe.builder()

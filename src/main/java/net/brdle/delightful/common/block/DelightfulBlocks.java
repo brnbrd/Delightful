@@ -38,6 +38,8 @@ public class DelightfulBlocks {
       () -> new MiniMelonBlock(BlockBehaviour.Properties.copy(Blocks.MELON).noOcclusion()));
     public static final RegistryObject<Block> SALMONBERRY_SACK = BLOCKS.register("salmonberry_sack",
       () -> new Block(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK)));
+    public static final RegistryObject<Block> ACORN_SACK = BLOCKS.register("acorn_sack",
+        () -> new Block(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK)));
 
     public static RegistryObject<Block> registerBlock(String name, Supplier<Block> block) {
         return BLOCKS.register(name, block);

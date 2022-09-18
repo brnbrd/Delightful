@@ -100,6 +100,8 @@ public class DelightfulItems {
       new BlockItem(DelightfulBlocks.MINI_MELON.get(), (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
     public static final RegistryObject<Item> SALMONBERRY_SACK = registerItem("salmonberry_sack", () ->
       new BlockItem(DelightfulBlocks.SALMONBERRY_SACK.get(), (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
+    public static final RegistryObject<Item> ACORN_SACK = registerItem("acorn_sack", () ->
+        new BlockItem(DelightfulBlocks.ACORN_SACK.get(), (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
 
     // WIP
     public static final RegistryObject<Item> PIZZA = registerItem("pizza",
