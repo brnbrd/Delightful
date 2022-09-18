@@ -39,8 +39,11 @@ public class DelightfulItems {
     // Crafting Items (can be food)
     public static final RegistryObject<Item> ANIMAL_FAT = registerFood("animal_fat", FoodValues.ANIMAL_FAT);
     public static final RegistryObject<Item> ANIMAL_OIL_BOTTLE = registerItem("animal_oil_bottle", () -> new FurnaceFuelItem((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE).tab(FarmersDelight.CREATIVE_TAB), 3200));
+    public static final RegistryObject<Item> ACORN = registerFood("acorn",
+        FoodValues.ACORN);
     public static final RegistryObject<Item> SALMONBERRIES = registerFood("salmonberries",
       FoodValues.SALMONBERRIES);
+    public static final RegistryObject<Item> SALMONBERRY_PIPS = registerItem("salmonberry_pips", () -> new ItemNameBlockItem(DelightfulBlocks.SALMONBERRY_BUSH.get(), (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
     public static final RegistryObject<Item> GREEN_TEA_LEAF = registerFood("green_tea_leaf",
       FoodValues.GREEN_TEA_LEAF);
     public static final RegistryObject<Item> MATCHA = registerItem("matcha", () -> new DescriptItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB), Component.translatable("delightful.matcha.desc").withStyle(ChatFormatting.GRAY)));
@@ -93,13 +96,10 @@ public class DelightfulItems {
       FoodValues.CRAB_RANGOON);
     public static final RegistryObject<Item> HONEY_GLAZED_WALNUT = registerFood("honey_glazed_walnut",
       FoodValues.HONEY_GLAZED_WALNUT);
-    public static final RegistryObject<Item> ACORN = registerFood("acorn",
-      FoodValues.ACORN);
     public static final RegistryObject<Item> MINI_MELON = registerItem("mini_melon", () ->
       new BlockItem(DelightfulBlocks.MINI_MELON.get(), (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
     public static final RegistryObject<Item> SALMONBERRY_SACK = registerItem("salmonberry_sack", () ->
       new BlockItem(DelightfulBlocks.SALMONBERRY_SACK.get(), (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
-    public static final RegistryObject<Item> SALMONBERRY_PIPS = registerItem("salmonberry_pips", () -> new ItemNameBlockItem(DelightfulBlocks.SALMONBERRY_BUSH.get(), (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
 
     // WIP
     public static final RegistryObject<Item> PIZZA = registerItem("pizza",

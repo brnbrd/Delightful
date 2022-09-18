@@ -1,6 +1,5 @@
 package net.brdle.delightful.common.item.knife;
 
-import com.google.common.collect.ImmutableList;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -10,7 +9,6 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.Nullable;
-import vectorwing.farmersdelight.FarmersDelight;
 import java.util.List;
 import java.util.Objects;
 import java.util.function.Supplier;
@@ -18,7 +16,6 @@ import java.util.function.Supplier;
 public class TaggedKnifeItem extends DelightfulKnifeItem {
     private final ResourceLocation tag;
     private final boolean smith;
-    private final ImmutableList<CreativeModeTab> tabs = ImmutableList.of(CreativeModeTab.TAB_SEARCH, FarmersDelight.CREATIVE_TAB);
 
     public TaggedKnifeItem(ResourceLocation tag, Tier tier, float attackDamageIn, float attackSpeedIn, Item.Properties properties) {
         super(() -> Ingredient.of(ItemTags.create(tag)), tier, attackDamageIn, attackSpeedIn, properties);
@@ -62,10 +59,5 @@ public class TaggedKnifeItem extends DelightfulKnifeItem {
             tool.add(Component.translatable("Requires non-empty tag:"));
             tool.add(Component.translatable(this.tag.getNamespace() + ":" + this.tag.getPath()).withStyle(ChatFormatting.UNDERLINE));
         }
-    }
-
-    @Override
-    protected boolean allowedIn(CreativeModeTab cat) {
-        return tabs.contains(cat) && this.config();
     }
 }
