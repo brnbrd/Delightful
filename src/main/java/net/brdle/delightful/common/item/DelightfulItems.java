@@ -118,6 +118,10 @@ public class DelightfulItems {
     // Knives
     public static final RegistryObject<Item> BONE_KNIFE = registerKnife("bone",
       () -> Ingredient.of(Tags.Items.BONES));
+    public static final RegistryObject<Item> AMETHYST_KNIFE = registerKnife("amethyst",
+        () -> Ingredient.of(Tags.Items.GEMS_AMETHYST));
+    public static final RegistryObject<Item> EMERALD_KNIFE = registerKnife("emerald",
+        () -> Ingredient.of(Tags.Items.GEMS_EMERALD));
     public static final RegistryObject<Item> COPPER_KNIFE = registerIngotKnife("copper");
     public static final RegistryObject<Item> BLACK_OPAL_KNIFE = registerGemKnife("black_opal");
     public static final RegistryObject<Item> TIN_KNIFE = registerIngotKnife("tin");

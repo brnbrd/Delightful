@@ -1,15 +1,18 @@
 package net.brdle.delightful.common.item;
+
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraftforge.common.TierSortingRegistry;
+import net.minecraftforge.common.Tags;
 import org.jetbrains.annotations.NotNull;
 import java.util.function.Supplier;
 
 public enum DelightfulTiers implements Tier {
-    BONE(1, 190, 5.0F, 1.5F, 9, () -> Ingredient.of(Items.BONE)),
+    BONE(1, 190, 5.0F, 1.5F, 9, () -> Ingredient.of(Tags.Items.BONES)),
+    AMETHYST(2, 44, 15.0F, 0.5F, 1, () -> Ingredient.of(Tags.Items.GEMS_AMETHYST)),
+    EMERALD(2, 250, 14.0F, 3.5F, 24, () -> Ingredient.of(Tags.Items.GEMS_EMERALD)),
     COPPER(2, 150, 5.0F, 1.5F, 14, DelightfulItems.getIngot("copper")),
     TIN(1, 120, 13.0F, 1.5F, 18, DelightfulItems.getIngot("tin")),
     STEEL(2, 484, 6.5F, 2.5F, 16, DelightfulItems.getIngot("steel")),

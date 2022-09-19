@@ -1,8 +1,11 @@
 package net.brdle.delightful.common.config;
 
+import com.google.common.collect.ImmutableList;
+import it.unimi.dsi.fastutil.Pair;
 import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.item.knife.DelightfulKnifeItem;
 import net.minecraftforge.common.ForgeConfigSpec;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.HashMap;
@@ -17,6 +20,11 @@ public class DelightfulConfig {
     public static ForgeConfigSpec.IntValue CHANCE_MINI_MELON;
     public static ForgeConfigSpec.BooleanValue CRAFT_NUT_MILK;
     public static ForgeConfigSpec.BooleanValue COOK_CLOVER_HONEY;
+    private static final ImmutableList<String> disabled_by_default_knives = ImmutableList.of(
+        "bone_knife",
+        "amethyst_knife",
+        "emerald_knife"
+    );
 
     DelightfulConfig(ForgeConfigSpec.Builder builder) {
         var items = DelightfulItems.ITEMS.getEntries();
@@ -27,10 +35,7 @@ public class DelightfulConfig {
                 .map(obj -> obj.getId().getPath())
                 .filter(path -> path.contains("_knife"))
                 .sorted()
-                .forEach(knife -> put(builder, stuff, knife, switch (knife) {
-                    case "disabled_knife" -> false;
-                    default -> true;
-                }));
+                .forEach(knife -> put(builder, stuff, knife, !disabled_by_default_knives.contains(knife)));
         builder.pop();
         builder.push("Cabinets");
             items.stream()

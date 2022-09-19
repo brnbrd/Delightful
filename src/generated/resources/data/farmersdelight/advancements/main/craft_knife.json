@@ -1,6 +1,18 @@
 {
   "parent": "farmersdelight:main/root",
   "criteria": {
+    "amethyst_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:amethyst_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "black_opal_knife": {
       "conditions": {
         "items": [
@@ -115,6 +127,18 @@
           {
             "items": [
               "delightful:electrum_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "emerald_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:emerald_knife"
             ]
           }
         ]
@@ -434,6 +458,8 @@
       "golden_knife",
       "netherite_knife",
       "bone_knife",
+      "amethyst_knife",
+      "emerald_knife",
       "copper_knife",
       "black_opal_knife",
       "tin_knife",
