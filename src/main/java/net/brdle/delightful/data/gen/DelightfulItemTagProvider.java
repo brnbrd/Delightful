@@ -77,14 +77,14 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_KIWI)
 			.addTag(DelightfulItemTags.FRUITS_MELON)
 			.addTag(DelightfulItemTags.FRUITS_PRICKLY_PEAR)
+			.addTag(DelightfulItemTags.FRUITS_BANANA)
 			.addTag(DelightfulItemTags.FRUITS_SWEET_BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_SALMONBERRIES)
 			.addTag(DelightfulItemTags.FRUITS_STRAWBERRIES)
-			.addTag(DelightfulItemTags.FRUITS_BANANA)
 			.addTag(DelightfulItemTags.FRUITS_CHERRY)
-			.addOptional(new ResourceLocation("forge", "fruits/orange"))
-			.addOptional(new ResourceLocation("forge", "fruits/mandarin"))
-			.addOptional(new ResourceLocation("forge", "fruits/redlove"));
+			.addOptionalTag(new ResourceLocation("forge", "fruits/mandarin"))
+			.addOptionalTag(new ResourceLocation("forge", "fruits/orange"))
+			.addOptionalTag(new ResourceLocation("forge", "fruits/redlove"));
 		this.tag(DelightfulItemTags.NUTS_WALNUT).addOptional(new ResourceLocation("ecologics", "walnut"));
 		this.tag(DelightfulItemTags.NUTS_PEANUT).addOptional(new ResourceLocation("sprout", "peanut"));
 		this.tag(DelightfulItemTags.NUTS_ACORN).add(DelightfulItems.ACORN.get());
@@ -130,7 +130,9 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(new ResourceLocation("biomesoplenty", "rose_quartz_shard"))
 			.addOptional(new ResourceLocation("create", "rose_quartz"));
 		this.tag(DelightfulItemTags.CHOCOLATE)
-			.addOptional(new ResourceLocation("neapolitan", "chocolate_bar"));
+			.addOptional(new ResourceLocation("neapolitan", "chocolate_bar"))
+			.addOptional(new ResourceLocation("create", "bar_of_chocolate"))
+			.addOptionalTag(new ResourceLocation("forge", "chocolatebar"));
 		this.tag(ForgeTags.SALAD_INGREDIENTS)
 			.add(DelightfulItems.CHOPPED_CLOVER.get())
 			.addOptional(new ResourceLocation("sprout", "sprouts"));

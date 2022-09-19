@@ -4,21 +4,21 @@
     "#forge:fruits/kiwi",
     "#forge:fruits/melon",
     "#forge:fruits/prickly_pear",
+    "#forge:fruits/banana",
     "#forge:fruits/sweet_berries",
     "#forge:fruits/salmonberries",
     "#forge:fruits/strawberries",
-    "#forge:fruits/banana",
     "#forge:fruits/cherry",
     {
-      "id": "forge:fruits/orange",
+      "id": "#forge:fruits/mandarin",
       "required": false
     },
     {
-      "id": "forge:fruits/mandarin",
+      "id": "#forge:fruits/orange",
       "required": false
     },
     {
-      "id": "forge:fruits/redlove",
+      "id": "#forge:fruits/redlove",
       "required": false
     }
   ]

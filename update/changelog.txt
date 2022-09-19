@@ -1,1 +1,1 @@
-2.2:Tag updates, acorn
+2.6:Added (disabled by default) Emerald and Amethyst knives. Added Acorn Sack.
