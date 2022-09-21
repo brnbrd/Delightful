@@ -5,13 +5,13 @@
       "item": "delightful:mini_melon"
     }
   ],
-  "result": [
-    {
-      "count": 6,
-      "item": "minecraft:melon_slice"
-    }
-  ],
   "tool": {
     "tag": "forge:tools/knives"
-  }
+  },
+  "result": [
+    {
+      "item": "minecraft:melon_slice",
+      "count": 6
+    }
+  ]
 }

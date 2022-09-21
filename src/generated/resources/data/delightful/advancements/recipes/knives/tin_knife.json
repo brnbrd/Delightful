@@ -1,24 +1,47 @@
 {
   "advancements": [
     {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "tin_knife",
+              "type": "delightful:enabled"
+            },
+            {
+              "value": {
+                "tag": "forge:ingots/tin",
+                "type": "forge:tag_empty"
+              },
+              "type": "forge:not"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
       "advancement": {
         "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:tin_knife"
+          ]
+        },
         "criteria": {
-          "has_the_recipe": {
-            "conditions": {
-              "recipe": "delightful:tin_knife"
-            },
-            "trigger": "minecraft:recipe_unlocked"
-          },
           "has_tin": {
+            "trigger": "minecraft:inventory_changed",
             "conditions": {
               "items": [
                 {
                   "tag": "forge:ingots/tin"
                 }
               ]
-            },
-            "trigger": "minecraft:inventory_changed"
+            }
+          },
+          "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+              "recipe": "delightful:tin_knife"
+            }
           }
         },
         "requirements": [
@@ -26,31 +49,8 @@
             "has_tin",
             "has_the_recipe"
           ]
-        ],
-        "rewards": {
-          "recipes": [
-            "delightful:tin_knife"
-          ]
-        }
-      },
-      "conditions": [
-        {
-          "type": "forge:and",
-          "values": [
-            {
-              "type": "delightful:enabled",
-              "value": "tin_knife"
-            },
-            {
-              "type": "forge:not",
-              "value": {
-                "type": "forge:tag_empty",
-                "tag": "forge:ingots/tin"
-              }
-            }
-          ]
-        }
-      ]
+        ]
+      }
     }
   ]
 }

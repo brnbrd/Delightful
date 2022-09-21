@@ -4,24 +4,28 @@
     {
       "conditions": [
         {
-          "type": "forge:and",
           "values": [
             {
-              "type": "delightful:enabled",
-              "value": "constantan_knife"
+              "value": "constantan_knife",
+              "type": "delightful:enabled"
             },
             {
-              "type": "forge:not",
               "value": {
-                "type": "forge:tag_empty",
-                "tag": "forge:ingots/constantan"
-              }
+                "tag": "forge:ingots/constantan",
+                "type": "forge:tag_empty"
+              },
+              "type": "forge:not"
             }
-          ]
+          ],
+          "type": "forge:and"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "m",
+          "s"
+        ],
         "key": {
           "m": {
             "tag": "forge:ingots/constantan"
@@ -30,10 +34,6 @@
             "tag": "forge:rods/wooden"
           }
         },
-        "pattern": [
-          "m",
-          "s"
-        ],
         "result": {
           "item": "delightful:constantan_knife"
         }

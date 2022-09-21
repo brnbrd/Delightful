@@ -4,14 +4,12 @@
     {
       "conditions": [
         {
-          "type": "delightful:enabled",
-          "value": "ender_nectar"
+          "value": "ender_nectar",
+          "type": "delightful:enabled"
         }
       ],
       "recipe": {
         "type": "farmersdelight:cooking",
-        "cookingtime": 200,
-        "experience": 0.35,
         "ingredients": [
           {
             "item": "minecraft:ender_eye"
@@ -25,7 +23,9 @@
         ],
         "result": {
           "item": "delightful:ender_nectar"
-        }
+        },
+        "experience": 0.35,
+        "cookingtime": 200
       }
     }
   ]

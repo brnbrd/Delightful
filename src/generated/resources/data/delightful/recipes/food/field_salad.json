@@ -4,8 +4,8 @@
     {
       "conditions": [
         {
-          "type": "delightful:enabled",
-          "value": "field_salad"
+          "value": "field_salad",
+          "type": "delightful:enabled"
         }
       ],
       "recipe": {

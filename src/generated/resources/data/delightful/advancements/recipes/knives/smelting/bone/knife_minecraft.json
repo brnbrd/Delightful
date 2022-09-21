@@ -1,10 +1,31 @@
 {
   "advancements": [
     {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "bone_knife",
+              "type": "delightful:enabled"
+            },
+            {
+              "item": "minecraft:bone_meal",
+              "type": "forge:item_exists"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
       "advancement": {
         "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:knives/smelting/bone/knife_minecraft"
+          ]
+        },
         "criteria": {
           "has_bone/knife_knife": {
+            "trigger": "minecraft:inventory_changed",
             "conditions": {
               "items": [
                 {
@@ -13,14 +34,13 @@
                   ]
                 }
               ]
-            },
-            "trigger": "minecraft:inventory_changed"
+            }
           },
           "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
             "conditions": {
               "recipe": "delightful:knives/smelting/bone/knife_minecraft"
-            },
-            "trigger": "minecraft:recipe_unlocked"
+            }
           }
         },
         "requirements": [
@@ -28,28 +48,8 @@
             "has_bone/knife_knife",
             "has_the_recipe"
           ]
-        ],
-        "rewards": {
-          "recipes": [
-            "delightful:knives/smelting/bone/knife_minecraft"
-          ]
-        }
-      },
-      "conditions": [
-        {
-          "type": "forge:and",
-          "values": [
-            {
-              "type": "delightful:enabled",
-              "value": "bone_knife"
-            },
-            {
-              "type": "forge:item_exists",
-              "item": "minecraft:bone_meal"
-            }
-          ]
-        }
-      ]
+        ]
+      }
     }
   ]
 }

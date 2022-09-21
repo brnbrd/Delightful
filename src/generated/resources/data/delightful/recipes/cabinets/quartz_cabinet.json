@@ -4,12 +4,17 @@
     {
       "conditions": [
         {
-          "type": "delightful:enabled",
-          "value": "quartz_cabinet"
+          "value": "quartz_cabinet",
+          "type": "delightful:enabled"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "bbb",
+          "bcb",
+          "bbb"
+        ],
         "key": {
           "b": {
             "tag": "forge:gems/quartz"
@@ -18,11 +23,6 @@
             "tag": "farmersdelight:cabinets/wooden"
           }
         },
-        "pattern": [
-          "bbb",
-          "bcb",
-          "bbb"
-        ],
         "result": {
           "item": "delightful:quartz_cabinet"
         }

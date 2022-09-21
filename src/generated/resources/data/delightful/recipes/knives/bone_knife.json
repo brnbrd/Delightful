@@ -4,17 +4,21 @@
     {
       "conditions": [
         {
-          "type": "forge:and",
           "values": [
             {
-              "type": "delightful:enabled",
-              "value": "bone_knife"
+              "value": "bone_knife",
+              "type": "delightful:enabled"
             }
-          ]
+          ],
+          "type": "forge:and"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "m",
+          "s"
+        ],
         "key": {
           "m": {
             "tag": "forge:bones"
@@ -23,10 +27,6 @@
             "tag": "forge:rods/wooden"
           }
         },
-        "pattern": [
-          "m",
-          "s"
-        ],
         "result": {
           "item": "delightful:bone_knife"
         }

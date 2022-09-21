@@ -1,4 +1,5 @@
 {
+  "replace": false,
   "values": [
     "#forge:raw_fishes/koi",
     "#forge:raw_fishes/glowfish"

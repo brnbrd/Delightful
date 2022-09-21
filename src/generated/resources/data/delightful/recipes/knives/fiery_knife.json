@@ -4,28 +4,32 @@
     {
       "conditions": [
         {
-          "type": "forge:and",
           "values": [
             {
-              "type": "delightful:enabled",
-              "value": "fiery_knife"
+              "value": "fiery_knife",
+              "type": "delightful:enabled"
             },
             {
-              "type": "forge:mod_loaded",
-              "modid": "twilightforest"
+              "modid": "twilightforest",
+              "type": "forge:mod_loaded"
             },
             {
-              "type": "forge:not",
               "value": {
-                "type": "forge:tag_empty",
-                "tag": "forge:ingots/fiery"
-              }
+                "tag": "forge:ingots/fiery",
+                "type": "forge:tag_empty"
+              },
+              "type": "forge:not"
             }
-          ]
+          ],
+          "type": "forge:and"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "m",
+          "s"
+        ],
         "key": {
           "m": {
             "tag": "forge:ingots/fiery"
@@ -34,10 +38,6 @@
             "item": "minecraft:blaze_rod"
           }
         },
-        "pattern": [
-          "m",
-          "s"
-        ],
         "result": {
           "item": "delightful:fiery_knife"
         }

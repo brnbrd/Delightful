@@ -4,28 +4,32 @@
     {
       "conditions": [
         {
-          "type": "forge:and",
           "values": [
             {
-              "type": "delightful:enabled",
-              "value": "draco_arcanus_knife"
+              "value": "draco_arcanus_knife",
+              "type": "delightful:enabled"
             },
             {
-              "type": "forge:mod_loaded",
-              "modid": "forbidden_arcanus"
+              "modid": "forbidden_arcanus",
+              "type": "forge:mod_loaded"
             },
             {
-              "type": "forge:not",
               "value": {
-                "type": "forge:tag_empty",
-                "tag": "forbidden_arcanus:dragon_scale"
-              }
+                "tag": "forbidden_arcanus:dragon_scale",
+                "type": "forge:tag_empty"
+              },
+              "type": "forge:not"
             }
-          ]
+          ],
+          "type": "forge:and"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "m",
+          "s"
+        ],
         "key": {
           "m": {
             "tag": "forbidden_arcanus:dragon_scale"
@@ -34,10 +38,6 @@
             "tag": "forbidden_arcanus:draco_arcanus_staff"
           }
         },
-        "pattern": [
-          "m",
-          "s"
-        ],
         "result": {
           "item": "delightful:draco_arcanus_knife"
         }

@@ -1,10 +1,38 @@
 {
   "advancements": [
     {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "chunkwich",
+              "type": "delightful:enabled"
+            },
+            {
+              "item": "rottenleather:sweetened_chunk",
+              "type": "forge:item_exists"
+            },
+            {
+              "value": {
+                "item": "some_assembly_required:burger_bun",
+                "type": "forge:item_exists"
+              },
+              "type": "forge:not"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
       "advancement": {
         "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:food/chunkwich"
+          ]
+        },
         "criteria": {
           "has_sweetened_chunk": {
+            "trigger": "minecraft:inventory_changed",
             "conditions": {
               "items": [
                 {
@@ -13,14 +41,13 @@
                   ]
                 }
               ]
-            },
-            "trigger": "minecraft:inventory_changed"
+            }
           },
           "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
             "conditions": {
               "recipe": "delightful:food/chunkwich"
-            },
-            "trigger": "minecraft:recipe_unlocked"
+            }
           }
         },
         "requirements": [
@@ -28,35 +55,8 @@
             "has_sweetened_chunk",
             "has_the_recipe"
           ]
-        ],
-        "rewards": {
-          "recipes": [
-            "delightful:food/chunkwich"
-          ]
-        }
-      },
-      "conditions": [
-        {
-          "type": "forge:and",
-          "values": [
-            {
-              "type": "delightful:enabled",
-              "value": "chunkwich"
-            },
-            {
-              "type": "forge:item_exists",
-              "item": "rottenleather:sweetened_chunk"
-            },
-            {
-              "type": "forge:not",
-              "value": {
-                "type": "forge:item_exists",
-                "item": "some_assembly_required:burger_bun"
-              }
-            }
-          ]
-        }
-      ]
+        ]
+      }
     }
   ]
 }

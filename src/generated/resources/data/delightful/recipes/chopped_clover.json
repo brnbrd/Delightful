@@ -4,17 +4,17 @@
     {
       "conditions": [
         {
-          "type": "forge:and",
           "values": [
             {
-              "type": "delightful:enabled",
-              "value": "chopped_clover"
+              "value": "chopped_clover",
+              "type": "delightful:enabled"
             },
             {
-              "type": "forge:item_exists",
-              "item": "biomesoplenty:clover"
+              "item": "biomesoplenty:clover",
+              "type": "forge:item_exists"
             }
-          ]
+          ],
+          "type": "forge:and"
         }
       ],
       "recipe": {
@@ -24,15 +24,15 @@
             "item": "biomesoplenty:clover"
           }
         ],
-        "result": [
-          {
-            "count": 2,
-            "item": "delightful:chopped_clover"
-          }
-        ],
         "tool": {
           "tag": "forge:tools/knives"
-        }
+        },
+        "result": [
+          {
+            "item": "delightful:chopped_clover",
+            "count": 2
+          }
+        ]
       }
     }
   ]

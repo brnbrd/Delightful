@@ -1,24 +1,47 @@
 {
   "advancements": [
     {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "honey_glazed_walnut",
+              "type": "delightful:enabled"
+            },
+            {
+              "value": {
+                "tag": "forge:nuts/walnut",
+                "type": "forge:tag_empty"
+              },
+              "type": "forge:not"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
       "advancement": {
         "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:food/honey_glazed_walnut"
+          ]
+        },
         "criteria": {
-          "has_the_recipe": {
-            "conditions": {
-              "recipe": "delightful:food/honey_glazed_walnut"
-            },
-            "trigger": "minecraft:recipe_unlocked"
-          },
           "has_walnut": {
+            "trigger": "minecraft:inventory_changed",
             "conditions": {
               "items": [
                 {
                   "tag": "forge:nuts/walnut"
                 }
               ]
-            },
-            "trigger": "minecraft:inventory_changed"
+            }
+          },
+          "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+              "recipe": "delightful:food/honey_glazed_walnut"
+            }
           }
         },
         "requirements": [
@@ -26,31 +49,8 @@
             "has_walnut",
             "has_the_recipe"
           ]
-        ],
-        "rewards": {
-          "recipes": [
-            "delightful:food/honey_glazed_walnut"
-          ]
-        }
-      },
-      "conditions": [
-        {
-          "type": "forge:and",
-          "values": [
-            {
-              "type": "delightful:enabled",
-              "value": "honey_glazed_walnut"
-            },
-            {
-              "type": "forge:not",
-              "value": {
-                "type": "forge:tag_empty",
-                "tag": "forge:nuts/walnut"
-              }
-            }
-          ]
-        }
-      ]
+        ]
+      }
     }
   ]
 }

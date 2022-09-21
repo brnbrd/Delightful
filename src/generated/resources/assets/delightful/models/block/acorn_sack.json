@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/cube_bottom_top",
   "textures": {
-    "bottom": "delightful:block/acorn_sack_bottom",
     "side": "delightful:block/acorn_sack",
+    "bottom": "delightful:block/acorn_sack_bottom",
     "top": "delightful:block/acorn_sack_top"
   }
 }

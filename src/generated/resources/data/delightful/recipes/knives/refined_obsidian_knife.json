@@ -4,28 +4,32 @@
     {
       "conditions": [
         {
-          "type": "forge:and",
           "values": [
             {
-              "type": "delightful:enabled",
-              "value": "refined_obsidian_knife"
+              "value": "refined_obsidian_knife",
+              "type": "delightful:enabled"
             },
             {
-              "type": "forge:mod_loaded",
-              "modid": "mekanismtools"
+              "modid": "mekanismtools",
+              "type": "forge:mod_loaded"
             },
             {
-              "type": "forge:not",
               "value": {
-                "type": "forge:tag_empty",
-                "tag": "forge:ingots/refined_obsidian"
-              }
+                "tag": "forge:ingots/refined_obsidian",
+                "type": "forge:tag_empty"
+              },
+              "type": "forge:not"
             }
-          ]
+          ],
+          "type": "forge:and"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "m",
+          "s"
+        ],
         "key": {
           "m": {
             "tag": "forge:ingots/refined_obsidian"
@@ -34,10 +38,6 @@
             "tag": "forge:rods/wooden"
           }
         },
-        "pattern": [
-          "m",
-          "s"
-        ],
         "result": {
           "item": "delightful:refined_obsidian_knife"
         }

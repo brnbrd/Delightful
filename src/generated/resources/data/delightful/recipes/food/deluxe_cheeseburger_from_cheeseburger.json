@@ -4,8 +4,8 @@
     {
       "conditions": [
         {
-          "type": "delightful:enabled",
-          "value": "deluxe_cheeseburger"
+          "value": "deluxe_cheeseburger",
+          "type": "delightful:enabled"
         }
       ],
       "recipe": {

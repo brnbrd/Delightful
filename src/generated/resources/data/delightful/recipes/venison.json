@@ -4,20 +4,20 @@
     {
       "conditions": [
         {
-          "type": "forge:and",
           "values": [
             {
-              "type": "delightful:enabled",
-              "value": "venison_chops"
+              "value": "venison_chops",
+              "type": "delightful:enabled"
             },
             {
-              "type": "forge:not",
               "value": {
-                "type": "forge:tag_empty",
-                "tag": "forge:raw_venison"
-              }
+                "tag": "forge:raw_venison",
+                "type": "forge:tag_empty"
+              },
+              "type": "forge:not"
             }
-          ]
+          ],
+          "type": "forge:and"
         }
       ],
       "recipe": {
@@ -27,15 +27,15 @@
             "tag": "forge:raw_venison"
           }
         ],
-        "result": [
-          {
-            "count": 2,
-            "item": "delightful:venison_chops"
-          }
-        ],
         "tool": {
           "tag": "forge:tools/knives"
-        }
+        },
+        "result": [
+          {
+            "item": "delightful:venison_chops",
+            "count": 2
+          }
+        ]
       }
     }
   ]

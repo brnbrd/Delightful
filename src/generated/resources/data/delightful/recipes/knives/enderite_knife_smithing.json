@@ -4,29 +4,29 @@
     {
       "conditions": [
         {
-          "type": "forge:and",
           "values": [
             {
-              "type": "delightful:enabled",
-              "value": "enderite_knife"
+              "value": "enderite_knife",
+              "type": "delightful:enabled"
             },
             {
-              "type": "forge:not",
               "value": {
-                "type": "forge:tag_empty",
-                "tag": "forge:ingots/enderite"
-              }
+                "tag": "forge:ingots/enderite",
+                "type": "forge:tag_empty"
+              },
+              "type": "forge:not"
             }
-          ]
+          ],
+          "type": "forge:and"
         }
       ],
       "recipe": {
         "type": "minecraft:smithing",
-        "addition": {
-          "tag": "forge:ingots/enderite"
-        },
         "base": {
           "item": "farmersdelight:netherite_knife"
+        },
+        "addition": {
+          "tag": "forge:ingots/enderite"
         },
         "result": {
           "item": "delightful:enderite_knife"

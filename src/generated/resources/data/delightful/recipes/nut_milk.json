@@ -4,17 +4,12 @@
     {
       "conditions": [
         {
-          "type": "delightful:enabled",
-          "value": "nut_milk"
+          "value": "nut_milk",
+          "type": "delightful:enabled"
         }
       ],
       "recipe": {
         "type": "farmersdelight:cooking",
-        "container": {
-          "item": "minecraft:bucket"
-        },
-        "cookingtime": 200,
-        "experience": 0.35,
         "ingredients": [
           {
             "tag": "forge:water"
@@ -31,7 +26,12 @@
         ],
         "result": {
           "item": "minecraft:milk_bucket"
-        }
+        },
+        "container": {
+          "item": "minecraft:bucket"
+        },
+        "experience": 0.35,
+        "cookingtime": 200
       }
     }
   ]

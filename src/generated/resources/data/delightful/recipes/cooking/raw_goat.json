@@ -4,18 +4,18 @@
     {
       "conditions": [
         {
-          "type": "delightful:enabled",
-          "value": "cooked_goat"
+          "value": "cooked_goat",
+          "type": "delightful:enabled"
         }
       ],
       "recipe": {
         "type": "minecraft:smelting",
-        "cookingtime": 200,
-        "experience": 0.35,
         "ingredient": {
           "item": "delightful:raw_goat"
         },
-        "result": "delightful:cooked_goat"
+        "result": "delightful:cooked_goat",
+        "experience": 0.35,
+        "cookingtime": 200
       }
     }
   ]

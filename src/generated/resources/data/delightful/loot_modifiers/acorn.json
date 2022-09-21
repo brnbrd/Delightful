@@ -1,13 +1,12 @@
 {
-  "type": "delightful:add_item",
   "conditions": [
     {
       "condition": "delightful:enabled",
       "item": "acorn"
     },
     {
-      "chance": 0.07,
-      "condition": "minecraft:random_chance"
+      "condition": "minecraft:random_chance",
+      "chance": 0.07
     },
     {
       "condition": "minecraft:inverted",
@@ -35,18 +34,19 @@
       "condition": "minecraft:alternative",
       "terms": [
         {
-          "block": "minecraft:oak_leaves",
-          "condition": "minecraft:block_state_property"
+          "condition": "minecraft:block_state_property",
+          "block": "minecraft:oak_leaves"
         },
         {
-          "block": "minecraft:dark_oak_leaves",
-          "condition": "minecraft:block_state_property"
+          "condition": "minecraft:block_state_property",
+          "block": "minecraft:dark_oak_leaves"
         }
       ]
     }
   ],
   "item": "delightful:acorn",
-  "maxAmount": 1,
   "minAmount": 1,
-  "unique": true
+  "maxAmount": 1,
+  "unique": true,
+  "type": "delightful:add_item"
 }

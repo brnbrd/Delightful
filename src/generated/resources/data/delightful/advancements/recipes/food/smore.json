@@ -1,10 +1,31 @@
 {
   "advancements": [
     {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "smore",
+              "type": "delightful:enabled"
+            },
+            {
+              "tag": "forge:chocolate",
+              "type": "forge:tag_empty"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
       "advancement": {
         "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:food/smore"
+          ]
+        },
         "criteria": {
           "has_cooked_marshmallow_stick": {
+            "trigger": "minecraft:inventory_changed",
             "conditions": {
               "items": [
                 {
@@ -13,14 +34,13 @@
                   ]
                 }
               ]
-            },
-            "trigger": "minecraft:inventory_changed"
+            }
           },
           "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
             "conditions": {
               "recipe": "delightful:food/smore"
-            },
-            "trigger": "minecraft:recipe_unlocked"
+            }
           }
         },
         "requirements": [
@@ -28,28 +48,8 @@
             "has_cooked_marshmallow_stick",
             "has_the_recipe"
           ]
-        ],
-        "rewards": {
-          "recipes": [
-            "delightful:food/smore"
-          ]
-        }
-      },
-      "conditions": [
-        {
-          "type": "forge:and",
-          "values": [
-            {
-              "type": "delightful:enabled",
-              "value": "smore"
-            },
-            {
-              "type": "forge:tag_empty",
-              "tag": "forge:chocolate"
-            }
-          ]
-        }
-      ]
+        ]
+      }
     }
   ]
 }

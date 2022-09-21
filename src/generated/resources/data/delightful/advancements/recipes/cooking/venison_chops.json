@@ -1,16 +1,22 @@
 {
   "advancements": [
     {
+      "conditions": [
+        {
+          "value": "cooked_venison_chops",
+          "type": "delightful:enabled"
+        }
+      ],
       "advancement": {
         "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:cooking/venison_chops"
+          ]
+        },
         "criteria": {
-          "has_the_recipe": {
-            "conditions": {
-              "recipe": "delightful:cooking/venison_chops"
-            },
-            "trigger": "minecraft:recipe_unlocked"
-          },
           "has_venison_chops": {
+            "trigger": "minecraft:inventory_changed",
             "conditions": {
               "items": [
                 {
@@ -19,8 +25,13 @@
                   ]
                 }
               ]
-            },
-            "trigger": "minecraft:inventory_changed"
+            }
+          },
+          "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+              "recipe": "delightful:cooking/venison_chops"
+            }
           }
         },
         "requirements": [
@@ -28,19 +39,8 @@
             "has_venison_chops",
             "has_the_recipe"
           ]
-        ],
-        "rewards": {
-          "recipes": [
-            "delightful:cooking/venison_chops"
-          ]
-        }
-      },
-      "conditions": [
-        {
-          "type": "delightful:enabled",
-          "value": "cooked_venison_chops"
-        }
-      ]
+        ]
+      }
     }
   ]
 }

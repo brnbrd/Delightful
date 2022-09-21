@@ -4,8 +4,8 @@
     {
       "conditions": [
         {
-          "type": "delightful:enabled",
-          "value": "marshmallow_stick"
+          "value": "marshmallow_stick",
+          "type": "delightful:enabled"
         }
       ],
       "recipe": {
@@ -25,8 +25,8 @@
           }
         ],
         "result": {
-          "count": 2,
-          "item": "delightful:marshmallow_stick"
+          "item": "delightful:marshmallow_stick",
+          "count": 2
         }
       }
     }

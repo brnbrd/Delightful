@@ -1,6 +1,5 @@
 {
   "parent": "farmersdelight:block/bush_crop",
-  "render_type": "minecraft:cutout",
   "textures": {
     "crop": "delightful:block/wild_salmonberries"
   }

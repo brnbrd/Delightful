@@ -1,24 +1,35 @@
 {
   "advancements": [
     {
+      "conditions": [
+        {
+          "value": "basalt_cabinet",
+          "type": "delightful:enabled"
+        }
+      ],
       "advancement": {
         "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:basalt_cabinet"
+          ]
+        },
         "criteria": {
           "has_cabinet": {
+            "trigger": "minecraft:inventory_changed",
             "conditions": {
               "items": [
                 {
                   "tag": "farmersdelight:cabinets"
                 }
               ]
-            },
-            "trigger": "minecraft:inventory_changed"
+            }
           },
           "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
             "conditions": {
               "recipe": "delightful:basalt_cabinet"
-            },
-            "trigger": "minecraft:recipe_unlocked"
+            }
           }
         },
         "requirements": [
@@ -26,19 +37,8 @@
             "has_cabinet",
             "has_the_recipe"
           ]
-        ],
-        "rewards": {
-          "recipes": [
-            "delightful:basalt_cabinet"
-          ]
-        }
-      },
-      "conditions": [
-        {
-          "type": "delightful:enabled",
-          "value": "basalt_cabinet"
-        }
-      ]
+        ]
+      }
     }
   ]
 }

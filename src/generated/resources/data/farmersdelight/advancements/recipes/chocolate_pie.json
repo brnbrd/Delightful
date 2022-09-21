@@ -1,10 +1,25 @@
 {
   "advancements": [
     {
+      "conditions": [
+        {
+          "value": {
+            "tag": "forge:chocolate",
+            "type": "forge:tag_empty"
+          },
+          "type": "forge:not"
+        }
+      ],
       "advancement": {
         "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "farmersdelight:chocolate_pie"
+          ]
+        },
         "criteria": {
           "has_pie_crust": {
+            "trigger": "minecraft:inventory_changed",
             "conditions": {
               "items": [
                 {
@@ -13,14 +28,13 @@
                   ]
                 }
               ]
-            },
-            "trigger": "minecraft:inventory_changed"
+            }
           },
           "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
             "conditions": {
               "recipe": "farmersdelight:chocolate_pie"
-            },
-            "trigger": "minecraft:recipe_unlocked"
+            }
           }
         },
         "requirements": [
@@ -28,28 +42,26 @@
             "has_pie_crust",
             "has_the_recipe"
           ]
-        ],
-        "rewards": {
-          "recipes": [
-            "farmersdelight:chocolate_pie"
-          ]
-        }
-      },
-      "conditions": [
-        {
-          "type": "forge:not",
-          "value": {
-            "type": "forge:tag_empty",
-            "tag": "forge:chocolate"
-          }
-        }
-      ]
+        ]
+      }
     },
     {
+      "conditions": [
+        {
+          "tag": "forge:chocolate",
+          "type": "forge:tag_empty"
+        }
+      ],
       "advancement": {
         "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "farmersdelight:chocolate_pie"
+          ]
+        },
         "criteria": {
           "has_pie_crust": {
+            "trigger": "minecraft:inventory_changed",
             "conditions": {
               "items": [
                 {
@@ -58,14 +70,13 @@
                   ]
                 }
               ]
-            },
-            "trigger": "minecraft:inventory_changed"
+            }
           },
           "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
             "conditions": {
               "recipe": "farmersdelight:chocolate_pie"
-            },
-            "trigger": "minecraft:recipe_unlocked"
+            }
           }
         },
         "requirements": [
@@ -73,19 +84,8 @@
             "has_pie_crust",
             "has_the_recipe"
           ]
-        ],
-        "rewards": {
-          "recipes": [
-            "farmersdelight:chocolate_pie"
-          ]
-        }
-      },
-      "conditions": [
-        {
-          "type": "forge:tag_empty",
-          "tag": "forge:chocolate"
-        }
-      ]
+        ]
+      }
     }
   ]
 }

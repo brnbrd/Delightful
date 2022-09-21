@@ -4,17 +4,17 @@
     {
       "conditions": [
         {
-          "type": "forge:and",
           "values": [
             {
-              "type": "delightful:enabled",
-              "value": "smore"
+              "value": "smore",
+              "type": "delightful:enabled"
             },
             {
-              "type": "forge:tag_empty",
-              "tag": "forge:chocolate"
+              "tag": "forge:chocolate",
+              "type": "forge:tag_empty"
             }
-          ]
+          ],
+          "type": "forge:and"
         }
       ],
       "recipe": {

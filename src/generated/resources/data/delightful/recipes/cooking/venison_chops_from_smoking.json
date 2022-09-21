@@ -4,18 +4,18 @@
     {
       "conditions": [
         {
-          "type": "delightful:enabled",
-          "value": "cooked_venison_chops"
+          "value": "cooked_venison_chops",
+          "type": "delightful:enabled"
         }
       ],
       "recipe": {
         "type": "minecraft:smoking",
-        "cookingtime": 100,
-        "experience": 0.35,
         "ingredient": {
           "item": "delightful:venison_chops"
         },
-        "result": "delightful:cooked_venison_chops"
+        "result": "delightful:cooked_venison_chops",
+        "experience": 0.35,
+        "cookingtime": 100
       }
     }
   ]

@@ -1,24 +1,51 @@
 {
   "advancements": [
     {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "osmium_knife",
+              "type": "delightful:enabled"
+            },
+            {
+              "modid": "mekanismtools",
+              "type": "forge:mod_loaded"
+            },
+            {
+              "value": {
+                "tag": "forge:ingots/osmium",
+                "type": "forge:tag_empty"
+              },
+              "type": "forge:not"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
       "advancement": {
         "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:osmium_knife"
+          ]
+        },
         "criteria": {
           "has_osmium": {
+            "trigger": "minecraft:inventory_changed",
             "conditions": {
               "items": [
                 {
                   "tag": "forge:ingots/osmium"
                 }
               ]
-            },
-            "trigger": "minecraft:inventory_changed"
+            }
           },
           "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
             "conditions": {
               "recipe": "delightful:osmium_knife"
-            },
-            "trigger": "minecraft:recipe_unlocked"
+            }
           }
         },
         "requirements": [
@@ -26,35 +53,8 @@
             "has_osmium",
             "has_the_recipe"
           ]
-        ],
-        "rewards": {
-          "recipes": [
-            "delightful:osmium_knife"
-          ]
-        }
-      },
-      "conditions": [
-        {
-          "type": "forge:and",
-          "values": [
-            {
-              "type": "delightful:enabled",
-              "value": "osmium_knife"
-            },
-            {
-              "type": "forge:mod_loaded",
-              "modid": "mekanismtools"
-            },
-            {
-              "type": "forge:not",
-              "value": {
-                "type": "forge:tag_empty",
-                "tag": "forge:ingots/osmium"
-              }
-            }
-          ]
-        }
-      ]
+        ]
+      }
     }
   ]
 }

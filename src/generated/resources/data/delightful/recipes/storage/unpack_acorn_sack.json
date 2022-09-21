@@ -4,8 +4,8 @@
     {
       "conditions": [
         {
-          "type": "delightful:enabled",
-          "value": "acorn_sack"
+          "value": "acorn_sack",
+          "type": "delightful:enabled"
         }
       ],
       "recipe": {
@@ -16,8 +16,8 @@
           }
         ],
         "result": {
-          "count": 9,
-          "item": "delightful:acorn"
+          "item": "delightful:acorn",
+          "count": 9
         }
       }
     }

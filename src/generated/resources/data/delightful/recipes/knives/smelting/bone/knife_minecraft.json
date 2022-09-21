@@ -4,27 +4,27 @@
     {
       "conditions": [
         {
-          "type": "forge:and",
           "values": [
             {
-              "type": "delightful:enabled",
-              "value": "bone_knife"
+              "value": "bone_knife",
+              "type": "delightful:enabled"
             },
             {
-              "type": "forge:item_exists",
-              "item": "minecraft:bone_meal"
+              "item": "minecraft:bone_meal",
+              "type": "forge:item_exists"
             }
-          ]
+          ],
+          "type": "forge:and"
         }
       ],
       "recipe": {
         "type": "minecraft:smelting",
-        "cookingtime": 200,
-        "experience": 0.1,
         "ingredient": {
           "item": "delightful:bone_knife"
         },
-        "result": "minecraft:bone_meal"
+        "result": "minecraft:bone_meal",
+        "experience": 0.1,
+        "cookingtime": 200
       }
     }
   ]
