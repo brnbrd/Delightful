@@ -69,6 +69,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_REDCURRANT)
 			.addTag(DelightfulItemTags.FRUITS_WHITECURRANT)
 			.addTag(DelightfulItemTags.FRUITS_CHERRY);
+		this.tag(ForgeTags.BERRIES)
+			.addTag(DelightfulItemTags.FRUITS_BERRIES);
 		this.tag(DelightfulItemTags.FRUITS)
 			.addTag(DelightfulItemTags.FRUITS_APPLE)
 			.addTag(DelightfulItemTags.FRUITS_KIWI)

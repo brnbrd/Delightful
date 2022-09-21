@@ -56,8 +56,8 @@ public class TaggedKnifeItem extends DelightfulKnifeItem {
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> tool, TooltipFlag pIsAdvanced) {
         super.appendHoverText(pStack, pLevel, tool, pIsAdvanced);
         if (!this.isTag() && this.config()) {
-            tool.add(Component.translatable("Requires non-empty tag:"));
-            tool.add(Component.translatable(this.tag.getNamespace() + ":" + this.tag.getPath()).withStyle(ChatFormatting.UNDERLINE));
+            tool.add(Component.literal("Requires non-empty tag:"));
+            tool.add(Component.literal(this.tag.getNamespace() + ":" + this.tag.getPath()).withStyle(ChatFormatting.UNDERLINE));
         }
     }
 }

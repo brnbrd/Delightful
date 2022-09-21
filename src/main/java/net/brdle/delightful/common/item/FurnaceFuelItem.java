@@ -30,8 +30,8 @@ public class FurnaceFuelItem extends Item {
 
   @Override
   public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> comps, TooltipFlag pIsAdvanced) {
-    comps.add(Component.translatable("Sneak Right Click:").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.UNDERLINE));
-    comps.add(Component.translatable("Applies " + (this.getFuelTime() / 20) + "s of burn time"));
+    comps.add(Component.literal("Sneak Right Click:").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.UNDERLINE));
+    comps.add(Component.literal("Applies " + (this.getFuelTime() / 20) + "s of burn time"));
   }
 
   @Override
