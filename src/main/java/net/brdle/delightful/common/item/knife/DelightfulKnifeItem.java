@@ -7,6 +7,7 @@ import net.brdle.delightful.common.item.IConfigured;
 import net.brdle.delightful.common.item.ISingleIngredient;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TextComponent;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Tier;
@@ -35,7 +36,7 @@ public class DelightfulKnifeItem extends KnifeItem implements IConfigured, ISing
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> tool, TooltipFlag pIsAdvanced) {
         if (!this.config()) {
-            tool.add(Component.literal("Disabled.").withStyle(ChatFormatting.UNDERLINE));
+            tool.add(new TextComponent("Disabled.").withStyle(ChatFormatting.UNDERLINE));
         }
     }
 
@@ -58,7 +59,7 @@ public class DelightfulKnifeItem extends KnifeItem implements IConfigured, ISing
     }
 
     @Override
-    protected boolean allowedIn(CreativeModeTab cat) {
-        return tabs.contains(cat) && this.config();
+    protected boolean allowdedIn(CreativeModeTab pCategory) {
+        return super.allowdedIn(pCategory) && tabs.contains(pCategory) && this.config();
     }
 }

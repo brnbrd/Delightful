@@ -2,6 +2,7 @@ package net.brdle.delightful.common.item.knife;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TextComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -21,7 +22,7 @@ public class CompatKnifeItem extends TaggedKnifeItem {
     public CompatKnifeItem(String modid, ResourceLocation tag, Tier tier, float attackDamageIn, float attackSpeedIn, Properties properties) {
         super(tag, tier, attackDamageIn, attackSpeedIn, properties);
         this.modid = modid;
-        this.tool = Component.empty();
+        this.tool = new TextComponent("");
     }
 
     public CompatKnifeItem(String modid, ResourceLocation tag, Tier tier, float attackDamageIn, float attackSpeedIn, Properties properties, Component tool) {
@@ -33,7 +34,7 @@ public class CompatKnifeItem extends TaggedKnifeItem {
     public CompatKnifeItem(String modid, Supplier<Ingredient> base, ResourceLocation tag, Tier tier, float attackDamageIn, float attackSpeedIn, Properties properties) {
         super(base, tag, tier, attackDamageIn, attackSpeedIn, properties);
         this.modid = modid;
-        this.tool = Component.empty();
+        this.tool = new TextComponent("");
     }
 
     public String getModid() {
@@ -55,17 +56,17 @@ public class CompatKnifeItem extends TaggedKnifeItem {
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> tool, TooltipFlag pIsAdvanced) {
         if (!this.config()) {
-            tool.add(Component.literal("Disabled.").withStyle(ChatFormatting.UNDERLINE));
+            tool.add(new TextComponent("Disabled.").withStyle(ChatFormatting.UNDERLINE));
         } else if (!this.isLoaded()) {
-            tool.add(Component.literal("Requires modid:"));
-            tool.add(Component.literal(modid).withStyle(ChatFormatting.UNDERLINE));
-        } else if (!this.tool.equals(Component.empty())) {
+            tool.add(new TextComponent("Requires modid:"));
+            tool.add(new TextComponent(modid).withStyle(ChatFormatting.UNDERLINE));
+        } else if (!this.tool.getString().equals(new TextComponent("").getString())) {
             tool.add(this.tool);
         }
     }
 
     @Override
-    protected boolean allowedIn(CreativeModeTab cat) {
-        return super.allowedIn(cat) && this.isEnabled();
+    protected boolean allowdedIn(CreativeModeTab pCategory) {
+        return super.allowdedIn(pCategory) && this.isEnabled();
     }
 }

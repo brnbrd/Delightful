@@ -24,7 +24,7 @@ public class DelightfulBlockModelProvider extends BlockModelProvider {
     public void bush(String name) {
         for (int i = 0; i <= 3; i++) {
             String stage = "block/" + name + "_bush_stage" + i;
-            cross(stage, new ResourceLocation(this.modid, stage)).renderType("cutout");
+            cross(stage, new ResourceLocation(this.modid, stage));
         }
     }
 

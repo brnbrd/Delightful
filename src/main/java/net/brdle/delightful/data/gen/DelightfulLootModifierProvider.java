@@ -3,6 +3,7 @@ package net.brdle.delightful.data.gen;
 import net.brdle.delightful.Delightful;
 import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.loot.AddItemLootModifier;
+import net.brdle.delightful.common.loot.DelightfulLootModifiers;
 import net.brdle.delightful.common.loot.LootItemBlockIsTagCondition;
 import net.brdle.delightful.common.loot.LootItemEnabledCondition;
 import net.minecraft.advancements.critereon.*;
@@ -27,7 +28,7 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 	 */
 	@Override
 	protected void start() {
-		add("green_tea_leaf", new AddItemLootModifier(
+		add("green_tea_leaf", DelightfulLootModifiers.ADD_ITEM.get(), new AddItemLootModifier(
 			new LootItemCondition[]{
 				LootItemEnabledCondition.enabled("green_tea_leaf"),
 				LootItemRandomChanceCondition.randomChance(0.12F).build(),
@@ -36,7 +37,7 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 			},
 			DelightfulItems.GREEN_TEA_LEAF.get(), 1, 1, true
 		));
-		add("acorn", new AddItemLootModifier(
+		add("acorn", DelightfulLootModifiers.ADD_ITEM.get(), new AddItemLootModifier(
 			new LootItemCondition[]{
 				LootItemEnabledCondition.enabled("acorn"),
 				LootItemRandomChanceCondition.randomChance(0.07F).build(),
@@ -47,7 +48,7 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 			},
 			DelightfulItems.ACORN.get(), 1, 1, true
 		));
-		add("acorn_from_squirrel", new AddItemLootModifier(
+		add("acorn_from_squirrel", DelightfulLootModifiers.ADD_ITEM.get(), new AddItemLootModifier(
 			new LootItemCondition[]{
 				LootItemEnabledCondition.enabled("acorn"),
 				LootItemRandomChanceWithLootingCondition.randomChanceAndLootingBoost(0.4F, 2.0F).build(),
@@ -55,7 +56,7 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 			},
 			DelightfulItems.ACORN.get(), 1, 1, true
 		));
-		add("animal_fat", new AddItemLootModifier(
+		add("animal_fat", DelightfulLootModifiers.ADD_ITEM.get(), new AddItemLootModifier(
 			new LootItemCondition[]{
 				LootItemEnabledCondition.enabled("animal_fat"),
 				LootItemRandomChanceWithLootingCondition.randomChanceAndLootingBoost(0.3F, 2.0F).build(),
@@ -66,7 +67,7 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 			},
 			DelightfulItems.ANIMAL_FAT.get(), 2, 3, true
 		));
-		add("raw_goat", new AddItemLootModifier(
+		add("raw_goat", DelightfulLootModifiers.ADD_ITEM.get(), new AddItemLootModifier(
 			new LootItemCondition[]{
 				LootItemEnabledCondition.enabled("raw_goat"),
 				LootItemRandomChanceWithLootingCondition.randomChanceAndLootingBoost(1.0F, 2.0F).build(),

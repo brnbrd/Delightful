@@ -1,6 +1,6 @@
 package net.brdle.delightful.common.item.food;
 
-import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.SimpleMenuProvider;
@@ -23,12 +23,12 @@ public class EnderNectarItem extends DrinkItem {
     public void affectConsumer(ItemStack stack, Level worldIn, LivingEntity consumer) {
         super.affectConsumer(stack, worldIn, consumer);
         if (consumer instanceof ServerPlayer player) {
-            NetworkHooks.openScreen(player, new SimpleMenuProvider((i, inv, p) -> new ChestMenu(MenuType.GENERIC_9x3, i, inv, p.getEnderChestInventory(), 3) {
+            NetworkHooks.openGui(player, new SimpleMenuProvider((i, inv, p) -> new ChestMenu(MenuType.GENERIC_9x3, i, inv, p.getEnderChestInventory(), 3) {
                 @Override
                 public boolean stillValid(Player pPlayer) {
                     return true;
                 }
-            }, Component.translatable("container.enderchest")));
+            }, new TranslatableComponent("container.enderchest")));
             player.awardStat(Stats.OPEN_ENDERCHEST);
             PiglinAi.angerNearbyPiglins(player, true);
         }

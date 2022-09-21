@@ -4,16 +4,14 @@ import net.brdle.delightful.Delightful;
 import net.brdle.delightful.common.config.EnabledCondition;
 import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.world.DelightfulWildCropGeneration;
-import net.brdle.delightful.compat.RootsCompat;
+import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.common.crafting.CraftingHelper;
-import net.minecraftforge.eventbus.api.EventPriority;
+import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegisterEvent;
 
 @Mod.EventBusSubscriber(modid=Delightful.MODID)
 public class Events {
@@ -33,8 +31,8 @@ public class Events {
 
     // Adds delightful conditions
     @SubscribeEvent
-    public static void registerSerializers(RegisterEvent event) {
-        if (event.getRegistryKey() == ForgeRegistries.RECIPE_SERIALIZERS.getRegistryKey()) {
+    public static void registerSerializers(RegistryEvent.Register<RecipeSerializer<?>> event) {
+        if (event.getRegistry() == ForgeRegistries.RECIPE_SERIALIZERS) {
             CraftingHelper.register(EnabledCondition.Serializer.INSTANCE);
         }
     }

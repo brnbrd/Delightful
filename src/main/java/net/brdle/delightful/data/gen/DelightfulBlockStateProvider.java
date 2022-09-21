@@ -35,7 +35,7 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
     }
 
     public void wildCropBlock(Block block) {
-        this.simpleBlock(block, models().singleTexture(Util.name(block), new ResourceLocation(FarmersDelight.MODID, "bush_crop"), "crop", resourceBlock(Util.name(block))).renderType("cutout"));
+        this.simpleBlock(block, models().singleTexture(Util.name(block), new ResourceLocation(FarmersDelight.MODID, "bush_crop"), "crop", resourceBlock(Util.name(block))));
     }
 
     // Adapted from: https://github.com/vectorwing/FarmersDelight/blob/1.18.2/src/main/java/vectorwing/farmersdelight/data/BlockStates.java

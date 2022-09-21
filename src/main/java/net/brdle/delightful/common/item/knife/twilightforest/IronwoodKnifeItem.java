@@ -15,7 +15,7 @@ public class IronwoodKnifeItem extends CompatKnifeItem {
 
   @Override
   public void fillItemCategory(CreativeModeTab tab, NonNullList<ItemStack> list) {
-    if (this.allowedIn(tab)) {
+    if (this.allowdedIn(tab)) {
       ItemStack stack = new ItemStack(this);
       stack.enchant(ModEnchantments.BACKSTABBING.get(), 1);
       list.add(stack);

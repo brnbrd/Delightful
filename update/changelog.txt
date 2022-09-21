@@ -1,1 +1,0 @@
-2.6:Update knife recipes to FD 1.2. Added (disabled by default) Emerald and Amethyst knives. Added Acorn Sack, Raw/Cooked Goat, Raw/Cooked Venison Chops.

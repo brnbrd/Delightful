@@ -5,7 +5,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -26,6 +25,8 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+
+import java.util.Random;
 
 public class SalmonberryBushBlock extends BushBlock implements BonemealableBlock {
   public static final int MAX_AGE = 3;
@@ -60,12 +61,12 @@ public class SalmonberryBushBlock extends BushBlock implements BonemealableBlock
   /**
    * Performs a random tick on a block.
    */
-  public void randomTick(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRandom) {
+  public void randomTick(BlockState pState, ServerLevel pLevel, BlockPos pPos, Random pRandom) {
     int i = pState.getValue(AGE);
     if (i < 3 && pLevel.getRawBrightness(pPos.above(), 0) >= 9 && net.minecraftforge.common.ForgeHooks.onCropsGrowPre(pLevel, pPos, pState, pRandom.nextInt(5) == 0)) {
       BlockState blockstate = pState.setValue(AGE, i + 1);
       pLevel.setBlock(pPos, blockstate, 2);
-      pLevel.gameEvent(GameEvent.BLOCK_CHANGE, pPos, GameEvent.Context.of(blockstate));
+      pLevel.gameEvent(GameEvent.BLOCK_CHANGE, pPos);
       net.minecraftforge.common.ForgeHooks.onCropsGrowPost(pLevel, pPos, pState);
     }
 
@@ -82,7 +83,7 @@ public class SalmonberryBushBlock extends BushBlock implements BonemealableBlock
       pLevel.playSound(null, pPos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + pLevel.random.nextFloat() * 0.4F);
       BlockState blockstate = pState.setValue(AGE, 1);
       pLevel.setBlock(pPos, blockstate, 2);
-      pLevel.gameEvent(GameEvent.BLOCK_CHANGE, pPos, GameEvent.Context.of(pPlayer, blockstate));
+      pLevel.gameEvent(pPlayer, GameEvent.BLOCK_CHANGE, pPos);
       return InteractionResult.sidedSuccess(pLevel.isClientSide);
     } else {
       return super.use(pState, pLevel, pPos, pPlayer, pHand, pHit);
@@ -100,11 +101,11 @@ public class SalmonberryBushBlock extends BushBlock implements BonemealableBlock
     return pState.getValue(AGE) < 3;
   }
 
-  public boolean isBonemealSuccess(Level pLevel, RandomSource pRandom, BlockPos pPos, BlockState pState) {
+  public boolean isBonemealSuccess(Level pLevel, Random pRandom, BlockPos pPos, BlockState pState) {
     return true;
   }
 
-  public void performBonemeal(ServerLevel pLevel, RandomSource pRandom, BlockPos pPos, BlockState pState) {
+  public void performBonemeal(ServerLevel pLevel, Random pRandom, BlockPos pPos, BlockState pState) {
     pLevel.setBlock(pPos, pState.setValue(AGE, Math.min(3, pState.getValue(AGE) + 1)), 2);
   }
 

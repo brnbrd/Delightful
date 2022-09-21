@@ -15,7 +15,7 @@ public class SteeleafKnifeItem extends CompatKnifeItem {
 
   @Override
   public void fillItemCategory(CreativeModeTab tab, NonNullList<ItemStack> list) {
-    if (this.allowedIn(tab)) {
+    if (this.allowdedIn(tab)) {
       ItemStack stack = new ItemStack(this);
       stack.enchant(Enchantments.SMITE, 2);
       list.add(stack);

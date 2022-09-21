@@ -12,7 +12,6 @@ import net.brdle.delightful.common.item.knife.TaggedKnifeItem;
 import net.brdle.delightful.common.item.knife.twilightforest.IronwoodKnifeItem;
 import net.brdle.delightful.common.item.knife.twilightforest.SteeleafKnifeItem;
 import net.brdle.delightful.data.DelightfulItemTags;
-import net.brdle.rottenleather.common.RottenLeatherItems;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.DataGenerator;
@@ -28,11 +27,12 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.ConditionalRecipe;
-import net.minecraftforge.common.crafting.StrictNBTIngredient;
+import net.minecraftforge.common.crafting.NBTIngredient;
 import net.minecraftforge.common.crafting.conditions.ICondition;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.onvoid.rottenleather.common.RottenLeatherItems;
 import org.jetbrains.annotations.NotNull;
 import vectorwing.farmersdelight.FarmersDelight;
 import vectorwing.farmersdelight.common.registry.ModItems;
@@ -115,7 +115,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             "food/marshmallow_stick", finished, enabled("marshmallow_stick"));
         wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.MARSHMALLOW_STICK.get(), 2)
             .requires(DelightfulItemTags.SUGAR)
-            .requires(StrictNBTIngredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
+            .requires(NBTIngredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
             .requires(Tags.Items.RODS_WOODEN)
             .requires(Tags.Items.RODS_WOODEN)
             .unlockedBy("has_sugar", has(DelightfulItemTags.SUGAR)),
@@ -336,7 +336,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             .addCondition(and(enabled("azalea_tea"), itemExists("ecologics", "azalea_flower")))
             .addRecipe(f -> CookingPotRecipeBuilder.cookingPotRecipe(
                     DelightfulItems.AZALEA_TEA.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
-                .addIngredient(StrictNBTIngredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
+                .addIngredient(NBTIngredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
                 .addIngredient(DelightfulItemTags.TEA_LEAVES_GREEN)
                 .addIngredient(modItem("ecologics", "azalea_flower"))
                 .build(f))
@@ -346,7 +346,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             .addCondition(and(enabled("lavender_tea"), itemExists("biomesoplenty", "lavender")))
             .addRecipe(f -> CookingPotRecipeBuilder.cookingPotRecipe(
                     DelightfulItems.LAVENDER_TEA.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
-                .addIngredient(StrictNBTIngredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
+                .addIngredient(NBTIngredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
                 .addIngredient(DelightfulItemTags.TEA_LEAVES_GREEN)
                 .addIngredient(modItem("biomesoplenty", "lavender"))
                 .build(f))

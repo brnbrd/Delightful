@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[41,)"
+loaderVersion="[40,)"
 license="MIT License"
 issueTrackerURL="https://github.com/brdle/Delightful/issues"
 
@@ -8,7 +8,7 @@ modId="delightful"
 version="${file.jarVersion}"
 displayName="Delightful"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/delightful"
-updateJSONURL="https://raw.githubusercontent.com/brdle/Delightful/1.19/update/update.json"
+updateJSONURL="https://onvoid.net/delightful/update.json"
 logoFile="delightful.png"
 logoBlur=false
 credits=""
@@ -20,14 +20,14 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
 [[dependencies.delightful]]
     modId="forge"
     mandatory=true
-    versionRange="[41.1.0,)"
+    versionRange="[40.1.0,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.delightful]]
     modId="farmersdelight"
     mandatory=true
-    versionRange="[1.19-1.2,)"
+    versionRange="[1.18.2-1.2,)"
     ordering="AFTER"
     side="BOTH"
 
