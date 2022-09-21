@@ -2,6 +2,10 @@
   "type": "delightful:add_item",
   "conditions": [
     {
+      "condition": "delightful:enabled",
+      "item": "green_tea_leaf"
+    },
+    {
       "chance": 0.12,
       "condition": "minecraft:random_chance"
     },

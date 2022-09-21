@@ -7,19 +7,20 @@ import net.minecraft.core.Holder;
 import net.minecraft.data.BuiltinRegistries;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.configurations.RandomPatchConfiguration;
 import net.minecraft.world.level.levelgen.placement.*;
+import vectorwing.farmersdelight.common.registry.ModBiomeFeatures;
 import vectorwing.farmersdelight.common.world.WildCropGeneration;
+import vectorwing.farmersdelight.common.world.configuration.WildCropConfiguration;
 import java.util.List;
 
 public class DelightfulWildCropGeneration extends WildCropGeneration {
-	public static Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> FEATURE_PATCH_WILD_SALMONBERRIES;
+	public static Holder<ConfiguredFeature<WildCropConfiguration, ?>> FEATURE_PATCH_WILD_SALMONBERRIES;
 	public static Holder<PlacedFeature> PATCH_WILD_SALMONBERRIES;
-	public static Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> FEATURE_PATCH_MINI_MELON;
+	public static Holder<ConfiguredFeature<WildCropConfiguration, ?>> FEATURE_PATCH_MINI_MELON;
 	public static Holder<PlacedFeature> PATCH_MINI_MELON;
 
 	private static Holder<PlacedFeature> registerPlacement(ResourceLocation id, Holder<? extends ConfiguredFeature<?, ?>> feature, PlacementModifier... modifiers) {
@@ -28,13 +29,13 @@ public class DelightfulWildCropGeneration extends WildCropGeneration {
 
 	public static void registerWildCropGeneration() {
 		FEATURE_PATCH_WILD_SALMONBERRIES = register(new ResourceLocation(Delightful.MODID, "patch_wild_salmonberries"),
-			Feature.RANDOM_PATCH, getWildCropConfiguration(DelightfulBlocks.WILD_SALMONBERRIES.get(), 50, 3, BlockPredicate.matchesBlocks(BLOCK_BELOW, List.of(Blocks.GRASS_BLOCK, Blocks.DIRT))));
+			ModBiomeFeatures.WILD_CROP.get(), wildCropConfig(DelightfulBlocks.WILD_SALMONBERRIES.get(), Blocks.GRASS, BlockPredicate.matchesTag(BLOCK_BELOW, BlockTags.DIRT)));
 
 		PATCH_WILD_SALMONBERRIES = registerPlacement(new ResourceLocation(Delightful.MODID, "patch_wild_salmonberries"),
 			FEATURE_PATCH_WILD_SALMONBERRIES, RarityFilter.onAverageOnceEvery(DelightfulConfig.CHANCE_WILD_SALMONBERRIES.get()), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
 
 		FEATURE_PATCH_MINI_MELON = register(new ResourceLocation(Delightful.MODID, "patch_mini_melon"),
-			Feature.RANDOM_PATCH, getWildCropConfiguration(DelightfulBlocks.MINI_MELON.get(), 30, 2, BlockPredicate.matchesBlocks(BLOCK_BELOW, List.of(Blocks.GRASS_BLOCK, Blocks.DIRT))));
+			ModBiomeFeatures.WILD_CROP.get(), wildCropConfig(DelightfulBlocks.MINI_MELON.get(), Blocks.GRASS, BlockPredicate.matchesTag(BLOCK_BELOW, BlockTags.DIRT)));
 
 		PATCH_MINI_MELON = registerPlacement(new ResourceLocation(Delightful.MODID, "patch_mini_melon"),
 			FEATURE_PATCH_MINI_MELON, RarityFilter.onAverageOnceEvery(DelightfulConfig.CHANCE_MINI_MELON.get()), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());

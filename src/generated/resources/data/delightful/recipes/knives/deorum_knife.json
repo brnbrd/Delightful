@@ -35,8 +35,8 @@
           }
         },
         "pattern": [
-          " m",
-          "s "
+          "m",
+          "s"
         ],
         "result": {
           "item": "delightful:deorum_knife"

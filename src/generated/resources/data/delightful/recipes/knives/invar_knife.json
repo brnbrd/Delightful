@@ -31,8 +31,8 @@
           }
         },
         "pattern": [
-          " m",
-          "s "
+          "m",
+          "s"
         ],
         "result": {
           "item": "delightful:invar_knife"

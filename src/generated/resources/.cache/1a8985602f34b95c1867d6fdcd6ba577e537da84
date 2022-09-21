@@ -1,6 +1,3 @@
-// 1.19	2022-09-19T12:42:03.7662947	delightful
-fdb05f17c99ce890bb9e0cfce094276bef597cbf data/farmersdelight/tags/blocks/cabinets.json
-56652c93f5e1505b2c4875c8d14635f2a2c72350 data/farmersdelight/tags/blocks/cabinets/stone.json
-dc7d2a04d17423f47c386c8faa21d1069a56d1ae data/farmersdelight/tags/blocks/cabinets/wooden.json
-e41680eea18bad24233104c88500bb4931340bf9 data/minecraft/tags/blocks/mineable/axe.json
-64a54c43e2fc2293d7ba623845ea037bf7b593b8 data/minecraft/tags/blocks/mineable/pickaxe.json
+// 1.19	2022-09-20T18:12:49.3970293	delightful
+56dd5fb45d876faf2b72731f0d1531296baa5e35 data/delightful/tags/entity_types/drops_acorn.json
+85b04db8fb231f2d36fdc01caca3b72898acab47 data/delightful/tags/entity_types/fatty_animals.json

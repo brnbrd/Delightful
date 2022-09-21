@@ -27,7 +27,7 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
 [[dependencies.delightful]]
     modId="farmersdelight"
     mandatory=true
-    versionRange="[1.1.2,)"
+    versionRange="[1.2,)"
     ordering="AFTER"
     side="BOTH"
 

@@ -24,8 +24,8 @@
           }
         },
         "pattern": [
-          " m",
-          "s "
+          "m",
+          "s"
         ],
         "result": {
           "item": "delightful:amethyst_knife"

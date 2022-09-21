@@ -4,9 +4,11 @@ import net.brdle.delightful.Delightful;
 import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.loot.AddItemLootModifier;
 import net.brdle.delightful.common.loot.LootItemBlockIsTagCondition;
+import net.brdle.delightful.common.loot.LootItemEnabledCondition;
 import net.minecraft.advancements.critereon.*;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.LootContext;
@@ -27,6 +29,7 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 	protected void start() {
 		add("green_tea_leaf", new AddItemLootModifier(
 			new LootItemCondition[]{
+				LootItemEnabledCondition.enabled("green_tea_leaf"),
 				LootItemRandomChanceCondition.randomChance(0.12F).build(),
 				MatchTool.toolMatches(ItemPredicate.Builder.item().of(ForgeTags.TOOLS_KNIVES)).build(),
 				LootItemBlockIsTagCondition.isTag(ItemTags.LEAVES)
@@ -35,6 +38,7 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 		));
 		add("acorn", new AddItemLootModifier(
 			new LootItemCondition[]{
+				LootItemEnabledCondition.enabled("acorn"),
 				LootItemRandomChanceCondition.randomChance(0.07F).build(),
 				MatchTool.toolMatches(ItemPredicate.Builder.item().of(Tags.Items.SHEARS)).invert().build(),
 				MatchTool.toolMatches(ItemPredicate.Builder.item().hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.Ints.ANY))).invert().build(),
@@ -45,6 +49,7 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 		));
 		add("acorn_from_squirrel", new AddItemLootModifier(
 			new LootItemCondition[]{
+				LootItemEnabledCondition.enabled("acorn"),
 				LootItemRandomChanceWithLootingCondition.randomChanceAndLootingBoost(0.4F, 2.0F).build(),
 				LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS, EntityPredicate.Builder.entity().of(DelightfulEntityTags.DROPS_ACORN)).build()
 			},
@@ -52,6 +57,7 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 		));
 		add("animal_fat", new AddItemLootModifier(
 			new LootItemCondition[]{
+				LootItemEnabledCondition.enabled("animal_fat"),
 				LootItemRandomChanceWithLootingCondition.randomChanceAndLootingBoost(0.3F, 2.0F).build(),
 				LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.KILLER_PLAYER,
 					EntityPredicate.Builder.entity().equipment(
@@ -59,6 +65,14 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 				LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS, EntityPredicate.Builder.entity().of(DelightfulEntityTags.FATTY_ANIMALS)).build()
 			},
 			DelightfulItems.ANIMAL_FAT.get(), 2, 3, true
+		));
+		add("raw_goat", new AddItemLootModifier(
+			new LootItemCondition[]{
+				LootItemEnabledCondition.enabled("raw_goat"),
+				LootItemRandomChanceWithLootingCondition.randomChanceAndLootingBoost(1.0F, 2.0F).build(),
+				LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS, EntityPredicate.Builder.entity().of(EntityType.GOAT)).build()
+			},
+			DelightfulItems.RAW_GOAT.get(), 1, 2, true
 		));
 	}
 }

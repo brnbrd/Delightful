@@ -1,8 +1,10 @@
 package net.brdle.delightful.data.gen;
 
 import net.brdle.delightful.Delightful;
+import net.brdle.delightful.common.block.DelightfulBlocks;
 import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.item.knife.DelightfulKnifeItem;
+import net.brdle.delightful.data.DelightfulBlockTags;
 import net.brdle.delightful.data.DelightfulItemTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
@@ -13,6 +15,7 @@ import net.minecraft.world.item.Items;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
+import vectorwing.farmersdelight.common.registry.ModBlocks;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
 import vectorwing.farmersdelight.common.tag.ModTags;
 
@@ -25,9 +28,12 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 	protected void addTags() {
 
 		// Farmer's Delight
-		this.copy(DelightfulBlockTags.CABINETS_WOODEN, DelightfulItemTags.CABINETS_WOODEN);
-		this.copy(DelightfulBlockTags.CABINETS_STONE, DelightfulItemTags.CABINETS_STONE);
-		this.copy(DelightfulBlockTags.CABINETS, DelightfulItemTags.CABINETS);
+		// Farmer's Delight
+		this.tag(ModTags.CABINETS)
+			.addTag(DelightfulItemTags.CABINETS_STONE);
+		this.tag(DelightfulItemTags.CABINETS_STONE)
+			.add(DelightfulItems.BASALT_CABINET.get())
+			.add(DelightfulItems.QUARTZ_CABINET.get());
 
 		// Forge
 		this.tag(DelightfulItemTags.FRUITS_APPLE).add(Items.APPLE);
@@ -122,6 +128,22 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.RAW_FISHES_GLOWFISH);
 		this.tag(ForgeTags.COOKED_FISHES)
 			.addOptional(new ResourceLocation("biomemakeover", "cooked_glowfish"));
+		this.tag(DelightfulItemTags.RAW_VENISON)
+			.addOptional(new ResourceLocation("naturalist", "venison"))
+			.addOptional(new ResourceLocation("goodall", "raw_venison"))
+			.addOptional(new ResourceLocation("twilightforest", "raw_venison"));
+		this.tag(DelightfulItemTags.COOKED_VENISON)
+			.addOptional(new ResourceLocation("naturalist", "cooked_venison"))
+			.addOptional(new ResourceLocation("goodall", "cooked_venison"))
+			.addOptional(new ResourceLocation("twilightforest", "cooked_venison"));
+		this.tag(DelightfulItemTags.RAW_GOAT)
+			.add(DelightfulItems.RAW_GOAT.get());
+		this.tag(DelightfulItemTags.COOKED_GOAT)
+			.add(DelightfulItems.COOKED_GOAT.get());
+		this.tag(DelightfulItemTags.RAW_FROG)
+			.addOptional(new ResourceLocation("frog_legs", "frog_legs"));
+		this.tag(DelightfulItemTags.COOKED_FROG)
+			.addOptional(new ResourceLocation("frog_legs", "cooked_frog_legs"));
 		this.tag(DelightfulItemTags.CATTAIL)
 			.addOptional(new ResourceLocation("sprout", "cattail"))
 			.addOptional(new ResourceLocation("biomesoplenty", "cattail"))

@@ -35,8 +35,8 @@
           }
         },
         "pattern": [
-          " m",
-          "s "
+          "m",
+          "s"
         ],
         "result": {
           "nbt": "{Enchantments:[{lvl:2s,id:\"minecraft:smite\"}]}",

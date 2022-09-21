@@ -3,6 +3,7 @@ package net.brdle.delightful.common.item.food;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.food.Foods;
 import vectorwing.farmersdelight.common.registry.ModEffects;
 
 public class FoodValues {
@@ -33,4 +34,8 @@ public class FoodValues {
     public static final FoodProperties CACTUS_STEAK = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.4F).build();
     public static final FoodProperties FIELD_SALAD = (new FoodProperties.Builder()).nutrition(13).saturationMod(0.4F).build();
     public static final FoodProperties ROCK_CANDY = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.2F).fast().build();
+    public static final FoodProperties VENISON_CHOPS = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.3F).meat().fast().build();
+    public static final FoodProperties COOKED_VENISON_CHOPS = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.8F).meat().fast().build();
+    public static final FoodProperties RAW_GOAT = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.3F).meat().build();
+    public static final FoodProperties COOKED_GOAT = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.8F).meat().build();
 }

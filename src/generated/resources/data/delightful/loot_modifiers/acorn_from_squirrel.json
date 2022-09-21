@@ -2,6 +2,10 @@
   "type": "delightful:add_item",
   "conditions": [
     {
+      "condition": "delightful:enabled",
+      "item": "acorn"
+    },
+    {
       "chance": 0.4,
       "condition": "minecraft:random_chance_with_looting",
       "looting_multiplier": 2.0

@@ -96,6 +96,14 @@ public class DelightfulItems {
       FoodValues.CRAB_RANGOON);
     public static final RegistryObject<Item> HONEY_GLAZED_WALNUT = registerFood("honey_glazed_walnut",
       FoodValues.HONEY_GLAZED_WALNUT);
+    public static final RegistryObject<Item> VENISON_CHOPS = registerFood("venison_chops",
+        FoodValues.VENISON_CHOPS);
+    public static final RegistryObject<Item> COOKED_VENISON_CHOPS = registerFood("cooked_venison_chops",
+        FoodValues.COOKED_VENISON_CHOPS);
+    public static final RegistryObject<Item> RAW_GOAT = registerFood("raw_goat",
+        FoodValues.RAW_GOAT);
+    public static final RegistryObject<Item> COOKED_GOAT = registerFood("cooked_goat",
+        FoodValues.COOKED_GOAT);
     public static final RegistryObject<Item> MINI_MELON = registerItem("mini_melon", () ->
       new BlockItem(DelightfulBlocks.MINI_MELON.get(), (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
     public static final RegistryObject<Item> SALMONBERRY_SACK = registerItem("salmonberry_sack", () ->

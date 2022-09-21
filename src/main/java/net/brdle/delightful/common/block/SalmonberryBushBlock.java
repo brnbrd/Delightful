@@ -23,6 +23,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
@@ -105,5 +106,10 @@ public class SalmonberryBushBlock extends BushBlock implements BonemealableBlock
 
   public void performBonemeal(ServerLevel pLevel, RandomSource pRandom, BlockPos pPos, BlockState pState) {
     pLevel.setBlock(pPos, pState.setValue(AGE, Math.min(3, pState.getValue(AGE) + 1)), 2);
+  }
+
+  @Override
+  public ItemStack getCloneItemStack(BlockState state, HitResult target, BlockGetter level, BlockPos pos, Player player) {
+    return new ItemStack(DelightfulItems.SALMONBERRIES.get());
   }
 }

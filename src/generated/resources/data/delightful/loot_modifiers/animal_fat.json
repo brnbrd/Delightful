@@ -2,6 +2,10 @@
   "type": "delightful:add_item",
   "conditions": [
     {
+      "condition": "delightful:enabled",
+      "item": "animal_fat"
+    },
+    {
       "chance": 0.3,
       "condition": "minecraft:random_chance_with_looting",
       "looting_multiplier": 2.0

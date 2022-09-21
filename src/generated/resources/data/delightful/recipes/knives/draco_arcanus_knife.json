@@ -35,8 +35,8 @@
           }
         },
         "pattern": [
-          " m",
-          "s "
+          "m",
+          "s"
         ],
         "result": {
           "item": "delightful:draco_arcanus_knife"

@@ -1,0 +1,22 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "cooked_goat"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:campfire_cooking",
+        "cookingtime": 600,
+        "experience": 0.35,
+        "ingredient": {
+          "item": "delightful:raw_goat"
+        },
+        "result": "delightful:cooked_goat"
+      }
+    }
+  ]
+}

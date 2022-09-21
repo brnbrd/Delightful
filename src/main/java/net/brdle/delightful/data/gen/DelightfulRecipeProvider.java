@@ -37,6 +37,7 @@ import org.jetbrains.annotations.NotNull;
 import vectorwing.farmersdelight.FarmersDelight;
 import vectorwing.farmersdelight.common.registry.ModItems;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
+import vectorwing.farmersdelight.common.tag.ModTags;
 import vectorwing.farmersdelight.data.builder.CookingPotRecipeBuilder;
 import vectorwing.farmersdelight.data.builder.CuttingBoardRecipeBuilder;
 import vectorwing.farmersdelight.data.recipe.CookingRecipes;
@@ -245,6 +246,30 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .requires(DelightfulItems.ACORN_SACK.get())
                 .unlockedBy("has_acorn_sack", has(DelightfulItems.ACORN_SACK.get())),
             "storage/unpack_acorn_sack", finished, enabled("acorn_sack"));
+        wrap(SimpleCookingRecipeBuilder.smelting(Ingredient.of(DelightfulItems.VENISON_CHOPS.get()),
+            DelightfulItems.COOKED_VENISON_CHOPS.get(), 0.35F, 200)
+            .unlockedBy("has_venison_chops", has(DelightfulItems.VENISON_CHOPS.get())),
+            "cooking/venison_chops", finished, enabled("cooked_venison_chops"));
+        wrap(SimpleCookingRecipeBuilder.smoking(Ingredient.of(DelightfulItems.VENISON_CHOPS.get()),
+                    DelightfulItems.COOKED_VENISON_CHOPS.get(), 0.35F, 100)
+                .unlockedBy("has_venison_chops", has(DelightfulItems.VENISON_CHOPS.get())),
+            "cooking/venison_chops_from_smoking", finished, enabled("cooked_venison_chops"));
+        wrap(SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(DelightfulItems.VENISON_CHOPS.get()),
+                    DelightfulItems.COOKED_VENISON_CHOPS.get(), 0.35F, 600)
+                .unlockedBy("has_venison_chops", has(DelightfulItems.VENISON_CHOPS.get())),
+            "cooking/venison_chops_from_campfire_cooking", finished, enabled("cooked_venison_chops"));
+        wrap(SimpleCookingRecipeBuilder.smelting(Ingredient.of(DelightfulItems.RAW_GOAT.get()),
+                    DelightfulItems.COOKED_GOAT.get(), 0.35F, 200)
+                .unlockedBy("has_raw_goat", has(DelightfulItems.RAW_GOAT.get())),
+            "cooking/raw_goat", finished, enabled("cooked_goat"));
+        wrap(SimpleCookingRecipeBuilder.smoking(Ingredient.of(DelightfulItems.RAW_GOAT.get()),
+                    DelightfulItems.COOKED_GOAT.get(), 0.35F, 100)
+                .unlockedBy("has_raw_goat", has(DelightfulItems.RAW_GOAT.get())),
+            "cooking/raw_goat_from_smoking", finished, enabled("cooked_goat"));
+        wrap(SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(DelightfulItems.RAW_GOAT.get()),
+                    DelightfulItems.COOKED_GOAT.get(), 0.35F, 600)
+                .unlockedBy("has_raw_goat", has(DelightfulItems.RAW_GOAT.get())),
+            "cooking/raw_goat_from_campfire_cooking", finished, enabled("cooked_goat"));
 
         // Unwrappables (FinishedRecipe)
         ConditionalRecipe.builder()
@@ -390,6 +415,22 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .build(f))
             .build(finished, Delightful.MODID, "clover_honey");
         ConditionalRecipe.builder()
+            .addCondition(and(enabled("venison_chops"), not(tagEmpty(DelightfulItemTags.RAW_VENISON))))
+            .addRecipe(f -> CuttingBoardRecipeBuilder.cuttingRecipe(
+                    Ingredient.of(DelightfulItemTags.RAW_VENISON),
+                    Ingredient.of(ForgeTags.TOOLS_KNIVES),
+                    DelightfulItems.VENISON_CHOPS.get(), 2)
+                .build(f))
+            .build(finished, Delightful.MODID, "venison");
+        ConditionalRecipe.builder()
+            .addCondition(and(enabled("cooked_venison_chops"), not(tagEmpty(DelightfulItemTags.COOKED_VENISON))))
+            .addRecipe(f -> CuttingBoardRecipeBuilder.cuttingRecipe(
+                    Ingredient.of(DelightfulItemTags.COOKED_VENISON),
+                    Ingredient.of(ForgeTags.TOOLS_KNIVES),
+                    DelightfulItems.COOKED_VENISON_CHOPS.get(), 2)
+                .build(f))
+            .build(finished, Delightful.MODID, "cooked_venison");
+        ConditionalRecipe.builder()
             .addCondition(enabled("cactus_flesh"))
             .addRecipe(f ->
                 CuttingBoardRecipeBuilder.cuttingRecipe(
@@ -465,12 +506,12 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             .addCondition(enabled(path))
             .addRecipe(f -> ShapedRecipeBuilder.shaped(block)
                 .define('b', block.getIngredient().get())
-                .define('c', ItemTags.create(new ResourceLocation("farmersdelight", "cabinets/wooden")))
+                .define('c', ModTags.WOODEN_CABINETS)
                 .pattern("bbb")
                 .pattern("bcb")
                 .pattern("bbb")
                 .unlockedBy("has_cabinet", inventoryTrigger(ItemPredicate.Builder.item()
-                    .of(ItemTags.create(new ResourceLocation("farmersdelight", "cabinets"))).build()))
+                    .of(ModTags.CABINETS).build()))
                 .save(f))
             .generateAdvancement()
             .build(finished, Delightful.MODID, "cabinets/" + path);
@@ -487,8 +528,8 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             .addRecipe(f -> ShapedRecipeBuilder.shaped(knife)
                 .define('m', knife.getIngredient().get())
                 .define('s', knife.getRod().get())
-                .pattern(" m")
-                .pattern("s ")
+                .pattern("m")
+                .pattern("s")
                 .unlockedBy("has_" + path.replace("_knife", ""), inventoryTrigger(ItemPredicate.Builder.item()
                     .of(knife.getIngredient().get().getItems()[0].getItem()).build()))
                 .save(f))
@@ -520,8 +561,8 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             .addRecipe(f -> ShapedRecipeBuilder.shaped(knife)
                 .define('m', knife.getIngredient().get())
                 .define('s', knife.getRod().get())
-                .pattern(" m")
-                .pattern("s ")
+                .pattern("m")
+                .pattern("s")
                 .unlockedBy("has_" + path.replace("_knife", ""), inventoryTrigger(ItemPredicate.Builder.item()
                     .of(ItemTags.create(knife.getTag())).build()))
                 .save(f))
