@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "bites=1": {
+      "model": "delightful:block/sliced_melon_bite1"
+    },
+    "bites=2": {
+      "model": "delightful:block/sliced_melon_bite2"
+    },
+    "bites=3": {
+      "model": "delightful:block/sliced_melon_bite3"
+    },
+    "bites=4": {
+      "model": "delightful:block/sliced_melon_bite4"
+    },
+    "bites=5": {
+      "model": "delightful:block/sliced_melon_bite5"
+    },
+    "bites=6": {
+      "model": "delightful:block/sliced_melon_bite6"
+    },
+    "bites=7": {
+      "model": "delightful:block/sliced_melon_bite7"
+    },
+    "bites=8": {
+      "model": "delightful:block/sliced_melon_bite8"
+    }
+  }
+}

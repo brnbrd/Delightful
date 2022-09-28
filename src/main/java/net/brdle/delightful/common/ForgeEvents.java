@@ -1,21 +1,45 @@
 package net.brdle.delightful.common;
 
+import com.google.common.base.Suppliers;
 import net.brdle.delightful.Delightful;
+import net.brdle.delightful.Util;
+import net.brdle.delightful.common.block.DelightfulBlocks;
+import net.brdle.delightful.common.block.ISliceable;
+import net.brdle.delightful.common.block.SlicedMelonBlock;
+import net.brdle.delightful.common.block.SlicedPumpkinBlock;
+import net.brdle.delightful.common.config.DelightfulConfig;
 import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.item.FurnaceFuelItem;
+import net.minecraft.core.BlockPos;
 import net.minecraft.network.protocol.game.ClientboundAnimatePacket;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.Containers;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.furnace.FurnaceFuelBurnTimeEvent;
+import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.MissingMappingsEvent;
+import vectorwing.farmersdelight.common.tag.ForgeTags;
+
 import java.util.List;
+import java.util.Map;
 
 @Mod.EventBusSubscriber(modid= Delightful.MODID)
 public class ForgeEvents {
@@ -83,5 +107,65 @@ public class ForgeEvents {
 				}
 			}
 		}
+	}
+
+	@SubscribeEvent
+	public static void onInteract(PlayerInteractEvent.RightClickBlock e) {
+		Level world = e.getLevel();
+		BlockPos pos = e.getPos();
+		if (e.getEntity().getItemInHand(e.getHand()).is(ForgeTags.TOOLS_KNIVES)) {
+			Block current = world.getBlockState(pos).getBlock();
+			boolean client = world.isClientSide();
+			if (current == Blocks.MELON) {
+				if (!client) {
+					SlicedMelonBlock sliced = (SlicedMelonBlock) DelightfulBlocks.SLICED_MELON.get();
+					world.setBlock(pos, sliced.defaultBlockState(), 2);
+					Util.dropOrGive(sliced.getSliceItem(), world, pos, e.getEntity());
+					world.playSound(null, pos, SoundEvents.BAMBOO_BREAK, SoundSource.PLAYERS, 0.8F, 0.8F);
+				}
+				e.setCancellationResult(InteractionResult.sidedSuccess(client));
+				e.setCanceled(true);
+			} else if (current == Blocks.PUMPKIN && !e.getEntity().isCrouching()) {
+				if (!client) {
+					SlicedPumpkinBlock sliced = (SlicedPumpkinBlock) DelightfulBlocks.SLICED_PUMPKIN.get();
+					world.setBlock(pos, sliced.defaultBlockState(), 2);
+					Util.dropOrGive(sliced.getSliceItem(), world, pos, e.getEntity());
+					world.playSound(null, pos, SoundEvents.BAMBOO_BREAK, SoundSource.PLAYERS, 0.8F, 0.8F);
+				}
+				e.setCancellationResult(InteractionResult.sidedSuccess(client));
+				e.setCanceled(true);
+			}
+		}
+	}
+
+	@SubscribeEvent
+	public static void onPumpkinPieOverhaul(PlayerInteractEvent.RightClickBlock e) {
+		Level world = e.getLevel();
+		BlockPos pos = e.getPos();
+		InteractionHand hand = e.getHand();
+		ItemStack stack = e.getEntity().getItemInHand(hand);
+		if (DelightfulConfig.PUMPKIN_PIE_OVERHAUL.get() && stack.is(Items.PUMPKIN_PIE)) {
+			e.setCanceled(true);
+			if (world.getBlockState(pos).canBeReplaced(
+				new BlockPlaceContext(e.getEntity(), hand, stack, e.getHitVec()))) {
+				stack.shrink(1);
+				world.setBlock(pos, DelightfulBlocks.PUMPKIN_PIE.get().defaultBlockState(), 2);
+				world.playSound(null, pos, SoundEvents.WOOL_PLACE, SoundSource.PLAYERS, 0.8F, 0.8F);
+				e.setCancellationResult(InteractionResult.sidedSuccess(world.isClientSide()));
+			} else if (world.getBlockState(pos.above()).canBeReplaced(
+				new BlockPlaceContext(e.getEntity(), hand, stack, e.getHitVec()))) {
+				stack.shrink(1);
+				world.setBlock(pos.above(), DelightfulBlocks.PUMPKIN_PIE.get().defaultBlockState(), 2);
+				world.playSound(null, pos.above(), SoundEvents.WOOL_PLACE, SoundSource.PLAYERS, 0.8F, 0.8F);
+				e.setCancellationResult(InteractionResult.sidedSuccess(world.isClientSide()));
+			} else {
+				e.setCancellationResult(InteractionResult.FAIL);
+			}
+		}
+	}
+
+	@SubscribeEvent
+	public static void onPumpkinPieOverhaul(PlayerInteractEvent.RightClickItem e) {
+		e.setCanceled(DelightfulConfig.PUMPKIN_PIE_OVERHAUL.get() && e.getEntity().getItemInHand(e.getHand()).is(Items.PUMPKIN_PIE));
 	}
 }

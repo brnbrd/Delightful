@@ -38,4 +38,5 @@ public class FoodValues {
     public static final FoodProperties COOKED_VENISON_CHOPS = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.8F).meat().fast().build();
     public static final FoodProperties RAW_GOAT = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.3F).meat().build();
     public static final FoodProperties COOKED_GOAT = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.8F).meat().build();
+    public static final FoodProperties CANTALOUPE_SLICE = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.4F).build();
 }

@@ -8,7 +8,6 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.SweetBerryBushBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
@@ -16,7 +15,11 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import vectorwing.farmersdelight.common.block.PieBlock;
 import vectorwing.farmersdelight.common.block.WildCropBlock;
+import vectorwing.farmersdelight.common.registry.ModBlocks;
+import vectorwing.farmersdelight.common.registry.ModItems;
+
 import java.util.function.Supplier;
 
 public class DelightfulBlocks {
@@ -36,8 +39,22 @@ public class DelightfulBlocks {
     public static final RegistryObject<Block> SALMONBERRY_BUSH = BLOCKS.register("salmonberry_bush", () -> new SalmonberryBushBlock(BlockBehaviour.Properties.of(Material.PLANT).randomTicks().noCollission().sound(SoundType.SWEET_BERRY_BUSH)));
     public static final RegistryObject<Block> MINI_MELON = BLOCKS.register("mini_melon",
       () -> new MiniMelonBlock(BlockBehaviour.Properties.copy(Blocks.MELON).noOcclusion()));
+    public static final RegistryObject<Block> SLICED_MINI_MELON = BLOCKS.register("sliced_mini_melon",
+        () -> new SlicedMiniMelonBlock(BlockBehaviour.Properties.copy(MINI_MELON.get()).noOcclusion(), () -> Items.MELON_SLICE, ModItems.MELON_JUICE));
+    public static final RegistryObject<Block> CANTALOUPE = BLOCKS.register("cantaloupe",
+        () -> new CantaloupeBlock(BlockBehaviour.Properties.copy(MINI_MELON.get()).noOcclusion()));
+    public static final RegistryObject<Block> SLICED_CANTALOUPE = BLOCKS.register("sliced_cantaloupe",
+        () -> new SlicedMiniMelonBlock(BlockBehaviour.Properties.copy(SLICED_MINI_MELON.get()).noOcclusion(), DelightfulItems.CANTALOUPE_SLICE, ModItems.MELON_JUICE));
+    public static final RegistryObject<Block> SLICED_MELON = BLOCKS.register("sliced_melon",
+        () -> new SlicedMelonBlock(BlockBehaviour.Properties.copy(Blocks.MELON), () -> Items.MELON_SLICE, ModItems.MELON_JUICE));
+    public static final RegistryObject<Block> SLICED_PUMPKIN = BLOCKS.register("sliced_pumpkin",
+        () -> new SlicedPumpkinBlock(BlockBehaviour.Properties.copy(Blocks.PUMPKIN), ModItems.PUMPKIN_SLICE));
     public static final RegistryObject<Block> SALMONBERRY_SACK = BLOCKS.register("salmonberry_sack",
       () -> new Block(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK)));
+    public static final RegistryObject<Block> SALMONBERRY_PIE = BLOCKS.register("salmonberry_pie",
+        () -> new PieBlock(BlockBehaviour.Properties.copy(ModBlocks.APPLE_PIE.get()), DelightfulItems.SALMONBERRY_PIE_SLICE));
+    public static final RegistryObject<Block> PUMPKIN_PIE = BLOCKS.register("pumpkin_pie",
+        () -> new PieBlock(BlockBehaviour.Properties.copy(ModBlocks.APPLE_PIE.get()), DelightfulItems.PUMPKIN_PIE_SLICE));
     public static final RegistryObject<Block> ACORN_SACK = BLOCKS.register("acorn_sack",
         () -> new Block(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK)));
 

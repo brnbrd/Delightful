@@ -20,6 +20,8 @@ public class DelightfulConfig {
     public static ForgeConfigSpec.IntValue CHANCE_MINI_MELON;
     public static ForgeConfigSpec.BooleanValue CRAFT_NUT_MILK;
     public static ForgeConfigSpec.BooleanValue COOK_CLOVER_HONEY;
+    public static ForgeConfigSpec.BooleanValue GIVE_SLICED_DIRECTLY;
+    public static ForgeConfigSpec.BooleanValue PUMPKIN_PIE_OVERHAUL;
     private static final ImmutableList<String> disabled_by_default_knives = ImmutableList.of(
         "bone_knife",
         "amethyst_knife",
@@ -58,6 +60,13 @@ public class DelightfulConfig {
               .comment("Allow cooking honey from honey and clovers")
               .define("clover_honey", true);
             stuff.put("clover_honey", COOK_CLOVER_HONEY);
+            GIVE_SLICED_DIRECTLY = builder
+                .comment("Give items that are sliced off of blocks directly to player's inventory instead of dropping")
+                .define("give_sliced_directly", false);
+            PUMPKIN_PIE_OVERHAUL = builder
+                .comment("Make pumpkin pies a block with slices rather than an item eaten whole")
+                .define("pumpkin_pie_overhaul", true);
+            stuff.put("pumpkin_pie_overhaul", PUMPKIN_PIE_OVERHAUL);
         builder.pop();
         builder.push("Generation");
             CHANCE_WILD_SALMONBERRIES = builder

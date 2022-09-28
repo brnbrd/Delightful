@@ -25,12 +25,12 @@
     "2.3": "Added Twilight Forest knives. Added smelting/blasting knife into compat Diamond Nuggets. Minor recipe changes.",
     "2.4": "Fixed Twilight Forest knives missing abilities, and the recipe for the Fiery Knife.",
     "2.5": "Added knives from Forbidden and Arcanus and Roots Classic. Added some more recipe compat. Changed a few textures.",
-    "2.6": "Update knife recipes to FD 1.2. Added (disabled by default) Emerald and Amethyst knives. Added Acorn Sack, Raw/Cooked Goat, Raw/Cooked Venison Chops."
+    "2.7": "No changelog."
   },
   "promos": {
     "1.18.2-latest": "2.0",
     "1.18.2-recommended": "2.0",
-    "1.19-latest": "2.6",
-    "1.19-recommended": "2.6"
+    "1.19-latest": "2.7",
+    "1.19-recommended": "2.7"
   }
 }
