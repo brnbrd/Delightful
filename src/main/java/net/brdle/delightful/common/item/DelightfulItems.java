@@ -151,6 +151,11 @@ public class DelightfulItems {
     public static final RegistryObject<Item> INVAR_KNIFE = registerIngotKnife("invar");
     public static final RegistryObject<Item> LEAD_KNIFE = registerIngotKnife("lead");
     public static final RegistryObject<Item> NICKEL_KNIFE = registerIngotKnife("nickel");
+    public static final RegistryObject<Item> MYTHRIL_KNIFE = registerCompatKnife("mythril", "simpleores", ingot("mythril"));
+    public static final RegistryObject<Item> ADAMANTIUM_KNIFE = registerCompatKnife("adamantium", "simpleores", ingot("adamantium"));
+    public static final RegistryObject<Item> ONYX_KNIFE = registerCompatKnife("onyx", "simpleores", ingot("onyx"));
+    public static final RegistryObject<Item> THYRIUM_KNIFE = registerCompatKnife("thyrium", "fusion", ingot("thyrium"));
+    public static final RegistryObject<Item> SINISITE_KNIFE = registerCompatKnife("sinisite", "fusion", ingot("sinisite"));
     public static final RegistryObject<Item> ENDERITE_KNIFE = registerSmithedKnife("enderite",
         () -> Ingredient.of(ModItems.NETHERITE_KNIFE.get()), ingot("enderite"));
     public static final RegistryObject<Item> DEORUM_KNIFE = registerCompatKnife("deorum", "forbidden_arcanus", ingot("deorum"));

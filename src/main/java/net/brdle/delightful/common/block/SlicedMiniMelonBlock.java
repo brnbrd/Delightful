@@ -2,6 +2,7 @@ package net.brdle.delightful.common.block;
 
 import com.mojang.datafixers.util.Pair;
 import net.brdle.delightful.Util;
+import net.brdle.delightful.common.config.DelightfulConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
@@ -79,7 +80,7 @@ public class SlicedMiniMelonBlock extends MelonBlock implements ISliceable {
     ItemStack heldStack = player.getItemInHand(hand);
     if (heldStack.is(ForgeTags.TOOLS_KNIVES)) {
       return this.cutSlice(level, pos, state, player, hand);
-    } else if (heldStack.is(Items.GLASS_BOTTLE) && this.juiceItem.get() != null) {
+    } else if (heldStack.is(Items.GLASS_BOTTLE) && this.juiceItem.get() != null && DelightfulConfig.MELON_JUICING.get()) {
       return this.bottleJuice(level, pos, state, player, hand);
     }
     return this.consumeBite(level, pos, state, player);

@@ -21,6 +21,7 @@ public class DelightfulConfig {
     public static ForgeConfigSpec.BooleanValue CRAFT_NUT_MILK;
     public static ForgeConfigSpec.BooleanValue COOK_CLOVER_HONEY;
     public static ForgeConfigSpec.BooleanValue GIVE_SLICED_DIRECTLY;
+    public static ForgeConfigSpec.BooleanValue MELON_JUICING;
     public static ForgeConfigSpec.BooleanValue PUMPKIN_PIE_OVERHAUL;
     private static final ImmutableList<String> disabled_by_default_knives = ImmutableList.of(
         "bone_knife",
@@ -63,6 +64,9 @@ public class DelightfulConfig {
             GIVE_SLICED_DIRECTLY = builder
                 .comment("Give items that are sliced off of blocks directly to player's inventory instead of dropping")
                 .define("give_sliced_directly", false);
+            MELON_JUICING = builder
+                .comment("Allow sliced melons to be juiced in-world (right click)")
+                .define("melon_juicing", true);
             PUMPKIN_PIE_OVERHAUL = builder
                 .comment("Make pumpkin pies a block with slices rather than an item eaten whole")
                 .define("pumpkin_pie_overhaul", true);

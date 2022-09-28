@@ -1,6 +1,18 @@
 {
   "parent": "farmersdelight:main/root",
   "criteria": {
+    "adamantium_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:adamantium_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "amethyst_knife": {
       "conditions": {
         "items": [
@@ -289,6 +301,18 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "mythril_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:mythril_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "netherite_knife": {
       "conditions": {
         "items": [
@@ -331,6 +355,18 @@
           {
             "items": [
               "delightful:obsidian_infused_enderite_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "onyx_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:onyx_knife"
             ]
           }
         ]
@@ -397,6 +433,18 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "sinisite_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:sinisite_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "steel_knife": {
       "conditions": {
         "items": [
@@ -415,6 +463,18 @@
           {
             "items": [
               "delightful:steeleaf_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "thyrium_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:thyrium_knife"
             ]
           }
         ]
@@ -472,6 +532,11 @@
       "invar_knife",
       "lead_knife",
       "nickel_knife",
+      "mythril_knife",
+      "adamantium_knife",
+      "onyx_knife",
+      "thyrium_knife",
+      "sinisite_knife",
       "enderite_knife",
       "deorum_knife",
       "reinforced_deorum_knife",
