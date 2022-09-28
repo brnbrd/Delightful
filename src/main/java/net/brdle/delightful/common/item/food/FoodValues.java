@@ -3,7 +3,6 @@ package net.brdle.delightful.common.item.food;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.food.Foods;
 import vectorwing.farmersdelight.common.registry.ModEffects;
 
 public class FoodValues {
@@ -39,4 +38,5 @@ public class FoodValues {
     public static final FoodProperties RAW_GOAT = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.3F).meat().build();
     public static final FoodProperties COOKED_GOAT = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.8F).meat().build();
     public static final FoodProperties CANTALOUPE_SLICE = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.4F).build();
+    public static final FoodProperties SALMONBERRY_ICE_CREAM = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.4F).effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 2), 1.0F).effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 1200), 1.0F).build();
 }

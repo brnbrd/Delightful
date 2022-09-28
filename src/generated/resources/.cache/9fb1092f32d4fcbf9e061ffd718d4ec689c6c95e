@@ -1,4 +1,4 @@
-// 1.19	2022-09-27T23:09:51.3629764	Recipes
+// 1.19	2022-09-28T01:16:12.075674	Recipes
 2008bf684d83272701a8032bfb2deb03b22b94b7 data/delightful/advancements/recipes/blasting/green_tea_leaf.json
 60ffe246fc7cd82d396e8dc65184da554be1a88a data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 2cf937c163d47a583b4eb63671b5c4e3055179cc data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
@@ -33,6 +33,8 @@ a648b9af31bc369a0c041f3907d1581eacc33508 data/delightful/advancements/recipes/fo
 f47937185aa6cddfb57ba7798be88a183039c747 data/delightful/advancements/recipes/food/prickly_pear_juice.json
 117dfc305c03c9aec86bb20cc1be4659c59c6ec6 data/delightful/advancements/recipes/food/pumpkin_pie.json
 757c4eaf816ddff832d2588f6c4db16585bf180d data/delightful/advancements/recipes/food/rock_candy.json
+cf2dca52e44c3a25daff884850dc16d2b16ea31f data/delightful/advancements/recipes/food/salmonberry_ice_cream.json
+8e01176be601ff401bcefe4c4c0ea0d53b87ba98 data/delightful/advancements/recipes/food/salmonberry_ice_cream_no_neapolitan.json
 5d7ce661b1c1be82c5ab99bde30d4c2abd520c50 data/delightful/advancements/recipes/food/salmonberry_pie.json
 b5460e4391c4d7326c5a5dc20af745be66561a08 data/delightful/advancements/recipes/food/smore.json
 207b092b4e98c5f8ea09f354a6b153b0bcd8d3d1 data/delightful/advancements/recipes/food/smore_from_chocolate.json
@@ -117,6 +119,8 @@ e1fd1a1a93d05bf2054d652a1defb9a937b10b16 data/delightful/recipes/food/marshmallo
 59daf188ef2f3c35e280600b83402b93ee7865ff data/delightful/recipes/food/prickly_pear_juice.json
 d2edfa587f4a2c831d9c9923f03f891c88a5855e data/delightful/recipes/food/pumpkin_pie.json
 bf2c8ade1a629c1c90f13552232c9ac2f59f028e data/delightful/recipes/food/rock_candy.json
+44db894789b927d233178002cd6b0c5d51095684 data/delightful/recipes/food/salmonberry_ice_cream.json
+b733fb38b61efce0213d440403ad87b642ef13c1 data/delightful/recipes/food/salmonberry_ice_cream_no_neapolitan.json
 04ff0ea58f723ea6f834170b617f0e58629d7081 data/delightful/recipes/food/salmonberry_pie.json
 bc6406af8cfe154cc0ee6265640fc9e73bb20ed7 data/delightful/recipes/food/smore.json
 ad04bb7c67568468dcb3280f261cc493d2598a7d data/delightful/recipes/food/smore_from_chocolate.json

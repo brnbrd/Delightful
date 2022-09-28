@@ -1,4 +1,4 @@
-// 1.19	2022-09-27T23:09:51.3639768	Item Models: delightful
+// 1.19	2022-09-28T01:16:12.08244	Item Models: delightful
 f9af973b19b45f34017d8db4e6e54de90668031e assets/delightful/models/item/acorn.json
 9b4daf24b0d8e447735c5836d7ab76a3df1b3c1d assets/delightful/models/item/acorn_sack.json
 5d9531a6795e7d2281f99609672d866743329211 assets/delightful/models/item/adamantium_knife.json
@@ -69,6 +69,7 @@ cb9fa05efea319871868b246c6e53c7e53974de4 assets/delightful/models/item/refined_g
 ae3d8e92cb32ef208d45231b497b72741ba7f3a7 assets/delightful/models/item/reinforced_deorum_knife.json
 4bbc4f55b55a3700f7b4ef2f843ea72304a8333f assets/delightful/models/item/rock_candy.json
 e8851e8a9cf72237cbcb58703316f012d965c5ae assets/delightful/models/item/salmonberries.json
+c49aa91484e622afeee4037b2de92bb39519a38f assets/delightful/models/item/salmonberry_ice_cream.json
 956c55adc3284c82244c8c25f6168ba0fd9981e1 assets/delightful/models/item/salmonberry_pie.json
 c85b551a079857106bae590bf01434c23c595a98 assets/delightful/models/item/salmonberry_pie_slice.json
 929deaa04cf179dc86268dc6d88494287c8fc874 assets/delightful/models/item/salmonberry_pips.json

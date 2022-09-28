@@ -15,10 +15,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemNameBlockItem;
-import net.minecraft.world.item.Items;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -44,6 +41,7 @@ public class DelightfulItems {
     public static final RegistryObject<Item> SALMONBERRIES = registerFood("salmonberries",
         FoodValues.SALMONBERRIES);
     public static final RegistryObject<Item> SALMONBERRY_PIPS = registerItem("salmonberry_pips", () -> new ItemNameBlockItem(DelightfulBlocks.SALMONBERRY_BUSH.get(), (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
+    public static final RegistryObject<Item> SALMONBERRY_ICE_CREAM = registerItem("salmonberry_ice_cream", () -> new BowlFoodItem((new Item.Properties()).food(FoodValues.SALMONBERRY_ICE_CREAM).craftRemainder(Items.BOWL).stacksTo(1).tab(FarmersDelight.CREATIVE_TAB)));
     public static final RegistryObject<Item> SALMONBERRY_PIE = registerItem("salmonberry_pie", () -> new BlockItem(DelightfulBlocks.SALMONBERRY_PIE.get(), (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
     public static final RegistryObject<Item> SALMONBERRY_PIE_SLICE = registerFood("salmonberry_pie_slice",
         vectorwing.farmersdelight.common.FoodValues.PIE_SLICE);
@@ -211,9 +209,15 @@ public class DelightfulItems {
 
     // Registers a food to Farmer's Delight tab, optional craftRemainder
     public static RegistryObject<Item> registerFood(String name, FoodProperties food, Item... remainder) {
-        return registerItem(name, (remainder.length > 0) ?
-                (new Item.Properties()).food(food).craftRemainder(remainder[0]) :
-                (new Item.Properties()).food(food));
+        if (remainder.length > 0) {
+            if (remainder[0].equals(Items.BOWL)) {
+                return registerItem(name,
+                    () -> new BowlFoodItem((new Item.Properties()).food(food).craftRemainder(Items.BOWL)));
+            }
+            return registerItem(name,
+                () -> new ConsumableItem((new Item.Properties()).food(food).craftRemainder(Items.STICK)));
+        }
+        return registerItem(name, (new Item.Properties()).food(food));
     }
 
     // Sets creative tab to Farmer's Delight

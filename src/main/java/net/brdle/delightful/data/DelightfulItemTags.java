@@ -61,6 +61,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> COOKED_FROG = forge("cooked_frog");
 	public static final TagKey<Item> CATTAIL = forge( "cattail");
 	public static final TagKey<Item> GEMS_ROSE_QUARTZ = forge("gems/rose_quartz");
+	public static final TagKey<Item> ICE_CUBES = forge("ice_cubes");
 
 	// Forbidden and Arcanus
 	public static final TagKey<Item> STELLARITE_PIECE = bind("forbidden_arcanus", "stellarite_piece");

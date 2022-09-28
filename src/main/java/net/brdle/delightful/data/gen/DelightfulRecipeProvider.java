@@ -222,6 +222,24 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             .requires(DelightfulItemTags.FRUITS_SALMONBERRIES)
             .unlockedBy("has_salmonberries", has(DelightfulItems.SALMONBERRIES.get())),
             "storage/salmonberry_sack", finished, enabled("salmonberry_sack"));
+        wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.SALMONBERRY_ICE_CREAM.get(), 1)
+            .requires(Items.BOWL)
+            .requires(DelightfulItemTags.FRUITS_SALMONBERRIES)
+            .requires(ForgeTags.MILK)
+            .requires(DelightfulItemTags.ICE_CUBES)
+            .requires(DelightfulItemTags.SUGAR)
+            .unlockedBy("has_ice_cubes", has(DelightfulItemTags.ICE_CUBES)),
+            "food/salmonberry_ice_cream", finished, enabled("salmonberry_ice_cream"),
+            not(tagEmpty(DelightfulItemTags.ICE_CUBES)));
+        wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.SALMONBERRY_ICE_CREAM.get(), 1)
+                .requires(Items.BOWL)
+                .requires(DelightfulItemTags.FRUITS_SALMONBERRIES)
+                .requires(ForgeTags.MILK)
+                .requires(Items.ICE)
+                .requires(DelightfulItemTags.SUGAR)
+                .unlockedBy("has_ice", has(Items.ICE)),
+            "food/salmonberry_ice_cream_no_neapolitan", finished, enabled("salmonberry_ice_cream"),
+            tagEmpty(DelightfulItemTags.ICE_CUBES));
         wrap(ShapedRecipeBuilder.shaped(DelightfulItems.SALMONBERRY_PIE.get(), 1)
             .pattern("###")
             .pattern("aaa")
@@ -482,6 +500,11 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 Ingredient.of(DelightfulItems.MINI_MELON.get()),
                 Ingredient.of(ForgeTags.TOOLS_KNIVES),
                 Items.MELON_SLICE, 6)
+            .build(finished);
+        CuttingBoardRecipeBuilder.cuttingRecipe(
+                Ingredient.of(DelightfulItems.CANTALOUPE.get()),
+                Ingredient.of(ForgeTags.TOOLS_KNIVES),
+                DelightfulItems.CANTALOUPE_SLICE.get(), 6)
             .build(finished);
         ShapelessRecipeBuilder.shapeless(Items.MELON_SLICE, 3)
             .requires(DelightfulItems.MINI_MELON.get())

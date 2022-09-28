@@ -30,7 +30,7 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 		add("green_tea_leaf", new AddItemLootModifier(
 			new LootItemCondition[]{
 				LootItemEnabledCondition.enabled("green_tea_leaf"),
-				LootItemRandomChanceCondition.randomChance(0.12F).build(),
+				LootItemRandomChanceCondition.randomChance(0.08F).build(),
 				MatchTool.toolMatches(ItemPredicate.Builder.item().of(ForgeTags.TOOLS_KNIVES)).build(),
 				LootItemBlockIsTagCondition.isTag(ItemTags.LEAVES)
 			},
@@ -39,7 +39,7 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 		add("acorn", new AddItemLootModifier(
 			new LootItemCondition[]{
 				LootItemEnabledCondition.enabled("acorn"),
-				LootItemRandomChanceCondition.randomChance(0.07F).build(),
+				LootItemRandomChanceCondition.randomChance(0.05F).build(),
 				MatchTool.toolMatches(ItemPredicate.Builder.item().of(Tags.Items.SHEARS)).invert().build(),
 				MatchTool.toolMatches(ItemPredicate.Builder.item().hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.Ints.ANY))).invert().build(),
 				LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.OAK_LEAVES)
