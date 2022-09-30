@@ -4,7 +4,6 @@ import com.mojang.datafixers.util.Pair;
 import net.brdle.delightful.Util;
 import net.brdle.delightful.common.config.DelightfulConfig;
 import net.minecraft.core.BlockPos;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
@@ -30,7 +29,6 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.items.ItemHandlerHelper;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
-
 import java.util.function.Supplier;
 
 public class SlicedMiniMelonBlock extends MelonBlock implements ISliceable {
@@ -122,7 +120,7 @@ public class SlicedMiniMelonBlock extends MelonBlock implements ISliceable {
       }
       Util.dropOrGive(this.getSliceItem(), level, pos, player);
       level.playSound(null, pos, SoundEvents.WOOD_HIT, SoundSource.PLAYERS, 0.8F, 0.8F);
-      player.getItemInHand(hand).hurt(1, level.getRandom(), (ServerPlayer) player);
+      player.getItemInHand(hand).hurtAndBreak(1, player, onBroken -> onBroken.broadcastBreakEvent(hand));
     }
     return InteractionResult.sidedSuccess(level.isClientSide());
   }
@@ -139,7 +137,7 @@ public class SlicedMiniMelonBlock extends MelonBlock implements ISliceable {
         return InteractionResult.FAIL;
       }
       player.getItemInHand(hand).shrink(1);
-      ItemHandlerHelper.giveItemToPlayer(player, this.juiceItem.get().getDefaultInstance(), 0);
+      ItemHandlerHelper.giveItemToPlayer(player, this.getJuiceItem(), 0);
       level.playSound(null, pos, SoundEvents.BOTTLE_FILL, SoundSource.PLAYERS, 0.8F, 0.8F);
     }
     return InteractionResult.sidedSuccess(level.isClientSide());

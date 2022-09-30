@@ -1,5 +1,6 @@
 package net.brdle.delightful.data.gen;
 
+import com.hollingsworth.arsnouveau.setup.ItemsRegistry;
 import net.brdle.delightful.Delightful;
 import net.brdle.delightful.Util;
 import net.brdle.delightful.common.block.DelightfulBlocks;
@@ -11,6 +12,7 @@ import net.brdle.delightful.common.item.knife.DelightfulKnifeItem;
 import net.brdle.delightful.common.item.knife.TaggedKnifeItem;
 import net.brdle.delightful.common.item.knife.twilightforest.IronwoodKnifeItem;
 import net.brdle.delightful.common.item.knife.twilightforest.SteeleafKnifeItem;
+import net.brdle.delightful.compat.ArsNouveauCompat;
 import net.brdle.delightful.data.DelightfulItemTags;
 import net.brdle.rottenleather.common.RottenLeatherItems;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
@@ -250,6 +252,26 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             .define('O', ModItems.PIE_CRUST.get())
             .unlockedBy("has_pie_crust", has(ModItems.PIE_CRUST.get())),
             "food/salmonberry_pie", finished, enabled("salmonberry_pie"));
+        wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.SALMONBERRY_PIE.get(), 1)
+                .requires(DelightfulItems.SALMONBERRY_PIE_SLICE.get(), 4)
+                .unlockedBy("has_salmonberry_pie_slice", has(DelightfulItems.SALMONBERRY_PIE_SLICE.get())),
+            "food/salmonberry_pie_from_slices", finished, enabled("salmonberry_pie"));
+        /*wrap(ShapedRecipeBuilder.shaped(ItemsRegistry.SOURCE_BERRY_PIE.get(), 1)
+                .pattern("#m#")
+                .pattern("aaa")
+                .pattern("xOe")
+                .define('#', Items.WHEAT)
+                .define('m', ItemsRegistry.MAGE_BLOOM.get())
+                .define('a', DelightfulItemTags.FRUITS_SOURCEBERRY)
+                .define('x', DelightfulItemTags.SUGAR)
+                .define('e', ForgeTags.EGGS)
+                .define('O', ModItems.PIE_CRUST.get())
+                .unlockedBy("has_pie_crust", has(ModItems.PIE_CRUST.get())),
+            "food/source_berry_pie", finished, enabled("source_berry_pie_slice"), itemExists(ArsNouveauCompat.modid, "source_berry_pie"));*/
+        wrap(ShapelessRecipeBuilder.shapeless(ItemsRegistry.SOURCE_BERRY_PIE.get(), 1)
+                .requires(DelightfulItems.SOURCE_BERRY_PIE_SLICE.get(), 4)
+                .unlockedBy("has_source_berry_pie_slice", has(DelightfulItems.SOURCE_BERRY_PIE_SLICE.get())),
+            "food/source_berry_pie_from_slices", finished, enabled("source_berry_pie_slice"), itemExists(ArsNouveauCompat.modid, "source_berry_pie"));
         wrap(ShapedRecipeBuilder.shaped(Items.PUMPKIN_PIE, 1)
                 .pattern("###")
                 .pattern("aaa")
@@ -261,6 +283,10 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .define('O', ModItems.PIE_CRUST.get())
                 .unlockedBy("has_pie_crust", has(ModItems.PIE_CRUST.get())),
             "food/pumpkin_pie", finished, enabled("pumpkin_pie_overhaul"));
+        wrap(ShapelessRecipeBuilder.shapeless(Items.PUMPKIN_PIE, 1)
+                .requires(DelightfulItems.PUMPKIN_PIE_SLICE.get(), 4)
+                .unlockedBy("has_pumpkin_pie_slice", has(DelightfulItems.PUMPKIN_PIE_SLICE.get())),
+            "food/pumpkin_pie_from_slices", finished, enabled("pumpkin_pie_overhaul"));
         wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.SALMONBERRIES.get(), 9)
           .requires(DelightfulItems.SALMONBERRY_SACK.get())
           .unlockedBy("has_salmonberry_sack", has(DelightfulItems.SALMONBERRY_SACK.get())),
@@ -401,7 +427,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                     .addIngredient(DelightfulItemTags.NUTS)
                     .addIngredient(DelightfulItemTags.SUGAR)
                     .build(f))
-            .build(finished, Delightful.MODID, "nut_milk");
+            .build(finished, Delightful.MODID, "food/nut_milk");
         ShapedRecipeBuilder.shaped(Items.TORCH, 8)
             .define('o', DelightfulItems.ANIMAL_OIL_BOTTLE.get())
             .define('s', Tags.Items.RODS_WOODEN)
@@ -436,7 +462,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                     Ingredient.of(ForgeTags.TOOLS_KNIVES),
                     DelightfulItems.CHOPPED_CLOVER.get(), 2)
                 .build(f))
-            .build(finished, Delightful.MODID, "chopped_clover");
+            .build(finished, Delightful.MODID, "cutting/clover");
         ConditionalRecipe.builder()
             .addCondition(and(enabled("chopped_clover"), itemExists("biomesoplenty", "huge_clover_petal")))
             .addRecipe(f -> CuttingBoardRecipeBuilder.cuttingRecipe(
@@ -444,7 +470,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                     Ingredient.of(ForgeTags.TOOLS_KNIVES),
                     DelightfulItems.CHOPPED_CLOVER.get(), 4)
                 .build(f))
-            .build(finished, Delightful.MODID, "chopped_clover_from_huge_clover_petal");
+            .build(finished, Delightful.MODID, "cutting/huge_clover_petal");
         ConditionalRecipe.builder()
             .addCondition(and(enabled("clover_honey"), modLoaded("biomesoplenty")))
             .addRecipe(f -> CookingPotRecipeBuilder.cookingPotRecipe(
@@ -452,7 +478,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .addIngredient(Items.HONEY_BOTTLE, 2)
                 .addIngredient(DelightfulItems.CHOPPED_CLOVER.get(), 4)
                 .build(f))
-            .build(finished, Delightful.MODID, "clover_honey");
+            .build(finished, Delightful.MODID, "food/clover_honey");
         ConditionalRecipe.builder()
             .addCondition(and(enabled("venison_chops"), not(tagEmpty(DelightfulItemTags.RAW_VENISON))))
             .addRecipe(f -> CuttingBoardRecipeBuilder.cuttingRecipe(
@@ -460,7 +486,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                     Ingredient.of(ForgeTags.TOOLS_KNIVES),
                     DelightfulItems.VENISON_CHOPS.get(), 2)
                 .build(f))
-            .build(finished, Delightful.MODID, "venison");
+            .build(finished, Delightful.MODID, "cutting/venison");
         ConditionalRecipe.builder()
             .addCondition(and(enabled("cooked_venison_chops"), not(tagEmpty(DelightfulItemTags.COOKED_VENISON))))
             .addRecipe(f -> CuttingBoardRecipeBuilder.cuttingRecipe(
@@ -468,7 +494,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                     Ingredient.of(ForgeTags.TOOLS_KNIVES),
                     DelightfulItems.COOKED_VENISON_CHOPS.get(), 2)
                 .build(f))
-            .build(finished, Delightful.MODID, "cooked_venison");
+            .build(finished, Delightful.MODID, "cutting/cooked_venison");
         ConditionalRecipe.builder()
             .addCondition(enabled("salmonberry_pie"))
             .addRecipe(f ->
@@ -477,7 +503,16 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                         Ingredient.of(ForgeTags.TOOLS_KNIVES),
                         DelightfulItems.SALMONBERRY_PIE_SLICE.get(), 4)
                     .build(f))
-            .build(finished, Delightful.MODID, "salmonberry_pie");
+            .build(finished, Delightful.MODID, "cutting/salmonberry_pie");
+        ConditionalRecipe.builder()
+            .addCondition(enabled("source_berry_pie_slice"))
+            .addRecipe(f ->
+                CuttingBoardRecipeBuilder.cuttingRecipe(
+                        Ingredient.of(ItemsRegistry.SOURCE_BERRY_PIE.get()),
+                        Ingredient.of(ForgeTags.TOOLS_KNIVES),
+                        DelightfulItems.SOURCE_BERRY_PIE_SLICE.get(), 4)
+                    .build(f))
+            .build(finished, Delightful.MODID, "cutting/source_berry_pie");
         ConditionalRecipe.builder()
             .addCondition(enabled("pumpkin_pie_overhaul"))
             .addRecipe(f ->
@@ -486,30 +521,34 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                         Ingredient.of(ForgeTags.TOOLS_KNIVES),
                         DelightfulItems.PUMPKIN_PIE_SLICE.get(), 4)
                     .build(f))
-            .build(finished, Delightful.MODID, "pumpkin_pie");
+            .build(finished, Delightful.MODID, "cutting/pumpkin_pie");
         ConditionalRecipe.builder()
             .addCondition(enabled("cactus_flesh"))
             .addRecipe(f ->
                 CuttingBoardRecipeBuilder.cuttingRecipe(
-                        Ingredient.of(Items.CACTUS),
-                        Ingredient.of(ForgeTags.TOOLS_KNIVES),
-                        DelightfulItems.CACTUS_FLESH.get(), 2)
+                    Ingredient.of(Items.CACTUS),
+                    Ingredient.of(ForgeTags.TOOLS_KNIVES),
+                    DelightfulItems.CACTUS_FLESH.get(), 2)
                     .build(f))
-            .build(finished, Delightful.MODID, "cactus_flesh");
+            .build(finished, new ResourceLocation(Delightful.MODID, "cutting/cactus"));
         CuttingBoardRecipeBuilder.cuttingRecipe(
-                Ingredient.of(DelightfulItems.MINI_MELON.get()),
-                Ingredient.of(ForgeTags.TOOLS_KNIVES),
-                Items.MELON_SLICE, 6)
-            .build(finished);
+            Ingredient.of(DelightfulItems.MINI_MELON.get()),
+            Ingredient.of(ForgeTags.TOOLS_KNIVES),
+            Items.MELON_SLICE, 6)
+            .build(finished, new ResourceLocation(Delightful.MODID, "cutting/mini_melon"));
         CuttingBoardRecipeBuilder.cuttingRecipe(
-                Ingredient.of(DelightfulItems.CANTALOUPE.get()),
-                Ingredient.of(ForgeTags.TOOLS_KNIVES),
-                DelightfulItems.CANTALOUPE_SLICE.get(), 6)
-            .build(finished);
+            Ingredient.of(DelightfulItems.CANTALOUPE.get()),
+            Ingredient.of(ForgeTags.TOOLS_KNIVES),
+            DelightfulItems.CANTALOUPE_SLICE.get(), 6)
+            .build(finished, new ResourceLocation(Delightful.MODID, "cutting/cantaloupe"));
+        ShapelessRecipeBuilder.shapeless(DelightfulItems.CANTALOUPE_SLICE.get(), 3)
+            .requires(DelightfulItems.CANTALOUPE.get())
+            .unlockedBy("has_cantaloupe", has(DelightfulItems.CANTALOUPE.get()))
+            .save(finished, new ResourceLocation(Delightful.MODID, "cantaloupe_slice"));
         ShapelessRecipeBuilder.shapeless(Items.MELON_SLICE, 3)
             .requires(DelightfulItems.MINI_MELON.get())
             .unlockedBy("has_mini_melon", has(DelightfulItems.MINI_MELON.get()))
-            .save(finished);
+            .save(finished, new ResourceLocation(Delightful.MODID, "melon_slice"));
         ConditionalRecipe.builder()
           .addCondition(not(tagEmpty(DelightfulItemTags.CHOCOLATE)))
           .addRecipe(f -> ShapedRecipeBuilder.shaped(ModItems.CHOCOLATE_PIE.get(), 1)

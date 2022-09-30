@@ -3,10 +3,8 @@ package net.brdle.delightful.common.block;
 import com.mojang.datafixers.util.Pair;
 import net.brdle.delightful.Util;
 import net.minecraft.core.BlockPos;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -120,7 +118,7 @@ public class SlicedPumpkinBlock extends PumpkinBlock implements ISliceable {
       }
       Util.dropOrGive(this.getSliceItem(), level, pos, player);
       level.playSound(null, pos, SoundEvents.WOOD_HIT, SoundSource.PLAYERS, 0.8F, 0.8F);
-      player.getItemInHand(hand).hurt(1, level.getRandom(), (ServerPlayer) player);
+      player.getItemInHand(hand).hurtAndBreak(1, player, onBroken -> onBroken.broadcastBreakEvent(hand));
     }
     return InteractionResult.sidedSuccess(level.isClientSide());
   }

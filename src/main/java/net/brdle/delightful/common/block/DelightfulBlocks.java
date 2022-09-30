@@ -2,6 +2,7 @@ package net.brdle.delightful.common.block;
 
 import net.brdle.delightful.Delightful;
 import net.brdle.delightful.common.item.DelightfulItems;
+import net.brdle.delightful.compat.ArsNouveauCompat;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -26,10 +27,6 @@ public class DelightfulBlocks {
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Delightful.MODID);
 
-    public static final RegistryObject<Block> PIZZA_STONE = registerBlock("pizza_stone",
-      () -> new PizzaStoneBlock(BlockBehaviour.Properties.of(Material.STONE).strength(0.5F, 6.0F).sound(SoundType.STONE).noOcclusion()));
-    public static final RegistryObject<Block> PIZZA_PEEL = registerBlock("pizza_peel",
-      () -> new PizzaPeelBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(0.5F, 6.0F).sound(SoundType.WOOD).noOcclusion()));
     public static final RegistryObject<Block> QUARTZ_CABINET = registerBlock("quartz_cabinet",
       () -> new DelightfulCabinetBlock(DelightfulItems.getGem("quartz"), BlockBehaviour.Properties.of(Material.STONE, MaterialColor.QUARTZ).requiresCorrectToolForDrops().strength(0.8F)));
     public static final RegistryObject<Block> BASALT_CABINET = registerBlock("basalt_cabinet",
@@ -55,6 +52,8 @@ public class DelightfulBlocks {
         () -> new PieBlock(BlockBehaviour.Properties.copy(ModBlocks.APPLE_PIE.get()), DelightfulItems.SALMONBERRY_PIE_SLICE));
     public static final RegistryObject<Block> PUMPKIN_PIE = BLOCKS.register("pumpkin_pie",
         () -> new PieBlock(BlockBehaviour.Properties.copy(ModBlocks.APPLE_PIE.get()), DelightfulItems.PUMPKIN_PIE_SLICE));
+    public static final RegistryObject<Block> SOURCE_BERRY_PIE = BLOCKS.register("source_berry_pie",
+        () -> new DelightfulPieBlock(BlockBehaviour.Properties.copy(ModBlocks.APPLE_PIE.get()), DelightfulItems.SOURCE_BERRY_PIE_SLICE, ArsNouveauCompat.getPieEffect()));
     public static final RegistryObject<Block> ACORN_SACK = BLOCKS.register("acorn_sack",
         () -> new Block(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK)));
 

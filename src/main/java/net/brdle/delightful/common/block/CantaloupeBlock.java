@@ -2,7 +2,6 @@ package net.brdle.delightful.common.block;
 
 import net.brdle.delightful.Util;
 import net.minecraft.core.BlockPos;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
@@ -26,7 +25,7 @@ public class CantaloupeBlock extends MiniBlock {
 				world.setBlock(pPos, sliced.defaultBlockState(), 2);
 				Util.dropOrGive(sliced.getSliceItem(), world, pPos, pPlayer);
 				world.playSound(null, pPos, SoundEvents.WOOD_HIT, SoundSource.PLAYERS, 0.8F, 0.8F);
-				pPlayer.getItemInHand(pHand).hurt(1, world.getRandom(), (ServerPlayer) pPlayer);
+				pPlayer.getItemInHand(pHand).hurtAndBreak(1, pPlayer, onBroken -> onBroken.broadcastBreakEvent(pHand));
 			}
 			return InteractionResult.sidedSuccess(world.isClientSide());
 		}

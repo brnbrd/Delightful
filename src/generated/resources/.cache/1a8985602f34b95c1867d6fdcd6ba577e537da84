@@ -1,3 +1,4 @@
-// 1.19	2022-09-28T01:16:12.0776759	delightful
-56dd5fb45d876faf2b72731f0d1531296baa5e35 data/delightful/tags/entity_types/drops_acorn.json
-85b04db8fb231f2d36fdc01caca3b72898acab47 data/delightful/tags/entity_types/fatty_animals.json
+// 1.19	2022-09-29T11:37:09.3844995	delightful
+ff13fafcc6c847d2ce8a4262842bf1316dc580ea data/delightful/tags/worldgen/biome/cantaloupe_spawns.json
+832581beee9dcc935e17a4bf4291e980990d257a data/delightful/tags/worldgen/biome/mini_melon_spawns.json
+6b35771c8d400b0921c04386d79e88b834c282ad data/delightful/tags/worldgen/biome/salmonberry_spawns.json

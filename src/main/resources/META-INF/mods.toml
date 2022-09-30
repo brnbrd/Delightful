@@ -37,3 +37,17 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
     versionRange="[0,)"
     ordering="AFTER"
     side="BOTH"
+
+[[dependencies.delightful]]
+    modId="duckling"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.delightful]]
+    modId="ars_nouveau"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="AFTER"
+    side="BOTH"

@@ -96,6 +96,10 @@ dependencies {
     compileOnly fg.deobf("curse.maven:farmers-respite-551453:${farmers_respite_version}")
     implementation fg.deobf("curse.maven:terrablender-563928:${terrablender_version}")
     implementation fg.deobf("curse.maven:biomes-o-plenty-220318:${bop_version}")
+    implementation fg.deobf("curse.maven:geckolib-388172:${geckolib_version}")
+    implementation fg.deobf("curse.maven:patchouli-306770:${patchouli_version}")
+    implementation fg.deobf("curse.maven:curios-309927:${curios_version}")
+    implementation fg.deobf("curse.maven:ars-nouveau-401955:${ars_nouveau_version}")
     compileOnly fg.deobf("curse.maven:roots-classic-295780:${roots_version}")
 }
 

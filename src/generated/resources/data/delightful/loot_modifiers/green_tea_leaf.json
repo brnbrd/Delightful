@@ -6,7 +6,7 @@
       "item": "green_tea_leaf"
     },
     {
-      "chance": 0.12,
+      "chance": 0.08,
       "condition": "minecraft:random_chance"
     },
     {
@@ -17,7 +17,7 @@
     },
     {
       "condition": "delightful:is_tag",
-      "tag": "minecraft:leaves"
+      "tag": "delightful:drops_green_tea_leaf"
     }
   ],
   "item": "delightful:green_tea_leaf",

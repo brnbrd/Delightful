@@ -4,7 +4,6 @@ import com.mojang.datafixers.util.Pair;
 import net.brdle.delightful.Util;
 import net.brdle.delightful.common.config.DelightfulConfig;
 import net.minecraft.core.BlockPos;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
@@ -141,7 +140,7 @@ public class SlicedMelonBlock extends MelonBlock implements ISliceable {
       }
       Util.dropOrGive(this.getSliceItem(), level, pos, player);
       level.playSound(null, pos, SoundEvents.WOOD_HIT, SoundSource.PLAYERS, 0.8F, 0.8F);
-      player.getItemInHand(hand).hurt(1, level.getRandom(), (ServerPlayer) player);
+      player.getItemInHand(hand).hurtAndBreak(1, player, onBroken -> onBroken.broadcastBreakEvent(hand));
     }
     return InteractionResult.sidedSuccess(level.isClientSide());
   }

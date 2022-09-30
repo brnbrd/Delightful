@@ -20,6 +20,7 @@ public class Generators {
         e.getGenerator().addProvider(e.includeServer(), blockTag);
         e.getGenerator().addProvider(e.includeServer(), new DelightfulItemTagProvider(gen, blockTag, helper));
         e.getGenerator().addProvider(e.includeServer(), new DelightfulEntityTagProvider(gen, helper));
+        e.getGenerator().addProvider(e.includeServer(), new DelightfulBiomeTagProvider(gen, helper));
         e.getGenerator().addProvider(e.includeServer(), new DelightfulLootModifierProvider(gen));
 
         e.getGenerator().addProvider(e.includeClient(), new DelightfulBlockStateProvider(gen, helper));

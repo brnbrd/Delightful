@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "delightful:item/pizza"
+    "layer0": "delightful:item/source_berry_pie_slice"
   }
 }

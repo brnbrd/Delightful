@@ -14,7 +14,7 @@
       "condition": "minecraft:entity_properties",
       "entity": "this",
       "predicate": {
-        "type": "minecraft:goat"
+        "type": "#delightful:drops_raw_goat"
       }
     }
   ],

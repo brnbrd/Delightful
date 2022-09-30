@@ -25,12 +25,16 @@ public class DelightfulBlockLoot extends BlockLoot {
                 .filter(block -> block instanceof DelightfulCabinetBlock)
                 .forEach(this::dropSelf);
 
-        this.dropSelf(DelightfulBlocks.PIZZA_PEEL.get());
-        this.dropSelf(DelightfulBlocks.PIZZA_STONE.get());
-        this.add(DelightfulBlocks.SALMONBERRY_PIE.get(), LootTable.lootTable());
-        this.add(DelightfulBlocks.PUMPKIN_PIE.get(), LootTable.lootTable());
+        // Pies
+        this.empty(DelightfulBlocks.SALMONBERRY_PIE);
+        this.empty(DelightfulBlocks.PUMPKIN_PIE);
+        this.empty(DelightfulBlocks.SOURCE_BERRY_PIE);
+
+        // Whole melons
         this.dropSelf(DelightfulBlocks.MINI_MELON.get());
         this.dropSelf(DelightfulBlocks.CANTALOUPE.get());
+
+        // Sliced
         this.add(DelightfulBlocks.SLICED_MINI_MELON.get(), (b) -> {
                 LootTable.Builder loot = LootTable.lootTable();
                 int maxbites = ((SlicedMiniMelonBlock)DelightfulBlocks.SLICED_MINI_MELON.get()).getMaxBites();
@@ -87,8 +91,12 @@ public class DelightfulBlockLoot extends BlockLoot {
                 return applyExplosionDecay(b, loot);
             }
         );
+
+        // Sacks
         this.dropSelf(DelightfulBlocks.SALMONBERRY_SACK.get());
         this.dropSelf(DelightfulBlocks.ACORN_SACK.get());
+
+        // Salmonberry Bushes
         this.add(DelightfulBlocks.WILD_SALMONBERRIES.get(), (p_124096_) ->
             applyExplosionDecay(p_124096_, LootTable.lootTable()
                 .withPool(LootPool.lootPool()
@@ -101,5 +109,9 @@ public class DelightfulBlockLoot extends BlockLoot {
     @Override
     protected Iterable<Block> getKnownBlocks() {
         return DelightfulBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
+    }
+
+    public void empty(RegistryObject<Block> block) {
+        this.add(block.get(), LootTable.lootTable());
     }
 }

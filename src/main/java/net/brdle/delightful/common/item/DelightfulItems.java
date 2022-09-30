@@ -9,6 +9,7 @@ import net.brdle.delightful.common.item.knife.rootsclassic.LivingKnifeItem;
 import net.brdle.delightful.common.item.knife.twilightforest.FieryKnifeItem;
 import net.brdle.delightful.common.item.knife.twilightforest.IronwoodKnifeItem;
 import net.brdle.delightful.common.item.knife.twilightforest.SteeleafKnifeItem;
+import net.brdle.delightful.compat.ArsNouveauCompat;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -47,6 +48,8 @@ public class DelightfulItems {
         vectorwing.farmersdelight.common.FoodValues.PIE_SLICE);
     public static final RegistryObject<Item> PUMPKIN_PIE_SLICE = registerFood("pumpkin_pie_slice",
         vectorwing.farmersdelight.common.FoodValues.PIE_SLICE);
+    public static final RegistryObject<Item> SOURCE_BERRY_PIE_SLICE = registerCompatFood("source_berry_pie_slice", ArsNouveauCompat.modid,
+        ArsNouveauCompat.getPieSlice().get());
     public static final RegistryObject<Item> GREEN_TEA_LEAF = registerFood("green_tea_leaf",
         FoodValues.GREEN_TEA_LEAF);
     public static final RegistryObject<Item> MATCHA = registerItem("matcha", () -> new DescriptItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB), Component.translatable("delightful.matcha.desc").withStyle(ChatFormatting.GRAY)));
@@ -95,7 +98,7 @@ public class DelightfulItems {
       FoodValues.COOKED_MARSHMALLOW_STICK, Items.STICK);
     public static final RegistryObject<Item> SMORE = registerFood("smore",
       FoodValues.SMORE);
-    public static final RegistryObject<Item> CRAB_RANGOON = registerCompatFood("crab_rangoon", "ecologics",
+    public static final RegistryObject<Item> CRAB_RANGOON = registerFood("crab_rangoon",
       FoodValues.CRAB_RANGOON);
     public static final RegistryObject<Item> HONEY_GLAZED_WALNUT = registerFood("honey_glazed_walnut",
       FoodValues.HONEY_GLAZED_WALNUT);
@@ -117,12 +120,6 @@ public class DelightfulItems {
       new BlockItem(DelightfulBlocks.SALMONBERRY_SACK.get(), (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
     public static final RegistryObject<Item> ACORN_SACK = registerItem("acorn_sack", () ->
         new BlockItem(DelightfulBlocks.ACORN_SACK.get(), (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
-
-    // WIP
-    public static final RegistryObject<Item> PIZZA = registerItem("pizza",
-            () -> new PizzaItem((new Item.Properties())
-            //.tab(FarmersDelight.CREATIVE_TAB)
-    ));
 
     // Cabinets
     public static final RegistryObject<Item> QUARTZ_CABINET = registerItem("quartz_cabinet",
@@ -212,12 +209,12 @@ public class DelightfulItems {
         if (remainder.length > 0) {
             if (remainder[0].equals(Items.BOWL)) {
                 return registerItem(name,
-                    () -> new BowlFoodItem((new Item.Properties()).food(food).craftRemainder(Items.BOWL)));
+                    () -> new BowlFoodItem((new Item.Properties()).food(food).craftRemainder(Items.BOWL).tab(FarmersDelight.CREATIVE_TAB)));
             }
             return registerItem(name,
-                () -> new ConsumableItem((new Item.Properties()).food(food).craftRemainder(Items.STICK)));
+                () -> new ConsumableItem((new Item.Properties()).food(food).craftRemainder(remainder[0]).tab(FarmersDelight.CREATIVE_TAB)));
         }
-        return registerItem(name, (new Item.Properties()).food(food));
+        return registerItem(name, (new Item.Properties()).food(food).tab(FarmersDelight.CREATIVE_TAB));
     }
 
     // Sets creative tab to Farmer's Delight

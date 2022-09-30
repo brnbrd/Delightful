@@ -77,6 +77,7 @@ public class DelightfulEntityTagProvider extends EntityTypeTagsProvider {
 			.addOptional(mod("ars_nouveau", "starbuncle"))
 			.addOptional(mod("aqcaracal", "caracal"));
 		this.tag(DelightfulEntityTags.DROPS_ACORN).addOptional(mod("ecologics", "squirrel"));
+		this.tag(DelightfulEntityTags.DROPS_RAW_GOAT).add(EntityType.GOAT);
 	}
 
 	/**

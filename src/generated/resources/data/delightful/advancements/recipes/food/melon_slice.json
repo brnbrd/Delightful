@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:melon_slice"
+        "recipe": "delightful:melon_slice"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:melon_slice"
+      "delightful:melon_slice"
     ]
   }
 }

@@ -8,16 +8,18 @@ import net.brdle.delightful.common.block.SlicedPumpkinBlock;
 import net.brdle.delightful.common.config.DelightfulConfig;
 import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.item.FurnaceFuelItem;
+import net.brdle.delightful.compat.ArsNouveauCompat;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.game.ClientboundAnimatePacket;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -28,14 +30,17 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.furnace.FurnaceFuelBurnTimeEvent;
+import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.MissingMappingsEvent;
+import vectorwing.farmersdelight.common.block.PieBlock;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
-
 import java.util.List;
 
 @Mod.EventBusSubscriber(modid= Delightful.MODID)
@@ -128,6 +133,7 @@ public class ForgeEvents {
 			world.setBlock(pos, block.defaultBlockState(), 2);
 			Util.dropOrGive(slice, world, pos, e.getEntity());
 			world.playSound(null, pos, SoundEvents.BAMBOO_BREAK, SoundSource.PLAYERS, 0.8F, 0.8F);
+			e.getEntity().getItemInHand(e.getHand()).hurtAndBreak(1, e.getEntity(), onBroken -> {});
 		}
 		e.setCancellationResult(InteractionResult.sidedSuccess(client));
 		e.setCanceled(true);
@@ -135,40 +141,67 @@ public class ForgeEvents {
 
 	@SubscribeEvent
 	public static void onPumpkinPieOverhaul(PlayerInteractEvent.RightClickBlock e) {
-		Level world = e.getLevel();
-		BlockPos pos = e.getPos();
-		InteractionHand hand = e.getHand();
-		ItemStack stack = e.getEntity().getItemInHand(hand);
-		if (DelightfulConfig.PUMPKIN_PIE_OVERHAUL.get() && stack.is(Items.PUMPKIN_PIE)) {
-			e.setCanceled(true);
-			Player player = e.getEntity();
-			if (world.getBlockState(pos).canBeReplaced(
-				new BlockPlaceContext(player, hand, stack, e.getHitVec()))) {
-				placePie(pos, player, stack, world);
-				e.setCancellationResult(InteractionResult.sidedSuccess(world.isClientSide()));
-			} else if (world.getBlockState(pos.above()).canBeReplaced(
-				new BlockPlaceContext(player, hand, stack, e.getHitVec()))) {
-				placePie(pos.above(), player, stack, world);
-				e.setCancellationResult(InteractionResult.sidedSuccess(world.isClientSide()));
-			} else {
-				e.setCancellationResult(InteractionResult.FAIL);
-			}
+		ItemStack stack = e.getEntity().getItemInHand(e.getHand());
+		BlockPlaceContext context = new BlockPlaceContext(e.getEntity(), e.getHand(), stack, e.getHitVec());
+		if (DelightfulConfig.PUMPKIN_PIE_OVERHAUL.get() &&
+			stack.is(Items.PUMPKIN_PIE)) {
+			tryPlacePie((PieBlock) DelightfulBlocks.PUMPKIN_PIE.get(), context, e);
+		} else if (ModList.get().isLoaded(ArsNouveauCompat.modid) &&
+			DelightfulConfig.stuff.get(ArsNouveauCompat.slice).get() &&
+			!stack.isEmpty() &&
+			stack.is(ForgeRegistries.ITEMS.getValue(new ResourceLocation(ArsNouveauCompat.modid, ArsNouveauCompat.pie)))) {
+			tryPlacePie((PieBlock) DelightfulBlocks.SOURCE_BERRY_PIE.get(), context, e);
 		}
 	}
 
-	public static void placePie(BlockPos pos, Player player, ItemStack stack, Level world) {
-		if (!player.getAbilities().instabuild) {
-			stack.shrink(1);
+	public static void tryPlacePie(PieBlock pie, BlockPlaceContext context, PlayerInteractEvent.RightClickBlock e) {
+		e.setUseItem(Event.Result.DENY);
+		e.setCanceled(true);
+		if (e.getUseBlock() != Event.Result.ALLOW) {
+			if (placePie(pie, context)) {
+				e.setCancellationResult(InteractionResult.sidedSuccess(context.getLevel().isClientSide()));
+			}
+		} else {
+			e.setUseBlock(Event.Result.ALLOW);
 		}
-		BlockState state = DelightfulBlocks.PUMPKIN_PIE.get().defaultBlockState();
-		world.setBlock(pos, state, 2);
-		state.getBlock().setPlacedBy(world, pos, state, player, stack);
-		world.gameEvent(GameEvent.BLOCK_PLACE, pos, GameEvent.Context.of(player, state));
-		world.playSound(null, pos, SoundEvents.WOOL_PLACE, SoundSource.PLAYERS, 0.8F, 0.8F);
+	}
+
+	public static boolean placePie(PieBlock pie, BlockPlaceContext context) {
+		if (context.canPlace() &&
+			context.getLevel().getBlockState(context.getClickedPos().below()).getMaterial().isSolid()) {
+			BlockState piestate = pie.getStateForPlacement(context);
+			if (!context.getPlayer().getAbilities().instabuild) {
+				context.getItemInHand().shrink(1);
+			}
+			context.getLevel().setBlock(context.getClickedPos(), piestate, 2);
+			piestate.getBlock().setPlacedBy(context.getLevel(), context.getClickedPos(), piestate, context.getPlayer(), context.getItemInHand());
+			context.getLevel().gameEvent(GameEvent.BLOCK_PLACE, context.getClickedPos(), GameEvent.Context.of(context.getPlayer(), piestate));
+			context.getLevel().playSound(null, context.getClickedPos(), SoundEvents.WOOL_PLACE, SoundSource.PLAYERS, 0.8F, 0.8F);
+			return true;
+		}
+		return false;
 	}
 
 	@SubscribeEvent
 	public static void onPumpkinPieOverhaul(PlayerInteractEvent.RightClickItem e) {
-		e.setCanceled(DelightfulConfig.PUMPKIN_PIE_OVERHAUL.get() && e.getEntity().getItemInHand(e.getHand()).is(Items.PUMPKIN_PIE));
+		ItemStack stack = e.getEntity().getItemInHand(e.getHand());
+		if ((DelightfulConfig.PUMPKIN_PIE_OVERHAUL.get() && stack.is(Items.PUMPKIN_PIE)) ||
+			(ModList.get().isLoaded(ArsNouveauCompat.modid) &&
+				stack.is(ForgeRegistries.ITEMS.getValue(new ResourceLocation(ArsNouveauCompat.modid, ArsNouveauCompat.pie))) &&
+				DelightfulConfig.stuff.get(ArsNouveauCompat.slice).get())) {
+			e.setCancellationResult(InteractionResult.FAIL);
+			e.setCanceled(true);
+		}
+	}
+
+	@SubscribeEvent
+	public static void onTooltip(ItemTooltipEvent e) {
+		if ((e.getItemStack().is(Items.PUMPKIN_PIE) && DelightfulConfig.PUMPKIN_PIE_OVERHAUL.get()) ||
+			(e.getItemStack().getItem() instanceof BlockItem block && block.getBlock() instanceof PieBlock) ||
+			(ModList.get().isLoaded(ArsNouveauCompat.modid) &&
+				e.getItemStack().is(ForgeRegistries.ITEMS.getValue(new ResourceLocation(ArsNouveauCompat.modid, ArsNouveauCompat.pie))) &&
+				DelightfulConfig.stuff.get(ArsNouveauCompat.slice).get())) {
+			e.getToolTip().add(Component.literal("Placeable").withStyle(ChatFormatting.DARK_GRAY).withStyle(ChatFormatting.ITALIC));
+		}
 	}
 }

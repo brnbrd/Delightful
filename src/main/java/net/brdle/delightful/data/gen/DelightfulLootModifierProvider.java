@@ -5,12 +5,10 @@ import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.loot.AddItemLootModifier;
 import net.brdle.delightful.common.loot.LootItemBlockIsTagCondition;
 import net.brdle.delightful.common.loot.LootItemEnabledCondition;
+import net.brdle.delightful.data.DelightfulBlockTags;
 import net.minecraft.advancements.critereon.*;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.tags.ItemTags;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.enchantment.Enchantments;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.predicates.*;
 import net.minecraftforge.common.Tags;
@@ -32,7 +30,7 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 				LootItemEnabledCondition.enabled("green_tea_leaf"),
 				LootItemRandomChanceCondition.randomChance(0.08F).build(),
 				MatchTool.toolMatches(ItemPredicate.Builder.item().of(ForgeTags.TOOLS_KNIVES)).build(),
-				LootItemBlockIsTagCondition.isTag(ItemTags.LEAVES)
+				LootItemBlockIsTagCondition.isTag(DelightfulBlockTags.DROPS_GREEN_TEA_LEAF)
 			},
 			DelightfulItems.GREEN_TEA_LEAF.get(), 1, 1, true
 		));
@@ -42,8 +40,7 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 				LootItemRandomChanceCondition.randomChance(0.05F).build(),
 				MatchTool.toolMatches(ItemPredicate.Builder.item().of(Tags.Items.SHEARS)).invert().build(),
 				MatchTool.toolMatches(ItemPredicate.Builder.item().hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.Ints.ANY))).invert().build(),
-				LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.OAK_LEAVES)
-					.or(LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.DARK_OAK_LEAVES)).build()
+				LootItemBlockIsTagCondition.isTag(DelightfulBlockTags.DROPS_ACORN)
 			},
 			DelightfulItems.ACORN.get(), 1, 1, true
 		));
@@ -70,7 +67,7 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 			new LootItemCondition[]{
 				LootItemEnabledCondition.enabled("raw_goat"),
 				LootItemRandomChanceWithLootingCondition.randomChanceAndLootingBoost(1.0F, 2.0F).build(),
-				LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS, EntityPredicate.Builder.entity().of(EntityType.GOAT)).build()
+				LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS, EntityPredicate.Builder.entity().of(DelightfulEntityTags.DROPS_RAW_GOAT)).build()
 			},
 			DelightfulItems.RAW_GOAT.get(), 1, 2, true
 		));

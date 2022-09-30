@@ -1,0 +1,33 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "pumpkin_pie_overhaul"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "delightful:pumpkin_pie_slice"
+          },
+          {
+            "item": "delightful:pumpkin_pie_slice"
+          },
+          {
+            "item": "delightful:pumpkin_pie_slice"
+          },
+          {
+            "item": "delightful:pumpkin_pie_slice"
+          }
+        ],
+        "result": {
+          "item": "minecraft:pumpkin_pie"
+        }
+      }
+    }
+  ]
+}
