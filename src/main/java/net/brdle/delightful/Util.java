@@ -3,8 +3,8 @@ package net.brdle.delightful;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.brdle.delightful.common.config.DelightfulConfig;
 import net.minecraft.core.BlockPos;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.Containers;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -15,6 +15,14 @@ import net.minecraftforge.registries.ForgeRegistries;
 import java.util.Objects;
 
 public class Util {
+
+  public static ResourceLocation rl(String modid, String path) {
+    return new ResourceLocation(modid, path);
+  }
+
+  public static ResourceLocation rl(String separated) {
+    return new ResourceLocation(separated);
+  }
 
   public static ObjectArrayList<ItemStack> with(ObjectArrayList<ItemStack> before, ItemStack addition) {
     before.add(addition);

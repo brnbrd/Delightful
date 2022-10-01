@@ -530,25 +530,25 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                     Ingredient.of(ForgeTags.TOOLS_KNIVES),
                     DelightfulItems.CACTUS_FLESH.get(), 2)
                     .build(f))
-            .build(finished, new ResourceLocation(Delightful.MODID, "cutting/cactus"));
+            .build(finished, Util.rl(Delightful.MODID, "cutting/cactus"));
         CuttingBoardRecipeBuilder.cuttingRecipe(
             Ingredient.of(DelightfulItems.MINI_MELON.get()),
             Ingredient.of(ForgeTags.TOOLS_KNIVES),
             Items.MELON_SLICE, 6)
-            .build(finished, new ResourceLocation(Delightful.MODID, "cutting/mini_melon"));
+            .build(finished, Util.rl(Delightful.MODID, "cutting/mini_melon"));
         CuttingBoardRecipeBuilder.cuttingRecipe(
             Ingredient.of(DelightfulItems.CANTALOUPE.get()),
             Ingredient.of(ForgeTags.TOOLS_KNIVES),
             DelightfulItems.CANTALOUPE_SLICE.get(), 6)
-            .build(finished, new ResourceLocation(Delightful.MODID, "cutting/cantaloupe"));
+            .build(finished, Util.rl(Delightful.MODID, "cutting/cantaloupe"));
         ShapelessRecipeBuilder.shapeless(DelightfulItems.CANTALOUPE_SLICE.get(), 3)
             .requires(DelightfulItems.CANTALOUPE.get())
             .unlockedBy("has_cantaloupe", has(DelightfulItems.CANTALOUPE.get()))
-            .save(finished, new ResourceLocation(Delightful.MODID, "cantaloupe_slice"));
+            .save(finished, Util.rl(Delightful.MODID, "cantaloupe_slice"));
         ShapelessRecipeBuilder.shapeless(Items.MELON_SLICE, 3)
             .requires(DelightfulItems.MINI_MELON.get())
             .unlockedBy("has_mini_melon", has(DelightfulItems.MINI_MELON.get()))
-            .save(finished, new ResourceLocation(Delightful.MODID, "melon_slice"));
+            .save(finished, Util.rl(Delightful.MODID, "melon_slice"));
         ConditionalRecipe.builder()
           .addCondition(not(tagEmpty(DelightfulItemTags.CHOCOLATE)))
           .addRecipe(f -> ShapedRecipeBuilder.shaped(ModItems.CHOCOLATE_PIE.get(), 1)
@@ -581,7 +581,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
     }
 
     private void wrap(RecipeBuilder builder, String name, Consumer<FinishedRecipe> consumer, ICondition... conds) {
-        ResourceLocation loc = new ResourceLocation(Delightful.MODID, name);
+        ResourceLocation loc = Util.rl(Delightful.MODID, name);
         ConditionalRecipe.Builder cond;
         if (conds.length > 1) {
             cond = ConditionalRecipe.builder().addCondition(and(conds));
@@ -598,7 +598,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
     }
 
     private Item modItem(String modid, String path) {
-        return ForgeRegistries.ITEMS.getValue(new ResourceLocation(modid, path));
+        return ForgeRegistries.ITEMS.getValue(Util.rl(modid, path));
     }
 
     private void cabinet(DelightfulCabinetBlock block, Consumer<FinishedRecipe> finished) {
@@ -649,7 +649,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
         /*Arrays.stream(Nugget.values()).forEach(mod -> {
             String metal = knife.getTag().getPath().replace("_knife", "").replace("ingots/", "").trim();
             if (mod.getMetals().contains(metal)) {
-                knifeSmeltAndBlast(knife, metal, new ResourceLocation(mod.getModid(), mod.formatMetal(metal)), finished);
+                knifeSmeltAndBlast(knife, metal, Util.rl(mod.getModid(), mod.formatMetal(metal)), finished);
             }
         });*/
         String path = Util.name(knife);
@@ -676,14 +676,14 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             .addCondition(and(enabled(Util.name(knife)), itemExists(nugget.getNamespace(), nugget.getPath())))
             .addRecipe(f -> SimpleCookingRecipeBuilder.smelting(Ingredient.of(knife), Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(nugget)), 0.1F, 200)
                 .unlockedBy("has_" + metal + "_knife", InventoryChangeTrigger.TriggerInstance.hasItems(knife))
-                .save(f, new ResourceLocation(Delightful.MODID, "knives/smelting/" + metal + "_" + nugget.getNamespace())))
+                .save(f, Util.rl(Delightful.MODID, "knives/smelting/" + metal + "_" + nugget.getNamespace())))
             .generateAdvancement()
             .build(finished, Delightful.MODID, "knives/smelting/" + metal + "_" + nugget.getNamespace());
         ConditionalRecipe.builder()
             .addCondition(and(enabled(Util.name(knife)), itemExists(nugget.getNamespace(), nugget.getPath())))
             .addRecipe(f -> SimpleCookingRecipeBuilder.blasting(Ingredient.of(knife), Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(nugget)), 0.1F, 100)
                 .unlockedBy("has_" + metal + "_knife", InventoryChangeTrigger.TriggerInstance.hasItems(knife))
-                .save(f, new ResourceLocation(Delightful.MODID, "knives/blasting/" + metal + "_" + nugget.getNamespace())))
+                .save(f, Util.rl(Delightful.MODID, "knives/blasting/" + metal + "_" + nugget.getNamespace())))
             .generateAdvancement()
             .build(finished, Delightful.MODID, "knives/blasting/" + metal + "_" + nugget.getNamespace());
     }
@@ -695,7 +695,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             .addCondition(and(enabled(path), not(tagEmpty(add))))
             .addRecipe(f -> UpgradeRecipeBuilder.smithing(knife.getIngredient().get(), Ingredient.of(add), knife)
                 .unlocks("has_metal", inventoryTrigger(ItemPredicate.Builder.item().of(add).build()))
-                .save(f, new ResourceLocation(Delightful.MODID, path + "_smithing")))
+                .save(f, Util.rl(Delightful.MODID, path + "_smithing")))
             .generateAdvancement()
             .build(finished, Delightful.MODID, "knives/" + path + "_smithing");
     }

@@ -1,6 +1,7 @@
 package net.brdle.delightful.common.item;
 
 import net.brdle.delightful.Delightful;
+import net.brdle.delightful.Util;
 import net.brdle.delightful.common.block.DelightfulBlocks;
 import net.brdle.delightful.common.item.food.*;
 import net.brdle.delightful.common.item.knife.*;
@@ -154,7 +155,7 @@ public class DelightfulItems {
     public static final RegistryObject<Item> ENDERITE_KNIFE = registerSmithedKnife("enderite",
         () -> Ingredient.of(ModItems.NETHERITE_KNIFE.get()), ingot("enderite"));
     public static final RegistryObject<Item> DEORUM_KNIFE = registerCompatKnife("deorum", "forbidden_arcanus", ingot("deorum"));
-    public static final RegistryObject<Item> REINFORCED_DEORUM_KNIFE = registerSmithedKnife("reinforced_deorum", () -> Ingredient.of(DEORUM_KNIFE.get()), new ResourceLocation("forbidden_arcanus", "stellarite_piece"), "forbidden_arcanus");
+    public static final RegistryObject<Item> REINFORCED_DEORUM_KNIFE = registerSmithedKnife("reinforced_deorum", () -> Ingredient.of(DEORUM_KNIFE.get()), Util.rl("forbidden_arcanus", "stellarite_piece"), "forbidden_arcanus");
     public static final RegistryObject<Item> DRACO_ARCANUS_KNIFE = registerItem("draco_arcanus_knife", () -> new DracoArcanusKnifeItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
     public static final RegistryObject<Item> LAPIS_LAZULI_KNIFE = registerCompatKnife("lapis_lazuli", "mekanismtools", Tags.Items.GEMS_LAPIS.location());
     public static final RegistryObject<Item> OSMIUM_KNIFE = registerCompatKnife("osmium", "mekanismtools", ingot("osmium"));
@@ -244,11 +245,11 @@ public class DelightfulItems {
     }
 
     public static ResourceLocation ingot(String name) {
-        return new ResourceLocation("forge", "ingots/" + name);
+        return Util.rl("forge", "ingots/" + name);
     }
 
     public static ResourceLocation gem(String name) {
-        return new ResourceLocation("forge", "gems/" + name);
+        return Util.rl("forge", "gems/" + name);
     }
 
     public static Supplier<Ingredient> getIngot(String name) {

@@ -13,7 +13,6 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.game.ClientboundAnimatePacket;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -53,7 +52,7 @@ public class ForgeEvents {
 	public static void onMissingBlockMappings(MissingMappingsEvent e) {
 		for (var mapping : e.getAllMappings(ForgeRegistries.BLOCKS.getRegistryKey())) {
 			if (portedMods.contains(mapping.getKey().getNamespace())) {
-				var remap = new ResourceLocation(Delightful.MODID, mapping.getKey().getPath());
+				var remap = Util.rl(Delightful.MODID, mapping.getKey().getPath());
 				if (ForgeRegistries.BLOCKS.containsKey(remap)) {
 					mapping.remap(ForgeRegistries.BLOCKS.getValue(remap));
 				} else {
@@ -63,7 +62,7 @@ public class ForgeEvents {
 		}
 		for (var mapping : e.getAllMappings(ForgeRegistries.ITEMS.getRegistryKey())) {
 			if (portedMods.contains(mapping.getKey().getNamespace())) {
-				var remap = new ResourceLocation(Delightful.MODID, mapping.getKey().getPath());
+				var remap = Util.rl(Delightful.MODID, mapping.getKey().getPath());
 				if (ForgeRegistries.ITEMS.containsKey(remap)) {
 					mapping.remap(ForgeRegistries.ITEMS.getValue(remap));
 				} else {
@@ -149,7 +148,7 @@ public class ForgeEvents {
 		} else if (ModList.get().isLoaded(ArsNouveauCompat.modid) &&
 			DelightfulConfig.stuff.get(ArsNouveauCompat.slice).get() &&
 			!stack.isEmpty() &&
-			stack.is(ForgeRegistries.ITEMS.getValue(new ResourceLocation(ArsNouveauCompat.modid, ArsNouveauCompat.pie)))) {
+			stack.is(ForgeRegistries.ITEMS.getValue(Util.rl(ArsNouveauCompat.modid, ArsNouveauCompat.pie)))) {
 			tryPlacePie((PieBlock) DelightfulBlocks.SOURCE_BERRY_PIE.get(), context, e);
 		}
 	}
@@ -187,7 +186,7 @@ public class ForgeEvents {
 		ItemStack stack = e.getEntity().getItemInHand(e.getHand());
 		if ((DelightfulConfig.PUMPKIN_PIE_OVERHAUL.get() && stack.is(Items.PUMPKIN_PIE)) ||
 			(ModList.get().isLoaded(ArsNouveauCompat.modid) &&
-				stack.is(ForgeRegistries.ITEMS.getValue(new ResourceLocation(ArsNouveauCompat.modid, ArsNouveauCompat.pie))) &&
+				stack.is(ForgeRegistries.ITEMS.getValue(Util.rl(ArsNouveauCompat.modid, ArsNouveauCompat.pie))) &&
 				DelightfulConfig.stuff.get(ArsNouveauCompat.slice).get())) {
 			e.setCancellationResult(InteractionResult.FAIL);
 			e.setCanceled(true);
@@ -199,7 +198,7 @@ public class ForgeEvents {
 		if ((e.getItemStack().is(Items.PUMPKIN_PIE) && DelightfulConfig.PUMPKIN_PIE_OVERHAUL.get()) ||
 			(e.getItemStack().getItem() instanceof BlockItem block && block.getBlock() instanceof PieBlock) ||
 			(ModList.get().isLoaded(ArsNouveauCompat.modid) &&
-				e.getItemStack().is(ForgeRegistries.ITEMS.getValue(new ResourceLocation(ArsNouveauCompat.modid, ArsNouveauCompat.pie))) &&
+				e.getItemStack().is(ForgeRegistries.ITEMS.getValue(Util.rl(ArsNouveauCompat.modid, ArsNouveauCompat.pie))) &&
 				DelightfulConfig.stuff.get(ArsNouveauCompat.slice).get())) {
 			e.getToolTip().add(Component.literal("Placeable").withStyle(ChatFormatting.DARK_GRAY).withStyle(ChatFormatting.ITALIC));
 		}

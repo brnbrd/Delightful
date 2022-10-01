@@ -1,9 +1,9 @@
 package net.brdle.delightful.data.gen;
 
 import net.brdle.delightful.Delightful;
+import net.brdle.delightful.Util;
 import net.brdle.delightful.common.block.DelightfulBlocks;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.client.model.generators.BlockModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import vectorwing.farmersdelight.common.block.CabinetBlock;
@@ -24,18 +24,18 @@ public class DelightfulBlockModelProvider extends BlockModelProvider {
     public void bush(String name) {
         for (int i = 0; i <= 3; i++) {
             String stage = "block/" + name + "_bush_stage" + i;
-            cross(stage, new ResourceLocation(this.modid, stage)).renderType("cutout");
+            cross(stage, Util.rl(this.modid, stage)).renderType("cutout");
         }
     }
 
     public void cabinet(String name) {
         orientable(name,
-                new ResourceLocation(this.modid, "block/" + name + "_side"),
-                new ResourceLocation(this.modid, "block/" + name + "_front"),
-                new ResourceLocation(this.modid, "block/" + name + "_top"));
+                Util.rl(this.modid, "block/" + name + "_side"),
+                Util.rl(this.modid, "block/" + name + "_front"),
+                Util.rl(this.modid, "block/" + name + "_top"));
         orientable(name + "_open",
-                new ResourceLocation(this.modid, "block/" + name + "_side"),
-                new ResourceLocation(this.modid, "block/" + name + "_front_open"),
-                new ResourceLocation(this.modid, "block/" + name + "_top"));
+                Util.rl(this.modid, "block/" + name + "_side"),
+                Util.rl(this.modid, "block/" + name + "_front_open"),
+                Util.rl(this.modid, "block/" + name + "_top"));
     }
 }

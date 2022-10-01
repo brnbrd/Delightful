@@ -1,11 +1,10 @@
 package net.brdle.delightful.data;
 
-import net.minecraft.resources.ResourceLocation;
+import net.brdle.delightful.Util;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import vectorwing.farmersdelight.FarmersDelight;
-import vectorwing.farmersdelight.common.tag.ForgeTags;
 
 public class DelightfulItemTags {
 
@@ -74,6 +73,6 @@ public class DelightfulItemTags {
 	}
 
 	private static TagKey<Item> bind(String modid, String name) {
-		return ItemTags.create(new ResourceLocation(modid, name));
+		return ItemTags.create(Util.rl(modid, name));
 	}
 }

@@ -1,6 +1,7 @@
 package net.brdle.delightful.data.gen;
 
 import net.brdle.delightful.Delightful;
+import net.brdle.delightful.Util;
 import net.brdle.delightful.common.block.DelightfulBlocks;
 import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.item.knife.DelightfulKnifeItem;
@@ -42,21 +43,21 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.FRUITS_SWEET_BERRIES).add(Items.SWEET_BERRIES);
 		this.tag(DelightfulItemTags.FRUITS_GLOW_BERRIES).add(Items.GLOW_BERRIES);
 		this.tag(DelightfulItemTags.FRUITS_SALMONBERRIES).add(DelightfulItems.SALMONBERRIES.get());
-		this.tag(DelightfulItemTags.FRUITS_KIWI).addOptional(new ResourceLocation("hedgehog", "kiwi"));
-		this.tag(DelightfulItemTags.FRUITS_PRICKLY_PEAR).addOptional(new ResourceLocation("ecologics", "prickly_pear"));
-		this.tag(DelightfulItemTags.FRUITS_TORCHBERRIES).addOptional(new ResourceLocation("twilightforest", "torchberries"));
-		this.tag(DelightfulItemTags.FRUITS_SOURCEBERRY).addOptional(new ResourceLocation("ars_nouveau", "source_berry"));
-		this.tag(DelightfulItemTags.FRUITS_ELDERBERRY).addOptional(new ResourceLocation("rootsclassic", "elderberry"));
-		this.tag(DelightfulItemTags.FRUITS_BLACKCURRANT).addOptional(new ResourceLocation("rootsclassic", "blackcurrant"));
-		this.tag(DelightfulItemTags.FRUITS_REDCURRANT).addOptional(new ResourceLocation("rootsclassic", "redcurrant"));
-		this.tag(DelightfulItemTags.FRUITS_WHITECURRANT).addOptional(new ResourceLocation("rootsclassic", "whitecurrant"));
+		this.tag(DelightfulItemTags.FRUITS_KIWI).addOptional(Util.rl("hedgehog", "kiwi"));
+		this.tag(DelightfulItemTags.FRUITS_PRICKLY_PEAR).addOptional(Util.rl("ecologics", "prickly_pear"));
+		this.tag(DelightfulItemTags.FRUITS_TORCHBERRIES).addOptional(Util.rl("twilightforest", "torchberries"));
+		this.tag(DelightfulItemTags.FRUITS_SOURCEBERRY).addOptional(Util.rl("ars_nouveau", "source_berry"));
+		this.tag(DelightfulItemTags.FRUITS_ELDERBERRY).addOptional(Util.rl("rootsclassic", "elderberry"));
+		this.tag(DelightfulItemTags.FRUITS_BLACKCURRANT).addOptional(Util.rl("rootsclassic", "blackcurrant"));
+		this.tag(DelightfulItemTags.FRUITS_REDCURRANT).addOptional(Util.rl("rootsclassic", "redcurrant"));
+		this.tag(DelightfulItemTags.FRUITS_WHITECURRANT).addOptional(Util.rl("rootsclassic", "whitecurrant"));
 		this.tag(DelightfulItemTags.FRUITS_STRAWBERRIES)
-			.addOptional(new ResourceLocation("neapolitan", "strawberries"))
-			.addOptional(new ResourceLocation("neapolitan", "white_strawberries"));
+			.addOptional(Util.rl("neapolitan", "strawberries"))
+			.addOptional(Util.rl("neapolitan", "white_strawberries"));
 		this.tag(DelightfulItemTags.FRUITS_BANANA)
-			.addOptional(new ResourceLocation("neapolitan", "banana"));
+			.addOptional(Util.rl("neapolitan", "banana"));
 		this.tag(DelightfulItemTags.FRUITS_CHERRY)
-			.addOptional(new ResourceLocation("forbidden_arcanus", "cherry_peach"));
+			.addOptional(Util.rl("forbidden_arcanus", "cherry_peach"));
 		this.tag(DelightfulItemTags.FRUITS_BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_SWEET_BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_GLOW_BERRIES)
@@ -78,8 +79,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_PRICKLY_PEAR)
 			.addTag(DelightfulItemTags.FRUITS_BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_CHORUS)
-			.addOptional(new ResourceLocation("ars_nouveau", "mendosteen_pod"))
-			.addOptional(new ResourceLocation("ars_nouveau", "bastion_pod"));
+			.addOptional(Util.rl("ars_nouveau", "mendosteen_pod"))
+			.addOptional(Util.rl("ars_nouveau", "bastion_pod"));
 		this.tag(DelightfulItemTags.FRUITS_SWEET)
 			.addTag(DelightfulItemTags.FRUITS_APPLE)
 			.addTag(DelightfulItemTags.FRUITS_KIWI)
@@ -90,80 +91,83 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_SALMONBERRIES)
 			.addTag(DelightfulItemTags.FRUITS_STRAWBERRIES)
 			.addTag(DelightfulItemTags.FRUITS_CHERRY)
-			.addOptionalTag(new ResourceLocation("forge", "fruits/mandarin"))
-			.addOptionalTag(new ResourceLocation("forge", "fruits/orange"))
-			.addOptionalTag(new ResourceLocation("forge", "fruits/redlove"));
-		this.tag(DelightfulItemTags.NUTS_WALNUT).addOptional(new ResourceLocation("ecologics", "walnut"));
-		this.tag(DelightfulItemTags.NUTS_PEANUT).addOptional(new ResourceLocation("sprout", "peanut"));
+			.addOptionalTag(Util.rl("forge", "fruits/mandarin"))
+			.addOptionalTag(Util.rl("forge", "fruits/orange"))
+			.addOptionalTag(Util.rl("forge", "fruits/redlove"));
+		this.tag(DelightfulItemTags.NUTS_WALNUT).addOptional(Util.rl("ecologics", "walnut"));
+		this.tag(DelightfulItemTags.NUTS_PEANUT).addOptional(Util.rl("sprout", "peanut"));
 		this.tag(DelightfulItemTags.NUTS_ACORN).add(DelightfulItems.ACORN.get());
 		this.tag(DelightfulItemTags.NUTS)
 			.addTag(DelightfulItemTags.NUTS_ACORN)
 			.addTag(DelightfulItemTags.NUTS_WALNUT)
 			.addTag(DelightfulItemTags.NUTS_PEANUT);
-		this.tag(DelightfulItemTags.INGOTS_STEEL).addOptional(new ResourceLocation("simplysteel", "steel_ingot"));
+		this.tag(DelightfulItemTags.INGOTS_STEEL).addOptional(Util.rl("simplysteel", "steel_ingot"));
 		this.tag(DelightfulItemTags.WATER).add(Items.WATER_BUCKET);
 		this.tag(DelightfulItemTags.JELLY)
 			.add(DelightfulItems.JELLY_BOTTLE.get())
 			.add(DelightfulItems.GLOW_JELLY_BOTTLE.get());
 		this.tag(DelightfulItemTags.SUGAR).add(Items.SUGAR);
 		this.tag(DelightfulItemTags.COOKED_CRAB)
-			.addOptional(new ResourceLocation("ecologics", "crab_meat"))
-			.addOptional(new ResourceLocation("quark", "cooked_crab_leg"));
+			.addOptional(Util.rl("ecologics", "crab_meat"))
+			.addOptional(Util.rl("quark", "cooked_crab_leg"));
 		this.tag(DelightfulItemTags.CHEESE)
-			.addOptional(new ResourceLocation("brewinandchewin", "flaxen_cheese_wedge"))
-			.addOptional(new ResourceLocation("farmlife", "tribull_cheese_wedge"));
+			.addOptional(Util.rl("brewinandchewin", "flaxen_cheese_wedge"))
+			.addOptional(Util.rl("farmlife", "tribull_cheese_wedge"));
 		this.tag(ForgeTags.MILK)
-			.addOptional(new ResourceLocation("dracovitadelight", "tribull_milk"));
+			.addOptional(Util.rl("dracovitadelight", "tribull_milk"));
 		this.tag(DelightfulItemTags.CHEESE_OR_MILK)
 			.addTag(DelightfulItemTags.CHEESE)
 			.addTag(ForgeTags.MILK);
 		this.tag(DelightfulItemTags.TEA_LEAVES_GREEN)
 			.add(DelightfulItems.GREEN_TEA_LEAF.get())
-			.addOptional(new ResourceLocation("farmersrespite", "green_tea_leaves"));
+			.addOptional(Util.rl("farmersrespite", "green_tea_leaves"));
 		this.tag(DelightfulItemTags.RAW_FISHES_KOI)
-			.addOptional(new ResourceLocation("environmental", "koi"))
-			.addOptional(new ResourceLocation("crittersandcompanions", "koi_fish"));
+			.addOptional(Util.rl("environmental", "koi"))
+			.addOptional(Util.rl("crittersandcompanions", "koi_fish"));
 		this.tag(DelightfulItemTags.RAW_FISHES_GLOWFISH)
-			.addOptional(new ResourceLocation("biomemakeover", "glowfish"));
+			.addOptional(Util.rl("biomemakeover", "glowfish"));
 		this.tag(ForgeTags.RAW_FISHES)
 			.addTag(DelightfulItemTags.RAW_FISHES_KOI)
 			.addTag(DelightfulItemTags.RAW_FISHES_GLOWFISH);
 		this.tag(ForgeTags.COOKED_FISHES)
-			.addOptional(new ResourceLocation("biomemakeover", "cooked_glowfish"));
+			.addOptional(Util.rl("biomemakeover", "cooked_glowfish"));
 		this.tag(DelightfulItemTags.RAW_VENISON)
-			.addOptional(new ResourceLocation("naturalist", "venison"))
-			.addOptional(new ResourceLocation("goodall", "raw_venison"))
-			.addOptional(new ResourceLocation("twilightforest", "raw_venison"));
+			.addOptional(Util.rl("naturalist", "venison"))
+			.addOptional(Util.rl("goodall", "raw_venison"))
+			.addOptional(Util.rl("twilightforest", "raw_venison"));
 		this.tag(DelightfulItemTags.COOKED_VENISON)
-			.addOptional(new ResourceLocation("naturalist", "cooked_venison"))
-			.addOptional(new ResourceLocation("goodall", "cooked_venison"))
-			.addOptional(new ResourceLocation("twilightforest", "cooked_venison"));
+			.addOptional(Util.rl("naturalist", "cooked_venison"))
+			.addOptional(Util.rl("goodall", "cooked_venison"))
+			.addOptional(Util.rl("twilightforest", "cooked_venison"));
 		this.tag(DelightfulItemTags.RAW_GOAT)
 			.add(DelightfulItems.RAW_GOAT.get());
 		this.tag(DelightfulItemTags.COOKED_GOAT)
 			.add(DelightfulItems.COOKED_GOAT.get());
 		this.tag(DelightfulItemTags.RAW_FROG)
-			.addOptional(new ResourceLocation("frog_legs", "frog_legs"));
+			.addOptional(Util.rl("frog_legs", "frog_legs"));
 		this.tag(DelightfulItemTags.COOKED_FROG)
-			.addOptional(new ResourceLocation("frog_legs", "cooked_frog_legs"));
+			.addOptional(Util.rl("frog_legs", "cooked_frog_legs"));
 		this.tag(DelightfulItemTags.CATTAIL)
-			.addOptional(new ResourceLocation("sprout", "cattail"))
-			.addOptional(new ResourceLocation("biomesoplenty", "cattail"))
-			.addOptional(new ResourceLocation("biomemakeover", "cattail"));
+			.addOptional(Util.rl("sprout", "cattail"))
+			.addOptional(Util.rl("biomesoplenty", "cattail"))
+			.addOptional(Util.rl("biomemakeover", "cattail"));
 		this.tag(DelightfulItemTags.GEMS_ROSE_QUARTZ)
-			.addOptional(new ResourceLocation("biomesoplenty", "rose_quartz_shard"))
-			.addOptional(new ResourceLocation("create", "rose_quartz"));
+			.addOptional(Util.rl("biomesoplenty", "rose_quartz_shard"))
+			.addOptional(Util.rl("create", "rose_quartz"));
 		this.tag(DelightfulItemTags.CHOCOLATE)
-			.addOptional(new ResourceLocation("neapolitan", "chocolate_bar"))
-			.addOptional(new ResourceLocation("create", "bar_of_chocolate"))
-			.addOptionalTag(new ResourceLocation("forge", "chocolatebar"));
+			.addOptional(Util.rl("neapolitan", "chocolate_bar"))
+			.addOptional(Util.rl("create", "bar_of_chocolate"))
+			.addOptionalTag(Util.rl("forge", "chocolatebar"));
 		this.tag(ForgeTags.SALAD_INGREDIENTS)
 			.add(DelightfulItems.CHOPPED_CLOVER.get())
-			.addOptional(new ResourceLocation("sprout", "sprouts"));
+			.addOptional(Util.rl("sprout", "sprouts"));
 
 		// Minecraft
 		this.tag(ItemTags.PIGLIN_LOVED).add(DelightfulItems.REFINED_GLOWSTONE_KNIFE.get());
-		this.tag(ForgeTags.TOOLS_KNIVES).addTag(ModTags.KNIVES);
+		this.tag(ForgeTags.TOOLS_KNIVES)
+			.addTag(ModTags.KNIVES)
+			.addOptional(Util.rl("ae2", "certus_quartz_cutting_knife"))
+			.addOptional(Util.rl("ae2", "nether_quartz_cutting_knife"));
 		var build = this.tag(ModTags.KNIVES);
 		DelightfulItems.ITEMS.getEntries().stream()
 			.map(RegistryObject::get)
@@ -171,13 +175,13 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.forEach(build::add);
 
 		// Ecologics
-		this.tag(DelightfulItemTags.COOKED_PRICKLY_PEAR).addOptional(new ResourceLocation("ecologics", "cooked_prickly_pear"));
+		this.tag(DelightfulItemTags.COOKED_PRICKLY_PEAR).addOptional(Util.rl("ecologics", "cooked_prickly_pear"));
 
 		// Forbidden and Arcanus
-		this.tag(DelightfulItemTags.STELLARITE_PIECE).addOptional(new ResourceLocation("forbidden_arcanus", "stellarite_piece"));
-		this.tag(DelightfulItemTags.DRACO_ARCANUS_STAFF).addOptional(new ResourceLocation("forbidden_arcanus", "draco_arcanus_staff"));
-		this.tag(DelightfulItemTags.DRAGON_SCALE).addOptional(new ResourceLocation("forbidden_arcanus", "dragon_scale"));
-		this.tag(DelightfulItemTags.INGOTS_DEORUM).addOptional(new ResourceLocation("forbidden_arcanus", "deorum_ingot"));
+		this.tag(DelightfulItemTags.STELLARITE_PIECE).addOptional(Util.rl("forbidden_arcanus", "stellarite_piece"));
+		this.tag(DelightfulItemTags.DRACO_ARCANUS_STAFF).addOptional(Util.rl("forbidden_arcanus", "draco_arcanus_staff"));
+		this.tag(DelightfulItemTags.DRAGON_SCALE).addOptional(Util.rl("forbidden_arcanus", "dragon_scale"));
+		this.tag(DelightfulItemTags.INGOTS_DEORUM).addOptional(Util.rl("forbidden_arcanus", "deorum_ingot"));
 	}
 
 	/**

@@ -1,8 +1,8 @@
 package net.brdle.delightful.data;
 
 import net.brdle.delightful.Delightful;
+import net.brdle.delightful.Util;
 import net.minecraft.core.Registry;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.biome.Biome;
 
@@ -14,6 +14,6 @@ public class DelightfulBiomeTags {
 
 
 	private static TagKey<Biome> create(String name) {
-		return TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation(Delightful.MODID, name));
+		return TagKey.create(Registry.BIOME_REGISTRY, Util.rl(Delightful.MODID, name));
 	}
 }

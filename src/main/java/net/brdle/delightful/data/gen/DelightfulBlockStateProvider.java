@@ -33,14 +33,14 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
         this.wildCropBlock(DelightfulBlocks.WILD_SALMONBERRIES.get());
         this.simpleBlock(DelightfulBlocks.SALMONBERRY_SACK.get(),
           models().cubeBottomTop("salmonberry_sack",
-            new ResourceLocation(Delightful.MODID, "block/salmonberry_sack"),
-            new ResourceLocation(Delightful.MODID, "block/salmonberry_sack_bottom"),
-            new ResourceLocation(Delightful.MODID, "block/salmonberry_sack_top")));
+            Util.rl(Delightful.MODID, "block/salmonberry_sack"),
+            Util.rl(Delightful.MODID, "block/salmonberry_sack_bottom"),
+            Util.rl(Delightful.MODID, "block/salmonberry_sack_top")));
         this.simpleBlock(DelightfulBlocks.ACORN_SACK.get(),
             models().cubeBottomTop("acorn_sack",
-                new ResourceLocation(Delightful.MODID, "block/acorn_sack"),
-                new ResourceLocation(Delightful.MODID, "block/acorn_sack_bottom"),
-                new ResourceLocation(Delightful.MODID, "block/acorn_sack_top")));
+                Util.rl(Delightful.MODID, "block/acorn_sack"),
+                Util.rl(Delightful.MODID, "block/acorn_sack_bottom"),
+                Util.rl(Delightful.MODID, "block/acorn_sack_top")));
         this.miniMelonBlock((SlicedMiniMelonBlock) DelightfulBlocks.SLICED_MINI_MELON.get());
         this.miniMelonBlock((SlicedMiniMelonBlock) DelightfulBlocks.SLICED_CANTALOUPE.get());
         this.melonBlock((SlicedMelonBlock) DelightfulBlocks.SLICED_MELON.get());
@@ -51,12 +51,12 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
     }
 
     public void wildCropBlock(Block block) {
-        this.simpleBlock(block, models().singleTexture(Util.name(block), new ResourceLocation(FarmersDelight.MODID, "bush_crop"), "crop", resourceBlock(Util.name(block))).renderType("cutout"));
+        this.simpleBlock(block, models().singleTexture(Util.name(block), Util.rl(FarmersDelight.MODID, "bush_crop"), "crop", resourceBlock(Util.name(block))).renderType("cutout"));
     }
 
     // Adapted from: https://github.com/vectorwing/FarmersDelight/blob/1.18.2/src/main/java/vectorwing/farmersdelight/data/BlockStates.java
     public ResourceLocation resourceBlock(String path) {
-        return new ResourceLocation(Delightful.MODID, "block/" + path);
+        return Util.rl(Delightful.MODID, "block/" + path);
     }
 
     // Adapted from: https://github.com/vectorwing/FarmersDelight/blob/1.18.2/src/main/java/vectorwing/farmersdelight/data/BlockStates.java

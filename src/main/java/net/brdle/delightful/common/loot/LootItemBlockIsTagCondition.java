@@ -3,7 +3,7 @@ package net.brdle.delightful.common.loot;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonSerializationContext;
-import net.minecraft.resources.ResourceLocation;
+import net.brdle.delightful.Util;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.util.GsonHelper;
@@ -56,7 +56,7 @@ public class LootItemBlockIsTagCondition implements LootItemCondition {
 		 * Deserialize a value by reading it from the JsonObject.
 		 */
 		public LootItemBlockIsTagCondition deserialize(@NotNull JsonObject object, @NotNull JsonDeserializationContext context) {
-			return new LootItemBlockIsTagCondition(BlockTags.create(new ResourceLocation(GsonHelper.getAsString(object, "tag"))));
+			return new LootItemBlockIsTagCondition(BlockTags.create(Util.rl(GsonHelper.getAsString(object, "tag"))));
 		}
 	}
 }

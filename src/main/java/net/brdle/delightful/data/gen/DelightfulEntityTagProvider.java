@@ -1,9 +1,9 @@
 package net.brdle.delightful.data.gen;
 
 import net.brdle.delightful.Delightful;
+import net.brdle.delightful.Util;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.EntityTypeTagsProvider;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
@@ -42,41 +42,41 @@ public class DelightfulEntityTagProvider extends EntityTypeTagsProvider {
 			.add(EntityType.SHEEP)
 			.add(EntityType.TROPICAL_FISH)
 			.add(EntityType.TURTLE)
-			.addOptional(mod("ecologics", "camel"))
-			.addOptional(mod("ecologics", "penguin"))
-			.addOptional(mod("ecologics", "squirrel"))
-			.addOptional(mod("goodall", "dumbo_octopus"))
-			.addOptional(mod("goodall", "manatee"))
-			.addOptional(mod("goodall", "red_deer"))
-			.addOptional(mod("goodall", "seal"))
-			.addOptional(mod("goodall", "white_tailed_deer"))
-			.addOptional(mod("neapolitan", "chimpanzee"))
-			.addOptional(mod("naturalist", "bear"))
-			.addOptional(mod("naturalist", "boar"))
-			.addOptional(mod("naturalist", "deer"))
-			.addOptional(mod("naturalist", "elephant"))
-			.addOptional(mod("naturalist", "giraffe"))
-			.addOptional(mod("naturalist", "hippo"))
-			.addOptional(mod("naturalist", "lion"))
-			.addOptional(mod("naturalist", "rhino"))
-			.addOptional(mod("naturalist", "zebra"))
-			.addOptional(mod("duckling", "duck"))
-			.addOptional(mod("duckling", "quackling"))
-			.addOptional(mod("buzzier_bees", "moobloom"))
-			.addOptional(mod("buzzier_bees", "grizzly_bear"))
-			.addOptional(mod("fishofthieves", "ancientscale"))
-			.addOptional(mod("fishofthieves", "battlegill"))
-			.addOptional(mod("fishofthieves", "devilfish"))
-			.addOptional(mod("fishofthieves", "islehopper"))
-			.addOptional(mod("fishofthieves", "plentifin"))
-			.addOptional(mod("fishofthieves", "pondie"))
-			.addOptional(mod("fishofthieves", "splashtail"))
-			.addOptional(mod("fishofthieves", "stormfish"))
-			.addOptional(mod("fishofthieves", "wildsplash"))
-			.addOptional(mod("fishofthieves", "wrecker"))
-			.addOptional(mod("ars_nouveau", "starbuncle"))
-			.addOptional(mod("aqcaracal", "caracal"));
-		this.tag(DelightfulEntityTags.DROPS_ACORN).addOptional(mod("ecologics", "squirrel"));
+			.addOptional(Util.rl("ecologics", "camel"))
+			.addOptional(Util.rl("ecologics", "penguin"))
+			.addOptional(Util.rl("ecologics", "squirrel"))
+			.addOptional(Util.rl("goodall", "dumbo_octopus"))
+			.addOptional(Util.rl("goodall", "manatee"))
+			.addOptional(Util.rl("goodall", "red_deer"))
+			.addOptional(Util.rl("goodall", "seal"))
+			.addOptional(Util.rl("goodall", "white_tailed_deer"))
+			.addOptional(Util.rl("neapolitan", "chimpanzee"))
+			.addOptional(Util.rl("naturalist", "bear"))
+			.addOptional(Util.rl("naturalist", "boar"))
+			.addOptional(Util.rl("naturalist", "deer"))
+			.addOptional(Util.rl("naturalist", "elephant"))
+			.addOptional(Util.rl("naturalist", "giraffe"))
+			.addOptional(Util.rl("naturalist", "hippo"))
+			.addOptional(Util.rl("naturalist", "lion"))
+			.addOptional(Util.rl("naturalist", "rhino"))
+			.addOptional(Util.rl("naturalist", "zebra"))
+			.addOptional(Util.rl("duckling", "duck"))
+			.addOptional(Util.rl("duckling", "quackling"))
+			.addOptional(Util.rl("buzzier_bees", "moobloom"))
+			.addOptional(Util.rl("buzzier_bees", "grizzly_bear"))
+			.addOptional(Util.rl("fishofthieves", "ancientscale"))
+			.addOptional(Util.rl("fishofthieves", "battlegill"))
+			.addOptional(Util.rl("fishofthieves", "devilfish"))
+			.addOptional(Util.rl("fishofthieves", "islehopper"))
+			.addOptional(Util.rl("fishofthieves", "plentifin"))
+			.addOptional(Util.rl("fishofthieves", "pondie"))
+			.addOptional(Util.rl("fishofthieves", "splashtail"))
+			.addOptional(Util.rl("fishofthieves", "stormfish"))
+			.addOptional(Util.rl("fishofthieves", "wildsplash"))
+			.addOptional(Util.rl("fishofthieves", "wrecker"))
+			.addOptional(Util.rl("ars_nouveau", "starbuncle"))
+			.addOptional(Util.rl("aqcaracal", "caracal"));
+		this.tag(DelightfulEntityTags.DROPS_ACORN).addOptional(Util.rl("ecologics", "squirrel"));
 		this.tag(DelightfulEntityTags.DROPS_RAW_GOAT).add(EntityType.GOAT);
 	}
 
@@ -86,9 +86,5 @@ public class DelightfulEntityTagProvider extends EntityTypeTagsProvider {
 	@Override
 	public String getName() {
 		return Delightful.MODID;
-	}
-
-	private ResourceLocation mod(String modid, String name) {
-		return new ResourceLocation(modid, name);
 	}
 }

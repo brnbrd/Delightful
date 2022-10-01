@@ -1,6 +1,6 @@
 package net.brdle.delightful.common.item;
 
-import net.minecraft.resources.ResourceLocation;
+import net.brdle.delightful.Util;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.Tiers;
@@ -38,9 +38,9 @@ public enum DelightfulTiers implements Tier {
     STEELEAF(3, 131, 8.0F, 3, 9, DelightfulItems.getIngot("steeleaf")),
     KNIGHTMETAL(3, 512, 8.0F, 3, 8, DelightfulItems.getIngot("knightmetal")),
     LIVING(2, 192, 6.0f, 2.0f, 18, () -> null),
-    DRACO_ARCANUS(4, 2661, 12.0F, 7.0F, 20, () -> Ingredient.of(ItemTags.create(new ResourceLocation("forbidden_arcanus", "dragon_scale")))),
+    DRACO_ARCANUS(4, 2661, 12.0F, 7.0F, 20, () -> Ingredient.of(ItemTags.create(Util.rl("forbidden_arcanus", "dragon_scale")))),
     DEORUM(3, 1861, 9.0F, 3.5F, 26, DelightfulItems.getIngot("deorum")),
-    REINFORCED_DEORUM(3, 2561, 9.0F, 3.5F, 26, () -> Ingredient.of(ItemTags.create(new ResourceLocation("forbidden_arcanus", "stellarite_piece")))),
+    REINFORCED_DEORUM(3, 2561, 9.0F, 3.5F, 26, () -> Ingredient.of(ItemTags.create(Util.rl("forbidden_arcanus", "stellarite_piece")))),
     MYTHRIL(Tiers.IRON.getLevel(), 800, 8.0F, 3.0F, 12, DelightfulItems.getIngot("mythril")),
     ADAMANTIUM(Tiers.IRON.getLevel(),1150, 14.0F, 3.0F, 3, DelightfulItems.getIngot("adamantium")),
     ONYX(Tiers.NETHERITE.getLevel(), 3280, 10.0F, 5.0F, 15, DelightfulItems.getIngot("onyx")),

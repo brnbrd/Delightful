@@ -1,11 +1,11 @@
 package net.brdle.delightful.common.item.knife.twilightforest;
 
+import net.brdle.delightful.Util;
 import net.brdle.delightful.common.item.DelightfulTiers;
 import net.brdle.delightful.common.item.knife.CompatKnifeItem;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -17,7 +17,7 @@ import java.util.function.Supplier;
 
 public class FieryKnifeItem extends CompatKnifeItem {
   public FieryKnifeItem(Properties properties) {
-    super("twilightforest", new ResourceLocation("forge", "ingots/fiery"), DelightfulTiers.FIERY, 0.5F, -2.0F, properties, Component.translatable("item.twilightforest.fiery_sword.tooltip").withStyle(ChatFormatting.GRAY));
+    super("twilightforest", Util.rl("forge", "ingots/fiery"), DelightfulTiers.FIERY, 0.5F, -2.0F, properties, Component.translatable("item.twilightforest.fiery_sword.tooltip").withStyle(ChatFormatting.GRAY));
   }
 
   @Override

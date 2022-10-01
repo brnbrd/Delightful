@@ -4,6 +4,7 @@ import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.registration.IRecipeRegistration;
+import net.brdle.delightful.Util;
 import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.item.knife.DelightfulKnifeItem;
 import net.minecraft.client.Minecraft;
@@ -20,7 +21,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @SuppressWarnings("unused")
 public class JEIPlugin implements IModPlugin
 {
-    private static final ResourceLocation ID = new ResourceLocation(FarmersDelight.MODID, "jei_plugin");
+    private static final ResourceLocation ID = Util.rl(FarmersDelight.MODID, "jei_plugin");
     private static final Minecraft MC = Minecraft.getInstance();
 
     @Override
