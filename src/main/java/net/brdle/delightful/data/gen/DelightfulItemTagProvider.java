@@ -51,6 +51,9 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.FRUITS_BLACKCURRANT).addOptional(Util.rl("rootsclassic", "blackcurrant"));
 		this.tag(DelightfulItemTags.FRUITS_REDCURRANT).addOptional(Util.rl("rootsclassic", "redcurrant"));
 		this.tag(DelightfulItemTags.FRUITS_WHITECURRANT).addOptional(Util.rl("rootsclassic", "whitecurrant"));
+		this.tag(DelightfulItemTags.FRUITS_BLUEBERRIES).addOptional(Util.rl("byg", "blueberries"));
+		this.tag(DelightfulItemTags.FRUITS_NIGHTSHADE_BERRIES).addOptional(Util.rl("byg", "nightshade_berries"));
+		this.tag(DelightfulItemTags.FRUITS_CRIMSON_BERRIES).addOptional(Util.rl("byg", "crimson_berries"));
 		this.tag(DelightfulItemTags.FRUITS_STRAWBERRIES)
 			.addOptional(Util.rl("neapolitan", "strawberries"))
 			.addOptional(Util.rl("neapolitan", "white_strawberries"));
@@ -62,14 +65,17 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_SWEET_BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_GLOW_BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_SALMONBERRIES)
-			.addTag(DelightfulItemTags.FRUITS_STRAWBERRIES)
 			.addTag(DelightfulItemTags.FRUITS_TORCHBERRIES)
 			.addTag(DelightfulItemTags.FRUITS_SOURCEBERRY)
 			.addTag(DelightfulItemTags.FRUITS_ELDERBERRY)
 			.addTag(DelightfulItemTags.FRUITS_BLACKCURRANT)
 			.addTag(DelightfulItemTags.FRUITS_REDCURRANT)
 			.addTag(DelightfulItemTags.FRUITS_WHITECURRANT)
-			.addTag(DelightfulItemTags.FRUITS_CHERRY);
+			.addTag(DelightfulItemTags.FRUITS_BLUEBERRIES)
+			.addTag(DelightfulItemTags.FRUITS_NIGHTSHADE_BERRIES)
+			.addTag(DelightfulItemTags.FRUITS_CRIMSON_BERRIES)
+			.addTag(DelightfulItemTags.FRUITS_CHERRY)
+			.addTag(DelightfulItemTags.FRUITS_STRAWBERRIES);
 		this.tag(ForgeTags.BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_BERRIES);
 		this.tag(DelightfulItemTags.FRUITS)
@@ -167,7 +173,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(ForgeTags.TOOLS_KNIVES)
 			.addTag(ModTags.KNIVES)
 			.addOptional(Util.rl("ae2", "certus_quartz_cutting_knife"))
-			.addOptional(Util.rl("ae2", "nether_quartz_cutting_knife"));
+			.addOptional(Util.rl("ae2", "nether_quartz_cutting_knife"))
+			.addOptional(Util.rl("occultism", "bbutcher_knife"));
 		var build = this.tag(ModTags.KNIVES);
 		DelightfulItems.ITEMS.getEntries().stream()
 			.map(RegistryObject::get)
