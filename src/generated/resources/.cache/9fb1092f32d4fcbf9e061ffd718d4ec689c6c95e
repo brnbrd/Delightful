@@ -1,4 +1,4 @@
-// 1.19	2022-09-29T11:37:09.3804961	Recipes
+// 1.19	2022-10-01T20:41:58.4067573	Recipes
 2008bf684d83272701a8032bfb2deb03b22b94b7 data/delightful/advancements/recipes/blasting/green_tea_leaf.json
 60ffe246fc7cd82d396e8dc65184da554be1a88a data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 2cf937c163d47a583b4eb63671b5c4e3055179cc data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
@@ -67,7 +67,7 @@ df8c8caddfd92d5e8e026b97ac7a50ea10f22909 data/delightful/advancements/recipes/kn
 5cec103bfa8066b4417485e6f1f2e112968f990f data/delightful/advancements/recipes/knives/netherite_opal_knife_smithing.json
 67c46033850140f057eb3d6096700e35d1ac6494 data/delightful/advancements/recipes/knives/nickel_knife.json
 0f6a51a99f10446776df457b3b083910707a6260 data/delightful/advancements/recipes/knives/obsidian_infused_enderite_knife_smithing.json
-9c41c0a283635a8949de81d7a103259da90d0de5 data/delightful/advancements/recipes/knives/onyx_knife.json
+ffd2fd04490f1f78e2a49f5fb5b73b9ed792d55f data/delightful/advancements/recipes/knives/onyx_knife.json
 3df629361884e70c35be8e92d16dcee32f021765 data/delightful/advancements/recipes/knives/osmium_knife.json
 78c557c3862e851e31775f45ddd2457f57315f41 data/delightful/advancements/recipes/knives/refined_glowstone_knife.json
 b352b7abb74e0ac8a16742208ccb90158ea77bed data/delightful/advancements/recipes/knives/refined_obsidian_knife.json
@@ -164,7 +164,7 @@ a12a59f3b0ad1571e82d984dadd63fae2be6d6a4 data/delightful/recipes/knives/lead_kni
 d65a94b4eec9dbf9aa8263a1295b35367c0545be data/delightful/recipes/knives/netherite_opal_knife_smithing.json
 1f8bf2a7319ecfe0634eead2c71e75fd8d6b42d6 data/delightful/recipes/knives/nickel_knife.json
 3eb11596984ea4140f4dd6ac76472c187f9cd988 data/delightful/recipes/knives/obsidian_infused_enderite_knife_smithing.json
-f742fbaf61b9d30dfc2e3b9a971b93d238e0d02e data/delightful/recipes/knives/onyx_knife.json
+0b97c9802264077ae34e191b8d5d658a79f77380 data/delightful/recipes/knives/onyx_knife.json
 5690d515c6e41f15fba3429aa1aa52360ce26c3a data/delightful/recipes/knives/osmium_knife.json
 16f731faa376033674847bd3ddf91dbf8b8d1f2f data/delightful/recipes/knives/refined_glowstone_knife.json
 1ddebd152073900fd409059f23483e6307282cbe data/delightful/recipes/knives/refined_obsidian_knife.json
