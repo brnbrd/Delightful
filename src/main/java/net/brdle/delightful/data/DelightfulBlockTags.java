@@ -8,6 +8,7 @@ import net.minecraft.world.level.block.Block;
 
 public class DelightfulBlockTags {
 
+	public static final TagKey<Block> DROPS_STRAW = bind(Delightful.MODID, "drops_straw");
 	public static final TagKey<Block> DROPS_ACORN = bind(Delightful.MODID, "drops_acorn");
 	public static final TagKey<Block> DROPS_GREEN_TEA_LEAF = bind(Delightful.MODID, "drops_green_tea_leaf");
 	public static final TagKey<Block> CANTALOUPE_SPAWNS = bind(Delightful.MODID, "cantaloupe_spawns");

@@ -13,6 +13,18 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "allthemodium_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:allthemodium_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "amethyst_knife": {
       "conditions": {
         "items": [
@@ -385,6 +397,18 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "pendorite_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:pendorite_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "refined_glowstone_knife": {
       "conditions": {
         "items": [
@@ -537,6 +561,7 @@
       "onyx_knife",
       "thyrium_knife",
       "sinisite_knife",
+      "allthemodium_knife",
       "enderite_knife",
       "deorum_knife",
       "reinforced_deorum_knife",
@@ -552,7 +577,8 @@
       "ironwood_knife",
       "knightmetal_knife",
       "steeleaf_knife",
-      "living_knife"
+      "living_knife",
+      "pendorite_knife"
     ]
   ]
 }

@@ -5,6 +5,7 @@ import net.brdle.delightful.Util;
 import net.brdle.delightful.common.block.DelightfulBlocks;
 import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.item.knife.DelightfulKnifeItem;
+import net.brdle.delightful.compat.BYGCompat;
 import net.brdle.delightful.data.DelightfulBlockTags;
 import net.brdle.delightful.data.DelightfulItemTags;
 import net.minecraft.data.DataGenerator;
@@ -100,6 +101,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptionalTag(Util.rl("forge", "fruits/mandarin"))
 			.addOptionalTag(Util.rl("forge", "fruits/orange"))
 			.addOptionalTag(Util.rl("forge", "fruits/redlove"));
+		this.tag(DelightfulItemTags.FRUITS_GREEN_APPLE)
+			.addOptional(Util.rl(BYGCompat.modid, "green_apple"));
 		this.tag(DelightfulItemTags.NUTS_WALNUT).addOptional(Util.rl("ecologics", "walnut"));
 		this.tag(DelightfulItemTags.NUTS_PEANUT).addOptional(Util.rl("sprout", "peanut"));
 		this.tag(DelightfulItemTags.NUTS_ACORN).add(DelightfulItems.ACORN.get());
@@ -189,6 +192,9 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.DRACO_ARCANUS_STAFF).addOptional(Util.rl("forbidden_arcanus", "draco_arcanus_staff"));
 		this.tag(DelightfulItemTags.DRAGON_SCALE).addOptional(Util.rl("forbidden_arcanus", "dragon_scale"));
 		this.tag(DelightfulItemTags.INGOTS_DEORUM).addOptional(Util.rl("forbidden_arcanus", "deorum_ingot"));
+
+		// Byg
+		this.tag(DelightfulItemTags.INGOTS_PENDORITE).addOptional(Util.rl(BYGCompat.modid, "pendorite_ingot"));
 	}
 
 	/**

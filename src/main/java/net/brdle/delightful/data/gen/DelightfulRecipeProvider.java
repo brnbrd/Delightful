@@ -13,6 +13,7 @@ import net.brdle.delightful.common.item.knife.TaggedKnifeItem;
 import net.brdle.delightful.common.item.knife.twilightforest.IronwoodKnifeItem;
 import net.brdle.delightful.common.item.knife.twilightforest.SteeleafKnifeItem;
 import net.brdle.delightful.compat.ArsNouveauCompat;
+import net.brdle.delightful.compat.BYGCompat;
 import net.brdle.delightful.data.DelightfulItemTags;
 import net.brdle.rottenleather.common.RottenLeatherItems;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
@@ -36,6 +37,7 @@ import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
+import potionstudios.byg.common.item.BYGItems;
 import vectorwing.farmersdelight.FarmersDelight;
 import vectorwing.farmersdelight.common.registry.ModItems;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
@@ -242,6 +244,24 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .unlockedBy("has_ice", has(Items.ICE)),
             "food/salmonberry_ice_cream_no_neapolitan", finished, enabled("salmonberry_ice_cream"),
             tagEmpty(DelightfulItemTags.ICE_CUBES));
+        wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.MATCHA_ICE_CREAM.get(), 1)
+                .requires(Items.BOWL)
+                .requires(DelightfulItems.MATCHA.get())
+                .requires(ForgeTags.MILK)
+                .requires(DelightfulItemTags.ICE_CUBES)
+                .requires(DelightfulItemTags.SUGAR)
+                .unlockedBy("has_ice_cubes", has(DelightfulItemTags.ICE_CUBES)),
+            "food/matcha_ice_cream", finished, enabled("matcha_ice_cream"),
+            not(tagEmpty(DelightfulItemTags.ICE_CUBES)));
+        wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.SALMONBERRY_ICE_CREAM.get(), 1)
+                .requires(Items.BOWL)
+                .requires(DelightfulItems.MATCHA.get())
+                .requires(ForgeTags.MILK)
+                .requires(Items.ICE)
+                .requires(DelightfulItemTags.SUGAR)
+                .unlockedBy("has_ice", has(Items.ICE)),
+            "food/matcha_ice_cream_no_neapolitan", finished, enabled("matcha_ice_cream"),
+            tagEmpty(DelightfulItemTags.ICE_CUBES));
         wrap(ShapedRecipeBuilder.shaped(DelightfulItems.SALMONBERRY_PIE.get(), 1)
             .pattern("###")
             .pattern("aaa")
@@ -287,6 +307,90 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .requires(DelightfulItems.PUMPKIN_PIE_SLICE.get(), 4)
                 .unlockedBy("has_pumpkin_pie_slice", has(DelightfulItems.PUMPKIN_PIE_SLICE.get())),
             "food/pumpkin_pie_from_slices", finished, enabled("pumpkin_pie_overhaul"));
+        wrap(ShapedRecipeBuilder.shaped(BYGItems.BLUEBERRY_PIE.get(), 1)
+                .pattern("###")
+                .pattern("aaa")
+                .pattern("xOe")
+                .define('#', Items.WHEAT)
+                .define('a', DelightfulItemTags.FRUITS_BLUEBERRIES)
+                .define('x', DelightfulItemTags.SUGAR)
+                .define('e', ForgeTags.EGGS)
+                .define('O', ModItems.PIE_CRUST.get())
+                .unlockedBy("has_pie_crust", has(ModItems.PIE_CRUST.get())),
+            "food/blueberry_pie", finished, enabled(BYGCompat.blueberry_pie_slice), itemExists(BYGCompat.modid, BYGCompat.blueberry_pie));
+        wrap(ShapelessRecipeBuilder.shapeless(BYGItems.BLUEBERRY_PIE.get(), 1)
+                .requires(DelightfulItemTags.FRUITS_BLUEBERRIES)
+                .requires(DelightfulItemTags.SUGAR)
+                .requires(ForgeTags.EGGS)
+                .unlockedBy("has_pie_crust", has(ModItems.PIE_CRUST.get())),
+            BYGCompat.modid, "blueberry_pie", finished, not(enabled(BYGCompat.blueberry_pie_slice)), itemExists(BYGCompat.modid, BYGCompat.blueberry_pie));
+        wrap(ShapelessRecipeBuilder.shapeless(BYGItems.BLUEBERRY_PIE.get(), 1)
+                .requires(DelightfulItems.BLUEBERRY_PIE_SLICE.get(), 4)
+                .unlockedBy("has_blueberry_pie_slice", has(DelightfulItems.BLUEBERRY_PIE_SLICE.get())),
+            "food/blueberry_pie_from_slices", finished, enabled(BYGCompat.blueberry_pie_slice), itemExists(BYGCompat.modid, BYGCompat.blueberry_pie));
+        wrap(ShapedRecipeBuilder.shaped(BYGItems.CRIMSON_BERRY_PIE.get(), 1)
+                .pattern("###")
+                .pattern("aaa")
+                .pattern("xOe")
+                .define('#', Items.WHEAT)
+                .define('a', DelightfulItemTags.FRUITS_CRIMSON_BERRIES)
+                .define('x', DelightfulItemTags.SUGAR)
+                .define('e', ForgeTags.EGGS)
+                .define('O', ModItems.PIE_CRUST.get())
+                .unlockedBy("has_pie_crust", has(ModItems.PIE_CRUST.get())),
+            "food/crimson_berry_pie", finished, enabled(BYGCompat.crimson_berry_pie_slice), itemExists(BYGCompat.modid, BYGCompat.crimson_berry_pie));
+        wrap(ShapelessRecipeBuilder.shapeless(BYGItems.CRIMSON_BERRY_PIE.get(), 1)
+                .requires(DelightfulItemTags.FRUITS_CRIMSON_BERRIES)
+                .requires(DelightfulItemTags.SUGAR)
+                .requires(ForgeTags.EGGS)
+                .unlockedBy("has_pie_crust", has(ModItems.PIE_CRUST.get())),
+            BYGCompat.modid, "crimson_berry_pie", finished, not(enabled(BYGCompat.crimson_berry_pie_slice)), itemExists(BYGCompat.modid, BYGCompat.crimson_berry_pie));
+        wrap(ShapelessRecipeBuilder.shapeless(BYGItems.CRIMSON_BERRY_PIE.get(), 1)
+                .requires(DelightfulItems.CRIMSON_BERRY_PIE_SLICE.get(), 4)
+                .unlockedBy("has_crimson_berry_pie_slice", has(DelightfulItems.CRIMSON_BERRY_PIE_SLICE.get())),
+            "food/crimson_berry_pie_from_slices", finished, enabled(BYGCompat.crimson_berry_pie_slice), itemExists(BYGCompat.modid, BYGCompat.crimson_berry_pie));
+        wrap(ShapedRecipeBuilder.shaped(BYGItems.NIGHTSHADE_BERRY_PIE.get(), 1)
+                .pattern("###")
+                .pattern("aaa")
+                .pattern("xOe")
+                .define('#', Items.WHEAT)
+                .define('a', DelightfulItemTags.FRUITS_NIGHTSHADE_BERRIES)
+                .define('x', DelightfulItemTags.SUGAR)
+                .define('e', ForgeTags.EGGS)
+                .define('O', ModItems.PIE_CRUST.get())
+                .unlockedBy("has_pie_crust", has(ModItems.PIE_CRUST.get())),
+            "food/nightshade_berry_pie", finished, enabled(BYGCompat.nightshade_berry_pie_slice), itemExists(BYGCompat.modid, BYGCompat.nightshade_berry_pie));
+        wrap(ShapelessRecipeBuilder.shapeless(BYGItems.NIGHTSHADE_BERRY_PIE.get(), 1)
+                .requires(DelightfulItemTags.FRUITS_NIGHTSHADE_BERRIES)
+                .requires(DelightfulItemTags.SUGAR)
+                .requires(ForgeTags.EGGS)
+                .unlockedBy("has_pie_crust", has(ModItems.PIE_CRUST.get())),
+            BYGCompat.modid, "nightshade_berry_pie", finished, not(enabled(BYGCompat.nightshade_berry_pie_slice)), itemExists(BYGCompat.modid, BYGCompat.nightshade_berry_pie));
+        wrap(ShapelessRecipeBuilder.shapeless(BYGItems.NIGHTSHADE_BERRY_PIE.get(), 1)
+                .requires(DelightfulItems.NIGHTSHADE_BERRY_PIE_SLICE.get(), 4)
+                .unlockedBy("has_nightshade_berry_pie_slice", has(DelightfulItems.NIGHTSHADE_BERRY_PIE_SLICE.get())),
+            "food/nightshade_berry_pie_from_slices", finished, enabled(BYGCompat.nightshade_berry_pie_slice), itemExists(BYGCompat.modid, BYGCompat.nightshade_berry_pie));
+        wrap(ShapedRecipeBuilder.shaped(BYGItems.GREEN_APPLE_PIE.get(), 1)
+                .pattern("###")
+                .pattern("aaa")
+                .pattern("xOe")
+                .define('#', Items.WHEAT)
+                .define('a', DelightfulItemTags.FRUITS_GREEN_APPLE)
+                .define('x', DelightfulItemTags.SUGAR)
+                .define('e', ForgeTags.EGGS)
+                .define('O', ModItems.PIE_CRUST.get())
+                .unlockedBy("has_pie_crust", has(ModItems.PIE_CRUST.get())),
+            "food/green_apple_pie", finished, enabled(BYGCompat.green_apple_pie_slice), itemExists(BYGCompat.modid, BYGCompat.green_apple_pie));
+        wrap(ShapelessRecipeBuilder.shapeless(BYGItems.GREEN_APPLE_PIE.get(), 1)
+                .requires(DelightfulItemTags.FRUITS_GREEN_APPLE)
+                .requires(DelightfulItemTags.SUGAR)
+                .requires(ForgeTags.EGGS)
+                .unlockedBy("has_pie_crust", has(ModItems.PIE_CRUST.get())),
+            BYGCompat.modid, "green_apple_pie", finished, not(enabled(BYGCompat.green_apple_pie_slice)), itemExists(BYGCompat.modid, BYGCompat.green_apple_pie));
+        wrap(ShapelessRecipeBuilder.shapeless(BYGItems.GREEN_APPLE_PIE.get(), 1)
+                .requires(DelightfulItems.GREEN_APPLE_PIE_SLICE.get(), 4)
+                .unlockedBy("has_green_apple_pie_slice", has(DelightfulItems.GREEN_APPLE_PIE_SLICE.get())),
+            "food/green_apple_pie_from_slices", finished, enabled(BYGCompat.green_apple_pie_slice), itemExists(BYGCompat.modid, BYGCompat.green_apple_pie));
         wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.SALMONBERRIES.get(), 9)
           .requires(DelightfulItems.SALMONBERRY_SACK.get())
           .unlockedBy("has_salmonberry_sack", has(DelightfulItems.SALMONBERRY_SACK.get())),
@@ -496,7 +600,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .build(f))
             .build(finished, Delightful.MODID, "cutting/cooked_venison");
         ConditionalRecipe.builder()
-            .addCondition(enabled("salmonberry_pie"))
+            .addCondition(and(enabled("salmonberry_pie"), enabled("salmonberry_pie_slice")))
             .addRecipe(f ->
                 CuttingBoardRecipeBuilder.cuttingRecipe(
                         Ingredient.of(DelightfulItems.SALMONBERRY_PIE.get()),
@@ -505,7 +609,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                     .build(f))
             .build(finished, Delightful.MODID, "cutting/salmonberry_pie");
         ConditionalRecipe.builder()
-            .addCondition(enabled("source_berry_pie_slice"))
+            .addCondition(and(enabled(ArsNouveauCompat.slice), itemExists(ArsNouveauCompat.modid, ArsNouveauCompat.pie)))
             .addRecipe(f ->
                 CuttingBoardRecipeBuilder.cuttingRecipe(
                         Ingredient.of(ItemsRegistry.SOURCE_BERRY_PIE.get()),
@@ -514,7 +618,43 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                     .build(f))
             .build(finished, Delightful.MODID, "cutting/source_berry_pie");
         ConditionalRecipe.builder()
-            .addCondition(enabled("pumpkin_pie_overhaul"))
+            .addCondition(and(enabled(BYGCompat.blueberry_pie_slice), itemExists(BYGCompat.modid, BYGCompat.blueberry_pie)))
+            .addRecipe(f ->
+                CuttingBoardRecipeBuilder.cuttingRecipe(
+                        Ingredient.of(BYGItems.BLUEBERRY_PIE.get()),
+                        Ingredient.of(ForgeTags.TOOLS_KNIVES),
+                        DelightfulItems.BLUEBERRY_PIE_SLICE.get(), 4)
+                    .build(f))
+            .build(finished, Delightful.MODID, "cutting/blueberry_pie");
+        ConditionalRecipe.builder()
+            .addCondition(and(enabled(BYGCompat.green_apple_pie_slice), itemExists(BYGCompat.modid, BYGCompat.green_apple_pie)))
+            .addRecipe(f ->
+                CuttingBoardRecipeBuilder.cuttingRecipe(
+                        Ingredient.of(BYGItems.GREEN_APPLE_PIE.get()),
+                        Ingredient.of(ForgeTags.TOOLS_KNIVES),
+                        DelightfulItems.GREEN_APPLE_PIE_SLICE.get(), 4)
+                    .build(f))
+            .build(finished, Delightful.MODID, "cutting/green_apple_pie");
+        ConditionalRecipe.builder()
+            .addCondition(and(enabled(BYGCompat.nightshade_berry_pie_slice), itemExists(BYGCompat.modid, BYGCompat.nightshade_berry_pie)))
+            .addRecipe(f ->
+                CuttingBoardRecipeBuilder.cuttingRecipe(
+                        Ingredient.of(BYGItems.NIGHTSHADE_BERRY_PIE.get()),
+                        Ingredient.of(ForgeTags.TOOLS_KNIVES),
+                        DelightfulItems.NIGHTSHADE_BERRY_PIE_SLICE.get(), 4)
+                    .build(f))
+            .build(finished, Delightful.MODID, "cutting/nightshade_berry_pie");
+        ConditionalRecipe.builder()
+            .addCondition(and(enabled(BYGCompat.crimson_berry_pie_slice), itemExists(BYGCompat.modid, BYGCompat.crimson_berry_pie)))
+            .addRecipe(f ->
+                CuttingBoardRecipeBuilder.cuttingRecipe(
+                        Ingredient.of(BYGItems.CRIMSON_BERRY_PIE.get()),
+                        Ingredient.of(ForgeTags.TOOLS_KNIVES),
+                        DelightfulItems.CRIMSON_BERRY_PIE_SLICE.get(), 4)
+                    .build(f))
+            .build(finished, Delightful.MODID, "cutting/crimson_berry_pie");
+        ConditionalRecipe.builder()
+            .addCondition(and(enabled("pumpkin_pie_overhaul"), enabled("pumpkin_pie_slice")))
             .addRecipe(f ->
                 CuttingBoardRecipeBuilder.cuttingRecipe(
                         Ingredient.of(Items.PUMPKIN_PIE),
@@ -574,6 +714,16 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             .save(f))
           .generateAdvancement()
           .build(finished, FarmersDelight.MODID, "chocolate_pie");
+        ShapelessRecipeBuilder.shapeless(ModItems.FRUIT_SALAD.get(), 1)
+            .requires(Items.APPLE)
+            .requires(Items.MELON_SLICE)
+            .requires(ModItems.PUMPKIN_SLICE.get())
+            .requires(DelightfulItemTags.FRUITS)
+            .requires(ForgeTags.BERRIES)
+            .requires(ForgeTags.BERRIES)
+            .requires(Items.BOWL)
+            .unlockedBy("has_fruits", InventoryChangeTrigger.TriggerInstance.hasItems(Items.MELON_SLICE, Items.SWEET_BERRIES, Items.APPLE, ModItems.PUMPKIN_SLICE.get()))
+            .save(finished, Util.rl(FarmersDelight.MODID, "fruit_salad"));
         }
 
     private InventoryChangeTrigger.TriggerInstance has(ItemLike... items) {
@@ -581,7 +731,11 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
     }
 
     private void wrap(RecipeBuilder builder, String name, Consumer<FinishedRecipe> consumer, ICondition... conds) {
-        ResourceLocation loc = Util.rl(Delightful.MODID, name);
+        wrap(builder, Delightful.MODID, name, consumer, conds);
+    }
+
+    private void wrap(RecipeBuilder builder, String modid, String name, Consumer<FinishedRecipe> consumer, ICondition... conds) {
+        ResourceLocation loc = Util.rl(modid, name);
         ConditionalRecipe.Builder cond;
         if (conds.length > 1) {
             cond = ConditionalRecipe.builder().addCondition(and(conds));

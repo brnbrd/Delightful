@@ -1,0 +1,50 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "crimson_berry_pie_slice"
+            },
+            {
+              "type": "forge:item_exists",
+              "item": "byg:crimson_berry_pie"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "#": {
+            "item": "minecraft:wheat"
+          },
+          "O": {
+            "item": "farmersdelight:pie_crust"
+          },
+          "a": {
+            "tag": "forge:fruits/crimson_berries"
+          },
+          "e": {
+            "tag": "forge:eggs"
+          },
+          "x": {
+            "tag": "forge:sugar"
+          }
+        },
+        "pattern": [
+          "###",
+          "aaa",
+          "xOe"
+        ],
+        "result": {
+          "item": "byg:crimson_berry_pie"
+        }
+      }
+    }
+  ]
+}

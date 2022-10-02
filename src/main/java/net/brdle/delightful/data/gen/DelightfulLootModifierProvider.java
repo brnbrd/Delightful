@@ -13,6 +13,7 @@ import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.predicates.*;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.GlobalLootModifierProvider;
+import vectorwing.farmersdelight.common.registry.ModItems;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
 
 public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
@@ -55,13 +56,13 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 		add("animal_fat", new AddItemLootModifier(
 			new LootItemCondition[]{
 				LootItemEnabledCondition.enabled("animal_fat"),
-				LootItemRandomChanceWithLootingCondition.randomChanceAndLootingBoost(0.3F, 2.0F).build(),
+				LootItemRandomChanceWithLootingCondition.randomChanceAndLootingBoost(0.6F, 2.0F).build(),
 				LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.KILLER_PLAYER,
 					EntityPredicate.Builder.entity().equipment(
 					EntityEquipmentPredicate.Builder.equipment().mainhand(ItemPredicate.Builder.item().of(ForgeTags.TOOLS_KNIVES).build()).build()).build()).build(),
 				LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS, EntityPredicate.Builder.entity().of(DelightfulEntityTags.FATTY_ANIMALS)).build()
 			},
-			DelightfulItems.ANIMAL_FAT.get(), 2, 3, true
+			DelightfulItems.ANIMAL_FAT.get(), 1, 3, true
 		));
 		add("raw_goat", new AddItemLootModifier(
 			new LootItemCondition[]{
@@ -70,6 +71,14 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 				LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS, EntityPredicate.Builder.entity().of(DelightfulEntityTags.DROPS_RAW_GOAT)).build()
 			},
 			DelightfulItems.RAW_GOAT.get(), 1, 2, true
+		));
+		add("straw_from_compat", new AddItemLootModifier(
+			new LootItemCondition[]{
+				LootItemRandomChanceCondition.randomChance(0.2F).build(),
+				MatchTool.toolMatches(ItemPredicate.Builder.item().of(ForgeTags.TOOLS_KNIVES)).build(),
+				LootItemBlockIsTagCondition.isTag(DelightfulBlockTags.DROPS_STRAW)
+			},
+		ModItems.STRAW.get(), 1, 1, true
 		));
 	}
 }

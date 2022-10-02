@@ -6,7 +6,7 @@
       "item": "animal_fat"
     },
     {
-      "chance": 0.3,
+      "chance": 0.6,
       "condition": "minecraft:random_chance_with_looting",
       "looting_multiplier": 2.0
     },
@@ -31,6 +31,6 @@
   ],
   "item": "delightful:animal_fat",
   "maxAmount": 3,
-  "minAmount": 2,
+  "minAmount": 1,
   "unique": true
 }

@@ -1,7 +1,9 @@
 package net.brdle.delightful.data.gen;
 
 import net.brdle.delightful.Delightful;
+import net.brdle.delightful.Util;
 import net.brdle.delightful.common.block.DelightfulBlocks;
+import net.brdle.delightful.compat.BYGCompat;
 import net.brdle.delightful.data.DelightfulBlockTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
@@ -19,6 +21,10 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 
 	@Override
 	protected void addTags() {
+		this.tag(DelightfulBlockTags.DROPS_STRAW)
+			.addOptional(Util.rl(BYGCompat.modid, "prairie_grass"))
+			.addOptional(Util.rl(BYGCompat.modid, "tall_prairie_grass"))
+			.addOptional(Util.rl(BYGCompat.modid, "beach_grass"));
 		this.tag(DelightfulBlockTags.DROPS_ACORN)
 			.add(Blocks.OAK_LEAVES)
 			.add(Blocks.DARK_OAK_LEAVES);

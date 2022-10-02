@@ -21,7 +21,6 @@
   "item.delightful.green_tea_leaf": "Green Tea Leaf",
   "item.delightful.salmonberries": "Salmonberries",
   "item.delightful.salmonberry_pips": "Salmonberry Pips",
-  "item.delightful.salmonberry_ice_cream": "Salmonberry Ice Cream",
   "item.delightful.salmonberry_pie_slice": "Slice of Salmonberry Pie",
   "item.delightful.pumpkin_pie_slice": "Slice of Pumpkin Pie",
   "item.delightful.source_berry_pie_slice": "Slice of Source Berry Pie",
@@ -31,6 +30,8 @@
   "item.delightful.crimson_berry_pie_slice": "Slice of Crimson Berry Pie",
   "item.delightful.cantaloupe_slice": "Cantaloupe Slice",
   "item.delightful.matcha": "Matcha",
+  "item.delightful.matcha_ice_cream": "Matcha Ice Cream",
+  "item.delightful.salmonberry_ice_cream": "Salmonberry Ice Cream",
   "item.delightful.acorn": "Acorn",
   "item.delightful.animal_fat": "Animal Fat",
   "item.delightful.animal_oil_bottle": "Animal Oil Bottle",
@@ -79,6 +80,8 @@
   "item.delightful.mythril_knife": "Mythril Knife",
   "item.delightful.sinisite_knife": "Sinisite Knife",
   "item.delightful.thyrium_knife": "Thyrium Knife",
+  "item.delightful.allthemodium_knife": "Allthemodium Knife",
+  "item.delightful.pendorite_knife": "Pendorite Knife",
   "block.delightful.mini_melon": "Mini Melon",
   "block.delightful.sliced_mini_melon": "Sliced Mini Melon",
   "block.delightful.cantaloupe": "Cantaloupe",
@@ -110,5 +113,7 @@
   "delightful.acorn.desc": "Drops from Oak Leaves or perhaps a Squirrel (from another mod).",
   "delightful.salmonberries.desc": "Drops from bushes of Wild Salmonberries. Can also be grown by planting Salmonberry Pips.",
   "delightful.animal_oil_bottle.desc": "Can be used (Sneak Right Clicked) on any smelting block (Furnace, Blast Furnace...) to provide two items of burn time.",
-  "delightful.mini_melon.desc": "Found in biomes of the Plains type. Can grow into a big Melon."
+  "delightful.mini_melon.desc": "Found in Plains-like biomes. Can grow into a big Melon or be sliced with a Knife (Right Click).",
+  "delightful.cantaloupe.desc": "Found in Beach-like biomes.",
+  "delightful.sliceable.desc": "Can be sliced with a Knife (Right Click)."
 }

@@ -5,6 +5,7 @@ import net.brdle.delightful.Util;
 import net.brdle.delightful.common.block.DelightfulBlocks;
 import net.brdle.delightful.common.item.food.*;
 import net.brdle.delightful.common.item.knife.*;
+import net.brdle.delightful.common.item.knife.allthemodium.AllthemodiumKnifeItem;
 import net.brdle.delightful.common.item.knife.forbidden_arcanus.DracoArcanusKnifeItem;
 import net.brdle.delightful.common.item.knife.rootsclassic.LivingKnifeItem;
 import net.brdle.delightful.common.item.knife.twilightforest.FieryKnifeItem;
@@ -26,8 +27,10 @@ import net.minecraftforge.fml.ModList;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import potionstudios.byg.BYG;
 import vectorwing.farmersdelight.FarmersDelight;
 import vectorwing.farmersdelight.common.item.ConsumableItem;
+import vectorwing.farmersdelight.common.registry.ModEffects;
 import vectorwing.farmersdelight.common.registry.ModItems;
 import java.util.Locale;
 import java.util.function.Supplier;
@@ -44,7 +47,6 @@ public class DelightfulItems {
     public static final RegistryObject<Item> SALMONBERRIES = registerFood("salmonberries",
         FoodValues.SALMONBERRIES);
     public static final RegistryObject<Item> SALMONBERRY_PIPS = registerItem("salmonberry_pips", () -> new ItemNameBlockItem(DelightfulBlocks.SALMONBERRY_BUSH.get(), (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
-    public static final RegistryObject<Item> SALMONBERRY_ICE_CREAM = registerItem("salmonberry_ice_cream", () -> new BowlFoodItem((new Item.Properties()).food(FoodValues.SALMONBERRY_ICE_CREAM).craftRemainder(Items.BOWL).stacksTo(1).tab(FarmersDelight.CREATIVE_TAB)));
     public static final RegistryObject<Item> SALMONBERRY_PIE = registerItem("salmonberry_pie", () -> new BlockItem(DelightfulBlocks.SALMONBERRY_PIE.get(), (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
     public static final RegistryObject<Item> SALMONBERRY_PIE_SLICE = registerFood("salmonberry_pie_slice",
         vectorwing.farmersdelight.common.FoodValues.PIE_SLICE);
@@ -53,16 +55,18 @@ public class DelightfulItems {
     public static final RegistryObject<Item> SOURCE_BERRY_PIE_SLICE = registerCompatFood(ArsNouveauCompat.slice, ArsNouveauCompat.modid,
         ArsNouveauCompat.getPieSlice().get());
     public static final RegistryObject<Item> BLUEBERRY_PIE_SLICE = registerCompatFood(BYGCompat.blueberry_pie_slice, BYGCompat.modid,
-        vectorwing.farmersdelight.common.FoodValues.PIE_SLICE);
+        BYGCompat.BLUEBERRY_PIE_SLICE.get());
     public static final RegistryObject<Item> GREEN_APPLE_PIE_SLICE = registerCompatFood(BYGCompat.green_apple_pie_slice, BYGCompat.modid,
-        vectorwing.farmersdelight.common.FoodValues.PIE_SLICE);
+        BYGCompat.GREEN_APPLE_PIE_SLICE.get());
     public static final RegistryObject<Item> NIGHTSHADE_BERRY_PIE_SLICE = registerCompatFood(BYGCompat.nightshade_berry_pie_slice, BYGCompat.modid,
-        vectorwing.farmersdelight.common.FoodValues.PIE_SLICE);
+        BYGCompat.NIGHTSHADE_BERRY_PIE_SLICE.get());
     public static final RegistryObject<Item> CRIMSON_BERRY_PIE_SLICE = registerCompatFood(BYGCompat.crimson_berry_pie_slice, BYGCompat.modid,
-        vectorwing.farmersdelight.common.FoodValues.PIE_SLICE);
+        BYGCompat.CRIMSON_BERRY_PIE_SLICE.get());
     public static final RegistryObject<Item> GREEN_TEA_LEAF = registerFood("green_tea_leaf",
         FoodValues.GREEN_TEA_LEAF);
     public static final RegistryObject<Item> MATCHA = registerItem("matcha", () -> new DescriptItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB), Component.translatable("delightful.matcha.desc").withStyle(ChatFormatting.GRAY)));
+    public static final RegistryObject<Item> MATCHA_ICE_CREAM = registerItem("matcha_ice_cream", () -> new BowlFoodItem((new Item.Properties()).food(FoodValues.SALMONBERRY_ICE_CREAM).craftRemainder(Items.BOWL).stacksTo(1).tab(FarmersDelight.CREATIVE_TAB)));
+    public static final RegistryObject<Item> SALMONBERRY_ICE_CREAM = registerItem("salmonberry_ice_cream", () -> new BowlFoodItem((new Item.Properties()).food(FoodValues.SALMONBERRY_ICE_CREAM).craftRemainder(Items.BOWL).stacksTo(1).tab(FarmersDelight.CREATIVE_TAB)));
     public static final RegistryObject<Item> CHOPPED_CLOVER = registerFood("chopped_clover", FoodValues.CHOPPED_CLOVER);
     public static final RegistryObject<Item> CACTUS_FLESH = registerFood("cactus_flesh", FoodValues.CACTUS_FLESH);
     public static final RegistryObject<Item> CACTUS_STEAK = registerFood("cactus_steak", FoodValues.CACTUS_STEAK);
@@ -79,9 +83,9 @@ public class DelightfulItems {
     public static final RegistryObject<Item> ENDER_NECTAR = registerItem("ender_nectar",
       () -> new EnderNectarItem((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16).tab(FarmersDelight.CREATIVE_TAB)));
     public static final RegistryObject<Item> MATCHA_LATTE = registerItem("matcha_latte",
-      () -> new CaffeinatedItem((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16).tab(FarmersDelight.CREATIVE_TAB), () -> MobEffects.SATURATION, 100, 1, 2.0F, 7));
+      () -> new CaffeinatedItem((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16).tab(FarmersDelight.CREATIVE_TAB), ModEffects.COMFORT, 1200, 1, 2.0F, 7));
     public static final RegistryObject<Item> BERRY_MATCHA_LATTE = registerItem("berry_matcha_latte",
-      () -> new CaffeinatedItem((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16).tab(FarmersDelight.CREATIVE_TAB), () -> MobEffects.SATURATION, 200, 1, 2.0F, 9));
+      () -> new CaffeinatedItem((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16).tab(FarmersDelight.CREATIVE_TAB), ModEffects.COMFORT, 1800, 1, 2.0F, 9));
     public static final RegistryObject<Item> JELLY_BOTTLE = registerItem("jelly_bottle",
       () -> new ConsumableItem((new Item.Properties())
         .food(FoodValues.JELLY_BOTTLE).craftRemainder(Items.GLASS_BOTTLE).tab(FarmersDelight.CREATIVE_TAB)));
@@ -161,6 +165,7 @@ public class DelightfulItems {
     public static final RegistryObject<Item> ONYX_KNIFE = registerCompatKnife("onyx", "simpleores", gem("onyx"));
     public static final RegistryObject<Item> THYRIUM_KNIFE = registerCompatKnife("thyrium", "fusion", ingot("thyrium"));
     public static final RegistryObject<Item> SINISITE_KNIFE = registerCompatKnife("sinisite", "fusion", ingot("sinisite"));
+    public static final RegistryObject<Item> ALLTHEMODIUM_KNIFE = registerItem("allthemodium_knife", () -> new AllthemodiumKnifeItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
     public static final RegistryObject<Item> ENDERITE_KNIFE = registerSmithedKnife("enderite",
         () -> Ingredient.of(ModItems.NETHERITE_KNIFE.get()), ingot("enderite"));
     public static final RegistryObject<Item> DEORUM_KNIFE = registerCompatKnife("deorum", "forbidden_arcanus", ingot("deorum"));
@@ -180,6 +185,7 @@ public class DelightfulItems {
     public static final RegistryObject<Item> KNIGHTMETAL_KNIFE = registerCompatKnife("knightmetal", "twilightforest", ingot("knightmetal"), Component.translatable("item.twilightforest.knightmetal_sword.tooltip").withStyle(ChatFormatting.GRAY));
     public static final RegistryObject<Item> STEELEAF_KNIFE = registerItem("steeleaf_knife", () -> new SteeleafKnifeItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
     public static final RegistryObject<Item> LIVING_KNIFE = registerItem("living_knife", () -> new LivingKnifeItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
+    public static final RegistryObject<Item> PENDORITE_KNIFE = registerSmithedKnife("pendorite", () -> Ingredient.of(ModItems.NETHERITE_KNIFE.get()), ingot("pendorite"), BYGCompat.modid);
 
     // Registers a knife to Farmer's Delight tab, requiring modid
     public static RegistryObject<Item> registerCompatKnife(String name, String modid, ResourceLocation tag, Component... tool) {

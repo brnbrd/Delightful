@@ -1,0 +1,50 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "green_apple_pie_slice"
+            },
+            {
+              "type": "forge:item_exists",
+              "item": "byg:green_apple_pie"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "#": {
+            "item": "minecraft:wheat"
+          },
+          "O": {
+            "item": "farmersdelight:pie_crust"
+          },
+          "a": {
+            "tag": "forge:fruits/green_apple"
+          },
+          "e": {
+            "tag": "forge:eggs"
+          },
+          "x": {
+            "tag": "forge:sugar"
+          }
+        },
+        "pattern": [
+          "###",
+          "aaa",
+          "xOe"
+        ],
+        "result": {
+          "item": "byg:green_apple_pie"
+        }
+      }
+    }
+  ]
+}

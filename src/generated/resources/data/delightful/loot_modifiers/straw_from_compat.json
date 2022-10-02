@@ -1,0 +1,23 @@
+{
+  "type": "delightful:add_item",
+  "conditions": [
+    {
+      "chance": 0.2,
+      "condition": "minecraft:random_chance"
+    },
+    {
+      "condition": "minecraft:match_tool",
+      "predicate": {
+        "tag": "forge:tools/knives"
+      }
+    },
+    {
+      "condition": "delightful:is_tag",
+      "tag": "delightful:drops_straw"
+    }
+  ],
+  "item": "farmersdelight:straw",
+  "maxAmount": 1,
+  "minAmount": 1,
+  "unique": true
+}

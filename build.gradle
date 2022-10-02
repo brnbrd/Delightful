@@ -101,6 +101,7 @@ dependencies {
     implementation fg.deobf("curse.maven:curios-309927:${curios_version}")
     implementation fg.deobf("curse.maven:ars-nouveau-401955:${ars_nouveau_version}")
     compileOnly fg.deobf("curse.maven:roots-classic-295780:${roots_version}")
+    implementation fg.deobf("curse.maven:oh-the-biomes-youll-go-247560:${byg_version}")
 }
 
 task updateJson {

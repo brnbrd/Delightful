@@ -30,6 +30,7 @@ public class CompatKnifeItem extends TaggedKnifeItem {
         this.tool = tool;
     }
 
+    // Smithed
     public CompatKnifeItem(String modid, Supplier<Ingredient> base, ResourceLocation tag, Tier tier, float attackDamageIn, float attackSpeedIn, Properties properties) {
         super(base, tag, tier, attackDamageIn, attackSpeedIn, properties);
         this.modid = modid;

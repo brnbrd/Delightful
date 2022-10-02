@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "byg:prairie_grass",
+      "required": false
+    },
+    {
+      "id": "byg:tall_prairie_grass",
+      "required": false
+    },
+    {
+      "id": "byg:beach_grass",
+      "required": false
+    }
+  ]
+}

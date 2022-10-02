@@ -1,6 +1,7 @@
 package net.brdle.delightful.common.item;
 
 import net.brdle.delightful.Util;
+import net.brdle.delightful.data.DelightfulItemTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.Tiers;
@@ -45,7 +46,9 @@ public enum DelightfulTiers implements Tier {
     ADAMANTIUM(Tiers.IRON.getLevel(),1150, 14.0F, 3.0F, 3, DelightfulItems.getIngot("adamantium")),
     ONYX(Tiers.NETHERITE.getLevel(), 3280, 10.0F, 5.0F, 15, DelightfulItems.getIngot("onyx")),
     THYRIUM(Tiers.DIAMOND.getLevel(), 2000, 22.0F, 6.0F, 28, DelightfulItems.getIngot("thyrium")),
-    SINISITE(5, 4100, 18.0F, 8.0F, 11, DelightfulItems.getIngot("sinisite"));
+    SINISITE(5, 4100, 18.0F, 8.0F, 11, DelightfulItems.getIngot("sinisite")),
+    ALLTHEMODIUM(5, 15000, 10, 11.0F, 85, () -> Ingredient.of(DelightfulItemTags.PLATES_ALLTHEMODIUM)),
+    PENDORITE(5, 2500, 10.0F, 4.0F, 15, () -> Ingredient.of(DelightfulItemTags.INGOTS_PENDORITE));
 
     private final int level;
     private final int uses;

@@ -4,8 +4,17 @@
     {
       "conditions": [
         {
-          "type": "delightful:enabled",
-          "value": "salmonberry_pie"
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "salmonberry_pie"
+            },
+            {
+              "type": "delightful:enabled",
+              "value": "salmonberry_pie_slice"
+            }
+          ]
         }
       ],
       "recipe": {
