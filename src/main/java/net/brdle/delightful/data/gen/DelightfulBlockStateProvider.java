@@ -48,6 +48,10 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
         this.pieBlock(DelightfulBlocks.SALMONBERRY_PIE.get());
         this.pieBlock(DelightfulBlocks.PUMPKIN_PIE.get());
         this.pieBlock(DelightfulBlocks.SOURCE_BERRY_PIE.get());
+        this.pieBlock(DelightfulBlocks.GREEN_APPLE_PIE.get());
+        this.pieBlock(DelightfulBlocks.BLUEBERRY_PIE.get());
+        this.pieBlock(DelightfulBlocks.CRIMSON_BERRY_PIE.get());
+        this.pieBlock(DelightfulBlocks.NIGHTSHADE_BERRY_PIE.get());
     }
 
     public void wildCropBlock(Block block) {

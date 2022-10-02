@@ -9,6 +9,7 @@ import net.brdle.delightful.common.config.DelightfulConfig;
 import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.item.FurnaceFuelItem;
 import net.brdle.delightful.compat.ArsNouveauCompat;
+import net.brdle.delightful.compat.BYGCompat;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -19,6 +20,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -141,16 +143,35 @@ public class ForgeEvents {
 	@SubscribeEvent
 	public static void onPumpkinPieOverhaul(PlayerInteractEvent.RightClickBlock e) {
 		ItemStack stack = e.getEntity().getItemInHand(e.getHand());
-		BlockPlaceContext context = new BlockPlaceContext(e.getEntity(), e.getHand(), stack, e.getHitVec());
-		if (DelightfulConfig.PUMPKIN_PIE_OVERHAUL.get() &&
-			stack.is(Items.PUMPKIN_PIE)) {
-			tryPlacePie((PieBlock) DelightfulBlocks.PUMPKIN_PIE.get(), context, e);
-		} else if (ModList.get().isLoaded(ArsNouveauCompat.modid) &&
-			DelightfulConfig.stuff.get(ArsNouveauCompat.slice).get() &&
-			!stack.isEmpty() &&
-			stack.is(ForgeRegistries.ITEMS.getValue(Util.rl(ArsNouveauCompat.modid, ArsNouveauCompat.pie)))) {
-			tryPlacePie((PieBlock) DelightfulBlocks.SOURCE_BERRY_PIE.get(), context, e);
+		if (!stack.isEmpty()) {
+			BlockPlaceContext context = new BlockPlaceContext(e.getEntity(), e.getHand(), stack, e.getHitVec());
+			if (DelightfulConfig.PUMPKIN_PIE_OVERHAUL.get() &&
+				stack.is(Items.PUMPKIN_PIE)) {
+					tryPlacePie((PieBlock) DelightfulBlocks.PUMPKIN_PIE.get(), context, e);
+			} else if (ModList.get().isLoaded(ArsNouveauCompat.modid) &&
+				DelightfulConfig.stuff.get(ArsNouveauCompat.slice).get() &&
+					isPie(stack, ArsNouveauCompat.modid, ArsNouveauCompat.pie)) {
+					tryPlacePie((PieBlock) DelightfulBlocks.SOURCE_BERRY_PIE.get(), context, e);
+			} else if (ModList.get().isLoaded(BYGCompat.modid)) {
+				if (DelightfulConfig.stuff.get(BYGCompat.blueberry_pie_slice).get() &&
+					isPie(stack, BYGCompat.modid, BYGCompat.blueberry_pie)) {
+					tryPlacePie((PieBlock) DelightfulBlocks.BLUEBERRY_PIE.get(), context, e);
+				} else if (DelightfulConfig.stuff.get(BYGCompat.crimson_berry_pie_slice).get() &&
+					isPie(stack, BYGCompat.modid, BYGCompat.crimson_berry_pie)) {
+					tryPlacePie((PieBlock) DelightfulBlocks.CRIMSON_BERRY_PIE.get(), context, e);
+				} else if (DelightfulConfig.stuff.get(BYGCompat.green_apple_pie_slice).get() &&
+					isPie(stack, BYGCompat.modid, BYGCompat.green_apple_pie)) {
+					tryPlacePie((PieBlock) DelightfulBlocks.GREEN_APPLE_PIE.get(), context, e);
+				} else if (DelightfulConfig.stuff.get(BYGCompat.nightshade_berry_pie_slice).get() &&
+					isPie(stack, BYGCompat.modid, BYGCompat.nightshade_berry_pie)) {
+					tryPlacePie((PieBlock) DelightfulBlocks.NIGHTSHADE_BERRY_PIE.get(), context, e);
+				}
+			}
 		}
+	}
+
+	private static boolean isPie(ItemStack stack, String modid, String pie) {
+		return stack.is(ForgeRegistries.ITEMS.getValue(Util.rl(modid, pie)));
 	}
 
 	public static void tryPlacePie(PieBlock pie, BlockPlaceContext context, PlayerInteractEvent.RightClickBlock e) {

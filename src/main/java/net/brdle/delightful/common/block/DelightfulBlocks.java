@@ -53,7 +53,15 @@ public class DelightfulBlocks {
     public static final RegistryObject<Block> PUMPKIN_PIE = BLOCKS.register("pumpkin_pie",
         () -> new PieBlock(BlockBehaviour.Properties.copy(ModBlocks.APPLE_PIE.get()), DelightfulItems.PUMPKIN_PIE_SLICE));
     public static final RegistryObject<Block> SOURCE_BERRY_PIE = BLOCKS.register("source_berry_pie",
-        () -> new DelightfulPieBlock(BlockBehaviour.Properties.copy(ModBlocks.APPLE_PIE.get()), DelightfulItems.SOURCE_BERRY_PIE_SLICE, ArsNouveauCompat.getPieEffect()));
+        () -> new DelightfulPieBlock(BlockBehaviour.Properties.copy(ModBlocks.APPLE_PIE.get()), DelightfulItems.SOURCE_BERRY_PIE_SLICE));
+    public static final RegistryObject<Block> BLUEBERRY_PIE = BLOCKS.register("blueberry_pie",
+        () -> new PieBlock(BlockBehaviour.Properties.copy(ModBlocks.APPLE_PIE.get()), DelightfulItems.BLUEBERRY_PIE_SLICE));
+    public static final RegistryObject<Block> GREEN_APPLE_PIE = BLOCKS.register("green_apple_pie",
+        () -> new PieBlock(BlockBehaviour.Properties.copy(ModBlocks.APPLE_PIE.get()), DelightfulItems.GREEN_APPLE_PIE_SLICE));
+    public static final RegistryObject<Block> NIGHTSHADE_BERRY_PIE = BLOCKS.register("nightshade_berry_pie",
+        () -> new PieBlock(BlockBehaviour.Properties.copy(ModBlocks.APPLE_PIE.get()), DelightfulItems.NIGHTSHADE_BERRY_PIE_SLICE));
+    public static final RegistryObject<Block> CRIMSON_BERRY_PIE = BLOCKS.register("crimson_berry_pie",
+        () -> new PieBlock(BlockBehaviour.Properties.copy(ModBlocks.APPLE_PIE.get()), DelightfulItems.CRIMSON_BERRY_PIE_SLICE));
     public static final RegistryObject<Block> ACORN_SACK = BLOCKS.register("acorn_sack",
         () -> new Block(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK)));
 

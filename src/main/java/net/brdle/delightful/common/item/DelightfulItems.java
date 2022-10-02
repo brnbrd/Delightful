@@ -11,6 +11,7 @@ import net.brdle.delightful.common.item.knife.twilightforest.FieryKnifeItem;
 import net.brdle.delightful.common.item.knife.twilightforest.IronwoodKnifeItem;
 import net.brdle.delightful.common.item.knife.twilightforest.SteeleafKnifeItem;
 import net.brdle.delightful.compat.ArsNouveauCompat;
+import net.brdle.delightful.compat.BYGCompat;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -49,8 +50,16 @@ public class DelightfulItems {
         vectorwing.farmersdelight.common.FoodValues.PIE_SLICE);
     public static final RegistryObject<Item> PUMPKIN_PIE_SLICE = registerFood("pumpkin_pie_slice",
         vectorwing.farmersdelight.common.FoodValues.PIE_SLICE);
-    public static final RegistryObject<Item> SOURCE_BERRY_PIE_SLICE = registerCompatFood("source_berry_pie_slice", ArsNouveauCompat.modid,
+    public static final RegistryObject<Item> SOURCE_BERRY_PIE_SLICE = registerCompatFood(ArsNouveauCompat.slice, ArsNouveauCompat.modid,
         ArsNouveauCompat.getPieSlice().get());
+    public static final RegistryObject<Item> BLUEBERRY_PIE_SLICE = registerCompatFood(BYGCompat.blueberry_pie_slice, BYGCompat.modid,
+        vectorwing.farmersdelight.common.FoodValues.PIE_SLICE);
+    public static final RegistryObject<Item> GREEN_APPLE_PIE_SLICE = registerCompatFood(BYGCompat.green_apple_pie_slice, BYGCompat.modid,
+        vectorwing.farmersdelight.common.FoodValues.PIE_SLICE);
+    public static final RegistryObject<Item> NIGHTSHADE_BERRY_PIE_SLICE = registerCompatFood(BYGCompat.nightshade_berry_pie_slice, BYGCompat.modid,
+        vectorwing.farmersdelight.common.FoodValues.PIE_SLICE);
+    public static final RegistryObject<Item> CRIMSON_BERRY_PIE_SLICE = registerCompatFood(BYGCompat.crimson_berry_pie_slice, BYGCompat.modid,
+        vectorwing.farmersdelight.common.FoodValues.PIE_SLICE);
     public static final RegistryObject<Item> GREEN_TEA_LEAF = registerFood("green_tea_leaf",
         FoodValues.GREEN_TEA_LEAF);
     public static final RegistryObject<Item> MATCHA = registerItem("matcha", () -> new DescriptItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB), Component.translatable("delightful.matcha.desc").withStyle(ChatFormatting.GRAY)));

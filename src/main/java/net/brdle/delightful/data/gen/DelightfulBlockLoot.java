@@ -29,6 +29,10 @@ public class DelightfulBlockLoot extends BlockLoot {
         this.empty(DelightfulBlocks.SALMONBERRY_PIE);
         this.empty(DelightfulBlocks.PUMPKIN_PIE);
         this.empty(DelightfulBlocks.SOURCE_BERRY_PIE);
+        this.empty(DelightfulBlocks.GREEN_APPLE_PIE);
+        this.empty(DelightfulBlocks.BLUEBERRY_PIE);
+        this.empty(DelightfulBlocks.CRIMSON_BERRY_PIE);
+        this.empty(DelightfulBlocks.NIGHTSHADE_BERRY_PIE);
 
         // Whole melons
         this.dropSelf(DelightfulBlocks.MINI_MELON.get());

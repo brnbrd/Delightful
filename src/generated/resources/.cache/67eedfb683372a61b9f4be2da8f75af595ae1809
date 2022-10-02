@@ -1,4 +1,4 @@
-// 1.19	2022-10-01T20:41:58.4017526	Item Models: delightful
+// 1.19	2022-10-01T21:27:41.0050596	Item Models: delightful
 f9af973b19b45f34017d8db4e6e54de90668031e assets/delightful/models/item/acorn.json
 9b4daf24b0d8e447735c5836d7ab76a3df1b3c1d assets/delightful/models/item/acorn_sack.json
 5d9531a6795e7d2281f99609672d866743329211 assets/delightful/models/item/adamantium_knife.json
@@ -9,6 +9,7 @@ f9af973b19b45f34017d8db4e6e54de90668031e assets/delightful/models/item/acorn.jso
 a13e7123646bd38af21b165c2bbbefdbe2cd72b5 assets/delightful/models/item/basalt_cabinet.json
 2d02d8c28f39506282ac5c5e567bd9d54455c1fb assets/delightful/models/item/berry_matcha_latte.json
 9913516aecd848c67a96cb2bc08d226ee02c66e9 assets/delightful/models/item/black_opal_knife.json
+e5fb8bf92740c5bb4cb0d339cccd46719ca28f98 assets/delightful/models/item/blueberry_pie_slice.json
 c438745d5ec4d59ac6559f8b91a2060f3b04bed4 assets/delightful/models/item/bone_knife.json
 3a71b2b0ad6b8a76a6b54878a885cc3bb7ed6938 assets/delightful/models/item/brass_knife.json
 5ea05e6b269ead2d3116d0e108373a28fadf641e assets/delightful/models/item/bronze_knife.json
@@ -26,6 +27,7 @@ daae20918d102a64c9a5640874194768968a1b67 assets/delightful/models/item/cooked_ma
 e920d5a427106cffc7537868c68c064515f70af8 assets/delightful/models/item/cooked_venison_chops.json
 1d708f56a97d1d713bd45fd75a1ed429c24fe0b5 assets/delightful/models/item/copper_knife.json
 f8c415a412361a11d9969ce96c931d9ece975c0f assets/delightful/models/item/crab_rangoon.json
+b09be90fc7ceb0963c4ab0532d9ccdc5474ebdff assets/delightful/models/item/crimson_berry_pie_slice.json
 178e937739c494c695ad811e18919cd7a743d1c2 assets/delightful/models/item/deluxe_cheeseburger.json
 503bb7db53c862685408ff8b583d537f77c55d13 assets/delightful/models/item/deorum_knife.json
 b06cd1ddc4fc9b1fa65a1a2a85b37a20b22765b0 assets/delightful/models/item/draco_arcanus_knife.json
@@ -36,6 +38,7 @@ f99627fcdfc60b0bdafe5db70ec3245f5b472a96 assets/delightful/models/item/enderite_
 205eb524f185fe9ba73267e1dc89e4d2ad4ee733 assets/delightful/models/item/field_salad.json
 74fc19a0ff444a890e0f114ddb952ddd488e47ea assets/delightful/models/item/fiery_knife.json
 171299ca7d7d0aff6c1be58322c6ef55e4b8a429 assets/delightful/models/item/glow_jelly_bottle.json
+4b024dd7c8ce29827ed9999ce7e268ed909d5897 assets/delightful/models/item/green_apple_pie_slice.json
 1ed540c7b7004cef210d617454c736abb36dfd1d assets/delightful/models/item/green_tea_leaf.json
 23c976515dffac1087272c84e48a66a47fcfb781 assets/delightful/models/item/honey_glazed_walnut.json
 adeecc6b0c51bb6fe5eb52b9a9c5d1316af4be89 assets/delightful/models/item/invar_knife.json
@@ -54,6 +57,7 @@ ff23d40528b51e117f75432e3be95029f89471e1 assets/delightful/models/item/matcha.js
 1b0fc825ef58b3ec0cc4361b0066cf4361eac64b assets/delightful/models/item/mythril_knife.json
 e592b7e3c27553e971c245a5e0f04bc97ee718ad assets/delightful/models/item/netherite_opal_knife.json
 5166514c549151d9207fbc07ec584f25a54547c2 assets/delightful/models/item/nickel_knife.json
+a3d461529c77df58c6a6f71e8eccd29beb1a720b assets/delightful/models/item/nightshade_berry_pie_slice.json
 51f5b063ab383f22017242420caaec4dd3fe2f4c assets/delightful/models/item/nut_butter_and_jelly_sandwich.json
 f0fa3adff07c0b4805fcac17318e3dbe799382c6 assets/delightful/models/item/nut_butter_bottle.json
 08cffa18d5d86b71d461ab2d7976b9dd7d3e6c81 assets/delightful/models/item/obsidian_infused_enderite_knife.json
