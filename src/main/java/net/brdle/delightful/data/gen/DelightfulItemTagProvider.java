@@ -14,6 +14,7 @@ import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
@@ -98,6 +99,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_SALMONBERRIES)
 			.addTag(DelightfulItemTags.FRUITS_STRAWBERRIES)
 			.addTag(DelightfulItemTags.FRUITS_CHERRY)
+			.addTag(DelightfulItemTags.FRUITS_BLUEBERRIES)
 			.addOptionalTag(Util.rl("forge", "fruits/mandarin"))
 			.addOptionalTag(Util.rl("forge", "fruits/orange"))
 			.addOptionalTag(Util.rl("forge", "fruits/redlove"));
@@ -141,10 +143,12 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(ForgeTags.COOKED_FISHES)
 			.addOptional(Util.rl("biomemakeover", "cooked_glowfish"));
 		this.tag(DelightfulItemTags.RAW_VENISON)
+			.add(DelightfulItems.VENISON_CHOPS.get())
 			.addOptional(Util.rl("naturalist", "venison"))
 			.addOptional(Util.rl("goodall", "raw_venison"))
 			.addOptional(Util.rl("twilightforest", "raw_venison"));
 		this.tag(DelightfulItemTags.COOKED_VENISON)
+			.add(DelightfulItems.COOKED_VENISON_CHOPS.get())
 			.addOptional(Util.rl("naturalist", "cooked_venison"))
 			.addOptional(Util.rl("goodall", "cooked_venison"))
 			.addOptional(Util.rl("twilightforest", "cooked_venison"));
@@ -156,6 +160,15 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Util.rl("frog_legs", "frog_legs"));
 		this.tag(DelightfulItemTags.COOKED_FROG)
 			.addOptional(Util.rl("frog_legs", "cooked_frog_legs"));
+		this.tag(DelightfulItemTags.FOOD_MEAT)
+			.addTag(DelightfulItemTags.RAW_VENISON)
+			.addTag(DelightfulItemTags.COOKED_VENISON)
+			.addTag(DelightfulItemTags.RAW_GOAT)
+			.addTag(DelightfulItemTags.COOKED_GOAT)
+			.addTag(DelightfulItemTags.RAW_FROG)
+			.addTag(DelightfulItemTags.COOKED_FROG);
+		this.tag(DelightfulItemTags.MEAT)
+			.addTag(DelightfulItemTags.FOOD_MEAT);
 		this.tag(DelightfulItemTags.CATTAIL)
 			.addOptional(Util.rl("sprout", "cattail"))
 			.addOptional(Util.rl("biomesoplenty", "cattail"))

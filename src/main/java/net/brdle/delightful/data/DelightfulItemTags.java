@@ -61,6 +61,8 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> COOKED_GOAT = forge("cooked_goat");
 	public static final TagKey<Item> RAW_FROG = forge("raw_frog");
 	public static final TagKey<Item> COOKED_FROG = forge("cooked_frog");
+	public static final TagKey<Item> FOOD_MEAT = forge("food/meat");
+	public static final TagKey<Item> MEAT = forge("meat");
 	public static final TagKey<Item> CATTAIL = forge("cattail");
 	public static final TagKey<Item> INGOTS_STEEL = forge("ingots/steel");
 	public static final TagKey<Item> GEMS_ROSE_QUARTZ = forge("gems/rose_quartz");

@@ -9,6 +9,7 @@
     "#forge:fruits/salmonberries",
     "#forge:fruits/strawberries",
     "#forge:fruits/cherry",
+    "#forge:fruits/blueberries",
     {
       "id": "#forge:fruits/mandarin",
       "required": false
