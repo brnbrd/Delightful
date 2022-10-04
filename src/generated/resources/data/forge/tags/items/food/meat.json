@@ -1,0 +1,10 @@
+{
+  "values": [
+    "#forge:raw_venison",
+    "#forge:cooked_venison",
+    "#forge:raw_goat",
+    "#forge:cooked_goat",
+    "#forge:raw_frog",
+    "#forge:cooked_frog"
+  ]
+}
