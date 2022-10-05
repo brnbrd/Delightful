@@ -1,7 +1,4 @@
-// 1.19	2022-10-05T08:44:39.7887371	delightful
-30f74d9e293b141091b2ffac55542d18295c8e3a data/delightful/tags/blocks/cantaloupe_spawns.json
-ba6ef28da1fcd146a5a73f41f83db71fb06d65f0 data/delightful/tags/blocks/drops_acorn.json
-a4e8097fff07f9a74259d6b5dd583f3437ff28a2 data/delightful/tags/blocks/drops_green_tea_leaf.json
-0d8a253ba8a6aeb43253500df3aeeec54734ba62 data/delightful/tags/blocks/drops_straw.json
-471575c40c25d4ee104811c52cadceaa2ca1c51e data/minecraft/tags/blocks/mineable/axe.json
-56652c93f5e1505b2c4875c8d14635f2a2c72350 data/minecraft/tags/blocks/mineable/pickaxe.json
+// 1.19	2022-10-05T09:25:13.2034334	delightful
+ff13fafcc6c847d2ce8a4262842bf1316dc580ea data/delightful/tags/worldgen/biome/cantaloupe_spawns.json
+832581beee9dcc935e17a4bf4291e980990d257a data/delightful/tags/worldgen/biome/mini_melon_spawns.json
+6b35771c8d400b0921c04386d79e88b834c282ad data/delightful/tags/worldgen/biome/salmonberry_spawns.json

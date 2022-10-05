@@ -516,6 +516,18 @@
         ]
       },
       "trigger": "minecraft:inventory_changed"
+    },
+    "warden_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:warden_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "display": {
@@ -578,7 +590,8 @@
       "knightmetal_knife",
       "steeleaf_knife",
       "living_knife",
-      "pendorite_knife"
+      "pendorite_knife",
+      "warden_knife"
     ]
   ]
 }

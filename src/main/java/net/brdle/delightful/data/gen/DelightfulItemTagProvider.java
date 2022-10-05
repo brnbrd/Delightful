@@ -190,7 +190,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(ModTags.KNIVES)
 			.addOptional(Util.rl("ae2", "certus_quartz_cutting_knife"))
 			.addOptional(Util.rl("ae2", "nether_quartz_cutting_knife"))
-			.addOptional(Util.rl("occultism", "bbutcher_knife"));
+			.addOptional(Util.rl("occultism", "butcher_knife"));
 		var build = this.tag(ModTags.KNIVES);
 		DelightfulItems.ITEMS.getEntries().stream()
 			.map(RegistryObject::get)
@@ -198,16 +198,18 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.forEach(build::add);
 
 		// Ecologics
-		this.tag(DelightfulItemTags.COOKED_PRICKLY_PEAR).addOptional(Util.rl("ecologics", "cooked_prickly_pear"));
+		this.tag(DelightfulItemTags.COOKED_PRICKLY_PEAR).addOptional(DelightfulItemTags.COOKED_PRICKLY_PEAR.location());
 
 		// Forbidden and Arcanus
-		this.tag(DelightfulItemTags.STELLARITE_PIECE).addOptional(Util.rl("forbidden_arcanus", "stellarite_piece"));
-		this.tag(DelightfulItemTags.DRACO_ARCANUS_STAFF).addOptional(Util.rl("forbidden_arcanus", "draco_arcanus_staff"));
-		this.tag(DelightfulItemTags.DRAGON_SCALE).addOptional(Util.rl("forbidden_arcanus", "dragon_scale"));
+		this.tag(DelightfulItemTags.STELLARITE_PIECE).addOptional(DelightfulItemTags.STELLARITE_PIECE.location());
+		this.tag(DelightfulItemTags.DRACO_ARCANUS_STAFF).addOptional(DelightfulItemTags.DRACO_ARCANUS_STAFF.location());
+		this.tag(DelightfulItemTags.DRAGON_SCALE).addOptional(DelightfulItemTags.DRAGON_SCALE.location());
 		this.tag(DelightfulItemTags.INGOTS_DEORUM).addOptional(Util.rl("forbidden_arcanus", "deorum_ingot"));
 
 		// Byg
 		this.tag(DelightfulItemTags.INGOTS_PENDORITE).addOptional(Util.rl(BYGCompat.modid, "pendorite_ingot"));
+
+		this.tag(DelightfulItemTags.REINFORCED_ECHO_SHARD).addOptional(DelightfulItemTags.REINFORCED_ECHO_SHARD.location());
 	}
 
 	/**
