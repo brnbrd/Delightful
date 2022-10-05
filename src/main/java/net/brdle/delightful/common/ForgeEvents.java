@@ -19,22 +19,21 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.furnace.FurnaceFuelBurnTimeEvent;
 import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
@@ -242,4 +241,16 @@ public class ForgeEvents {
 	private static boolean isPie(ItemStack stack, String modid, String pie) {
 		return stack.is(ForgeRegistries.ITEMS.getValue(Util.rl(modid, pie)));
 	}
+
+	/*@SubscribeEvent(priority = EventPriority.LOWEST)
+	public static void onBookTooltip(ItemTooltipEvent e) {
+		ItemStack stack = e.getItemStack();
+		if (stack.getItem() instanceof EnchantedBookItem book) {
+			String modid = book.getCreatorModId(stack);
+			List<Component> tooltip = e.getToolTip();
+			if (tooltip.get(tooltip.size() - 1).getString().strip().equals("minecraft")) {
+				e.getToolTip().set(tooltip.size() - 1, Component.translatable(ModList.get().getModFileById(modid).getMods().get(0).getDisplayName()));
+			}
+		}
+	}*/
 }
