@@ -48,7 +48,8 @@ public enum DelightfulTiers implements Tier {
     THYRIUM(Tiers.DIAMOND.getLevel(), 2000, 22.0F, 6.0F, 28, DelightfulItems.getIngot("thyrium")),
     SINISITE(5, 4100, 18.0F, 8.0F, 11, DelightfulItems.getIngot("sinisite")),
     ALLTHEMODIUM(5, 15000, 10, 11.0F, 85, () -> Ingredient.of(DelightfulItemTags.PLATES_ALLTHEMODIUM)),
-    PENDORITE(5, 2500, 10.0F, 4.0F, 15, () -> Ingredient.of(DelightfulItemTags.INGOTS_PENDORITE));
+    PENDORITE(5, 2500, 10.0F, 4.0F, 15, () -> Ingredient.of(DelightfulItemTags.INGOTS_PENDORITE)),
+    WARDEN(4, 2464, 11.0F, 7.0F, 21, () -> Ingredient.of(DelightfulItemTags.REINFORCED_ECHO_SHARD));
 
     private final int level;
     private final int uses;

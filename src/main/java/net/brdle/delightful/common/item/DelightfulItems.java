@@ -13,6 +13,7 @@ import net.brdle.delightful.common.item.knife.twilightforest.IronwoodKnifeItem;
 import net.brdle.delightful.common.item.knife.twilightforest.SteeleafKnifeItem;
 import net.brdle.delightful.compat.ArsNouveauCompat;
 import net.brdle.delightful.compat.BYGCompat;
+import net.brdle.delightful.data.DelightfulItemTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -168,7 +169,7 @@ public class DelightfulItems {
     public static final RegistryObject<Item> ENDERITE_KNIFE = registerSmithedKnife("enderite",
         () -> Ingredient.of(ModItems.NETHERITE_KNIFE.get()), ingot("enderite"));
     public static final RegistryObject<Item> DEORUM_KNIFE = registerCompatKnife("deorum", "forbidden_arcanus", ingot("deorum"));
-    public static final RegistryObject<Item> REINFORCED_DEORUM_KNIFE = registerSmithedKnife("reinforced_deorum", () -> Ingredient.of(DEORUM_KNIFE.get()), Util.rl("forbidden_arcanus", "stellarite_piece"), "forbidden_arcanus");
+    public static final RegistryObject<Item> REINFORCED_DEORUM_KNIFE = registerSmithedKnife("reinforced_deorum", () -> Ingredient.of(DEORUM_KNIFE.get()), DelightfulItemTags.STELLARITE_PIECE.location(), "forbidden_arcanus");
     public static final RegistryObject<Item> DRACO_ARCANUS_KNIFE = registerItem("draco_arcanus_knife", () -> new DracoArcanusKnifeItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
     public static final RegistryObject<Item> LAPIS_LAZULI_KNIFE = registerCompatKnife("lapis_lazuli", "mekanismtools", Tags.Items.GEMS_LAPIS.location());
     public static final RegistryObject<Item> OSMIUM_KNIFE = registerCompatKnife("osmium", "mekanismtools", ingot("osmium"));
@@ -185,6 +186,7 @@ public class DelightfulItems {
     public static final RegistryObject<Item> STEELEAF_KNIFE = registerItem("steeleaf_knife", () -> new SteeleafKnifeItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
     public static final RegistryObject<Item> LIVING_KNIFE = registerItem("living_knife", () -> new LivingKnifeItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
     public static final RegistryObject<Item> PENDORITE_KNIFE = registerSmithedKnife("pendorite", () -> Ingredient.of(ModItems.NETHERITE_KNIFE.get()), ingot("pendorite"), BYGCompat.modid);
+    public static final RegistryObject<Item> WARDEN_KNIFE = registerSmithedKnife("warden", () -> Ingredient.of(ModItems.NETHERITE_KNIFE.get()), DelightfulItemTags.REINFORCED_ECHO_SHARD.location(), "deeperdarker");
 
     // Registers a knife to Farmer's Delight tab, requiring modid
     public static RegistryObject<Item> registerCompatKnife(String name, String modid, ResourceLocation tag, Component... tool) {

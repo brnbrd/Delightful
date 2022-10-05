@@ -81,6 +81,9 @@ public class DelightfulItemTags {
 	// Byg
 	public static final TagKey<Item> INGOTS_PENDORITE = forge("ingots/pendorite");
 
+	// Deeper and Darker
+	public static final TagKey<Item> REINFORCED_ECHO_SHARD = bind("deeperdarker", "reinforced_echo_shard");
+
 	private static TagKey<Item> forge(String name) {
 		return bind("forge", name);
 	}
