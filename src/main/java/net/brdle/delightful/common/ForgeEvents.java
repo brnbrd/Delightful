@@ -65,7 +65,7 @@ public class ForgeEvents {
 			if (portedMods.contains(mapping.getKey().getNamespace())) {
 				var remap = Util.rl(Delightful.MODID, mapping.getKey().getPath());
 				if (ForgeRegistries.ITEMS.containsKey(remap)) {
-					mapping.remap(ForgeRegistries.ITEMS.getValue(remap));
+					mapping.remap(Util.item(remap));
 				} else {
 					mapping.warn();
 				}
@@ -202,7 +202,7 @@ public class ForgeEvents {
 		ItemStack stack = e.getEntity().getItemInHand(e.getHand());
 		if ((DelightfulConfig.PUMPKIN_PIE_OVERHAUL.get() && stack.is(Items.PUMPKIN_PIE)) ||
 			(ModList.get().isLoaded(ArsNouveauCompat.modid) &&
-				stack.is(ForgeRegistries.ITEMS.getValue(Util.rl(ArsNouveauCompat.modid, ArsNouveauCompat.pie))) &&
+				stack.is(Util.item(ArsNouveauCompat.modid, ArsNouveauCompat.pie)) &&
 				DelightfulConfig.stuff.get(ArsNouveauCompat.slice).get()) ||
 			(ModList.get().isLoaded(BYGCompat.modid) &&
 				((isPie(e.getItemStack(), BYGCompat.modid, BYGCompat.blueberry_pie) &&
@@ -239,7 +239,7 @@ public class ForgeEvents {
 	}
 
 	private static boolean isPie(ItemStack stack, String modid, String pie) {
-		return stack.is(ForgeRegistries.ITEMS.getValue(Util.rl(modid, pie)));
+		return stack.is(Util.item(modid, pie));
 	}
 
 	/*@SubscribeEvent(priority = EventPriority.LOWEST)

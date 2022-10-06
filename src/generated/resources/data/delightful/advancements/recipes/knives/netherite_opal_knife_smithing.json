@@ -4,7 +4,7 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_metal": {
+          "has_ingots/netherite": {
             "conditions": {
               "items": [
                 {
@@ -16,20 +16,20 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:netherite_opal_knife_smithing"
+              "recipe": "delightful:knives/netherite_opal_knife_smithing"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
         },
         "requirements": [
           [
-            "has_metal",
+            "has_ingots/netherite",
             "has_the_recipe"
           ]
         ],
         "rewards": {
           "recipes": [
-            "delightful:netherite_opal_knife_smithing"
+            "delightful:knives/netherite_opal_knife_smithing"
           ]
         }
       },

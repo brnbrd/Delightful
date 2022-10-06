@@ -7,10 +7,11 @@ import net.minecraft.core.NonNullList;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantments;
+import java.util.Optional;
 
 public class SteeleafKnifeItem extends CompatKnifeItem {
   public SteeleafKnifeItem(Properties properties) {
-    super("twilightforest", Util.rl("forge", "ingots/steeleaf"), DelightfulTiers.STEELEAF, 0.5F, -2.0F, properties);
+    super("twilightforest", Util.it("forge", "ingots/steeleaf"), DelightfulTiers.STEELEAF, 0.5F, -2.0F, properties, Optional.empty());
   }
 
   @Override

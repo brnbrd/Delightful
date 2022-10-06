@@ -1,17 +1,30 @@
 {
-  "type": "farmersdelight:cutting",
-  "ingredients": [
+  "type": "forge:conditional",
+  "recipes": [
     {
-      "item": "delightful:cantaloupe"
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "cantaloupe_slice"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "delightful:cantaloupe"
+          }
+        ],
+        "result": [
+          {
+            "count": 6,
+            "item": "delightful:cantaloupe_slice"
+          }
+        ],
+        "tool": {
+          "tag": "forge:tools/knives"
+        }
+      }
     }
-  ],
-  "result": [
-    {
-      "count": 6,
-      "item": "delightful:cantaloupe_slice"
-    }
-  ],
-  "tool": {
-    "tag": "forge:tools/knives"
-  }
+  ]
 }

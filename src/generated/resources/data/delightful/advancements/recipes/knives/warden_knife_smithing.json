@@ -4,7 +4,7 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_metal": {
+          "has_reinforced_echo_shard": {
             "conditions": {
               "items": [
                 {
@@ -16,20 +16,20 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:warden_knife_smithing"
+              "recipe": "delightful:knives/warden_knife_smithing"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
         },
         "requirements": [
           [
-            "has_metal",
+            "has_reinforced_echo_shard",
             "has_the_recipe"
           ]
         ],
         "rewards": {
           "recipes": [
-            "delightful:warden_knife_smithing"
+            "delightful:knives/warden_knife_smithing"
           ]
         }
       },

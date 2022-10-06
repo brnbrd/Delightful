@@ -6,7 +6,7 @@
         "criteria": {
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:thyrium_knife"
+              "recipe": "delightful:knives/thyrium_knife"
             },
             "trigger": "minecraft:recipe_unlocked"
           },
@@ -29,7 +29,7 @@
         ],
         "rewards": {
           "recipes": [
-            "delightful:thyrium_knife"
+            "delightful:knives/thyrium_knife"
           ]
         }
       },

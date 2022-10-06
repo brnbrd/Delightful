@@ -1,0 +1,21 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "clover_honey"
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "biomesoplenty"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

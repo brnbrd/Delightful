@@ -35,11 +35,30 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 			},
 			DelightfulItems.GREEN_TEA_LEAF.get(), 1, 1, true
 		));
+		add("green_tea_leaf_rare", new AddItemLootModifier(
+			new LootItemCondition[]{
+				LootItemEnabledCondition.enabled("green_tea_leaf"),
+				LootItemRandomChanceCondition.randomChance(0.005F).build(),
+				MatchTool.toolMatches(ItemPredicate.Builder.item().of(ForgeTags.TOOLS_KNIVES)).invert().build(),
+				LootItemBlockIsTagCondition.isTag(DelightfulBlockTags.DROPS_GREEN_TEA_LEAF)
+			},
+			DelightfulItems.GREEN_TEA_LEAF.get(), 1, 1, true
+		));
 		add("acorn", new AddItemLootModifier(
 			new LootItemCondition[]{
 				LootItemEnabledCondition.enabled("acorn"),
 				LootItemRandomChanceCondition.randomChance(0.05F).build(),
 				MatchTool.toolMatches(ItemPredicate.Builder.item().of(Tags.Items.SHEARS)).invert().build(),
+				MatchTool.toolMatches(ItemPredicate.Builder.item().hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.Ints.ANY))).invert().build(),
+				LootItemBlockIsTagCondition.isTag(DelightfulBlockTags.DROPS_ACORN)
+			},
+			DelightfulItems.ACORN.get(), 1, 1, true
+		));
+		add("acorn_from_knife", new AddItemLootModifier(
+			new LootItemCondition[]{
+				LootItemEnabledCondition.enabled("acorn"),
+				LootItemRandomChanceCondition.randomChance(0.08F).build(),
+				MatchTool.toolMatches(ItemPredicate.Builder.item().of(ForgeTags.TOOLS_KNIVES)).build(),
 				MatchTool.toolMatches(ItemPredicate.Builder.item().hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.Ints.ANY))).invert().build(),
 				LootItemBlockIsTagCondition.isTag(DelightfulBlockTags.DROPS_ACORN)
 			},

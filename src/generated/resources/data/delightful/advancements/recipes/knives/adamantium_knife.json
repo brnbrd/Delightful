@@ -16,7 +16,7 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:adamantium_knife"
+              "recipe": "delightful:knives/adamantium_knife"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
@@ -29,7 +29,7 @@
         ],
         "rewards": {
           "recipes": [
-            "delightful:adamantium_knife"
+            "delightful:knives/adamantium_knife"
           ]
         }
       },

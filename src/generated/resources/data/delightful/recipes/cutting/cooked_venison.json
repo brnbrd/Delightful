@@ -11,6 +11,10 @@
               "value": "cooked_venison_chops"
             },
             {
+              "type": "delightful:enabled",
+              "value": "venison_chops"
+            },
+            {
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",

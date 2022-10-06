@@ -8,9 +8,7 @@
             "conditions": {
               "items": [
                 {
-                  "items": [
-                    "minecraft:barrier"
-                  ]
+                  "tag": "forge:bones"
                 }
               ]
             },
@@ -18,7 +16,7 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:bone_knife"
+              "recipe": "delightful:knives/bone_knife"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
@@ -31,7 +29,7 @@
         ],
         "rewards": {
           "recipes": [
-            "delightful:bone_knife"
+            "delightful:knives/bone_knife"
           ]
         }
       },
@@ -42,6 +40,13 @@
             {
               "type": "delightful:enabled",
               "value": "bone_knife"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:bones"
+              }
             }
           ]
         }

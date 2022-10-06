@@ -4,29 +4,32 @@ import com.google.common.collect.ImmutableList;
 import net.brdle.delightful.Util;
 import net.brdle.delightful.common.config.DelightfulConfig;
 import net.brdle.delightful.common.item.IConfigured;
-import net.brdle.delightful.common.item.ISingleIngredient;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.common.Tags;
+import net.minecraftforge.registries.ForgeRegistries;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import vectorwing.farmersdelight.FarmersDelight;
 import vectorwing.farmersdelight.common.item.KnifeItem;
-import javax.annotation.Nullable;
 import java.util.List;
+import java.util.Objects;
+import java.util.Optional;
 import java.util.function.Supplier;
 
-public class DelightfulKnifeItem extends KnifeItem implements IConfigured, ISingleIngredient {
-    private final Supplier<Ingredient> ingredient;
+public class DelightfulKnifeItem extends KnifeItem implements IConfigured {
+    private final TagKey<Item> tag;
+    private final Supplier<Ingredient> smithingBase;
     protected final ImmutableList<CreativeModeTab> tabs = ImmutableList.of(CreativeModeTab.TAB_SEARCH, FarmersDelight.CREATIVE_TAB);
 
-    public DelightfulKnifeItem(Supplier<Ingredient> ingredient, Tier tier, float attackDamageIn, float attackSpeedIn, Properties properties) {
+    public DelightfulKnifeItem(TagKey<Item> tag, Tier tier, float attackDamageIn, float attackSpeedIn, Properties properties, Optional<Supplier<Ingredient>> smithingBase) {
         super(tier, attackDamageIn, attackSpeedIn, properties);
-        this.ingredient = ingredient;
+        this.tag = tag;
+        this.smithingBase = smithingBase.orElse(null);
     }
 
     /**
@@ -34,14 +37,23 @@ public class DelightfulKnifeItem extends KnifeItem implements IConfigured, ISing
      */
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> tool, TooltipFlag pIsAdvanced) {
+        super.appendHoverText(pStack, pLevel, tool, pIsAdvanced);
         if (!this.config()) {
             tool.add(Component.literal("Disabled.").withStyle(ChatFormatting.UNDERLINE));
+        } else if (!this.isTag()) {
+            tool.add(Component.literal("Requires non-empty tag:"));
+            tool.add(Component.literal(this.getTag().location().toString()).withStyle(ChatFormatting.UNDERLINE));
         }
     }
 
-    @Override
-    public Supplier<Ingredient> getIngredient() {
-        return this.ingredient;
+    public TagKey<Item> getTag() {
+        return this.tag;
+    }
+
+    // Returns true if there is an entry within the tag
+    public boolean isTag() {
+        return !Objects.requireNonNull(ForgeRegistries.ITEMS.tags())
+            .getTag(this.getTag()).isEmpty();
     }
 
     public boolean config() {
@@ -50,15 +62,27 @@ public class DelightfulKnifeItem extends KnifeItem implements IConfigured, ISing
 
     @Override
     public boolean isEnabled() {
-        return this.config();
+        return this.config() && this.isTag();
     }
 
     public Supplier<Ingredient> getRod() {
         return () -> Ingredient.of(Tags.Items.RODS_WOODEN);
     }
 
+    @Nullable
+    public Ingredient getSmithingBase() {
+        if (isSmithing()) {
+            return this.smithingBase.get();
+        }
+        return null;
+    }
+
+    public boolean isSmithing() {
+        return this.smithingBase != null;
+    }
+
     @Override
-    protected boolean allowedIn(CreativeModeTab cat) {
+    protected boolean allowedIn(@NotNull CreativeModeTab cat) {
         return tabs.contains(cat) && this.config();
     }
 }

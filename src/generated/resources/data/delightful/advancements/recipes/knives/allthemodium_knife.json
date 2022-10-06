@@ -16,7 +16,7 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:allthemodium_knife"
+              "recipe": "delightful:knives/allthemodium_knife"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
@@ -29,7 +29,7 @@
         ],
         "rewards": {
           "recipes": [
-            "delightful:allthemodium_knife"
+            "delightful:knives/allthemodium_knife"
           ]
         }
       },

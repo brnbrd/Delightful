@@ -5,10 +5,11 @@ import net.brdle.delightful.common.item.knife.CompatKnifeItem;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import java.util.Optional;
 
 public class LivingKnifeItem extends CompatKnifeItem {
 	public LivingKnifeItem(Properties properties) {
-		super("rootsclassic", null, DelightfulTiers.LIVING, 0.5F, -2.0F, properties);
+		super("rootsclassic", null, DelightfulTiers.LIVING, 0.5F, -2.0F, properties, Optional.empty());
 	}
 
 	@Override

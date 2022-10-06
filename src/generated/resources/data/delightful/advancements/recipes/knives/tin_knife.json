@@ -6,7 +6,7 @@
         "criteria": {
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:tin_knife"
+              "recipe": "delightful:knives/tin_knife"
             },
             "trigger": "minecraft:recipe_unlocked"
           },
@@ -29,7 +29,7 @@
         ],
         "rewards": {
           "recipes": [
-            "delightful:tin_knife"
+            "delightful:knives/tin_knife"
           ]
         }
       },

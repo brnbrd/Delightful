@@ -16,7 +16,7 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:lapis_lazuli_knife"
+              "recipe": "delightful:knives/lapis_lazuli_knife"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
@@ -29,7 +29,7 @@
         ],
         "rewards": {
           "recipes": [
-            "delightful:lapis_lazuli_knife"
+            "delightful:knives/lapis_lazuli_knife"
           ]
         }
       },
@@ -40,10 +40,6 @@
             {
               "type": "delightful:enabled",
               "value": "lapis_lazuli_knife"
-            },
-            {
-              "type": "forge:mod_loaded",
-              "modid": "mekanismtools"
             },
             {
               "type": "forge:not",

@@ -16,7 +16,7 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:lead_knife"
+              "recipe": "delightful:knives/lead_knife"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
@@ -29,7 +29,7 @@
         ],
         "rewards": {
           "recipes": [
-            "delightful:lead_knife"
+            "delightful:knives/lead_knife"
           ]
         }
       },

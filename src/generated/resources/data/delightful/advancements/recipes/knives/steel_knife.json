@@ -16,7 +16,7 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:steel_knife"
+              "recipe": "delightful:knives/steel_knife"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
@@ -29,7 +29,7 @@
         ],
         "rewards": {
           "recipes": [
-            "delightful:steel_knife"
+            "delightful:knives/steel_knife"
           ]
         }
       },

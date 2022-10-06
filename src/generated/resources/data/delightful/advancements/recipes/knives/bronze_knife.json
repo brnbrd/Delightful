@@ -16,7 +16,7 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:bronze_knife"
+              "recipe": "delightful:knives/bronze_knife"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
@@ -29,7 +29,7 @@
         ],
         "rewards": {
           "recipes": [
-            "delightful:bronze_knife"
+            "delightful:knives/bronze_knife"
           ]
         }
       },

@@ -16,7 +16,7 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:knightmetal_knife"
+              "recipe": "delightful:knives/knightmetal_knife"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
@@ -29,7 +29,7 @@
         ],
         "rewards": {
           "recipes": [
-            "delightful:knightmetal_knife"
+            "delightful:knives/knightmetal_knife"
           ]
         }
       },

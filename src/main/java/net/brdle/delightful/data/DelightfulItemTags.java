@@ -1,7 +1,6 @@
 package net.brdle.delightful.data;
 
 import net.brdle.delightful.Util;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import vectorwing.farmersdelight.FarmersDelight;
@@ -11,10 +10,10 @@ public class DelightfulItemTags {
 	// Delightful
 
 	// FarmersDelight
-	public static final TagKey<Item> CABINETS_STONE = bind(FarmersDelight.MODID, "cabinets/stone");
+	public static final TagKey<Item> CABINETS_STONE = Util.it(FarmersDelight.MODID, "cabinets/stone");
 
 	// Ecologics
-	public static final TagKey<Item> COOKED_PRICKLY_PEAR = bind("ecologics", "cooked_prickly_pear");
+	public static final TagKey<Item> COOKED_PRICKLY_PEAR = Util.it("ecologics", "cooked_prickly_pear");
 
 	// Forge
 	public static final TagKey<Item> FRUITS = forge("fruits");
@@ -69,9 +68,9 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> ICE_CUBES = forge("ice_cubes");
 
 	// Forbidden and Arcanus
-	public static final TagKey<Item> STELLARITE_PIECE = bind("forbidden_arcanus", "stellarite_piece");
-	public static final TagKey<Item> DRAGON_SCALE = bind("forbidden_arcanus", "dragon_scale");
-	public static final TagKey<Item> DRACO_ARCANUS_STAFF = bind("forbidden_arcanus", "draco_arcanus_staff");
+	public static final TagKey<Item> STELLARITE_PIECE = Util.it("forbidden_arcanus", "stellarite_piece");
+	public static final TagKey<Item> DRAGON_SCALE = Util.it("forbidden_arcanus", "dragon_scale");
+	public static final TagKey<Item> DRACO_ARCANUS_STAFF = Util.it("forbidden_arcanus", "draco_arcanus_staff");
 	public static final TagKey<Item> INGOTS_DEORUM = forge("ingots/deorum");
 
 	// Allthemodium
@@ -82,13 +81,9 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> INGOTS_PENDORITE = forge("ingots/pendorite");
 
 	// Deeper and Darker
-	public static final TagKey<Item> REINFORCED_ECHO_SHARD = bind("deeperdarker", "reinforced_echo_shard");
+	public static final TagKey<Item> REINFORCED_ECHO_SHARD = Util.it("deeperdarker", "reinforced_echo_shard");
 
 	private static TagKey<Item> forge(String name) {
-		return bind("forge", name);
-	}
-
-	private static TagKey<Item> bind(String modid, String name) {
-		return ItemTags.create(Util.rl(modid, name));
+		return Util.it("forge", name);
 	}
 }

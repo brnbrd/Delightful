@@ -28,7 +28,8 @@ public class DelightfulConfig {
         "copper_knife",
         "bone_knife",
         "amethyst_knife",
-        "emerald_knife"
+        "emerald_knife",
+        "lapis_lazuli_knife"
     );
 
     DelightfulConfig(ForgeConfigSpec.Builder builder) {

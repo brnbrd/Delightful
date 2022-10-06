@@ -46,7 +46,7 @@ public class AddItemLootModifier extends LootModifier {
         if ((this.unique && generatedLoot.stream().anyMatch(stack -> stack.getItem().equals(this.item))) || (this.maxAmount < 1)) {
             return generatedLoot;
         }
-        int amount = context.getRandom().nextInt(this.maxAmount + 1 - this.minAmount) + this.minAmount;
+        int amount = this.minAmount == this.maxAmount ? this.minAmount : context.getRandom().nextInt(this.maxAmount + 1 - this.minAmount) + this.minAmount;
         return (amount >= 1) ? Util.with(generatedLoot, new ItemStack(this.item, amount)) : generatedLoot;
     }
 

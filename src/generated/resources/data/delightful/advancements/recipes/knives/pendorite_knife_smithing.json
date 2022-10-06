@@ -4,7 +4,7 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_metal": {
+          "has_ingots/pendorite": {
             "conditions": {
               "items": [
                 {
@@ -16,20 +16,20 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:pendorite_knife_smithing"
+              "recipe": "delightful:knives/pendorite_knife_smithing"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
         },
         "requirements": [
           [
-            "has_metal",
+            "has_ingots/pendorite",
             "has_the_recipe"
           ]
         ],
         "rewards": {
           "recipes": [
-            "delightful:pendorite_knife_smithing"
+            "delightful:knives/pendorite_knife_smithing"
           ]
         }
       },

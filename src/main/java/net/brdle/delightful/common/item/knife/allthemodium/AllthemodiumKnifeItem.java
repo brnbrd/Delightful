@@ -6,12 +6,12 @@ import net.brdle.delightful.data.DelightfulItemTags;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
-
+import java.util.Optional;
 import java.util.function.Supplier;
 
 public class AllthemodiumKnifeItem extends CompatKnifeItem {
 	public AllthemodiumKnifeItem(Properties properties) {
-		super("allthemodium", DelightfulItemTags.PLATES_ALLTHEMODIUM.location(), DelightfulTiers.ALLTHEMODIUM, 0.5F, -2.0F, properties, Component.translatable("indestructible"));
+		super("allthemodium", DelightfulItemTags.PLATES_ALLTHEMODIUM, DelightfulTiers.ALLTHEMODIUM, 0.5F, -2.0F, properties, Component.translatable("indestructible"), Optional.empty());
 	}
 
 	@Override

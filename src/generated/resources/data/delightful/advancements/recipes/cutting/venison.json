@@ -1,0 +1,24 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "venison_chops"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:raw_venison"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

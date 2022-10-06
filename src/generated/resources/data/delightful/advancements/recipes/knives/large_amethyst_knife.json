@@ -16,7 +16,7 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:large_amethyst_knife"
+              "recipe": "delightful:knives/large_amethyst_knife"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
@@ -29,7 +29,7 @@
         ],
         "rewards": {
           "recipes": [
-            "delightful:large_amethyst_knife"
+            "delightful:knives/large_amethyst_knife"
           ]
         }
       },

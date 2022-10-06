@@ -16,7 +16,7 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:fiery_knife"
+              "recipe": "delightful:knives/fiery_knife"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
@@ -29,7 +29,7 @@
         ],
         "rewards": {
           "recipes": [
-            "delightful:fiery_knife"
+            "delightful:knives/fiery_knife"
           ]
         }
       },

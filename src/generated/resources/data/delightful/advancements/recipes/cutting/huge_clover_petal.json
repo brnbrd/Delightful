@@ -1,0 +1,21 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "chopped_clover"
+            },
+            {
+              "type": "forge:item_exists",
+              "item": "biomesoplenty:huge_clover_petal"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

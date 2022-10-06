@@ -16,7 +16,7 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:onyx_knife"
+              "recipe": "delightful:knives/onyx_knife"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
@@ -29,7 +29,7 @@
         ],
         "rewards": {
           "recipes": [
-            "delightful:onyx_knife"
+            "delightful:knives/onyx_knife"
           ]
         }
       },

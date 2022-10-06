@@ -8,9 +8,7 @@
             "conditions": {
               "items": [
                 {
-                  "items": [
-                    "minecraft:barrier"
-                  ]
+                  "tag": "forge:gems/emerald"
                 }
               ]
             },
@@ -18,7 +16,7 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:emerald_knife"
+              "recipe": "delightful:knives/emerald_knife"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
@@ -31,7 +29,7 @@
         ],
         "rewards": {
           "recipes": [
-            "delightful:emerald_knife"
+            "delightful:knives/emerald_knife"
           ]
         }
       },
@@ -42,6 +40,13 @@
             {
               "type": "delightful:enabled",
               "value": "emerald_knife"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:gems/emerald"
+              }
             }
           ]
         }

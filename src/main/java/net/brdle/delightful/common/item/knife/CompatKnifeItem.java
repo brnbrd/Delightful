@@ -2,39 +2,31 @@ package net.brdle.delightful.common.item.knife;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.fml.ModList;
 import javax.annotation.Nullable;
 import java.util.List;
+import java.util.Optional;
 import java.util.function.Supplier;
 
-public class CompatKnifeItem extends TaggedKnifeItem {
+public class CompatKnifeItem extends DelightfulKnifeItem {
     private final String modid;
     private final Component tool;
 
-    public CompatKnifeItem(String modid, ResourceLocation tag, Tier tier, float attackDamageIn, float attackSpeedIn, Properties properties) {
-        super(tag, tier, attackDamageIn, attackSpeedIn, properties);
+    public CompatKnifeItem(String modid, TagKey<Item> tag, Tier tier, float attackDamageIn, float attackSpeedIn, Properties properties, Optional<Supplier<Ingredient>> base) {
+        super(tag, tier, attackDamageIn, attackSpeedIn, properties, base);
         this.modid = modid;
         this.tool = Component.empty();
     }
 
-    public CompatKnifeItem(String modid, ResourceLocation tag, Tier tier, float attackDamageIn, float attackSpeedIn, Properties properties, Component tool) {
-        super(tag, tier, attackDamageIn, attackSpeedIn, properties);
+    // With tooltip
+    public CompatKnifeItem(String modid, TagKey<Item> tag, Tier tier, float attackDamageIn, float attackSpeedIn, Properties properties, Component tool, Optional<Supplier<Ingredient>> base) {
+        super(tag, tier, attackDamageIn, attackSpeedIn, properties, base);
         this.modid = modid;
         this.tool = tool;
-    }
-
-    // Smithed
-    public CompatKnifeItem(String modid, Supplier<Ingredient> base, ResourceLocation tag, Tier tier, float attackDamageIn, float attackSpeedIn, Properties properties) {
-        super(base, tag, tier, attackDamageIn, attackSpeedIn, properties);
-        this.modid = modid;
-        this.tool = Component.empty();
     }
 
     public String getModid() {
