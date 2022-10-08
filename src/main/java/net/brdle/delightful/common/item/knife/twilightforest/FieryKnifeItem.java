@@ -18,7 +18,7 @@ import java.util.function.Supplier;
 
 public class FieryKnifeItem extends CompatKnifeItem {
   public FieryKnifeItem(Properties properties) {
-    super("twilightforest", Util.it("forge", "ingots/fiery"), DelightfulTiers.FIERY, 0.5F, -2.0F, properties, Component.translatable("item.twilightforest.fiery_sword.tooltip").withStyle(ChatFormatting.GRAY), Optional.empty());
+    super("twilightforest", Util.it("forge", "ingots/fiery"), DelightfulTiers.FIERY, 0.5F, -2.0F, properties, Component.translatable("item.twilightforest.fiery_sword.tooltip").withStyle(ChatFormatting.GRAY), Optional.empty(), ChatFormatting.YELLOW);
   }
 
   @Override

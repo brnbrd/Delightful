@@ -168,17 +168,17 @@ public class DelightfulItems {
     public static final RegistryObject<Item> SINISITE_KNIFE = registerCompatKnife("sinisite", "fusion", ingot("sinisite"));
     public static final RegistryObject<Item> ALLTHEMODIUM_KNIFE = registerItem("allthemodium_knife", () -> new AllthemodiumKnifeItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
     public static final RegistryObject<Item> ENDERITE_KNIFE = registerSmithedKnife("enderite",
-        () -> Ingredient.of(ModItems.NETHERITE_KNIFE.get()), ingot("enderite"));
+        ing(ModItems.NETHERITE_KNIFE), ingot("enderite"));
     public static final RegistryObject<Item> DEORUM_KNIFE = registerCompatKnife("deorum", "forbidden_arcanus", ingot("deorum"));
-    public static final RegistryObject<Item> REINFORCED_DEORUM_KNIFE = registerSmithedKnife("reinforced_deorum", () -> Ingredient.of(DEORUM_KNIFE.get()), DelightfulItemTags.STELLARITE_PIECE, "forbidden_arcanus");
+    public static final RegistryObject<Item> REINFORCED_DEORUM_KNIFE = registerSmithedKnife("reinforced_deorum", ing(DEORUM_KNIFE), DelightfulItemTags.STELLARITE_PIECE, "forbidden_arcanus");
     public static final RegistryObject<Item> DRACO_ARCANUS_KNIFE = registerItem("draco_arcanus_knife", () -> new DracoArcanusKnifeItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
     public static final RegistryObject<Item> OSMIUM_KNIFE = registerCompatKnife("osmium", "mekanismtools", ingot("osmium"));
     public static final RegistryObject<Item> REFINED_GLOWSTONE_KNIFE = registerCompatKnife("refined_glowstone", "mekanismtools", ingot("refined_glowstone"));
     public static final RegistryObject<Item> REFINED_OBSIDIAN_KNIFE = registerCompatKnife("refined_obsidian", "mekanismtools", ingot("refined_obsidian"));
     public static final RegistryObject<Item> OBSIDIAN_INFUSED_ENDERITE_KNIFE = registerSmithedKnife("obsidian_infused_enderite",
-      () -> Ingredient.of(ENDERITE_KNIFE.get()), ingot("obsidian_infused_enderite"), "lolenderite");
+      ing(ENDERITE_KNIFE), ingot("obsidian_infused_enderite"), "lolenderite");
     public static final RegistryObject<Item> NETHERITE_OPAL_KNIFE = registerSmithedKnife("netherite_opal",
-      () -> Ingredient.of(BLACK_OPAL_KNIFE.get()), Tags.Items.INGOTS_NETHERITE, "oresabovediamonds");
+        ing(BLACK_OPAL_KNIFE), Tags.Items.INGOTS_NETHERITE, "oresabovediamonds");
     public static final RegistryObject<Item> LARGE_AMETHYST_KNIFE = registerCompatKnife("large_amethyst", "oresabovediamonds", gem("large_amethyst"));
     public static final RegistryObject<Item> FIERY_KNIFE = registerItem("fiery_knife", () -> new FieryKnifeItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
     public static final RegistryObject<Item> IRONWOOD_KNIFE = registerItem("ironwood_knife", () -> new IronwoodKnifeItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
@@ -186,7 +186,16 @@ public class DelightfulItems {
     public static final RegistryObject<Item> STEELEAF_KNIFE = registerItem("steeleaf_knife", () -> new SteeleafKnifeItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
     public static final RegistryObject<Item> LIVING_KNIFE = registerItem("living_knife", () -> new LivingKnifeItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
     public static final RegistryObject<Item> PENDORITE_KNIFE = registerSmithedKnife("pendorite", () -> Ingredient.of(ModItems.NETHERITE_KNIFE.get()), ingot("pendorite"), BYGCompat.modid);
-    public static final RegistryObject<Item> WARDEN_KNIFE = registerSmithedKnife("warden", () -> Ingredient.of(ModItems.NETHERITE_KNIFE.get()), DelightfulItemTags.REINFORCED_ECHO_SHARD, "deeperdarker");
+    public static final RegistryObject<Item> WARDEN_KNIFE = registerItem("warden_knife", () -> new CompatKnifeItem("deeperdarker", DelightfulItemTags.REINFORCED_ECHO_SHARD, DelightfulTiers.WARDEN, 0.5F, -2.0F, (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB), opt(ModItems.NETHERITE_KNIFE), ChatFormatting.LIGHT_PURPLE));
+
+    // Helper
+    private static Optional<Supplier<Ingredient>> opt(Supplier<Item> sup) {
+        return Optional.of(ing(sup));
+    }
+
+    private static Supplier<Ingredient> ing(Supplier<Item> i) {
+        return () -> Ingredient.of(i.get());
+    }
 
     // Registers a knife to Farmer's Delight tab, requiring modid
     public static RegistryObject<Item> registerCompatKnife(String name, String modid, TagKey<Item> tag, Component... tool) {
