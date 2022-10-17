@@ -18,7 +18,7 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:food/berry_matcha_latte"
+              "recipe": "delightful:food/berry_matcha_latte_from_matcha_latte"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
@@ -31,7 +31,7 @@
         ],
         "rewards": {
           "recipes": [
-            "delightful:food/berry_matcha_latte"
+            "delightful:food/berry_matcha_latte_from_matcha_latte"
           ]
         }
       },

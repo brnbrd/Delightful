@@ -1,8 +1,9 @@
-package net.brdle.delightful.common.config;
+package net.brdle.delightful.common.crafting;
 
 import com.google.gson.JsonObject;
 import net.brdle.delightful.Delightful;
 import net.brdle.delightful.Util;
+import net.brdle.delightful.common.config.DelightfulConfig;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
 import net.minecraftforge.common.crafting.conditions.ICondition;

@@ -8,30 +8,35 @@
           "values": [
             {
               "type": "delightful:enabled",
-              "value": "cooked_venison_chops"
-            },
-            {
-              "type": "delightful:enabled",
-              "value": "venison_chops"
+              "value": "zinc_knife"
             },
             {
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
-                "tag": "forge:raw_venison"
+                "tag": "forge:ingots/zinc"
               }
             }
           ]
         }
       ],
       "recipe": {
-        "type": "minecraft:smelting",
-        "cookingtime": 200,
-        "experience": 0.35,
-        "ingredient": {
-          "item": "delightful:venison_chops"
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "m": {
+            "tag": "forge:ingots/zinc"
+          },
+          "s": {
+            "tag": "forge:rods/wooden"
+          }
         },
-        "result": "delightful:cooked_venison_chops"
+        "pattern": [
+          "m",
+          "s"
+        ],
+        "result": {
+          "item": "delightful:zinc_knife"
+        }
       }
     }
   ]

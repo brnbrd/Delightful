@@ -64,6 +64,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> MEAT = forge("meat");
 	public static final TagKey<Item> CATTAIL = forge("cattail");
 	public static final TagKey<Item> INGOTS_STEEL = forge("ingots/steel");
+	public static final TagKey<Item> INGOTS_ZINC = forge("ingots/zinc");
 	public static final TagKey<Item> GEMS_ROSE_QUARTZ = forge("gems/rose_quartz");
 	public static final TagKey<Item> ICE_CUBES = forge("ice_cubes");
 
@@ -82,6 +83,11 @@ public class DelightfulItemTags {
 
 	// Deeper and Darker
 	public static final TagKey<Item> REINFORCED_ECHO_SHARD = Util.it("deeperdarker", "reinforced_echo_shard");
+
+	// Create
+	public static final TagKey<Item> POLISHED_ROSE_QUARTZ = Util.it("create", "polished_rose_quartz");
+	public static final TagKey<Item> HEAP_EXPERIENCE = Util.it("create_sa", "heap_of_experience");
+	public static final TagKey<Item> ZINC_HANDLE = Util.it("create_sa", "zinc_handle");
 
 	private static TagKey<Item> forge(String name) {
 		return Util.it("forge", name);

@@ -210,6 +210,11 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.INGOTS_PENDORITE).addOptional(Util.rl(BYGCompat.modid, "pendorite_ingot"));
 
 		this.tag(DelightfulItemTags.REINFORCED_ECHO_SHARD).addOptional(DelightfulItemTags.REINFORCED_ECHO_SHARD.location());
+
+		// Create
+		this.tag(DelightfulItemTags.POLISHED_ROSE_QUARTZ).addOptional(DelightfulItemTags.POLISHED_ROSE_QUARTZ.location());
+		this.tag(DelightfulItemTags.ZINC_HANDLE).addOptional(DelightfulItemTags.ZINC_HANDLE.location());
+		this.tag(DelightfulItemTags.HEAP_EXPERIENCE).addOptional(DelightfulItemTags.HEAP_EXPERIENCE.location());
 	}
 
 	/**

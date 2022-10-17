@@ -10,12 +10,16 @@ import net.minecraft.world.Containers;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.Nullable;
 import java.util.Objects;
+import java.util.Optional;
+import java.util.function.Supplier;
 
 public class Util {
 
@@ -52,6 +56,22 @@ public class Util {
 
   public static String name(Block block) {
     return Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath();
+  }
+
+  public static Supplier<Ingredient> ing(ItemLike i) {
+    return () -> Ingredient.of(i);
+  }
+
+  public static Supplier<Ingredient> ing(Supplier<? extends ItemLike> i) {
+    return () -> Ingredient.of(i.get());
+  }
+
+  public static Supplier<Ingredient> ing(TagKey<Item> tag) {
+    return () -> Ingredient.of(tag);
+  }
+
+  public static Optional<Supplier<Ingredient>> opt(Supplier<ItemLike> sup) {
+    return Optional.of(ing(sup));
   }
 
   public static void dropOrGive(ItemStack stack, Level world, BlockPos drop, Player give) {

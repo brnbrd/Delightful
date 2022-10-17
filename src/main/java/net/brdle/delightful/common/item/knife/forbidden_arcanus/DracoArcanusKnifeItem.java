@@ -1,5 +1,6 @@
 package net.brdle.delightful.common.item.knife.forbidden_arcanus;
 
+import net.brdle.delightful.Util;
 import net.brdle.delightful.common.item.DelightfulTiers;
 import net.brdle.delightful.common.item.knife.CompatKnifeItem;
 import net.brdle.delightful.data.DelightfulItemTags;
@@ -14,6 +15,6 @@ public class DracoArcanusKnifeItem extends CompatKnifeItem {
 
 	@Override
 	public Supplier<Ingredient> getRod() {
-		return () -> Ingredient.of(DelightfulItemTags.DRACO_ARCANUS_STAFF);
+		return Util.ing(DelightfulItemTags.DRACO_ARCANUS_STAFF);
 	}
 }

@@ -8,11 +8,11 @@
           "values": [
             {
               "type": "delightful:enabled",
-              "value": "matcha_latte"
+              "value": "marshmallow_stick"
             },
             {
-              "type": "delightful:enabled",
-              "value": "matcha"
+              "type": "forge:mod_loaded",
+              "modid": "create_confectionery"
             }
           ]
         }
@@ -21,20 +21,21 @@
         "type": "minecraft:crafting_shapeless",
         "ingredients": [
           {
-            "item": "minecraft:glass_bottle"
+            "item": "create_confectionery:marshmallow"
           },
           {
-            "tag": "forge:milk"
+            "item": "create_confectionery:marshmallow"
           },
           {
-            "item": "minecraft:honey_bottle"
+            "tag": "forge:rods/wooden"
           },
           {
-            "item": "delightful:matcha"
+            "tag": "forge:rods/wooden"
           }
         ],
         "result": {
-          "item": "delightful:matcha_latte"
+          "count": 2,
+          "item": "delightful:marshmallow_stick"
         }
       }
     }

@@ -181,6 +181,18 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "experience_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:experience_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "fiery_knife": {
       "conditions": {
         "items": [
@@ -199,6 +211,18 @@
           {
             "items": [
               "farmersdelight:flint_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "gilded_quartz_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:gilded_quartz_knife"
             ]
           }
         ]
@@ -528,6 +552,18 @@
         ]
       },
       "trigger": "minecraft:inventory_changed"
+    },
+    "zinc_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:zinc_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "display": {
@@ -569,6 +605,7 @@
       "invar_knife",
       "lead_knife",
       "nickel_knife",
+      "zinc_knife",
       "mythril_knife",
       "adamantium_knife",
       "onyx_knife",
@@ -591,7 +628,9 @@
       "steeleaf_knife",
       "living_knife",
       "pendorite_knife",
-      "warden_knife"
+      "warden_knife",
+      "experience_knife",
+      "gilded_quartz_knife"
     ]
   ]
 }

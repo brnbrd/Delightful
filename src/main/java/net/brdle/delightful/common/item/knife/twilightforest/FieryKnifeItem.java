@@ -49,6 +49,6 @@ public class FieryKnifeItem extends CompatKnifeItem {
 
   @Override
   public Supplier<Ingredient> getRod() {
-    return () -> Ingredient.of(Items.BLAZE_ROD);
+    return Util.ing(Items.BLAZE_ROD);
   }
 }

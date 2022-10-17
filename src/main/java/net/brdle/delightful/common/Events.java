@@ -1,15 +1,15 @@
 package net.brdle.delightful.common;
 
 import net.brdle.delightful.Delightful;
-import net.brdle.delightful.common.config.EnabledCondition;
+import net.brdle.delightful.common.crafting.ElseRecipe;
+import net.brdle.delightful.common.crafting.EnabledCondition;
 import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.world.DelightfulWildCropGeneration;
-import net.brdle.delightful.compat.RootsCompat;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.ComposterBlock;
+import net.minecraftforge.common.crafting.ConditionalRecipe;
 import net.minecraftforge.common.crafting.CraftingHelper;
-import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -53,6 +53,7 @@ public class Events {
     public static void registerSerializers(RegisterEvent event) {
         if (event.getRegistryKey() == ForgeRegistries.RECIPE_SERIALIZERS.getRegistryKey()) {
             CraftingHelper.register(EnabledCondition.Serializer.INSTANCE);
+            event.register(ForgeRegistries.Keys.RECIPE_SERIALIZERS, new ResourceLocation(Delightful.MODID, "else"), ElseRecipe.Serializer::new);
         }
     }
 }

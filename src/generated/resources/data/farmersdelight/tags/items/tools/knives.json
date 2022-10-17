@@ -16,6 +16,7 @@
     "delightful:invar_knife",
     "delightful:lead_knife",
     "delightful:nickel_knife",
+    "delightful:zinc_knife",
     "delightful:mythril_knife",
     "delightful:adamantium_knife",
     "delightful:onyx_knife",
@@ -38,6 +39,8 @@
     "delightful:steeleaf_knife",
     "delightful:living_knife",
     "delightful:pendorite_knife",
-    "delightful:warden_knife"
+    "delightful:warden_knife",
+    "delightful:experience_knife",
+    "delightful:gilded_quartz_knife"
   ]
 }

@@ -1,0 +1,30 @@
+{
+  "type": "delightful:add_item",
+  "conditions": [
+    {
+      "condition": "delightful:enabled",
+      "item": "green_tea_leaf"
+    },
+    {
+      "chance": 0.005,
+      "condition": "minecraft:random_chance"
+    },
+    {
+      "condition": "minecraft:inverted",
+      "term": {
+        "condition": "minecraft:match_tool",
+        "predicate": {
+          "tag": "forge:tools/knives"
+        }
+      }
+    },
+    {
+      "condition": "delightful:is_tag",
+      "tag": "delightful:drops_green_tea_leaf"
+    }
+  ],
+  "item": "delightful:green_tea_leaf",
+  "maxAmount": 1,
+  "minAmount": 1,
+  "unique": true
+}

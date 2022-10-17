@@ -4,13 +4,11 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_matcha_latte": {
+          "has_experience": {
             "conditions": {
               "items": [
                 {
-                  "items": [
-                    "delightful:matcha_latte"
-                  ]
+                  "tag": "create_sa:heap_of_experience"
                 }
               ]
             },
@@ -18,20 +16,20 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:food/berry_matcha_latte"
+              "recipe": "delightful:knives/experience_knife"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
         },
         "requirements": [
           [
-            "has_matcha_latte",
+            "has_experience",
             "has_the_recipe"
           ]
         ],
         "rewards": {
           "recipes": [
-            "delightful:food/berry_matcha_latte"
+            "delightful:knives/experience_knife"
           ]
         }
       },
@@ -41,15 +39,18 @@
           "values": [
             {
               "type": "delightful:enabled",
-              "value": "berry_matcha_latte"
+              "value": "experience_knife"
             },
             {
-              "type": "delightful:enabled",
-              "value": "matcha_latte"
+              "type": "forge:mod_loaded",
+              "modid": "create_sa"
             },
             {
-              "type": "delightful:enabled",
-              "value": "matcha"
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "create_sa:heap_of_experience"
+              }
             }
           ]
         }

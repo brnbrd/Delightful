@@ -5,7 +5,7 @@ import net.brdle.delightful.Delightful;
 import net.brdle.delightful.Util;
 import net.brdle.delightful.common.block.DelightfulBlocks;
 import net.brdle.delightful.common.block.DelightfulCabinetBlock;
-import net.brdle.delightful.common.config.EnabledCondition;
+import net.brdle.delightful.common.crafting.EnabledCondition;
 import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.item.knife.CompatKnifeItem;
 import net.brdle.delightful.common.item.knife.DelightfulKnifeItem;
@@ -112,7 +112,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .requires(Tags.Items.RODS_WOODEN)
                 .requires(Tags.Items.RODS_WOODEN)
                 .unlockedBy("has_sugar", has(DelightfulItemTags.SUGAR)),
-            "food/marshmallow_stick", finished, enabled("marshmallow_stick"));
+            "food/marshmallow_stick", finished, enabled("marshmallow_stick"), not(modLoaded("create_confectionery")));
         wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.MARSHMALLOW_STICK.get(), 2)
                 .requires(DelightfulItemTags.SUGAR)
                 .requires(StrictNBTIngredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
@@ -645,7 +645,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
     }
 
     private void knife(DelightfulKnifeItem knife, Consumer<FinishedRecipe> finished) {
-        if (knife.getTag() == null) {
+        if (knife.getTag() == null || !knife.genRecipe()) {
             return;
         }
         if (knife.isSmithing()) {

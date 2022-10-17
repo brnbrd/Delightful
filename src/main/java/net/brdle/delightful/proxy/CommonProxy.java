@@ -1,6 +1,5 @@
 package net.brdle.delightful.proxy;
 
-import net.brdle.delightful.Delightful;
 import net.brdle.delightful.common.Events;
 import net.brdle.delightful.common.ForgeEvents;
 import net.brdle.delightful.common.block.DelightfulBlocks;

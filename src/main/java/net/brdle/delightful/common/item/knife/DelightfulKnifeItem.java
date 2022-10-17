@@ -66,7 +66,7 @@ public class DelightfulKnifeItem extends KnifeItem implements IConfigured {
     }
 
     public Supplier<Ingredient> getRod() {
-        return () -> Ingredient.of(Tags.Items.RODS_WOODEN);
+        return Util.ing(Tags.Items.RODS_WOODEN);
     }
 
     @Nullable
@@ -79,6 +79,10 @@ public class DelightfulKnifeItem extends KnifeItem implements IConfigured {
 
     public boolean isSmithing() {
         return this.smithingBase != null;
+    }
+
+    public boolean genRecipe() {
+        return true;
     }
 
     @Override
