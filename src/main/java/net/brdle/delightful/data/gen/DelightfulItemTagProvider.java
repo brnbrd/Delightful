@@ -107,7 +107,9 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Util.rl(BYGCompat.modid, "green_apple"));
 		this.tag(DelightfulItemTags.NUTS_WALNUT).addOptional(Util.rl("ecologics", "walnut"));
 		this.tag(DelightfulItemTags.NUTS_PEANUT).addOptional(Util.rl("sprout", "peanut"));
-		this.tag(DelightfulItemTags.NUTS_ACORN).add(DelightfulItems.ACORN.get());
+		this.tag(DelightfulItemTags.NUTS_ACORN)
+			.add(DelightfulItems.ACORN.get())
+			.addOptional(Util.rl("natural_decoration", "oak_acorn"));
 		this.tag(DelightfulItemTags.NUTS)
 			.addTag(DelightfulItemTags.NUTS_ACORN)
 			.addTag(DelightfulItemTags.NUTS_WALNUT)
