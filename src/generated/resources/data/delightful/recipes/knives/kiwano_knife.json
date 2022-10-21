@@ -18,7 +18,7 @@
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
-                "tag": "seeds:kiwano_peel"
+                "tag": "nethers_exoticism:kiwano_peel"
               }
             }
           ]
@@ -28,7 +28,7 @@
         "type": "minecraft:crafting_shaped",
         "key": {
           "m": {
-            "tag": "seeds:kiwano_peel"
+            "tag": "nethers_exoticism:kiwano_peel"
           },
           "s": {
             "tag": "forge:rods/wooden"

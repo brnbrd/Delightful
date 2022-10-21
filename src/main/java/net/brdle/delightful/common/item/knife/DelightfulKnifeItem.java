@@ -85,6 +85,10 @@ public class DelightfulKnifeItem extends KnifeItem implements IConfigured {
         return true;
     }
 
+    public boolean hasCustomName() {
+        return false;
+    }
+
     @Override
     protected boolean allowedIn(@NotNull CreativeModeTab cat) {
         return tabs.contains(cat) && this.config();

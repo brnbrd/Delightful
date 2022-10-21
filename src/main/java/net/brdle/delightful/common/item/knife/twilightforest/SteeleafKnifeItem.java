@@ -23,4 +23,9 @@ public class SteeleafKnifeItem extends CompatKnifeItem {
       list.add(stack);
     }
   }
+
+  @Override
+  public boolean genRecipe() {
+    return false;
+  }
 }

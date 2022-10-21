@@ -26,5 +26,6 @@ public class Generators {
         e.getGenerator().addProvider(e.includeClient(), new DelightfulBlockStateProvider(gen, helper));
         e.getGenerator().addProvider(e.includeClient(), new DelightfulBlockModelProvider(gen, helper));
         e.getGenerator().addProvider(e.includeClient(), new DelightfulItemModelProvider(gen, helper));
+        e.getGenerator().addProvider(e.includeClient(), new DelightfulLanguageProvider(gen));
     }
 }

@@ -1,4 +1,4 @@
-// 1.19	2022-10-20T16:57:55.8860302	Recipes
+// 1.19	2022-10-20T17:44:33.8448935	Recipes
 2008bf684d83272701a8032bfb2deb03b22b94b7 data/delightful/advancements/recipes/blasting/green_tea_leaf.json
 60ffe246fc7cd82d396e8dc65184da554be1a88a data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 2cf937c163d47a583b4eb63671b5c4e3055179cc data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
@@ -76,7 +76,7 @@ eae4bc58eb61ad69258ded374a1f2b67fb2af9eb data/delightful/advancements/recipes/kn
 0b3169a9ea4c9af0fc5217b7474c16cfb9b94126 data/delightful/advancements/recipes/knives/experience_knife.json
 ac8e9c39b951b19ac11519328049b5bbfb745fb5 data/delightful/advancements/recipes/knives/fiery_knife.json
 0ec0eea158dfbd0ea5dc50b3812d8aa426fdd83f data/delightful/advancements/recipes/knives/invar_knife.json
-9e40f7ba18ad0ef779b48bcf35ed9506afeab9b9 data/delightful/advancements/recipes/knives/kiwano_knife.json
+052d5eff71193683e8dd3982b350fa5d79f2188e data/delightful/advancements/recipes/knives/kiwano_knife.json
 8c84ed211a12ac85631f9f20ea04d7134b939547 data/delightful/advancements/recipes/knives/knightmetal_knife.json
 70a608cc37cff271fc4a53a730c004d83c094c16 data/delightful/advancements/recipes/knives/lapis_lazuli_knife.json
 c4da57d08283e0a3ab7f9058fe214f940f80a8f8 data/delightful/advancements/recipes/knives/large_amethyst_knife.json
@@ -186,7 +186,7 @@ dbc99809a92b8e16dbac2fb7c6c2ee805b7647bb data/delightful/recipes/knives/draco_ar
 31a0a30abda3c4b6099390961e5a71087ae25f1f data/delightful/recipes/knives/experience_knife.json
 caeaa9b06e9defcf1c16819a11d1c4b3b36ac64e data/delightful/recipes/knives/fiery_knife.json
 c6e9b184f4de26adee5ca69fc843087296eb4d80 data/delightful/recipes/knives/invar_knife.json
-26c0af925bf7bb70daf6449034d6187a8dfed45d data/delightful/recipes/knives/kiwano_knife.json
+f2c5362b7acfd8b81cb7b3c4b0eca4c81eeb5ca7 data/delightful/recipes/knives/kiwano_knife.json
 094cd3a7c0e7f72a44f6a43c4461383acc90a1d1 data/delightful/recipes/knives/knightmetal_knife.json
 68fd732c56a2ede6a1118fa8a8d8bd0a92a893db data/delightful/recipes/knives/lapis_lazuli_knife.json
 290f9d80b4f960c515e63eed114a30090fdfd661 data/delightful/recipes/knives/large_amethyst_knife.json

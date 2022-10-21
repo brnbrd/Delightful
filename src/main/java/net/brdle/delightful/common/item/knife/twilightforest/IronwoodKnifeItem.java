@@ -24,4 +24,9 @@ public class IronwoodKnifeItem extends CompatKnifeItem {
       list.add(stack);
     }
   }
+
+  @Override
+  public boolean genRecipe() {
+    return false;
+  }
 }

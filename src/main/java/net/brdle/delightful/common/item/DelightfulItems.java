@@ -9,6 +9,8 @@ import net.brdle.delightful.common.item.knife.allthemodium.AllthemodiumKnifeItem
 import net.brdle.delightful.common.item.knife.create_sa.ExperienceKnifeItem;
 import net.brdle.delightful.common.item.knife.create_sa.GildedQuartzKnifeItem;
 import net.brdle.delightful.common.item.knife.forbidden_arcanus.DracoArcanusKnifeItem;
+import net.brdle.delightful.common.item.knife.lolenderite.ObsdianInfusedEnderiteKnifeItem;
+import net.brdle.delightful.common.item.knife.oresabovediamonds.LargeAmethystKnifeItem;
 import net.brdle.delightful.common.item.knife.rootsclassic.LivingKnifeItem;
 import net.brdle.delightful.common.item.knife.twilightforest.FieryKnifeItem;
 import net.brdle.delightful.common.item.knife.twilightforest.IronwoodKnifeItem;
@@ -18,8 +20,6 @@ import net.brdle.delightful.compat.BYGCompat;
 import net.brdle.delightful.data.DelightfulItemTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
@@ -179,11 +179,10 @@ public class DelightfulItems {
     public static final RegistryObject<Item> OSMIUM_KNIFE = registerCompatKnife("osmium", "mekanismtools", ingot("osmium"));
     public static final RegistryObject<Item> REFINED_GLOWSTONE_KNIFE = registerCompatKnife("refined_glowstone", "mekanismtools", ingot("refined_glowstone"));
     public static final RegistryObject<Item> REFINED_OBSIDIAN_KNIFE = registerCompatKnife("refined_obsidian", "mekanismtools", ingot("refined_obsidian"));
-    public static final RegistryObject<Item> OBSIDIAN_INFUSED_ENDERITE_KNIFE = registerSmithedKnife("obsidian_infused_enderite",
-      Util.ing(ENDERITE_KNIFE), ingot("obsidian_infused_enderite"), "lolenderite");
+    public static final RegistryObject<Item> OBSIDIAN_INFUSED_ENDERITE_KNIFE = registerItem("obsidian_infused_enderite_knife", () -> new ObsdianInfusedEnderiteKnifeItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
     public static final RegistryObject<Item> NETHERITE_OPAL_KNIFE = registerSmithedKnife("netherite_opal",
         Util.ing(BLACK_OPAL_KNIFE), Tags.Items.INGOTS_NETHERITE, "oresabovediamonds");
-    public static final RegistryObject<Item> LARGE_AMETHYST_KNIFE = registerCompatKnife("large_amethyst", "oresabovediamonds", gem("large_amethyst"));
+    public static final RegistryObject<Item> LARGE_AMETHYST_KNIFE = registerItem("large_amethyst_knife", () -> new LargeAmethystKnifeItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
     public static final RegistryObject<Item> FIERY_KNIFE = registerItem("fiery_knife", () -> new FieryKnifeItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
     public static final RegistryObject<Item> IRONWOOD_KNIFE = registerItem("ironwood_knife", () -> new IronwoodKnifeItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
     public static final RegistryObject<Item> KNIGHTMETAL_KNIFE = registerCompatKnife("knightmetal", "twilightforest", ingot("knightmetal"), Component.translatable("item.twilightforest.knightmetal_sword.tooltip").withStyle(ChatFormatting.GRAY));
