@@ -1,5 +1,9 @@
 {
   "values": [
-    "delightful:acorn"
+    "delightful:acorn",
+    {
+      "id": "natural_decoration:oak_acorn",
+      "required": false
+    }
   ]
 }

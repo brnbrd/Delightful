@@ -51,7 +51,9 @@ public enum DelightfulTiers implements Tier {
     WARDEN(4, 2464, 11.0F, 7.0F, 21, Util.ing(DelightfulItemTags.REINFORCED_ECHO_SHARD)),
     ZINC(2, 250, 7.0F, 2.0F, 11, Util.ing(DelightfulItemTags.INGOTS_ZINC)),
     GILDED_QUARTZ(3, 1644, 9.0F, 4.0F, 14, Util.ing(DelightfulItemTags.POLISHED_ROSE_QUARTZ)),
-    EXPERIENCE(2, 270, 7.0F, 1.5F, 800, Util.ing(DelightfulItemTags.HEAP_EXPERIENCE));
+    EXPERIENCE(2, 270, 7.0F, 1.5F, 800, Util.ing(DelightfulItemTags.HEAP_EXPERIENCE)),
+    KIWANO(2, 250, 6.0F, 2.0F, 14, Util.ing(DelightfulItemTags.KIWANO_PEEL)),
+    LEAF(1, 16, 20.0F, 4.0F, 14, Util.ing(DelightfulItemTags.SHARP_LEAF));
 
     private final int level;
     private final int uses;

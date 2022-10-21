@@ -193,6 +193,8 @@ public class DelightfulItems {
     public static final RegistryObject<Item> WARDEN_KNIFE = registerItem("warden_knife", () -> new CompatKnifeItem("deeperdarker", DelightfulItemTags.REINFORCED_ECHO_SHARD, DelightfulTiers.WARDEN, 0.5F, -2.0F, (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB), Util.opt(ModItems.NETHERITE_KNIFE::get), ChatFormatting.LIGHT_PURPLE));
     public static final RegistryObject<Item> EXPERIENCE_KNIFE = registerItem("experience_knife", () -> new ExperienceKnifeItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
     public static final RegistryObject<Item> GILDED_QUARTZ_KNIFE = registerItem("gilded_quartz_knife", () -> new GildedQuartzKnifeItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
+    public static final RegistryObject<Item> LEAF_KNIFE = registerCompatKnife("leaf", "seeds", DelightfulItemTags.SHARP_LEAF);
+    public static final RegistryObject<Item> KIWANO_KNIFE = registerCompatKnife("kiwano", "nethers_exoticism", DelightfulItemTags.KIWANO_PEEL);
 
     // Registers a knife to Farmer's Delight tab, requiring modid
     public static RegistryObject<Item> registerCompatKnife(String name, String modid, TagKey<Item> tag, Component... tool) {

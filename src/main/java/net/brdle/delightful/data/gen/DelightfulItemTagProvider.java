@@ -11,8 +11,11 @@ import net.brdle.delightful.data.DelightfulItemTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -200,23 +203,29 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.forEach(build::add);
 
 		// Ecologics
-		this.tag(DelightfulItemTags.COOKED_PRICKLY_PEAR).addOptional(DelightfulItemTags.COOKED_PRICKLY_PEAR.location());
+		this.addSelf(DelightfulItemTags.COOKED_PRICKLY_PEAR);
 
 		// Forbidden and Arcanus
-		this.tag(DelightfulItemTags.STELLARITE_PIECE).addOptional(DelightfulItemTags.STELLARITE_PIECE.location());
-		this.tag(DelightfulItemTags.DRACO_ARCANUS_STAFF).addOptional(DelightfulItemTags.DRACO_ARCANUS_STAFF.location());
-		this.tag(DelightfulItemTags.DRAGON_SCALE).addOptional(DelightfulItemTags.DRAGON_SCALE.location());
+		this.addSelf(DelightfulItemTags.STELLARITE_PIECE);
+		this.addSelf(DelightfulItemTags.DRACO_ARCANUS_STAFF);
+		this.addSelf(DelightfulItemTags.DRAGON_SCALE);
 		this.tag(DelightfulItemTags.INGOTS_DEORUM).addOptional(Util.rl("forbidden_arcanus", "deorum_ingot"));
 
 		// Byg
 		this.tag(DelightfulItemTags.INGOTS_PENDORITE).addOptional(Util.rl(BYGCompat.modid, "pendorite_ingot"));
 
-		this.tag(DelightfulItemTags.REINFORCED_ECHO_SHARD).addOptional(DelightfulItemTags.REINFORCED_ECHO_SHARD.location());
+		this.addSelf(DelightfulItemTags.REINFORCED_ECHO_SHARD);
 
 		// Create
-		this.tag(DelightfulItemTags.POLISHED_ROSE_QUARTZ).addOptional(DelightfulItemTags.POLISHED_ROSE_QUARTZ.location());
-		this.tag(DelightfulItemTags.ZINC_HANDLE).addOptional(DelightfulItemTags.ZINC_HANDLE.location());
-		this.tag(DelightfulItemTags.HEAP_EXPERIENCE).addOptional(DelightfulItemTags.HEAP_EXPERIENCE.location());
+		this.addSelf(DelightfulItemTags.POLISHED_ROSE_QUARTZ);
+		this.addSelf(DelightfulItemTags.ZINC_HANDLE);
+		this.addSelf(DelightfulItemTags.HEAP_EXPERIENCE);
+
+		// Seeds
+		this.addSelf(DelightfulItemTags.SHARP_LEAF);
+
+		// Nethers Exoticism
+		this.addSelf(DelightfulItemTags.KIWANO_PEEL);
 	}
 
 	/**
@@ -225,5 +234,9 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 	@Override
 	public @NotNull String getName() {
 		return Delightful.MODID;
+	}
+
+	private TagsProvider.TagAppender<Item> addSelf(TagKey<Item> item) {
+		return this.tag(item).addOptional(item.location());
 	}
 }

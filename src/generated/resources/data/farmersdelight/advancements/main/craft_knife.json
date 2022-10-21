@@ -277,6 +277,18 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "kiwano_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:kiwano_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "knightmetal_knife": {
       "conditions": {
         "items": [
@@ -319,6 +331,18 @@
           {
             "items": [
               "delightful:lead_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "leaf_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:leaf_knife"
             ]
           }
         ]
@@ -630,7 +654,9 @@
       "pendorite_knife",
       "warden_knife",
       "experience_knife",
-      "gilded_quartz_knife"
+      "gilded_quartz_knife",
+      "leaf_knife",
+      "kiwano_knife"
     ]
   ]
 }

@@ -86,8 +86,12 @@ public class DelightfulItemTags {
 
 	// Create
 	public static final TagKey<Item> POLISHED_ROSE_QUARTZ = Util.it("create", "polished_rose_quartz");
+
+	// MCreator mods
 	public static final TagKey<Item> HEAP_EXPERIENCE = Util.it("create_sa", "heap_of_experience");
 	public static final TagKey<Item> ZINC_HANDLE = Util.it("create_sa", "zinc_handle");
+	public static final TagKey<Item> SHARP_LEAF = Util.it("seeds", "sharp_leaf");
+	public static final TagKey<Item> KIWANO_PEEL = Util.it("nethers_exoticism", "kiwano_peel");
 
 	private static TagKey<Item> forge(String name) {
 		return Util.it("forge", name);
