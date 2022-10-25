@@ -41,6 +41,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> FRUITS_PITAYA = forge("fruits/pitaya");
 	public static final TagKey<Item> FRUITS_RAMBUTAN = forge("fruits/rambutan");
 	public static final TagKey<Item> FRUITS_JABUTICABA = forge("fruits/jabuticaba");
+	public static final TagKey<Item> FRUITS_KIWANO = forge("fruits/kiwano");
 	public static final TagKey<Item> FRUITS_SWEET = forge("fruits/sweet");
 	public static final TagKey<Item> FRUITS_PRICKLY_PEAR = forge("fruits/prickly_pear");
 	public static final TagKey<Item> FRUITS_BERRIES = forge("fruits/berries");

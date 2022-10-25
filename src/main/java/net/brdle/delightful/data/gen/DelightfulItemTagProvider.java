@@ -94,6 +94,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_JABUTICABA)
 			.addTag(DelightfulItemTags.FRUITS_RAMBUTAN)
 			.addTag(DelightfulItemTags.FRUITS_PITAYA)
+			.addTag(DelightfulItemTags.FRUITS_KIWANO)
 			.addOptional(Util.rl("ars_nouveau", "mendosteen_pod"))
 			.addOptional(Util.rl("ars_nouveau", "bastion_pod"));
 		this.tag(DelightfulItemTags.FRUITS_SWEET)
@@ -236,6 +237,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.FRUITS_JABUTICABA).addOptional(Util.rl("nethers_exoticism", "jaboticaba"));
 		this.tag(DelightfulItemTags.FRUITS_PITAYA).addOptional(Util.rl("nethers_exoticism", "pitaya"));
 		this.tag(DelightfulItemTags.FRUITS_RAMBUTAN).addOptional(Util.rl("nethers_exoticism", "ramboutan"));
+		this.tag(DelightfulItemTags.FRUITS_KIWANO).addOptional(Util.rl("nethers_exoticism", "kiwano"));
 	}
 
 	/**
