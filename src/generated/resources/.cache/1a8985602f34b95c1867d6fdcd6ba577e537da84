@@ -1,7 +1,4 @@
-// 1.19	2022-10-24T18:44:05.6238674	delightful
-30f74d9e293b141091b2ffac55542d18295c8e3a data/delightful/tags/blocks/cantaloupe_spawns.json
-ba6ef28da1fcd146a5a73f41f83db71fb06d65f0 data/delightful/tags/blocks/drops_acorn.json
-a4e8097fff07f9a74259d6b5dd583f3437ff28a2 data/delightful/tags/blocks/drops_green_tea_leaf.json
-0d8a253ba8a6aeb43253500df3aeeec54734ba62 data/delightful/tags/blocks/drops_straw.json
-471575c40c25d4ee104811c52cadceaa2ca1c51e data/minecraft/tags/blocks/mineable/axe.json
-56652c93f5e1505b2c4875c8d14635f2a2c72350 data/minecraft/tags/blocks/mineable/pickaxe.json
+// 1.19	2022-10-25T11:28:00.9667318	delightful
+56dd5fb45d876faf2b72731f0d1531296baa5e35 data/delightful/tags/entity_types/drops_acorn.json
+8402c24b8872a973f5f97bfec0ac81ef2b167b89 data/delightful/tags/entity_types/drops_raw_goat.json
+85b04db8fb231f2d36fdc01caca3b72898acab47 data/delightful/tags/entity_types/fatty_animals.json

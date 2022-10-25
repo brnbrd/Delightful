@@ -1,0 +1,13 @@
+{
+  "type": "delightful:smelt",
+  "conditions": [
+    {
+      "condition": "minecraft:match_tool",
+      "predicate": {
+        "items": [
+          "delightful:kiwano_knife"
+        ]
+      }
+    }
+  ]
+}

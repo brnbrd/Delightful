@@ -13,6 +13,7 @@ public class DelightfulLootModifiers {
 	private static final DeferredRegister<Codec<? extends IGlobalLootModifier>> GLM = DeferredRegister.create(ForgeRegistries.Keys.GLOBAL_LOOT_MODIFIER_SERIALIZERS, Delightful.MODID);
 
 	public static final RegistryObject<Codec<AddItemLootModifier>> ADD_ITEM = GLM.register("add_item", () -> AddItemLootModifier.CODEC);
+	public static final RegistryObject<Codec<SmeltLootModifier>> SMELT = GLM.register("smelt", () -> SmeltLootModifier.CODEC);
 
 	public static void create(IEventBus bus) {
 		GLM.register(bus);

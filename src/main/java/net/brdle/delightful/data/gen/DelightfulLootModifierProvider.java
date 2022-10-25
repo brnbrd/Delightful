@@ -5,6 +5,7 @@ import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.loot.AddItemLootModifier;
 import net.brdle.delightful.common.loot.LootItemBlockIsTagCondition;
 import net.brdle.delightful.common.loot.LootItemEnabledCondition;
+import net.brdle.delightful.common.loot.SmeltLootModifier;
 import net.brdle.delightful.data.DelightfulBlockTags;
 import net.minecraft.advancements.critereon.*;
 import net.minecraft.data.DataGenerator;
@@ -98,6 +99,11 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 				LootItemBlockIsTagCondition.isTag(DelightfulBlockTags.DROPS_STRAW)
 			},
 		ModItems.STRAW.get(), 1, 1, true
+		));
+		add("kiwano", new SmeltLootModifier(
+			new LootItemCondition[]{
+				MatchTool.toolMatches(ItemPredicate.Builder.item().of(DelightfulItems.KIWANO_KNIFE.get())).build(),
+			}
 		));
 	}
 }
