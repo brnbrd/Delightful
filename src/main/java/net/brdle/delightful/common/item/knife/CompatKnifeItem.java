@@ -11,7 +11,6 @@ import net.minecraftforge.fml.ModList;
 import javax.annotation.Nullable;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
 import java.util.function.Supplier;
 
 public class CompatKnifeItem extends DelightfulKnifeItem {
@@ -19,16 +18,16 @@ public class CompatKnifeItem extends DelightfulKnifeItem {
     private final Component tool;
     private final ChatFormatting[] formatting;
 
-    public CompatKnifeItem(String modid, TagKey<Item> tag, Tier tier, float attackDamageIn, float attackSpeedIn, Properties properties, Optional<Supplier<Ingredient>> base, ChatFormatting... formatting) {
-        super(tag, tier, attackDamageIn, attackSpeedIn, properties, base);
+    public CompatKnifeItem(String modid, TagKey<Item> tag, Tier tier, Properties properties, Supplier<Ingredient> base, ChatFormatting... formatting) {
+        super(tag, tier, properties, base);
         this.modid = modid;
         this.tool = Component.empty();
         this.formatting = formatting;
     }
 
     // With tooltip
-    public CompatKnifeItem(String modid, TagKey<Item> tag, Tier tier, float attackDamageIn, float attackSpeedIn, Properties properties, Component tool, Optional<Supplier<Ingredient>> base, ChatFormatting... formatting) {
-        super(tag, tier, attackDamageIn, attackSpeedIn, properties, base);
+    public CompatKnifeItem(String modid, TagKey<Item> tag, Tier tier, Properties properties, Component tool, Supplier<Ingredient> base, ChatFormatting... formatting) {
+        super(tag, tier, properties, base);
         this.modid = modid;
         this.tool = tool;
         this.formatting = formatting;

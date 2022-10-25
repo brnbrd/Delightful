@@ -18,7 +18,6 @@ import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.Nullable;
 import java.util.Objects;
-import java.util.Optional;
 import java.util.function.Supplier;
 
 public class Util {
@@ -68,10 +67,6 @@ public class Util {
 
   public static Supplier<Ingredient> ing(TagKey<Item> tag) {
     return () -> Ingredient.of(tag);
-  }
-
-  public static Optional<Supplier<Ingredient>> opt(Supplier<ItemLike> sup) {
-    return Optional.of(ing(sup));
   }
 
   public static void dropOrGive(ItemStack stack, Level world, BlockPos drop, Player give) {

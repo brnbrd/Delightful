@@ -10,11 +10,10 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import javax.annotation.Nullable;
 import java.util.List;
-import java.util.Optional;
 
 public class LeafKnifeItem extends CompatKnifeItem {
 	public LeafKnifeItem(Properties properties) {
-		super("seeds", DelightfulItemTags.SHARP_LEAF, DelightfulTiers.LEAF, 0.5F, -2.0F, properties, Optional.empty(), ChatFormatting.YELLOW);
+		super("seeds", DelightfulItemTags.SHARP_LEAF, DelightfulTiers.LEAF, properties, null, ChatFormatting.YELLOW);
 	}
 
 	/**

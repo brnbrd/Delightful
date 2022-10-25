@@ -6,6 +6,10 @@
     "#forge:fruits/prickly_pear",
     "#forge:fruits/berries",
     "#forge:fruits/chorus",
+    "#forge:fruits/citron",
+    "#forge:fruits/jabuticaba",
+    "#forge:fruits/rambutan",
+    "#forge:fruits/pitaya",
     {
       "id": "ars_nouveau:mendosteen_pod",
       "required": false

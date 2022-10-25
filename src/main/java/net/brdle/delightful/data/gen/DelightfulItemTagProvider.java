@@ -90,6 +90,10 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_PRICKLY_PEAR)
 			.addTag(DelightfulItemTags.FRUITS_BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_CHORUS)
+			.addTag(DelightfulItemTags.FRUITS_CITRON)
+			.addTag(DelightfulItemTags.FRUITS_JABUTICABA)
+			.addTag(DelightfulItemTags.FRUITS_RAMBUTAN)
+			.addTag(DelightfulItemTags.FRUITS_PITAYA)
 			.addOptional(Util.rl("ars_nouveau", "mendosteen_pod"))
 			.addOptional(Util.rl("ars_nouveau", "bastion_pod"));
 		this.tag(DelightfulItemTags.FRUITS_SWEET)
@@ -103,6 +107,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_STRAWBERRIES)
 			.addTag(DelightfulItemTags.FRUITS_CHERRY)
 			.addTag(DelightfulItemTags.FRUITS_BLUEBERRIES)
+			.addTag(DelightfulItemTags.FRUITS_RAMBUTAN)
+			.addTag(DelightfulItemTags.FRUITS_PITAYA)
 			.addOptionalTag(Util.rl("forge", "fruits/mandarin"))
 			.addOptionalTag(Util.rl("forge", "fruits/orange"))
 			.addOptionalTag(Util.rl("forge", "fruits/redlove"));
@@ -226,6 +232,10 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 
 		// Nethers Exoticism
 		this.addSelf(DelightfulItemTags.KIWANO_PEEL);
+		this.tag(DelightfulItemTags.FRUITS_CITRON).addOptional(Util.rl("nethers_exoticism", "bouddha_s_hand"));
+		this.tag(DelightfulItemTags.FRUITS_JABUTICABA).addOptional(Util.rl("nethers_exoticism", "jaboticaba"));
+		this.tag(DelightfulItemTags.FRUITS_PITAYA).addOptional(Util.rl("nethers_exoticism", "pitaya"));
+		this.tag(DelightfulItemTags.FRUITS_RAMBUTAN).addOptional(Util.rl("nethers_exoticism", "ramboutan"));
 	}
 
 	/**

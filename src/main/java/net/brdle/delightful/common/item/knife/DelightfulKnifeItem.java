@@ -18,7 +18,6 @@ import vectorwing.farmersdelight.FarmersDelight;
 import vectorwing.farmersdelight.common.item.KnifeItem;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import java.util.function.Supplier;
 
 public class DelightfulKnifeItem extends KnifeItem implements IConfigured {
@@ -26,10 +25,10 @@ public class DelightfulKnifeItem extends KnifeItem implements IConfigured {
     private final Supplier<Ingredient> smithingBase;
     protected final ImmutableList<CreativeModeTab> tabs = ImmutableList.of(CreativeModeTab.TAB_SEARCH, FarmersDelight.CREATIVE_TAB);
 
-    public DelightfulKnifeItem(TagKey<Item> tag, Tier tier, float attackDamageIn, float attackSpeedIn, Properties properties, Optional<Supplier<Ingredient>> smithingBase) {
-        super(tier, attackDamageIn, attackSpeedIn, properties);
+    public DelightfulKnifeItem(TagKey<Item> tag, Tier tier, Properties properties, Supplier<Ingredient> smithingBase) {
+        super(tier, 0.5F, -2.0F, properties);
         this.tag = tag;
-        this.smithingBase = smithingBase.orElse(null);
+        this.smithingBase = smithingBase;
     }
 
     /**

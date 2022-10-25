@@ -8,16 +8,16 @@ import net.minecraft.core.NonNullList;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import org.jetbrains.annotations.NotNull;
 import vectorwing.farmersdelight.common.registry.ModEnchantments;
-import java.util.Optional;
 
 public class IronwoodKnifeItem extends CompatKnifeItem {
   public IronwoodKnifeItem(Item.Properties properties) {
-    super("twilightforest", Util.it("forge", "ingots/ironwood"), DelightfulTiers.IRONWOOD, 0.5F, -2.0F, properties, Optional.empty(), ChatFormatting.AQUA);
+    super("twilightforest", Util.it("forge", "ingots/ironwood"), DelightfulTiers.IRONWOOD, properties, null, ChatFormatting.AQUA);
   }
 
   @Override
-  public void fillItemCategory(CreativeModeTab tab, NonNullList<ItemStack> list) {
+  public void fillItemCategory(@NotNull CreativeModeTab tab, @NotNull NonNullList<ItemStack> list) {
     if (this.allowedIn(tab)) {
       ItemStack stack = new ItemStack(this);
       stack.enchant(ModEnchantments.BACKSTABBING.get(), 1);
