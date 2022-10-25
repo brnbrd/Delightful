@@ -23,7 +23,7 @@ public class LeafKnifeItem extends CompatKnifeItem {
 	public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> tool, TooltipFlag pIsAdvanced) {
 		super.appendHoverText(pStack, pLevel, tool, pIsAdvanced);
 		if (this.isEnabled()) {
-			tool.add(Component.literal("Very sharp"));
+			tool.add(Component.literal("Very sharp").withStyle(ChatFormatting.GRAY));
 		}
 	}
 }
