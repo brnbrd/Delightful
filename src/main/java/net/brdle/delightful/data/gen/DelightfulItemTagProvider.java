@@ -238,6 +238,13 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.FRUITS_PITAYA).addOptional(Util.rl("nethers_exoticism", "pitaya"));
 		this.tag(DelightfulItemTags.FRUITS_RAMBUTAN).addOptional(Util.rl("nethers_exoticism", "ramboutan"));
 		this.tag(DelightfulItemTags.FRUITS_KIWANO).addOptional(Util.rl("nethers_exoticism", "kiwano"));
+
+		// RL
+		this.addSelf(DelightfulItemTags.SWEETENED_CHUNK);
+
+		// SAS
+		this.addSelf(DelightfulItemTags.BURGER_BUN);
+		this.addSelf(DelightfulItemTags.BREAD_SLICE);
 	}
 
 	/**

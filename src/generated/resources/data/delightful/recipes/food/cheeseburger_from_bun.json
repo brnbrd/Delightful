@@ -11,8 +11,11 @@
               "value": "cheeseburger"
             },
             {
-              "type": "forge:item_exists",
-              "item": "some_assembly_required:burger_bun"
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "some_assembly_required:burger_bun"
+              }
             }
           ]
         }
@@ -21,7 +24,7 @@
         "type": "minecraft:crafting_shapeless",
         "ingredients": [
           {
-            "item": "some_assembly_required:burger_bun"
+            "tag": "some_assembly_required:burger_bun"
           },
           {
             "item": "farmersdelight:beef_patty"

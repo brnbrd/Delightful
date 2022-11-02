@@ -18,8 +18,11 @@
               }
             },
             {
-              "type": "forge:tag_empty",
-              "tag": "some_assembly_required:bread_slice"
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "some_assembly_required:bread_slice"
+              }
             }
           ]
         }
@@ -28,13 +31,16 @@
         "type": "minecraft:crafting_shapeless",
         "ingredients": [
           {
-            "tag": "forge:bread"
+            "tag": "some_assembly_required:bread_slice"
           },
           {
             "item": "delightful:nut_butter_bottle"
           },
           {
             "tag": "forge:jelly"
+          },
+          {
+            "tag": "some_assembly_required:bread_slice"
           }
         ],
         "result": {

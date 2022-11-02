@@ -8,9 +8,7 @@
             "conditions": {
               "items": [
                 {
-                  "items": [
-                    "rottenleather:sweetened_chunk"
-                  ]
+                  "tag": "rottenleather:sweetened_chunk"
                 }
               ]
             },
@@ -44,15 +42,15 @@
               "value": "chunkwich"
             },
             {
-              "type": "forge:item_exists",
-              "item": "rottenleather:sweetened_chunk"
-            },
-            {
               "type": "forge:not",
               "value": {
-                "type": "forge:item_exists",
-                "item": "some_assembly_required:burger_bun"
+                "type": "forge:tag_empty",
+                "tag": "rottenleather:sweetened_chunk"
               }
+            },
+            {
+              "type": "forge:tag_empty",
+              "tag": "some_assembly_required:burger_bun"
             }
           ]
         }

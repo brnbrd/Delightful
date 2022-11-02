@@ -9,11 +9,8 @@ import net.brdle.delightful.common.crafting.EnabledCondition;
 import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.item.knife.CompatKnifeItem;
 import net.brdle.delightful.common.item.knife.DelightfulKnifeItem;
-import net.brdle.delightful.common.item.knife.twilightforest.IronwoodKnifeItem;
-import net.brdle.delightful.common.item.knife.twilightforest.SteeleafKnifeItem;
 import net.brdle.delightful.compat.ArsNouveauCompat;
 import net.brdle.delightful.data.DelightfulItemTags;
-import net.brdle.rottenleather.common.RottenLeatherItems;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.DataGenerator;
@@ -71,7 +68,14 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .requires(DelightfulItems.NUT_BUTTER_BOTTLE.get())
                 .requires(DelightfulItemTags.JELLY)
                 .unlockedBy("has_nut_butter", has(DelightfulItems.NUT_BUTTER_BOTTLE.get())),
-            "food/nut_butter_and_jelly_sandwich", finished, enabled("nut_butter_and_jelly_sandwich"), not(tagEmpty(DelightfulItemTags.NUTS)));
+            "food/nut_butter_and_jelly_sandwich", finished, enabled("nut_butter_and_jelly_sandwich"), not(tagEmpty(DelightfulItemTags.NUTS)), tagEmpty(DelightfulItemTags.BREAD_SLICE));
+        wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.NUT_BUTTER_AND_JELLY_SANDWICH.get())
+                .requires(DelightfulItemTags.BREAD_SLICE)
+                .requires(DelightfulItems.NUT_BUTTER_BOTTLE.get())
+                .requires(DelightfulItemTags.JELLY)
+                .requires(DelightfulItemTags.BREAD_SLICE)
+                .unlockedBy("has_nut_butter", has(DelightfulItems.NUT_BUTTER_BOTTLE.get())),
+            "food/nut_butter_and_jelly_sandwich_from_bread_slice", finished, enabled("nut_butter_and_jelly_sandwich"), not(tagEmpty(DelightfulItemTags.NUTS)), not(tagEmpty(DelightfulItemTags.BREAD_SLICE)));
         wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.CHEESEBURGER.get())
                 .requires(ForgeTags.BREAD)
                 .requires(ModItems.BEEF_PATTY.get())
@@ -80,7 +84,16 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .requires(ForgeTags.CROPS_TOMATO)
                 .requires(ForgeTags.CROPS_ONION)
                 .unlockedBy("has_beef_patty_and_cheese", has(ModItems.BEEF_PATTY.get(), Items.MILK_BUCKET)),
-            "food/cheeseburger", finished, enabled("cheeseburger"), not(itemExists("some_assembly_required", "burger_bun")));
+            "food/cheeseburger", finished, enabled("cheeseburger"), tagEmpty(DelightfulItemTags.BURGER_BUN));
+        wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.CHEESEBURGER.get())
+                .requires(DelightfulItemTags.BURGER_BUN)
+                .requires(ModItems.BEEF_PATTY.get())
+                .requires(DelightfulItemTags.CHEESE_OR_MILK)
+                .requires(ForgeTags.SALAD_INGREDIENTS)
+                .requires(ForgeTags.CROPS_TOMATO)
+                .requires(ForgeTags.CROPS_ONION)
+                .unlockedBy("has_beef_patty_and_cheese", has(ModItems.BEEF_PATTY.get(), Items.MILK_BUCKET)),
+            "food/cheeseburger_from_bun", finished, enabled("cheeseburger"), not(tagEmpty(DelightfulItemTags.BURGER_BUN)));
         wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.CHEESEBURGER.get())
                 .requires(ModItems.HAMBURGER.get())
                 .requires(DelightfulItemTags.CHEESE_OR_MILK)
@@ -97,7 +110,19 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .requires(ForgeTags.CROPS_TOMATO)
                 .requires(ForgeTags.CROPS_ONION)
                 .unlockedBy("has_bacon", has(ModItems.COOKED_BACON.get())),
-            "food/deluxe_cheeseburger", finished, enabled("deluxe_cheeseburger"), not(itemExists("some_assembly_required", "burger_bun")));
+            "food/deluxe_cheeseburger", finished, enabled("deluxe_cheeseburger"), tagEmpty(DelightfulItemTags.BURGER_BUN));
+        wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.DELUXE_CHEESEBURGER.get())
+                .requires(DelightfulItemTags.BURGER_BUN)
+                .requires(ModItems.BEEF_PATTY.get())
+                .requires(DelightfulItemTags.CHEESE_OR_MILK)
+                .requires(ModItems.BEEF_PATTY.get())
+                .requires(DelightfulItemTags.CHEESE_OR_MILK)
+                .requires(ModItems.COOKED_BACON.get())
+                .requires(ForgeTags.SALAD_INGREDIENTS)
+                .requires(ForgeTags.CROPS_TOMATO)
+                .requires(ForgeTags.CROPS_ONION)
+                .unlockedBy("has_bacon", has(ModItems.COOKED_BACON.get())),
+            "food/deluxe_cheeseburger_from_bun", finished, enabled("deluxe_cheeseburger"), not(tagEmpty(DelightfulItemTags.BURGER_BUN)));
         wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.DELUXE_CHEESEBURGER.get())
                 .requires(DelightfulItems.CHEESEBURGER.get())
                 .requires(ModItems.BEEF_PATTY.get())
@@ -145,16 +170,21 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .unlockedBy("has_cooked_prickly_pear", has(DelightfulItemTags.COOKED_PRICKLY_PEAR)),
             "food/prickly_pear_juice", finished, enabled("prickly_pear_juice"), not(tagEmpty(DelightfulItemTags.COOKED_PRICKLY_PEAR)));
         wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.CRAB_RANGOON.get())
-                .requires(ModItems.WHEAT_DOUGH.get())
+                .requires(ForgeTags.DOUGH_WHEAT)
                 .requires(DelightfulItemTags.CHEESE_OR_MILK)
                 .requires(DelightfulItemTags.COOKED_CRAB)
                 .unlockedBy("has_cooked_crab", has(DelightfulItemTags.COOKED_CRAB)),
             "food/crab_rangoon", finished, enabled("crab_rangoon"), not(tagEmpty(DelightfulItemTags.COOKED_CRAB)));
         wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.CHUNKWICH.get())
                 .requires(ForgeTags.BREAD)
-                .requires(RottenLeatherItems.SWEETENED_CHUNK.get())
-                .unlockedBy("has_sweetened_chunk", has(RottenLeatherItems.SWEETENED_CHUNK.get())),
-            "food/chunkwich", finished, enabled("chunkwich"), itemExists("rottenleather", "sweetened_chunk"), not(itemExists("some_assembly_required", "burger_bun")));
+                .requires(DelightfulItemTags.SWEETENED_CHUNK)
+                .unlockedBy("has_sweetened_chunk", has(DelightfulItemTags.SWEETENED_CHUNK)),
+            "food/chunkwich", finished, enabled("chunkwich"), not(tagEmpty(DelightfulItemTags.SWEETENED_CHUNK)), tagEmpty(DelightfulItemTags.BURGER_BUN));
+        wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.CHUNKWICH.get())
+                .requires(DelightfulItemTags.BURGER_BUN)
+                .requires(DelightfulItemTags.SWEETENED_CHUNK)
+                .unlockedBy("has_sweetened_chunk", has(DelightfulItemTags.SWEETENED_CHUNK)),
+            "food/chunkwich_from_bun", finished, enabled("chunkwich"), not(tagEmpty(DelightfulItemTags.SWEETENED_CHUNK)), not(tagEmpty(DelightfulItemTags.BURGER_BUN)));
         wrap(SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(DelightfulItems.MARSHMALLOW_STICK.get()),
                 DelightfulItems.COOKED_MARSHMALLOW_STICK.get(), 0.5F, 600)
                 .unlockedBy("has_marshmallow_stick", has(DelightfulItems.MARSHMALLOW_STICK.get())),
@@ -398,10 +428,10 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
         wrap(CookingPotRecipeBuilder.cookingPotRecipe(
             DelightfulItems.CHUNK_NUGGET.get(), 6, CookingRecipes.FAST_COOKING, 0.25F)
                 .addIngredient(ForgeTags.BREAD)
-                .addIngredient(RottenLeatherItems.SWEETENED_CHUNK.get())
-                .addIngredient(RottenLeatherItems.SWEETENED_CHUNK.get())
-                .unlockedBy("has_sweetened_chunk", has(RottenLeatherItems.SWEETENED_CHUNK.get())),
-            "food/cooking/chunk_nugget", finished, enabled("chunk_nugget"), itemExists("rottenleather", "sweetened_chunk"));
+                .addIngredient(DelightfulItemTags.SWEETENED_CHUNK)
+                .addIngredient(DelightfulItemTags.SWEETENED_CHUNK)
+                .unlockedBy("has_sweetened_chunk", has(DelightfulItemTags.SWEETENED_CHUNK)),
+            "food/cooking/chunk_nugget", finished, enabled("chunk_nugget"), not(tagEmpty(DelightfulItemTags.SWEETENED_CHUNK)));
         wrap(CookingPotRecipeBuilder.cookingPotRecipe(
             DelightfulItems.AZALEA_TEA.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
                 .addIngredient(StrictNBTIngredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))

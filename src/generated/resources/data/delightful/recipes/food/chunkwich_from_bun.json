@@ -11,12 +11,18 @@
               "value": "chunkwich"
             },
             {
-              "type": "forge:item_exists",
-              "item": "rottenleather:sweetened_chunk"
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "rottenleather:sweetened_chunk"
+              }
             },
             {
-              "type": "forge:item_exists",
-              "item": "some_assembly_required:burger_bun"
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "some_assembly_required:burger_bun"
+              }
             }
           ]
         }
@@ -25,10 +31,10 @@
         "type": "minecraft:crafting_shapeless",
         "ingredients": [
           {
-            "item": "some_assembly_required:burger_bun"
+            "tag": "some_assembly_required:burger_bun"
           },
           {
-            "item": "rottenleather:sweetened_chunk"
+            "tag": "rottenleather:sweetened_chunk"
           }
         ],
         "result": {

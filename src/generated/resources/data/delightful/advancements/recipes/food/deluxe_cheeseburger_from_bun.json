@@ -4,12 +4,12 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_nut_butter": {
+          "has_bacon": {
             "conditions": {
               "items": [
                 {
                   "items": [
-                    "delightful:nut_butter_bottle"
+                    "farmersdelight:cooked_bacon"
                   ]
                 }
               ]
@@ -18,20 +18,20 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:food/nut_butter_and_jelly_sandwich"
+              "recipe": "delightful:food/deluxe_cheeseburger_from_bun"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
         },
         "requirements": [
           [
-            "has_nut_butter",
+            "has_bacon",
             "has_the_recipe"
           ]
         ],
         "rewards": {
           "recipes": [
-            "delightful:food/nut_butter_and_jelly_sandwich"
+            "delightful:food/deluxe_cheeseburger_from_bun"
           ]
         }
       },
@@ -41,18 +41,14 @@
           "values": [
             {
               "type": "delightful:enabled",
-              "value": "nut_butter_and_jelly_sandwich"
+              "value": "deluxe_cheeseburger"
             },
             {
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
-                "tag": "forge:nuts"
+                "tag": "some_assembly_required:burger_bun"
               }
-            },
-            {
-              "type": "forge:tag_empty",
-              "tag": "some_assembly_required:bread_slice"
             }
           ]
         }

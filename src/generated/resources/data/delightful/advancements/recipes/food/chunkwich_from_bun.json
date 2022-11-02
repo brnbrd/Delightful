@@ -4,13 +4,11 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_nut_butter": {
+          "has_sweetened_chunk": {
             "conditions": {
               "items": [
                 {
-                  "items": [
-                    "delightful:nut_butter_bottle"
-                  ]
+                  "tag": "rottenleather:sweetened_chunk"
                 }
               ]
             },
@@ -18,20 +16,20 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:food/nut_butter_and_jelly_sandwich"
+              "recipe": "delightful:food/chunkwich_from_bun"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
         },
         "requirements": [
           [
-            "has_nut_butter",
+            "has_sweetened_chunk",
             "has_the_recipe"
           ]
         ],
         "rewards": {
           "recipes": [
-            "delightful:food/nut_butter_and_jelly_sandwich"
+            "delightful:food/chunkwich_from_bun"
           ]
         }
       },
@@ -41,18 +39,21 @@
           "values": [
             {
               "type": "delightful:enabled",
-              "value": "nut_butter_and_jelly_sandwich"
+              "value": "chunkwich"
             },
             {
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
-                "tag": "forge:nuts"
+                "tag": "rottenleather:sweetened_chunk"
               }
             },
             {
-              "type": "forge:tag_empty",
-              "tag": "some_assembly_required:bread_slice"
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "some_assembly_required:burger_bun"
+              }
             }
           ]
         }

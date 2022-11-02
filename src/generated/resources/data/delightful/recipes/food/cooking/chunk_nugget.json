@@ -11,8 +11,11 @@
               "value": "chunk_nugget"
             },
             {
-              "type": "forge:item_exists",
-              "item": "rottenleather:sweetened_chunk"
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "rottenleather:sweetened_chunk"
+              }
             }
           ]
         }
@@ -26,10 +29,10 @@
             "tag": "forge:bread"
           },
           {
-            "item": "rottenleather:sweetened_chunk"
+            "tag": "rottenleather:sweetened_chunk"
           },
           {
-            "item": "rottenleather:sweetened_chunk"
+            "tag": "rottenleather:sweetened_chunk"
           }
         ],
         "result": {
