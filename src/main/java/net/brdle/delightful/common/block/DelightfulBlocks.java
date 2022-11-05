@@ -31,7 +31,7 @@ public class DelightfulBlocks {
     public static final RegistryObject<Block> BASALT_CABINET = registerBlock("basalt_cabinet",
       () -> new DelightfulCabinetBlock(Util.ing(Items.BASALT), BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK).requiresCorrectToolForDrops().strength(1.25F, 4.2F).sound(SoundType.BASALT)));
     public static final RegistryObject<Block> WILD_SALMONBERRIES = BLOCKS.register("wild_salmonberries",
-      () -> new WildCropBlock(MobEffects.REGENERATION, 6, Block.Properties.copy(Blocks.TALL_GRASS)));
+      () -> new WildCropBlock(MobEffects.REGENERATION, 6, BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)));
     public static final RegistryObject<Block> SALMONBERRY_BUSH = BLOCKS.register("salmonberry_bush", () -> new SalmonberryBushBlock(BlockBehaviour.Properties.of(Material.PLANT).randomTicks().noCollission().sound(SoundType.SWEET_BERRY_BUSH)));
     public static final RegistryObject<Block> MINI_MELON = BLOCKS.register("mini_melon",
       () -> new MiniMelonBlock(BlockBehaviour.Properties.copy(Blocks.MELON).noOcclusion()));

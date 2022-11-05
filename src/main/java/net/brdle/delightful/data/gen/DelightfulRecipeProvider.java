@@ -387,7 +387,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             "cantaloupe_slice", finished, enabled("cantaloupe_slice"));
         wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
                 Ingredient.of(DelightfulItems.CANTALOUPE.get()),
-                Ingredient.of(ForgeTags.TOOLS_KNIVES),
+                Ingredient.of(DelightfulItemTags.SCAVENGING_TOOLS),
                 DelightfulItems.CANTALOUPE_SLICE.get(), 6),
             "cutting/cantaloupe", finished, enabled("cantaloupe_slice"));
         wrap(CookingPotRecipeBuilder.cookingPotRecipe(
@@ -478,12 +478,12 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             "ecologics", "tropical_stew", finished, itemExists("ecologics", "tropical_stew"), itemExists("ecologics", "coconut_slice"), not(tagEmpty(DelightfulItemTags.COOKED_CRAB)));
         wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
                 Ingredient.of(Util.item("biomesoplenty", "clover")),
-                Ingredient.of(ForgeTags.TOOLS_KNIVES),
+                Ingredient.of(DelightfulItemTags.SCAVENGING_TOOLS),
                 DelightfulItems.CHOPPED_CLOVER.get(), 2),
             "cutting/clover", finished, enabled("chopped_clover"), itemExists("biomesoplenty", "clover"));
         wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
                 Ingredient.of(Util.item("biomesoplenty", "huge_clover_petal")),
-                Ingredient.of(ForgeTags.TOOLS_KNIVES),
+                Ingredient.of(DelightfulItemTags.SCAVENGING_TOOLS),
                 DelightfulItems.CHOPPED_CLOVER.get(), 4),
             "cutting/huge_clover_petal", finished, enabled("chopped_clover"), itemExists("biomesoplenty", "huge_clover_petal"));
         wrap(CookingPotRecipeBuilder.cookingPotRecipe(
@@ -493,37 +493,37 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             "food/clover_honey", finished, enabled("clover_honey"), modLoaded("biomesoplenty"));
         wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
                 Ingredient.of(DelightfulItemTags.RAW_VENISON),
-                Ingredient.of(ForgeTags.TOOLS_KNIVES),
+                Ingredient.of(DelightfulItemTags.SCAVENGING_TOOLS),
                 DelightfulItems.VENISON_CHOPS.get(), 2),
             "cutting/venison", finished, enabled("venison_chops"), not(tagEmpty(DelightfulItemTags.RAW_VENISON)));
         wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
                 Ingredient.of(DelightfulItemTags.COOKED_VENISON),
-                Ingredient.of(ForgeTags.TOOLS_KNIVES),
+                Ingredient.of(DelightfulItemTags.SCAVENGING_TOOLS),
                 DelightfulItems.COOKED_VENISON_CHOPS.get(), 2),
             "cutting/cooked_venison", finished, enabled("cooked_venison_chops"), enabled("venison_chops"), not(tagEmpty(DelightfulItemTags.COOKED_VENISON)));
         wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
                 Ingredient.of(DelightfulItems.SALMONBERRY_PIE.get()),
-                Ingredient.of(ForgeTags.TOOLS_KNIVES),
+                Ingredient.of(DelightfulItemTags.SCAVENGING_TOOLS),
                 DelightfulItems.SALMONBERRY_PIE_SLICE.get(), 4),
             "cutting/salmonberry_pie", finished, enabled("salmonberry_pie"), enabled("salmonberry_pie_slice"));
         wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
                 Ingredient.of(ItemsRegistry.SOURCE_BERRY_PIE.get()),
-                Ingredient.of(ForgeTags.TOOLS_KNIVES),
+                Ingredient.of(DelightfulItemTags.SCAVENGING_TOOLS),
                 DelightfulItems.SOURCE_BERRY_PIE_SLICE.get(), 4),
             "cutting/source_berry_pie", finished, enabled(ArsNouveauCompat.slice), itemExists(ArsNouveauCompat.modid, ArsNouveauCompat.pie));
         wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
                 Ingredient.of(Items.PUMPKIN_PIE),
-                Ingredient.of(ForgeTags.TOOLS_KNIVES),
+                Ingredient.of(DelightfulItemTags.SCAVENGING_TOOLS),
                 DelightfulItems.PUMPKIN_PIE_SLICE.get(), 4),
             "cutting/pumpkin_pie", finished, enabled("pumpkin_pie_overhaul"), enabled("pumpkin_pie_slice"));
         wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
                 Ingredient.of(Items.CACTUS),
-                Ingredient.of(ForgeTags.TOOLS_KNIVES),
+                Ingredient.of(DelightfulItemTags.SCAVENGING_TOOLS),
                 DelightfulItems.CACTUS_FLESH.get(), 2),
             "cutting/cactus", finished, enabled("cactus_flesh"));
         wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
                 Ingredient.of(DelightfulItems.MINI_MELON.get()),
-                Ingredient.of(ForgeTags.TOOLS_KNIVES),
+                Ingredient.of(DelightfulItemTags.SCAVENGING_TOOLS),
                 Items.MELON_SLICE, 6),
             "cutting/mini_melon", finished, enabled("mini_melon"));
         wrap(ShapelessRecipeBuilder.shapeless(Items.MELON_SLICE, 3)
@@ -567,7 +567,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             .requires(Items.BOWL)
             .unlockedBy("has_fruits", has(Items.MELON_SLICE, Items.SWEET_BERRIES, Items.APPLE, ModItems.PUMPKIN_SLICE.get()))
             .save(finished, ModItems.FRUIT_SALAD.getId());
-        CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(Items.SUGAR_CANE), Ingredient.of(ForgeTags.TOOLS_KNIVES), Items.SUGAR, 1)
+        CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(Items.SUGAR_CANE), Ingredient.of(DelightfulItemTags.SCAVENGING_TOOLS), Items.SUGAR, 1)
             .addResultWithChance(Items.SUGAR, 0.5F, 1)
             .build(finished);
         }

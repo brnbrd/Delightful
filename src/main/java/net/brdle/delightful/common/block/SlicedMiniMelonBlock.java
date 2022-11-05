@@ -3,6 +3,7 @@ package net.brdle.delightful.common.block;
 import com.mojang.datafixers.util.Pair;
 import net.brdle.delightful.Util;
 import net.brdle.delightful.common.config.DelightfulConfig;
+import net.brdle.delightful.data.DelightfulItemTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -28,7 +29,6 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.items.ItemHandlerHelper;
-import vectorwing.farmersdelight.common.tag.ForgeTags;
 import java.util.function.Supplier;
 
 public class SlicedMiniMelonBlock extends MelonBlock implements ISliceable {
@@ -76,7 +76,7 @@ public class SlicedMiniMelonBlock extends MelonBlock implements ISliceable {
   @Override
   public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
     ItemStack heldStack = player.getItemInHand(hand);
-    if (heldStack.is(ForgeTags.TOOLS_KNIVES)) {
+    if (heldStack.is(DelightfulItemTags.SCAVENGING_TOOLS)) {
       return this.cutSlice(level, pos, state, player, hand);
     } else if (heldStack.is(Items.GLASS_BOTTLE) && this.juiceItem.get() != null && DelightfulConfig.MELON_JUICING.get()) {
       return this.bottleJuice(level, pos, state, player, hand);

@@ -138,7 +138,7 @@ public class ForgeEvents {
 				stack.is(Items.PUMPKIN_PIE)) {
 				tryPlacePie((PieBlock) DelightfulBlocks.PUMPKIN_PIE.get(), context, e);
 			} else if (ModList.get().isLoaded(ArsNouveauCompat.modid) &&
-				DelightfulConfig.stuff.get(ArsNouveauCompat.slice).get() &&
+				DelightfulConfig.CONFIG.stuff.get(ArsNouveauCompat.slice).get() &&
 					isPie(stack, ArsNouveauCompat.modid, ArsNouveauCompat.pie)) {
 					tryPlacePie((PieBlock) DelightfulBlocks.SOURCE_BERRY_PIE.get(), context, e);
 			} else if (ModList.get().isLoaded(BYGCompat.modid)) {

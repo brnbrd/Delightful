@@ -1,6 +1,7 @@
 package net.brdle.delightful.common.block;
 
 import net.brdle.delightful.Util;
+import net.brdle.delightful.data.DelightfulItemTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -10,7 +11,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
-import vectorwing.farmersdelight.common.tag.ForgeTags;
 
 public class CantaloupeBlock extends MiniBlock {
 	public CantaloupeBlock(Properties pProperties) {
@@ -19,7 +19,7 @@ public class CantaloupeBlock extends MiniBlock {
 
 	@Override
 	public InteractionResult use(BlockState pState, Level world, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
-		if (pPlayer.getItemInHand(pHand).is(ForgeTags.TOOLS_KNIVES)) {
+		if (pPlayer.getItemInHand(pHand).is(DelightfulItemTags.SCAVENGING_TOOLS)) {
 			if (!world.isClientSide()) {
 				SlicedMiniMelonBlock sliced = (SlicedMiniMelonBlock) DelightfulBlocks.SLICED_CANTALOUPE.get();
 				world.setBlock(pPos, sliced.defaultBlockState(), 2);
