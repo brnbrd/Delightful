@@ -100,10 +100,5 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 			},
 		ModItems.STRAW.get(), 1, 1, true
 		));
-		add("kiwano", new SmeltLootModifier(
-			new LootItemCondition[]{
-				MatchTool.toolMatches(ItemPredicate.Builder.item().of(DelightfulItems.KIWANO_KNIFE.get())).build(),
-			}
-		));
 	}
 }

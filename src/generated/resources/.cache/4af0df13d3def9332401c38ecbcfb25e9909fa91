@@ -1,11 +1,10 @@
-// 1.19	2022-11-05T00:02:14.7259182	Global Loot Modifiers : delightful
+// 1.19	2022-11-05T03:34:11.3263268	Global Loot Modifiers : delightful
 596ea3f872cb3848a9d1c6293381a0648f632aa0 data/delightful/loot_modifiers/acorn.json
 8de04708e60601e42016c5f7a28d46e5610eb86f data/delightful/loot_modifiers/acorn_from_knife.json
 7c4c2228a081365c702784626880a0b12ffc1c0c data/delightful/loot_modifiers/acorn_from_squirrel.json
 a3ed97cc05149007acd9a619490e37bb8b7809b3 data/delightful/loot_modifiers/animal_fat.json
 807c31401cb27f17cb3efdf6166c27a188686b04 data/delightful/loot_modifiers/green_tea_leaf.json
 f96a09d9f25786b235f2d55b945f89f55da862dc data/delightful/loot_modifiers/green_tea_leaf_rare.json
-8e2fe6cc130e58e683a424af8c9fb150cd0257af data/delightful/loot_modifiers/kiwano.json
 28ca740f145c2e61f55055034a3310329f4a584b data/delightful/loot_modifiers/raw_goat.json
 ecb5ffbe34005ff032cd4a44b46a8f4c6c66927a data/delightful/loot_modifiers/straw_from_compat.json
-febdd6c05295c53fc8487b314d3a7aa6a4a8981d data/forge/loot_modifiers/global_loot_modifiers.json
+b2badde3a6e9d0f19ba8ff020fb4c0be6cc3dc57 data/forge/loot_modifiers/global_loot_modifiers.json
