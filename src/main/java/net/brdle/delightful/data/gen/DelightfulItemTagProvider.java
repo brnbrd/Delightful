@@ -42,6 +42,11 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.add(DelightfulItems.QUARTZ_CABINET.get());
 
 		// Forge
+		this.tag(DelightfulItemTags.SCAVENGING_TOOLS)
+			.addTag(ForgeTags.TOOLS_KNIVES)
+			.addOptional(Util.rl("nethersdelight", "scavenging_tools"))
+			.addOptional(Util.rl("nethersdelight", "tools/machetes"))
+			.addOptional(Util.rl("forge", "tools/machetes"));
 		this.tag(DelightfulItemTags.FRUITS_APPLE).add(Items.APPLE);
 		this.tag(DelightfulItemTags.FRUITS_MELON).add(Items.MELON_SLICE);
 		this.tag(DelightfulItemTags.FRUITS_CHORUS).add(Items.CHORUS_FRUIT);

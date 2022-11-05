@@ -16,6 +16,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> COOKED_PRICKLY_PEAR = Util.it("ecologics", "cooked_prickly_pear");
 
 	// Forge
+	public static final TagKey<Item> SCAVENGING_TOOLS = forge("tools/scavenging");
 	public static final TagKey<Item> FRUITS = forge("fruits");
 	public static final TagKey<Item> FRUITS_APPLE = forge("fruits/apple");
 	public static final TagKey<Item> FRUITS_KIWI = forge("fruits/kiwi");
