@@ -38,10 +38,12 @@ public class SalmonberryBushBlock extends BushBlock implements BonemealableBlock
     this.registerDefaultState(this.stateDefinition.any().setValue(AGE, Integer.valueOf(0)));
   }
 
+  @Override
   public ItemStack getCloneItemStack(BlockGetter pLevel, BlockPos pPos, BlockState pState) {
     return new ItemStack(DelightfulItems.SALMONBERRY_PIPS.get());
   }
 
+  @Override
   public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
     if (pState.getValue(AGE) == 0) {
       return SAPLING_SHAPE;
@@ -53,6 +55,7 @@ public class SalmonberryBushBlock extends BushBlock implements BonemealableBlock
   /**
    * @return whether this block needs random ticking.
    */
+  @Override
   public boolean isRandomlyTicking(BlockState pState) {
     return pState.getValue(AGE) < 3;
   }
@@ -60,6 +63,7 @@ public class SalmonberryBushBlock extends BushBlock implements BonemealableBlock
   /**
    * Performs a random tick on a block.
    */
+  @Override
   public void randomTick(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRandom) {
     int i = pState.getValue(AGE);
     if (i < 3 && pLevel.getRawBrightness(pPos.above(), 0) >= 9 && net.minecraftforge.common.ForgeHooks.onCropsGrowPre(pLevel, pPos, pState, pRandom.nextInt(5) == 0)) {
@@ -71,6 +75,7 @@ public class SalmonberryBushBlock extends BushBlock implements BonemealableBlock
 
   }
 
+  @Override
   public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
     int i = pState.getValue(AGE);
     boolean flag = i == 3;
@@ -89,6 +94,7 @@ public class SalmonberryBushBlock extends BushBlock implements BonemealableBlock
     }
   }
 
+  @Override
   protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
     pBuilder.add(AGE);
   }
@@ -96,14 +102,17 @@ public class SalmonberryBushBlock extends BushBlock implements BonemealableBlock
   /**
    * @return whether bonemeal can be used on this block
    */
+  @Override
   public boolean isValidBonemealTarget(BlockGetter pLevel, BlockPos pPos, BlockState pState, boolean pIsClient) {
     return pState.getValue(AGE) < 3;
   }
 
+  @Override
   public boolean isBonemealSuccess(Level pLevel, RandomSource pRandom, BlockPos pPos, BlockState pState) {
     return true;
   }
 
+  @Override
   public void performBonemeal(ServerLevel pLevel, RandomSource pRandom, BlockPos pPos, BlockState pState) {
     pLevel.setBlock(pPos, pState.setValue(AGE, Math.min(3, pState.getValue(AGE) + 1)), 2);
   }
