@@ -77,13 +77,13 @@ public class DelightfulConfig {
         builder.pop();
         builder.push("Generation");
             CHANCE_WILD_SALMONBERRIES = builder
-              .comment("Chance of generating clusters. Smaller value = more frequent (once every ...).")
+              .comment("Chance of generating clusters. Smaller value = more frequent (once every ...). To disable, set the item Salmonberries to false above.")
               .defineInRange("chance_wild_salmonberries", 30, 0, Integer.MAX_VALUE);
             CHANCE_MINI_MELON = builder
-              .comment("Chance of generating clusters. Smaller value = more frequent (once every ...).")
+              .comment("Chance of generating clusters. Smaller value = more frequent (once every ...). To disable, set the item Mini Melon to false above.")
               .defineInRange("chance_mini_melon", 30, 0, Integer.MAX_VALUE);
             CHANCE_CANTALOUPE = builder
-            .comment("Chance of generating clusters. Smaller value = more frequent (once every ...).")
+            .comment("Chance of generating clusters. Smaller value = more frequent (once every ...). To disable, set the item Cantaloupe to false above.")
             .defineInRange("chance_cantaloupe", 50, 0, Integer.MAX_VALUE);
         builder.pop();
     }

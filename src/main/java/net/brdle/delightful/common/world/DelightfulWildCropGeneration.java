@@ -33,23 +33,25 @@ public class DelightfulWildCropGeneration extends WildCropGeneration {
 		return BuiltinRegistries.register(BuiltinRegistries.PLACED_FEATURE, id, new PlacedFeature(Holder.hackyErase(feature), List.of(modifiers)));
 	}
 
+	private static Holder<PlacedFeature> registerConditionalPlacement(ResourceLocation id, Holder<? extends ConfiguredFeature<?, ?>> feature, boolean condition, PlacementModifier... modifiers) {
+		return condition ? registerPlacement(id, feature, modifiers) : registerPlacement(id, feature, BlockPredicateFilter.forPredicate(BlockPredicate.not(BlockPredicate.alwaysTrue())));
+	}
+
 	public static void registerWildCropGeneration() {
 		FEATURE_PATCH_WILD_SALMONBERRIES = register(Util.rl(Delightful.MODID, "patch_wild_salmonberries"),
 			ModBiomeFeatures.WILD_CROP.get(), wildCropConfig(DelightfulBlocks.WILD_SALMONBERRIES.get(), Blocks.GRASS, BlockPredicate.matchesTag(BLOCK_BELOW, BlockTags.DIRT)));
-
-		PATCH_WILD_SALMONBERRIES = registerPlacement(Util.rl(Delightful.MODID, "patch_wild_salmonberries"),
-			FEATURE_PATCH_WILD_SALMONBERRIES, RarityFilter.onAverageOnceEvery(DelightfulConfig.CHANCE_WILD_SALMONBERRIES.get()), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
-
 		FEATURE_PATCH_MINI_MELON = register(Util.rl(Delightful.MODID, "patch_mini_melon"),
 			Feature.RANDOM_PATCH, randomPatchConfig(DelightfulBlocks.MINI_MELON.get(), 64, 4, BlockPredicate.matchesTag(BLOCK_BELOW, BlockTags.DIRT)));
-
-		PATCH_MINI_MELON = registerPlacement(Util.rl(Delightful.MODID, "patch_mini_melon"),
-			FEATURE_PATCH_MINI_MELON, RarityFilter.onAverageOnceEvery(DelightfulConfig.CHANCE_MINI_MELON.get()), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
-
 		FEATURE_PATCH_CANTALOUPE = register(Util.rl(Delightful.MODID, "patch_cantaloupe"),
 			Feature.RANDOM_PATCH, randomPatchConfig(DelightfulBlocks.CANTALOUPE.get(), 64, 3, BlockPredicate.matchesTag(BLOCK_BELOW, DelightfulBlockTags.CANTALOUPE_SPAWNS)));
 
-		PATCH_CANTALOUPE = registerPlacement(Util.rl(Delightful.MODID, "patch_cantaloupe"),
-			FEATURE_PATCH_CANTALOUPE, RarityFilter.onAverageOnceEvery(DelightfulConfig.CHANCE_CANTALOUPE.get()), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
+		PATCH_WILD_SALMONBERRIES = registerConditionalPlacement(Util.rl(Delightful.MODID, "patch_wild_salmonberries"),
+			FEATURE_PATCH_WILD_SALMONBERRIES, DelightfulConfig.verify("salmonberries") && DelightfulConfig.CHANCE_WILD_SALMONBERRIES.get() > 0, RarityFilter.onAverageOnceEvery(DelightfulConfig.CHANCE_WILD_SALMONBERRIES.get()), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
+
+		PATCH_MINI_MELON = registerConditionalPlacement(Util.rl(Delightful.MODID, "patch_mini_melon"),
+			FEATURE_PATCH_MINI_MELON, DelightfulConfig.verify("mini_melon") && DelightfulConfig.CHANCE_MINI_MELON.get() > 0, RarityFilter.onAverageOnceEvery(DelightfulConfig.CHANCE_MINI_MELON.get()), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
+
+		PATCH_CANTALOUPE = registerConditionalPlacement(Util.rl(Delightful.MODID, "patch_cantaloupe"),
+			FEATURE_PATCH_CANTALOUPE, DelightfulConfig.verify("cantaloupe") && DelightfulConfig.CHANCE_CANTALOUPE.get() > 0, RarityFilter.onAverageOnceEvery(DelightfulConfig.CHANCE_CANTALOUPE.get()), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
 	}
 }
