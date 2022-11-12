@@ -1,0 +1,9 @@
+{
+  "values": [
+    "#forge:seeds/salmonberry",
+    {
+      "id": "farmersrespite:tea_seeds",
+      "required": false
+    }
+  ]
+}

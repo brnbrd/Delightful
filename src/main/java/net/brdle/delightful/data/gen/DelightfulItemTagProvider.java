@@ -64,6 +64,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.FRUITS_BLUEBERRIES).addOptional(Util.rl("byg", "blueberries"));
 		this.tag(DelightfulItemTags.FRUITS_NIGHTSHADE_BERRIES).addOptional(Util.rl("byg", "nightshade_berries"));
 		this.tag(DelightfulItemTags.FRUITS_CRIMSON_BERRIES).addOptional(Util.rl("byg", "crimson_berries"));
+		this.tag(DelightfulItemTags.FRUITS_WILD_BERRIES)
+			.addOptional(Util.rl("windswept", "wild_berries"));
 		this.tag(DelightfulItemTags.FRUITS_STRAWBERRIES)
 			.addOptional(Util.rl("neapolitan", "strawberries"))
 			.addOptional(Util.rl("neapolitan", "white_strawberries"));
@@ -85,7 +87,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_NIGHTSHADE_BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_CRIMSON_BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_CHERRY)
-			.addTag(DelightfulItemTags.FRUITS_STRAWBERRIES);
+			.addTag(DelightfulItemTags.FRUITS_STRAWBERRIES)
+			.addTag(DelightfulItemTags.FRUITS_WILD_BERRIES);
 		this.tag(ForgeTags.BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_BERRIES);
 		this.tag(DelightfulItemTags.FRUITS)
@@ -113,6 +116,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_STRAWBERRIES)
 			.addTag(DelightfulItemTags.FRUITS_CHERRY)
 			.addTag(DelightfulItemTags.FRUITS_BLUEBERRIES)
+			.addTag(DelightfulItemTags.FRUITS_WILD_BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_RAMBUTAN)
 			.addTag(DelightfulItemTags.FRUITS_PITAYA)
 			.addOptionalTag(Util.rl("forge", "fruits/mandarin"))
@@ -122,13 +126,15 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Util.rl(BYGCompat.modid, "green_apple"));
 		this.tag(DelightfulItemTags.NUTS_WALNUT).addOptional(Util.rl("ecologics", "walnut"));
 		this.tag(DelightfulItemTags.NUTS_PEANUT).addOptional(Util.rl("sprout", "peanut"));
+		this.tag(DelightfulItemTags.NUTS_CHESTNUT).addOptional(Util.rl("windswept", "chestnuts"));
 		this.tag(DelightfulItemTags.NUTS_ACORN)
 			.add(DelightfulItems.ACORN.get())
 			.addOptional(Util.rl("natural_decoration", "oak_acorn"));
 		this.tag(DelightfulItemTags.NUTS)
 			.addTag(DelightfulItemTags.NUTS_ACORN)
 			.addTag(DelightfulItemTags.NUTS_WALNUT)
-			.addTag(DelightfulItemTags.NUTS_PEANUT);
+			.addTag(DelightfulItemTags.NUTS_PEANUT)
+			.addTag(DelightfulItemTags.NUTS_CHESTNUT);
 		this.tag(DelightfulItemTags.INGOTS_STEEL).addOptional(Util.rl("simplysteel", "steel_ingot"));
 		this.tag(DelightfulItemTags.WATER).add(Items.WATER_BUCKET);
 		this.tag(DelightfulItemTags.JELLY)
@@ -203,6 +209,11 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(ForgeTags.SALAD_INGREDIENTS)
 			.add(DelightfulItems.CHOPPED_CLOVER.get())
 			.addOptional(Util.rl("sprout", "sprouts"));
+		this.tag(DelightfulItemTags.SEEDS_SALMONBERRY)
+			.add(DelightfulItems.SALMONBERRY_PIPS.get());
+		this.tag(ForgeTags.SEEDS)
+			.addTag(DelightfulItemTags.SEEDS_SALMONBERRY)
+			.addOptional(Util.rl("farmersrespite", "tea_seeds"));
 
 		// Minecraft
 		this.tag(ItemTags.PIGLIN_LOVED).add(DelightfulItems.REFINED_GLOWSTONE_KNIFE.get());

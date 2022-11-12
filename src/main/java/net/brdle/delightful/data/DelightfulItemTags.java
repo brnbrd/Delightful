@@ -35,6 +35,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> FRUITS_BLUEBERRIES = forge("fruits/blueberries");
 	public static final TagKey<Item> FRUITS_NIGHTSHADE_BERRIES = forge("fruits/nightshade_berries");
 	public static final TagKey<Item> FRUITS_CRIMSON_BERRIES = forge("fruits/crimson_berries");
+	public static final TagKey<Item> FRUITS_WILD_BERRIES = forge("fruits/wild_berries");
 	public static final TagKey<Item> FRUITS_GREEN_APPLE = forge("fruits/green_apple");
 	public static final TagKey<Item> FRUITS_BANANA = forge("fruits/banana");
 	public static final TagKey<Item> FRUITS_CHERRY = forge("fruits/cherry");
@@ -53,6 +54,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> NUTS = forge("nuts");
 	public static final TagKey<Item> NUTS_WALNUT = forge("nuts/walnut");
 	public static final TagKey<Item> NUTS_PEANUT = forge("nuts/peanut");
+	public static final TagKey<Item> NUTS_CHESTNUT = forge("nuts/chestnut");
 	public static final TagKey<Item> NUTS_ACORN = forge("nuts/acorn");
 	public static final TagKey<Item> SUGAR = forge("sugar");
 	public static final TagKey<Item> WATER = forge("water");
@@ -74,6 +76,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> INGOTS_ZINC = forge("ingots/zinc");
 	public static final TagKey<Item> GEMS_ROSE_QUARTZ = forge("gems/rose_quartz");
 	public static final TagKey<Item> ICE_CUBES = forge("ice_cubes");
+	public static final TagKey<Item> SEEDS_SALMONBERRY = forge("seeds/salmonberry");
 
 	// Forbidden and Arcanus
 	public static final TagKey<Item> STELLARITE_PIECE = Util.it("forbidden_arcanus", "stellarite_piece");
