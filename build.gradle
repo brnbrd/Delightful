@@ -93,7 +93,7 @@ dependencies {
     implementation fg.deobf("curse.maven:farmers-d-398521:${farmers_delight_version}")
     implementation fg.deobf("curse.maven:ecologics-570463:${ecologics_version}")
     implementation fg.deobf("curse.maven:rotten-leather-231487:${rl_version}")
-    compileOnly fg.deobf("curse.maven:farmers-respite-551453:${farmers_respite_version}")
+    implementation fg.deobf("curse.maven:farmers-respite-551453:${farmers_respite_version}")
     implementation fg.deobf("curse.maven:terrablender-563928:${terrablender_version}")
     implementation fg.deobf("curse.maven:biomes-o-plenty-220318:${bop_version}")
     implementation fg.deobf("curse.maven:geckolib-388172:${geckolib_version}")
