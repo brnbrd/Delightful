@@ -28,8 +28,9 @@
     "2.6": "Update knife recipes to FD 1.2. Added (disabled by default) Emerald and Amethyst knives. Added Acorn Sack, Raw/Cooked Goat, Raw/Cooked Venison Chops.",
     "3.0": "Added slicing of some melons/gourds. Added Salmonberry Pie, Salmonberry Ice Cream. Added compat for Ars Nouveau, with an FD-style overhaul of their Source Berry Pie. Added overhaul of vanilla Pumpkin Pie. Added knives from SimpleOres and Fusion. Textures changes, fixes.",
     "3.1": "Pie overhaul for four pies from Oh the Biomes You'll Go. Added Pendorite & Allthemodium Knives. Added Matcha Ice Cream. Added Fixed Onyx Knife recipe.",
-    "3.1.1": "Added Warden Knife",
-    "3.1.3": "No changelog."
+    "3.1.1": "Added Warden Knife. Fixed Matcha Ice Cream using wrong food. Minor tag changes and cleanup.",
+    "3.1.2": "Added Zinc Knife, Gilded Quartz Knife, Leaf Knife, Kiwano Knife. Moved Lapis Lazuli Knife to disabled by default. Cleanup and tags. Add chinese translation.",
+    "3.1.3": "Fixed crash with Farmer's Respite and enhanced compat. Fixed some possible datapack bugs. Minor tag changes."
   },
   "promos": {
     "1.18.2-latest": "2.0",
