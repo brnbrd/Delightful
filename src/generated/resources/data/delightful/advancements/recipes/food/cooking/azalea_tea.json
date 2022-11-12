@@ -46,6 +46,13 @@
             {
               "type": "forge:item_exists",
               "item": "ecologics:azalea_flower"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:mod_loaded",
+                "modid": "farmersrespite"
+              }
             }
           ]
         }

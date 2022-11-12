@@ -3,9 +3,9 @@ package net.brdle.delightful.data.gen;
 import net.brdle.delightful.Delightful;
 import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.loot.AddItemLootModifier;
+import net.brdle.delightful.common.loot.CompatAddItemLootModifier;
 import net.brdle.delightful.common.loot.LootItemBlockIsTagCondition;
 import net.brdle.delightful.common.loot.LootItemEnabledCondition;
-import net.brdle.delightful.common.loot.SmeltLootModifier;
 import net.brdle.delightful.data.DelightfulBlockTags;
 import net.brdle.delightful.data.DelightfulItemTags;
 import net.minecraft.advancements.critereon.*;
@@ -27,23 +27,23 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 	 */
 	@Override
 	protected void start() {
-		add("green_tea_leaf", new AddItemLootModifier(
+		add("green_tea_leaf", new CompatAddItemLootModifier(
 			new LootItemCondition[]{
 				LootItemEnabledCondition.enabled("green_tea_leaf"),
 				LootItemRandomChanceCondition.randomChance(0.08F).build(),
 				MatchTool.toolMatches(ItemPredicate.Builder.item().of(DelightfulItemTags.SCAVENGING_TOOLS)).build(),
 				LootItemBlockIsTagCondition.isTag(DelightfulBlockTags.DROPS_GREEN_TEA_LEAF)
 			},
-			DelightfulItems.GREEN_TEA_LEAF.get(), 1, 1, true
+			DelightfulItems.GREEN_TEA_LEAF.get(), 1, 1, true, "farmersrespite", false
 		));
-		add("green_tea_leaf_rare", new AddItemLootModifier(
+		add("green_tea_leaf_rare", new CompatAddItemLootModifier(
 			new LootItemCondition[]{
 				LootItemEnabledCondition.enabled("green_tea_leaf"),
 				LootItemRandomChanceCondition.randomChance(0.005F).build(),
 				MatchTool.toolMatches(ItemPredicate.Builder.item().of(DelightfulItemTags.SCAVENGING_TOOLS)).invert().build(),
 				LootItemBlockIsTagCondition.isTag(DelightfulBlockTags.DROPS_GREEN_TEA_LEAF)
 			},
-			DelightfulItems.GREEN_TEA_LEAF.get(), 1, 1, true
+			DelightfulItems.GREEN_TEA_LEAF.get(), 1, 1, true, "farmersrespite", false
 		));
 		add("acorn", new AddItemLootModifier(
 			new LootItemCondition[]{

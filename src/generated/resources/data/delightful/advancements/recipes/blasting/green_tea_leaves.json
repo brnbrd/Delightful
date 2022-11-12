@@ -4,13 +4,11 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_green_tea_leaf": {
+          "has_green_tea_leaves": {
             "conditions": {
               "items": [
                 {
-                  "items": [
-                    "delightful:green_tea_leaf"
-                  ]
+                  "tag": "forge:tea_leaves/green"
                 }
               ]
             },
@@ -18,20 +16,20 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:smelting/green_tea_leaf"
+              "recipe": "delightful:blasting/green_tea_leaves"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
         },
         "requirements": [
           [
-            "has_green_tea_leaf",
+            "has_green_tea_leaves",
             "has_the_recipe"
           ]
         ],
         "rewards": {
           "recipes": [
-            "delightful:smelting/green_tea_leaf"
+            "delightful:blasting/green_tea_leaves"
           ]
         }
       },
@@ -44,8 +42,11 @@
               "value": "matcha"
             },
             {
-              "type": "forge:tag_empty",
-              "tag": "forge:tea_leaves/green"
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:tea_leaves/green"
+              }
             }
           ]
         }

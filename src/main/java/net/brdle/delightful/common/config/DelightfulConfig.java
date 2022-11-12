@@ -92,6 +92,10 @@ public class DelightfulConfig {
         map.put(name, builder.define(name, def));
     }
 
+    public static boolean verify(String item) {
+        return CONFIG.stuff.get(item).get();
+    }
+
     static {
         var pair = new ForgeConfigSpec.Builder().configure(DelightfulConfig::new);
         SPEC = pair.getRight();

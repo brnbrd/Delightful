@@ -198,12 +198,20 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             "food/honey_glazed_walnut", finished, enabled("honey_glazed_walnut"), not(tagEmpty(DelightfulItemTags.NUTS_WALNUT)));
         wrap(SimpleCookingRecipeBuilder.smelting(Ingredient.of(DelightfulItemTags.TEA_LEAVES_GREEN),
                 DelightfulItems.MATCHA.get(), 0.1F, 200)
-                .unlockedBy("has_green_tea_leaf", has(DelightfulItems.GREEN_TEA_LEAF.get())),
-            "smelting/green_tea_leaf", finished, enabled("matcha"));
+                .unlockedBy("has_green_tea_leaves", has(DelightfulItemTags.TEA_LEAVES_GREEN)),
+            "smelting/green_tea_leaves", finished, enabled("matcha"), not(tagEmpty(DelightfulItemTags.TEA_LEAVES_GREEN)));
         wrap(SimpleCookingRecipeBuilder.blasting(Ingredient.of(DelightfulItemTags.TEA_LEAVES_GREEN),
                 DelightfulItems.MATCHA.get(), 0.1F, 100)
+                .unlockedBy("has_green_tea_leaves", has(DelightfulItemTags.TEA_LEAVES_GREEN)),
+            "blasting/green_tea_leaves", finished, enabled("matcha"), not(tagEmpty(DelightfulItemTags.TEA_LEAVES_GREEN)));
+        wrap(SimpleCookingRecipeBuilder.smelting(Ingredient.of(DelightfulItems.GREEN_TEA_LEAF.get()),
+                    DelightfulItems.MATCHA.get(), 0.1F, 200)
                 .unlockedBy("has_green_tea_leaf", has(DelightfulItems.GREEN_TEA_LEAF.get())),
-            "blasting/green_tea_leaf", finished, enabled("matcha"));
+            "smelting/green_tea_leaf", finished, enabled("matcha"), tagEmpty(DelightfulItemTags.TEA_LEAVES_GREEN));
+        wrap(SimpleCookingRecipeBuilder.blasting(Ingredient.of(DelightfulItems.GREEN_TEA_LEAF.get()),
+                    DelightfulItems.MATCHA.get(), 0.1F, 100)
+                .unlockedBy("has_green_tea_leaf", has(DelightfulItems.GREEN_TEA_LEAF.get())),
+            "blasting/green_tea_leaf", finished, enabled("matcha"), tagEmpty(DelightfulItemTags.TEA_LEAVES_GREEN));
         wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.MATCHA_LATTE.get(), 1)
                 .requires(Items.GLASS_BOTTLE)
                 .requires(ForgeTags.MILK)
@@ -433,19 +441,19 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .unlockedBy("has_sweetened_chunk", has(DelightfulItemTags.SWEETENED_CHUNK)),
             "food/cooking/chunk_nugget", finished, enabled("chunk_nugget"), not(tagEmpty(DelightfulItemTags.SWEETENED_CHUNK)));
         wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-            DelightfulItems.AZALEA_TEA.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
+                    DelightfulItems.AZALEA_TEA.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
                 .addIngredient(StrictNBTIngredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
-                .addIngredient(DelightfulItemTags.TEA_LEAVES_GREEN)
+                .addIngredient(DelightfulItems.GREEN_TEA_LEAF.get())
                 .addIngredient(Objects.requireNonNull(Util.item("ecologics", "azalea_flower")))
                 .unlockedBy("has_azalea_flower", has(Objects.requireNonNull(Util.item("ecologics", "azalea_flower")))),
-            "food/cooking/azalea_tea", finished, enabled("azalea_tea"), itemExists("ecologics", "azalea_flower"));
+            "food/cooking/azalea_tea", finished, enabled("azalea_tea"), itemExists("ecologics", "azalea_flower"), not(modLoaded("farmersrespite")));
         wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-            DelightfulItems.LAVENDER_TEA.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
+                    DelightfulItems.LAVENDER_TEA.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
                 .addIngredient(StrictNBTIngredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
-                .addIngredient(DelightfulItemTags.TEA_LEAVES_GREEN)
+                .addIngredient(DelightfulItems.GREEN_TEA_LEAF.get())
                 .addIngredient(Objects.requireNonNull(Util.item("biomesoplenty", "lavender")))
                 .unlockedBy("has_lavender_flower", has(Objects.requireNonNull(Util.item("biomesoplenty", "lavender")))),
-            "food/cooking/lavender_tea", finished, enabled("lavender_tea"), itemExists("biomesoplenty", "lavender"));
+            "food/cooking/lavender_tea", finished, enabled("lavender_tea"), itemExists("biomesoplenty", "lavender"), not(modLoaded("farmersrespite")));
         wrap(CookingPotRecipeBuilder.cookingPotRecipe(
             Items.MILK_BUCKET, 1, CookingRecipes.NORMAL_COOKING, 0.35F, Items.BUCKET)
                 .addIngredient(DelightfulItemTags.WATER)

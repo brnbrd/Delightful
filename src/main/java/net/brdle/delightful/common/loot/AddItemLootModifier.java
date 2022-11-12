@@ -20,10 +20,10 @@ public class AddItemLootModifier extends LootModifier {
       .and(Codec.INT.fieldOf("maxAmount").forGetter(g -> g.maxAmount))
       .and(Codec.BOOL.fieldOf("unique").forGetter(g -> g.unique))
       .apply(inst, AddItemLootModifier::new));
-    private final Item item;
-    private final int minAmount;
-    private final int maxAmount;
-    private final boolean unique;
+    protected final Item item;
+    protected final int minAmount;
+    protected final int maxAmount;
+    protected final boolean unique;
 
     public AddItemLootModifier(LootItemCondition[] conditions, Item item, int minAmount, int maxAmount, boolean unique) {
         super(conditions);

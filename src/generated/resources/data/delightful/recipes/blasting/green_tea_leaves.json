@@ -11,8 +11,11 @@
               "value": "matcha"
             },
             {
-              "type": "forge:tag_empty",
-              "tag": "forge:tea_leaves/green"
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:tea_leaves/green"
+              }
             }
           ]
         }
@@ -22,7 +25,7 @@
         "cookingtime": 100,
         "experience": 0.1,
         "ingredient": {
-          "item": "delightful:green_tea_leaf"
+          "tag": "forge:tea_leaves/green"
         },
         "result": "delightful:matcha"
       }

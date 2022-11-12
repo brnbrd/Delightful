@@ -37,8 +37,17 @@
       },
       "conditions": [
         {
-          "type": "delightful:enabled",
-          "value": "matcha"
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "matcha"
+            },
+            {
+              "type": "forge:tag_empty",
+              "tag": "forge:tea_leaves/green"
+            }
+          ]
         }
       ]
     }

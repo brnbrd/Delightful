@@ -146,9 +146,12 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.CHEESE_OR_MILK)
 			.addTag(DelightfulItemTags.CHEESE)
 			.addTag(ForgeTags.MILK);
+		this.tag(DelightfulItemTags.TEA_LEAVES)
+			.addTag(DelightfulItemTags.TEA_LEAVES_GREEN)
+			.addOptionalTag(Util.rl("farmersrespite", "tea_leaves"));
 		this.tag(DelightfulItemTags.TEA_LEAVES_GREEN)
-			.add(DelightfulItems.GREEN_TEA_LEAF.get())
 			.addOptional(Util.rl("farmersrespite", "green_tea_leaves"));
+		// Not adding my tea leaf, because it is a single leaf and not leaves. Also so compat is more direct.
 		this.tag(DelightfulItemTags.RAW_FISHES_KOI)
 			.addOptional(Util.rl("environmental", "koi"))
 			.addOptional(Util.rl("crittersandcompanions", "koi_fish"));

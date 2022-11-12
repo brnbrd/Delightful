@@ -13,6 +13,13 @@
             {
               "type": "forge:item_exists",
               "item": "ecologics:azalea_flower"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:mod_loaded",
+                "modid": "farmersrespite"
+              }
             }
           ]
         }
@@ -29,7 +36,7 @@
             "nbt": "{Potion:\"minecraft:water\"}"
           },
           {
-            "tag": "forge:tea_leaves/green"
+            "item": "delightful:green_tea_leaf"
           },
           {
             "item": "ecologics:azalea_flower"
