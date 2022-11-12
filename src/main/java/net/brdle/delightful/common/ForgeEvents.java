@@ -138,20 +138,20 @@ public class ForgeEvents {
 				stack.is(Items.PUMPKIN_PIE)) {
 				tryPlacePie((PieBlock) DelightfulBlocks.PUMPKIN_PIE.get(), context, e);
 			} else if (ModList.get().isLoaded(ArsNouveauCompat.modid) &&
-				DelightfulConfig.CONFIG.stuff.get(ArsNouveauCompat.slice).get() &&
+				DelightfulConfig.verify(ArsNouveauCompat.slice) &&
 					isPie(stack, ArsNouveauCompat.modid, ArsNouveauCompat.pie)) {
 					tryPlacePie((PieBlock) DelightfulBlocks.SOURCE_BERRY_PIE.get(), context, e);
 			} else if (ModList.get().isLoaded(BYGCompat.modid)) {
-				if (DelightfulConfig.stuff.get(BYGCompat.blueberry_pie_slice).get() &&
+				if (DelightfulConfig.verify(BYGCompat.blueberry_pie_slice) &&
 					isPie(stack, BYGCompat.modid, BYGCompat.blueberry_pie)) {
 					tryPlacePie((PieBlock) DelightfulBlocks.BLUEBERRY_PIE.get(), context, e);
-				} else if (DelightfulConfig.stuff.get(BYGCompat.crimson_berry_pie_slice).get() &&
+				} else if (DelightfulConfig.verify(BYGCompat.crimson_berry_pie_slice) &&
 					isPie(stack, BYGCompat.modid, BYGCompat.crimson_berry_pie)) {
 					tryPlacePie((PieBlock) DelightfulBlocks.CRIMSON_BERRY_PIE.get(), context, e);
-				} else if (DelightfulConfig.stuff.get(BYGCompat.green_apple_pie_slice).get() &&
+				} else if (DelightfulConfig.verify(BYGCompat.green_apple_pie_slice) &&
 					isPie(stack, BYGCompat.modid, BYGCompat.green_apple_pie)) {
 					tryPlacePie((PieBlock) DelightfulBlocks.GREEN_APPLE_PIE.get(), context, e);
-				} else if (DelightfulConfig.stuff.get(BYGCompat.nightshade_berry_pie_slice).get() &&
+				} else if (DelightfulConfig.verify(BYGCompat.nightshade_berry_pie_slice) &&
 					isPie(stack, BYGCompat.modid, BYGCompat.nightshade_berry_pie)) {
 					tryPlacePie((PieBlock) DelightfulBlocks.NIGHTSHADE_BERRY_PIE.get(), context, e);
 				}
@@ -196,16 +196,16 @@ public class ForgeEvents {
 		if ((DelightfulConfig.PUMPKIN_PIE_OVERHAUL.get() && stack.is(Items.PUMPKIN_PIE)) ||
 			(ModList.get().isLoaded(ArsNouveauCompat.modid) &&
 				stack.is(Util.item(ArsNouveauCompat.modid, ArsNouveauCompat.pie)) &&
-				DelightfulConfig.stuff.get(ArsNouveauCompat.slice).get()) ||
+				DelightfulConfig.verify(ArsNouveauCompat.slice)) ||
 			(ModList.get().isLoaded(BYGCompat.modid) &&
 				((isPie(e.getItemStack(), BYGCompat.modid, BYGCompat.blueberry_pie) &&
-					DelightfulConfig.stuff.get(BYGCompat.blueberry_pie_slice).get()) ||
+					DelightfulConfig.verify(BYGCompat.blueberry_pie_slice)) ||
 					(isPie(e.getItemStack(), BYGCompat.modid, BYGCompat.crimson_berry_pie) &&
-						DelightfulConfig.stuff.get(BYGCompat.crimson_berry_pie_slice).get()) ||
+						DelightfulConfig.verify(BYGCompat.crimson_berry_pie_slice)) ||
 					(isPie(e.getItemStack(), BYGCompat.modid, BYGCompat.green_apple_pie) &&
-						DelightfulConfig.stuff.get(BYGCompat.green_apple_pie_slice).get()) ||
+						DelightfulConfig.verify(BYGCompat.green_apple_pie_slice)) ||
 					(isPie(e.getItemStack(), BYGCompat.modid, BYGCompat.nightshade_berry_pie) &&
-						DelightfulConfig.stuff.get(BYGCompat.nightshade_berry_pie_slice).get())))) {
+						DelightfulConfig.verify(BYGCompat.nightshade_berry_pie_slice))))) {
 			e.setCancellationResult(InteractionResult.FAIL);
 			e.setCanceled(true);
 		}
@@ -218,16 +218,16 @@ public class ForgeEvents {
 			(e.getItemStack().getItem() instanceof BlockItem block && block.getBlock() instanceof PieBlock) ||
 			(ModList.get().isLoaded(ArsNouveauCompat.modid) &&
 				isPie(e.getItemStack(), ArsNouveauCompat.modid, ArsNouveauCompat.pie) &&
-				DelightfulConfig.stuff.get(ArsNouveauCompat.slice).get()) ||
+				DelightfulConfig.verify(ArsNouveauCompat.slice)) ||
 			(ModList.get().isLoaded(BYGCompat.modid) &&
 				((isPie(e.getItemStack(), BYGCompat.modid, BYGCompat.blueberry_pie) &&
-					DelightfulConfig.stuff.get(BYGCompat.blueberry_pie_slice).get()) ||
+					DelightfulConfig.verify(BYGCompat.blueberry_pie_slice)) ||
 					(isPie(e.getItemStack(), BYGCompat.modid, BYGCompat.crimson_berry_pie) &&
-						DelightfulConfig.stuff.get(BYGCompat.crimson_berry_pie_slice).get()) ||
+						DelightfulConfig.verify(BYGCompat.crimson_berry_pie_slice)) ||
 					(isPie(e.getItemStack(), BYGCompat.modid, BYGCompat.green_apple_pie) &&
-						DelightfulConfig.stuff.get(BYGCompat.green_apple_pie_slice).get()) ||
+						DelightfulConfig.verify(BYGCompat.green_apple_pie_slice)) ||
 					(isPie(e.getItemStack(), BYGCompat.modid, BYGCompat.nightshade_berry_pie) &&
-						DelightfulConfig.stuff.get(BYGCompat.nightshade_berry_pie_slice).get())))) {
+						DelightfulConfig.verify(BYGCompat.nightshade_berry_pie_slice))))) {
 			e.getToolTip().add(Component.literal("Placeable").withStyle(ChatFormatting.DARK_GRAY).withStyle(ChatFormatting.ITALIC));
 		}
 	}

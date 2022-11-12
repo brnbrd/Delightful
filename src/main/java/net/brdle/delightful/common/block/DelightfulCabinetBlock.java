@@ -21,6 +21,6 @@ public class DelightfulCabinetBlock extends CabinetBlock implements IConfigured 
 
     @Override
     public boolean isEnabled() {
-        return DelightfulConfig.stuff.get(Util.name(this)).get();
+        return DelightfulConfig.verify(Util.name(this));
     }
 }
