@@ -168,12 +168,10 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(ForgeTags.COOKED_FISHES)
 			.addOptional(Util.rl("biomemakeover", "cooked_glowfish"));
 		this.tag(DelightfulItemTags.RAW_VENISON)
-			.add(DelightfulItems.VENISON_CHOPS.get())
 			.addOptional(Util.rl("naturalist", "venison"))
 			.addOptional(Util.rl("goodall", "raw_venison"))
 			.addOptional(Util.rl("twilightforest", "raw_venison"));
 		this.tag(DelightfulItemTags.COOKED_VENISON)
-			.add(DelightfulItems.COOKED_VENISON_CHOPS.get())
 			.addOptional(Util.rl("naturalist", "cooked_venison"))
 			.addOptional(Util.rl("goodall", "cooked_venison"))
 			.addOptional(Util.rl("twilightforest", "cooked_venison"));
