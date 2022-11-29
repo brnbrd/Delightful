@@ -29,11 +29,13 @@ public class JEIPlugin implements IModPlugin
 
     @Override
     public void registerRecipes(IRecipeRegistration registration) {
+        // Remove all disabled Items from JEI
         registration.getIngredientManager().removeIngredientsAtRuntime(VanillaTypes.ITEM_STACK,
             DelightfulItems.ITEMS.getEntries().stream()
-                .filter(k -> !(DelightfulConfig.verify(k)))
-                .map(Util::gs)
+                .filter(k -> !(DelightfulConfig.verify(k))) // Keep only Items that are not enabled in the config
+                .map(Util::gs) // Get ItemStack
                 .toList());
+        // Add Knife translations
         DelightfulItems.ITEMS.getEntries().stream()
             .map(RegistryObject::get)
             .filter(k -> k instanceof DelightfulKnifeItem && ((DelightfulKnifeItem) k).isEnabled())
