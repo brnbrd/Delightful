@@ -29,6 +29,11 @@ public class JEIPlugin implements IModPlugin
 
     @Override
     public void registerRecipes(IRecipeRegistration registration) {
+        registration.getIngredientManager().removeIngredientsAtRuntime(VanillaTypes.ITEM_STACK,
+            DelightfulItems.ITEMS.getEntries().stream()
+                .filter(k -> !(DelightfulConfig.verify(k)))
+                .map(Util::gs)
+                .toList());
         DelightfulItems.ITEMS.getEntries().stream()
             .map(RegistryObject::get)
             .filter(k -> k instanceof DelightfulKnifeItem && ((DelightfulKnifeItem) k).isEnabled())
@@ -38,22 +43,22 @@ public class JEIPlugin implements IModPlugin
             registration.addIngredientInfo(DelightfulItems.GREEN_TEA_LEAF.get().getDefaultInstance(), VanillaTypes.ITEM_STACK, Component.translatable("delightful.green_tea_leaf.desc"));
         }
         if (DelightfulConfig.verify("acorn")) {
-            registration.addIngredientInfo(DelightfulItems.ACORN.get().getDefaultInstance(), VanillaTypes.ITEM_STACK, Component.translatable("delightful.acorn.desc"));
+            registration.addIngredientInfo(Util.gs(DelightfulItems.ACORN), VanillaTypes.ITEM_STACK, Component.translatable("delightful.acorn.desc"));
         }
         if (DelightfulConfig.verify("salmonberries")) {
-            registration.addIngredientInfo(DelightfulItems.SALMONBERRIES.get().getDefaultInstance(), VanillaTypes.ITEM_STACK, Component.translatable("delightful.salmonberries.desc"));
+            registration.addIngredientInfo(Util.gs(DelightfulItems.SALMONBERRIES), VanillaTypes.ITEM_STACK, Component.translatable("delightful.salmonberries.desc"));
         }
         if (DelightfulConfig.verify("mini_melon")) {
-            registration.addIngredientInfo(DelightfulItems.MINI_MELON.get().getDefaultInstance(), VanillaTypes.ITEM_STACK, Component.translatable("delightful.mini_melon.desc"));
+            registration.addIngredientInfo(Util.gs(DelightfulItems.MINI_MELON), VanillaTypes.ITEM_STACK, Component.translatable("delightful.mini_melon.desc"));
         }
         if (DelightfulConfig.verify("cantaloupe")) {
-            registration.addIngredientInfo(DelightfulItems.CANTALOUPE.get().getDefaultInstance(), VanillaTypes.ITEM_STACK, Component.translatable("delightful.cantaloupe.desc").append(" ").append(Component.translatable("delightful.sliceable.desc")));
+            registration.addIngredientInfo(Util.gs(DelightfulItems.CANTALOUPE), VanillaTypes.ITEM_STACK, Component.translatable("delightful.cantaloupe.desc").append(" ").append(Component.translatable("delightful.sliceable.desc")));
         }
         if (DelightfulConfig.verify("animal_fat")) {
-            registration.addIngredientInfo(DelightfulItems.ANIMAL_FAT.get().getDefaultInstance(), VanillaTypes.ITEM_STACK, Component.translatable("delightful.animal_fat.desc"));
+            registration.addIngredientInfo(Util.gs(DelightfulItems.ANIMAL_FAT), VanillaTypes.ITEM_STACK, Component.translatable("delightful.animal_fat.desc"));
         }
         if (DelightfulConfig.verify("animal_oil_bottle")) {
-            registration.addIngredientInfo(DelightfulItems.ANIMAL_OIL_BOTTLE.get().getDefaultInstance(), VanillaTypes.ITEM_STACK, Component.translatable("delightful.animal_oil_bottle.desc"));
+            registration.addIngredientInfo(Util.gs(DelightfulItems.ANIMAL_OIL_BOTTLE), VanillaTypes.ITEM_STACK, Component.translatable("delightful.animal_oil_bottle.desc"));
         }
         registration.addIngredientInfo(Items.MELON.getDefaultInstance(), VanillaTypes.ITEM_STACK, Component.translatable("delightful.sliceable.desc"));
         registration.addIngredientInfo(Items.PUMPKIN.getDefaultInstance(), VanillaTypes.ITEM_STACK, Component.translatable("delightful.sliceable.desc"));

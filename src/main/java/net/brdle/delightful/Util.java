@@ -16,6 +16,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.Nullable;
 import java.util.Objects;
 import java.util.function.Supplier;
@@ -47,6 +48,10 @@ public class Util {
   @Nullable
   public static Item item(ResourceLocation rl) {
     return ForgeRegistries.ITEMS.getValue(rl);
+  }
+
+  public static ItemStack gs(RegistryObject<Item> r) {
+    return r.get().getDefaultInstance();
   }
 
   public static String name(Item item) {

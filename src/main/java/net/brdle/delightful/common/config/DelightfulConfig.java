@@ -4,6 +4,7 @@ import com.google.common.collect.ImmutableList;
 import it.unimi.dsi.fastutil.Pair;
 import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.item.knife.DelightfulKnifeItem;
+import net.minecraft.world.item.Item;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -94,6 +95,10 @@ public class DelightfulConfig {
 
     public static boolean verify(String item) {
         return CONFIG.stuff.get(item).get();
+    }
+
+    public static boolean verify(RegistryObject<Item> item) {
+        return verify(item.getId().getPath());
     }
 
     static {
