@@ -227,7 +227,10 @@ public class ForgeEvents {
 					(isPie(e.getItemStack(), BYGCompat.modid, BYGCompat.green_apple_pie) &&
 						DelightfulConfig.verify(BYGCompat.green_apple_pie_slice)) ||
 					(isPie(e.getItemStack(), BYGCompat.modid, BYGCompat.nightshade_berry_pie) &&
-						DelightfulConfig.verify(BYGCompat.nightshade_berry_pie_slice))))) {
+						DelightfulConfig.verify(BYGCompat.nightshade_berry_pie_slice)))) ||
+			(ModList.get().isLoaded("wildberries") &&
+				((e.getItemStack().is(Util.it("wildberries", "berry_pies"))) ||
+					(e.getItemStack().is(Util.it("wildberries", "berry_muffins")))))) {
 			e.getToolTip().add(Component.literal("Placeable").withStyle(ChatFormatting.DARK_GRAY).withStyle(ChatFormatting.ITALIC));
 		}
 	}

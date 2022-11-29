@@ -66,13 +66,13 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
         wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.NUT_BUTTER_AND_JELLY_SANDWICH.get())
                 .requires(ForgeTags.BREAD)
                 .requires(DelightfulItems.NUT_BUTTER_BOTTLE.get())
-                .requires(DelightfulItemTags.JELLY)
+                .requires(DelightfulItemTags.JAMS)
                 .unlockedBy("has_nut_butter", has(DelightfulItems.NUT_BUTTER_BOTTLE.get())),
             "food/nut_butter_and_jelly_sandwich", finished, enabled("nut_butter_and_jelly_sandwich"), not(tagEmpty(DelightfulItemTags.NUTS)), tagEmpty(DelightfulItemTags.BREAD_SLICE));
         wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.NUT_BUTTER_AND_JELLY_SANDWICH.get())
                 .requires(DelightfulItemTags.BREAD_SLICE)
                 .requires(DelightfulItems.NUT_BUTTER_BOTTLE.get())
-                .requires(DelightfulItemTags.JELLY)
+                .requires(DelightfulItemTags.JAMS)
                 .requires(DelightfulItemTags.BREAD_SLICE)
                 .unlockedBy("has_nut_butter", has(DelightfulItems.NUT_BUTTER_BOTTLE.get())),
             "food/nut_butter_and_jelly_sandwich_from_bread_slice", finished, enabled("nut_butter_and_jelly_sandwich"), not(tagEmpty(DelightfulItemTags.NUTS)), not(tagEmpty(DelightfulItemTags.BREAD_SLICE)));

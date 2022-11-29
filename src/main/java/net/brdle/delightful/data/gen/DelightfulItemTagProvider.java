@@ -61,7 +61,15 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.FRUITS_BLACKCURRANT).addOptional(Util.rl("rootsclassic", "blackcurrant"));
 		this.tag(DelightfulItemTags.FRUITS_REDCURRANT).addOptional(Util.rl("rootsclassic", "redcurrant"));
 		this.tag(DelightfulItemTags.FRUITS_WHITECURRANT).addOptional(Util.rl("rootsclassic", "whitecurrant"));
-		this.tag(DelightfulItemTags.FRUITS_BLUEBERRIES).addOptional(Util.rl("byg", "blueberries"));
+		this.tag(DelightfulItemTags.FRUITS_BLUEBERRIES)
+			.addOptional(Util.rl("byg", "blueberries"))
+			.addOptional(Util.rl("wildberries", "blueberries"));
+		this.tag(DelightfulItemTags.FRUITS_RASPBERRIES)
+			.addOptional(Util.rl("wildberries", "raspberry"));
+		this.tag(DelightfulItemTags.FRUITS_BLACKBERRIES)
+			.addOptional(Util.rl("wildberries", "blackberry"));
+		this.tag(DelightfulItemTags.FRUITS_CRANBERRIES)
+			.addOptional(Util.rl("wildberries", "cranberries"));
 		this.tag(DelightfulItemTags.FRUITS_NIGHTSHADE_BERRIES).addOptional(Util.rl("byg", "nightshade_berries"));
 		this.tag(DelightfulItemTags.FRUITS_CRIMSON_BERRIES).addOptional(Util.rl("byg", "crimson_berries"));
 		this.tag(DelightfulItemTags.FRUITS_WILD_BERRIES)
@@ -84,6 +92,9 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_REDCURRANT)
 			.addTag(DelightfulItemTags.FRUITS_WHITECURRANT)
 			.addTag(DelightfulItemTags.FRUITS_BLUEBERRIES)
+			.addTag(DelightfulItemTags.FRUITS_RASPBERRIES)
+			.addTag(DelightfulItemTags.FRUITS_BLACKBERRIES)
+			.addTag(DelightfulItemTags.FRUITS_CRANBERRIES)
 			.addTag(DelightfulItemTags.FRUITS_NIGHTSHADE_BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_CRIMSON_BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_CHERRY)
@@ -116,6 +127,9 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_STRAWBERRIES)
 			.addTag(DelightfulItemTags.FRUITS_CHERRY)
 			.addTag(DelightfulItemTags.FRUITS_BLUEBERRIES)
+			.addTag(DelightfulItemTags.FRUITS_RASPBERRIES)
+			.addTag(DelightfulItemTags.FRUITS_BLACKBERRIES)
+			.addTag(DelightfulItemTags.FRUITS_CRANBERRIES)
 			.addTag(DelightfulItemTags.FRUITS_WILD_BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_RAMBUTAN)
 			.addTag(DelightfulItemTags.FRUITS_PITAYA)
@@ -139,13 +153,21 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.JELLY)
 			.add(DelightfulItems.JELLY_BOTTLE.get())
 			.add(DelightfulItems.GLOW_JELLY_BOTTLE.get());
+		this.tag(DelightfulItemTags.JELLIES)
+			.addTag(DelightfulItemTags.JELLY);
+		this.tag(DelightfulItemTags.JAM)
+			.addTag(DelightfulItemTags.JELLIES);
+		this.tag(DelightfulItemTags.JAMS)
+			.addTag(DelightfulItemTags.JAM)
+			.addOptionalTag(Util.rl("wildberries", "berry_jams"));
 		this.tag(DelightfulItemTags.SUGAR).add(Items.SUGAR);
 		this.tag(DelightfulItemTags.COOKED_CRAB)
 			.addOptional(Util.rl("ecologics", "crab_meat"))
 			.addOptional(Util.rl("quark", "cooked_crab_leg"));
 		this.tag(DelightfulItemTags.CHEESE)
 			.addOptional(Util.rl("brewinandchewin", "flaxen_cheese_wedge"))
-			.addOptional(Util.rl("farmlife", "tribull_cheese_wedge"));
+			.addOptional(Util.rl("farmlife", "tribull_cheese_wedge"))
+			.addOptional(Util.rl("croptopia", "cheese"));
 		this.tag(ForgeTags.MILK)
 			.addOptional(Util.rl("dracovitadelight", "tribull_milk"));
 		this.tag(DelightfulItemTags.CHEESE_OR_MILK)

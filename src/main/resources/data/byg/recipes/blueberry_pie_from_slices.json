@@ -13,6 +13,13 @@
             {
               "type": "forge:item_exists",
               "item": "byg:blueberry_pie"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:item_exists",
+                "item": "wildberries:blueberry_pie"
+              }
             }
           ]
         }

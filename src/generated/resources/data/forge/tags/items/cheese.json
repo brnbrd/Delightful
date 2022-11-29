@@ -7,6 +7,10 @@
     {
       "id": "farmlife:tribull_cheese_wedge",
       "required": false
+    },
+    {
+      "id": "croptopia:cheese",
+      "required": false
     }
   ]
 }

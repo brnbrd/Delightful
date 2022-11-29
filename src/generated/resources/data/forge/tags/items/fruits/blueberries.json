@@ -3,6 +3,10 @@
     {
       "id": "byg:blueberries",
       "required": false
+    },
+    {
+      "id": "wildberries:blueberries",
+      "required": false
     }
   ]
 }

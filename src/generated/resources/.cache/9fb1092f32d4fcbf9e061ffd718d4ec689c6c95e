@@ -1,4 +1,4 @@
-// 1.19	2022-11-28T13:51:19.8087193	Recipes
+// 1.19	2022-11-28T16:16:17.823368	Recipes
 5883cc91d1106adcb3168172640837bed8e9aa29 data/delightful/advancements/recipes/blasting/green_tea_leaf.json
 17b012b6cbfef9adea6cfc1802f357a507472113 data/delightful/advancements/recipes/blasting/green_tea_leaves.json
 60ffe246fc7cd82d396e8dc65184da554be1a88a data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
@@ -165,8 +165,8 @@ e1fd1a1a93d05bf2054d652a1defb9a937b10b16 data/delightful/recipes/food/marshmallo
 bd6374c72c79d42492401f185aea224dd068c483 data/delightful/recipes/food/matcha_ice_cream.json
 dc2ccc1601f4ca7855595c46bbcb54a3a8856fa9 data/delightful/recipes/food/matcha_ice_cream_no_neapolitan.json
 fb2492e14a51a29541fa50a71058c8847f8aad5c data/delightful/recipes/food/matcha_latte.json
-a5693a8ce8c2f1ea755c3def313519700652b939 data/delightful/recipes/food/nut_butter_and_jelly_sandwich.json
-547153804b8c0f8f53cebf4122f94063f4b3160d data/delightful/recipes/food/nut_butter_and_jelly_sandwich_from_bread_slice.json
+3c30670e7946091b4c4f61e7610079d9f31ede2e data/delightful/recipes/food/nut_butter_and_jelly_sandwich.json
+1cdd694ecc0a05c8d524db10e959a9ca65c1685c data/delightful/recipes/food/nut_butter_and_jelly_sandwich_from_bread_slice.json
 49dd27476a29a44325c894d344c6b1dd02989207 data/delightful/recipes/food/nut_milk.json
 59daf188ef2f3c35e280600b83402b93ee7865ff data/delightful/recipes/food/prickly_pear_juice.json
 d2edfa587f4a2c831d9c9923f03f891c88a5855e data/delightful/recipes/food/pumpkin_pie.json

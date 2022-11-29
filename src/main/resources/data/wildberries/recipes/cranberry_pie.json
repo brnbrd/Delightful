@@ -4,24 +4,8 @@
     {
       "conditions": [
         {
-          "type": "forge:and",
-          "values": [
-            {
-              "type": "delightful:enabled",
-              "value": "blueberry_pie_slice"
-            },
-            {
-              "type": "forge:item_exists",
-              "item": "byg:blueberry_pie"
-            },
-            {
-              "type": "forge:not",
-              "value": {
-                "type": "forge:item_exists",
-                "item": "wildberries:blueberry_pie"
-              }
-            }
-          ]
+          "type": "forge:item_exists",
+          "item": "wildberries:cranberry_pie"
         }
       ],
       "recipe": {
@@ -34,7 +18,7 @@
             "item": "farmersdelight:pie_crust"
           },
           "a": {
-            "tag": "forge:fruits/blueberries"
+            "tag": "forge:fruits/cranberries"
           },
           "e": {
             "tag": "forge:eggs"
@@ -49,7 +33,7 @@
           "xOe"
         ],
         "result": {
-          "item": "byg:blueberry_pie"
+          "item": "wildberries:cranberry_pie"
         }
       }
     }

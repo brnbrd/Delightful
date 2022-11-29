@@ -33,6 +33,9 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> FRUITS_BLACKCURRANT = forge("fruits/blackcurrant");
 	public static final TagKey<Item> FRUITS_WHITECURRANT = forge("fruits/whitecurrant");
 	public static final TagKey<Item> FRUITS_BLUEBERRIES = forge("fruits/blueberries");
+	public static final TagKey<Item> FRUITS_RASPBERRIES = forge("fruits/raspberries");
+	public static final TagKey<Item> FRUITS_BLACKBERRIES = forge("fruits/blackberries");
+	public static final TagKey<Item> FRUITS_CRANBERRIES = forge("fruits/cranberries");
 	public static final TagKey<Item> FRUITS_NIGHTSHADE_BERRIES = forge("fruits/nightshade_berries");
 	public static final TagKey<Item> FRUITS_CRIMSON_BERRIES = forge("fruits/crimson_berries");
 	public static final TagKey<Item> FRUITS_WILD_BERRIES = forge("fruits/wild_berries");
@@ -61,6 +64,9 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> TEA_LEAVES = forge("tea_leaves");
 	public static final TagKey<Item> TEA_LEAVES_GREEN = forge("tea_leaves/green");
 	public static final TagKey<Item> JELLY = forge("jelly");
+	public static final TagKey<Item> JELLIES = forge("jellies");
+	public static final TagKey<Item> JAM = forge("jam");
+	public static final TagKey<Item> JAMS = forge("jams");
 	public static final TagKey<Item> RAW_FISHES_KOI = forge("raw_fishes/koi");
 	public static final TagKey<Item> RAW_FISHES_GLOWFISH = forge("raw_fishes/glowfish");
 	public static final TagKey<Item> RAW_VENISON = forge("raw_venison");
