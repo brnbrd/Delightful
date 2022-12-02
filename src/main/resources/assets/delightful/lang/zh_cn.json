@@ -116,5 +116,9 @@
   "delightful.animal_oil_bottle.desc": "可以使用在任意熔炉中，提供两个物品的燃烧时间",
   "delightful.mini_melon.desc": "小小的甜瓜，不是很大，但是很甜。可在平原生物群系中发现，可以长成一个大甜瓜或者用小刀切成片（右键）。",
   "delightful.cantaloupe.desc": "可在海洋生物群系中发现。",
-  "delightful.sliceable.desc": "可以用刀来切片（右键点击）"
+  "delightful.sliceable.desc": "可以用刀来切片（右键点击）",
+  "item.delightful.gilded_quartz_knife": "玫瑰石英刀",
+  "item.delightful.kiwano_knife": "Kiwano刀",
+  "item.delightful.leaf_knife": "树叶刀",
+  "item.delightful.zinc_knife": "锌刀"
 }
