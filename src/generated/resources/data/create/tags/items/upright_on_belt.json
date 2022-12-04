@@ -1,0 +1,34 @@
+{
+  "values": [
+    "delightful:azalea_tea",
+    "delightful:lavender_tea",
+    {
+      "id": "farmersrespite:green_tea",
+      "required": false
+    },
+    {
+      "id": "farmersrespite:yellow_tea",
+      "required": false
+    },
+    {
+      "id": "farmersrespite:black_tea",
+      "required": false
+    },
+    {
+      "id": "farmersrespite:rose_hip_tea",
+      "required": false
+    },
+    {
+      "id": "farmersrespite:dandelion_tea",
+      "required": false
+    },
+    {
+      "id": "farmersrespite:purulent_tea",
+      "required": false
+    },
+    {
+      "id": "farmersrespite:gambers_tea",
+      "required": false
+    }
+  ]
+}

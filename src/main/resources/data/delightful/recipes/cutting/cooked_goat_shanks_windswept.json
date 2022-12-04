@@ -1,0 +1,43 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "raw_goat"
+            },
+            {
+              "type": "delightful:enabled",
+              "value": "cooked_goat"
+            },
+            {
+              "item": "windswept:goat_shanks",
+              "type": "forge:item_exists"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "delightful:cooked_goat"
+          }
+        ],
+        "tool": {
+          "tag": "forge:tools/scavenging"
+        },
+        "result": [
+          {
+            "item": "windswept:cooked_goat_shanks",
+            "count": 2
+          }
+        ]
+      }
+    }
+  ]
+}

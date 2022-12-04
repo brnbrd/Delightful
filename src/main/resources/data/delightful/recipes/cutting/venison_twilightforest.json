@@ -8,18 +8,11 @@
           "values": [
             {
               "type": "delightful:enabled",
-              "value": "cooked_venison_chops"
-            },
-            {
-              "type": "delightful:enabled",
               "value": "venison_chops"
             },
             {
-              "type": "forge:not",
-              "value": {
-                "type": "forge:tag_empty",
-                "tag": "forge:cooked_venison"
-              }
+              "item": "twilightforest:raw_venison",
+              "type": "forge:item_exists"
             }
           ]
         }
@@ -28,13 +21,13 @@
         "type": "farmersdelight:cutting",
         "ingredients": [
           {
-            "tag": "forge:cooked_venison"
+            "item": "twilightforest:raw_venison"
           }
         ],
         "result": [
           {
             "count": 2,
-            "item": "delightful:cooked_venison_chops"
+            "item": "delightful:venison_chops"
           }
         ],
         "tool": {

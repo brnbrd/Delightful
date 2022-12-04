@@ -53,7 +53,9 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> CHOCOLATE = forge("chocolate");
 	public static final TagKey<Item> CHEESE = forge("cheese");
 	public static final TagKey<Item> CHEESE_OR_MILK = forge("cheese_or_milk");
-	public static final TagKey<Item> COOKED_CRAB = forge( "cooked_crab");
+	public static final TagKey<Item> COOKED_CRAB = forge("cooked_crab");
+	public static final TagKey<Item> CROPS_GINGER = forge("crops/ginger");
+	public static final TagKey<Item> COCONUT = forge("coconut");
 	public static final TagKey<Item> NUTS = forge("nuts");
 	public static final TagKey<Item> NUTS_WALNUT = forge("nuts/walnut");
 	public static final TagKey<Item> NUTS_PEANUT = forge("nuts/peanut");
@@ -115,6 +117,9 @@ public class DelightfulItemTags {
 	// SAS
 	public static final TagKey<Item> BURGER_BUN = Util.it("some_assembly_required", "burger_bun");
 	public static final TagKey<Item> BREAD_SLICE = Util.it("some_assembly_required", "bread_slice");
+
+	// Create
+	public static final TagKey<Item> UPRIGHT_ON_BELT = Util.it("create", "upright_on_belt");
 
 	private static TagKey<Item> forge(String name) {
 		return Util.it("forge", name);

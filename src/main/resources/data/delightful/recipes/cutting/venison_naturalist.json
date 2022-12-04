@@ -11,11 +11,8 @@
               "value": "venison_chops"
             },
             {
-              "type": "forge:not",
-              "value": {
-                "type": "forge:tag_empty",
-                "tag": "forge:raw_venison"
-              }
+              "item": "naturalist:venison",
+              "type": "forge:item_exists"
             }
           ]
         }
@@ -24,7 +21,7 @@
         "type": "farmersdelight:cutting",
         "ingredients": [
           {
-            "tag": "forge:raw_venison"
+            "item": "naturalist:venison"
           }
         ],
         "result": [

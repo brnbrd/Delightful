@@ -73,6 +73,11 @@ public class DelightfulItems {
     public static final RegistryObject<Item> MATCHA = registerItem("matcha", () -> new DescriptItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB), Component.translatable("delightful.matcha.desc").withStyle(ChatFormatting.GRAY)));
     public static final RegistryObject<Item> MATCHA_ICE_CREAM = registerItem("matcha_ice_cream", () -> new BowlFoodItem((new Item.Properties()).food(FoodValues.MATCHA_ICE_CREAM).craftRemainder(Items.BOWL).stacksTo(1).tab(FarmersDelight.CREATIVE_TAB)));
     public static final RegistryObject<Item> SALMONBERRY_ICE_CREAM = registerItem("salmonberry_ice_cream", () -> new BowlFoodItem((new Item.Properties()).food(FoodValues.SALMONBERRY_ICE_CREAM).craftRemainder(Items.BOWL).stacksTo(1).tab(FarmersDelight.CREATIVE_TAB)));
+    public static final RegistryObject<Item> COCONUT_CURRY = registerCompatItem("coconut_curry", "ecologics",
+        () -> new BowlFoodItem((new Item.Properties()).food(FoodValues.COCONUT_CURRY).stacksTo(16).craftRemainder(Items.BOWL).tab(FarmersDelight.CREATIVE_TAB)),
+        () -> new BowlFoodItem((new Item.Properties()).food(FoodValues.COCONUT_CURRY).stacksTo(16).craftRemainder(Items.BOWL)));
+    public static final RegistryObject<Item> SINIGANG = registerItem("sinigang",
+        () -> new BowlFoodItem((new Item.Properties()).food(FoodValues.COCONUT_CURRY).craftRemainder(Items.BOWL).tab(FarmersDelight.CREATIVE_TAB)));
     public static final RegistryObject<Item> CHOPPED_CLOVER = registerFood("chopped_clover", FoodValues.CHOPPED_CLOVER);
     public static final RegistryObject<Item> CACTUS_FLESH = registerFood("cactus_flesh", FoodValues.CACTUS_FLESH);
     public static final RegistryObject<Item> CACTUS_STEAK = registerFood("cactus_steak", FoodValues.CACTUS_STEAK);

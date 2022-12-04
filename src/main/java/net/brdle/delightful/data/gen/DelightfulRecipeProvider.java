@@ -441,6 +441,36 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .unlockedBy("has_sweetened_chunk", has(DelightfulItemTags.SWEETENED_CHUNK)),
             "food/cooking/chunk_nugget", finished, enabled("chunk_nugget"), not(tagEmpty(DelightfulItemTags.SWEETENED_CHUNK)));
         wrap(CookingPotRecipeBuilder.cookingPotRecipe(
+                    DelightfulItems.COCONUT_CURRY.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
+                .addIngredient(DelightfulItemTags.COCONUT)
+                .addIngredient(ForgeTags.RAW_CHICKEN)
+                .addIngredient(ForgeTags.CROPS_TOMATO)
+                .addIngredient(DelightfulItemTags.TEA_LEAVES_GREEN)
+                .addIngredient(ForgeTags.SALAD_INGREDIENTS_CABBAGE)
+                .addIngredient(ForgeTags.CROPS_ONION)
+                .unlockedBy("has_coconut", has(DelightfulItemTags.COCONUT)),
+            "food/cooking/coconut_curry_no_ginger", finished, enabled("coconut_curry"), not(tagEmpty(DelightfulItemTags.COCONUT)), tagEmpty(DelightfulItemTags.CROPS_GINGER));
+        wrap(CookingPotRecipeBuilder.cookingPotRecipe(
+                    DelightfulItems.COCONUT_CURRY.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
+                .addIngredient(DelightfulItemTags.COCONUT)
+                .addIngredient(ForgeTags.RAW_CHICKEN)
+                .addIngredient(ForgeTags.CROPS_TOMATO)
+                .addIngredient(DelightfulItemTags.TEA_LEAVES_GREEN)
+                .addIngredient(DelightfulItemTags.CROPS_GINGER)
+                .addIngredient(ForgeTags.CROPS_ONION)
+                .unlockedBy("has_coconut", has(DelightfulItemTags.COCONUT)),
+            "food/cooking/coconut_curry", finished, enabled("coconut_curry"), not(tagEmpty(DelightfulItemTags.COCONUT)), not(tagEmpty(DelightfulItemTags.CROPS_GINGER)));
+        wrap(CookingPotRecipeBuilder.cookingPotRecipe(
+                    DelightfulItems.SINIGANG.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
+                .addIngredient(ForgeTags.RAW_PORK)
+                .addIngredient(ForgeTags.RAW_FISHES)
+                .addIngredient(DelightfulItemTags.CROPS_GINGER)
+                .addIngredient(ForgeTags.CROPS_TOMATO)
+                .addIngredient(DelightfulItemTags.FRUITS_CITRON)
+                .addIngredient(ForgeTags.CROPS_ONION)
+                .unlockedBy("has_ginger", has(DelightfulItemTags.CROPS_GINGER)),
+            "food/cooking/sinigang", finished, enabled("sinigang"), not(tagEmpty(DelightfulItemTags.CROPS_GINGER)));
+        wrap(CookingPotRecipeBuilder.cookingPotRecipe(
                     DelightfulItems.AZALEA_TEA.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
                 .addIngredient(StrictNBTIngredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
                 .addIngredient(DelightfulItems.GREEN_TEA_LEAF.get())
@@ -499,16 +529,6 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .addIngredient(Items.HONEY_BOTTLE, 2)
                 .addIngredient(DelightfulItems.CHOPPED_CLOVER.get(), 4),
             "food/clover_honey", finished, enabled("clover_honey"), modLoaded("biomesoplenty"));
-        wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
-                Ingredient.of(DelightfulItemTags.RAW_VENISON),
-                Ingredient.of(DelightfulItemTags.SCAVENGING_TOOLS),
-                DelightfulItems.VENISON_CHOPS.get(), 2),
-            "cutting/venison", finished, enabled("venison_chops"), not(tagEmpty(DelightfulItemTags.RAW_VENISON)));
-        wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
-                Ingredient.of(DelightfulItemTags.COOKED_VENISON),
-                Ingredient.of(DelightfulItemTags.SCAVENGING_TOOLS),
-                DelightfulItems.COOKED_VENISON_CHOPS.get(), 2),
-            "cutting/cooked_venison", finished, enabled("cooked_venison_chops"), enabled("venison_chops"), not(tagEmpty(DelightfulItemTags.COOKED_VENISON)));
         wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
                 Ingredient.of(DelightfulItems.SALMONBERRY_PIE.get()),
                 Ingredient.of(DelightfulItemTags.SCAVENGING_TOOLS),

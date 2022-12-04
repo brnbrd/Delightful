@@ -6,6 +6,7 @@ import net.brdle.delightful.common.block.DelightfulBlocks;
 import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.item.knife.DelightfulKnifeItem;
 import net.brdle.delightful.compat.BYGCompat;
+import net.brdle.delightful.compat.FRCompat;
 import net.brdle.delightful.data.DelightfulBlockTags;
 import net.brdle.delightful.data.DelightfulItemTags;
 import net.minecraft.data.DataGenerator;
@@ -138,6 +139,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptionalTag(Util.rl("forge", "fruits/redlove"));
 		this.tag(DelightfulItemTags.FRUITS_GREEN_APPLE)
 			.addOptional(Util.rl(BYGCompat.modid, "green_apple"));
+		this.tag(DelightfulItemTags.CROPS_GINGER).addOptional(Util.rl("snowyspirit", "ginger"));
+		this.tag(DelightfulItemTags.COCONUT).addOptional(Util.rl("ecologics", "coconut_slice"));
 		this.tag(DelightfulItemTags.NUTS_WALNUT).addOptional(Util.rl("ecologics", "walnut"));
 		this.tag(DelightfulItemTags.NUTS_PEANUT).addOptional(Util.rl("sprout", "peanut"));
 		this.tag(DelightfulItemTags.NUTS_CHESTNUT).addOptional(Util.rl("windswept", "chestnuts"));
@@ -177,8 +180,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.TEA_LEAVES_GREEN)
 			.addOptionalTag(Util.rl("farmersrespite", "tea_leaves"));
 		this.tag(DelightfulItemTags.TEA_LEAVES_GREEN)
+			.add(DelightfulItems.GREEN_TEA_LEAF.get())
 			.addOptional(Util.rl("farmersrespite", "green_tea_leaves"));
-		// Not adding my tea leaf, because it is a single leaf and not leaves. Also so compat is more direct.
 		this.tag(DelightfulItemTags.RAW_FISHES_KOI)
 			.addOptional(Util.rl("environmental", "koi"))
 			.addOptional(Util.rl("crittersandcompanions", "koi_fish"));
@@ -190,10 +193,12 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(ForgeTags.COOKED_FISHES)
 			.addOptional(Util.rl("biomemakeover", "cooked_glowfish"));
 		this.tag(DelightfulItemTags.RAW_VENISON)
+			.add(DelightfulItems.VENISON_CHOPS.get())
 			.addOptional(Util.rl("naturalist", "venison"))
 			.addOptional(Util.rl("goodall", "raw_venison"))
 			.addOptional(Util.rl("twilightforest", "raw_venison"));
 		this.tag(DelightfulItemTags.COOKED_VENISON)
+			.add(DelightfulItems.COOKED_VENISON_CHOPS.get())
 			.addOptional(Util.rl("naturalist", "cooked_venison"))
 			.addOptional(Util.rl("goodall", "cooked_venison"))
 			.addOptional(Util.rl("twilightforest", "cooked_venison"));
@@ -283,6 +288,18 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		// SAS
 		this.addSelf(DelightfulItemTags.BURGER_BUN);
 		this.addSelf(DelightfulItemTags.BREAD_SLICE);
+
+		// Create
+		this.tag(DelightfulItemTags.UPRIGHT_ON_BELT)
+			.add(DelightfulItems.AZALEA_TEA.get())
+			.add(DelightfulItems.LAVENDER_TEA.get())
+			.addOptional(Util.rl("farmersrespite", "green_tea"))
+			.addOptional(Util.rl("farmersrespite", "yellow_tea"))
+			.addOptional(Util.rl("farmersrespite", "black_tea"))
+			.addOptional(Util.rl("farmersrespite", "rose_hip_tea"))
+			.addOptional(Util.rl("farmersrespite", "dandelion_tea"))
+			.addOptional(Util.rl("farmersrespite", "purulent_tea"))
+			.addOptional(Util.rl("farmersrespite", "gambers_tea"));
 	}
 
 	/**

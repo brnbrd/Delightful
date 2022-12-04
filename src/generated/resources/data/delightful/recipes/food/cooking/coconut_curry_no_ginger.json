@@ -1,0 +1,57 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "coconut_curry"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:coconut"
+              }
+            },
+            {
+              "type": "forge:tag_empty",
+              "tag": "forge:crops/ginger"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "cookingtime": 200,
+        "experience": 0.35,
+        "ingredients": [
+          {
+            "tag": "forge:coconut"
+          },
+          {
+            "tag": "forge:raw_chicken"
+          },
+          {
+            "tag": "forge:crops/tomato"
+          },
+          {
+            "tag": "forge:tea_leaves/green"
+          },
+          {
+            "tag": "forge:salad_ingredients/cabbage"
+          },
+          {
+            "tag": "forge:crops/onion"
+          }
+        ],
+        "result": {
+          "item": "delightful:coconut_curry"
+        }
+      }
+    }
+  ]
+}

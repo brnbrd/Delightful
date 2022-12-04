@@ -1,4 +1,4 @@
-// 1.19	2022-11-28T13:51:19.802715	Item Models: delightful
+// 1.19	2022-12-03T19:06:00.8341229	Item Models: delightful
 f9af973b19b45f34017d8db4e6e54de90668031e assets/delightful/models/item/acorn.json
 9b4daf24b0d8e447735c5836d7ab76a3df1b3c1d assets/delightful/models/item/acorn_sack.json
 5d9531a6795e7d2281f99609672d866743329211 assets/delightful/models/item/adamantium_knife.json
@@ -22,6 +22,7 @@ f27ba77606c1ed18944838b5945589a5d207bf41 assets/delightful/models/item/cheesebur
 277fc9fc32d17bb07955cd8444911097c121c17d assets/delightful/models/item/chopped_clover.json
 2f49d8a8d17a8d3a2a95b545696c0f205cdaa020 assets/delightful/models/item/chunkwich.json
 4be16da279f529ceca4bdb6b7ed330555bdf5fa0 assets/delightful/models/item/chunk_nugget.json
+3f859229c6c735e7b731dcf4d4ea8b6e4782acf7 assets/delightful/models/item/coconut_curry.json
 ece20577f6c657dde476590183d52bb46ad1768f assets/delightful/models/item/constantan_knife.json
 f4a29efce7681dc639e7985c137e1717acff2ee2 assets/delightful/models/item/cooked_goat.json
 daae20918d102a64c9a5640874194768968a1b67 assets/delightful/models/item/cooked_marshmallow_stick.json
@@ -85,6 +86,7 @@ c85b551a079857106bae590bf01434c23c595a98 assets/delightful/models/item/salmonber
 929deaa04cf179dc86268dc6d88494287c8fc874 assets/delightful/models/item/salmonberry_pips.json
 6b35ac1bf0de23c9caa5f9e4c1ed5ff4d74bb5ed assets/delightful/models/item/salmonberry_sack.json
 272966734912c5d903aa6aaf78ed464b5f03aec9 assets/delightful/models/item/silver_knife.json
+afb0771c1a06574b3e7dd54bd077e2c7ccbce795 assets/delightful/models/item/sinigang.json
 ef8573110abf1c1b22bccc4fd76c327727ff3f91 assets/delightful/models/item/sinisite_knife.json
 9ebe6608541b10993820aa5e687f060023f515b9 assets/delightful/models/item/smore.json
 8902b6846add2d4673d02df7a555d0911ab896df assets/delightful/models/item/source_berry_pie_slice.json

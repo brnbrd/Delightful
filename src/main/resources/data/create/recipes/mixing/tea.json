@@ -1,0 +1,55 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "forge:or",
+              "values": [
+                {
+                  "type": "forge:mod_loaded",
+                  "modid": "farmersrespite"
+                },
+                {
+                  "type": "delightful:enabled",
+                  "value": "green_tea_leaf"
+                }
+              ]
+            },
+            {
+              "type": "forge:item_exists",
+              "item": "create:builders_tea"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "create:mixing",
+        "heatRequirement": "heated",
+        "ingredients": [
+          {
+            "tag": "forge:tea_leaves"
+          },
+          {
+            "amount": 250,
+            "fluid": "minecraft:water",
+            "nbt": {}
+          },
+          {
+            "amount": 250,
+            "fluidTag": "forge:milk"
+          }
+        ],
+        "results": [
+          {
+            "amount": 500,
+            "fluid": "create:tea"
+          }
+        ]
+      }
+    }
+  ]
+}
