@@ -4,13 +4,11 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_marshmallow_stick": {
+          "has_nuts": {
             "conditions": {
               "items": [
                 {
-                  "items": [
-                    "delightful:marshmallow_stick"
-                  ]
+                  "tag": "forge:nuts"
                 }
               ]
             },
@@ -18,27 +16,27 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:food/cooked_marshmallow_stick"
+              "recipe": "delightful:food/cooking/nut_milk"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
         },
         "requirements": [
           [
-            "has_marshmallow_stick",
+            "has_nuts",
             "has_the_recipe"
           ]
         ],
         "rewards": {
           "recipes": [
-            "delightful:food/cooked_marshmallow_stick"
+            "delightful:food/cooking/nut_milk"
           ]
         }
       },
       "conditions": [
         {
           "type": "delightful:enabled",
-          "value": "cooked_marshmallow_stick"
+          "value": "nut_milk"
         }
       ]
     }

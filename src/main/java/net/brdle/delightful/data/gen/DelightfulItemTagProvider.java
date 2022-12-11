@@ -2,27 +2,22 @@ package net.brdle.delightful.data.gen;
 
 import net.brdle.delightful.Delightful;
 import net.brdle.delightful.Util;
-import net.brdle.delightful.common.block.DelightfulBlocks;
 import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.item.knife.DelightfulKnifeItem;
+import net.brdle.delightful.common.item.knife.Knives;
 import net.brdle.delightful.compat.BYGCompat;
-import net.brdle.delightful.compat.FRCompat;
-import net.brdle.delightful.data.DelightfulBlockTags;
 import net.brdle.delightful.data.DelightfulItemTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.data.tags.TagsProvider;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
-import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
-import vectorwing.farmersdelight.common.registry.ModBlocks;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
 import vectorwing.farmersdelight.common.tag.ModTags;
 
@@ -34,7 +29,6 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 	@Override
 	protected void addTags() {
 
-		// Farmer's Delight
 		// Farmer's Delight
 		this.tag(ModTags.CABINETS)
 			.addTag(DelightfulItemTags.CABINETS_STONE);
@@ -117,6 +111,13 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_KIWANO)
 			.addOptional(Util.rl("ars_nouveau", "mendosteen_pod"))
 			.addOptional(Util.rl("ars_nouveau", "bastion_pod"));
+		this.tag(DelightfulItemTags.FRUITS_CITRUS)
+			.addTag(DelightfulItemTags.FRUITS_CITRON)
+			.addOptionalTag(DelightfulItemTags.FRUITS_MANDARIN.location())
+			.addOptionalTag(DelightfulItemTags.FRUITS_ORANGE.location())
+			.addOptionalTag(DelightfulItemTags.FRUITS_LEMON.location())
+			.addOptionalTag(DelightfulItemTags.FRUITS_LIME.location())
+			.addOptionalTag(DelightfulItemTags.FRUITS_GRAPEFRUIT.location());
 		this.tag(DelightfulItemTags.FRUITS_SWEET)
 			.addTag(DelightfulItemTags.FRUITS_APPLE)
 			.addTag(DelightfulItemTags.FRUITS_KIWI)
@@ -134,8 +135,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_WILD_BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_RAMBUTAN)
 			.addTag(DelightfulItemTags.FRUITS_PITAYA)
-			.addOptionalTag(Util.rl("forge", "fruits/mandarin"))
-			.addOptionalTag(Util.rl("forge", "fruits/orange"))
+			.addOptionalTag(DelightfulItemTags.FRUITS_MANDARIN.location())
+			.addOptionalTag(DelightfulItemTags.FRUITS_ORANGE.location())
 			.addOptionalTag(Util.rl("forge", "fruits/redlove"));
 		this.tag(DelightfulItemTags.FRUITS_GREEN_APPLE)
 			.addOptional(Util.rl(BYGCompat.modid, "green_apple"));
@@ -240,7 +241,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Util.rl("farmersrespite", "tea_seeds"));
 
 		// Minecraft
-		this.tag(ItemTags.PIGLIN_LOVED).add(DelightfulItems.REFINED_GLOWSTONE_KNIFE.get());
+		this.tag(ItemTags.PIGLIN_LOVED).add(Knives.REFINED_GLOWSTONE.get());
 		this.tag(ForgeTags.TOOLS_KNIVES)
 			.addTag(ModTags.KNIVES)
 			.addOptional(Util.rl("ae2", "certus_quartz_cutting_knife"))

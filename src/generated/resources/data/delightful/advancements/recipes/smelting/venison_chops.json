@@ -6,7 +6,7 @@
         "criteria": {
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:cooking/venison_chops_from_smoking"
+              "recipe": "delightful:smelting/venison_chops"
             },
             "trigger": "minecraft:recipe_unlocked"
           },
@@ -31,7 +31,7 @@
         ],
         "rewards": {
           "recipes": [
-            "delightful:cooking/venison_chops_from_smoking"
+            "delightful:smelting/venison_chops"
           ]
         }
       },

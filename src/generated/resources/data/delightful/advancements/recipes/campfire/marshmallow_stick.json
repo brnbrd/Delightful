@@ -4,12 +4,12 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_raw_goat": {
+          "has_marshmallow_stick": {
             "conditions": {
               "items": [
                 {
                   "items": [
-                    "delightful:raw_goat"
+                    "delightful:marshmallow_stick"
                   ]
                 }
               ]
@@ -18,27 +18,27 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:cooking/raw_goat"
+              "recipe": "delightful:campfire/marshmallow_stick"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
         },
         "requirements": [
           [
-            "has_raw_goat",
+            "has_marshmallow_stick",
             "has_the_recipe"
           ]
         ],
         "rewards": {
           "recipes": [
-            "delightful:cooking/raw_goat"
+            "delightful:campfire/marshmallow_stick"
           ]
         }
       },
       "conditions": [
         {
           "type": "delightful:enabled",
-          "value": "cooked_goat"
+          "value": "cooked_marshmallow_stick"
         }
       ]
     }

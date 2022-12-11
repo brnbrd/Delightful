@@ -9,9 +9,9 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
+import vectorwing.farmersdelight.common.tag.ModTags;
 
 public class DelightfulBlockTagProvider extends BlockTagsProvider {
 
@@ -21,6 +21,21 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 
 	@Override
 	protected void addTags() {
+		// Farmer's Delight
+		this.tag(ModTags.MINEABLE_WITH_KNIFE)
+			.add(DelightfulBlocks.MINI_MELON.get())
+			.add(DelightfulBlocks.SLICED_MINI_MELON.get())
+			.add(DelightfulBlocks.CANTALOUPE.get())
+			.add(DelightfulBlocks.SLICED_CANTALOUPE.get())
+			.add(DelightfulBlocks.SALMONBERRY_PIE.get())
+			.add(DelightfulBlocks.PUMPKIN_PIE.get())
+			.add(DelightfulBlocks.BLUEBERRY_PIE.get())
+			.add(DelightfulBlocks.CRIMSON_BERRY_PIE.get())
+			.add(DelightfulBlocks.GREEN_APPLE_PIE.get())
+			.add(DelightfulBlocks.NIGHTSHADE_BERRY_PIE.get())
+			.add(DelightfulBlocks.SOURCE_BERRY_PIE.get());
+
+		// Delightful
 		this.tag(DelightfulBlockTags.DROPS_STRAW)
 			.addOptional(Util.rl(BYGCompat.modid, "prairie_grass"))
 			.addOptional(Util.rl(BYGCompat.modid, "tall_prairie_grass"))
@@ -46,6 +61,9 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 			.add(DelightfulBlocks.SLICED_PUMPKIN.get())
 			.add(DelightfulBlocks.CANTALOUPE.get())
 			.add(DelightfulBlocks.SLICED_CANTALOUPE.get())
+			.add(DelightfulBlocks.SALMONBERRY_SACK.get())
+			.add(DelightfulBlocks.ACORN_SACK.get());
+		this.tag(BlockTags.MINEABLE_WITH_HOE)
 			.add(DelightfulBlocks.SALMONBERRY_SACK.get())
 			.add(DelightfulBlocks.ACORN_SACK.get());
 	}

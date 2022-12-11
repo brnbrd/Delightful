@@ -4,11 +4,11 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_sweetened_chunk": {
+          "has_ginger": {
             "conditions": {
               "items": [
                 {
-                  "tag": "rottenleather:sweetened_chunk"
+                  "tag": "forge:crops/ginger"
                 }
               ]
             },
@@ -16,20 +16,20 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:food/chunkwich_from_bun"
+              "recipe": "delightful:food/cooking/sinigang"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
         },
         "requirements": [
           [
-            "has_sweetened_chunk",
+            "has_ginger",
             "has_the_recipe"
           ]
         ],
         "rewards": {
           "recipes": [
-            "delightful:food/chunkwich_from_bun"
+            "delightful:food/cooking/sinigang"
           ]
         }
       },
@@ -39,20 +39,20 @@
           "values": [
             {
               "type": "delightful:enabled",
-              "value": "chunkwich"
+              "value": "sinigang"
             },
             {
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
-                "tag": "rottenleather:sweetened_chunk"
+                "tag": "forge:crops/ginger"
               }
             },
             {
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
-                "tag": "some_assembly_required:burger_bun"
+                "tag": "forge:fruits/citrus"
               }
             }
           ]

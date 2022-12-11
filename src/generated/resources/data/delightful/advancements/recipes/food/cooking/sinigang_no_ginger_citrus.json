@@ -4,11 +4,11 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_cooked_prickly_pear": {
+          "has_ginger": {
             "conditions": {
               "items": [
                 {
-                  "tag": "ecologics:cooked_prickly_pear"
+                  "tag": "forge:fruits"
                 }
               ]
             },
@@ -16,20 +16,20 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:food/prickly_pear_juice"
+              "recipe": "delightful:food/cooking/sinigang_no_ginger_citrus"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
         },
         "requirements": [
           [
-            "has_cooked_prickly_pear",
+            "has_ginger",
             "has_the_recipe"
           ]
         ],
         "rewards": {
           "recipes": [
-            "delightful:food/prickly_pear_juice"
+            "delightful:food/cooking/sinigang_no_ginger_citrus"
           ]
         }
       },
@@ -39,14 +39,20 @@
           "values": [
             {
               "type": "delightful:enabled",
-              "value": "prickly_pear_juice"
+              "value": "sinigang"
             },
             {
-              "type": "forge:not",
-              "value": {
-                "type": "forge:tag_empty",
-                "tag": "ecologics:cooked_prickly_pear"
-              }
+              "type": "forge:or",
+              "values": [
+                {
+                  "type": "forge:tag_empty",
+                  "tag": "forge:crops/ginger"
+                },
+                {
+                  "type": "forge:tag_empty",
+                  "tag": "forge:fruits/citrus"
+                }
+              ]
             }
           ]
         }

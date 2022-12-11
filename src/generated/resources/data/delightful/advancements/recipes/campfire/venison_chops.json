@@ -4,34 +4,34 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_green_tea_leaf": {
+          "has_the_recipe": {
+            "conditions": {
+              "recipe": "delightful:campfire/venison_chops"
+            },
+            "trigger": "minecraft:recipe_unlocked"
+          },
+          "has_venison_chops": {
             "conditions": {
               "items": [
                 {
                   "items": [
-                    "delightful:green_tea_leaf"
+                    "delightful:venison_chops"
                   ]
                 }
               ]
             },
             "trigger": "minecraft:inventory_changed"
-          },
-          "has_the_recipe": {
-            "conditions": {
-              "recipe": "delightful:smelting/green_tea_leaf"
-            },
-            "trigger": "minecraft:recipe_unlocked"
           }
         },
         "requirements": [
           [
-            "has_green_tea_leaf",
+            "has_venison_chops",
             "has_the_recipe"
           ]
         ],
         "rewards": {
           "recipes": [
-            "delightful:smelting/green_tea_leaf"
+            "delightful:campfire/venison_chops"
           ]
         }
       },
@@ -41,11 +41,18 @@
           "values": [
             {
               "type": "delightful:enabled",
-              "value": "matcha"
+              "value": "cooked_venison_chops"
             },
             {
-              "type": "forge:tag_empty",
-              "tag": "forge:tea_leaves/green"
+              "type": "delightful:enabled",
+              "value": "venison_chops"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:raw_venison"
+              }
             }
           ]
         }

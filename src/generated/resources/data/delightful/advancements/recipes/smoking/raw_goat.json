@@ -18,7 +18,7 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:cooking/raw_goat_from_smoking"
+              "recipe": "delightful:smoking/raw_goat"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
@@ -31,7 +31,7 @@
         ],
         "rewards": {
           "recipes": [
-            "delightful:cooking/raw_goat_from_smoking"
+            "delightful:smoking/raw_goat"
           ]
         }
       },

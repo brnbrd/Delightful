@@ -31,6 +31,7 @@
     "3.1.1": "Added Warden Knife. Fixed Matcha Ice Cream using wrong food. Minor tag changes and cleanup.",
     "3.1.2": "Added Zinc Knife, Gilded Quartz Knife, Leaf Knife, Kiwano Knife. Moved Lapis Lazuli Knife to disabled by default. Cleanup and tags. Add chinese translation.",
     "3.1.3": "Fixed crash with Farmer's Respite and enhanced compat. Fixed some possible datapack bugs. Minor tag changes.",
+    "3.1.4": "Removed disabled items from Creative Tab and JEI. Override some recipes from Wild Berries. Fix venison chops dupe.",
     "latest_ver": "latest_log"
   },
   "promos": {

@@ -8,6 +8,7 @@ import net.brdle.delightful.common.block.SlicedPumpkinBlock;
 import net.brdle.delightful.common.config.DelightfulConfig;
 import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.item.FurnaceFuelItem;
+import net.brdle.delightful.common.item.knife.Knives;
 import net.brdle.delightful.compat.ArsNouveauCompat;
 import net.brdle.delightful.compat.BYGCompat;
 import net.brdle.delightful.data.DelightfulItemTags;
@@ -57,7 +58,7 @@ public class ForgeEvents {
 	@SubscribeEvent
 	public static void fieryToolSetFire(LivingAttackEvent e) {
 		if (e.getSource().getEntity() instanceof LivingEntity living &&
-			(living.getMainHandItem().is(DelightfulItems.FIERY_KNIFE.get()) || living.getMainHandItem().is(DelightfulItems.KIWANO_KNIFE.get())) &&
+			(living.getMainHandItem().is(Knives.FIERY.get()) || living.getMainHandItem().is(Knives.KIWANO.get())) &&
 			!e.getEntity().fireImmune()) {
 			e.getEntity().setSecondsOnFire(1);
 		}
@@ -70,7 +71,7 @@ public class ForgeEvents {
 		if (!target.getLevel().isClientSide() && e.getSource().getDirectEntity() instanceof LivingEntity living) {
 			ItemStack weapon = living.getMainHandItem();
 			if (!weapon.isEmpty()) {
-				if (target.getArmorValue() > 0 && weapon.is(DelightfulItems.KNIGHTMETAL_KNIFE.get())) {
+				if (target.getArmorValue() > 0 && weapon.is(Knives.KNIGHTMETAL.get())) {
 					if (target.getArmorCoverPercentage() > 0) {
 						int moreBonus = (int) (2 * target.getArmorCoverPercentage());
 						e.setAmount(e.getAmount() + moreBonus);

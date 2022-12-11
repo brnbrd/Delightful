@@ -4,12 +4,12 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_azalea_flower": {
+          "has_cactus_flesh": {
             "conditions": {
               "items": [
                 {
                   "items": [
-                    "ecologics:azalea_flower"
+                    "delightful:cactus_flesh"
                   ]
                 }
               ]
@@ -18,43 +18,27 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:food/cooking/azalea_tea"
+              "recipe": "delightful:smoking/cactus_flesh"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
         },
         "requirements": [
           [
-            "has_azalea_flower",
+            "has_cactus_flesh",
             "has_the_recipe"
           ]
         ],
         "rewards": {
           "recipes": [
-            "delightful:food/cooking/azalea_tea"
+            "delightful:smoking/cactus_flesh"
           ]
         }
       },
       "conditions": [
         {
-          "type": "forge:and",
-          "values": [
-            {
-              "type": "delightful:enabled",
-              "value": "azalea_tea"
-            },
-            {
-              "type": "forge:item_exists",
-              "item": "ecologics:azalea_flower"
-            },
-            {
-              "type": "forge:not",
-              "value": {
-                "type": "forge:mod_loaded",
-                "modid": "farmersrespite"
-              }
-            }
-          ]
+          "type": "delightful:enabled",
+          "value": "cactus_steak"
         }
       ]
     }

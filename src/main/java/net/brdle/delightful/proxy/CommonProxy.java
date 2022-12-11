@@ -4,6 +4,7 @@ import net.brdle.delightful.common.Events;
 import net.brdle.delightful.common.ForgeEvents;
 import net.brdle.delightful.common.block.DelightfulBlocks;
 import net.brdle.delightful.common.item.DelightfulItems;
+import net.brdle.delightful.common.item.knife.Knives;
 import net.brdle.delightful.common.loot.DelightfulLootItemConditions;
 import net.brdle.delightful.common.loot.DelightfulLootModifiers;
 import net.brdle.delightful.compat.RootsCompat;
@@ -22,6 +23,7 @@ public class CommonProxy {
         modBus.register(Events.class);
         modBus.register(Generators.class);
         DelightfulBlocks.create(modBus);
+        Knives.create();
         DelightfulItems.create(modBus);
         DelightfulLootItemConditions.create(modBus);
         DelightfulLootModifiers.create(modBus);

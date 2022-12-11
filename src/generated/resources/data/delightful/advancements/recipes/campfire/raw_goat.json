@@ -4,11 +4,13 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_nuts": {
+          "has_raw_goat": {
             "conditions": {
               "items": [
                 {
-                  "tag": "forge:nuts"
+                  "items": [
+                    "delightful:raw_goat"
+                  ]
                 }
               ]
             },
@@ -16,27 +18,27 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:food/nut_milk"
+              "recipe": "delightful:campfire/raw_goat"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
         },
         "requirements": [
           [
-            "has_nuts",
+            "has_raw_goat",
             "has_the_recipe"
           ]
         ],
         "rewards": {
           "recipes": [
-            "delightful:food/nut_milk"
+            "delightful:campfire/raw_goat"
           ]
         }
       },
       "conditions": [
         {
           "type": "delightful:enabled",
-          "value": "nut_milk"
+          "value": "cooked_goat"
         }
       ]
     }

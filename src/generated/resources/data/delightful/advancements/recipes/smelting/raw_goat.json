@@ -4,12 +4,12 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_lavender_flower": {
+          "has_raw_goat": {
             "conditions": {
               "items": [
                 {
                   "items": [
-                    "biomesoplenty:lavender"
+                    "delightful:raw_goat"
                   ]
                 }
               ]
@@ -18,43 +18,27 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:food/cooking/lavender_tea"
+              "recipe": "delightful:smelting/raw_goat"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
         },
         "requirements": [
           [
-            "has_lavender_flower",
+            "has_raw_goat",
             "has_the_recipe"
           ]
         ],
         "rewards": {
           "recipes": [
-            "delightful:food/cooking/lavender_tea"
+            "delightful:smelting/raw_goat"
           ]
         }
       },
       "conditions": [
         {
-          "type": "forge:and",
-          "values": [
-            {
-              "type": "delightful:enabled",
-              "value": "lavender_tea"
-            },
-            {
-              "type": "forge:item_exists",
-              "item": "biomesoplenty:lavender"
-            },
-            {
-              "type": "forge:not",
-              "value": {
-                "type": "forge:mod_loaded",
-                "modid": "farmersrespite"
-              }
-            }
-          ]
+          "type": "delightful:enabled",
+          "value": "cooked_goat"
         }
       ]
     }

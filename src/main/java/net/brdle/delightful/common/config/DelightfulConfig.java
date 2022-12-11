@@ -2,6 +2,7 @@ package net.brdle.delightful.common.config;
 
 import com.google.common.collect.ImmutableList;
 import it.unimi.dsi.fastutil.Pair;
+import net.brdle.delightful.Util;
 import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.item.knife.DelightfulKnifeItem;
 import net.minecraft.world.item.Item;
@@ -99,6 +100,10 @@ public class DelightfulConfig {
 
     public static boolean verify(RegistryObject<Item> item) {
         return verify(item.getId().getPath());
+    }
+
+    public static boolean verify(Item item) {
+        return verify(Util.name(item));
     }
 
     static {

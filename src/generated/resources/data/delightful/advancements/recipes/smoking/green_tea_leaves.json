@@ -4,13 +4,11 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_raw_goat": {
+          "has_green_tea_leaves": {
             "conditions": {
               "items": [
                 {
-                  "items": [
-                    "delightful:raw_goat"
-                  ]
+                  "tag": "forge:tea_leaves/green"
                 }
               ]
             },
@@ -18,27 +16,39 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:cooking/raw_goat_from_campfire_cooking"
+              "recipe": "delightful:smoking/green_tea_leaves"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
         },
         "requirements": [
           [
-            "has_raw_goat",
+            "has_green_tea_leaves",
             "has_the_recipe"
           ]
         ],
         "rewards": {
           "recipes": [
-            "delightful:cooking/raw_goat_from_campfire_cooking"
+            "delightful:smoking/green_tea_leaves"
           ]
         }
       },
       "conditions": [
         {
-          "type": "delightful:enabled",
-          "value": "cooked_goat"
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "matcha"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:tea_leaves/green"
+              }
+            }
+          ]
         }
       ]
     }
