@@ -117,7 +117,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptionalTag(DelightfulItemTags.FRUITS_ORANGE.location())
 			.addOptionalTag(DelightfulItemTags.FRUITS_LEMON.location())
 			.addOptionalTag(DelightfulItemTags.FRUITS_LIME.location())
-			.addOptionalTag(DelightfulItemTags.FRUITS_GRAPEFRUIT.location());
+			.addOptionalTag(DelightfulItemTags.FRUITS_GRAPEFRUIT.location())
+			.addOptionalTag(DelightfulItemTags.FRUITS_POMELO.location());
 		this.tag(DelightfulItemTags.FRUITS_SWEET)
 			.addTag(DelightfulItemTags.FRUITS_APPLE)
 			.addTag(DelightfulItemTags.FRUITS_KIWI)

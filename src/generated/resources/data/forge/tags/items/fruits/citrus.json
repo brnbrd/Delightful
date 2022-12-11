@@ -20,6 +20,10 @@
     {
       "id": "#forge:fruits/grapefruit",
       "required": false
+    },
+    {
+      "id": "#forge:fruits/pomelo",
+      "required": false
     }
   ]
 }

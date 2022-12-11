@@ -7,6 +7,8 @@ import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.Tags;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.Locale;
 import java.util.function.Supplier;
 
 public enum DelightfulTiers implements Tier {
@@ -94,5 +96,9 @@ public enum DelightfulTiers implements Tier {
 
     public @NotNull Ingredient getRepairIngredient() {
         return this.repairIngredient.get();
+    }
+
+    public static Tier get(String name) {
+        return valueOf(name.toUpperCase(Locale.ROOT));
     }
 }
