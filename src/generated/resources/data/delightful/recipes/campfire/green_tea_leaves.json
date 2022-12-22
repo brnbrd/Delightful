@@ -21,7 +21,7 @@
         }
       ],
       "recipe": {
-        "type": "minecraft:smoking",
+        "type": "minecraft:campfire_cooking",
         "cookingtime": 400,
         "experience": 0.1,
         "ingredient": {

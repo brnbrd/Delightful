@@ -186,7 +186,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 DelightfulItems.MATCHA.get(), 0.1F, 100)
                 .unlockedBy("has_green_tea_leaves", has(DelightfulItemTags.TEA_LEAVES_GREEN)),
             "smoking/green_tea_leaves", finished, enabled("matcha"), not(tagEmpty(DelightfulItemTags.TEA_LEAVES_GREEN)));
-        wrap(SimpleCookingRecipeBuilder.smoking(Ingredient.of(DelightfulItemTags.TEA_LEAVES_GREEN),
+        wrap(SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(DelightfulItemTags.TEA_LEAVES_GREEN),
                     DelightfulItems.MATCHA.get(), 0.1F, 400)
                 .unlockedBy("has_green_tea_leaves", has(DelightfulItemTags.TEA_LEAVES_GREEN)),
             "campfire/green_tea_leaves", finished, enabled("matcha"), not(tagEmpty(DelightfulItemTags.TEA_LEAVES_GREEN)));

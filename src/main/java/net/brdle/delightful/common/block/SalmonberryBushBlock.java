@@ -42,7 +42,7 @@ public class SalmonberryBushBlock extends BushBlock implements BonemealableBlock
 
   @Override
   public ItemStack getCloneItemStack(BlockState state, HitResult target, BlockGetter level, BlockPos pos, Player player) {
-    return state.getValue(AGE) == 0 ? DelightfulItems.SALMONBERRY_PIPS.get().getDefaultInstance() : DelightfulItems.SALMONBERRIES.get().getDefaultInstance();
+    return state.getValue(AGE) <= 1 ? DelightfulItems.SALMONBERRY_PIPS.get().getDefaultInstance() : DelightfulItems.SALMONBERRIES.get().getDefaultInstance();
   }
 
   @Override

@@ -53,6 +53,7 @@
   "item.delightful.chopped_clover": "Chopped Clover",
   "item.delightful.chunk_nugget": "Chunk Nugget",
   "item.delightful.chunkwich": "Chunkwich",
+  "item.delightful.coconut_curry": "Coconut Curry",
   "item.delightful.constantan_knife": "Constantan Knife",
   "item.delightful.cooked_goat": "Cooked Chevon",
   "item.delightful.cooked_marshmallow_stick": "Roasted Marshmallow on a Stick",
@@ -112,6 +113,7 @@
   "item.delightful.salmonberry_pie_slice": "Slice of Salmonberry Pie",
   "item.delightful.salmonberry_pips": "Salmonberry Pips",
   "item.delightful.silver_knife": "Silver Knife",
+  "item.delightful.sinigang": "Sinigang",
   "item.delightful.sinisite_knife": "Sinisite Knife",
   "item.delightful.smore": "S'more",
   "item.delightful.source_berry_pie_slice": "Slice of Source Berry Pie",
@@ -121,8 +123,5 @@
   "item.delightful.tin_knife": "Tin Knife",
   "item.delightful.venison_chops": "Raw Venison Chops",
   "item.delightful.warden_knife": "Warden Knife",
-  "item.delightful.zinc_knife": "Zinc Knife",
-  "block.delightful.pizza_peel": "Pizza Peel",
-  "block.delightful.pizza_stone": "Pizza Stone",
-  "item.delightful.pizza": "Pizza"
+  "item.delightful.zinc_knife": "Zinc Knife"
 }

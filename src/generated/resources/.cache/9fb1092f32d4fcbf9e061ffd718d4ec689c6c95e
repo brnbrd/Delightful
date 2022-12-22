@@ -1,4 +1,4 @@
-// 1.19	2022-12-11T09:12:01.1924593	Recipes
+// 1.19	2022-12-21T17:24:57.7538801	Recipes
 60ffe246fc7cd82d396e8dc65184da554be1a88a data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 2cf937c163d47a583b4eb63671b5c4e3055179cc data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
 d1ec4a35ca097f1da21733a32d7e64f0fc3583a4 data/delightful/advancements/recipes/campfire/green_tea_leaves.json
@@ -111,7 +111,7 @@ f09d8078d504d739448f9545ce8bb18274ab7e81 data/delightful/advancements/recipes/st
 7d75fba65543b6dea8aa6bdef71664cb3920ac91 data/delightful/advancements/recipes/torch_from_animal_oil_bottle.json
 caebb4125fcf89916965a85d84d8b9f5c952fde2 data/delightful/recipes/cabinets/basalt_cabinet.json
 9c559ef7e05961f3abe4b06901228ca7e14a77c8 data/delightful/recipes/cabinets/quartz_cabinet.json
-06ccbfa2f5a9cf541d28a8854ce9dd3ee303b51c data/delightful/recipes/campfire/green_tea_leaves.json
+86659f3d4f32af0d54c9235cae869e0069e5c61c data/delightful/recipes/campfire/green_tea_leaves.json
 74fb91b34d7ef31552e85d171c65f320d815662b data/delightful/recipes/campfire/marshmallow_stick.json
 1df740828e497c296b4a53738b095a70df2547db data/delightful/recipes/campfire/raw_goat.json
 8f3688db400b54945a53e72f97751e1cbec1209d data/delightful/recipes/campfire/venison_chops.json
