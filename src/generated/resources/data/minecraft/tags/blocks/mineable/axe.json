@@ -7,6 +7,14 @@
     "delightful:cantaloupe",
     "delightful:sliced_cantaloupe",
     "delightful:salmonberry_sack",
-    "delightful:acorn_sack"
+    "delightful:acorn_sack",
+    {
+      "id": "fruittrees:citrus_cabinet",
+      "required": false
+    },
+    {
+      "id": "fruittrees:cherry_cabinet",
+      "required": false
+    }
   ]
 }

@@ -77,8 +77,8 @@ public class DelightfulLanguageProvider extends LanguageProvider {
         addItem(DelightfulItems.ROCK_CANDY, "Rock Candy");
         addItem(DelightfulItems.VENISON_CHOPS, "Raw Venison Chops");
         addItem(DelightfulItems.COOKED_VENISON_CHOPS, "Cooked Venison Chops");
-        addItem(DelightfulItems.RAW_GOAT, "Raw Goat");
-        addItem(DelightfulItems.COOKED_GOAT, "Cooked Goat");
+        addItem(DelightfulItems.RAW_GOAT, "Raw Chevon");
+        addItem(DelightfulItems.COOKED_GOAT, "Cooked Chevon");
         addItem(DelightfulItems.COCONUT_CURRY, "Coconut Curry");
         addItem(DelightfulItems.SINIGANG, "Sinigang");
         addBlock(DelightfulBlocks.MINI_MELON, "Mini Melon");
@@ -107,6 +107,7 @@ public class DelightfulLanguageProvider extends LanguageProvider {
         add("farmersdelight.tooltip.berry_matcha_latte", "Healthy");
         add("farmersdelight.tooltip.ender_nectar", "Otherworldly");
         add("delightful.matcha.desc", "Green Tea Powder");
+        add("delightful.sinigang.desc", "Sour Fish Soup");
         add("delightful.green_tea_leaf.desc", "Get lucky using a Knife on any Leaves block.");
         add("delightful.animal_fat.desc", "Get lucky using a Knife on a fatty animal (Pig, Cow, Fish...).");
         add("delightful.acorn.desc", "Drops from Oak Leaves or perhaps a Squirrel (from another mod).");
@@ -115,5 +116,8 @@ public class DelightfulLanguageProvider extends LanguageProvider {
         add("delightful.mini_melon.desc", "Found in Plains-like biomes. Can grow into a big Melon or be sliced with a Knife (Right Click).");
         add("delightful.cantaloupe.desc", "Found in Beach-like biomes.");
         add("delightful.sliceable.desc", "Can be sliced with a Knife (Right Click).");
+        add("delightful.placeable.desc", "Placeable");
+        add("delightful.disabled.desc", "Disabled");
+        add("delightful.disabled.requires", "Requires modid:");
     }
 }

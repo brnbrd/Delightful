@@ -3,11 +3,11 @@ package net.brdle.delightful.common.loot;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
+import net.brdle.delightful.compat.Mods;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
-import net.minecraftforge.fml.ModList;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.NotNull;
 
@@ -31,7 +31,7 @@ public class CompatAddItemLootModifier extends AddItemLootModifier {
 
 	@Override
 	protected @NotNull ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
-		if (ModList.get().isLoaded(modid) && enable || ((!ModList.get().isLoaded(modid)) && !enable)) {
+		if (Mods.loaded(this.modid) && this.enable || ((!Mods.loaded(this.modid)) && !this.enable)) {
 			return super.doApply(generatedLoot, context);
 		}
 		return generatedLoot;

@@ -12,6 +12,7 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
@@ -29,13 +30,13 @@ public class FurnaceFuelItem extends Item {
   }
 
   @Override
-  public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> comps, TooltipFlag pIsAdvanced) {
+  public void appendHoverText(@NotNull ItemStack pStack, @Nullable Level pLevel, List<Component> comps, @NotNull TooltipFlag pIsAdvanced) {
     comps.add(Component.literal("Sneak Right Click:").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.UNDERLINE));
     comps.add(Component.literal("Applies " + (this.getFuelTime() / 20) + "s of burn time"));
   }
 
   @Override
-  public InteractionResult useOn(UseOnContext con) {
+  public @NotNull InteractionResult useOn(UseOnContext con) {
     return useFuel(con.getItemInHand(),
       con.getLevel().getExistingBlockEntity(con.getClickedPos()),
       con.getPlayer());

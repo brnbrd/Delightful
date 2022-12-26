@@ -7,7 +7,11 @@ import java.util.function.Supplier;
 
 public class BYGCompat {
 
-	public static final String modid = "byg";
+	public static final String pendorite_ingot = "pendorite_ingot";
+	public static final String green_apple = "green_apple";
+	public static final String prairie_grass = "prairie_grass";
+	public static final String tall_prairie_grass = "tall_prairie_grass";
+	public static final String beach_grass = "beach_grass";
 	public static final String blueberry_pie = "blueberry_pie";
 	public static final String green_apple_pie = "green_apple_pie";
 	public static final String nightshade_berry_pie = "nightshade_berry_pie";

@@ -1,5 +1,7 @@
 package net.brdle.delightful.common.item.knife;
 
+import net.brdle.delightful.Delightful;
+import net.brdle.delightful.compat.Mods;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -7,11 +9,11 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.fml.ModList;
-import javax.annotation.Nullable;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Supplier;
+import org.jetbrains.annotations.NotNull;
+import javax.annotation.Nullable;
 
 public class CompatKnifeItem extends DelightfulKnifeItem {
     private final String modid;
@@ -38,7 +40,7 @@ public class CompatKnifeItem extends DelightfulKnifeItem {
     }
 
     public boolean isLoaded() {
-        return ModList.get().isLoaded(this.modid);
+        return Mods.loaded(this.modid);
     }
 
     @Override
@@ -52,29 +54,29 @@ public class CompatKnifeItem extends DelightfulKnifeItem {
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> tool, TooltipFlag pIsAdvanced) {
         if (!this.config()) {
-            tool.add(Component.literal("Disabled.").withStyle(ChatFormatting.UNDERLINE));
+            tool.add(Component.translatable(Delightful.MODID + ".disabled.desc").withStyle(ChatFormatting.UNDERLINE));
         } else if (!this.isLoaded()) {
-            tool.add(Component.literal("Requires modid:"));
-            tool.add(Component.literal(modid).withStyle(ChatFormatting.UNDERLINE));
+            tool.add(Component.translatable(Delightful.MODID + ".disabled.requires"));
+            tool.add(Component.literal(this.modid).withStyle(ChatFormatting.UNDERLINE));
         } else if (!this.tool.equals(Component.empty())) {
             tool.add(this.tool);
         }
     }
 
     @Override
-    public Component getName(ItemStack pStack) {
-        if (this.isEnabled() && formatting.length > 0) {
-            MutableComponent comp = super.getName(pStack).copy();
-            for (ChatFormatting f : Arrays.stream(formatting).toList()) {
+    public @NotNull Component getName(@NotNull ItemStack stack) {
+        if (this.isEnabled() && this.formatting.length > 0) {
+            MutableComponent comp = super.getName(stack).copy();
+            for (ChatFormatting f : Arrays.stream(this.formatting).toList()) {
                 comp = comp.withStyle(f);
             }
             return comp;
         }
-        return super.getName(pStack);
+        return super.getName(stack);
     }
 
     @Override
-    protected boolean allowedIn(CreativeModeTab cat) {
+    protected boolean allowedIn(@NotNull CreativeModeTab cat) {
         return super.allowedIn(cat) && this.isEnabled();
     }
 }

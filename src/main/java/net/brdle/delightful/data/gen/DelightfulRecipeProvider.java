@@ -11,6 +11,7 @@ import net.brdle.delightful.common.item.knife.CompatKnifeItem;
 import net.brdle.delightful.common.item.knife.DelightfulKnifeItem;
 import net.brdle.delightful.common.item.knife.Knives;
 import net.brdle.delightful.compat.ArsNouveauCompat;
+import net.brdle.delightful.compat.Mods;
 import net.brdle.delightful.data.DelightfulItemTags;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.advancements.critereon.ItemPredicate;
@@ -307,7 +308,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
         wrap(ShapelessRecipeBuilder.shapeless(ItemsRegistry.SOURCE_BERRY_PIE.get(), 1)
                 .requires(DelightfulItems.SOURCE_BERRY_PIE_SLICE.get(), 4)
                 .unlockedBy("has_source_berry_pie_slice", has(DelightfulItems.SOURCE_BERRY_PIE_SLICE.get())),
-            "food/source_berry_pie_from_slices", finished, enabled("source_berry_pie_slice"), itemExists(ArsNouveauCompat.modid, "source_berry_pie"));
+            "food/source_berry_pie_from_slices", finished, enabled("source_berry_pie_slice"), itemExists(Mods.AN, "source_berry_pie"));
         wrap(ShapedRecipeBuilder.shaped(Items.PUMPKIN_PIE, 1)
                 .pattern("###")
                 .pattern("aaa")
@@ -492,7 +493,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 Ingredient.of(ItemsRegistry.SOURCE_BERRY_PIE.get()),
                 Ingredient.of(DelightfulItemTags.SCAVENGING_TOOLS),
                 DelightfulItems.SOURCE_BERRY_PIE_SLICE.get(), 4),
-            "cutting/source_berry_pie", finished, enabled(ArsNouveauCompat.slice), itemExists(ArsNouveauCompat.modid, ArsNouveauCompat.pie));
+            "cutting/source_berry_pie", finished, enabled(ArsNouveauCompat.slice), itemExists(Mods.AN, ArsNouveauCompat.pie));
         wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
                 Ingredient.of(Items.PUMPKIN_PIE),
                 Ingredient.of(DelightfulItemTags.SCAVENGING_TOOLS),

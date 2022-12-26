@@ -7,7 +7,6 @@ import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.Tags;
 import org.jetbrains.annotations.NotNull;
-
 import java.util.Locale;
 import java.util.function.Supplier;
 
@@ -85,7 +84,6 @@ public enum DelightfulTiers implements Tier {
         return this.damage;
     }
 
-    @SuppressWarnings("deprecation")
     public int getLevel() {
         return this.level;
     }

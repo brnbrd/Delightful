@@ -104,7 +104,7 @@ task updateJson {
     String ver = mod_version.toString()
     String log = "No changelog."
     file('update/changelog.txt').eachLine { change ->
-        if (change.startsWith(ver)) {
+        if (change.startsWith(ver + ":")) {
             log = change.replace(ver + ":", "")
         }
     }

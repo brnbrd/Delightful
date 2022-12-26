@@ -73,6 +73,14 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 			},
 			DelightfulItems.ACORN.get(), 1, 1, true
 		));
+		add("acorn_from_natural_decoration", new AddItemLootModifier(
+			new LootItemCondition[]{
+				LootItemEnabledCondition.enabled("acorn"),
+				LootItemRandomChanceWithLootingCondition.randomChanceAndLootingBoost(0.33F, 2.0F).build(),
+				LootItemBlockIsTagCondition.isTag(DelightfulBlockTags.ADD_ACORN)
+			},
+			DelightfulItems.ACORN.get(), 1, 1, true
+		));
 		add("animal_fat", new AddItemLootModifier(
 			new LootItemCondition[]{
 				LootItemEnabledCondition.enabled("animal_fat"),

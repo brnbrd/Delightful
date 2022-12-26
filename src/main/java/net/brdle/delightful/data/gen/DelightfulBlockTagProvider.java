@@ -4,12 +4,14 @@ import net.brdle.delightful.Delightful;
 import net.brdle.delightful.Util;
 import net.brdle.delightful.common.block.DelightfulBlocks;
 import net.brdle.delightful.compat.BYGCompat;
+import net.brdle.delightful.compat.Mods;
 import net.brdle.delightful.data.DelightfulBlockTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import vectorwing.farmersdelight.common.tag.ModTags;
 
@@ -37,12 +39,14 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 
 		// Delightful
 		this.tag(DelightfulBlockTags.DROPS_STRAW)
-			.addOptional(Util.rl(BYGCompat.modid, "prairie_grass"))
-			.addOptional(Util.rl(BYGCompat.modid, "tall_prairie_grass"))
-			.addOptional(Util.rl(BYGCompat.modid, "beach_grass"));
+			.addOptional(Util.rl(Mods.BYG, BYGCompat.prairie_grass))
+			.addOptional(Util.rl(Mods.BYG, BYGCompat.tall_prairie_grass))
+			.addOptional(Util.rl(Mods.BYG, BYGCompat.beach_grass));
 		this.tag(DelightfulBlockTags.DROPS_ACORN)
 			.add(Blocks.OAK_LEAVES)
 			.add(Blocks.DARK_OAK_LEAVES);
+		this.tag(DelightfulBlockTags.ADD_ACORN)
+			.addOptional(Util.rl("natural_decoration", "oak_acorn"));
 		this.tag(DelightfulBlockTags.DROPS_GREEN_TEA_LEAF)
 			.addTag(BlockTags.LEAVES);
 		this.tag(DelightfulBlockTags.CANTALOUPE_SPAWNS)
@@ -62,7 +66,9 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 			.add(DelightfulBlocks.CANTALOUPE.get())
 			.add(DelightfulBlocks.SLICED_CANTALOUPE.get())
 			.add(DelightfulBlocks.SALMONBERRY_SACK.get())
-			.add(DelightfulBlocks.ACORN_SACK.get());
+			.add(DelightfulBlocks.ACORN_SACK.get())
+			.addOptional(Util.rl("fruittrees", "citrus_cabinet"))
+			.addOptional(Util.rl("fruittrees", "cherry_cabinet"));
 		this.tag(BlockTags.MINEABLE_WITH_HOE)
 			.add(DelightfulBlocks.SALMONBERRY_SACK.get())
 			.add(DelightfulBlocks.ACORN_SACK.get());
@@ -72,7 +78,7 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 	 * Gets a name for this provider, to use in logging.
 	 */
 	@Override
-	public String getName() {
+	public @NotNull String getName() {
 		return Delightful.MODID;
 	}
 }

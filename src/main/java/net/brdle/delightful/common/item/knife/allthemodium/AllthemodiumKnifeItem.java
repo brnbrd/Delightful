@@ -13,7 +13,7 @@ import java.util.function.Supplier;
 
 public class AllthemodiumKnifeItem extends CompatKnifeItem {
 	public AllthemodiumKnifeItem(Properties properties) {
-		super("allthemodium", DelightfulItemTags.PLATES_ALLTHEMODIUM, DelightfulTiers.ALLTHEMODIUM, properties, Component.translatable("indestructible").withStyle(ChatFormatting.GOLD), null);
+		super("allthemodium", DelightfulItemTags.PLATES_ALLTHEMODIUM, DelightfulTiers.ALLTHEMODIUM, properties, Component.translatable("indestructible").withStyle(ChatFormatting.GOLD), null, ChatFormatting.LIGHT_PURPLE);
 	}
 
 	@Override

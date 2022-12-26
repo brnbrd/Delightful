@@ -29,7 +29,7 @@
             "tag": "forge:tea_leaves"
           },
           {
-            "tag": "forge:leaves"
+            "tag": "minecraft:leaves"
           }
         ],
         "needwater": true,
