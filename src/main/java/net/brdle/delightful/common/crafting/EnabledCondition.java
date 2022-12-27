@@ -22,6 +22,7 @@ public class EnabledCondition implements ICondition {
         return NAME;
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public boolean test() {
         return DelightfulConfig.CONFIG.stuff.containsKey(this.value) &&

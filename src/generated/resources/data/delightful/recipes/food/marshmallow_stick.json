@@ -4,20 +4,20 @@
     {
       "conditions": [
         {
-          "type": "forge:and",
           "values": [
             {
-              "type": "delightful:enabled",
-              "value": "marshmallow_stick"
+              "value": "marshmallow_stick",
+              "type": "delightful:enabled"
             },
             {
-              "type": "forge:not",
               "value": {
-                "type": "forge:mod_loaded",
-                "modid": "create_confectionery"
-              }
+                "modid": "create_confectionery",
+                "type": "forge:mod_loaded"
+              },
+              "type": "forge:not"
             }
-          ]
+          ],
+          "type": "forge:and"
         }
       ],
       "recipe": {
@@ -37,8 +37,8 @@
           }
         ],
         "result": {
-          "count": 2,
-          "item": "delightful:marshmallow_stick"
+          "item": "delightful:marshmallow_stick",
+          "count": 2
         }
       }
     }

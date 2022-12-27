@@ -33,7 +33,6 @@ import net.minecraftforge.common.crafting.conditions.ICondition;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import net.onvoid.rottenleather.common.RottenLeatherItems;
 import org.jetbrains.annotations.NotNull;
 import vectorwing.farmersdelight.common.registry.ModItems;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
@@ -142,7 +141,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             "food/marshmallow_stick", finished, enabled("marshmallow_stick"), not(modLoaded("create_confectionery")));
         wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.MARSHMALLOW_STICK.get(), 2)
                 .requires(DelightfulItemTags.SUGAR)
-                .requires(StrictNBTIngredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
+                .requires(NBTIngredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
                 .requires(Tags.Items.RODS_WOODEN)
                 .requires(Tags.Items.RODS_WOODEN)
                 .unlockedBy("has_sugar", has(DelightfulItemTags.SUGAR)),
@@ -170,7 +169,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .unlockedBy("has_cooked_crab", has(DelightfulItemTags.COOKED_CRAB)),
             "food/crab_rangoon", finished, enabled("crab_rangoon"), not(tagEmpty(DelightfulItemTags.COOKED_CRAB)));
         wrap(SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(DelightfulItems.MARSHMALLOW_STICK.get()),
-                DelightfulItems.COOKED_MARSHMALLOW_STICK.get(), 0.5F, 600)
+                    DelightfulItems.COOKED_MARSHMALLOW_STICK.get(), 0.5F, 600)
                 .unlockedBy("has_marshmallow_stick", has(DelightfulItems.MARSHMALLOW_STICK.get())),
             "campfire/marshmallow_stick", finished, enabled("cooked_marshmallow_stick"));
         wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.HONEY_GLAZED_WALNUT.get(), 3)
@@ -181,11 +180,11 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .unlockedBy("has_walnut", has(DelightfulItemTags.NUTS_WALNUT)),
             "food/honey_glazed_walnut", finished, enabled("honey_glazed_walnut"), not(tagEmpty(DelightfulItemTags.NUTS_WALNUT)));
         wrap(SimpleCookingRecipeBuilder.smelting(Ingredient.of(DelightfulItemTags.TEA_LEAVES_GREEN),
-                DelightfulItems.MATCHA.get(), 0.1F, 200)
+                    DelightfulItems.MATCHA.get(), 0.1F, 200)
                 .unlockedBy("has_green_tea_leaves", has(DelightfulItemTags.TEA_LEAVES_GREEN)),
             "smelting/green_tea_leaves", finished, enabled("matcha"), not(tagEmpty(DelightfulItemTags.TEA_LEAVES_GREEN)));
         wrap(SimpleCookingRecipeBuilder.smoking(Ingredient.of(DelightfulItemTags.TEA_LEAVES_GREEN),
-                DelightfulItems.MATCHA.get(), 0.1F, 100)
+                    DelightfulItems.MATCHA.get(), 0.1F, 100)
                 .unlockedBy("has_green_tea_leaves", has(DelightfulItemTags.TEA_LEAVES_GREEN)),
             "smoking/green_tea_leaves", finished, enabled("matcha"), not(tagEmpty(DelightfulItemTags.TEA_LEAVES_GREEN)));
         wrap(SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(DelightfulItemTags.TEA_LEAVES_GREEN),
@@ -220,7 +219,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .unlockedBy("has_rose_quartz", has(DelightfulItemTags.GEMS_ROSE_QUARTZ)),
             "food/rock_candy", finished, enabled("rock_candy"), not(tagEmpty(DelightfulItemTags.GEMS_ROSE_QUARTZ)));
         wrap(SimpleCookingRecipeBuilder.smelting(Ingredient.of(DelightfulItems.CACTUS_FLESH.get()),
-                DelightfulItems.CACTUS_STEAK.get(), 0.1F, 200)
+                    DelightfulItems.CACTUS_STEAK.get(), 0.1F, 200)
                 .unlockedBy("has_cactus_flesh", has(DelightfulItems.CACTUS_FLESH.get())),
             "smelting/cactus_flesh", finished, enabled("cactus_steak"));
         wrap(SimpleCookingRecipeBuilder.smoking(Ingredient.of(DelightfulItems.CACTUS_FLESH.get()),
@@ -306,7 +305,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .define('O', ModItems.PIE_CRUST.get())
                 .unlockedBy("has_pie_crust", has(ModItems.PIE_CRUST.get())),
             "food/source_berry_pie", finished, enabled("source_berry_pie_slice"), itemExists(ArsNouveauCompat.modid, "source_berry_pie"));*/
-        wrap(ShapelessRecipeBuilder.shapeless(ItemsRegistry.SOURCE_BERRY_PIE.get(), 1)
+        wrap(ShapelessRecipeBuilder.shapeless(ItemsRegistry.SOURCE_BERRY_PIE, 1)
                 .requires(DelightfulItems.SOURCE_BERRY_PIE_SLICE.get(), 4)
                 .unlockedBy("has_source_berry_pie_slice", has(DelightfulItems.SOURCE_BERRY_PIE_SLICE.get())),
             "food/source_berry_pie_from_slices", finished, enabled("source_berry_pie_slice"), itemExists(Mods.AN, "source_berry_pie"));
@@ -350,27 +349,27 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .unlockedBy("has_acorn_sack", has(DelightfulItems.ACORN_SACK.get())),
             "storage/unpack_acorn_sack", finished, enabled("acorn_sack"));
         wrap(SimpleCookingRecipeBuilder.smelting(Ingredient.of(DelightfulItems.VENISON_CHOPS.get()),
-                DelightfulItems.COOKED_VENISON_CHOPS.get(), 0.35F, 200)
-            .unlockedBy("has_venison_chops", has(DelightfulItems.VENISON_CHOPS.get())),
+                    DelightfulItems.COOKED_VENISON_CHOPS.get(), 0.35F, 200)
+                .unlockedBy("has_venison_chops", has(DelightfulItems.VENISON_CHOPS.get())),
             "smelting/venison_chops", finished, enabled("cooked_venison_chops"), enabled("venison_chops"), not(tagEmpty(DelightfulItemTags.RAW_VENISON)));
         wrap(SimpleCookingRecipeBuilder.smoking(Ingredient.of(DelightfulItems.VENISON_CHOPS.get()),
-            DelightfulItems.COOKED_VENISON_CHOPS.get(), 0.35F, 100)
+                    DelightfulItems.COOKED_VENISON_CHOPS.get(), 0.35F, 100)
                 .unlockedBy("has_venison_chops", has(DelightfulItems.VENISON_CHOPS.get())),
             "smoking/venison_chops", finished, enabled("cooked_venison_chops"), enabled("venison_chops"), not(tagEmpty(DelightfulItemTags.RAW_VENISON)));
         wrap(SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(DelightfulItems.VENISON_CHOPS.get()),
-            DelightfulItems.COOKED_VENISON_CHOPS.get(), 0.35F, 600)
+                    DelightfulItems.COOKED_VENISON_CHOPS.get(), 0.35F, 600)
                 .unlockedBy("has_venison_chops", has(DelightfulItems.VENISON_CHOPS.get())),
             "campfire/venison_chops", finished, enabled("cooked_venison_chops"), enabled("venison_chops"), not(tagEmpty(DelightfulItemTags.RAW_VENISON)));
         wrap(SimpleCookingRecipeBuilder.smelting(Ingredient.of(DelightfulItems.RAW_GOAT.get()),
-            DelightfulItems.COOKED_GOAT.get(), 0.35F, 200)
+                    DelightfulItems.COOKED_GOAT.get(), 0.35F, 200)
                 .unlockedBy("has_raw_goat", has(DelightfulItems.RAW_GOAT.get())),
             "smelting/raw_goat", finished, enabled("cooked_goat"));
         wrap(SimpleCookingRecipeBuilder.smoking(Ingredient.of(DelightfulItems.RAW_GOAT.get()),
-            DelightfulItems.COOKED_GOAT.get(), 0.35F, 100)
+                    DelightfulItems.COOKED_GOAT.get(), 0.35F, 100)
                 .unlockedBy("has_raw_goat", has(DelightfulItems.RAW_GOAT.get())),
             "smoking/raw_goat", finished, enabled("cooked_goat"));
         wrap(SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(DelightfulItems.RAW_GOAT.get()),
-            DelightfulItems.COOKED_GOAT.get(), 0.35F, 600)
+                    DelightfulItems.COOKED_GOAT.get(), 0.35F, 600)
                 .unlockedBy("has_raw_goat", has(DelightfulItems.RAW_GOAT.get())),
             "campfire/raw_goat", finished, enabled("cooked_goat"));
         wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.CANTALOUPE_SLICE.get(), 3)
@@ -383,20 +382,20 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 DelightfulItems.CANTALOUPE_SLICE.get(), 6),
             "cutting/cantaloupe", finished, enabled("cantaloupe_slice"));
         wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-            DelightfulItems.ENDER_NECTAR.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
+                    DelightfulItems.ENDER_NECTAR.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
                 .addIngredient(Items.ENDER_EYE)
                 .addIngredient(ForgeTags.MILK)
                 .addIngredient(DelightfulItemTags.SUGAR)
                 .unlockedBy("has_ender_eye", has(Items.ENDER_EYE)),
             "food/cooking/ender_nectar", finished, enabled("ender_nectar"));
         wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-            DelightfulItems.ANIMAL_OIL_BOTTLE.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
+                    DelightfulItems.ANIMAL_OIL_BOTTLE.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
                 .addIngredient(DelightfulItems.ANIMAL_FAT.get())
                 .addIngredient(DelightfulItems.ANIMAL_FAT.get())
                 .unlockedBy("has_animal_fat", has(DelightfulItems.ANIMAL_FAT.get())),
             "cooking/animal_oil_bottle", finished, enabled("animal_oil_bottle"));
         wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-            DelightfulItems.JELLY_BOTTLE.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
+                    DelightfulItems.JELLY_BOTTLE.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
                 .addIngredient(DelightfulItemTags.FRUITS_SWEET)
                 .addIngredient(DelightfulItemTags.FRUITS_SWEET)
                 .addIngredient(DelightfulItemTags.SUGAR)
@@ -404,7 +403,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .unlockedBy("has_sweet_fruit", has(DelightfulItemTags.FRUITS_SWEET)),
             "food/cooking/jelly_bottle", finished, enabled("jelly_bottle"));
         wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-            DelightfulItems.GLOW_JELLY_BOTTLE.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
+                    DelightfulItems.GLOW_JELLY_BOTTLE.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
                 .addIngredient(DelightfulItemTags.FRUITS_GLOW_BERRIES)
                 .addIngredient(Tags.Items.DUSTS_GLOWSTONE)
                 .addIngredient(DelightfulItemTags.SUGAR)
@@ -412,75 +411,11 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .unlockedBy("has_glow_berries", has(DelightfulItemTags.FRUITS_GLOW_BERRIES)),
             "food/cooking/glow_jelly_bottle", finished, enabled("glow_jelly_bottle"));
         wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-            DelightfulItems.NUT_BUTTER_BOTTLE.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
+                    DelightfulItems.NUT_BUTTER_BOTTLE.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
                 .addIngredient(DelightfulItemTags.NUTS)
                 .addIngredient(DelightfulItemTags.SUGAR)
                 .unlockedBy("has_nuts", has(DelightfulItemTags.NUTS)),
             "food/cooking/nut_butter_bottle", finished, enabled("nut_butter_bottle"), not(tagEmpty(DelightfulItemTags.NUTS)));
-        ConditionalRecipe.builder()
-            .addCondition(and(enabled("chunk_nugget"), itemExists("rottenleather", "sweetened_chunk")))
-            .addRecipe(f -> CookingPotRecipeBuilder.cookingPotRecipe(
-                    DelightfulItems.CHUNK_NUGGET.get(), 6, CookingRecipes.FAST_COOKING, 0.25F)
-                .addIngredient(ForgeTags.BREAD)
-                .addIngredient(RottenLeatherItems.SWEETENED_CHUNK.get())
-                .addIngredient(RottenLeatherItems.SWEETENED_CHUNK.get())
-                .build(f))
-            .generateAdvancement()
-            .build(finished, Delightful.MODID, "food/chunk_nugget");
-        ConditionalRecipe.builder()
-            .addCondition(and(enabled("azalea_tea"), itemExists("ecologics", "azalea_flower")))
-            .addRecipe(f -> CookingPotRecipeBuilder.cookingPotRecipe(
-                    DelightfulItems.AZALEA_TEA.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
-                .addIngredient(NBTIngredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
-                .addIngredient(DelightfulItemTags.TEA_LEAVES_GREEN)
-                .addIngredient(modItem("ecologics", "azalea_flower"))
-                .build(f))
-            .generateAdvancement()
-            .build(finished, Delightful.MODID, "food/azalea_tea");
-        ConditionalRecipe.builder()
-            .addCondition(and(enabled("lavender_tea"), itemExists("biomesoplenty", "lavender")))
-            .addRecipe(f -> CookingPotRecipeBuilder.cookingPotRecipe(
-                    DelightfulItems.LAVENDER_TEA.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
-                .addIngredient(NBTIngredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
-                .addIngredient(DelightfulItemTags.TEA_LEAVES_GREEN)
-                .addIngredient(modItem("biomesoplenty", "lavender"))
-                .build(f))
-            .generateAdvancement()
-            .build(finished, Delightful.MODID, "food/lavender_tea");
-        ConditionalRecipe.builder()
-            .addCondition(enabled("nut_milk"))
-            .addRecipe(f ->
-                CookingPotRecipeBuilder.cookingPotRecipe(
-                        Items.MILK_BUCKET, 1, CookingRecipes.NORMAL_COOKING, 0.35F, Items.BUCKET)
-                    .addIngredient(DelightfulItemTags.WATER)
-                    .addIngredient(DelightfulItemTags.NUTS)
-                    .addIngredient(DelightfulItemTags.NUTS)
-                    .addIngredient(DelightfulItemTags.SUGAR)
-                    .build(f))
-            .build(finished, Delightful.MODID, "nut_milk");
-        ShapedRecipeBuilder.shaped(Items.TORCH, 8)
-            .define('o', DelightfulItems.ANIMAL_OIL_BOTTLE.get())
-            .define('s', Tags.Items.RODS_WOODEN)
-            .pattern("o")
-            .pattern("s")
-            .unlockedBy("has_oil_bottle", inventoryTrigger(ItemPredicate.Builder.item()
-                .of(DelightfulItems.ANIMAL_OIL_BOTTLE.get()).build()))
-            .save(finished, "torch_from_animal_oil_bottle");
-        ShapedRecipeBuilder.shaped(Items.CANDLE, 1)
-            .define('f', DelightfulItems.ANIMAL_FAT.get())
-            .define('s', Tags.Items.STRING)
-            .pattern("s")
-            .pattern("f")
-            .pattern("f")
-            .unlockedBy("has_fat", inventoryTrigger(ItemPredicate.Builder.item()
-                .of(DelightfulItems.ANIMAL_FAT.get()).build()))
-            .save(finished, "candle_from_animal_fat");
-        ConditionalRecipe.builder()
-            .addCondition(itemExists("ecologics", "tropical_stew"))
-            .addRecipe(f -> CookingPotRecipeBuilder.cookingPotRecipe(
-                    modItem("ecologics", "tropical_stew"), 1, CookingRecipes.NORMAL_COOKING, 0.35F, modItem("ecologics", "coconut_slice"))
-                .addIngredient(DelightfulItemTags.COOKED_CRAB)
-                .addIngredient(ForgeTags.CROPS_RICE)
         wrap(CookingPotRecipeBuilder.cookingPotRecipe(
                     DelightfulItems.COCONUT_CURRY.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
                 .addIngredient(DelightfulItemTags.COCONUT)
@@ -522,7 +457,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .unlockedBy("has_ginger", has(DelightfulItemTags.FRUITS)),
             "food/cooking/sinigang_no_ginger_citrus", finished, enabled("sinigang"), or(tagEmpty(DelightfulItemTags.CROPS_GINGER), tagEmpty(DelightfulItemTags.FRUITS_CITRUS)));
         wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-            Items.MILK_BUCKET, 1, CookingRecipes.NORMAL_COOKING, 0.35F, Items.BUCKET)
+                    Items.MILK_BUCKET, 1, CookingRecipes.NORMAL_COOKING, 0.35F, Items.BUCKET)
                 .addIngredient(DelightfulItemTags.WATER)
                 .addIngredient(DelightfulItemTags.NUTS)
                 .addIngredient(DelightfulItemTags.NUTS)
@@ -555,7 +490,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 DelightfulItems.SALMONBERRY_PIE_SLICE.get(), 4),
             "cutting/salmonberry_pie", finished, enabled("salmonberry_pie"), enabled("salmonberry_pie_slice"));
         wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
-                Ingredient.of(ItemsRegistry.SOURCE_BERRY_PIE.get()),
+                Ingredient.of(ItemsRegistry.SOURCE_BERRY_PIE),
                 Ingredient.of(DelightfulItemTags.SCAVENGING_TOOLS),
                 DelightfulItems.SOURCE_BERRY_PIE_SLICE.get(), 4),
             "cutting/source_berry_pie", finished, enabled(ArsNouveauCompat.slice), itemExists(Mods.AN, ArsNouveauCompat.pie));
@@ -581,30 +516,30 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 
         // Unwrappables
         ConditionalRecipe.builder()
-          .addCondition(not(tagEmpty(DelightfulItemTags.CHOCOLATE)))
-          .addRecipe(f -> ShapedRecipeBuilder.shaped(ModItems.CHOCOLATE_PIE.get(), 1)
-            .pattern("ccc")
-            .pattern("mmm")
-            .pattern("xOx")
-            .define('c', DelightfulItemTags.CHOCOLATE)
-            .define('m', ForgeTags.MILK)
-            .define('x', Items.SUGAR)
-            .define('O', ModItems.PIE_CRUST.get())
-            .unlockedBy("has_pie_crust", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.PIE_CRUST.get()))
-            .save(f))
-          .addCondition(tagEmpty(DelightfulItemTags.CHOCOLATE))
-          .addRecipe(f -> ShapedRecipeBuilder.shaped(ModItems.CHOCOLATE_PIE.get(), 1)
-            .pattern("ccc")
-            .pattern("mmm")
-            .pattern("xOx")
-            .define('c', Items.COCOA_BEANS)
-            .define('m', ForgeTags.MILK)
-            .define('x', Items.SUGAR)
-            .define('O', ModItems.PIE_CRUST.get())
-            .unlockedBy("has_pie_crust", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.PIE_CRUST.get()))
-            .save(f))
-          .generateAdvancement()
-          .build(finished, ModItems.CHOCOLATE_PIE.getId());
+            .addCondition(not(tagEmpty(DelightfulItemTags.CHOCOLATE)))
+            .addRecipe(f -> ShapedRecipeBuilder.shaped(ModItems.CHOCOLATE_PIE.get(), 1)
+                .pattern("ccc")
+                .pattern("mmm")
+                .pattern("xOx")
+                .define('c', DelightfulItemTags.CHOCOLATE)
+                .define('m', ForgeTags.MILK)
+                .define('x', Items.SUGAR)
+                .define('O', ModItems.PIE_CRUST.get())
+                .unlockedBy("has_pie_crust", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.PIE_CRUST.get()))
+                .save(f))
+            .addCondition(tagEmpty(DelightfulItemTags.CHOCOLATE))
+            .addRecipe(f -> ShapedRecipeBuilder.shaped(ModItems.CHOCOLATE_PIE.get(), 1)
+                .pattern("ccc")
+                .pattern("mmm")
+                .pattern("xOx")
+                .define('c', Items.COCOA_BEANS)
+                .define('m', ForgeTags.MILK)
+                .define('x', Items.SUGAR)
+                .define('O', ModItems.PIE_CRUST.get())
+                .unlockedBy("has_pie_crust", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.PIE_CRUST.get()))
+                .save(f))
+            .generateAdvancement()
+            .build(finished, ModItems.CHOCOLATE_PIE.getId());
         ShapelessRecipeBuilder.shapeless(ModItems.FRUIT_SALAD.get(), 1)
             .requires(Items.APPLE)
             .requires(Items.MELON_SLICE)
@@ -618,7 +553,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
         CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(Items.SUGAR_CANE), Ingredient.of(DelightfulItemTags.SCAVENGING_TOOLS), Items.SUGAR, 1)
             .addResultWithChance(Items.SUGAR, 0.5F, 1)
             .build(finished);
-        }
+    }
 
     private InventoryChangeTrigger.TriggerInstance has(ItemLike... items) {
         return InventoryChangeTrigger.TriggerInstance.hasItems(items);
@@ -641,8 +576,8 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
         FinishedRecipe[] recipe = new FinishedRecipe[1];
         builder.save(f -> recipe[0] = f, loc);
         cond.addRecipe(recipe[0])
-          .generateAdvancement()
-          .build(consumer, loc);
+            .generateAdvancement()
+            .build(consumer, loc);
     }
 
     private void wrap(UpgradeRecipeBuilder builder, String name, Consumer<FinishedRecipe> consumer, ICondition... conds) {

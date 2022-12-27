@@ -1,10 +1,22 @@
 {
   "advancements": [
     {
+      "conditions": [
+        {
+          "value": "cactus_steak",
+          "type": "delightful:enabled"
+        }
+      ],
       "advancement": {
         "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:smoking/cactus_flesh"
+          ]
+        },
         "criteria": {
           "has_cactus_flesh": {
+            "trigger": "minecraft:inventory_changed",
             "conditions": {
               "items": [
                 {
@@ -13,14 +25,13 @@
                   ]
                 }
               ]
-            },
-            "trigger": "minecraft:inventory_changed"
+            }
           },
           "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
             "conditions": {
               "recipe": "delightful:smoking/cactus_flesh"
-            },
-            "trigger": "minecraft:recipe_unlocked"
+            }
           }
         },
         "requirements": [
@@ -28,19 +39,8 @@
             "has_cactus_flesh",
             "has_the_recipe"
           ]
-        ],
-        "rewards": {
-          "recipes": [
-            "delightful:smoking/cactus_flesh"
-          ]
-        }
-      },
-      "conditions": [
-        {
-          "type": "delightful:enabled",
-          "value": "cactus_steak"
-        }
-      ]
+        ]
+      }
     }
   ]
 }

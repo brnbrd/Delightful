@@ -4,33 +4,31 @@
     {
       "conditions": [
         {
-          "type": "forge:and",
           "values": [
             {
-              "type": "delightful:enabled",
-              "value": "coconut_curry"
+              "value": "coconut_curry",
+              "type": "delightful:enabled"
             },
             {
-              "type": "forge:not",
               "value": {
-                "type": "forge:tag_empty",
-                "tag": "forge:coconut"
-              }
+                "tag": "forge:coconut",
+                "type": "forge:tag_empty"
+              },
+              "type": "forge:not"
             },
             {
-              "type": "forge:not",
               "value": {
-                "type": "forge:tag_empty",
-                "tag": "forge:crops/ginger"
-              }
+                "tag": "forge:crops/ginger",
+                "type": "forge:tag_empty"
+              },
+              "type": "forge:not"
             }
-          ]
+          ],
+          "type": "forge:and"
         }
       ],
       "recipe": {
         "type": "farmersdelight:cooking",
-        "cookingtime": 200,
-        "experience": 0.35,
         "ingredients": [
           {
             "tag": "forge:coconut"
@@ -53,7 +51,9 @@
         ],
         "result": {
           "item": "delightful:coconut_curry"
-        }
+        },
+        "experience": 0.35,
+        "cookingtime": 200
       }
     }
   ]

@@ -4,34 +4,34 @@
     {
       "conditions": [
         {
-          "type": "forge:and",
           "values": [
             {
-              "type": "delightful:enabled",
-              "value": "cooked_venison_chops"
+              "value": "cooked_venison_chops",
+              "type": "delightful:enabled"
             },
             {
-              "type": "delightful:enabled",
-              "value": "venison_chops"
+              "value": "venison_chops",
+              "type": "delightful:enabled"
             },
             {
-              "type": "forge:not",
               "value": {
-                "type": "forge:tag_empty",
-                "tag": "forge:raw_venison"
-              }
+                "tag": "forge:raw_venison",
+                "type": "forge:tag_empty"
+              },
+              "type": "forge:not"
             }
-          ]
+          ],
+          "type": "forge:and"
         }
       ],
       "recipe": {
         "type": "minecraft:campfire_cooking",
-        "cookingtime": 600,
-        "experience": 0.35,
         "ingredient": {
           "item": "delightful:venison_chops"
         },
-        "result": "delightful:cooked_venison_chops"
+        "result": "delightful:cooked_venison_chops",
+        "experience": 0.35,
+        "cookingtime": 600
       }
     }
   ]

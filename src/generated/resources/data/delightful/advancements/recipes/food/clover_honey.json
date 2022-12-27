@@ -3,17 +3,17 @@
     {
       "conditions": [
         {
-          "type": "forge:and",
           "values": [
             {
-              "type": "delightful:enabled",
-              "value": "clover_honey"
+              "value": "clover_honey",
+              "type": "delightful:enabled"
             },
             {
-              "type": "forge:mod_loaded",
-              "modid": "biomesoplenty"
+              "modid": "biomesoplenty",
+              "type": "forge:mod_loaded"
             }
-          ]
+          ],
+          "type": "forge:and"
         }
       ]
     }

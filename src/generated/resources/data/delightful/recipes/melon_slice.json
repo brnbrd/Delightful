@@ -4,8 +4,8 @@
     {
       "conditions": [
         {
-          "type": "delightful:enabled",
-          "value": "mini_melon"
+          "value": "mini_melon",
+          "type": "delightful:enabled"
         }
       ],
       "recipe": {
@@ -16,8 +16,8 @@
           }
         ],
         "result": {
-          "count": 3,
-          "item": "minecraft:melon_slice"
+          "item": "minecraft:melon_slice",
+          "count": 3
         }
       }
     }

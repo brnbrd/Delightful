@@ -1,16 +1,14 @@
 package net.brdle.delightful.common.item.knife;
 
 import com.google.common.collect.ImmutableList;
+import net.brdle.delightful.Delightful;
 import net.brdle.delightful.Util;
 import net.brdle.delightful.common.config.DelightfulConfig;
 import net.brdle.delightful.common.item.IConfigured;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -40,13 +38,13 @@ public class DelightfulKnifeItem extends KnifeItem implements IConfigured {
      * allows items to add custom lines of information to the mouseover description
      */
     @Override
-    public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> tool, TooltipFlag pIsAdvanced) {
+    public void appendHoverText(@NotNull ItemStack pStack, @Nullable Level pLevel, @NotNull List<Component> tool, @NotNull TooltipFlag pIsAdvanced) {
         super.appendHoverText(pStack, pLevel, tool, pIsAdvanced);
         if (!this.config()) {
-            tool.add(Component.literal("Disabled.").withStyle(ChatFormatting.UNDERLINE));
+            tool.add(new TranslatableComponent(Delightful.MODID + ".disabled.desc").withStyle(ChatFormatting.UNDERLINE));
         } else if (!this.isTag()) {
-            tool.add(Component.literal("Requires non-empty tag:"));
-            tool.add(Component.literal(this.getTag().location().toString()).withStyle(ChatFormatting.UNDERLINE));
+            tool.add(new TextComponent("Requires non-empty tag:"));
+            tool.add(new TextComponent(this.getTag().location().toString()).withStyle(ChatFormatting.UNDERLINE));
         }
     }
 
@@ -94,7 +92,7 @@ public class DelightfulKnifeItem extends KnifeItem implements IConfigured {
     }
 
     @Override
-    protected boolean allowedIn(@NotNull CreativeModeTab cat) {
+    protected boolean allowdedIn(@NotNull CreativeModeTab cat) {
         return tabs.contains(cat) && this.config();
     }
 }

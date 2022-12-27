@@ -1,6 +1,6 @@
 {
+  "replace": false,
   "values": [
-    "farmersdelight:mangrove_cabinet",
     {
       "id": "windswept:holly_cabinet",
       "required": false

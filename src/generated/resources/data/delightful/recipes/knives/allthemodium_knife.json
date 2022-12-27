@@ -4,28 +4,32 @@
     {
       "conditions": [
         {
-          "type": "forge:and",
           "values": [
             {
-              "type": "delightful:enabled",
-              "value": "allthemodium_knife"
+              "value": "allthemodium_knife",
+              "type": "delightful:enabled"
             },
             {
-              "type": "forge:mod_loaded",
-              "modid": "allthemodium"
+              "modid": "allthemodium",
+              "type": "forge:mod_loaded"
             },
             {
-              "type": "forge:not",
               "value": {
-                "type": "forge:tag_empty",
-                "tag": "forge:plates/allthemodium"
-              }
+                "tag": "forge:plates/allthemodium",
+                "type": "forge:tag_empty"
+              },
+              "type": "forge:not"
             }
-          ]
+          ],
+          "type": "forge:and"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "m",
+          "s"
+        ],
         "key": {
           "m": {
             "tag": "forge:plates/allthemodium"
@@ -34,10 +38,6 @@
             "tag": "forge:rods/allthemodium"
           }
         },
-        "pattern": [
-          "m",
-          "s"
-        ],
         "result": {
           "item": "delightful:allthemodium_knife"
         }

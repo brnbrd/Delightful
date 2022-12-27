@@ -1,10 +1,22 @@
 {
   "advancements": [
     {
+      "conditions": [
+        {
+          "value": "cantaloupe_slice",
+          "type": "delightful:enabled"
+        }
+      ],
       "advancement": {
         "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:cantaloupe_slice"
+          ]
+        },
         "criteria": {
           "has_cantaloupe": {
+            "trigger": "minecraft:inventory_changed",
             "conditions": {
               "items": [
                 {
@@ -13,14 +25,13 @@
                   ]
                 }
               ]
-            },
-            "trigger": "minecraft:inventory_changed"
+            }
           },
           "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
             "conditions": {
               "recipe": "delightful:cantaloupe_slice"
-            },
-            "trigger": "minecraft:recipe_unlocked"
+            }
           }
         },
         "requirements": [
@@ -28,19 +39,8 @@
             "has_cantaloupe",
             "has_the_recipe"
           ]
-        ],
-        "rewards": {
-          "recipes": [
-            "delightful:cantaloupe_slice"
-          ]
-        }
-      },
-      "conditions": [
-        {
-          "type": "delightful:enabled",
-          "value": "cantaloupe_slice"
-        }
-      ]
+        ]
+      }
     }
   ]
 }

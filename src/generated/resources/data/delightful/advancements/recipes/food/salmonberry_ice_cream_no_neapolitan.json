@@ -1,10 +1,31 @@
 {
   "advancements": [
     {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "salmonberry_ice_cream",
+              "type": "delightful:enabled"
+            },
+            {
+              "tag": "forge:ice_cubes",
+              "type": "forge:tag_empty"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
       "advancement": {
         "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:food/salmonberry_ice_cream_no_neapolitan"
+          ]
+        },
         "criteria": {
           "has_ice": {
+            "trigger": "minecraft:inventory_changed",
             "conditions": {
               "items": [
                 {
@@ -13,14 +34,13 @@
                   ]
                 }
               ]
-            },
-            "trigger": "minecraft:inventory_changed"
+            }
           },
           "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
             "conditions": {
               "recipe": "delightful:food/salmonberry_ice_cream_no_neapolitan"
-            },
-            "trigger": "minecraft:recipe_unlocked"
+            }
           }
         },
         "requirements": [
@@ -28,28 +48,8 @@
             "has_ice",
             "has_the_recipe"
           ]
-        ],
-        "rewards": {
-          "recipes": [
-            "delightful:food/salmonberry_ice_cream_no_neapolitan"
-          ]
-        }
-      },
-      "conditions": [
-        {
-          "type": "forge:and",
-          "values": [
-            {
-              "type": "delightful:enabled",
-              "value": "salmonberry_ice_cream"
-            },
-            {
-              "type": "forge:tag_empty",
-              "tag": "forge:ice_cubes"
-            }
-          ]
-        }
-      ]
+        ]
+      }
     }
   ]
 }

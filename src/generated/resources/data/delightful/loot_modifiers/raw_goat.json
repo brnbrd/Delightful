@@ -1,25 +1,25 @@
 {
-  "type": "delightful:add_item",
   "conditions": [
     {
       "condition": "delightful:enabled",
       "item": "raw_goat"
     },
     {
-      "chance": 1.0,
       "condition": "minecraft:random_chance_with_looting",
+      "chance": 1.0,
       "looting_multiplier": 2.0
     },
     {
       "condition": "minecraft:entity_properties",
-      "entity": "this",
       "predicate": {
         "type": "#delightful:drops_raw_goat"
-      }
+      },
+      "entity": "this"
     }
   ],
   "item": "delightful:raw_goat",
-  "maxAmount": 2,
   "minAmount": 1,
-  "unique": true
+  "maxAmount": 2,
+  "unique": true,
+  "type": "delightful:add_item"
 }

@@ -1,10 +1,22 @@
 {
   "advancements": [
     {
+      "conditions": [
+        {
+          "value": "pumpkin_pie_overhaul",
+          "type": "delightful:enabled"
+        }
+      ],
       "advancement": {
         "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:food/pumpkin_pie_from_slices"
+          ]
+        },
         "criteria": {
           "has_pumpkin_pie_slice": {
+            "trigger": "minecraft:inventory_changed",
             "conditions": {
               "items": [
                 {
@@ -13,14 +25,13 @@
                   ]
                 }
               ]
-            },
-            "trigger": "minecraft:inventory_changed"
+            }
           },
           "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
             "conditions": {
               "recipe": "delightful:food/pumpkin_pie_from_slices"
-            },
-            "trigger": "minecraft:recipe_unlocked"
+            }
           }
         },
         "requirements": [
@@ -28,19 +39,8 @@
             "has_pumpkin_pie_slice",
             "has_the_recipe"
           ]
-        ],
-        "rewards": {
-          "recipes": [
-            "delightful:food/pumpkin_pie_from_slices"
-          ]
-        }
-      },
-      "conditions": [
-        {
-          "type": "delightful:enabled",
-          "value": "pumpkin_pie_overhaul"
-        }
-      ]
+        ]
+      }
     }
   ]
 }

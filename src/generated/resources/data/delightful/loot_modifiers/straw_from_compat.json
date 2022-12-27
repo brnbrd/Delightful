@@ -1,9 +1,8 @@
 {
-  "type": "delightful:add_item",
   "conditions": [
     {
-      "chance": 0.2,
-      "condition": "minecraft:random_chance"
+      "condition": "minecraft:random_chance",
+      "chance": 0.2
     },
     {
       "condition": "minecraft:match_tool",
@@ -17,7 +16,8 @@
     }
   ],
   "item": "farmersdelight:straw",
-  "maxAmount": 1,
   "minAmount": 1,
-  "unique": true
+  "maxAmount": 1,
+  "unique": true,
+  "type": "delightful:add_item"
 }

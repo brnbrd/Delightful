@@ -1,24 +1,51 @@
 {
   "advancements": [
     {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "allthemodium_knife",
+              "type": "delightful:enabled"
+            },
+            {
+              "modid": "allthemodium",
+              "type": "forge:mod_loaded"
+            },
+            {
+              "value": {
+                "tag": "forge:plates/allthemodium",
+                "type": "forge:tag_empty"
+              },
+              "type": "forge:not"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
       "advancement": {
         "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:knives/allthemodium_knife"
+          ]
+        },
         "criteria": {
           "has_allthemodium": {
+            "trigger": "minecraft:inventory_changed",
             "conditions": {
               "items": [
                 {
                   "tag": "forge:plates/allthemodium"
                 }
               ]
-            },
-            "trigger": "minecraft:inventory_changed"
+            }
           },
           "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
             "conditions": {
               "recipe": "delightful:knives/allthemodium_knife"
-            },
-            "trigger": "minecraft:recipe_unlocked"
+            }
           }
         },
         "requirements": [
@@ -26,35 +53,8 @@
             "has_allthemodium",
             "has_the_recipe"
           ]
-        ],
-        "rewards": {
-          "recipes": [
-            "delightful:knives/allthemodium_knife"
-          ]
-        }
-      },
-      "conditions": [
-        {
-          "type": "forge:and",
-          "values": [
-            {
-              "type": "delightful:enabled",
-              "value": "allthemodium_knife"
-            },
-            {
-              "type": "forge:mod_loaded",
-              "modid": "allthemodium"
-            },
-            {
-              "type": "forge:not",
-              "value": {
-                "type": "forge:tag_empty",
-                "tag": "forge:plates/allthemodium"
-              }
-            }
-          ]
-        }
-      ]
+        ]
+      }
     }
   ]
 }

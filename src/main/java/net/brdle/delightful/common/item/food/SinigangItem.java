@@ -3,6 +3,7 @@ package net.brdle.delightful.common.item.food;
 import net.brdle.delightful.Delightful;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.BowlFoodItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -19,6 +20,6 @@ public class SinigangItem extends BowlFoodItem {
 	@Override
 	public void appendHoverText(@NotNull ItemStack pStack, @Nullable Level pLevel, @NotNull List<Component> tool, @NotNull TooltipFlag pIsAdvanced) {
 		super.appendHoverText(pStack, pLevel, tool, pIsAdvanced);
-		tool.add(Component.translatable(Delightful.MODID + ".sinigang.desc").withStyle(ChatFormatting.GRAY));
+		tool.add(new TranslatableComponent(Delightful.MODID + ".sinigang.desc").withStyle(ChatFormatting.GRAY));
 	}
 }

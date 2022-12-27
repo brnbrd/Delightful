@@ -1,4 +1,5 @@
 {
+  "replace": false,
   "values": [
     {
       "id": "some_assembly_required:burger_bun",

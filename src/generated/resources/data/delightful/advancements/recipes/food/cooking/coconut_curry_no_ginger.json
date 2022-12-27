@@ -1,24 +1,51 @@
 {
   "advancements": [
     {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "coconut_curry",
+              "type": "delightful:enabled"
+            },
+            {
+              "value": {
+                "tag": "forge:coconut",
+                "type": "forge:tag_empty"
+              },
+              "type": "forge:not"
+            },
+            {
+              "tag": "forge:crops/ginger",
+              "type": "forge:tag_empty"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
       "advancement": {
         "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:food/cooking/coconut_curry_no_ginger"
+          ]
+        },
         "criteria": {
           "has_tea": {
+            "trigger": "minecraft:inventory_changed",
             "conditions": {
               "items": [
                 {
                   "tag": "forge:tea_leaves/green"
                 }
               ]
-            },
-            "trigger": "minecraft:inventory_changed"
+            }
           },
           "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
             "conditions": {
               "recipe": "delightful:food/cooking/coconut_curry_no_ginger"
-            },
-            "trigger": "minecraft:recipe_unlocked"
+            }
           }
         },
         "requirements": [
@@ -26,35 +53,8 @@
             "has_tea",
             "has_the_recipe"
           ]
-        ],
-        "rewards": {
-          "recipes": [
-            "delightful:food/cooking/coconut_curry_no_ginger"
-          ]
-        }
-      },
-      "conditions": [
-        {
-          "type": "forge:and",
-          "values": [
-            {
-              "type": "delightful:enabled",
-              "value": "coconut_curry"
-            },
-            {
-              "type": "forge:not",
-              "value": {
-                "type": "forge:tag_empty",
-                "tag": "forge:coconut"
-              }
-            },
-            {
-              "type": "forge:tag_empty",
-              "tag": "forge:crops/ginger"
-            }
-          ]
-        }
-      ]
+        ]
+      }
     }
   ]
 }

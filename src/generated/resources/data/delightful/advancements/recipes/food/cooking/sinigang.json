@@ -1,24 +1,54 @@
 {
   "advancements": [
     {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "sinigang",
+              "type": "delightful:enabled"
+            },
+            {
+              "value": {
+                "tag": "forge:crops/ginger",
+                "type": "forge:tag_empty"
+              },
+              "type": "forge:not"
+            },
+            {
+              "value": {
+                "tag": "forge:fruits/citrus",
+                "type": "forge:tag_empty"
+              },
+              "type": "forge:not"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
       "advancement": {
         "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:food/cooking/sinigang"
+          ]
+        },
         "criteria": {
           "has_ginger": {
+            "trigger": "minecraft:inventory_changed",
             "conditions": {
               "items": [
                 {
                   "tag": "forge:crops/ginger"
                 }
               ]
-            },
-            "trigger": "minecraft:inventory_changed"
+            }
           },
           "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
             "conditions": {
               "recipe": "delightful:food/cooking/sinigang"
-            },
-            "trigger": "minecraft:recipe_unlocked"
+            }
           }
         },
         "requirements": [
@@ -26,38 +56,8 @@
             "has_ginger",
             "has_the_recipe"
           ]
-        ],
-        "rewards": {
-          "recipes": [
-            "delightful:food/cooking/sinigang"
-          ]
-        }
-      },
-      "conditions": [
-        {
-          "type": "forge:and",
-          "values": [
-            {
-              "type": "delightful:enabled",
-              "value": "sinigang"
-            },
-            {
-              "type": "forge:not",
-              "value": {
-                "type": "forge:tag_empty",
-                "tag": "forge:crops/ginger"
-              }
-            },
-            {
-              "type": "forge:not",
-              "value": {
-                "type": "forge:tag_empty",
-                "tag": "forge:fruits/citrus"
-              }
-            }
-          ]
-        }
-      ]
+        ]
+      }
     }
   ]
 }

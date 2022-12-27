@@ -1,24 +1,51 @@
 {
   "advancements": [
     {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "thyrium_knife",
+              "type": "delightful:enabled"
+            },
+            {
+              "modid": "fusion",
+              "type": "forge:mod_loaded"
+            },
+            {
+              "value": {
+                "tag": "forge:ingots/thyrium",
+                "type": "forge:tag_empty"
+              },
+              "type": "forge:not"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
       "advancement": {
         "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:knives/thyrium_knife"
+          ]
+        },
         "criteria": {
-          "has_the_recipe": {
-            "conditions": {
-              "recipe": "delightful:knives/thyrium_knife"
-            },
-            "trigger": "minecraft:recipe_unlocked"
-          },
           "has_thyrium": {
+            "trigger": "minecraft:inventory_changed",
             "conditions": {
               "items": [
                 {
                   "tag": "forge:ingots/thyrium"
                 }
               ]
-            },
-            "trigger": "minecraft:inventory_changed"
+            }
+          },
+          "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+              "recipe": "delightful:knives/thyrium_knife"
+            }
           }
         },
         "requirements": [
@@ -26,35 +53,8 @@
             "has_thyrium",
             "has_the_recipe"
           ]
-        ],
-        "rewards": {
-          "recipes": [
-            "delightful:knives/thyrium_knife"
-          ]
-        }
-      },
-      "conditions": [
-        {
-          "type": "forge:and",
-          "values": [
-            {
-              "type": "delightful:enabled",
-              "value": "thyrium_knife"
-            },
-            {
-              "type": "forge:mod_loaded",
-              "modid": "fusion"
-            },
-            {
-              "type": "forge:not",
-              "value": {
-                "type": "forge:tag_empty",
-                "tag": "forge:ingots/thyrium"
-              }
-            }
-          ]
-        }
-      ]
+        ]
+      }
     }
   ]
 }

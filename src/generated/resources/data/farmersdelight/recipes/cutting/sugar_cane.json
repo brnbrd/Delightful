@@ -5,16 +5,16 @@
       "item": "minecraft:sugar_cane"
     }
   ],
+  "tool": {
+    "tag": "forge:tools/scavenging"
+  },
   "result": [
     {
       "item": "minecraft:sugar"
     },
     {
-      "chance": 0.5,
-      "item": "minecraft:sugar"
+      "item": "minecraft:sugar",
+      "chance": 0.5
     }
-  ],
-  "tool": {
-    "tag": "forge:tools/scavenging"
-  }
+  ]
 }

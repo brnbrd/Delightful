@@ -37,7 +37,7 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 			},
 			DelightfulItems.GREEN_TEA_LEAF.get(), 1, 1, true, "farmersrespite", false
 		));
-		add("green_tea_leaf_rare", new CompatAddItemLootModifier(
+		add("green_tea_leaf_rare", DelightfulLootModifiers.COMPAT_ADD_ITEM.get(), new CompatAddItemLootModifier(
 			new LootItemCondition[]{
 				LootItemEnabledCondition.enabled("green_tea_leaf"),
 				LootItemRandomChanceCondition.randomChance(0.005F).build(),
@@ -56,7 +56,7 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 			},
 			DelightfulItems.ACORN.get(), 1, 1, true
 		));
-		add("acorn_from_knife", new AddItemLootModifier(
+		add("acorn_from_knife", DelightfulLootModifiers.ADD_ITEM.get(), new AddItemLootModifier(
 			new LootItemCondition[]{
 				LootItemEnabledCondition.enabled("acorn"),
 				LootItemRandomChanceCondition.randomChance(0.08F).build(),
@@ -74,7 +74,7 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 			},
 			DelightfulItems.ACORN.get(), 1, 1, true
 		));
-		add("acorn_from_natural_decoration", new AddItemLootModifier(
+		add("acorn_from_natural_decoration", DelightfulLootModifiers.ADD_ITEM.get(), new AddItemLootModifier(
 			new LootItemCondition[]{
 				LootItemEnabledCondition.enabled("acorn"),
 				LootItemRandomChanceWithLootingCondition.randomChanceAndLootingBoost(0.33F, 2.0F).build(),
@@ -101,7 +101,7 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 			},
 			DelightfulItems.RAW_GOAT.get(), 1, 2, true
 		));
-		add("straw_from_compat", new AddItemLootModifier(
+		add("straw_from_compat", DelightfulLootModifiers.ADD_ITEM.get(), new AddItemLootModifier(
 			new LootItemCondition[]{
 				LootItemRandomChanceCondition.randomChance(0.2F).build(),
 				MatchTool.toolMatches(ItemPredicate.Builder.item().of(DelightfulItemTags.SCAVENGING_TOOLS)).build(),

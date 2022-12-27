@@ -19,6 +19,7 @@ import net.brdle.delightful.compat.Mods;
 import net.brdle.delightful.data.DelightfulItemTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -68,7 +69,7 @@ public class Knives extends DelightfulItems {
 	public static final RegistryObject<Item> LARGE_AMETHYST = registerItem("large_amethyst_knife", () -> new LargeAmethystKnifeItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
 	public static final RegistryObject<Item> FIERY = registerItem("fiery_knife", () -> new FieryKnifeItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
 	public static final RegistryObject<Item> IRONWOOD = registerItem("ironwood_knife", () -> new IronwoodKnifeItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
-	public static final RegistryObject<Item> KNIGHTMETAL = registerCompatKnife("knightmetal", Mods.TF, ingot("knightmetal"), Component.translatable("item." + Mods.TF + ".knightmetal_sword.tooltip").withStyle(ChatFormatting.GRAY));
+	public static final RegistryObject<Item> KNIGHTMETAL = registerCompatKnife("knightmetal", Mods.TF, ingot("knightmetal"), new TranslatableComponent("item." + Mods.TF + ".knightmetal_sword.tooltip").withStyle(ChatFormatting.GRAY));
 	public static final RegistryObject<Item> STEELEAF = registerItem("steeleaf_knife", () -> new SteeleafKnifeItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
 	public static final RegistryObject<Item> LIVING = registerItem("living_knife", () -> new LivingKnifeItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
 	public static final RegistryObject<Item> PENDORITE = registerSmithedKnife("pendorite", Util.ing(ModItems.NETHERITE_KNIFE), ingot("pendorite"), Mods.BYG);

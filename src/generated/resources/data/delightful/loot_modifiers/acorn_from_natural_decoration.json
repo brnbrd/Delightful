@@ -1,13 +1,12 @@
 {
-  "type": "delightful:add_item",
   "conditions": [
     {
       "condition": "delightful:enabled",
       "item": "acorn"
     },
     {
-      "chance": 0.33,
       "condition": "minecraft:random_chance_with_looting",
+      "chance": 0.33,
       "looting_multiplier": 2.0
     },
     {
@@ -16,7 +15,8 @@
     }
   ],
   "item": "delightful:acorn",
-  "maxAmount": 1,
   "minAmount": 1,
-  "unique": true
+  "maxAmount": 1,
+  "unique": true,
+  "type": "delightful:add_item"
 }

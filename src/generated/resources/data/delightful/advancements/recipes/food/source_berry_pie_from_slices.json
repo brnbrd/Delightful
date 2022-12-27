@@ -1,10 +1,31 @@
 {
   "advancements": [
     {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "source_berry_pie_slice",
+              "type": "delightful:enabled"
+            },
+            {
+              "item": "ars_nouveau:source_berry_pie",
+              "type": "forge:item_exists"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
       "advancement": {
         "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:food/source_berry_pie_from_slices"
+          ]
+        },
         "criteria": {
           "has_source_berry_pie_slice": {
+            "trigger": "minecraft:inventory_changed",
             "conditions": {
               "items": [
                 {
@@ -13,14 +34,13 @@
                   ]
                 }
               ]
-            },
-            "trigger": "minecraft:inventory_changed"
+            }
           },
           "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
             "conditions": {
               "recipe": "delightful:food/source_berry_pie_from_slices"
-            },
-            "trigger": "minecraft:recipe_unlocked"
+            }
           }
         },
         "requirements": [
@@ -28,28 +48,8 @@
             "has_source_berry_pie_slice",
             "has_the_recipe"
           ]
-        ],
-        "rewards": {
-          "recipes": [
-            "delightful:food/source_berry_pie_from_slices"
-          ]
-        }
-      },
-      "conditions": [
-        {
-          "type": "forge:and",
-          "values": [
-            {
-              "type": "delightful:enabled",
-              "value": "source_berry_pie_slice"
-            },
-            {
-              "type": "forge:item_exists",
-              "item": "ars_nouveau:source_berry_pie"
-            }
-          ]
-        }
-      ]
+        ]
+      }
     }
   ]
 }

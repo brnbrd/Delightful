@@ -5,7 +5,7 @@ import net.brdle.delightful.common.item.knife.CompatKnifeItem;
 import net.brdle.delightful.data.DelightfulItemTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TextComponent;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;
@@ -13,7 +13,7 @@ import org.jetbrains.annotations.NotNull;
 public class KiwanoKnifeItem extends CompatKnifeItem {
 	public KiwanoKnifeItem(Properties properties) {
 		super("nethers_exoticism", DelightfulItemTags.KIWANO_PEEL, DelightfulTiers.KIWANO, properties,
-			Component.literal("Burning").withStyle(ChatFormatting.BLUE), null, ChatFormatting.YELLOW);
+			new TextComponent("Burning").withStyle(ChatFormatting.BLUE), null, ChatFormatting.YELLOW);
 	}
 
 	@Override

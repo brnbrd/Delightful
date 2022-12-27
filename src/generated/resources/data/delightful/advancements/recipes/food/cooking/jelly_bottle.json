@@ -1,24 +1,35 @@
 {
   "advancements": [
     {
+      "conditions": [
+        {
+          "value": "jelly_bottle",
+          "type": "delightful:enabled"
+        }
+      ],
       "advancement": {
         "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:food/cooking/jelly_bottle"
+          ]
+        },
         "criteria": {
           "has_sweet_fruit": {
+            "trigger": "minecraft:inventory_changed",
             "conditions": {
               "items": [
                 {
                   "tag": "forge:fruits/sweet"
                 }
               ]
-            },
-            "trigger": "minecraft:inventory_changed"
+            }
           },
           "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
             "conditions": {
               "recipe": "delightful:food/cooking/jelly_bottle"
-            },
-            "trigger": "minecraft:recipe_unlocked"
+            }
           }
         },
         "requirements": [
@@ -26,19 +37,8 @@
             "has_sweet_fruit",
             "has_the_recipe"
           ]
-        ],
-        "rewards": {
-          "recipes": [
-            "delightful:food/cooking/jelly_bottle"
-          ]
-        }
-      },
-      "conditions": [
-        {
-          "value": "jelly_bottle",
-          "type": "delightful:enabled"
-        }
-      ]
+        ]
+      }
     }
   ]
 }

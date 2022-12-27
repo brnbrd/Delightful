@@ -4,17 +4,17 @@
     {
       "conditions": [
         {
-          "type": "forge:and",
           "values": [
             {
-              "type": "delightful:enabled",
-              "value": "cheeseburger"
+              "value": "cheeseburger",
+              "type": "delightful:enabled"
             },
             {
-              "type": "forge:tag_empty",
-              "tag": "some_assembly_required:burger_bun"
+              "tag": "some_assembly_required:burger_bun",
+              "type": "forge:tag_empty"
             }
-          ]
+          ],
+          "type": "forge:and"
         }
       ],
       "recipe": {

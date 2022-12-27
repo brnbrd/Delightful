@@ -3,8 +3,8 @@
     {
       "conditions": [
         {
-          "type": "delightful:enabled",
-          "value": "cantaloupe_slice"
+          "value": "cantaloupe_slice",
+          "type": "delightful:enabled"
         }
       ]
     }

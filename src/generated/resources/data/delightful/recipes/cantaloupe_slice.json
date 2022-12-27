@@ -4,8 +4,8 @@
     {
       "conditions": [
         {
-          "type": "delightful:enabled",
-          "value": "cantaloupe_slice"
+          "value": "cantaloupe_slice",
+          "type": "delightful:enabled"
         }
       ],
       "recipe": {
@@ -16,8 +16,8 @@
           }
         ],
         "result": {
-          "count": 3,
-          "item": "delightful:cantaloupe_slice"
+          "item": "delightful:cantaloupe_slice",
+          "count": 3
         }
       }
     }

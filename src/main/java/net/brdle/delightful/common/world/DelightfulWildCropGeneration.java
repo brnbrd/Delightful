@@ -39,11 +39,11 @@ public class DelightfulWildCropGeneration extends WildCropGeneration {
 
 	public static void registerWildCropGeneration() {
 		FEATURE_PATCH_WILD_SALMONBERRIES = register(Util.rl(Delightful.MODID, "patch_wild_salmonberries"),
-			ModBiomeFeatures.WILD_CROP.get(), wildCropConfig(DelightfulBlocks.WILD_SALMONBERRIES.get(), Blocks.GRASS, BlockPredicate.matchesTag(BLOCK_BELOW, BlockTags.DIRT)));
+			ModBiomeFeatures.WILD_CROP.get(), wildCropConfig(DelightfulBlocks.WILD_SALMONBERRIES.get(), Blocks.GRASS, BlockPredicate.matchesTag(BlockTags.DIRT, BLOCK_BELOW)));
 		FEATURE_PATCH_MINI_MELON = register(Util.rl(Delightful.MODID, "patch_mini_melon"),
-			Feature.RANDOM_PATCH, randomPatchConfig(DelightfulBlocks.MINI_MELON.get(), 64, 4, BlockPredicate.matchesTag(BLOCK_BELOW, BlockTags.DIRT)));
+			Feature.RANDOM_PATCH, randomPatchConfig(DelightfulBlocks.MINI_MELON.get(), 64, 4, BlockPredicate.matchesTag(BlockTags.DIRT, BLOCK_BELOW)));
 		FEATURE_PATCH_CANTALOUPE = register(Util.rl(Delightful.MODID, "patch_cantaloupe"),
-			Feature.RANDOM_PATCH, randomPatchConfig(DelightfulBlocks.CANTALOUPE.get(), 64, 3, BlockPredicate.matchesTag(BLOCK_BELOW, DelightfulBlockTags.CANTALOUPE_SPAWNS)));
+			Feature.RANDOM_PATCH, randomPatchConfig(DelightfulBlocks.CANTALOUPE.get(), 64, 3, BlockPredicate.matchesTag(DelightfulBlockTags.CANTALOUPE_SPAWNS, BLOCK_BELOW)));
 
 		PATCH_WILD_SALMONBERRIES = registerConditionalPlacement(Util.rl(Delightful.MODID, "patch_wild_salmonberries"),
 			FEATURE_PATCH_WILD_SALMONBERRIES, DelightfulConfig.verify("salmonberries") && DelightfulConfig.CHANCE_WILD_SALMONBERRIES.get() > 0, RarityFilter.onAverageOnceEvery(DelightfulConfig.CHANCE_WILD_SALMONBERRIES.get()), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());

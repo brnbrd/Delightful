@@ -19,7 +19,6 @@ import net.minecraft.world.item.Items;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
-import vectorwing.farmersdelight.common.registry.ModItems;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
 import vectorwing.farmersdelight.common.tag.ModTags;
 
@@ -33,7 +32,6 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 
 		// Farmer's Delight
 		this.tag(ModTags.WOODEN_CABINETS)
-			.add(ModItems.MANGROVE_CABINET.get())
 			.addOptional(Util.rl("windswept", "holly_cabinet"))
 			.addOptional(Util.rl("windswept", "chestnut_cabinet"))
 			.addOptional(Util.rl("fruittrees", "citrus_cabinet"))

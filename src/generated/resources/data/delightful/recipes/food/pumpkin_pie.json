@@ -4,34 +4,34 @@
     {
       "conditions": [
         {
-          "type": "delightful:enabled",
-          "value": "pumpkin_pie_overhaul"
+          "value": "pumpkin_pie_overhaul",
+          "type": "delightful:enabled"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "key": {
-          "#": {
-            "item": "minecraft:wheat"
-          },
-          "O": {
-            "item": "farmersdelight:pie_crust"
-          },
-          "a": {
-            "item": "minecraft:pumpkin"
-          },
-          "e": {
-            "tag": "forge:eggs"
-          },
-          "x": {
-            "tag": "forge:sugar"
-          }
-        },
         "pattern": [
           "###",
           "aaa",
           "xOe"
         ],
+        "key": {
+          "#": {
+            "item": "minecraft:wheat"
+          },
+          "a": {
+            "item": "minecraft:pumpkin"
+          },
+          "x": {
+            "tag": "forge:sugar"
+          },
+          "e": {
+            "tag": "forge:eggs"
+          },
+          "O": {
+            "item": "farmersdelight:pie_crust"
+          }
+        },
         "result": {
           "item": "minecraft:pumpkin_pie"
         }

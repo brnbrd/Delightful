@@ -21,7 +21,7 @@ public class CompatItem extends Item implements IConfigured {
 	}
 
 	@Override
-	protected boolean allowedIn(@NotNull CreativeModeTab cat) {
-		return this.isEnabled() && super.allowedIn(cat);
+	protected boolean allowdedIn(@NotNull CreativeModeTab pCategory) {
+		return this.isEnabled() && super.allowdedIn(pCategory);
 	}
 }

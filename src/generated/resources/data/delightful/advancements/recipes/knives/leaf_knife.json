@@ -1,24 +1,51 @@
 {
   "advancements": [
     {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "leaf_knife",
+              "type": "delightful:enabled"
+            },
+            {
+              "modid": "seeds",
+              "type": "forge:mod_loaded"
+            },
+            {
+              "value": {
+                "tag": "seeds:sharp_leaf",
+                "type": "forge:tag_empty"
+              },
+              "type": "forge:not"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
       "advancement": {
         "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "delightful:knives/leaf_knife"
+          ]
+        },
         "criteria": {
           "has_leaf": {
+            "trigger": "minecraft:inventory_changed",
             "conditions": {
               "items": [
                 {
                   "tag": "seeds:sharp_leaf"
                 }
               ]
-            },
-            "trigger": "minecraft:inventory_changed"
+            }
           },
           "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
             "conditions": {
               "recipe": "delightful:knives/leaf_knife"
-            },
-            "trigger": "minecraft:recipe_unlocked"
+            }
           }
         },
         "requirements": [
@@ -26,35 +53,8 @@
             "has_leaf",
             "has_the_recipe"
           ]
-        ],
-        "rewards": {
-          "recipes": [
-            "delightful:knives/leaf_knife"
-          ]
-        }
-      },
-      "conditions": [
-        {
-          "type": "forge:and",
-          "values": [
-            {
-              "type": "delightful:enabled",
-              "value": "leaf_knife"
-            },
-            {
-              "type": "forge:mod_loaded",
-              "modid": "seeds"
-            },
-            {
-              "type": "forge:not",
-              "value": {
-                "type": "forge:tag_empty",
-                "tag": "seeds:sharp_leaf"
-              }
-            }
-          ]
-        }
-      ]
+        ]
+      }
     }
   ]
 }

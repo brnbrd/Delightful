@@ -4,12 +4,17 @@
     {
       "conditions": [
         {
-          "type": "delightful:enabled",
-          "value": "animal_fat"
+          "value": "animal_fat",
+          "type": "delightful:enabled"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "s",
+          "f",
+          "f"
+        ],
         "key": {
           "f": {
             "item": "delightful:animal_fat"
@@ -18,11 +23,6 @@
             "tag": "forge:string"
           }
         },
-        "pattern": [
-          "s",
-          "f",
-          "f"
-        ],
         "result": {
           "item": "minecraft:candle"
         }

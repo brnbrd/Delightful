@@ -4,13 +4,9 @@ import net.brdle.delightful.Delightful;
 import net.brdle.delightful.compat.Mods;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -38,14 +34,7 @@ public class CompatKnifeItem extends DelightfulKnifeItem {
         super(tag, tier, properties, base);
         this.modid = modid;
         this.tool = tool;
-		this.formatting = formatting;
-    }
-
-    public CompatKnifeItem(String modid, Supplier<Ingredient> base, ResourceLocation tag, Tier tier, float attackDamageIn, float attackSpeedIn, Properties properties) {
-        super(base, tag, tier, attackDamageIn, attackSpeedIn, properties);
-        this.modid = modid;
-        this.tool = new TextComponent("");
-        this.formatting = null;
+        this.formatting = formatting;
     }
 
     public String getModid() {
@@ -65,13 +54,13 @@ public class CompatKnifeItem extends DelightfulKnifeItem {
      * allows items to add custom lines of information to the mouseover description
      */
     @Override
-    public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> tool, TooltipFlag pIsAdvanced) {
+    public void appendHoverText(@NotNull ItemStack pStack, @Nullable Level pLevel, @NotNull List<Component> tool, @NotNull TooltipFlag pIsAdvanced) {
         if (!this.config()) {
-            tool.add(Component.translatable(Delightful.MODID + ".disabled.desc").withStyle(ChatFormatting.UNDERLINE));
+            tool.add(new TranslatableComponent(Delightful.MODID + ".disabled.desc").withStyle(ChatFormatting.UNDERLINE));
         } else if (!this.isLoaded()) {
-            tool.add(Component.translatable(Delightful.MODID + ".disabled.requires"));
-            tool.add(Component.literal(this.modid).withStyle(ChatFormatting.UNDERLINE));
-        } else if (!this.tool.equals(Component.empty())) {
+            tool.add(new TranslatableComponent(Delightful.MODID + ".disabled.requires"));
+            tool.add(new TextComponent(this.modid).withStyle(ChatFormatting.UNDERLINE));
+        } else if (!this.tool.getString().equals("")) {
             tool.add(this.tool);
         }
     }
@@ -89,7 +78,7 @@ public class CompatKnifeItem extends DelightfulKnifeItem {
     }
 
     @Override
-    protected boolean allowedIn(@NotNull CreativeModeTab cat) {
-        return super.allowedIn(cat) && this.isEnabled();
+    protected boolean allowdedIn(@NotNull CreativeModeTab pCategory) {
+        return super.allowdedIn(pCategory) && this.isEnabled();
     }
 }

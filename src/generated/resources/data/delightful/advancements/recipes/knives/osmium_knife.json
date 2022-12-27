@@ -27,7 +27,7 @@
         "parent": "minecraft:recipes/root",
         "rewards": {
           "recipes": [
-            "delightful:osmium_knife"
+            "delightful:knives/osmium_knife"
           ]
         },
         "criteria": {
@@ -44,7 +44,7 @@
           "has_the_recipe": {
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-              "recipe": "delightful:osmium_knife"
+              "recipe": "delightful:knives/osmium_knife"
             }
           }
         },

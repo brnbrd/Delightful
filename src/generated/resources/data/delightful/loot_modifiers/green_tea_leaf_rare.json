@@ -1,13 +1,12 @@
 {
-  "type": "delightful:add_item",
   "conditions": [
     {
       "condition": "delightful:enabled",
       "item": "green_tea_leaf"
     },
     {
-      "chance": 0.005,
-      "condition": "minecraft:random_chance"
+      "condition": "minecraft:random_chance",
+      "chance": 0.005
     },
     {
       "condition": "minecraft:inverted",
@@ -24,7 +23,8 @@
     }
   ],
   "item": "delightful:green_tea_leaf",
-  "maxAmount": 1,
   "minAmount": 1,
-  "unique": true
+  "maxAmount": 1,
+  "unique": true,
+  "type": "delightful:compat_add_item"
 }

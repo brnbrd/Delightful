@@ -4,30 +4,30 @@
     {
       "conditions": [
         {
-          "type": "forge:and",
           "values": [
             {
-              "type": "delightful:enabled",
-              "value": "matcha"
+              "value": "matcha",
+              "type": "delightful:enabled"
             },
             {
-              "type": "forge:not",
               "value": {
-                "type": "forge:tag_empty",
-                "tag": "forge:tea_leaves/green"
-              }
+                "tag": "forge:tea_leaves/green",
+                "type": "forge:tag_empty"
+              },
+              "type": "forge:not"
             }
-          ]
+          ],
+          "type": "forge:and"
         }
       ],
       "recipe": {
         "type": "minecraft:smelting",
-        "cookingtime": 200,
-        "experience": 0.1,
         "ingredient": {
           "tag": "forge:tea_leaves/green"
         },
-        "result": "delightful:matcha"
+        "result": "delightful:matcha",
+        "experience": 0.1,
+        "cookingtime": 200
       }
     }
   ]

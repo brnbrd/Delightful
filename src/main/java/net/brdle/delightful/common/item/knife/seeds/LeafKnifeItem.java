@@ -5,9 +5,11 @@ import net.brdle.delightful.common.item.knife.CompatKnifeItem;
 import net.brdle.delightful.data.DelightfulItemTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TextComponent;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.NotNull;
 import javax.annotation.Nullable;
 import java.util.List;
 
@@ -20,10 +22,10 @@ public class LeafKnifeItem extends CompatKnifeItem {
 	 * allows items to add custom lines of information to the mouseover description
 	 */
 	@Override
-	public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> tool, TooltipFlag pIsAdvanced) {
+	public void appendHoverText(@NotNull ItemStack pStack, @Nullable Level pLevel, @NotNull List<Component> tool, @NotNull TooltipFlag pIsAdvanced) {
 		super.appendHoverText(pStack, pLevel, tool, pIsAdvanced);
 		if (this.isEnabled()) {
-			tool.add(Component.literal("Very sharp").withStyle(ChatFormatting.GRAY));
+			tool.add(new TextComponent("Very sharp").withStyle(ChatFormatting.GRAY));
 		}
 	}
 }

@@ -18,6 +18,9 @@ import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import java.util.function.Supplier;
 
@@ -35,7 +38,7 @@ public class Util {
     return ItemTags.create(rl(modid, path));
   }
 
-  public static ObjectArrayList<ItemStack> with(ObjectArrayList<ItemStack> before, ItemStack addition) {
+  public static List<ItemStack> with(List<ItemStack> before, ItemStack addition) {
     before.add(addition);
     return before;
   }

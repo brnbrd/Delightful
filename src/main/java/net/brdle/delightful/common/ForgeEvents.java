@@ -1,25 +1,23 @@
 package net.brdle.delightful.common;
 
 import net.brdle.delightful.Delightful;
-import net.brdle.delightful.common.config.DelightfulConfig;
-import net.brdle.delightful.common.item.DelightfulItems;
-import net.brdle.delightful.common.item.FurnaceFuelItem;
-import net.brdle.delightful.common.world.DelightfulWildCropGeneration;
-import net.minecraft.core.Holder;
 import net.brdle.delightful.Util;
 import net.brdle.delightful.common.block.DelightfulBlocks;
 import net.brdle.delightful.common.block.SlicedMelonBlock;
 import net.brdle.delightful.common.block.SlicedPumpkinBlock;
 import net.brdle.delightful.common.config.DelightfulConfig;
+import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.item.FurnaceFuelItem;
 import net.brdle.delightful.common.item.knife.Knives;
+import net.brdle.delightful.common.world.DelightfulWildCropGeneration;
 import net.brdle.delightful.compat.ArsNouveauCompat;
 import net.brdle.delightful.compat.BYGCompat;
 import net.brdle.delightful.compat.Mods;
 import net.brdle.delightful.data.DelightfulItemTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.Component;
+import net.minecraft.core.Holder;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.network.protocol.game.ClientboundAnimatePacket;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
@@ -27,22 +25,21 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.levelgen.GenerationStep;
-import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import net.minecraftforge.common.world.BiomeGenerationSettingsBuilder;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.gameevent.GameEvent;
+import net.minecraft.world.level.levelgen.GenerationStep;
+import net.minecraft.world.level.levelgen.placement.PlacedFeature;
+import net.minecraftforge.common.world.BiomeGenerationSettingsBuilder;
+import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
@@ -52,11 +49,10 @@ import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
-import java.util.List;
 import vectorwing.farmersdelight.common.block.PieBlock;
+import java.util.List;
 import java.util.Objects;
 
 @Mod.EventBusSubscriber(modid= Delightful.MODID)
@@ -69,7 +65,7 @@ public class ForgeEvents {
 	public static void onMissingBlockMappings(RegistryEvent.MissingMappings<Block> e) {
 		for (var mapping : e.getAllMappings()) {
 			if (portedMods.contains(mapping.key.getNamespace())) {
-				var remap = new ResourceLocation(Delightful.MODID, mapping.key.getPath());
+				var remap = Util.rl(Delightful.MODID, mapping.key.getPath());
 				if (ForgeRegistries.BLOCKS.containsKey(remap)) {
 					mapping.remap(ForgeRegistries.BLOCKS.getValue(remap));
 				} else {
@@ -84,7 +80,7 @@ public class ForgeEvents {
 	public static void onMissingItemMappings(RegistryEvent.MissingMappings<Item> e) {
 		for (var mapping : e.getAllMappings()) {
 			if (portedMods.contains(mapping.key.getNamespace())) {
-				var remap = new ResourceLocation(Delightful.MODID, mapping.key.getPath());
+				var remap = Util.rl(Delightful.MODID, mapping.key.getPath());
 				if (ForgeRegistries.ITEMS.containsKey(remap)) {
 					mapping.remap(ForgeRegistries.ITEMS.getValue(remap));
 				} else {
@@ -157,15 +153,15 @@ public class ForgeEvents {
 	// Right slick slicing an Item from a Block
 	@SubscribeEvent (priority = EventPriority.HIGHEST)
 	public static void onInteract(PlayerInteractEvent.RightClickBlock e) {
-		Level world = e.getLevel();
+		Level world = e.getWorld();
 		BlockPos pos = e.getPos();
-		if (e.getEntity().getItemInHand(e.getHand()).is(DelightfulItemTags.SCAVENGING_TOOLS)) {
+		if (e.getPlayer().getItemInHand(e.getHand()).is(DelightfulItemTags.SCAVENGING_TOOLS)) {
 			BlockState current = world.getBlockState(pos);
 			boolean client = world.isClientSide();
 			if (current.getBlock() == Blocks.MELON) {
 				SlicedMelonBlock sliced = (SlicedMelonBlock) DelightfulBlocks.SLICED_MELON.get();
 				slice(sliced.defaultBlockState(), sliced.getSliceItem(), world, pos, SoundEvents.BAMBOO_BREAK, e, client);
-			} else if (current.getBlock() == Blocks.PUMPKIN && !e.getEntity().isCrouching()) {
+			} else if (current.getBlock() == Blocks.PUMPKIN && !e.getPlayer().isCrouching()) {
 				SlicedPumpkinBlock sliced = (SlicedPumpkinBlock) DelightfulBlocks.SLICED_PUMPKIN.get();
 				slice(sliced.defaultBlockState(), sliced.getSliceItem(), world, pos, SoundEvents.BAMBOO_BREAK, e, client);
 			} else if (Mods.loaded(Mods.FU, Mods.FUD) &&
@@ -174,10 +170,10 @@ public class ForgeEvents {
 				ItemStack slice = Objects.requireNonNull(Util.item("frozen_delight", "truffle_cake_slice")).getDefaultInstance();
 				if (currentBites >= 3) {
 					world.removeBlock(pos, false);
-					world.gameEvent(e.getEntity(), GameEvent.BLOCK_DESTROY, pos);
-					Util.dropOrGive(slice, world, pos, e.getEntity());
+					world.gameEvent(e.getPlayer(), GameEvent.BLOCK_DESTROY, pos);
+					Util.dropOrGive(slice, world, pos, e.getPlayer());
 					world.playSound(null, pos, SoundEvents.WOOL_PLACE, SoundSource.PLAYERS, 0.8F, 0.8F);
-					e.getEntity().getItemInHand(e.getHand()).hurtAndBreak(1, e.getEntity(), onBroken -> {});
+					e.getPlayer().getItemInHand(e.getHand()).hurtAndBreak(1, e.getPlayer(), onBroken -> {});
 					e.setCancellationResult(InteractionResult.sidedSuccess(client));
 					e.setCanceled(true);
 					return;
@@ -191,9 +187,9 @@ public class ForgeEvents {
 	public static void slice(BlockState block, ItemStack slice, Level world, BlockPos pos, SoundEvent sound, PlayerInteractEvent.RightClickBlock e, boolean client) {
 		if (!client) {
 			world.setBlock(pos, block, 2);
-			Util.dropOrGive(slice, world, pos, e.getEntity());
+			Util.dropOrGive(slice, world, pos, e.getPlayer());
 			world.playSound(null, pos, sound, SoundSource.PLAYERS, 0.8F, 0.8F);
-			e.getEntity().getItemInHand(e.getHand()).hurtAndBreak(1, e.getEntity(), onBroken -> {});
+			e.getPlayer().getItemInHand(e.getHand()).hurtAndBreak(1, e.getPlayer(), onBroken -> {});
 		}
 		e.setCancellationResult(InteractionResult.sidedSuccess(client));
 		e.setCanceled(true);
@@ -202,9 +198,9 @@ public class ForgeEvents {
 	// Right click placing a pie Block using Item
 	@SubscribeEvent
 	public static void onPieOverhaul(PlayerInteractEvent.RightClickBlock e) {
-		ItemStack stack = e.getEntity().getItemInHand(e.getHand());
+		ItemStack stack = e.getPlayer().getItemInHand(e.getHand());
 		if (!stack.isEmpty()) {
-			BlockPlaceContext context = new BlockPlaceContext(e.getEntity(), e.getHand(), stack, e.getHitVec());
+			BlockPlaceContext context = new BlockPlaceContext(e.getPlayer(), e.getHand(), stack, e.getHitVec());
 			if (DelightfulConfig.PUMPKIN_PIE_OVERHAUL.get() &&
 				stack.is(Items.PUMPKIN_PIE)) {
 				tryPlacePie((PieBlock) DelightfulBlocks.PUMPKIN_PIE.get(), context, e);
@@ -253,7 +249,7 @@ public class ForgeEvents {
 			}
 			context.getLevel().setBlock(context.getClickedPos(), piestate, 2);
 			piestate.getBlock().setPlacedBy(context.getLevel(), context.getClickedPos(), piestate, context.getPlayer(), context.getItemInHand());
-			context.getLevel().gameEvent(GameEvent.BLOCK_PLACE, context.getClickedPos(), GameEvent.Context.of(context.getPlayer(), piestate));
+			context.getLevel().gameEvent(GameEvent.BLOCK_PLACE, context.getClickedPos());
 			context.getLevel().playSound(null, context.getClickedPos(), SoundEvents.WOOL_PLACE, SoundSource.PLAYERS, 0.8F, 0.8F);
 			return true;
 		}
@@ -263,7 +259,7 @@ public class ForgeEvents {
 	// Cancels right clicking overhauled pie items to eat them normally
 	@SubscribeEvent
 	public static void onPieOverhaul(PlayerInteractEvent.RightClickItem e) {
-		ItemStack stack = e.getEntity().getItemInHand(e.getHand());
+		ItemStack stack = e.getPlayer().getItemInHand(e.getHand());
 		if ((DelightfulConfig.PUMPKIN_PIE_OVERHAUL.get() && stack.is(Items.PUMPKIN_PIE)) ||
 			(Mods.loaded(Mods.AN) &&
 				stack.is(Util.item(Mods.AN, ArsNouveauCompat.pie)) &&
@@ -302,7 +298,7 @@ public class ForgeEvents {
 			(Mods.loaded(Mods.WB) &&
 				((e.getItemStack().is(Util.it(Mods.WB, "berry_pies"))) ||
 					(e.getItemStack().is(Util.it(Mods.WB, "berry_muffins")))))) {
-			e.getToolTip().add(Component.translatable(Delightful.MODID + ".placeable.desc").withStyle(ChatFormatting.DARK_GRAY).withStyle(ChatFormatting.ITALIC));
+			e.getToolTip().add(new TranslatableComponent(Delightful.MODID + ".placeable.desc").withStyle(ChatFormatting.DARK_GRAY).withStyle(ChatFormatting.ITALIC));
 		}
 	}
 
