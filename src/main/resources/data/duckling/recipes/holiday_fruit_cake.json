@@ -1,0 +1,33 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "duckling:holiday_fruit_cake"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "minecraft:wheat"
+          },
+          {
+            "tag": "forge:sugar"
+          },
+          {
+            "tag": "forge:fruits"
+          },
+          {
+            "tag": "forge:eggs"
+          }
+        ],
+        "result": {
+          "item": "duckling:holiday_fruit_cake"
+        }
+      }
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 package net.brdle.delightful.common.item.knife.twilightforest;
 
+import net.brdle.delightful.Util;
 import net.brdle.delightful.common.item.DelightfulTiers;
 import net.brdle.delightful.common.item.knife.CompatKnifeItem;
 import net.minecraft.ChatFormatting;
@@ -14,15 +15,16 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
+import org.jetbrains.annotations.NotNull;
 import java.util.function.Supplier;
 
 public class FieryKnifeItem extends CompatKnifeItem {
   public FieryKnifeItem(Properties properties) {
-    super("twilightforest", new ResourceLocation("forge", "ingots/fiery"), DelightfulTiers.FIERY, 0.5F, -2.0F, properties, new TranslatableComponent("item.twilightforest.fiery_sword.tooltip").withStyle(ChatFormatting.GRAY));
+    super("twilightforest", Util.it("forge", "ingots/fiery"), DelightfulTiers.FIERY, properties, Component.translatable("item.twilightforest.fiery_sword.tooltip").withStyle(ChatFormatting.GRAY), null, ChatFormatting.YELLOW);
   }
 
   @Override
-  public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
+  public boolean canApplyAtEnchantingTable(@NotNull ItemStack stack, @NotNull Enchantment enchantment) {
     return enchantment != Enchantments.FIRE_ASPECT && super.canApplyAtEnchantingTable(stack, enchantment);
   }
 
@@ -32,7 +34,7 @@ public class FieryKnifeItem extends CompatKnifeItem {
   }
 
   @Override
-  public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+  public boolean hurtEnemy(@NotNull ItemStack stack, @NotNull LivingEntity target, @NotNull LivingEntity attacker) {
     boolean result = super.hurtEnemy(stack, target, attacker);
     if (result && !target.getLevel().isClientSide() && !target.fireImmune()) {
       target.setSecondsOnFire(15);
@@ -49,6 +51,6 @@ public class FieryKnifeItem extends CompatKnifeItem {
 
   @Override
   public Supplier<Ingredient> getRod() {
-    return () -> Ingredient.of(Items.BLAZE_ROD);
+    return Util.ing(Items.BLAZE_ROD);
   }
 }

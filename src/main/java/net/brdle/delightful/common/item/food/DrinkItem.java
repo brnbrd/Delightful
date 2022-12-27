@@ -7,6 +7,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.NotNull;
 import vectorwing.farmersdelight.common.item.MelonJuiceItem;
 import java.util.function.Supplier;
 
@@ -45,7 +46,7 @@ public class DrinkItem extends MelonJuiceItem {
     }
 
     @Override
-    public void affectConsumer(ItemStack stack, Level worldIn, LivingEntity consumer) {
+    public void affectConsumer(@NotNull ItemStack stack, @NotNull Level worldIn, LivingEntity consumer) {
         consumer.addEffect(new MobEffectInstance(this.effect.get(), this.duration, this.amplifier));
         if (this.heal > 0.0F) consumer.heal(this.heal);
         if (consumer instanceof ServerPlayer player && this.feed > 0) {

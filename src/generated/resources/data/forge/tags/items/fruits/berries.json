@@ -4,13 +4,20 @@
     "#forge:fruits/sweet_berries",
     "#forge:fruits/glow_berries",
     "#forge:fruits/salmonberries",
-    "#forge:fruits/strawberries",
     "#forge:fruits/torchberries",
     "#forge:fruits/sourceberry",
     "#forge:fruits/elderberry",
     "#forge:fruits/blackcurrant",
     "#forge:fruits/redcurrant",
     "#forge:fruits/whitecurrant",
-    "#forge:fruits/cherry"
+    "#forge:fruits/blueberries",
+    "#forge:fruits/raspberries",
+    "#forge:fruits/blackberries",
+    "#forge:fruits/cranberries",
+    "#forge:fruits/nightshade_berries",
+    "#forge:fruits/crimson_berries",
+    "#forge:fruits/cherry",
+    "#forge:fruits/strawberries",
+    "#forge:fruits/wild_berries"
   ]
 }

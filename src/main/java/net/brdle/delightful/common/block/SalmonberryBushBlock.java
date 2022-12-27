@@ -25,6 +25,8 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraftforge.common.ForgeHooks;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Random;
 
@@ -36,24 +38,27 @@ public class SalmonberryBushBlock extends BushBlock implements BonemealableBlock
 
   public SalmonberryBushBlock(BlockBehaviour.Properties pProperties) {
     super(pProperties);
-    this.registerDefaultState(this.stateDefinition.any().setValue(AGE, Integer.valueOf(0)));
+    this.registerDefaultState(this.stateDefinition.any().setValue(AGE, 0));
   }
 
-  public ItemStack getCloneItemStack(BlockGetter pLevel, BlockPos pPos, BlockState pState) {
-    return new ItemStack(DelightfulItems.SALMONBERRY_PIPS.get());
+  @Override
+  public ItemStack getCloneItemStack(BlockState state, HitResult target, BlockGetter level, BlockPos pos, Player player) {
+    return state.getValue(AGE) <= 1 ? DelightfulItems.SALMONBERRY_PIPS.get().getDefaultInstance() : DelightfulItems.SALMONBERRIES.get().getDefaultInstance();
   }
 
-  public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
+  @Override
+  public @NotNull VoxelShape getShape(BlockState pState, @NotNull BlockGetter pLevel, @NotNull BlockPos pPos, @NotNull CollisionContext pContext) {
     if (pState.getValue(AGE) == 0) {
       return SAPLING_SHAPE;
     } else {
-      return pState.getValue(AGE) < 3 ? MID_GROWTH_SHAPE : super.getShape(pState, pLevel, pPos, pContext);
+      return pState.getValue(AGE) < MAX_AGE ? MID_GROWTH_SHAPE : super.getShape(pState, pLevel, pPos, pContext);
     }
   }
 
   /**
    * @return whether this block needs random ticking.
    */
+  @Override
   public boolean isRandomlyTicking(BlockState pState) {
     return pState.getValue(AGE) < 3;
   }
@@ -61,9 +66,10 @@ public class SalmonberryBushBlock extends BushBlock implements BonemealableBlock
   /**
    * Performs a random tick on a block.
    */
-  public void randomTick(BlockState pState, ServerLevel pLevel, BlockPos pPos, Random pRandom) {
+  @Override
+  public void randomTick(BlockState pState, @NotNull ServerLevel pLevel, @NotNull BlockPos pPos, @NotNull Random pRandom) {
     int i = pState.getValue(AGE);
-    if (i < 3 && pLevel.getRawBrightness(pPos.above(), 0) >= 9 && net.minecraftforge.common.ForgeHooks.onCropsGrowPre(pLevel, pPos, pState, pRandom.nextInt(5) == 0)) {
+    if (i < MAX_AGE && pLevel.getRawBrightness(pPos.above(), 0) >= 9 && ForgeHooks.onCropsGrowPre(pLevel, pPos, pState, pRandom.nextInt(5) == 0)) {
       BlockState blockstate = pState.setValue(AGE, i + 1);
       pLevel.setBlock(pPos, blockstate, 2);
       pLevel.gameEvent(GameEvent.BLOCK_CHANGE, pPos);
@@ -72,7 +78,8 @@ public class SalmonberryBushBlock extends BushBlock implements BonemealableBlock
 
   }
 
-  public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
+  @Override
+  public InteractionResult use(BlockState pState, @NotNull Level pLevel, @NotNull BlockPos pPos, @NotNull Player pPlayer, @NotNull InteractionHand pHand, @NotNull BlockHitResult pHit) {
     int i = pState.getValue(AGE);
     boolean flag = i == 3;
     if (!flag && pPlayer.getItemInHand(pHand).is(Items.BONE_MEAL)) {
@@ -90,6 +97,7 @@ public class SalmonberryBushBlock extends BushBlock implements BonemealableBlock
     }
   }
 
+  @Override
   protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
     pBuilder.add(AGE);
   }
@@ -97,20 +105,18 @@ public class SalmonberryBushBlock extends BushBlock implements BonemealableBlock
   /**
    * @return whether bonemeal can be used on this block
    */
-  public boolean isValidBonemealTarget(BlockGetter pLevel, BlockPos pPos, BlockState pState, boolean pIsClient) {
-    return pState.getValue(AGE) < 3;
-  }
-
-  public boolean isBonemealSuccess(Level pLevel, Random pRandom, BlockPos pPos, BlockState pState) {
-    return true;
-  }
-
-  public void performBonemeal(ServerLevel pLevel, Random pRandom, BlockPos pPos, BlockState pState) {
-    pLevel.setBlock(pPos, pState.setValue(AGE, Math.min(3, pState.getValue(AGE) + 1)), 2);
+  @Override
+  public boolean isValidBonemealTarget(@NotNull BlockGetter pLevel, @NotNull BlockPos pPos, BlockState pState, boolean pIsClient) {
+    return pState.getValue(AGE) < MAX_AGE;
   }
 
   @Override
-  public ItemStack getCloneItemStack(BlockState state, HitResult target, BlockGetter level, BlockPos pos, Player player) {
-    return new ItemStack(DelightfulItems.SALMONBERRIES.get());
+  public boolean isBonemealSuccess(@NotNull Level pLevel, @NotNull Random pRandom, @NotNull BlockPos pPos, @NotNull BlockState pState) {
+    return true;
+  }
+
+  @Override
+  public void performBonemeal(ServerLevel pLevel, @NotNull Random pRandom, @NotNull BlockPos pPos, BlockState pState) {
+    pLevel.setBlock(pPos, pState.setValue(AGE, Math.min(MAX_AGE, pState.getValue(AGE) + 1)), 2);
   }
 }

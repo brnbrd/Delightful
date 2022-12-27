@@ -1,0 +1,39 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "blueberry_pie_slice"
+            },
+            {
+              "type": "forge:item_exists",
+              "item": "byg:blueberry_pie"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "byg:blueberry_pie"
+          }
+        ],
+        "result": [
+          {
+            "count": 4,
+            "item": "delightful:blueberry_pie_slice"
+          }
+        ],
+        "tool": {
+          "tag": "forge:tools/knives"
+        }
+      }
+    }
+  ]
+}

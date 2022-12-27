@@ -1,0 +1,47 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "sinisite_knife"
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "fusion"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:ingots/sinisite"
+              }
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "m": {
+            "tag": "forge:ingots/sinisite"
+          },
+          "s": {
+            "tag": "forge:rods/wooden"
+          }
+        },
+        "pattern": [
+          "m",
+          "s"
+        ],
+        "result": {
+          "item": "delightful:sinisite_knife"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "cooked_venison_chops"
+            },
+            {
+              "type": "delightful:enabled",
+              "value": "venison_chops"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:raw_venison"
+              }
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:smelting",
+        "cookingtime": 200,
+        "experience": 0.35,
+        "ingredient": {
+          "item": "delightful:venison_chops"
+        },
+        "result": "delightful:cooked_venison_chops"
+      }
+    }
+  ]
+}

@@ -9,7 +9,7 @@
         }
       ],
       "recipe": {
-        "type": "minecraft:blasting",
+        "type": "minecraft:smelting",
         "ingredient": {
           "item": "boneequipment:bone_chestplate"
         },

@@ -1,0 +1,55 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "gilded_quartz_knife"
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "create_sa"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "create:polished_rose_quartz"
+              }
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "create:mechanical_crafting",
+        "pattern": [
+          " R ",
+          "CGC",
+          " Z "
+        ],
+        "key": {
+          "Z": {
+            "tag": "create_sa:zinc_handle"
+          },
+          "R": {
+            "tag": "create:polished_rose_quartz"
+          },
+          "C": {
+            "tag": "forge:plates/iron"
+          },
+          "G": {
+            "tag": "forge:ingots/gold"
+          }
+        },
+        "result": {
+          "item": "delightful:gilded_quartz_knife",
+          "count": 1
+        }
+      }
+    }
+  ]
+}

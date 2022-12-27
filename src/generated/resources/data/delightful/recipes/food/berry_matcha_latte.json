@@ -4,8 +4,21 @@
     {
       "conditions": [
         {
-          "value": "berry_matcha_latte",
-          "type": "delightful:enabled"
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "berry_matcha_latte"
+            },
+            {
+              "type": "delightful:enabled",
+              "value": "matcha_latte"
+            },
+            {
+              "type": "delightful:enabled",
+              "value": "matcha"
+            }
+          ]
         }
       ],
       "recipe": {

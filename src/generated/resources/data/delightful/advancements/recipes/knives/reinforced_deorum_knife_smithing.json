@@ -1,56 +1,56 @@
 {
   "advancements": [
     {
-      "conditions": [
-        {
-          "values": [
-            {
-              "value": "reinforced_deorum_knife",
-              "type": "delightful:enabled"
-            },
-            {
-              "value": {
-                "tag": "forbidden_arcanus:stellarite_piece",
-                "type": "forge:tag_empty"
-              },
-              "type": "forge:not"
-            }
-          ],
-          "type": "forge:and"
-        }
-      ],
       "advancement": {
         "parent": "minecraft:recipes/root",
-        "rewards": {
-          "recipes": [
-            "delightful:reinforced_deorum_knife_smithing"
-          ]
-        },
         "criteria": {
-          "has_metal": {
-            "trigger": "minecraft:inventory_changed",
+          "has_stellarite_piece": {
             "conditions": {
               "items": [
                 {
                   "tag": "forbidden_arcanus:stellarite_piece"
                 }
               ]
-            }
+            },
+            "trigger": "minecraft:inventory_changed"
           },
           "has_the_recipe": {
-            "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-              "recipe": "delightful:reinforced_deorum_knife_smithing"
-            }
+              "recipe": "delightful:knives/reinforced_deorum_knife_smithing"
+            },
+            "trigger": "minecraft:recipe_unlocked"
           }
         },
         "requirements": [
           [
-            "has_metal",
+            "has_stellarite_piece",
             "has_the_recipe"
           ]
-        ]
-      }
+        ],
+        "rewards": {
+          "recipes": [
+            "delightful:knives/reinforced_deorum_knife_smithing"
+          ]
+        }
+      },
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "reinforced_deorum_knife"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forbidden_arcanus:stellarite_piece"
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }

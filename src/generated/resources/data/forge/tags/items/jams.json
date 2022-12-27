@@ -1,0 +1,9 @@
+{
+  "values": [
+    "#forge:jam",
+    {
+      "id": "#wildberries:berry_jams",
+      "required": false
+    }
+  ]
+}

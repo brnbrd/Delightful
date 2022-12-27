@@ -1,0 +1,21 @@
+{
+  "values": [
+    "farmersdelight:mangrove_cabinet",
+    {
+      "id": "windswept:holly_cabinet",
+      "required": false
+    },
+    {
+      "id": "windswept:chestnut_cabinet",
+      "required": false
+    },
+    {
+      "id": "fruittrees:citrus_cabinet",
+      "required": false
+    },
+    {
+      "id": "fruittrees:cherry_cabinet",
+      "required": false
+    }
+  ]
+}

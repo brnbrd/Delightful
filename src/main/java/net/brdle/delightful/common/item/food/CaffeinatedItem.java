@@ -1,13 +1,14 @@
 package net.brdle.delightful.common.item.food;
 
 import net.brdle.delightful.compat.FRCompat;
+import net.brdle.delightful.compat.Mods;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.fml.ModList;
 import java.util.function.Supplier;
+import org.jetbrains.annotations.NotNull;
 
 public class CaffeinatedItem extends DrinkItem {
   public CaffeinatedItem(Properties properties, Supplier<MobEffect> effect, int duration, int amplifier, float heal, int feed) {
@@ -15,9 +16,9 @@ public class CaffeinatedItem extends DrinkItem {
   }
 
   @Override
-  public void affectConsumer(ItemStack stack, Level worldIn, LivingEntity consumer) {
+  public void affectConsumer(@NotNull ItemStack stack, @NotNull Level worldIn, LivingEntity consumer) {
     super.affectConsumer(stack, worldIn, consumer);
-    if (ModList.get().isLoaded("farmersrespite")) {
+    if (Mods.loaded(Mods.FR)) {
       consumer.addEffect(new MobEffectInstance(FRCompat.CAFFEINATED.get(), 1200, 0));
     }
   }

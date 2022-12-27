@@ -1,96 +1,31 @@
 {
   "parent": "farmersdelight:main/root",
-  "display": {
-    "icon": {
-      "item": "farmersdelight:flint_knife",
-      "nbt": "{Damage:0}"
-    },
-    "title": {
-      "translate": "farmersdelight.advancement.craft_knife"
-    },
-    "description": {
-      "translate": "farmersdelight.advancement.craft_knife.desc"
-    },
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
-  },
   "criteria": {
-    "flint_knife": {
-      "trigger": "minecraft:inventory_changed",
+    "adamantium_knife": {
       "conditions": {
         "items": [
           {
             "items": [
-              "farmersdelight:flint_knife"
+              "delightful:adamantium_knife"
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
     },
-    "iron_knife": {
-      "trigger": "minecraft:inventory_changed",
+    "allthemodium_knife": {
       "conditions": {
         "items": [
           {
             "items": [
-              "farmersdelight:iron_knife"
+              "delightful:allthemodium_knife"
             ]
           }
         ]
-      }
-    },
-    "diamond_knife": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "farmersdelight:diamond_knife"
-            ]
-          }
-        ]
-      }
-    },
-    "golden_knife": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "farmersdelight:golden_knife"
-            ]
-          }
-        ]
-      }
-    },
-    "netherite_knife": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "farmersdelight:netherite_knife"
-            ]
-          }
-        ]
-      }
-    },
-    "bone_knife": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "delightful:bone_knife"
-            ]
-          }
-        ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
     },
     "amethyst_knife": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -99,34 +34,10 @@
             ]
           }
         ]
-      }
-    },
-    "emerald_knife": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "delightful:emerald_knife"
-            ]
-          }
-        ]
-      }
-    },
-    "copper_knife": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "delightful:copper_knife"
-            ]
-          }
-        ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
     },
     "black_opal_knife": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -135,46 +46,22 @@
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
     },
-    "tin_knife": {
-      "trigger": "minecraft:inventory_changed",
+    "bone_knife": {
       "conditions": {
         "items": [
           {
             "items": [
-              "delightful:tin_knife"
+              "delightful:bone_knife"
             ]
           }
         ]
-      }
-    },
-    "steel_knife": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "delightful:steel_knife"
-            ]
-          }
-        ]
-      }
-    },
-    "silver_knife": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "delightful:silver_knife"
-            ]
-          }
-        ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
     },
     "brass_knife": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -183,10 +70,10 @@
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
     },
     "bronze_knife": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -195,10 +82,10 @@
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
     },
     "constantan_knife": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -207,70 +94,22 @@
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
     },
-    "electrum_knife": {
-      "trigger": "minecraft:inventory_changed",
+    "copper_knife": {
       "conditions": {
         "items": [
           {
             "items": [
-              "delightful:electrum_knife"
+              "delightful:copper_knife"
             ]
           }
         ]
-      }
-    },
-    "invar_knife": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "delightful:invar_knife"
-            ]
-          }
-        ]
-      }
-    },
-    "lead_knife": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "delightful:lead_knife"
-            ]
-          }
-        ]
-      }
-    },
-    "nickel_knife": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "delightful:nickel_knife"
-            ]
-          }
-        ]
-      }
-    },
-    "enderite_knife": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "delightful:enderite_knife"
-            ]
-          }
-        ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
     },
     "deorum_knife": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -279,22 +118,22 @@
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
     },
-    "reinforced_deorum_knife": {
-      "trigger": "minecraft:inventory_changed",
+    "diamond_knife": {
       "conditions": {
         "items": [
           {
             "items": [
-              "delightful:reinforced_deorum_knife"
+              "farmersdelight:diamond_knife"
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
     },
     "draco_arcanus_knife": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -303,94 +142,58 @@
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
     },
-    "lapis_lazuli_knife": {
-      "trigger": "minecraft:inventory_changed",
+    "electrum_knife": {
       "conditions": {
         "items": [
           {
             "items": [
-              "delightful:lapis_lazuli_knife"
+              "delightful:electrum_knife"
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
     },
-    "osmium_knife": {
-      "trigger": "minecraft:inventory_changed",
+    "emerald_knife": {
       "conditions": {
         "items": [
           {
             "items": [
-              "delightful:osmium_knife"
+              "delightful:emerald_knife"
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
     },
-    "refined_glowstone_knife": {
-      "trigger": "minecraft:inventory_changed",
+    "enderite_knife": {
       "conditions": {
         "items": [
           {
             "items": [
-              "delightful:refined_glowstone_knife"
+              "delightful:enderite_knife"
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
     },
-    "refined_obsidian_knife": {
-      "trigger": "minecraft:inventory_changed",
+    "experience_knife": {
       "conditions": {
         "items": [
           {
             "items": [
-              "delightful:refined_obsidian_knife"
+              "delightful:experience_knife"
             ]
           }
         ]
-      }
-    },
-    "obsidian_infused_enderite_knife": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "delightful:obsidian_infused_enderite_knife"
-            ]
-          }
-        ]
-      }
-    },
-    "netherite_opal_knife": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "delightful:netherite_opal_knife"
-            ]
-          }
-        ]
-      }
-    },
-    "large_amethyst_knife": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "delightful:large_amethyst_knife"
-            ]
-          }
-        ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
     },
     "fiery_knife": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -399,10 +202,70 @@
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "flint_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "farmersdelight:flint_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "gilded_quartz_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:gilded_quartz_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "golden_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "farmersdelight:golden_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "invar_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:invar_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "iron_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "farmersdelight:iron_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     },
     "ironwood_knife": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -411,10 +274,22 @@
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "kiwano_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:kiwano_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     },
     "knightmetal_knife": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -423,22 +298,58 @@
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
     },
-    "steeleaf_knife": {
-      "trigger": "minecraft:inventory_changed",
+    "lapis_lazuli_knife": {
       "conditions": {
         "items": [
           {
             "items": [
-              "delightful:steeleaf_knife"
+              "delightful:lapis_lazuli_knife"
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "large_amethyst_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:large_amethyst_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "lead_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:lead_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "leaf_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:leaf_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     },
     "living_knife": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -447,7 +358,252 @@
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "mythril_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:mythril_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "netherite_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "farmersdelight:netherite_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "netherite_opal_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:netherite_opal_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "nickel_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:nickel_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "obsidian_infused_enderite_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:obsidian_infused_enderite_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "onyx_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:onyx_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "osmium_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:osmium_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "pendorite_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:pendorite_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "refined_glowstone_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:refined_glowstone_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "refined_obsidian_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:refined_obsidian_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "reinforced_deorum_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:reinforced_deorum_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "silver_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:silver_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "sinisite_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:sinisite_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "steel_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:steel_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "steeleaf_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:steeleaf_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "thyrium_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:thyrium_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "tin_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:tin_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "warden_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:warden_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "zinc_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:zinc_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "farmersdelight.advancement.craft_knife.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "farmersdelight:flint_knife",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "farmersdelight.advancement.craft_knife"
     }
   },
   "requirements": [
@@ -458,6 +614,7 @@
       "golden_knife",
       "netherite_knife",
       "bone_knife",
+      "lapis_lazuli_knife",
       "amethyst_knife",
       "emerald_knife",
       "copper_knife",
@@ -472,11 +629,17 @@
       "invar_knife",
       "lead_knife",
       "nickel_knife",
+      "zinc_knife",
+      "mythril_knife",
+      "adamantium_knife",
+      "onyx_knife",
+      "thyrium_knife",
+      "sinisite_knife",
+      "allthemodium_knife",
       "enderite_knife",
       "deorum_knife",
       "reinforced_deorum_knife",
       "draco_arcanus_knife",
-      "lapis_lazuli_knife",
       "osmium_knife",
       "refined_glowstone_knife",
       "refined_obsidian_knife",
@@ -487,7 +650,13 @@
       "ironwood_knife",
       "knightmetal_knife",
       "steeleaf_knife",
-      "living_knife"
+      "living_knife",
+      "pendorite_knife",
+      "warden_knife",
+      "experience_knife",
+      "gilded_quartz_knife",
+      "leaf_knife",
+      "kiwano_knife"
     ]
   ]
 }

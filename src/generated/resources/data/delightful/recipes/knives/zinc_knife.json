@@ -1,0 +1,43 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "zinc_knife"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:ingots/zinc"
+              }
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "m": {
+            "tag": "forge:ingots/zinc"
+          },
+          "s": {
+            "tag": "forge:rods/wooden"
+          }
+        },
+        "pattern": [
+          "m",
+          "s"
+        ],
+        "result": {
+          "item": "delightful:zinc_knife"
+        }
+      }
+    }
+  ]
+}

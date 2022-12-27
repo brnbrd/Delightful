@@ -1,0 +1,33 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "delightful:enabled",
+            "value": "pumpkin_pie_overhaul"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "minecraft:pumpkin"
+          },
+          {
+            "tag": "forge:sugar"
+          },
+          {
+            "tag": "forge:eggs"
+          }
+        ],
+        "result": {
+          "item": "minecraft:pumpkin_pie"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "chunkwich"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "rottenleather:sweetened_chunk"
+              }
+            },
+            {
+              "type": "forge:tag_empty",
+              "tag": "some_assembly_required:burger_bun"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "tag": "forge:bread"
+          },
+          {
+            "tag": "rottenleather:sweetened_chunk"
+          }
+        ],
+        "result": {
+          "item": "delightful:chunkwich"
+        }
+      }
+    }
+  ]
+}

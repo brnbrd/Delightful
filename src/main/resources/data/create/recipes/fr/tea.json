@@ -1,0 +1,43 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "forge:mod_loaded",
+              "modid": "farmersrespite"
+            },
+            {
+              "type": "forge:item_exists",
+              "item": "create:builders_tea"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "farmersrespite:brewing",
+        "container": {
+          "item": "farmersdelight:milk_bottle"
+        },
+        "cookingtime": 2400,
+        "experience": 0.35,
+        "ingredients": [
+          {
+            "tag": "forge:tea_leaves"
+          },
+          {
+            "tag": "minecraft:leaves"
+          }
+        ],
+        "needwater": true,
+        "recipe_book_tab": "drinks",
+        "result": {
+          "item": "create:builders_tea"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "wildberries:cranberry_pie"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "#": {
+            "item": "minecraft:wheat"
+          },
+          "O": {
+            "item": "farmersdelight:pie_crust"
+          },
+          "a": {
+            "tag": "forge:fruits/cranberries"
+          },
+          "e": {
+            "tag": "forge:eggs"
+          },
+          "x": {
+            "tag": "forge:sugar"
+          }
+        },
+        "pattern": [
+          "###",
+          "aaa",
+          "xOe"
+        ],
+        "result": {
+          "item": "wildberries:cranberry_pie"
+        }
+      }
+    }
+  ]
+}

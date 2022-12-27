@@ -1,0 +1,32 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "animal_oil_bottle"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "o": {
+            "item": "delightful:animal_oil_bottle"
+          },
+          "s": {
+            "tag": "forge:rods/wooden"
+          }
+        },
+        "pattern": [
+          "o",
+          "s"
+        ],
+        "result": {
+          "count": 8,
+          "item": "minecraft:torch"
+        }
+      }
+    }
+  ]
+}

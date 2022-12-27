@@ -12,6 +12,8 @@ public class DelightfulLootModifiers {
 	private static final DeferredRegister<GlobalLootModifierSerializer<?>> GLM = DeferredRegister.create(ForgeRegistries.Keys.LOOT_MODIFIER_SERIALIZERS, Delightful.MODID);
 
 	public static final RegistryObject<AddItemLootModifier.Serializer> ADD_ITEM = GLM.register("add_item", AddItemLootModifier.Serializer::new);
+	public static final RegistryObject<CompatAddItemLootModifier.Serializer> COMPAT_ADD_ITEM = GLM.register("compat_add_item", CompatAddItemLootModifier.Serializer::new);
+	public static final RegistryObject<SmeltLootModifier.Serializer> SMELT = GLM.register("smelt", SmeltLootModifier.Serializer::new);
 
 	public static void create(IEventBus bus) {
 		GLM.register(bus);

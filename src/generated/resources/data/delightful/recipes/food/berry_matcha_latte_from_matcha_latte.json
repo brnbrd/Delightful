@@ -1,0 +1,40 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "berry_matcha_latte"
+            },
+            {
+              "type": "delightful:enabled",
+              "value": "matcha_latte"
+            },
+            {
+              "type": "delightful:enabled",
+              "value": "matcha"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "delightful:matcha_latte"
+          },
+          {
+            "tag": "forge:fruits/berries"
+          }
+        ],
+        "result": {
+          "item": "delightful:berry_matcha_latte"
+        }
+      }
+    }
+  ]
+}

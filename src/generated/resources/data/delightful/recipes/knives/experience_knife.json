@@ -1,0 +1,47 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "experience_knife"
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "create_sa"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "create_sa:heap_of_experience"
+              }
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "m": {
+            "tag": "create_sa:heap_of_experience"
+          },
+          "s": {
+            "tag": "create_sa:zinc_handle"
+          }
+        },
+        "pattern": [
+          "m",
+          "s"
+        ],
+        "result": {
+          "item": "delightful:experience_knife"
+        }
+      }
+    }
+  ]
+}

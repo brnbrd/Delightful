@@ -1,0 +1,51 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "forge:item_exists",
+              "item": "ecologics:tropical_stew"
+            },
+            {
+              "type": "forge:item_exists",
+              "item": "ecologics:coconut_slice"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:cooked_crab"
+              }
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "ecologics:coconut_slice"
+        },
+        "cookingtime": 200,
+        "experience": 0.35,
+        "ingredients": [
+          {
+            "tag": "forge:cooked_crab"
+          },
+          {
+            "tag": "forge:crops/rice"
+          },
+          {
+            "tag": "forge:crops/onion"
+          }
+        ],
+        "result": {
+          "item": "ecologics:tropical_stew"
+        }
+      }
+    }
+  ]
+}

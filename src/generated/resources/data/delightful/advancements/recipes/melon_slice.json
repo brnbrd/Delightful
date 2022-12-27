@@ -1,0 +1,46 @@
+{
+  "advancements": [
+    {
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "criteria": {
+          "has_mini_melon": {
+            "conditions": {
+              "items": [
+                {
+                  "items": [
+                    "delightful:mini_melon"
+                  ]
+                }
+              ]
+            },
+            "trigger": "minecraft:inventory_changed"
+          },
+          "has_the_recipe": {
+            "conditions": {
+              "recipe": "delightful:melon_slice"
+            },
+            "trigger": "minecraft:recipe_unlocked"
+          }
+        },
+        "requirements": [
+          [
+            "has_mini_melon",
+            "has_the_recipe"
+          ]
+        ],
+        "rewards": {
+          "recipes": [
+            "delightful:melon_slice"
+          ]
+        }
+      },
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "mini_melon"
+        }
+      ]
+    }
+  ]
+}

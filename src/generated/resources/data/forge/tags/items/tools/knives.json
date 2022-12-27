@@ -1,6 +1,18 @@
 {
   "replace": false,
   "values": [
-    "#farmersdelight:tools/knives"
+    "#farmersdelight:tools/knives",
+    {
+      "id": "ae2:certus_quartz_cutting_knife",
+      "required": false
+    },
+    {
+      "id": "ae2:nether_quartz_cutting_knife",
+      "required": false
+    },
+    {
+      "id": "occultism:butcher_knife",
+      "required": false
+    }
   ]
 }

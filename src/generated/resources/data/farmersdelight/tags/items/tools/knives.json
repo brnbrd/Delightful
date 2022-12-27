@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "delightful:bone_knife",
+    "delightful:lapis_lazuli_knife",
     "delightful:amethyst_knife",
     "delightful:emerald_knife",
     "delightful:copper_knife",
@@ -16,11 +17,17 @@
     "delightful:invar_knife",
     "delightful:lead_knife",
     "delightful:nickel_knife",
+    "delightful:zinc_knife",
+    "delightful:mythril_knife",
+    "delightful:adamantium_knife",
+    "delightful:onyx_knife",
+    "delightful:thyrium_knife",
+    "delightful:sinisite_knife",
+    "delightful:allthemodium_knife",
     "delightful:enderite_knife",
     "delightful:deorum_knife",
     "delightful:reinforced_deorum_knife",
     "delightful:draco_arcanus_knife",
-    "delightful:lapis_lazuli_knife",
     "delightful:osmium_knife",
     "delightful:refined_glowstone_knife",
     "delightful:refined_obsidian_knife",
@@ -31,6 +38,12 @@
     "delightful:ironwood_knife",
     "delightful:knightmetal_knife",
     "delightful:steeleaf_knife",
-    "delightful:living_knife"
+    "delightful:living_knife",
+    "delightful:pendorite_knife",
+    "delightful:warden_knife",
+    "delightful:experience_knife",
+    "delightful:gilded_quartz_knife",
+    "delightful:leaf_knife",
+    "delightful:kiwano_knife"
   ]
 }

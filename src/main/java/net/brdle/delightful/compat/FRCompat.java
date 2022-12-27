@@ -1,7 +1,7 @@
 package net.brdle.delightful.compat;
 
-import com.farmersrespite.core.registry.FREffects;
 import net.minecraft.world.effect.MobEffect;
+import umpaz.farmersrespite.common.registry.FREffects;
 import java.util.function.Supplier;
 
 public class FRCompat {

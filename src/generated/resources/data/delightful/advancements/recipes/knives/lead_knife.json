@@ -1,47 +1,24 @@
 {
   "advancements": [
     {
-      "conditions": [
-        {
-          "values": [
-            {
-              "value": "lead_knife",
-              "type": "delightful:enabled"
-            },
-            {
-              "value": {
-                "tag": "forge:ingots/lead",
-                "type": "forge:tag_empty"
-              },
-              "type": "forge:not"
-            }
-          ],
-          "type": "forge:and"
-        }
-      ],
       "advancement": {
         "parent": "minecraft:recipes/root",
-        "rewards": {
-          "recipes": [
-            "delightful:lead_knife"
-          ]
-        },
         "criteria": {
           "has_lead": {
-            "trigger": "minecraft:inventory_changed",
             "conditions": {
               "items": [
                 {
                   "tag": "forge:ingots/lead"
                 }
               ]
-            }
+            },
+            "trigger": "minecraft:inventory_changed"
           },
           "has_the_recipe": {
-            "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-              "recipe": "delightful:lead_knife"
-            }
+              "recipe": "delightful:knives/lead_knife"
+            },
+            "trigger": "minecraft:recipe_unlocked"
           }
         },
         "requirements": [
@@ -49,8 +26,31 @@
             "has_lead",
             "has_the_recipe"
           ]
-        ]
-      }
+        ],
+        "rewards": {
+          "recipes": [
+            "delightful:knives/lead_knife"
+          ]
+        }
+      },
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "lead_knife"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:ingots/lead"
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }

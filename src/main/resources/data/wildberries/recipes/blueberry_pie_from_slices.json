@@ -1,0 +1,42 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "forge:item_exists",
+              "item": "wildberries:blueberry_pie"
+            },
+            {
+              "type": "forge:item_exists",
+              "item": "wildberries:blueberry_pie_slice"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "wildberries:blueberry_pie_slice"
+          },
+          {
+            "item": "wildberries:blueberry_pie_slice"
+          },
+          {
+            "item": "wildberries:blueberry_pie_slice"
+          },
+          {
+            "item": "wildberries:blueberry_pie_slice"
+          }
+        ],
+        "result": {
+          "item": "wildberries:blueberry_pie"
+        }
+      }
+    }
+  ]
+}

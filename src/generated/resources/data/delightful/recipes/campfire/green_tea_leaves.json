@@ -1,0 +1,34 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "matcha"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:tea_leaves/green"
+              }
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:campfire_cooking",
+        "cookingtime": 400,
+        "experience": 0.1,
+        "ingredient": {
+          "tag": "forge:tea_leaves/green"
+        },
+        "result": "delightful:matcha"
+      }
+    }
+  ]
+}

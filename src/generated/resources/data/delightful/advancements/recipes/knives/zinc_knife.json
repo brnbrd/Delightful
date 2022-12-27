@@ -1,0 +1,56 @@
+{
+  "advancements": [
+    {
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "criteria": {
+          "has_the_recipe": {
+            "conditions": {
+              "recipe": "delightful:knives/zinc_knife"
+            },
+            "trigger": "minecraft:recipe_unlocked"
+          },
+          "has_zinc": {
+            "conditions": {
+              "items": [
+                {
+                  "tag": "forge:ingots/zinc"
+                }
+              ]
+            },
+            "trigger": "minecraft:inventory_changed"
+          }
+        },
+        "requirements": [
+          [
+            "has_zinc",
+            "has_the_recipe"
+          ]
+        ],
+        "rewards": {
+          "recipes": [
+            "delightful:knives/zinc_knife"
+          ]
+        }
+      },
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "zinc_knife"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:ingots/zinc"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

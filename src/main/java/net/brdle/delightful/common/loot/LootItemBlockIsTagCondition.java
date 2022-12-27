@@ -3,12 +3,11 @@ package net.brdle.delightful.common.loot;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonSerializationContext;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.ItemTags;
+import net.brdle.delightful.Util;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.util.GsonHelper;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
@@ -18,12 +17,12 @@ import org.jetbrains.annotations.NotNull;
 
 public class LootItemBlockIsTagCondition implements LootItemCondition {
 
-	final TagKey<Item> tag;
-	LootItemBlockIsTagCondition(TagKey<Item> tag) {
+	final TagKey<Block> tag;
+	LootItemBlockIsTagCondition(TagKey<Block> tag) {
 		this.tag = tag;
 	}
 
-	public static LootItemBlockIsTagCondition isTag(TagKey<Item> tag) {
+	public static LootItemBlockIsTagCondition isTag(TagKey<Block> tag) {
 		return new LootItemBlockIsTagCondition(tag);
 	}
 
@@ -42,7 +41,7 @@ public class LootItemBlockIsTagCondition implements LootItemCondition {
 	@Override
 	public boolean test(LootContext lootContext) {
 		BlockState state = lootContext.getParamOrNull(LootContextParams.BLOCK_STATE);
-		return state != null && new ItemStack(state.getBlock()).is(this.tag);
+		return state != null && state.is(this.tag);
 	}
 
 	public static class Serializer implements net.minecraft.world.level.storage.loot.Serializer<LootItemBlockIsTagCondition> {
@@ -57,7 +56,7 @@ public class LootItemBlockIsTagCondition implements LootItemCondition {
 		 * Deserialize a value by reading it from the JsonObject.
 		 */
 		public LootItemBlockIsTagCondition deserialize(@NotNull JsonObject object, @NotNull JsonDeserializationContext context) {
-			return new LootItemBlockIsTagCondition(ItemTags.create(new ResourceLocation(GsonHelper.getAsString(object, "tag"))));
+			return new LootItemBlockIsTagCondition(BlockTags.create(Util.rl(GsonHelper.getAsString(object, "tag"))));
 		}
 	}
 }

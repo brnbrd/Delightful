@@ -1,0 +1,40 @@
+{
+  "type": "delightful:add_item",
+  "conditions": [
+    {
+      "condition": "delightful:enabled",
+      "item": "acorn"
+    },
+    {
+      "chance": 0.08,
+      "condition": "minecraft:random_chance"
+    },
+    {
+      "condition": "minecraft:match_tool",
+      "predicate": {
+        "tag": "forge:tools/scavenging"
+      }
+    },
+    {
+      "condition": "minecraft:inverted",
+      "term": {
+        "condition": "minecraft:match_tool",
+        "predicate": {
+          "enchantments": [
+            {
+              "enchantment": "minecraft:silk_touch"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "condition": "delightful:is_tag",
+      "tag": "delightful:drops_acorn"
+    }
+  ],
+  "item": "delightful:acorn",
+  "maxAmount": 1,
+  "minAmount": 1,
+  "unique": true
+}

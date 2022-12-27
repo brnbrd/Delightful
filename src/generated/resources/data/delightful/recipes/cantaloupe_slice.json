@@ -1,0 +1,25 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "cantaloupe_slice"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "delightful:cantaloupe"
+          }
+        ],
+        "result": {
+          "count": 3,
+          "item": "delightful:cantaloupe_slice"
+        }
+      }
+    }
+  ]
+}

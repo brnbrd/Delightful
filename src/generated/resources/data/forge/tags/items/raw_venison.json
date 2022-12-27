@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "delightful:venison_chops",
     {
       "id": "naturalist:venison",
       "required": false

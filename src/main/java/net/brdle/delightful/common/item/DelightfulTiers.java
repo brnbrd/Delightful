@@ -1,18 +1,19 @@
 package net.brdle.delightful.common.item;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.ItemTags;
+import net.brdle.delightful.Util;
+import net.brdle.delightful.data.DelightfulItemTags;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.Tags;
 import org.jetbrains.annotations.NotNull;
+import java.util.Locale;
 import java.util.function.Supplier;
 
 public enum DelightfulTiers implements Tier {
-    BONE(1, 190, 5.0F, 1.5F, 9, () -> Ingredient.of(Tags.Items.BONES)),
-    AMETHYST(2, 44, 15.0F, 0.5F, 1, () -> Ingredient.of(Tags.Items.GEMS_AMETHYST)),
-    EMERALD(2, 250, 14.0F, 3.5F, 24, () -> Ingredient.of(Tags.Items.GEMS_EMERALD)),
+    BONE(1, 190, 5.0F, 1.5F, 9, Util.ing(Tags.Items.BONES)),
+    AMETHYST(2, 44, 15.0F, 0.5F, 1, Util.ing(Tags.Items.GEMS_AMETHYST)),
+    EMERALD(2, 250, 14.0F, 3.5F, 24, Util.ing(Tags.Items.GEMS_EMERALD)),
     COPPER(2, 150, 5.0F, 1.5F, 14, DelightfulItems.getIngot("copper")),
     TIN(1, 120, 13.0F, 1.5F, 18, DelightfulItems.getIngot("tin")),
     STEEL(2, 484, 6.5F, 2.5F, 16, DelightfulItems.getIngot("steel")),
@@ -38,9 +39,22 @@ public enum DelightfulTiers implements Tier {
     STEELEAF(3, 131, 8.0F, 3, 9, DelightfulItems.getIngot("steeleaf")),
     KNIGHTMETAL(3, 512, 8.0F, 3, 8, DelightfulItems.getIngot("knightmetal")),
     LIVING(2, 192, 6.0f, 2.0f, 18, () -> null),
-    DRACO_ARCANUS(4, 2661, 12.0F, 7.0F, 20, () -> Ingredient.of(ItemTags.create(new ResourceLocation("forbidden_arcanus", "dragon_scale")))),
+    DRACO_ARCANUS(4, 2661, 12.0F, 7.0F, 20, Util.ing(Util.it("forbidden_arcanus", "dragon_scale"))),
     DEORUM(3, 1861, 9.0F, 3.5F, 26, DelightfulItems.getIngot("deorum")),
-    REINFORCED_DEORUM(3, 2561, 9.0F, 3.5F, 26, () -> Ingredient.of(ItemTags.create(new ResourceLocation("forbidden_arcanus", "stellarite_piece"))));
+    REINFORCED_DEORUM(3, 2561, 9.0F, 3.5F, 26, Util.ing(Util.it("forbidden_arcanus", "stellarite_piece"))),
+    MYTHRIL(Tiers.IRON.getLevel(), 800, 8.0F, 3.0F, 12, DelightfulItems.getIngot("mythril")),
+    ADAMANTIUM(Tiers.IRON.getLevel(),1150, 14.0F, 3.0F, 3, DelightfulItems.getIngot("adamantium")),
+    ONYX(Tiers.NETHERITE.getLevel(), 3280, 10.0F, 5.0F, 15, DelightfulItems.getIngot("onyx")),
+    THYRIUM(Tiers.DIAMOND.getLevel(), 2000, 22.0F, 6.0F, 28, DelightfulItems.getIngot("thyrium")),
+    SINISITE(5, 4100, 18.0F, 8.0F, 11, DelightfulItems.getIngot("sinisite")),
+    ALLTHEMODIUM(5, 15000, 10, 11.0F, 85, Util.ing(DelightfulItemTags.PLATES_ALLTHEMODIUM)),
+    PENDORITE(5, 2500, 10.0F, 4.0F, 15, Util.ing(DelightfulItemTags.INGOTS_PENDORITE)),
+    WARDEN(4, 2464, 11.0F, 7.0F, 21, Util.ing(DelightfulItemTags.REINFORCED_ECHO_SHARD)),
+    ZINC(2, 250, 7.0F, 2.0F, 11, Util.ing(DelightfulItemTags.INGOTS_ZINC)),
+    GILDED_QUARTZ(3, 1644, 9.0F, 4.0F, 14, Util.ing(DelightfulItemTags.POLISHED_ROSE_QUARTZ)),
+    EXPERIENCE(2, 270, 7.0F, 1.5F, 800, Util.ing(DelightfulItemTags.HEAP_EXPERIENCE)),
+    KIWANO(2, 250, 6.0F, 2.0F, 14, Util.ing(DelightfulItemTags.KIWANO_PEEL)),
+    LEAF(1, 16, 20.0F, 4.0F, 14, Util.ing(DelightfulItemTags.SHARP_LEAF));
 
     private final int level;
     private final int uses;
@@ -70,7 +84,6 @@ public enum DelightfulTiers implements Tier {
         return this.damage;
     }
 
-    @SuppressWarnings("deprecation")
     public int getLevel() {
         return this.level;
     }
@@ -81,5 +94,9 @@ public enum DelightfulTiers implements Tier {
 
     public @NotNull Ingredient getRepairIngredient() {
         return this.repairIngredient.get();
+    }
+
+    public static Tier get(String name) {
+        return valueOf(name.toUpperCase(Locale.ROOT));
     }
 }

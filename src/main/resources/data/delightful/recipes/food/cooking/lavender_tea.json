@@ -1,0 +1,51 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "lavender_tea"
+            },
+            {
+              "type": "forge:item_exists",
+              "item": "biomesoplenty:lavender"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:mod_loaded",
+                "modid": "farmersrespite"
+              }
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "cookingtime": 200,
+        "experience": 0.35,
+        "ingredients": [
+          {
+            "type": "forge:nbt",
+            "count": 1,
+            "item": "minecraft:potion",
+            "nbt": "{Potion:\"minecraft:water\"}"
+          },
+          {
+            "item": "delightful:green_tea_leaf"
+          },
+          {
+            "item": "biomesoplenty:lavender"
+          }
+        ],
+        "result": {
+          "item": "delightful:lavender_tea"
+        }
+      }
+    }
+  ]
+}

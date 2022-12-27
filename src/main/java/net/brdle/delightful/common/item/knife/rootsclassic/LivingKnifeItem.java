@@ -5,21 +5,22 @@ import net.brdle.delightful.common.item.knife.CompatKnifeItem;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.NotNull;
 
 public class LivingKnifeItem extends CompatKnifeItem {
 	public LivingKnifeItem(Properties properties) {
-		super("rootsclassic", null, DelightfulTiers.LIVING, 0.5F, -2.0F, properties);
+		super("rootsclassic", null, DelightfulTiers.LIVING, properties, null);
 	}
 
 	@Override
-	public void inventoryTick(ItemStack stack, Level levelAccessor, Entity entity, int slot, boolean selected) {
+	public void inventoryTick(ItemStack stack, @NotNull Level levelAccessor, @NotNull Entity entity, int slot, boolean selected) {
 		if (stack.isDamaged() && levelAccessor.random.nextInt(80) == 0) {
 			stack.setDamageValue(stack.getDamageValue() - 1);
 		}
 	}
 
 	@Override
-	public boolean isValidRepairItem(ItemStack toRepair, ItemStack repair) {
+	public boolean isValidRepairItem(@NotNull ItemStack toRepair, @NotNull ItemStack repair) {
 		return false;
 	}
 

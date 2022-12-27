@@ -1,0 +1,47 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "kiwano_knife"
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "nethers_exoticism"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "nethers_exoticism:kiwano_peel"
+              }
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "m": {
+            "tag": "nethers_exoticism:kiwano_peel"
+          },
+          "s": {
+            "tag": "forge:rods/wooden"
+          }
+        },
+        "pattern": [
+          "m",
+          "s"
+        ],
+        "result": {
+          "item": "delightful:kiwano_knife"
+        }
+      }
+    }
+  ]
+}

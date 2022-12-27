@@ -1,13 +1,17 @@
 package net.brdle.delightful.common;
 
 import net.brdle.delightful.Delightful;
-import net.brdle.delightful.common.config.EnabledCondition;
+import net.brdle.delightful.common.crafting.ElseRecipe;
+import net.brdle.delightful.common.crafting.EnabledCondition;
 import net.brdle.delightful.common.item.DelightfulItems;
 import net.brdle.delightful.common.world.DelightfulWildCropGeneration;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.ComposterBlock;
+import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -23,17 +27,39 @@ public class Events {
             //Flammables
 
             //Compostables
+            ComposterBlock.COMPOSTABLES.put(DelightfulItems.ANIMAL_FAT.get(), 0.1F);
+            ComposterBlock.COMPOSTABLES.put(DelightfulItems.ACORN.get(), 0.3F);
+            ComposterBlock.COMPOSTABLES.put(DelightfulItems.ANIMAL_FAT.get(), 0.1F);
+            ComposterBlock.COMPOSTABLES.put(DelightfulItems.SALMONBERRIES.get(), 0.3F);
             ComposterBlock.COMPOSTABLES.put(DelightfulItems.SALMONBERRIES.get(), 0.3F);
             ComposterBlock.COMPOSTABLES.put(DelightfulItems.SALMONBERRY_PIPS.get(), 0.3F);
+            ComposterBlock.COMPOSTABLES.put(DelightfulItems.SALMONBERRY_PIE.get(), 1.0F);
+            ComposterBlock.COMPOSTABLES.put(DelightfulItems.SALMONBERRY_PIE_SLICE.get(), 0.85F);
+            ComposterBlock.COMPOSTABLES.put(DelightfulItems.PUMPKIN_PIE_SLICE.get(), 0.85F);
+            ComposterBlock.COMPOSTABLES.put(DelightfulItems.SOURCE_BERRY_PIE_SLICE.get(), 0.85F);
+            ComposterBlock.COMPOSTABLES.put(DelightfulItems.CRIMSON_BERRY_PIE_SLICE.get(), 0.85F);
+            ComposterBlock.COMPOSTABLES.put(DelightfulItems.NIGHTSHADE_BERRY_PIE_SLICE.get(), 0.85F);
+            ComposterBlock.COMPOSTABLES.put(DelightfulItems.BLUEBERRY_PIE_SLICE.get(), 0.85F);
+            ComposterBlock.COMPOSTABLES.put(DelightfulItems.GREEN_APPLE_PIE_SLICE.get(), 0.85F);
+            ComposterBlock.COMPOSTABLES.put(DelightfulItems.GREEN_TEA_LEAF.get(), 0.5F);
+            ComposterBlock.COMPOSTABLES.put(DelightfulItems.MATCHA.get(), 0.5F);
+            ComposterBlock.COMPOSTABLES.put(DelightfulItems.CHOPPED_CLOVER.get(), 0.5F);
+            ComposterBlock.COMPOSTABLES.put(DelightfulItems.CACTUS_FLESH.get(), 0.25F);
+            ComposterBlock.COMPOSTABLES.put(DelightfulItems.CACTUS_STEAK.get(), 0.25F);
+            ComposterBlock.COMPOSTABLES.put(DelightfulItems.CANTALOUPE_SLICE.get(), 0.6F);
             ComposterBlock.COMPOSTABLES.put(DelightfulItems.MINI_MELON.get(), 0.65F);
+            ComposterBlock.COMPOSTABLES.put(DelightfulItems.CANTALOUPE.get(), 0.75F);
+            ComposterBlock.COMPOSTABLES.put(DelightfulItems.SALMONBERRY_SACK.get(), 1.0F);
+            ComposterBlock.COMPOSTABLES.put(DelightfulItems.ACORN_SACK.get(), 1.0F);
         });
     }
 
-    // Adds delightful conditions
+    // Adds Delightful conditions
     @SubscribeEvent
     public static void registerSerializers(RegistryEvent.Register<RecipeSerializer<?>> event) {
         if (event.getRegistry() == ForgeRegistries.RECIPE_SERIALIZERS) {
             CraftingHelper.register(EnabledCondition.Serializer.INSTANCE);
+            event.register(ForgeRegistries.Keys.RECIPE_SERIALIZERS, new ResourceLocation(Delightful.MODID, "else"), ElseRecipe.Serializer::new);
         }
     }
 }

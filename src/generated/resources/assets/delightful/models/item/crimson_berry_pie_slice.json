@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "delightful:item/crimson_berry_pie_slice"
+  }
+}

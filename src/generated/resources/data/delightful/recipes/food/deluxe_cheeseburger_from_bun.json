@@ -1,0 +1,60 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "deluxe_cheeseburger"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "some_assembly_required:burger_bun"
+              }
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "tag": "some_assembly_required:burger_bun"
+          },
+          {
+            "item": "farmersdelight:beef_patty"
+          },
+          {
+            "tag": "forge:cheese_or_milk"
+          },
+          {
+            "item": "farmersdelight:beef_patty"
+          },
+          {
+            "tag": "forge:cheese_or_milk"
+          },
+          {
+            "item": "farmersdelight:cooked_bacon"
+          },
+          {
+            "tag": "forge:salad_ingredients"
+          },
+          {
+            "tag": "forge:crops/tomato"
+          },
+          {
+            "tag": "forge:crops/onion"
+          }
+        ],
+        "result": {
+          "item": "delightful:deluxe_cheeseburger"
+        }
+      }
+    }
+  ]
+}

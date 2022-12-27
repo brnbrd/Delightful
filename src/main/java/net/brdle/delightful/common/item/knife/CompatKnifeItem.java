@@ -1,5 +1,7 @@
 package net.brdle.delightful.common.item.knife;
 
+import net.brdle.delightful.Delightful;
+import net.brdle.delightful.compat.Mods;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
@@ -8,33 +10,42 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.fml.ModList;
-import javax.annotation.Nullable;
+import java.util.Arrays;
 import java.util.List;
 import java.util.function.Supplier;
+import org.jetbrains.annotations.NotNull;
+import javax.annotation.Nullable;
 
-public class CompatKnifeItem extends TaggedKnifeItem {
+public class CompatKnifeItem extends DelightfulKnifeItem {
     private final String modid;
     private final Component tool;
+    private final ChatFormatting[] formatting;
 
-    public CompatKnifeItem(String modid, ResourceLocation tag, Tier tier, float attackDamageIn, float attackSpeedIn, Properties properties) {
-        super(tag, tier, attackDamageIn, attackSpeedIn, properties);
+    public CompatKnifeItem(String modid, TagKey<Item> tag, Tier tier, Properties properties, Supplier<Ingredient> base, ChatFormatting... formatting) {
+        super(tag, tier, properties, base);
         this.modid = modid;
         this.tool = new TextComponent("");
+        this.formatting = formatting;
     }
 
-    public CompatKnifeItem(String modid, ResourceLocation tag, Tier tier, float attackDamageIn, float attackSpeedIn, Properties properties, Component tool) {
-        super(tag, tier, attackDamageIn, attackSpeedIn, properties);
+    // With tooltip
+    public CompatKnifeItem(String modid, TagKey<Item> tag, Tier tier, Properties properties, Component tool, Supplier<Ingredient> base, ChatFormatting... formatting) {
+        super(tag, tier, properties, base);
         this.modid = modid;
         this.tool = tool;
+		this.formatting = formatting;
     }
 
     public CompatKnifeItem(String modid, Supplier<Ingredient> base, ResourceLocation tag, Tier tier, float attackDamageIn, float attackSpeedIn, Properties properties) {
         super(base, tag, tier, attackDamageIn, attackSpeedIn, properties);
         this.modid = modid;
         this.tool = new TextComponent("");
+        this.formatting = null;
     }
 
     public String getModid() {
@@ -42,7 +53,7 @@ public class CompatKnifeItem extends TaggedKnifeItem {
     }
 
     public boolean isLoaded() {
-        return ModList.get().isLoaded(this.modid);
+        return Mods.loaded(this.modid);
     }
 
     @Override
@@ -56,17 +67,29 @@ public class CompatKnifeItem extends TaggedKnifeItem {
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> tool, TooltipFlag pIsAdvanced) {
         if (!this.config()) {
-            tool.add(new TextComponent("Disabled.").withStyle(ChatFormatting.UNDERLINE));
+            tool.add(Component.translatable(Delightful.MODID + ".disabled.desc").withStyle(ChatFormatting.UNDERLINE));
         } else if (!this.isLoaded()) {
-            tool.add(new TextComponent("Requires modid:"));
-            tool.add(new TextComponent(modid).withStyle(ChatFormatting.UNDERLINE));
-        } else if (!this.tool.getString().equals(new TextComponent("").getString())) {
+            tool.add(Component.translatable(Delightful.MODID + ".disabled.requires"));
+            tool.add(Component.literal(this.modid).withStyle(ChatFormatting.UNDERLINE));
+        } else if (!this.tool.equals(Component.empty())) {
             tool.add(this.tool);
         }
     }
 
     @Override
-    protected boolean allowdedIn(CreativeModeTab pCategory) {
-        return super.allowdedIn(pCategory) && this.isEnabled();
+    public @NotNull Component getName(@NotNull ItemStack stack) {
+        if (this.isEnabled() && this.formatting.length > 0) {
+            MutableComponent comp = super.getName(stack).copy();
+            for (ChatFormatting f : Arrays.stream(this.formatting).toList()) {
+                comp = comp.withStyle(f);
+            }
+            return comp;
+        }
+        return super.getName(stack);
+    }
+
+    @Override
+    protected boolean allowedIn(@NotNull CreativeModeTab cat) {
+        return super.allowedIn(cat) && this.isEnabled();
     }
 }

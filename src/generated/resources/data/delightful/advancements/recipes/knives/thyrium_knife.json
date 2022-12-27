@@ -1,0 +1,60 @@
+{
+  "advancements": [
+    {
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "criteria": {
+          "has_the_recipe": {
+            "conditions": {
+              "recipe": "delightful:knives/thyrium_knife"
+            },
+            "trigger": "minecraft:recipe_unlocked"
+          },
+          "has_thyrium": {
+            "conditions": {
+              "items": [
+                {
+                  "tag": "forge:ingots/thyrium"
+                }
+              ]
+            },
+            "trigger": "minecraft:inventory_changed"
+          }
+        },
+        "requirements": [
+          [
+            "has_thyrium",
+            "has_the_recipe"
+          ]
+        ],
+        "rewards": {
+          "recipes": [
+            "delightful:knives/thyrium_knife"
+          ]
+        }
+      },
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "thyrium_knife"
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "fusion"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:ingots/thyrium"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

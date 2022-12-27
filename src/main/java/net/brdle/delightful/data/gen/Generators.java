@@ -21,12 +21,14 @@ public class Generators {
             e.getGenerator().addProvider(blockTag);
             e.getGenerator().addProvider(new DelightfulItemTagProvider(gen, blockTag, helper));
             e.getGenerator().addProvider(new DelightfulEntityTagProvider(gen, helper));
+			e.getGenerator().addProvider(new DelightfulBiomeTagProvider(gen, helper));
             e.getGenerator().addProvider(new DelightfulLootModifierProvider(gen));
         }
         if (e.includeClient()) {
             e.getGenerator().addProvider(new DelightfulBlockStateProvider(gen, helper));
             e.getGenerator().addProvider(new DelightfulBlockModelProvider(gen, helper));
             e.getGenerator().addProvider(new DelightfulItemModelProvider(gen, helper));
+            e.getGenerator().addProvider(new DelightfulLanguageProvider(gen));
         }
     }
 }

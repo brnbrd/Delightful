@@ -24,7 +24,7 @@
         "type": "minecraft:crafting_shapeless",
         "ingredients": [
           {
-            "item": "farmersdelight:wheat_dough"
+            "tag": "forge:dough/wheat"
           },
           {
             "tag": "forge:cheese_or_milk"

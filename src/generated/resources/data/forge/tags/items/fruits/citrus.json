@@ -1,0 +1,29 @@
+{
+  "values": [
+    "#forge:fruits/citron",
+    {
+      "id": "#forge:fruits/mandarin",
+      "required": false
+    },
+    {
+      "id": "#forge:fruits/orange",
+      "required": false
+    },
+    {
+      "id": "#forge:fruits/lemon",
+      "required": false
+    },
+    {
+      "id": "#forge:fruits/lime",
+      "required": false
+    },
+    {
+      "id": "#forge:fruits/grapefruit",
+      "required": false
+    },
+    {
+      "id": "#forge:fruits/pomelo",
+      "required": false
+    }
+  ]
+}

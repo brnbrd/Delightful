@@ -1,0 +1,46 @@
+{
+  "advancements": [
+    {
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "criteria": {
+          "has_oil_bottle": {
+            "conditions": {
+              "items": [
+                {
+                  "items": [
+                    "delightful:animal_oil_bottle"
+                  ]
+                }
+              ]
+            },
+            "trigger": "minecraft:inventory_changed"
+          },
+          "has_the_recipe": {
+            "conditions": {
+              "recipe": "delightful:torch_from_animal_oil_bottle"
+            },
+            "trigger": "minecraft:recipe_unlocked"
+          }
+        },
+        "requirements": [
+          [
+            "has_oil_bottle",
+            "has_the_recipe"
+          ]
+        ],
+        "rewards": {
+          "recipes": [
+            "delightful:torch_from_animal_oil_bottle"
+          ]
+        }
+      },
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "animal_oil_bottle"
+        }
+      ]
+    }
+  ]
+}

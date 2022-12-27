@@ -1,0 +1,30 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "cantaloupe_slice"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "delightful:cantaloupe"
+          }
+        ],
+        "result": [
+          {
+            "count": 6,
+            "item": "delightful:cantaloupe_slice"
+          }
+        ],
+        "tool": {
+          "tag": "forge:tools/scavenging"
+        }
+      }
+    }
+  ]
+}

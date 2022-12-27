@@ -12,6 +12,7 @@ import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.network.NetworkHooks;
+import org.jetbrains.annotations.NotNull;
 import vectorwing.farmersdelight.common.registry.ModEffects;
 
 public class EnderNectarItem extends DrinkItem {
@@ -20,12 +21,12 @@ public class EnderNectarItem extends DrinkItem {
     }
 
     @Override
-    public void affectConsumer(ItemStack stack, Level worldIn, LivingEntity consumer) {
+    public void affectConsumer(@NotNull ItemStack stack, @NotNull Level worldIn, LivingEntity consumer) {
         super.affectConsumer(stack, worldIn, consumer);
         if (consumer instanceof ServerPlayer player) {
             NetworkHooks.openGui(player, new SimpleMenuProvider((i, inv, p) -> new ChestMenu(MenuType.GENERIC_9x3, i, inv, p.getEnderChestInventory(), 3) {
                 @Override
-                public boolean stillValid(Player pPlayer) {
+                public boolean stillValid(@NotNull Player pPlayer) {
                     return true;
                 }
             }, new TranslatableComponent("container.enderchest")));

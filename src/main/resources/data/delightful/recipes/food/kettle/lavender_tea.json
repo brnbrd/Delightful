@@ -6,7 +6,7 @@
         {
           "values": [
             {
-              "value": "lavender_tea",
+              "value": "azalea_tea",
               "type": "delightful:enabled"
             },
             {
@@ -21,25 +21,27 @@
           "type": "forge:and"
         }
       ],
-      "recipe": {
+      "recipe":
+      {
         "type": "farmersrespite:brewing",
+        "container": {
+          "item": "minecraft:glass_bottle"
+        },
+        "cookingtime": 2400,
+        "experience": 0.35,
         "ingredients": [
           {
-            "tag": "forge:tea_leaves/green"
+            "tag": "forge:tea_leaves"
           },
           {
             "item": "biomesoplenty:lavender"
           }
         ],
+        "needwater": true,
+        "recipe_book_tab": "drinks",
         "result": {
           "item": "delightful:lavender_tea"
-        },
-        "container": {
-          "item": "minecraft:glass_bottle"
-        },
-        "experience": 0.35,
-        "brewingtime": 2400,
-        "needwater": false
+        }
       }
     }
   ]

@@ -1,0 +1,25 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "mini_melon"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "delightful:mini_melon"
+          }
+        ],
+        "result": {
+          "count": 3,
+          "item": "minecraft:melon_slice"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "salmonberry_pie"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "delightful:salmonberry_pie_slice"
+          },
+          {
+            "item": "delightful:salmonberry_pie_slice"
+          },
+          {
+            "item": "delightful:salmonberry_pie_slice"
+          },
+          {
+            "item": "delightful:salmonberry_pie_slice"
+          }
+        ],
+        "result": {
+          "item": "delightful:salmonberry_pie"
+        }
+      }
+    }
+  ]
+}

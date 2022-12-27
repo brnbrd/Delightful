@@ -1,0 +1,48 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "matcha_ice_cream"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:ice_cubes"
+              }
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "minecraft:bowl"
+          },
+          {
+            "item": "delightful:matcha"
+          },
+          {
+            "tag": "forge:milk"
+          },
+          {
+            "tag": "forge:ice_cubes"
+          },
+          {
+            "tag": "forge:sugar"
+          }
+        ],
+        "result": {
+          "item": "delightful:matcha_ice_cream"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "source_berry_pie_slice"
+            },
+            {
+              "type": "forge:item_exists",
+              "item": "ars_nouveau:source_berry_pie"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "#": {
+            "item": "minecraft:wheat"
+          },
+          "O": {
+            "item": "farmersdelight:pie_crust"
+          },
+          "a": {
+            "tag": "forge:fruits/sourceberry"
+          },
+          "e": {
+            "tag": "forge:eggs"
+          },
+          "m": {
+            "item": "ars_nouveau:magebloom"
+          },
+          "x": {
+            "tag": "forge:sugar"
+          }
+        },
+        "pattern": [
+          "#m#",
+          "aaa",
+          "xOe"
+        ],
+        "result": {
+          "item": "ars_nouveau:source_berry_pie"
+        }
+      }
+    }
+  ]
+}

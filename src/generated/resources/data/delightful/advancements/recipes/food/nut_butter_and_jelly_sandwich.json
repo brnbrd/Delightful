@@ -1,34 +1,10 @@
 {
   "advancements": [
     {
-      "conditions": [
-        {
-          "values": [
-            {
-              "value": "nut_butter_and_jelly_sandwich",
-              "type": "delightful:enabled"
-            },
-            {
-              "value": {
-                "tag": "forge:nuts",
-                "type": "forge:tag_empty"
-              },
-              "type": "forge:not"
-            }
-          ],
-          "type": "forge:and"
-        }
-      ],
       "advancement": {
         "parent": "minecraft:recipes/root",
-        "rewards": {
-          "recipes": [
-            "delightful:food/nut_butter_and_jelly_sandwich"
-          ]
-        },
         "criteria": {
           "has_nut_butter": {
-            "trigger": "minecraft:inventory_changed",
             "conditions": {
               "items": [
                 {
@@ -37,13 +13,14 @@
                   ]
                 }
               ]
-            }
+            },
+            "trigger": "minecraft:inventory_changed"
           },
           "has_the_recipe": {
-            "trigger": "minecraft:recipe_unlocked",
             "conditions": {
               "recipe": "delightful:food/nut_butter_and_jelly_sandwich"
-            }
+            },
+            "trigger": "minecraft:recipe_unlocked"
           }
         },
         "requirements": [
@@ -51,8 +28,35 @@
             "has_nut_butter",
             "has_the_recipe"
           ]
-        ]
-      }
+        ],
+        "rewards": {
+          "recipes": [
+            "delightful:food/nut_butter_and_jelly_sandwich"
+          ]
+        }
+      },
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "nut_butter_and_jelly_sandwich"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:nuts"
+              }
+            },
+            {
+              "type": "forge:tag_empty",
+              "tag": "some_assembly_required:bread_slice"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

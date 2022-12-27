@@ -9,7 +9,7 @@ import net.minecraft.advancements.RequirementsStrategy;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.advancements.AdvancementProvider;
-import net.minecraft.resources.ResourceLocation;
+import net.brdle.delightful.Util;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
@@ -41,10 +41,10 @@ public class DelightfulAdvancementProvider extends AdvancementProvider {
             .display(ModItems.COOKING_POT.get(),
                 TextUtils.getTranslation("advancement.root"),
                 TextUtils.getTranslation("advancement.root.desc"),
-                new ResourceLocation("minecraft:textures/block/bricks.png"),
+                Util.rl("minecraft:textures/block/bricks.png"),
                 FrameType.TASK, false, false, false)
             .addCriterion("seeds", InventoryChangeTrigger.TriggerInstance.hasItems(new ItemLike[]{}))
-            .build(new ResourceLocation("farmersdelight", "main/root"));
+            .build(Util.rl("farmersdelight", "main/root"));
 
         // craft_knife
         Advancement.Builder huntAndGatherB = getAdvancement(farmersDelight, ModItems.FLINT_KNIFE.get(), "craft_knife", FrameType.TASK, true, true, false)
