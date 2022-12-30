@@ -5,13 +5,13 @@
 # This workflow will build a Java project with Gradle and cache/restore any dependencies to improve the workflow execution time
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-gradle
 
-name: 1.18
+name: 1.18.2
 
 on:
   push:
-    branches: [ 1.18.2-backport ]
+    branches: [ 1.18.2 ]
   pull_request:
-    branches: [ 1.18.2-backport ]
+    branches: [ 1.18.2 ]
 
 jobs:
   build:
