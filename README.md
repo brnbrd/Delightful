@@ -7,4 +7,4 @@ Farmer's Delight addon with immersive new content.
   <img src="https://cf.way2muchnoise.eu/full_637529_downloads.svg" alt="Curseforge Downloads">
 </a>
 
-[![1.19](https://github.com/brdle/Delightful/actions/workflows/build-1.19.yml/badge.svg?branch=1.19)](https://github.com/brdle/Delightful/actions/workflows/build-1.19.yml)
+[![1.19.2](https://github.com/brdle/Delightful/actions/workflows/build-1.19.2.yml/badge.svg?branch=1.19.2)](https://github.com/brdle/Delightful/actions/workflows/build-1.19.2.yml)
