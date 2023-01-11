@@ -40,6 +40,10 @@
       "required": false
     },
     {
+      "id": "ars_nouveau:starbuncle",
+      "required": false
+    },
+    {
       "id": "goodall:dumbo_octopus",
       "required": false
     },
@@ -153,10 +157,6 @@
     },
     {
       "id": "fishofthieves:wrecker",
-      "required": false
-    },
-    {
-      "id": "ars_nouveau:starbuncle",
       "required": false
     },
     {

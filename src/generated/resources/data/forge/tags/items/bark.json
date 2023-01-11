@@ -1,0 +1,9 @@
+{
+  "values": [
+    "farmersdelight:tree_bark",
+    {
+      "id": "#immersive_weathering:bark",
+      "required": false
+    }
+  ]
+}

@@ -17,6 +17,13 @@
             {
               "type": "delightful:enabled",
               "value": "matcha"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:mod_loaded",
+                "modid": "farmersrespite"
+              }
             }
           ]
         }

@@ -20,7 +20,7 @@
       "recipe": {
         "type": "farmersrespite:brewing",
         "container": {
-          "item": "farmersdelight:milk_bottle"
+          "tag": "forge:milk/milk_bottle"
         },
         "cookingtime": 2400,
         "experience": 0.35,

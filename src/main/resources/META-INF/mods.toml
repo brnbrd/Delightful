@@ -1,19 +1,19 @@
 modLoader="javafml"
 loaderVersion="[43,)"
 license="MIT License"
-issueTrackerURL="https://github.com/brdle/Delightful/issues"
+issueTrackerURL="https://github.com/brnbrd/Delightful/issues"
 
 [[mods]]
 modId="delightful"
 version="${file.jarVersion}"
 displayName="Delightful"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/delightful"
-updateJSONURL="https://raw.githubusercontent.com/brdle/Delightful/1.19/update/update.json"
+updateJSONURL="https://raw.githubusercontent.com/brnbrd/Delightful/1.19/update/update.json"
 logoFile="delightful.png"
 logoBlur=false
 credits=""
-authors="brdle"
-description=""
+authors="brnbrd"
+description="Farmer's Delight addon with mod compatibility features and fun new foods."
 itemIcon="delightful:smore"
 configBackground="farmersdelight:textures/block/tatami_mat_half.png"
 
@@ -39,14 +39,21 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
     side="BOTH"
 
 [[dependencies.delightful]]
-    modId="duckling"
+    modId="ars_nouveau"
     mandatory=false
     versionRange="[0,)"
     ordering="AFTER"
     side="BOTH"
 
 [[dependencies.delightful]]
-    modId="ars_nouveau"
+    modId="create"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.delightful]]
+    modId="duckling"
     mandatory=false
     versionRange="[0,)"
     ordering="AFTER"
