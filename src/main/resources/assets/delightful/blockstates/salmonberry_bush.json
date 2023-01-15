@@ -11,6 +11,9 @@
     },
     "age=3": {
       "model": "delightful:block/salmonberry_bush_stage3"
+    },
+    "age=4": {
+      "model": "delightful:block/salmonberry_bush_stage4"
     }
   }
 }

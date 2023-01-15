@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:bark"
+    },
+    {
+      "tag": "forge:bark"
+    },
+    {
+      "tag": "forge:bark"
+    }
+  ],
+  "result": {
+    "item": "minecraft:paper"
+  }
+}

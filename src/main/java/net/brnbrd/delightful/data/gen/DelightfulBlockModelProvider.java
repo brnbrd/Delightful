@@ -18,11 +18,11 @@ public class DelightfulBlockModelProvider extends BlockModelProvider {
         DelightfulBlocks.BLOCKS.getEntries().stream()
                 .filter(entry -> entry.get() instanceof CabinetBlock)
                 .forEach(cab -> cabinet(cab.getId().getPath()));
-        bush("salmonberry");
+        bush("salmonberry", 4);
     }
 
-    public void bush(String name) {
-        for (int i = 0; i <= 3; i++) {
+    public void bush(String name, int stages) {
+        for (int i = 0; i <= stages; i++) {
             String stage = "block/" + name + "_bush_stage" + i;
             cross(stage, Util.rl(this.modid, stage)).renderType("cutout");
         }

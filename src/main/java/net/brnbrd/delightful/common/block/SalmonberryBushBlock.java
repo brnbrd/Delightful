@@ -30,8 +30,8 @@ import net.minecraftforge.common.ForgeHooks;
 import org.jetbrains.annotations.NotNull;
 
 public class SalmonberryBushBlock extends BushBlock implements BonemealableBlock {
-  public static final int MAX_AGE = 3;
-  public static final IntegerProperty AGE = BlockStateProperties.AGE_3;
+  public static final int MAX_AGE = 4;
+  public static final IntegerProperty AGE = BlockStateProperties.AGE_4;
   private static final VoxelShape SAPLING_SHAPE = Block.box(3.0D, 0.0D, 3.0D, 13.0D, 8.0D, 13.0D);
   private static final VoxelShape MID_GROWTH_SHAPE = Block.box(1.0D, 0.0D, 1.0D, 15.0D, 16.0D, 15.0D);
 
@@ -42,15 +42,15 @@ public class SalmonberryBushBlock extends BushBlock implements BonemealableBlock
 
   @Override
   public ItemStack getCloneItemStack(BlockState state, HitResult target, BlockGetter level, BlockPos pos, Player player) {
-    return state.getValue(AGE) <= 1 ? DelightfulItems.SALMONBERRY_PIPS.get().getDefaultInstance() : DelightfulItems.SALMONBERRIES.get().getDefaultInstance();
+    return state.getValue(AGE) <= 2 ? DelightfulItems.SALMONBERRY_PIPS.get().getDefaultInstance() : DelightfulItems.SALMONBERRIES.get().getDefaultInstance();
   }
 
   @Override
-  public @NotNull VoxelShape getShape(BlockState pState, @NotNull BlockGetter pLevel, @NotNull BlockPos pPos, @NotNull CollisionContext pContext) {
-    if (pState.getValue(AGE) == 0) {
+  public @NotNull VoxelShape getShape(BlockState state, @NotNull BlockGetter pLevel, @NotNull BlockPos pPos, @NotNull CollisionContext pContext) {
+    if (state.getValue(AGE) == 0) {
       return SAPLING_SHAPE;
     } else {
-      return pState.getValue(AGE) < MAX_AGE ? MID_GROWTH_SHAPE : super.getShape(pState, pLevel, pPos, pContext);
+      return this.isMaxAge(state) ? super.getShape(state, pLevel, pPos, pContext) : MID_GROWTH_SHAPE;
     }
   }
 
@@ -58,8 +58,8 @@ public class SalmonberryBushBlock extends BushBlock implements BonemealableBlock
    * @return whether this block needs random ticking.
    */
   @Override
-  public boolean isRandomlyTicking(BlockState pState) {
-    return pState.getValue(AGE) < 3;
+  public boolean isRandomlyTicking(@NotNull BlockState state) {
+    return !this.isMaxAge(state);
   }
 
   /**
@@ -68,7 +68,10 @@ public class SalmonberryBushBlock extends BushBlock implements BonemealableBlock
   @Override
   public void randomTick(BlockState pState, @NotNull ServerLevel pLevel, @NotNull BlockPos pPos, @NotNull RandomSource pRandom) {
     int i = pState.getValue(AGE);
-    if (i < MAX_AGE && pLevel.getRawBrightness(pPos.above(), 0) >= 9 && ForgeHooks.onCropsGrowPre(pLevel, pPos, pState, pRandom.nextInt(5) == 0)) {
+    if (i < MAX_AGE &&
+        pLevel.isRainingAt(pPos) &&
+        pLevel.getRawBrightness(pPos.above(), 0) >= 9 &&
+        ForgeHooks.onCropsGrowPre(pLevel, pPos, pState, pRandom.nextInt(6) == 0)) {
       BlockState blockstate = pState.setValue(AGE, i + 1);
       pLevel.setBlock(pPos, blockstate, 2);
       pLevel.gameEvent(GameEvent.BLOCK_CHANGE, pPos, GameEvent.Context.of(blockstate));
@@ -78,21 +81,19 @@ public class SalmonberryBushBlock extends BushBlock implements BonemealableBlock
   }
 
   @Override
-  public InteractionResult use(BlockState pState, @NotNull Level pLevel, @NotNull BlockPos pPos, @NotNull Player pPlayer, @NotNull InteractionHand pHand, @NotNull BlockHitResult pHit) {
-    int i = pState.getValue(AGE);
-    boolean flag = i == 3;
+  public @NotNull InteractionResult use(@NotNull BlockState state, @NotNull Level pLevel, @NotNull BlockPos pPos, @NotNull Player pPlayer, @NotNull InteractionHand pHand, @NotNull BlockHitResult pHit) {
+    boolean flag = this.isMaxAge(state);
     if (!flag && pPlayer.getItemInHand(pHand).is(Items.BONE_MEAL)) {
       return InteractionResult.PASS;
-    } else if (i > 1) {
-      int j = 1 + pLevel.random.nextInt(2);
-      popResource(pLevel, pPos, new ItemStack(DelightfulItems.SALMONBERRIES.get(), j + (flag ? 1 : 0)));
+    } else if (state.getValue(AGE) > 2) {
+      popResource(pLevel, pPos, new ItemStack(DelightfulItems.SALMONBERRIES.get(), (flag ? 2 + pLevel.random.nextInt(2) : 1)));
       pLevel.playSound(null, pPos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + pLevel.random.nextFloat() * 0.4F);
-      BlockState blockstate = pState.setValue(AGE, 1);
+      BlockState blockstate = state.setValue(AGE, 1);
       pLevel.setBlock(pPos, blockstate, 2);
       pLevel.gameEvent(GameEvent.BLOCK_CHANGE, pPos, GameEvent.Context.of(pPlayer, blockstate));
       return InteractionResult.sidedSuccess(pLevel.isClientSide);
     } else {
-      return super.use(pState, pLevel, pPos, pPlayer, pHand, pHit);
+      return super.use(state, pLevel, pPos, pPlayer, pHand, pHit);
     }
   }
 
@@ -105,8 +106,8 @@ public class SalmonberryBushBlock extends BushBlock implements BonemealableBlock
    * @return whether bonemeal can be used on this block
    */
   @Override
-  public boolean isValidBonemealTarget(@NotNull BlockGetter pLevel, @NotNull BlockPos pPos, BlockState pState, boolean pIsClient) {
-    return pState.getValue(AGE) < MAX_AGE;
+  public boolean isValidBonemealTarget(@NotNull BlockGetter pLevel, @NotNull BlockPos pPos, BlockState state, boolean pIsClient) {
+    return !this.isMaxAge(state);
   }
 
   @Override
@@ -117,5 +118,9 @@ public class SalmonberryBushBlock extends BushBlock implements BonemealableBlock
   @Override
   public void performBonemeal(ServerLevel pLevel, @NotNull RandomSource pRandom, @NotNull BlockPos pPos, BlockState pState) {
     pLevel.setBlock(pPos, pState.setValue(AGE, Math.min(MAX_AGE, pState.getValue(AGE) + 1)), 2);
+  }
+
+  public boolean isMaxAge(BlockState state) {
+    return state.getValue(AGE) >= MAX_AGE;
   }
 }
