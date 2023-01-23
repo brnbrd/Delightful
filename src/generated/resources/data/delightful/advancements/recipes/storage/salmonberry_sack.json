@@ -37,8 +37,17 @@
       },
       "conditions": [
         {
-          "type": "delightful:enabled",
-          "value": "salmonberry_sack"
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "salmonberries"
+            },
+            {
+              "type": "delightful:enabled",
+              "value": "salmonberry_sack"
+            }
+          ]
         }
       ]
     }

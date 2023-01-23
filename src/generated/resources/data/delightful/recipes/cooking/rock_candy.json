@@ -21,7 +21,12 @@
         }
       ],
       "recipe": {
-        "type": "minecraft:crafting_shapeless",
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:stick"
+        },
+        "cookingtime": 200,
+        "experience": 0.35,
         "ingredients": [
           {
             "tag": "forge:gems/rose_quartz"
@@ -31,9 +36,6 @@
           },
           {
             "tag": "forge:sugar"
-          },
-          {
-            "tag": "forge:rods/wooden"
           }
         ],
         "result": {

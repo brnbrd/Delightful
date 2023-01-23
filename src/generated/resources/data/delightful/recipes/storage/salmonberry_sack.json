@@ -4,39 +4,48 @@
     {
       "conditions": [
         {
-          "type": "delightful:enabled",
-          "value": "salmonberry_sack"
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "salmonberries"
+            },
+            {
+              "type": "delightful:enabled",
+              "value": "salmonberry_sack"
+            }
+          ]
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shapeless",
         "ingredients": [
           {
-            "tag": "forge:fruits/salmonberries"
+            "item": "delightful:salmonberries"
           },
           {
-            "tag": "forge:fruits/salmonberries"
+            "item": "delightful:salmonberries"
           },
           {
-            "tag": "forge:fruits/salmonberries"
+            "item": "delightful:salmonberries"
           },
           {
-            "tag": "forge:fruits/salmonberries"
+            "item": "delightful:salmonberries"
           },
           {
-            "tag": "forge:fruits/salmonberries"
+            "item": "delightful:salmonberries"
           },
           {
-            "tag": "forge:fruits/salmonberries"
+            "item": "delightful:salmonberries"
           },
           {
-            "tag": "forge:fruits/salmonberries"
+            "item": "delightful:salmonberries"
           },
           {
-            "tag": "forge:fruits/salmonberries"
+            "item": "delightful:salmonberries"
           },
           {
-            "tag": "forge:fruits/salmonberries"
+            "item": "delightful:salmonberries"
           }
         ],
         "result": {

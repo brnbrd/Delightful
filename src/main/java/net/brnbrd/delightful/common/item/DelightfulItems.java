@@ -74,7 +74,8 @@ public class DelightfulItems {
         Mods.RL);
     public static final RegistryObject<Item> CHUNK_NUGGET = registerCompatFood("chunk_nugget", Nutrition.CHUNK_NUGGET,
         Mods.RL);
-    public static final RegistryObject<Item> ROCK_CANDY = registerFood("rock_candy", Nutrition.ROCK_CANDY, Items.STICK);
+    public static final RegistryObject<Item> ROCK_CANDY = registerItem("rock_candy",
+        () -> new ConsumableItem((new Item.Properties()).food(Nutrition.ROCK_CANDY).craftRemainder(Items.STICK).tab(FarmersDelight.CREATIVE_TAB), true));
     public static final RegistryObject<Item> MARSHMALLOW_STICK = registerFood("marshmallow_stick", Nutrition.MARSHMALLOW_STICK, Items.STICK);
     public static final RegistryObject<Item> COOKED_MARSHMALLOW_STICK = registerFood("cooked_marshmallow_stick", Nutrition.COOKED_MARSHMALLOW_STICK, Items.STICK);
     public static final RegistryObject<Item> SMORE = registerFood("smore", Nutrition.SMORE);

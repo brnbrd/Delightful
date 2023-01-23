@@ -8,7 +8,9 @@
             "conditions": {
               "items": [
                 {
-                  "tag": "forge:nuts/acorn"
+                  "items": [
+                    "delightful:acorn"
+                  ]
                 }
               ]
             },
@@ -35,8 +37,17 @@
       },
       "conditions": [
         {
-          "type": "delightful:enabled",
-          "value": "acorn_sack"
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "acorn"
+            },
+            {
+              "type": "delightful:enabled",
+              "value": "acorn_sack"
+            }
+          ]
         }
       ]
     }

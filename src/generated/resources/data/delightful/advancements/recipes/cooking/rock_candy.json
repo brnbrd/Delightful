@@ -16,7 +16,7 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:food/rock_candy"
+              "recipe": "delightful:cooking/rock_candy"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
@@ -29,7 +29,7 @@
         ],
         "rewards": {
           "recipes": [
-            "delightful:food/rock_candy"
+            "delightful:cooking/rock_candy"
           ]
         }
       },

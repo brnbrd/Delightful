@@ -54,6 +54,10 @@ public class Util {
     return r.get().getDefaultInstance();
   }
 
+  public static String name(RegistryObject<Item> item) {
+    return item.getId().getPath();
+  }
+
   public static String name(Item item) {
     return Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath();
   }
