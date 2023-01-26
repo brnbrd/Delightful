@@ -44,7 +44,7 @@ public class DelightfulBlocks {
     public static final RegistryObject<Block> SLICED_PUMPKIN = BLOCKS.register("sliced_pumpkin",
         () -> new SlicedPumpkinBlock(BlockBehaviour.Properties.copy(Blocks.PUMPKIN), ModItems.PUMPKIN_SLICE));
     public static final RegistryObject<Block> SALMONBERRY_SACK = BLOCKS.register("salmonberry_sack",
-      () -> new Block(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK)));
+      () -> new Block(BlockBehaviour.Properties.of(Material.WOOL, MaterialColor.COLOR_ORANGE).strength(.5f).sound(SoundType.WOOL)));
     public static final RegistryObject<Block> SALMONBERRY_PIE = BLOCKS.register("salmonberry_pie",
         () -> new PieBlock(BlockBehaviour.Properties.copy(ModBlocks.APPLE_PIE.get()), DelightfulItems.SALMONBERRY_PIE_SLICE));
     public static final RegistryObject<Block> PUMPKIN_PIE = BLOCKS.register("pumpkin_pie",
@@ -60,7 +60,7 @@ public class DelightfulBlocks {
     public static final RegistryObject<Block> CRIMSON_BERRY_PIE = BLOCKS.register("crimson_berry_pie",
         () -> new PieBlock(BlockBehaviour.Properties.copy(ModBlocks.APPLE_PIE.get()), DelightfulItems.CRIMSON_BERRY_PIE_SLICE));
     public static final RegistryObject<Block> ACORN_SACK = BLOCKS.register("acorn_sack",
-        () -> new Block(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK)));
+        () ->  new Block(BlockBehaviour.Properties.of(Material.WOOL, MaterialColor.COLOR_BROWN).strength(.5f).sound(SoundType.WOOL)));
 
     public static RegistryObject<Block> registerBlock(String name, Supplier<Block> block) {
         return BLOCKS.register(name, block);
