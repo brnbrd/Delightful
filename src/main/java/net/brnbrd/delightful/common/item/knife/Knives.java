@@ -16,7 +16,7 @@ import net.brnbrd.delightful.common.item.knife.twilightforest.FieryKnifeItem;
 import net.brnbrd.delightful.common.item.knife.twilightforest.IronwoodKnifeItem;
 import net.brnbrd.delightful.common.item.knife.twilightforest.SteeleafKnifeItem;
 import net.brnbrd.delightful.compat.Mods;
-import net.brnbrd.delightful.data.DelightfulItemTags;
+import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.tags.TagKey;

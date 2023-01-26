@@ -2,7 +2,7 @@ package net.brnbrd.delightful.common.item.knife.create_sa;
 
 import net.brnbrd.delightful.common.item.DelightfulTiers;
 import net.brnbrd.delightful.common.item.knife.CompatKnifeItem;
-import net.brnbrd.delightful.data.DelightfulItemTags;
+import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 
 public class GildedQuartzKnifeItem extends CompatKnifeItem {
 	public GildedQuartzKnifeItem(Properties properties) {

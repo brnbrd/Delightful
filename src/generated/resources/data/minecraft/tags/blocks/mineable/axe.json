@@ -6,8 +6,6 @@
     "delightful:sliced_pumpkin",
     "delightful:cantaloupe",
     "delightful:sliced_cantaloupe",
-    "delightful:salmonberry_sack",
-    "delightful:acorn_sack",
     {
       "id": "fruittrees:citrus_cabinet",
       "required": false

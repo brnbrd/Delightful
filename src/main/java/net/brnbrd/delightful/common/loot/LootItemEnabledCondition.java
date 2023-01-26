@@ -3,7 +3,7 @@ package net.brnbrd.delightful.common.loot;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonSerializationContext;
-import net.brnbrd.delightful.common.config.DelightfulConfig;
+import net.brnbrd.delightful.common.DelightfulConfig;
 import net.minecraft.util.GsonHelper;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;

@@ -5,7 +5,7 @@ import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.block.DelightfulBlocks;
 import net.brnbrd.delightful.compat.BYGCompat;
 import net.brnbrd.delightful.compat.Mods;
-import net.brnbrd.delightful.data.DelightfulBlockTags;
+import net.brnbrd.delightful.data.tags.DelightfulBlockTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.tags.BlockTags;
@@ -50,7 +50,6 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 		this.tag(DelightfulBlockTags.DROPS_GREEN_TEA_LEAF)
 			.addTag(BlockTags.LEAVES);
 		this.tag(DelightfulBlockTags.CANTALOUPE_SPAWNS)
-			.add(Blocks.GRASS_BLOCK)
 			.addTag(BlockTags.DIRT)
 			.addTag(BlockTags.SAND);
 
@@ -65,13 +64,8 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 			.add(DelightfulBlocks.SLICED_PUMPKIN.get())
 			.add(DelightfulBlocks.CANTALOUPE.get())
 			.add(DelightfulBlocks.SLICED_CANTALOUPE.get())
-			.add(DelightfulBlocks.SALMONBERRY_SACK.get())
-			.add(DelightfulBlocks.ACORN_SACK.get())
 			.addOptional(Util.rl("fruittrees", "citrus_cabinet"))
 			.addOptional(Util.rl("fruittrees", "cherry_cabinet"));
-		this.tag(BlockTags.MINEABLE_WITH_HOE)
-			.add(DelightfulBlocks.SALMONBERRY_SACK.get())
-			.add(DelightfulBlocks.ACORN_SACK.get());
 	}
 
 	/**

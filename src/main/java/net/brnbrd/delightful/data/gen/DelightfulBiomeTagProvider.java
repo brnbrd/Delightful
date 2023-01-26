@@ -1,7 +1,7 @@
 package net.brnbrd.delightful.data.gen;
 
 import net.brnbrd.delightful.Delightful;
-import net.brnbrd.delightful.data.DelightfulBiomeTags;
+import net.brnbrd.delightful.data.tags.DelightfulBiomeTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BiomeTagsProvider;
 import net.minecraft.tags.BiomeTags;

@@ -2,18 +2,17 @@ package net.brnbrd.delightful.data.gen;
 
 import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
-import net.brnbrd.delightful.common.block.DelightfulBlocks;
-import net.brnbrd.delightful.common.block.SlicedMelonBlock;
-import net.brnbrd.delightful.common.block.SlicedMiniMelonBlock;
-import net.brnbrd.delightful.common.block.SlicedPumpkinBlock;
+import net.brnbrd.delightful.common.block.*;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 import vectorwing.farmersdelight.FarmersDelight;
 import vectorwing.farmersdelight.common.block.CabinetBlock;
 import vectorwing.farmersdelight.common.block.PieBlock;
@@ -27,10 +26,8 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        DelightfulBlocks.BLOCKS.getEntries().stream()
-                .filter(entry -> entry.get() instanceof CabinetBlock)
-                .forEach(cab -> cabinet(cab.get()));
         this.wildCropBlock(DelightfulBlocks.WILD_SALMONBERRIES.get());
+        this.stageBlock(DelightfulBlocks.SALMONBERRY_BUSH.get(), SalmonberryBushBlock.AGE);
         this.simpleBlock(DelightfulBlocks.SALMONBERRY_SACK.get(),
           models().cubeBottomTop("salmonberry_sack",
             Util.rl(Delightful.MODID, "block/salmonberry_sack"),
@@ -41,17 +38,30 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
                 Util.rl(Delightful.MODID, "block/acorn_sack"),
                 Util.rl(Delightful.MODID, "block/acorn_sack_bottom"),
                 Util.rl(Delightful.MODID, "block/acorn_sack_top")));
+        this.simpleBlock(DelightfulBlocks.CANTALOUPE.get(), existingModel("cantaloupe"));
+        this.simpleBlock(DelightfulBlocks.MINI_MELON.get(), existingModel("mini_melon"));
         this.miniMelonBlock((SlicedMiniMelonBlock) DelightfulBlocks.SLICED_MINI_MELON.get());
         this.miniMelonBlock((SlicedMiniMelonBlock) DelightfulBlocks.SLICED_CANTALOUPE.get());
         this.melonBlock((SlicedMelonBlock) DelightfulBlocks.SLICED_MELON.get());
         this.pumpkinBlock((SlicedPumpkinBlock) DelightfulBlocks.SLICED_PUMPKIN.get());
-        this.pieBlock(DelightfulBlocks.SALMONBERRY_PIE.get());
-        this.pieBlock(DelightfulBlocks.PUMPKIN_PIE.get());
-        this.pieBlock(DelightfulBlocks.SOURCE_BERRY_PIE.get());
-        this.pieBlock(DelightfulBlocks.GREEN_APPLE_PIE.get());
-        this.pieBlock(DelightfulBlocks.BLUEBERRY_PIE.get());
-        this.pieBlock(DelightfulBlocks.CRIMSON_BERRY_PIE.get());
-        this.pieBlock(DelightfulBlocks.NIGHTSHADE_BERRY_PIE.get());
+        this.pieBlock(DelightfulBlocks.SALMONBERRY_PIE);
+        this.pieBlock(DelightfulBlocks.PUMPKIN_PIE);
+        this.pieBlock(DelightfulBlocks.SOURCE_BERRY_PIE);
+        this.pieBlock(DelightfulBlocks.GREEN_APPLE_PIE);
+        this.pieBlock(DelightfulBlocks.BLUEBERRY_PIE);
+        this.pieBlock(DelightfulBlocks.CRIMSON_BERRY_PIE);
+        this.pieBlock(DelightfulBlocks.NIGHTSHADE_BERRY_PIE);
+        this.cabinet(DelightfulBlocks.BASALT_CABINET.get());
+        this.cabinet(DelightfulBlocks.QUARTZ_CABINET.get());
+    }
+
+    // Adapted from: https://github.com/vectorwing/FarmersDelight/blob/1.19/src/main/java/vectorwing/farmersdelight/data/BlockStates.java
+    public void stageBlock(Block block, IntegerProperty ageProperty) {
+        getVariantBuilder(block).forAllStates(state -> {
+            String stageName = Util.name(block) + "_stage" + state.getValue(ageProperty);
+            return ConfiguredModel.builder()
+                .modelFile(models().cross(stageName, resourceBlock(stageName)).renderType("cutout")).build();
+        });
     }
 
     public void wildCropBlock(Block block) {
@@ -101,16 +111,24 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
         );
     }
 
-    public void pieBlock(Block block) {
-        getVariantBuilder(block)
-            .forAllStates(state -> {
-                    int bites = state.getValue(PieBlock.BITES);
-                    String suffix = bites > 0 ? "_slice" + bites : "";
-                    return ConfiguredModel.builder()
-                        .modelFile(existingModel(Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath() + suffix))
-                        .rotationY(((int) state.getValue(PieBlock.FACING).toYRot() + 180) % 360)
-                        .build();
+    // Adapted from: https://github.com/vectorwing/FarmersDelight/blob/1.19/src/main/java/vectorwing/farmersdelight/data/BlockStates.java
+    public void pieBlock(RegistryObject<Block> block) {
+        getVariantBuilder(block.get()).forAllStates(state -> {
+                int bites = state.getValue(PieBlock.BITES);
+                String name = Util.name(block);
+                String suffix = bites > 0 ? "_slice" + bites : "";
+                var mod = models()
+                    .withExistingParent("block/" + name + suffix, Util.rl(FarmersDelight.MODID, "pie" + suffix))
+                    .texture("top", resourceBlock(name + "_top"))
+                    .texture("bottom", resourceBlock(name + "_bottom"))
+                    .texture("side", resourceBlock(name + "_side"))
+                    .texture("particle", resourceBlock(name + "_top"));
+                if (bites > 0) {
+                    mod.texture("inner", resourceBlock(name + "_inner"));
                 }
-            );
+                return ConfiguredModel.builder().modelFile(mod)
+                    .rotationY(((int) state.getValue(PieBlock.FACING).toYRot() + 180) % 360).build();
+            }
+        );
     }
 }

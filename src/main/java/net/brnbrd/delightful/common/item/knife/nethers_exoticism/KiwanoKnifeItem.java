@@ -2,7 +2,7 @@ package net.brnbrd.delightful.common.item.knife.nethers_exoticism;
 
 import net.brnbrd.delightful.common.item.DelightfulTiers;
 import net.brnbrd.delightful.common.item.knife.CompatKnifeItem;
-import net.brnbrd.delightful.data.DelightfulItemTags;
+import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;

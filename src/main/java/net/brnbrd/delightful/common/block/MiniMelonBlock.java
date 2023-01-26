@@ -1,7 +1,7 @@
 package net.brnbrd.delightful.common.block;
 
 import net.brnbrd.delightful.Util;
-import net.brnbrd.delightful.data.DelightfulItemTags;
+import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;

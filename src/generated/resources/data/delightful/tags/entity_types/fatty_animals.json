@@ -40,67 +40,51 @@
       "required": false
     },
     {
+      "id": "ecologics:coconut_crab",
+      "required": false
+    },
+    {
       "id": "ars_nouveau:starbuncle",
       "required": false
     },
     {
-      "id": "goodall:dumbo_octopus",
+      "id": "aqcaracal:caracal",
       "required": false
     },
     {
-      "id": "goodall:manatee",
+      "id": "babyfat:ranchu",
       "required": false
     },
     {
-      "id": "goodall:red_deer",
+      "id": "bettas:betta_fish",
       "required": false
     },
     {
-      "id": "goodall:seal",
+      "id": "buzzier_bees:moobloom",
       "required": false
     },
     {
-      "id": "goodall:white_tailed_deer",
+      "id": "buzzier_bees:grizzly_bear",
       "required": false
     },
     {
-      "id": "neapolitan:chimpanzee",
+      "id": "crittersandcompanions:dumbo_octopus",
       "required": false
     },
     {
-      "id": "naturalist:bear",
+      "id": "crittersandcompanions:ferret",
       "required": false
     },
     {
-      "id": "naturalist:boar",
+      "id": "crittersandcompanions:koi_fish",
       "required": false
     },
     {
-      "id": "naturalist:deer",
+      "id": "crittersandcompanions:otter",
       "required": false
     },
     {
-      "id": "naturalist:elephant",
-      "required": false
-    },
-    {
-      "id": "naturalist:giraffe",
-      "required": false
-    },
-    {
-      "id": "naturalist:hippo",
-      "required": false
-    },
-    {
-      "id": "naturalist:lion",
-      "required": false
-    },
-    {
-      "id": "naturalist:rhino",
-      "required": false
-    },
-    {
-      "id": "naturalist:zebra",
+      "id": "crittersandcompanions:red_panda",
       "required": false
     },
     {
@@ -112,11 +96,19 @@
       "required": false
     },
     {
-      "id": "buzzier_bees:moobloom",
+      "id": "friendsandfoes:moobloom",
       "required": false
     },
     {
-      "id": "buzzier_bees:grizzly_bear",
+      "id": "frozenup:chilloo",
+      "required": false
+    },
+    {
+      "id": "frozenup:penguin",
+      "required": false
+    },
+    {
+      "id": "frozenup:reindeer",
       "required": false
     },
     {
@@ -160,7 +152,115 @@
       "required": false
     },
     {
-      "id": "aqcaracal:caracal",
+      "id": "goodall:deer",
+      "required": false
+    },
+    {
+      "id": "goodall:dumbo_octopus",
+      "required": false
+    },
+    {
+      "id": "goodall:fennec_fox",
+      "required": false
+    },
+    {
+      "id": "goodall:grizzly_bear",
+      "required": false
+    },
+    {
+      "id": "goodall:manatee",
+      "required": false
+    },
+    {
+      "id": "goodall:red_deer",
+      "required": false
+    },
+    {
+      "id": "goodall:seal",
+      "required": false
+    },
+    {
+      "id": "goodall:white_tailed_deer",
+      "required": false
+    },
+    {
+      "id": "goodall:rhino",
+      "required": false
+    },
+    {
+      "id": "goodall:river_turtle",
+      "required": false
+    },
+    {
+      "id": "goodall:tortoise",
+      "required": false
+    },
+    {
+      "id": "hedgehog:hedgehog",
+      "required": false
+    },
+    {
+      "id": "naturalist:bear",
+      "required": false
+    },
+    {
+      "id": "naturalist:boar",
+      "required": false
+    },
+    {
+      "id": "naturalist:deer",
+      "required": false
+    },
+    {
+      "id": "naturalist:elephant",
+      "required": false
+    },
+    {
+      "id": "naturalist:giraffe",
+      "required": false
+    },
+    {
+      "id": "naturalist:hippo",
+      "required": false
+    },
+    {
+      "id": "naturalist:lion",
+      "required": false
+    },
+    {
+      "id": "naturalist:rhino",
+      "required": false
+    },
+    {
+      "id": "naturalist:zebra",
+      "required": false
+    },
+    {
+      "id": "neapolitan:chimpanzee",
+      "required": false
+    },
+    {
+      "id": "quark:crab",
+      "required": false
+    },
+    {
+      "id": "quark:foxhound",
+      "required": false
+    },
+    {
+      "id": "quark:shiba",
+      "required": false
+    },
+    {
+      "id": "snowpig:snow_pig",
+      "required": false
+    },
+    {
+      "id": "sprout:elephant",
+      "required": false
+    },
+    {
+      "id": "wandering_trapper:trapper_dog",
       "required": false
     }
   ]

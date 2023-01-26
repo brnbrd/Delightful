@@ -2,7 +2,7 @@ package net.brnbrd.delightful.common.block;
 
 import com.mojang.datafixers.util.Pair;
 import net.brnbrd.delightful.Util;
-import net.brnbrd.delightful.data.DelightfulItemTags;
+import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;

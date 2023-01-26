@@ -1,7 +1,7 @@
 package net.brnbrd.delightful.common.item;
 
 import net.brnbrd.delightful.Util;
-import net.brnbrd.delightful.data.DelightfulItemTags;
+import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.crafting.Ingredient;

@@ -1,6 +1,6 @@
 package net.brnbrd.delightful.common.item;
 
-import net.brnbrd.delightful.common.config.DelightfulConfig;
+import net.brnbrd.delightful.common.DelightfulConfig;
 import net.brnbrd.delightful.compat.Mods;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;

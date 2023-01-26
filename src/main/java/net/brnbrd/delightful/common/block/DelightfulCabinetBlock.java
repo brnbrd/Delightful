@@ -1,7 +1,7 @@
 package net.brnbrd.delightful.common.block;
 
 import net.brnbrd.delightful.Util;
-import net.brnbrd.delightful.common.config.DelightfulConfig;
+import net.brnbrd.delightful.common.DelightfulConfig;
 import net.brnbrd.delightful.common.item.IConfigured;
 import net.minecraft.world.item.crafting.Ingredient;
 import vectorwing.farmersdelight.common.block.CabinetBlock;

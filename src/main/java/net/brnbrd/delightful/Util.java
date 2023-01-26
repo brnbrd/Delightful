@@ -1,7 +1,7 @@
 package net.brnbrd.delightful;
 
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
-import net.brnbrd.delightful.common.config.DelightfulConfig;
+import net.brnbrd.delightful.common.DelightfulConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
@@ -54,16 +54,16 @@ public class Util {
     return r.get().getDefaultInstance();
   }
 
-  public static String name(RegistryObject<Item> item) {
-    return item.getId().getPath();
-  }
-
   public static String name(Item item) {
     return Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath();
   }
 
   public static String name(Block block) {
     return Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath();
+  }
+
+  public static String name(RegistryObject<?> reg) {
+    return reg.getId().getPath();
   }
 
   public static Supplier<Ingredient> ing(ItemLike i) {

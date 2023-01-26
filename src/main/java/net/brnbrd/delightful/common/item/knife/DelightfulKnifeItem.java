@@ -3,7 +3,7 @@ package net.brnbrd.delightful.common.item.knife;
 import com.google.common.collect.ImmutableList;
 import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
-import net.brnbrd.delightful.common.config.DelightfulConfig;
+import net.brnbrd.delightful.common.DelightfulConfig;
 import net.brnbrd.delightful.common.item.IConfigured;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;

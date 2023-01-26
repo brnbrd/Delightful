@@ -1,6 +1,6 @@
 package net.brnbrd.delightful;
 
-import net.brnbrd.delightful.common.config.DelightfulConfig;
+import net.brnbrd.delightful.common.DelightfulConfig;
 import net.brnbrd.delightful.proxy.ClientProxy;
 import net.brnbrd.delightful.proxy.CommonProxy;
 import net.minecraftforge.fml.DistExecutor;
