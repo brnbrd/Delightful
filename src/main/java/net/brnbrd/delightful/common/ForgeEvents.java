@@ -6,6 +6,7 @@ import net.brnbrd.delightful.common.block.DelightfulBlocks;
 import net.brnbrd.delightful.common.block.SlicedMelonBlock;
 import net.brnbrd.delightful.common.block.SlicedPumpkinBlock;
 import net.brnbrd.delightful.common.config.DelightfulConfig;
+import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.FurnaceFuelItem;
 import net.brnbrd.delightful.common.item.knife.Knives;
 import net.brnbrd.delightful.compat.ArsNouveauCompat;
@@ -22,10 +23,12 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
@@ -36,11 +39,13 @@ import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.furnace.FurnaceFuelBurnTimeEvent;
+import net.minecraftforge.event.village.WandererTradesEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import vectorwing.farmersdelight.common.block.PieBlock;
+import java.util.List;
 import java.util.Objects;
 
 @Mod.EventBusSubscriber(modid= Delightful.MODID)
@@ -53,9 +58,20 @@ public class ForgeEvents {
 		}
 	}
 
+	@SubscribeEvent
+	public static void onWanderingTrader(WandererTradesEvent e) {
+		List<VillagerTrades.ItemListing> trades = e.getGenericTrades();
+		if (DelightfulConfig.verify(DelightfulItems.SALMONBERRIES) && DelightfulConfig.verify(DelightfulItems.SALMONBERRY_PIPS)) {
+			trades.add((ent, r) -> new MerchantOffer(new ItemStack(Items.EMERALD, 1), Util.gs(DelightfulItems.SALMONBERRY_PIPS), 5, 1, 1));
+		}
+		if (DelightfulConfig.verify(DelightfulItems.CANTALOUPE) && DelightfulConfig.verify(DelightfulItems.CANTALOUPE_SLICE)) {
+			trades.add((ent, r) -> new MerchantOffer(new ItemStack(Items.EMERALD, 2), new ItemStack(DelightfulItems.CANTALOUPE_SLICE.get(), 8), 5, 1, 1));
+		}
+	}
+
 	// Twilight Forest Compat (and Nether's Exoticism)
 	@SubscribeEvent
-	public static void fieryToolSetFire(LivingAttackEvent e) {
+	public static void onFieryToolSetFire(LivingAttackEvent e) {
 		if (e.getSource().getEntity() instanceof LivingEntity living &&
 			(living.getMainHandItem().is(Knives.FIERY.get()) || living.getMainHandItem().is(Knives.KIWANO.get())) &&
 			!e.getEntity().fireImmune()) {
