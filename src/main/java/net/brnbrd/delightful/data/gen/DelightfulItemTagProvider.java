@@ -254,6 +254,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(ForgeTags.SEEDS)
 			.addTag(DelightfulItemTags.SEEDS_SALMONBERRY)
 			.addOptional(Util.rl(Mods.FR, "tea_seeds"));
+		this.tag(DelightfulItemTags.TORTILLA)
+			.addOptional(Util.rl("culturaldelights", "tortilla"));
 
 		// Minecraft
 		this.tag(ItemTags.PIGLIN_LOVED).add(Knives.REFINED_GLOWSTONE.get());

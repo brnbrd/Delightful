@@ -106,8 +106,8 @@ public class DelightfulLanguageProvider extends LanguageProvider {
         add("farmersdelight.tooltip.matcha_latte", "Healthy");
         add("farmersdelight.tooltip.berry_matcha_latte", "Healthy");
         add("farmersdelight.tooltip.ender_nectar", "Otherworldly");
+        add("farmersdelight.tooltip.sinigang", "Sour Fish Stew");
         add("delightful.matcha.desc", "Green Tea Powder");
-        add("delightful.sinigang.desc", "Sour Fish Stew");
         add("delightful.green_tea_leaf.desc", "Get lucky using a Knife on any Leaves block.");
         add("delightful.animal_fat.desc", "Get lucky using a Knife on a fatty animal (Pig, Cow, Fish...).");
         add("delightful.acorn.desc", "Drops from Oak Leaves or perhaps a Squirrel (from another mod).");
@@ -118,7 +118,7 @@ public class DelightfulLanguageProvider extends LanguageProvider {
         add("delightful.sliceable.desc", "Can be sliced with a Knife (Right Click).");
         add("delightful.placeable.desc", "Placeable");
         add("delightful.disabled.desc", "Disabled");
-        add("delightful.disabled.requiresmod", "Requires modid:");
         add("delightful.disabled.requirestag", "Requires non-empty tag:");
+        add("tooltip.requires_modid", "Requires modid:");
     }
 }

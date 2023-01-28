@@ -94,6 +94,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> GEMS_ROSE_QUARTZ = forge("gems/rose_quartz");
 	public static final TagKey<Item> ICE_CUBES = forge("ice_cubes");
 	public static final TagKey<Item> SEEDS_SALMONBERRY = forge("seeds/salmonberry");
+	public static final TagKey<Item> TORTILLA = forge("tortilla");
 
 	// Forbidden and Arcanus
 	public static final TagKey<Item> STELLARITE_PIECE = Util.it("forbidden_arcanus", "stellarite_piece");
