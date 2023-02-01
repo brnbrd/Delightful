@@ -1,23 +1,20 @@
 package net.brnbrd.delightful.common.item;
 
-import net.brnbrd.delightful.common.DelightfulConfig;
 import net.brnbrd.delightful.compat.Mods;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
 import org.jetbrains.annotations.NotNull;
-import vectorwing.farmersdelight.FarmersDelight;
 
-public class CompatItem extends Item implements IConfigured {
+public class CompatItem extends DItem implements IConfigured {
 	private final String modid;
 
 	public CompatItem(Properties prop, String modid) {
-		super(prop.tab(FarmersDelight.CREATIVE_TAB));
+		super(prop);
 		this.modid = modid;
 	}
 
 	@Override
 	public boolean isEnabled() {
-		return Mods.loaded(modid) && DelightfulConfig.verify(this);
+		return Mods.loaded(modid) && super.isEnabled();
 	}
 
 	@Override
