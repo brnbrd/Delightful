@@ -6,7 +6,6 @@ import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.registries.RegistryObject;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,7 +13,7 @@ public class DelightfulConfig {
 
     public static final DelightfulConfig CONFIG;
     public static final ForgeConfigSpec SPEC;
-    public static final Map<String, ForgeConfigSpec.BooleanValue> stuff = new HashMap<>();
+    private final Map<String, ForgeConfigSpec.BooleanValue> stuff = new HashMap<>();
     public static ForgeConfigSpec.IntValue CHANCE_WILD_SALMONBERRIES;
     public static ForgeConfigSpec.IntValue CHANCE_MINI_MELON;
     public static ForgeConfigSpec.IntValue CHANCE_CANTALOUPE;
@@ -49,7 +48,7 @@ public class DelightfulConfig {
                     .sorted()
                     .forEach(cabinet -> put(builder, stuff, cabinet, true));
         builder.pop();
-        builder.push("Foods and Other Items");
+        builder.push("Registry");
             items.stream()
                     .map(obj -> obj.getId().getPath())
                     .filter(path -> !path.contains("_knife") && !path.contains("_cabinet") && !path.equals("pizza"))
@@ -91,15 +90,15 @@ public class DelightfulConfig {
         map.put(name, builder.define(name, def));
     }
 
-    public static boolean verify(String item) {
+    public boolean verify(String item) {
         return CONFIG.stuff.get(item).get();
     }
 
-    public static boolean verify(RegistryObject<Item> item) {
+    public boolean verify(RegistryObject<Item> item) {
         return verify(item.getId().getPath());
     }
 
-    public static boolean verify(Item item) {
+    public boolean verify(Item item) {
         return verify(Util.name(item));
     }
 

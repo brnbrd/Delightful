@@ -17,6 +17,7 @@ import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.common.ForgeHooks;
+import org.jetbrains.annotations.NotNull;
 
 public class MiniMelonBlock extends MiniBlock implements BonemealableBlock {
 
@@ -24,8 +25,9 @@ public class MiniMelonBlock extends MiniBlock implements BonemealableBlock {
     super(pProperties);
   }
 
+  @SuppressWarnings("deprecation")
   @Override
-  public void randomTick(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRandom) {
+  public void randomTick(@NotNull BlockState pState, ServerLevel pLevel, @NotNull BlockPos pPos, @NotNull RandomSource pRandom) {
     if (!pLevel.isAreaLoaded(pPos, 1)) return; // Forge: prevent loading unloaded chunks when checking neighbor's light
     if (pLevel.getRawBrightness(pPos, 0) >= 5 &&
       pLevel.getBlockState(pPos.below()).is(Blocks.DIRT) &&
@@ -43,17 +45,18 @@ public class MiniMelonBlock extends MiniBlock implements BonemealableBlock {
    * @return whether bonemeal can be used on this block
    */
   @Override
-  public boolean isValidBonemealTarget(BlockGetter pLevel, BlockPos pPos, BlockState pState, boolean pIsClient) {
+  public boolean isValidBonemealTarget(@NotNull BlockGetter pLevel, @NotNull BlockPos pPos, @NotNull BlockState pState, boolean pIsClient) {
     return true;
   }
 
   @Override
-  public boolean isBonemealSuccess(Level level, RandomSource random, BlockPos pos, BlockState state) {
+  public boolean isBonemealSuccess(@NotNull Level level, @NotNull RandomSource random, @NotNull BlockPos pos, @NotNull BlockState state) {
     return true;
   }
 
+  @SuppressWarnings("deprecation")
   @Override
-  public void performBonemeal(ServerLevel level, RandomSource random, BlockPos pos, BlockState state) {
+  public void performBonemeal(ServerLevel level, @NotNull RandomSource random, @NotNull BlockPos pos, @NotNull BlockState state) {
     if (!level.isAreaLoaded(pos, 1)) return; // Forge: prevent loading unloaded chunks when checking neighbor's light
     if (ForgeHooks.onCropsGrowPre(level, pos, state, true)) {
       level.setBlock(pos, Blocks.MELON.withPropertiesOf(state), 2);
@@ -61,8 +64,9 @@ public class MiniMelonBlock extends MiniBlock implements BonemealableBlock {
     }
   }
 
+  @SuppressWarnings("deprecation")
   @Override
-  public InteractionResult use(BlockState pState, Level world, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
+  public @NotNull InteractionResult use(@NotNull BlockState pState, @NotNull Level world, @NotNull BlockPos pPos, Player pPlayer, @NotNull InteractionHand pHand, @NotNull BlockHitResult pHit) {
     if (pPlayer.getItemInHand(pHand).is(DelightfulItemTags.SCAVENGING_TOOLS)) {
       if (!world.isClientSide()) {
         SlicedMiniMelonBlock sliced = (SlicedMiniMelonBlock) DelightfulBlocks.SLICED_MINI_MELON.get();

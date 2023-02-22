@@ -45,6 +45,7 @@ public class SalmonberryBushBlock extends BushBlock implements BonemealableBlock
     return state.getValue(AGE) <= 2 ? DelightfulItems.SALMONBERRY_PIPS.get().getDefaultInstance() : DelightfulItems.SALMONBERRIES.get().getDefaultInstance();
   }
 
+  @SuppressWarnings("deprecation")
   @Override
   public @NotNull VoxelShape getShape(BlockState state, @NotNull BlockGetter pLevel, @NotNull BlockPos pPos, @NotNull CollisionContext pContext) {
     if (state.getValue(AGE) == 0) {
@@ -65,6 +66,7 @@ public class SalmonberryBushBlock extends BushBlock implements BonemealableBlock
   /**
    * Performs a random tick on a block.
    */
+  @SuppressWarnings("deprecation")
   @Override
   public void randomTick(BlockState pState, @NotNull ServerLevel pLevel, @NotNull BlockPos pPos, @NotNull RandomSource pRandom) {
     int i = pState.getValue(AGE);
@@ -80,6 +82,7 @@ public class SalmonberryBushBlock extends BushBlock implements BonemealableBlock
 
   }
 
+  @SuppressWarnings("deprecation")
   @Override
   public @NotNull InteractionResult use(@NotNull BlockState state, @NotNull Level pLevel, @NotNull BlockPos pPos, @NotNull Player pPlayer, @NotNull InteractionHand pHand, @NotNull BlockHitResult pHit) {
     boolean flag = this.isMaxAge(state);

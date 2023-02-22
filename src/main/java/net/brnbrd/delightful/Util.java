@@ -85,4 +85,16 @@ public class Util {
       Containers.dropItemStack(world, drop.getX(), drop.getY() + 0.25F, drop.getZ(), stack);
     }
   }
+
+  public static boolean enabled(String item) {
+    return DelightfulConfig.CONFIG.verify(item);
+  }
+
+  public static boolean enabled(RegistryObject<Item> item) {
+    return DelightfulConfig.CONFIG.verify(item);
+  }
+
+  public static boolean enabled(Item item) {
+    return DelightfulConfig.CONFIG.verify(item);
+  }
 }

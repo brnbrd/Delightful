@@ -56,7 +56,7 @@ public class DelightfulKnifeItem extends KnifeItem implements IConfigured {
     }
 
     public boolean config() {
-        return DelightfulConfig.verify(this);
+        return Util.enabled(this);
     }
 
     @Override

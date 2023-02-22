@@ -17,7 +17,6 @@ import net.minecraftforge.registries.RegistryObject;
 import vectorwing.farmersdelight.common.block.PieBlock;
 import vectorwing.farmersdelight.common.registry.ModBlocks;
 import vectorwing.farmersdelight.common.registry.ModItems;
-
 import java.util.function.Supplier;
 
 public class DelightfulBlocks {

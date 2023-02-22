@@ -28,6 +28,8 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.items.ItemHandlerHelper;
+import org.jetbrains.annotations.NotNull;
+
 import java.util.function.Supplier;
 
 public class SlicedMelonBlock extends MelonBlock implements ISliceable {
@@ -52,13 +54,15 @@ public class SlicedMelonBlock extends MelonBlock implements ISliceable {
     this.juiceItem = juiceItem;
   }
 
+  @SuppressWarnings("deprecation")
   @Override
-  public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
+  public @NotNull VoxelShape getShape(@NotNull BlockState pState, @NotNull BlockGetter pLevel, @NotNull BlockPos pPos, @NotNull CollisionContext pContext) {
     return byBite(pState);
   }
 
+  @SuppressWarnings("deprecation")
   @Override
-  public VoxelShape getOcclusionShape(BlockState pState, BlockGetter pLevel, BlockPos pPos) {
+  public @NotNull VoxelShape getOcclusionShape(@NotNull BlockState pState, @NotNull BlockGetter pLevel, @NotNull BlockPos pPos) {
     return byBite(pState);
   }
 
@@ -88,12 +92,13 @@ public class SlicedMelonBlock extends MelonBlock implements ISliceable {
   }
 
   @Override
-  public BlockState getStateForPlacement(BlockPlaceContext context) {
+  public BlockState getStateForPlacement(@NotNull BlockPlaceContext context) {
     return this.defaultBlockState();
   }
 
+  @SuppressWarnings("deprecation")
   @Override
-  public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+  public @NotNull InteractionResult use(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult hit) {
     ItemStack heldStack = player.getItemInHand(hand);
     if (heldStack.is(DelightfulItemTags.SCAVENGING_TOOLS)) {
       return this.cutSlice(level, pos, state, player, hand);
@@ -108,9 +113,10 @@ public class SlicedMelonBlock extends MelonBlock implements ISliceable {
       return InteractionResult.PASS;
     } else if (!level.isClientSide()) {
       ItemStack sliceStack = this.getSliceItem();
-      FoodProperties sliceFood = sliceStack.getItem().getFoodProperties();
-      playerIn.getFoodData().eat(sliceStack.getItem(), sliceStack);
-      if (this.getSliceItem().getItem().isEdible() && sliceFood != null) {
+      Item slice = sliceStack.getItem();
+      FoodProperties sliceFood = slice.getFoodProperties(sliceStack, playerIn);
+      playerIn.getFoodData().eat(slice, sliceStack, playerIn);
+      if (slice.isEdible() && sliceFood != null) {
         for (Pair<MobEffectInstance, Float> pair : sliceFood.getEffects()) {
           var effect = pair.getFirst();
           if (effect != null && level.random.nextFloat() < pair.getSecond()) {
@@ -167,18 +173,21 @@ public class SlicedMelonBlock extends MelonBlock implements ISliceable {
     builder.add(BITES);
   }
 
+  @SuppressWarnings("deprecation")
   @Override
-  public int getAnalogOutputSignal(BlockState blockState, Level level, BlockPos pos) {
+  public int getAnalogOutputSignal(BlockState blockState, @NotNull Level level, @NotNull BlockPos pos) {
     return this.getMaxBites() - blockState.getValue(BITES);
   }
 
+  @SuppressWarnings("deprecation")
   @Override
-  public boolean hasAnalogOutputSignal(BlockState state) {
+  public boolean hasAnalogOutputSignal(@NotNull BlockState state) {
     return true;
   }
 
+  @SuppressWarnings("deprecation")
   @Override
-  public boolean isPathfindable(BlockState state, BlockGetter level, BlockPos pos, PathComputationType type) {
+  public boolean isPathfindable(@NotNull BlockState state, @NotNull BlockGetter level, @NotNull BlockPos pos, @NotNull PathComputationType type) {
     return false;
   }
 }

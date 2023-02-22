@@ -24,8 +24,7 @@ public class EnabledCondition implements ICondition {
 
     @Override
     public boolean test(IContext context) {
-        return DelightfulConfig.CONFIG.stuff.containsKey(this.value) &&
-          DelightfulConfig.CONFIG.stuff.get(this.value).get();
+        return Util.enabled(this.value);
     }
 
     @Override

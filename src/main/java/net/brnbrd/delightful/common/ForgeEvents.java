@@ -7,7 +7,6 @@ import net.brnbrd.delightful.common.block.SlicedMelonBlock;
 import net.brnbrd.delightful.common.block.SlicedPumpkinBlock;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.FurnaceFuelItem;
-import net.brnbrd.delightful.common.item.knife.Knives;
 import net.brnbrd.delightful.compat.ArsNouveauCompat;
 import net.brnbrd.delightful.compat.BYGCompat;
 import net.brnbrd.delightful.compat.Mods;
@@ -15,13 +14,11 @@ import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.protocol.game.ClientboundAnimatePacket;
-import net.minecraft.server.level.ServerLevel;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
@@ -33,8 +30,6 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.gameevent.GameEvent;
-import net.minecraftforge.event.entity.living.LivingAttackEvent;
-import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.furnace.FurnaceFuelBurnTimeEvent;
@@ -42,68 +37,36 @@ import net.minecraftforge.event.village.WandererTradesEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
 import vectorwing.farmersdelight.common.block.PieBlock;
 import java.util.List;
 import java.util.Objects;
 
-@Mod.EventBusSubscriber(modid= Delightful.MODID)
 public class ForgeEvents {
 
 	@SubscribeEvent
-	public static void burnTime(FurnaceFuelBurnTimeEvent e) {
+	void burnTime(FurnaceFuelBurnTimeEvent e) {
 		if (e.getItemStack().getItem() instanceof FurnaceFuelItem fuel) {
 			e.setBurnTime(fuel.getFuelTime());
 		}
 	}
 
 	@SubscribeEvent
-	public static void onWanderingTrader(WandererTradesEvent e) {
+	void onWanderingTrader(WandererTradesEvent e) {
 		List<VillagerTrades.ItemListing> trades = e.getGenericTrades();
-		if (DelightfulConfig.verify(DelightfulItems.SALMONBERRIES) && DelightfulConfig.verify(DelightfulItems.SALMONBERRY_PIPS)) {
+		if (Util.enabled(DelightfulItems.SALMONBERRIES) && Util.enabled(DelightfulItems.SALMONBERRY_PIPS)) {
 			trades.add((ent, r) -> new MerchantOffer(new ItemStack(Items.EMERALD, 1), Util.gs(DelightfulItems.SALMONBERRY_PIPS), 5, 1, 1));
 		}
-		if (DelightfulConfig.verify(DelightfulItems.CANTALOUPE) && DelightfulConfig.verify(DelightfulItems.CANTALOUPE_SLICE)) {
+		if (Util.enabled(DelightfulItems.CANTALOUPE) && Util.enabled(DelightfulItems.CANTALOUPE_SLICE)) {
 			trades.add((ent, r) -> new MerchantOffer(new ItemStack(Items.EMERALD, 2), new ItemStack(DelightfulItems.CANTALOUPE_SLICE.get(), 8), 5, 1, 1));
-		}
-	}
-
-	// Twilight Forest Compat (and Nether's Exoticism)
-	@SubscribeEvent
-	public static void onFieryToolSetFire(LivingAttackEvent e) {
-		if (e.getSource().getEntity() instanceof LivingEntity living &&
-			(living.getMainHandItem().is(Knives.FIERY.get()) || living.getMainHandItem().is(Knives.KIWANO.get())) &&
-			!e.getEntity().fireImmune()) {
-			e.getEntity().setSecondsOnFire(1);
-		}
-	}
-
-	// Twilight Forest Compat
-	@SubscribeEvent
-	public static void onKnightmetalToolDamage(LivingHurtEvent e) {
-		LivingEntity target = e.getEntity();
-		if (!target.getLevel().isClientSide() && e.getSource().getDirectEntity() instanceof LivingEntity living) {
-			ItemStack weapon = living.getMainHandItem();
-			if (!weapon.isEmpty()) {
-				if (target.getArmorValue() > 0 && weapon.is(Knives.KNIGHTMETAL.get())) {
-					if (target.getArmorCoverPercentage() > 0) {
-						int moreBonus = (int) (2 * target.getArmorCoverPercentage());
-						e.setAmount(e.getAmount() + moreBonus);
-					} else {
-						e.setAmount(e.getAmount() + 2);
-					}
-					((ServerLevel) target.getLevel()).getChunkSource().broadcastAndSend(target, new ClientboundAnimatePacket(target, 5));
-				}
-			}
 		}
 	}
 
 	// Right slick slicing an Item from a Block
 	@SubscribeEvent (priority = EventPriority.HIGHEST)
-	public static void onInteract(PlayerInteractEvent.RightClickBlock e) {
+	void onInteract(PlayerInteractEvent.RightClickBlock e) {
 		Level world = e.getLevel();
 		BlockPos pos = e.getPos();
-		if (e.getEntity().getItemInHand(e.getHand()).is(DelightfulItemTags.SCAVENGING_TOOLS)) {
+		if (e.getItemStack().is(DelightfulItemTags.SCAVENGING_TOOLS)) {
 			BlockState current = world.getBlockState(pos);
 			boolean client = world.isClientSide();
 			if (current.getBlock() == Blocks.MELON) {
@@ -131,8 +94,25 @@ public class ForgeEvents {
 		}
 	}
 
+	// Right click placing a pie Block using Item
+	@SubscribeEvent
+	void onPieOverhaul(PlayerInteractEvent.RightClickBlock e) {
+		ItemStack stack = e.getItemStack();
+		if (!stack.isEmpty()) {
+			if (DelightfulConfig.PUMPKIN_PIE_OVERHAUL.get() && stack.is(Items.PUMPKIN_PIE)) {
+				tryPlacePie((PieBlock) DelightfulBlocks.PUMPKIN_PIE.get(), e);
+				return;
+			}
+			ifTryPlace(stack, Mods.AN, ArsNouveauCompat.pie, ArsNouveauCompat.slice, (PieBlock) DelightfulBlocks.SOURCE_BERRY_PIE.get(), e);
+			ifTryPlace(stack, Mods.BYG, BYGCompat.blueberry_pie, BYGCompat.blueberry_pie_slice, (PieBlock) DelightfulBlocks.BLUEBERRY_PIE.get(), e);
+			ifTryPlace(stack, Mods.BYG, BYGCompat.crimson_berry_pie, BYGCompat.crimson_berry_pie_slice, (PieBlock) DelightfulBlocks.CRIMSON_BERRY_PIE.get(), e);
+			ifTryPlace(stack, Mods.BYG, BYGCompat.green_apple_pie, BYGCompat.green_apple_pie_slice, (PieBlock) DelightfulBlocks.GREEN_APPLE_PIE.get(), e);
+			ifTryPlace(stack, Mods.BYG, BYGCompat.nightshade_berry_pie, BYGCompat.nightshade_berry_pie_slice, (PieBlock) DelightfulBlocks.NIGHTSHADE_BERRY_PIE.get(), e);
+		}
+	}
+
 	// Replaces Block in world, drops Item, cancels interaction event
-	public static void slice(BlockState block, ItemStack slice, Level world, BlockPos pos, SoundEvent sound, PlayerInteractEvent.RightClickBlock e, boolean client) {
+	void slice(BlockState block, ItemStack slice, Level world, BlockPos pos, SoundEvent sound, PlayerInteractEvent.RightClickBlock e, boolean client) {
 		if (!client) {
 			world.setBlock(pos, block, 2);
 			Util.dropOrGive(slice, world, pos, e.getEntity());
@@ -143,54 +123,20 @@ public class ForgeEvents {
 		e.setCanceled(true);
 	}
 
-	// Right click placing a pie Block using Item
-	@SubscribeEvent
-	public static void onPieOverhaul(PlayerInteractEvent.RightClickBlock e) {
-		ItemStack stack = e.getEntity().getItemInHand(e.getHand());
-		if (!stack.isEmpty()) {
-			BlockPlaceContext context = new BlockPlaceContext(e.getEntity(), e.getHand(), stack, e.getHitVec());
-			if (DelightfulConfig.PUMPKIN_PIE_OVERHAUL.get() &&
-				stack.is(Items.PUMPKIN_PIE)) {
-				tryPlacePie((PieBlock) DelightfulBlocks.PUMPKIN_PIE.get(), context, e);
-			} else if (Mods.loaded(Mods.AN) &&
-				DelightfulConfig.verify(ArsNouveauCompat.slice) &&
-					isPie(stack, Mods.AN, ArsNouveauCompat.pie)) {
-					tryPlacePie((PieBlock) DelightfulBlocks.SOURCE_BERRY_PIE.get(), context, e);
-			} else if (Mods.loaded(Mods.BYG)) {
-				if (DelightfulConfig.verify(BYGCompat.blueberry_pie_slice) &&
-					isPie(stack, Mods.BYG, BYGCompat.blueberry_pie)) {
-					tryPlacePie((PieBlock) DelightfulBlocks.BLUEBERRY_PIE.get(), context, e);
-				} else if (DelightfulConfig.verify(BYGCompat.crimson_berry_pie_slice) &&
-					isPie(stack, Mods.BYG, BYGCompat.crimson_berry_pie)) {
-					tryPlacePie((PieBlock) DelightfulBlocks.CRIMSON_BERRY_PIE.get(), context, e);
-				} else if (DelightfulConfig.verify(BYGCompat.green_apple_pie_slice) &&
-					isPie(stack, Mods.BYG, BYGCompat.green_apple_pie)) {
-					tryPlacePie((PieBlock) DelightfulBlocks.GREEN_APPLE_PIE.get(), context, e);
-				} else if (DelightfulConfig.verify(BYGCompat.nightshade_berry_pie_slice) &&
-					isPie(stack, Mods.BYG, BYGCompat.nightshade_berry_pie)) {
-					tryPlacePie((PieBlock) DelightfulBlocks.NIGHTSHADE_BERRY_PIE.get(), context, e);
-				}
-			}
-		}
-	}
-
 	// Tries placement of pie, may cancel interaction event
-	public static void tryPlacePie(PieBlock pie, BlockPlaceContext context, PlayerInteractEvent.RightClickBlock e) {
+	void tryPlacePie(PieBlock pie, PlayerInteractEvent.RightClickBlock e) {
 		e.setUseItem(Event.Result.DENY);
-		e.setCanceled(true);
-		if (e.getUseBlock() != Event.Result.ALLOW) {
-			if (placePie(pie, context)) {
-				e.setCancellationResult(InteractionResult.sidedSuccess(context.getLevel().isClientSide()));
-			}
-		} else {
-			e.setUseBlock(Event.Result.ALLOW);
+		e.setUseBlock(Event.Result.DENY);
+		if (!e.isCanceled() && placePie(pie, new BlockPlaceContext(e.getEntity(), e.getHand(), e.getEntity().getItemInHand(e.getHand()), e.getHitVec()))) {
+			e.setCanceled(true);
 		}
 	}
 
 	// Places pie Block in world using Item
-	public static boolean placePie(PieBlock pie, BlockPlaceContext context) {
+	boolean placePie(PieBlock pie, BlockPlaceContext context) {
 		if (context.canPlace() &&
-			context.getLevel().getBlockState(context.getClickedPos().below()).getMaterial().isSolid()) {
+			context.getLevel().getBlockState(context.getClickedPos().below()).getMaterial().isSolid() &&
+			pie.getStateForPlacement(context) != null) {
 			BlockState piestate = pie.getStateForPlacement(context);
 			if (!context.getPlayer().getAbilities().instabuild) {
 				context.getItemInHand().shrink(1);
@@ -204,53 +150,49 @@ public class ForgeEvents {
 		return false;
 	}
 
-	// Cancels right clicking overhauled pie items to eat them normally
-	@SubscribeEvent
-	public static void onPieOverhaul(PlayerInteractEvent.RightClickItem e) {
-		ItemStack stack = e.getEntity().getItemInHand(e.getHand());
-		if ((DelightfulConfig.PUMPKIN_PIE_OVERHAUL.get() && stack.is(Items.PUMPKIN_PIE)) ||
-			(Mods.loaded(Mods.AN) &&
-				stack.is(Util.item(Mods.AN, ArsNouveauCompat.pie)) &&
-				DelightfulConfig.verify(ArsNouveauCompat.slice)) ||
-			(Mods.loaded(Mods.BYG) &&
-				((isPie(e.getItemStack(), Mods.BYG, BYGCompat.blueberry_pie) &&
-					DelightfulConfig.verify(BYGCompat.blueberry_pie_slice)) ||
-					(isPie(e.getItemStack(), Mods.BYG, BYGCompat.crimson_berry_pie) &&
-						DelightfulConfig.verify(BYGCompat.crimson_berry_pie_slice)) ||
-					(isPie(e.getItemStack(), Mods.BYG, BYGCompat.green_apple_pie) &&
-						DelightfulConfig.verify(BYGCompat.green_apple_pie_slice)) ||
-					(isPie(e.getItemStack(), Mods.BYG, BYGCompat.nightshade_berry_pie) &&
-						DelightfulConfig.verify(BYGCompat.nightshade_berry_pie_slice))))) {
+	// Cancels right-clicking overhauled pie items to eat them normally
+	@SubscribeEvent (priority = EventPriority.HIGHEST)
+	void onPieOverhaul(PlayerInteractEvent.RightClickItem e) {
+		if (isCompatPie(e.getItemStack())) {
 			e.setCancellationResult(InteractionResult.FAIL);
 			e.setCanceled(true);
 		}
 	}
 
 	// Adds "placeable" tooltip to compat pies
-	@SubscribeEvent
-	public static void onPieTooltip(ItemTooltipEvent e) {
-		if ((e.getItemStack().is(Items.PUMPKIN_PIE) && DelightfulConfig.PUMPKIN_PIE_OVERHAUL.get()) ||
-			(e.getItemStack().getItem() instanceof BlockItem block && block.getBlock() instanceof PieBlock) ||
-			(Mods.loaded(Mods.AN) &&
-				isPie(e.getItemStack(), Mods.AN, ArsNouveauCompat.pie) &&
-				DelightfulConfig.verify(ArsNouveauCompat.slice)) ||
-			(Mods.loaded(Mods.AN) &&
-				((isPie(e.getItemStack(), Mods.BYG, BYGCompat.blueberry_pie) &&
-					DelightfulConfig.verify(BYGCompat.blueberry_pie_slice)) ||
-					(isPie(e.getItemStack(), Mods.BYG, BYGCompat.crimson_berry_pie) &&
-						DelightfulConfig.verify(BYGCompat.crimson_berry_pie_slice)) ||
-					(isPie(e.getItemStack(), Mods.BYG, BYGCompat.green_apple_pie) &&
-						DelightfulConfig.verify(BYGCompat.green_apple_pie_slice)) ||
-					(isPie(e.getItemStack(), Mods.BYG, BYGCompat.nightshade_berry_pie) &&
-						DelightfulConfig.verify(BYGCompat.nightshade_berry_pie_slice)))) ||
-			(Mods.loaded(Mods.WB) &&
-				((e.getItemStack().is(Util.it(Mods.WB, "berry_pies"))) ||
-					(e.getItemStack().is(Util.it(Mods.WB, "berry_muffins")))))) {
-			e.getToolTip().add(Component.translatable(Delightful.MODID + ".placeable.desc").withStyle(ChatFormatting.DARK_GRAY).withStyle(ChatFormatting.ITALIC));
+	@SubscribeEvent (priority = EventPriority.HIGHEST)
+	void onPieTooltip(ItemTooltipEvent e) {
+		ItemStack stack = e.getItemStack();
+		if ((stack.getItem() instanceof BlockItem b && b.getBlock() instanceof PieBlock) ||
+			isCompatPie(stack) ||
+			isBerryPieOrMuffin(stack)) {
+			MutableComponent desc = Component.translatable(Delightful.MODID + ".placeable.desc")
+				.withStyle(ChatFormatting.DARK_GRAY)
+				.withStyle(ChatFormatting.ITALIC);
+			e.getToolTip().add(desc);
 		}
 	}
 
-	private static boolean isPie(ItemStack stack, String modid, String pie) {
-		return stack.is(Util.item(modid, pie));
+	boolean isPie(ItemStack stack, String modid, String pie, String slice) {
+		return Mods.loaded(modid) && Util.enabled(slice) && stack.is(Util.item(modid, pie));
+	}
+
+	void ifTryPlace(ItemStack stack, String modid, String pie, String slice, PieBlock pieBlock, PlayerInteractEvent.RightClickBlock e) {
+		if (isPie(stack, modid, pie, slice)) {
+			tryPlacePie(pieBlock, e);
+		}
+	}
+
+	boolean isCompatPie(ItemStack stack) {
+		return (stack.is(Items.PUMPKIN_PIE) && DelightfulConfig.PUMPKIN_PIE_OVERHAUL.get()) ||
+			isPie(stack, Mods.AN, ArsNouveauCompat.pie, ArsNouveauCompat.slice) ||
+			isPie(stack, Mods.BYG, BYGCompat.blueberry_pie, BYGCompat.blueberry_pie_slice) ||
+			isPie(stack, Mods.BYG, BYGCompat.crimson_berry_pie, BYGCompat.crimson_berry_pie_slice) ||
+			isPie(stack, Mods.BYG, BYGCompat.green_apple_pie, BYGCompat.green_apple_pie_slice) ||
+			isPie(stack, Mods.BYG, BYGCompat.nightshade_berry_pie, BYGCompat.nightshade_berry_pie_slice);
+	}
+
+	boolean isBerryPieOrMuffin(ItemStack stack) {
+		return Mods.loaded(Mods.WB) && ((stack.is(Util.it(Mods.WB, "berry_pies"))) || (stack.is(Util.it(Mods.WB, "berry_muffins"))));
 	}
 }

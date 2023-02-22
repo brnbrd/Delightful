@@ -89,9 +89,10 @@ public class SlicedMiniMelonBlock extends MelonBlock implements ISliceable {
       return InteractionResult.PASS;
     } else if (!level.isClientSide()) {
       ItemStack sliceStack = this.getSliceItem();
-      FoodProperties sliceFood = sliceStack.getItem().getFoodProperties();
-      playerIn.getFoodData().eat(sliceStack.getItem(), sliceStack);
-      if (this.getSliceItem().getItem().isEdible() && sliceFood != null) {
+      Item slice = sliceStack.getItem();
+      FoodProperties sliceFood = slice.getFoodProperties(sliceStack, playerIn);
+      playerIn.getFoodData().eat(slice, sliceStack, playerIn);
+      if (slice.isEdible() && sliceFood != null) {
         for (Pair<MobEffectInstance, Float> pair : sliceFood.getEffects()) {
           var effect = pair.getFirst();
           if (effect != null && level.random.nextFloat() < pair.getSecond()) {

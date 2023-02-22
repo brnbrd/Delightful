@@ -1,10 +1,10 @@
 package net.brnbrd.delightful.common.item;
 
-import net.brnbrd.delightful.common.DelightfulConfig;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import org.jetbrains.annotations.NotNull;
 import vectorwing.farmersdelight.FarmersDelight;
+import net.brnbrd.delightful.Util;
 
 public class DItem extends Item implements IConfigured {
 	public DItem(Properties prop) {
@@ -13,7 +13,7 @@ public class DItem extends Item implements IConfigured {
 
 	@Override
 	public boolean isEnabled() {
-		return DelightfulConfig.verify(this);
+		return Util.enabled(this);
 	}
 
 	@Override

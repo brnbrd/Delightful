@@ -9,6 +9,7 @@ import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.DelightfulConfig;
 import net.brnbrd.delightful.common.item.CompatItem;
 import net.brnbrd.delightful.common.item.DelightfulItems;
+import net.brnbrd.delightful.common.item.IConfigured;
 import net.brnbrd.delightful.common.item.knife.DelightfulKnifeItem;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
@@ -34,12 +35,10 @@ public class JEIPlugin implements IModPlugin
         registration.getIngredientManager().removeIngredientsAtRuntime(VanillaTypes.ITEM_STACK,
             DelightfulItems.ITEMS.getEntries().stream()
                 .filter(i -> {
-                    if (i.get() instanceof DelightfulKnifeItem k) {
-                       return !k.isEnabled(); // Keep knife if it is disabled
-                    } else if (i.get() instanceof CompatItem c) {
+                    if (i.get() instanceof IConfigured c) {
                         return !c.isEnabled(); // Keep item if it is disabled
                     }
-                    return !(DelightfulConfig.verify(i)); // Keep only Items that are not enabled in the config
+                    return !(Util.enabled(i)); // Keep only Items that are not enabled in the config
                 })
                 .map(Util::gs) // Get ItemStack
                 .toList());
@@ -49,25 +48,25 @@ public class JEIPlugin implements IModPlugin
             .filter(k -> k instanceof DelightfulKnifeItem && ((DelightfulKnifeItem) k).isEnabled())
             .map(ItemStack::new)
             .forEach((k -> registration.addIngredientInfo(k, VanillaTypes.ITEM_STACK, TextUtils.getTranslation("jei.info.knife"))));
-        if (DelightfulConfig.verify("green_tea_leaf") && !Mods.loaded(Mods.FR)) {
+        if (Util.enabled("green_tea_leaf") && !Mods.loaded(Mods.FR)) {
             registration.addIngredientInfo(DelightfulItems.GREEN_TEA_LEAF.get().getDefaultInstance(), VanillaTypes.ITEM_STACK, Component.translatable(Delightful.MODID + ".green_tea_leaf.desc"));
         }
-        if (DelightfulConfig.verify("acorn")) {
+        if (Util.enabled("acorn")) {
             registration.addIngredientInfo(Util.gs(DelightfulItems.ACORN), VanillaTypes.ITEM_STACK, Component.translatable(Delightful.MODID + ".acorn.desc"));
         }
-        if (DelightfulConfig.verify("salmonberries")) {
+        if (Util.enabled("salmonberries")) {
             registration.addIngredientInfo(Util.gs(DelightfulItems.SALMONBERRIES), VanillaTypes.ITEM_STACK, Component.translatable(Delightful.MODID + ".salmonberries.desc"));
         }
-        if (DelightfulConfig.verify("mini_melon")) {
+        if (Util.enabled("mini_melon")) {
             registration.addIngredientInfo(Util.gs(DelightfulItems.MINI_MELON), VanillaTypes.ITEM_STACK, Component.translatable(Delightful.MODID + ".mini_melon.desc"));
         }
-        if (DelightfulConfig.verify("cantaloupe")) {
+        if (Util.enabled("cantaloupe")) {
             registration.addIngredientInfo(Util.gs(DelightfulItems.CANTALOUPE), VanillaTypes.ITEM_STACK, Component.translatable(Delightful.MODID + ".cantaloupe.desc").append(" ").append(Component.translatable(Delightful.MODID + ".sliceable.desc")));
         }
-        if (DelightfulConfig.verify("animal_fat")) {
+        if (Util.enabled("animal_fat")) {
             registration.addIngredientInfo(Util.gs(DelightfulItems.ANIMAL_FAT), VanillaTypes.ITEM_STACK, Component.translatable(Delightful.MODID + ".animal_fat.desc"));
         }
-        if (DelightfulConfig.verify("animal_oil_bottle")) {
+        if (Util.enabled("animal_oil_bottle")) {
             registration.addIngredientInfo(Util.gs(DelightfulItems.ANIMAL_OIL_BOTTLE), VanillaTypes.ITEM_STACK, Component.translatable(Delightful.MODID + ".animal_oil_bottle.desc"));
         }
         registration.addIngredientInfo(Items.MELON.getDefaultInstance(), VanillaTypes.ITEM_STACK, Component.translatable(Delightful.MODID + ".sliceable.desc"));

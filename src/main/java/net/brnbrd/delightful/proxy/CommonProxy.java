@@ -4,6 +4,7 @@ import net.brnbrd.delightful.common.Events;
 import net.brnbrd.delightful.common.ForgeEvents;
 import net.brnbrd.delightful.common.block.DelightfulBlocks;
 import net.brnbrd.delightful.common.item.DelightfulItems;
+import net.brnbrd.delightful.common.item.knife.KnifeEvents;
 import net.brnbrd.delightful.common.item.knife.Knives;
 import net.brnbrd.delightful.common.loot.DelightfulLootItemConditions;
 import net.brnbrd.delightful.common.loot.DelightfulLootModifiers;
@@ -18,8 +19,8 @@ public class CommonProxy {
     public void start() {
         final var modBus = FMLJavaModLoadingContext.get().getModEventBus();
         final var forgeBus = MinecraftForge.EVENT_BUS;
-        //DelightfulTiles.create(modBus);
-        forgeBus.register(ForgeEvents.class);
+        forgeBus.register(new ForgeEvents());
+        forgeBus.register(new KnifeEvents());
         modBus.register(Events.class);
         modBus.register(Generators.class);
         DelightfulBlocks.create(modBus);

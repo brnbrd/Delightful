@@ -3,7 +3,7 @@ package net.brnbrd.delightful.common.loot;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonSerializationContext;
-import net.brnbrd.delightful.common.DelightfulConfig;
+import net.brnbrd.delightful.Util;
 import net.minecraft.util.GsonHelper;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
@@ -22,7 +22,7 @@ public class LootItemEnabledCondition implements LootItemCondition {
 	}
 
 	@Override
-	public LootItemConditionType getType() {
+	public @NotNull LootItemConditionType getType() {
 		return DelightfulLootItemConditions.ENABLED.get();
 	}
 
@@ -35,8 +35,7 @@ public class LootItemEnabledCondition implements LootItemCondition {
 	 */
 	@Override
 	public boolean test(LootContext lootContext) {
-		return DelightfulConfig.CONFIG.stuff.containsKey(this.item) &&
-			DelightfulConfig.CONFIG.stuff.get(this.item).get();
+		return Util.enabled(this.item);
 	}
 
 	public static class Serializer implements net.minecraft.world.level.storage.loot.Serializer<LootItemEnabledCondition> {
@@ -50,7 +49,7 @@ public class LootItemEnabledCondition implements LootItemCondition {
 		/**
 		 * Deserialize a value by reading it from the JsonObject.
 		 */
-		public LootItemEnabledCondition deserialize(@NotNull JsonObject object, @NotNull JsonDeserializationContext context) {
+		public @NotNull LootItemEnabledCondition deserialize(@NotNull JsonObject object, @NotNull JsonDeserializationContext context) {
 			return new LootItemEnabledCondition(GsonHelper.getAsString(object, "item"));
 		}
 	}

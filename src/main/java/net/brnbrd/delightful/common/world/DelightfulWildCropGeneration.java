@@ -46,12 +46,12 @@ public class DelightfulWildCropGeneration extends WildCropGeneration {
 			Feature.RANDOM_PATCH, randomPatchConfig(DelightfulBlocks.CANTALOUPE.get(), 64, 3, BlockPredicate.matchesTag(BLOCK_BELOW, DelightfulBlockTags.CANTALOUPE_SPAWNS)));
 
 		PATCH_WILD_SALMONBERRIES = registerConditionalPlacement(Util.rl(Delightful.MODID, "patch_wild_salmonberries"),
-			FEATURE_PATCH_WILD_SALMONBERRIES, DelightfulConfig.verify("salmonberries") && DelightfulConfig.CHANCE_WILD_SALMONBERRIES.get() > 0, RarityFilter.onAverageOnceEvery(DelightfulConfig.CHANCE_WILD_SALMONBERRIES.get()), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
+			FEATURE_PATCH_WILD_SALMONBERRIES, Util.enabled("salmonberries") && DelightfulConfig.CHANCE_WILD_SALMONBERRIES.get() > 0, RarityFilter.onAverageOnceEvery(DelightfulConfig.CHANCE_WILD_SALMONBERRIES.get()), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
 
 		PATCH_MINI_MELON = registerConditionalPlacement(Util.rl(Delightful.MODID, "patch_mini_melon"),
-			FEATURE_PATCH_MINI_MELON, DelightfulConfig.verify("mini_melon") && DelightfulConfig.CHANCE_MINI_MELON.get() > 0, RarityFilter.onAverageOnceEvery(DelightfulConfig.CHANCE_MINI_MELON.get()), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
+			FEATURE_PATCH_MINI_MELON, Util.enabled("mini_melon") && DelightfulConfig.CHANCE_MINI_MELON.get() > 0, RarityFilter.onAverageOnceEvery(DelightfulConfig.CHANCE_MINI_MELON.get()), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
 
 		PATCH_CANTALOUPE = registerConditionalPlacement(Util.rl(Delightful.MODID, "patch_cantaloupe"),
-			FEATURE_PATCH_CANTALOUPE, DelightfulConfig.verify("cantaloupe") && DelightfulConfig.CHANCE_CANTALOUPE.get() > 0, RarityFilter.onAverageOnceEvery(DelightfulConfig.CHANCE_CANTALOUPE.get()), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
+			FEATURE_PATCH_CANTALOUPE, Util.enabled("cantaloupe") && DelightfulConfig.CHANCE_CANTALOUPE.get() > 0, RarityFilter.onAverageOnceEvery(DelightfulConfig.CHANCE_CANTALOUPE.get()), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
 	}
 }
