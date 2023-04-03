@@ -17,7 +17,7 @@ import vectorwing.farmersdelight.common.registry.ModEffects;
 
 public class EnderNectarItem extends DrinkItem {
     public EnderNectarItem(Properties properties) {
-        super(properties, ModEffects.NOURISHMENT, 2400, 0);
+        super(properties, ModEffects.NOURISHMENT, 2400, 0, false, true);
     }
 
     @Override

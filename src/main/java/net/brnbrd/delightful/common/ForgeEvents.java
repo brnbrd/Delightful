@@ -38,6 +38,8 @@ import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import vectorwing.farmersdelight.common.block.PieBlock;
+import vectorwing.farmersdelight.common.registry.ModBlocks;
+
 import java.util.List;
 import java.util.Objects;
 
@@ -98,7 +100,7 @@ public class ForgeEvents {
 	@SubscribeEvent
 	void onPieOverhaul(PlayerInteractEvent.RightClickBlock e) {
 		ItemStack stack = e.getItemStack();
-		if (!stack.isEmpty()) {
+		if (!stack.isEmpty() && !e.getLevel().getBlockState(e.getHitVec().getBlockPos()).is(ModBlocks.CUTTING_BOARD.get())) {
 			if (DelightfulConfig.PUMPKIN_PIE_OVERHAUL.get() && stack.is(Items.PUMPKIN_PIE)) {
 				tryPlacePie((PieBlock) DelightfulBlocks.PUMPKIN_PIE.get(), e);
 				return;
@@ -128,6 +130,7 @@ public class ForgeEvents {
 		e.setUseItem(Event.Result.DENY);
 		e.setUseBlock(Event.Result.DENY);
 		if (!e.isCanceled() && placePie(pie, new BlockPlaceContext(e.getEntity(), e.getHand(), e.getEntity().getItemInHand(e.getHand()), e.getHitVec()))) {
+			e.setCancellationResult(InteractionResult.sidedSuccess(e.getLevel().isClientSide()));
 			e.setCanceled(true);
 		}
 	}
@@ -160,7 +163,7 @@ public class ForgeEvents {
 	}
 
 	// Adds "placeable" tooltip to compat pies
-	@SubscribeEvent (priority = EventPriority.HIGHEST)
+	@SubscribeEvent (priority = EventPriority.NORMAL)
 	void onPieTooltip(ItemTooltipEvent e) {
 		ItemStack stack = e.getItemStack();
 		if ((stack.getItem() instanceof BlockItem b && b.getBlock() instanceof PieBlock) ||

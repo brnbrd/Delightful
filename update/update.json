@@ -34,12 +34,12 @@
     "3.1.4": "Removed disabled items from Creative Tab and JEI. Override some recipes from Wild Berries. Fix venison chops dupe.",
     "3.2": "Added Coconut Curry & Sinigang.",
     "3.2.1": "Renamed Goat to Chevon and updated texture. Slightly changed Sinigang texture. Recipe, tag, and other miscellaneous fixes.",
-    "3.2.2": "Updated to Forge 43.2."
+    "3.2.3": "No changelog."
   },
   "promos": {
     "1.18.2-latest": "2.0",
     "1.18.2-recommended": "2.0",
-    "1.19-latest": "3.2.2",
-    "1.19-recommended": "3.2.2"
+    "1.19-latest": "3.2.3",
+    "1.19-recommended": "3.2.3"
   }
 }

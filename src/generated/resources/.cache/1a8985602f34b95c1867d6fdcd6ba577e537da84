@@ -1,4 +1,4 @@
-// 1.19.2	2023-02-04T10:16:51.9543643	delightful
-ff13fafcc6c847d2ce8a4262842bf1316dc580ea data/delightful/tags/worldgen/biome/cantaloupe_spawns.json
-832581beee9dcc935e17a4bf4291e980990d257a data/delightful/tags/worldgen/biome/mini_melon_spawns.json
-6b35771c8d400b0921c04386d79e88b834c282ad data/delightful/tags/worldgen/biome/salmonberry_spawns.json
+// 1.19.2	2023-04-02T18:10:54.1012073	delightful
+56dd5fb45d876faf2b72731f0d1531296baa5e35 data/delightful/tags/entity_types/drops_acorn.json
+8402c24b8872a973f5f97bfec0ac81ef2b167b89 data/delightful/tags/entity_types/drops_raw_goat.json
+20164735f562aff9a77de0ffb64ad7d8dc0c7fca data/delightful/tags/entity_types/fatty_animals.json

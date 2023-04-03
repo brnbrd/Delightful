@@ -11,8 +11,13 @@ import java.util.function.Supplier;
 import org.jetbrains.annotations.NotNull;
 
 public class CaffeinatedItem extends DrinkItem {
+
   public CaffeinatedItem(Properties properties, Supplier<MobEffect> effect, int duration, int amplifier, float heal, int feed) {
-    super(properties, effect, duration, amplifier, heal, feed);
+    super(properties, effect, duration, amplifier, heal, feed, true, false);
+  }
+
+  public CaffeinatedItem(Properties properties, Supplier<MobEffect> effect, int duration, int amplifier, float heal, int feed, boolean hasPotionEffectTooltip, boolean hasCustomTooltip) {
+    super(properties, effect, duration, amplifier, heal, feed, hasPotionEffectTooltip, hasCustomTooltip);
   }
 
   @Override

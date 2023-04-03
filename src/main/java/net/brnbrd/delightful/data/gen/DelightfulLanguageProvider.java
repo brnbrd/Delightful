@@ -100,7 +100,6 @@ public class DelightfulLanguageProvider extends LanguageProvider {
         addBlock(DelightfulBlocks.WILD_SALMONBERRIES, "Wild Salmonberries");
         addBlock(DelightfulBlocks.QUARTZ_CABINET, "Quartz Cabinet");
         addBlock(DelightfulBlocks.BASALT_CABINET, "Basalt Cabinet");
-        add("farmersdelight.tooltip.prickly_pear_juice", "Very Saturating");
         add("farmersdelight.tooltip.azalea_tea", "Saturating & Healthy");
         add("farmersdelight.tooltip.lavender_tea", "Very Healthy");
         add("farmersdelight.tooltip.matcha_latte", "Healthy");

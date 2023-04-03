@@ -8,18 +8,18 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
-import vectorwing.farmersdelight.common.item.MelonJuiceItem;
+import vectorwing.farmersdelight.common.item.DrinkableItem;
 import java.util.function.Supplier;
 
-public class DrinkItem extends MelonJuiceItem {
+public class DrinkItem extends DrinkableItem {
     private final Supplier<MobEffect> effect;
     private final int duration;
     private final int amplifier;
     private final float heal;
     private final int feed;
 
-    public DrinkItem(Item.Properties properties, Supplier<MobEffect> effect, int duration, int amplifier) {
-        super(properties);
+    public DrinkItem(Item.Properties properties, Supplier<MobEffect> effect, int duration, int amplifier, boolean hasPotionEffectTooltip, boolean hasCustomTooltip) {
+        super(properties, hasPotionEffectTooltip, hasCustomTooltip);
         this.effect = effect;
         this.duration = duration;
         this.amplifier = amplifier;
@@ -27,17 +27,8 @@ public class DrinkItem extends MelonJuiceItem {
         this.feed = 0;
     }
 
-    public DrinkItem(Item.Properties properties, Supplier<MobEffect> effect, int duration, int amplifier, float heal) {
-        super(properties);
-        this.effect = effect;
-        this.duration = duration;
-        this.amplifier = amplifier;
-        this.heal = heal;
-        this.feed = 0;
-    }
-
-    public DrinkItem(Item.Properties properties, Supplier<MobEffect> effect, int duration, int amplifier, float heal, int feed) {
-        super(properties);
+    public DrinkItem(Item.Properties properties, Supplier<MobEffect> effect, int duration, int amplifier, float heal, int feed, boolean hasPotionEffectTooltip, boolean hasCustomTooltip) {
+        super(properties, hasPotionEffectTooltip, hasCustomTooltip);
         this.effect = effect;
         this.duration = duration;
         this.amplifier = amplifier;

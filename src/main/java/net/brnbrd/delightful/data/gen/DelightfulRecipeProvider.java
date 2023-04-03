@@ -251,7 +251,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .requires(DelightfulItemTags.SUGAR)
                 .unlockedBy("has_ice_cubes", has(DelightfulItemTags.ICE_CUBES)),
             "food/matcha_ice_cream", finished, enabled("matcha_ice_cream"), not(tagEmpty(DelightfulItemTags.ICE_CUBES)));
-        wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.SALMONBERRY_ICE_CREAM.get(), 1)
+        wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.MATCHA_ICE_CREAM.get(), 1)
                 .requires(Items.BOWL)
                 .requires(DelightfulItems.MATCHA.get())
                 .requires(ForgeTags.MILK)

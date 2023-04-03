@@ -20,6 +20,7 @@ import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
 import vectorwing.farmersdelight.common.utility.TextUtils;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.Collection;
 
 @JeiPlugin
 @ParametersAreNonnullByDefault
@@ -32,6 +33,7 @@ public class JEIPlugin implements IModPlugin
     @Override
     public void registerRecipes(IRecipeRegistration registration) {
         // Remove all disabled Items from JEI
+        Collection<ItemStack> initialStacks = registration.getIngredientManager().getAllItemStacks();
         registration.getIngredientManager().removeIngredientsAtRuntime(VanillaTypes.ITEM_STACK,
             DelightfulItems.ITEMS.getEntries().stream()
                 .filter(i -> {
@@ -41,6 +43,7 @@ public class JEIPlugin implements IModPlugin
                     return !(Util.enabled(i)); // Keep only Items that are not enabled in the config
                 })
                 .map(Util::gs) // Get ItemStack
+                .filter(initialStacks::contains)
                 .toList());
         // Add Knife translations
         DelightfulItems.ITEMS.getEntries().stream()
