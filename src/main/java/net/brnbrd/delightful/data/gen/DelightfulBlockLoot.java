@@ -108,6 +108,10 @@ public class DelightfulBlockLoot extends BlockLoot {
                     .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F)))
                     .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE)))));
         this.dropSelf(DelightfulBlocks.SALMONBERRY_BUSH.get());
+
+        // Ice Cream Blocks
+        this.dropSelf(DelightfulBlocks.SALMONBERRY_ICE_CREAM_BLOCK.get());
+        this.dropSelf(DelightfulBlocks.MATCHA_ICE_CREAM_BLOCK.get());
     }
 
     @Override

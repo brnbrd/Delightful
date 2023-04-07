@@ -1,0 +1,37 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "animal_fat",
+              "type": "delightful:enabled"
+            },
+            {
+              "item": "immersive_weathering:tallow",
+              "type": "forge:item_exists"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "delightful:animal_fat"
+          },
+          {
+            "item": "delightful:animal_fat"
+          }
+        ],
+        "result": {
+          "item": "immersive_weathering:tallow",
+          "count": 1
+        }
+      }
+    }
+  ]
+}

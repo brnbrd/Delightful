@@ -53,6 +53,8 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
         this.pieBlock(DelightfulBlocks.NIGHTSHADE_BERRY_PIE);
         this.cabinet(DelightfulBlocks.BASALT_CABINET.get());
         this.cabinet(DelightfulBlocks.QUARTZ_CABINET.get());
+        this.simpleBlock(DelightfulBlocks.SALMONBERRY_ICE_CREAM_BLOCK.get());
+        this.simpleBlock(DelightfulBlocks.MATCHA_ICE_CREAM_BLOCK.get());
     }
 
     // Adapted from: https://github.com/vectorwing/FarmersDelight/blob/1.19/src/main/java/vectorwing/farmersdelight/data/BlockStates.java

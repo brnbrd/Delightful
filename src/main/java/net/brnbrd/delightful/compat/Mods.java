@@ -1,7 +1,11 @@
 package net.brnbrd.delightful.compat;
 
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraftforge.fml.ModList;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.function.Supplier;
 
 public class Mods {
 	public static final String AN = "ars_nouveau";
@@ -16,7 +20,9 @@ public class Mods {
 	public static final String FUS = "fusion";
 	public static final String LE = "lolenderite";
 	public static final String MEKT = "mekanismtools";
+	public static final String N = "neapolitan";
 	public static final String RC = "rootsclassic";
+	public static final String RF = "respiteful";
 	public static final String RL = "rottenleather";
 	public static final String SO = "simpleores";
 	public static final String TF = "twilightforest";
@@ -33,5 +39,19 @@ public class Mods {
 			}
 		}
 		return true;
+	}
+
+	public static Supplier<MobEffect> getVitality() {
+		if (loaded(RF)) {
+			return RFCompat.VITALITY;
+		}
+		return () -> MobEffects.DIG_SPEED;
+	}
+
+	public static Supplier<MobEffect> getCaffeinated() {
+		if (loaded(FR)) {
+			return FRCompat.CAFFEINATED;
+		}
+		return () -> MobEffects.DIG_SPEED;
 	}
 }

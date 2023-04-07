@@ -28,6 +28,9 @@
           },
           {
             "tag": "forge:fruits/salmonberries"
+          },
+          {
+            "tag": "forge:nuts/acorn"
           }
         ],
         "result": {

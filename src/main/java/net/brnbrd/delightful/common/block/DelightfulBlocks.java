@@ -60,6 +60,11 @@ public class DelightfulBlocks {
         () -> new PieBlock(BlockBehaviour.Properties.copy(ModBlocks.APPLE_PIE.get()), DelightfulItems.CRIMSON_BERRY_PIE_SLICE));
     public static final RegistryObject<Block> ACORN_SACK = BLOCKS.register("acorn_sack",
         () ->  new Block(BlockBehaviour.Properties.of(Material.WOOL, MaterialColor.COLOR_BROWN).strength(.5f).sound(SoundType.WOOL)));
+    public static final RegistryObject<Block> SALMONBERRY_ICE_CREAM_BLOCK = BLOCKS.register("salmonberry_ice_cream_block",
+        () -> new Block(BlockBehaviour.Properties.of(Material.SNOW, MaterialColor.COLOR_ORANGE).strength(0.2F).sound(SoundType.SNOW)));
+    public static final RegistryObject<Block> MATCHA_ICE_CREAM_BLOCK = BLOCKS.register("matcha_ice_cream_block",
+        () -> new Block(BlockBehaviour.Properties.of(Material.SNOW, MaterialColor.COLOR_LIGHT_GREEN).strength(0.2F).sound(SoundType.SNOW)));
+
 
     public static RegistryObject<Block> registerBlock(String name, Supplier<Block> block) {
         return BLOCKS.register(name, block);

@@ -1,0 +1,44 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "salmonberries"
+            },
+            {
+              "type": "delightful:enabled",
+              "value": "salmonberry_gummy"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "cookingtime": 200,
+        "experience": 1.0,
+        "ingredients": [
+          {
+            "tag": "forge:fruits/salmonberries"
+          },
+          {
+            "item": "minecraft:sugar"
+          },
+          {
+            "item": "minecraft:honey_bottle"
+          },
+          {
+            "item": "minecraft:kelp"
+          }
+        ],
+        "result": {
+          "item": "delightful:salmonberry_gummy"
+        }
+      }
+    }
+  ]
+}

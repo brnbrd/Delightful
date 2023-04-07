@@ -13,11 +13,10 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.network.NetworkHooks;
 import org.jetbrains.annotations.NotNull;
-import vectorwing.farmersdelight.common.registry.ModEffects;
 
 public class EnderNectarItem extends DrinkItem {
     public EnderNectarItem(Properties properties) {
-        super(properties, ModEffects.NOURISHMENT, 2400, 0, false, true);
+        super(properties, 0.0F, false, true);
     }
 
     @Override

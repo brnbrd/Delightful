@@ -1,0 +1,46 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "matcha_ice_cream_block"
+            },
+            {
+              "type": "delightful:enabled",
+              "value": "matcha_ice_cream"
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "neapolitan"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "i": {
+            "item": "delightful:matcha_ice_cream"
+          },
+          "s": {
+            "item": "minecraft:snow_block"
+          }
+        },
+        "pattern": [
+          "sss",
+          "sis",
+          "sss"
+        ],
+        "result": {
+          "count": 8,
+          "item": "delightful:matcha_ice_cream_block"
+        }
+      }
+    }
+  ]
+}

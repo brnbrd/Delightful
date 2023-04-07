@@ -26,6 +26,7 @@ import net.minecraft.world.item.alchemy.PotionUtils;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.ConditionalRecipe;
 import net.minecraftforge.common.crafting.StrictNBTIngredient;
@@ -221,6 +222,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .requires(DelightfulItems.CACTUS_STEAK.get())
                 .requires(Items.CARROT)
                 .requires(DelightfulItemTags.FRUITS_SALMONBERRIES)
+                .requires(DelightfulItemTags.NUTS_ACORN)
                 .unlockedBy("has_cactus_steak", has(DelightfulItems.CACTUS_STEAK.get())),
             "food/field_salad", finished, enabled("field_salad"));
         wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.SALMONBERRY_SACK.get(), 1)
@@ -411,12 +413,12 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             "food/cooking/coconut_curry", finished, enabled("coconut_curry"), not(tagEmpty(DelightfulItemTags.COCONUT)), not(tagEmpty(DelightfulItemTags.CROPS_GINGER)));
         wrap(CookingPotRecipeBuilder.cookingPotRecipe(
                     DelightfulItems.SINIGANG.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
-                .addIngredient(ForgeTags.RAW_PORK)
                 .addIngredient(ForgeTags.RAW_FISHES)
-                .addIngredient(DelightfulItemTags.CROPS_GINGER)
-                .addIngredient(ForgeTags.CROPS_TOMATO)
-                .addIngredient(DelightfulItemTags.FRUITS_CITRUS)
+                .addIngredient(ModItems.TOMATO_SAUCE.get())
                 .addIngredient(ForgeTags.CROPS_ONION)
+                .addIngredient(ForgeTags.RAW_PORK)
+                .addIngredient(DelightfulItemTags.CROPS_GINGER)
+                .addIngredient(DelightfulItemTags.FRUITS_CITRUS)
                 .unlockedBy("has_ginger", has(DelightfulItemTags.CROPS_GINGER)),
             "food/cooking/sinigang", finished, enabled("sinigang"), not(tagEmpty(DelightfulItemTags.CROPS_GINGER)), not(tagEmpty(DelightfulItemTags.FRUITS_CITRUS)));
         wrap(CookingPotRecipeBuilder.cookingPotRecipe(
@@ -486,6 +488,30 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .requires(DelightfulItems.MINI_MELON.get())
                 .unlockedBy("has_mini_melon", has(DelightfulItems.MINI_MELON.get())),
             "melon_slice", finished, enabled("mini_melon"));
+        wrap(CookingPotRecipeBuilder.cookingPotRecipe(DelightfulItems.SALMONBERRY_GUMMY.get(), 1, 200, 1.0F)
+                .addIngredient(DelightfulItemTags.FRUITS_SALMONBERRIES)
+                .addIngredient(Items.SUGAR)
+                .addIngredient(Items.HONEY_BOTTLE)
+                .addIngredient(Items.KELP)
+                .unlockedBy("has_salmonberries", has(DelightfulItemTags.FRUITS_SALMONBERRIES)),
+            "gummy/salmonberries", finished, enabled(DelightfulItems.SALMONBERRIES), enabled(DelightfulItems.SALMONBERRY_GUMMY));
+        wrap(shaped(DelightfulItems.SALMONBERRY_ICE_CREAM_BLOCK, 8)
+                .pattern("sss")
+                .pattern("sis")
+                .pattern("sss")
+                .define('s', Blocks.SNOW_BLOCK)
+                .define('i', DelightfulItems.SALMONBERRY_ICE_CREAM.get())
+                .unlockedBy("has_salmonberry_ice_cream", has(DelightfulItems.SALMONBERRY_ICE_CREAM.get())),
+            "salmonberry_ice_cream_block", finished, enabled(DelightfulItems.SALMONBERRY_ICE_CREAM_BLOCK), enabled(DelightfulItems.SALMONBERRY_ICE_CREAM), modLoaded("neapolitan"));
+        wrap(shaped(DelightfulItems.MATCHA_ICE_CREAM_BLOCK, 8)
+                .pattern("sss")
+                .pattern("sis")
+                .pattern("sss")
+                .define('s', Blocks.SNOW_BLOCK)
+                .define('i', DelightfulItems.MATCHA_ICE_CREAM.get())
+                .unlockedBy("has_matcha_ice_cream", has(DelightfulItems.MATCHA_ICE_CREAM.get())),
+            "matcha_ice_cream_block", finished, enabled(DelightfulItems.MATCHA_ICE_CREAM_BLOCK), enabled(DelightfulItems.MATCHA_ICE_CREAM), modLoaded("neapolitan"));
+
 
         // Unwrappables
         ConditionalRecipe.builder()

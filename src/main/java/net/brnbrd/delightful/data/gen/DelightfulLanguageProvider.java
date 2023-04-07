@@ -56,6 +56,7 @@ public class DelightfulLanguageProvider extends LanguageProvider {
         addItem(DelightfulItems.GREEN_TEA_LEAF, "Green Tea Leaf");
         addItem(DelightfulItems.SALMONBERRIES, "Salmonberries");
         addItem(DelightfulItems.SALMONBERRY_PIPS, "Salmonberry Pips");
+        addItem(DelightfulItems.SALMONBERRY_GUMMY, "Salmonberry Gummy");
         addItem(DelightfulItems.SALMONBERRY_PIE_SLICE, "Slice of Salmonberry Pie");
         addItem(DelightfulItems.PUMPKIN_PIE_SLICE, "Slice of Pumpkin Pie");
         addItem(DelightfulItems.SOURCE_BERRY_PIE_SLICE, "Slice of Source Berry Pie");
@@ -100,8 +101,8 @@ public class DelightfulLanguageProvider extends LanguageProvider {
         addBlock(DelightfulBlocks.WILD_SALMONBERRIES, "Wild Salmonberries");
         addBlock(DelightfulBlocks.QUARTZ_CABINET, "Quartz Cabinet");
         addBlock(DelightfulBlocks.BASALT_CABINET, "Basalt Cabinet");
-        add("farmersdelight.tooltip.azalea_tea", "Saturating & Healthy");
-        add("farmersdelight.tooltip.lavender_tea", "Very Healthy");
+        addBlock(DelightfulBlocks.SALMONBERRY_ICE_CREAM_BLOCK, "Salmonberry Ice Cream Block");
+        addBlock(DelightfulBlocks.MATCHA_ICE_CREAM_BLOCK, "Matcha Ice Cream Block");
         add("farmersdelight.tooltip.matcha_latte", "Healthy");
         add("farmersdelight.tooltip.berry_matcha_latte", "Healthy");
         add("farmersdelight.tooltip.ender_nectar", "Otherworldly");

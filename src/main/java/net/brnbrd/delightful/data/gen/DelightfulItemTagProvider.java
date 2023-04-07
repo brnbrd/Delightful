@@ -44,15 +44,19 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.add(DelightfulItems.BASALT_CABINET.get())
 			.add(DelightfulItems.QUARTZ_CABINET.get());
 
+		// Collector's Reap
+		this.tag(DelightfulItemTags.GUMMIES)
+			.add(DelightfulItems.SALMONBERRY_GUMMY.get());
+
 		// Forge
 		this.tag(DelightfulItemTags.SCAVENGING_TOOLS)
 			.addTag(ForgeTags.TOOLS_KNIVES)
 			.addOptional(Util.rl("nethersdelight", "scavenging_tools"))
 			.addOptional(Util.rl("nethersdelight", "tools/machetes"))
 			.addOptional(Util.rl("forge", "tools/machetes"));
-		this.tag(DelightfulItemTags.BARK)
-			.add(ModItems.TREE_BARK.get())
-			.addOptionalTag(Util.rl("immersive_weathering", "bark"));
+		this.tag(DelightfulItemTags.LAVENDER)
+			.addOptional(Util.rl("biomesoplenty", "lavender"))
+			.addOptional(Util.rl("quark", "lavender_blossom_leaves"));
 		this.tag(DelightfulItemTags.FRUITS_APPLE).add(Items.APPLE);
 		this.tag(DelightfulItemTags.FRUITS_MELON).add(Items.MELON_SLICE);
 		this.tag(DelightfulItemTags.FRUITS_CANTALOUPE).add(DelightfulItems.CANTALOUPE_SLICE.get());

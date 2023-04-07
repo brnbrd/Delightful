@@ -15,9 +15,12 @@ public class DelightfulItemTags {
 	// Ecologics
 	public static final TagKey<Item> COOKED_PRICKLY_PEAR = Util.it("ecologics", "cooked_prickly_pear");
 
+	// Collector's Reap
+	public static final TagKey<Item> GUMMIES = Util.it("collectorsreap", "gummies");
+
 	// Forge
 	public static final TagKey<Item> SCAVENGING_TOOLS = forge("tools/scavenging");
-	public static final TagKey<Item> BARK = forge("bark");
+	public static final TagKey<Item> LAVENDER = forge("lavender");
 	public static final TagKey<Item> FRUITS = forge("fruits");
 	public static final TagKey<Item> FRUITS_APPLE = forge("fruits/apple");
 	public static final TagKey<Item> FRUITS_KIWI = forge("fruits/kiwi");

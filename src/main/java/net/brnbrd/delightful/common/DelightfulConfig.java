@@ -22,12 +22,14 @@ public class DelightfulConfig {
     public static ForgeConfigSpec.BooleanValue GIVE_SLICED_DIRECTLY;
     public static ForgeConfigSpec.BooleanValue MELON_JUICING;
     public static ForgeConfigSpec.BooleanValue PUMPKIN_PIE_OVERHAUL;
-    private static final ImmutableList<String> disabled_by_default_knives = ImmutableList.of(
+    private static final ImmutableList<String> disabled_by_default_items = ImmutableList.of(
         "copper_knife",
         "bone_knife",
         "amethyst_knife",
         "emerald_knife",
-        "lapis_lazuli_knife"
+        "lapis_lazuli_knife",
+        "raw_goat",
+        "cooked_goat"
     );
 
     DelightfulConfig(ForgeConfigSpec.Builder builder) {
@@ -39,21 +41,14 @@ public class DelightfulConfig {
                 .map(obj -> obj.getId().getPath())
                 .filter(path -> path.contains("_knife"))
                 .sorted()
-                .forEach(knife -> put(builder, stuff, knife, !disabled_by_default_knives.contains(knife)));
-        builder.pop();
-        builder.push("Cabinets");
-            items.stream()
-                    .map(obj -> obj.getId().getPath())
-                    .filter(path -> path.contains("_cabinet"))
-                    .sorted()
-                    .forEach(cabinet -> put(builder, stuff, cabinet, true));
+                .forEach(knife -> put(builder, stuff, knife, !disabled_by_default_items.contains(knife)));
         builder.pop();
         builder.push("Registry");
             items.stream()
                     .map(obj -> obj.getId().getPath())
-                    .filter(path -> !path.contains("_knife") && !path.contains("_cabinet") && !path.equals("pizza"))
+                    .filter(path -> !path.contains("_knife"))
                     .sorted()
-                    .forEach(not -> put(builder, stuff, not, true));
+                    .forEach(not -> put(builder, stuff, not, !disabled_by_default_items.contains(not)));
             CRAFT_NUT_MILK = builder
               .comment("Allow cooking milk from nuts")
               .define("nut_milk", true);
@@ -76,13 +71,13 @@ public class DelightfulConfig {
         builder.push("Generation");
             CHANCE_WILD_SALMONBERRIES = builder
               .comment("Chance of generating clusters. Smaller value = more frequent (once every ...). To disable, set the item Salmonberries to false above.")
-              .defineInRange("chance_wild_salmonberries", 30, 0, Integer.MAX_VALUE);
+              .defineInRange("chance_wild_salmonberries", 35, 0, Integer.MAX_VALUE);
             CHANCE_MINI_MELON = builder
               .comment("Chance of generating clusters. Smaller value = more frequent (once every ...). To disable, set the item Mini Melon to false above.")
-              .defineInRange("chance_mini_melon", 30, 0, Integer.MAX_VALUE);
+              .defineInRange("chance_mini_melon", 35, 0, Integer.MAX_VALUE);
             CHANCE_CANTALOUPE = builder
             .comment("Chance of generating clusters. Smaller value = more frequent (once every ...). To disable, set the item Cantaloupe to false above.")
-            .defineInRange("chance_cantaloupe", 50, 0, Integer.MAX_VALUE);
+            .defineInRange("chance_cantaloupe", 55, 0, Integer.MAX_VALUE);
         builder.pop();
     }
 
