@@ -176,18 +176,11 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .requires(Items.HONEY_BOTTLE)
                 .unlockedBy("has_walnut", has(DelightfulItemTags.NUTS_WALNUT)),
             "food/honey_glazed_walnut", finished, enabled("honey_glazed_walnut"), not(tagEmpty(DelightfulItemTags.NUTS_WALNUT)));
-        wrap(SimpleCookingRecipeBuilder.smelting(Ingredient.of(DelightfulItemTags.TEA_LEAVES_GREEN),
-                DelightfulItems.MATCHA.get(), 0.1F, 200)
+        wrap(CookingPotRecipeBuilder.cookingPotRecipe(
+                    DelightfulItems.MATCHA.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
+                .addIngredient(Ingredient.of(DelightfulItemTags.TEA_LEAVES_GREEN), 2)
                 .unlockedBy("has_green_tea_leaves", has(DelightfulItemTags.TEA_LEAVES_GREEN)),
-            "smelting/green_tea_leaves", finished, enabled("matcha"), not(tagEmpty(DelightfulItemTags.TEA_LEAVES_GREEN)));
-        wrap(SimpleCookingRecipeBuilder.smoking(Ingredient.of(DelightfulItemTags.TEA_LEAVES_GREEN),
-                DelightfulItems.MATCHA.get(), 0.1F, 100)
-                .unlockedBy("has_green_tea_leaves", has(DelightfulItemTags.TEA_LEAVES_GREEN)),
-            "smoking/green_tea_leaves", finished, enabled("matcha"), not(tagEmpty(DelightfulItemTags.TEA_LEAVES_GREEN)));
-        wrap(SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(DelightfulItemTags.TEA_LEAVES_GREEN),
-                    DelightfulItems.MATCHA.get(), 0.1F, 400)
-                .unlockedBy("has_green_tea_leaves", has(DelightfulItemTags.TEA_LEAVES_GREEN)),
-            "campfire/green_tea_leaves", finished, enabled("matcha"), not(tagEmpty(DelightfulItemTags.TEA_LEAVES_GREEN)));
+            "cooking/green_tea_leaves", finished, enabled("matcha"), or(enabled(DelightfulItems.GREEN_TEA_LEAF), not(tagEmpty(DelightfulItemTags.TEA_LEAVES_GREEN))));
         wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.MATCHA_LATTE.get(), 1)
                 .requires(Items.GLASS_BOTTLE)
                 .requires(ForgeTags.MILK)

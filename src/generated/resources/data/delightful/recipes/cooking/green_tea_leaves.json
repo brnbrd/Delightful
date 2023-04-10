@@ -1,0 +1,50 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "matcha"
+            },
+            {
+              "type": "forge:or",
+              "values": [
+                {
+                  "type": "delightful:enabled",
+                  "value": "green_tea_leaf"
+                },
+                {
+                  "type": "forge:not",
+                  "value": {
+                    "type": "forge:tag_empty",
+                    "tag": "forge:tea_leaves/green"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "cookingtime": 200,
+        "experience": 0.35,
+        "ingredients": [
+          {
+            "tag": "forge:tea_leaves/green"
+          },
+          {
+            "tag": "forge:tea_leaves/green"
+          }
+        ],
+        "result": {
+          "item": "delightful:matcha"
+        }
+      }
+    }
+  ]
+}

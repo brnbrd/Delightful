@@ -18,7 +18,7 @@ public class Nutrition {
         .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3600, 0), 1.0F).build();
     public static final FoodProperties CRAB_RANGOON = (new FoodProperties.Builder()).nutrition(9).saturationMod(0.4F).build();
     public static final FoodProperties CHUNKWICH = (new FoodProperties.Builder()).nutrition(11).saturationMod(0.3F)
-        .effect(() -> new MobEffectInstance(MobEffects.HUNGER, 10, 0), 0.5F).build();
+        .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 600, 0), 1.0F).build();
     public static final FoodProperties CHUNK_NUGGET = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.4F).build();
     public static final FoodProperties JELLY_BOTTLE = (new FoodProperties.Builder()).nutrition(5).saturationMod(0.3F).build();
     public static final FoodProperties GLOW_JELLY_BOTTLE = (new FoodProperties.Builder()).nutrition(5).saturationMod(0.3F)
@@ -61,14 +61,14 @@ public class Nutrition {
         .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 1200, 0), 1.0F)
         .effect(() -> new MobEffectInstance(Mods.getCaffeinated().get(), 200, 0), 1.0F).build();
     public static final FoodProperties MATCHA_LATTE = (new FoodProperties.Builder()).alwaysEat().nutrition(6).saturationMod(0.5F)
-        .effect(() -> new MobEffectInstance(Mods.getVitality().get(), 600, 1), 1.0F)
+        .effect(() -> new MobEffectInstance(Mods.getVitality().get(), 1200, 1), 1.0F)
         .effect(() -> new MobEffectInstance(Mods.getCaffeinated().get(), 1200, 0), 1.0F).build();
     public static final FoodProperties BERRY_MATCHA_LATTE = (new FoodProperties.Builder()).alwaysEat().nutrition(8).saturationMod(0.65F)
-        .effect(() -> new MobEffectInstance(Mods.getVitality().get(), 600, 1), 1.0F)
+        .effect(() -> new MobEffectInstance(Mods.getVitality().get(), 1200, 1), 1.0F)
         .effect(() -> new MobEffectInstance(Mods.getCaffeinated().get(), 1200, 0), 1.0F).build();
     public static final FoodProperties MATCHA_ICE_CREAM = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.5F)
         .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 2), 1.0F)
-        .effect(() -> new MobEffectInstance(Mods.getVitality().get(), 600, 1), 1.0F)
+        .effect(() -> new MobEffectInstance(Mods.getVitality().get(), 1200, 1), 1.0F)
         .effect(() -> new MobEffectInstance(Mods.getCaffeinated().get(), 1200, 0), 1.0F).build();
     public static final FoodProperties SALMONBERRY_ICE_CREAM = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.4F)
         .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 2), 1.0F)

@@ -16,7 +16,7 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:smoking/green_tea_leaves"
+              "recipe": "delightful:cooking/green_tea_leaves"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
@@ -29,7 +29,7 @@
         ],
         "rewards": {
           "recipes": [
-            "delightful:smoking/green_tea_leaves"
+            "delightful:cooking/green_tea_leaves"
           ]
         }
       },
@@ -42,11 +42,20 @@
               "value": "matcha"
             },
             {
-              "type": "forge:not",
-              "value": {
-                "type": "forge:tag_empty",
-                "tag": "forge:tea_leaves/green"
-              }
+              "type": "forge:or",
+              "values": [
+                {
+                  "type": "delightful:enabled",
+                  "value": "green_tea_leaf"
+                },
+                {
+                  "type": "forge:not",
+                  "value": {
+                    "type": "forge:tag_empty",
+                    "tag": "forge:tea_leaves/green"
+                  }
+                }
+              ]
             }
           ]
         }
