@@ -3,9 +3,11 @@ package net.brnbrd.delightful.data.gen;
 import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.block.DelightfulBlocks;
+import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.compat.BYGCompat;
 import net.brnbrd.delightful.compat.Mods;
 import net.brnbrd.delightful.data.tags.DelightfulBlockTags;
+import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.tags.BlockTags;
@@ -72,6 +74,9 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 		this.tag(BlockTags.MINEABLE_WITH_HOE)
 			.add(DelightfulBlocks.ACORN_SACK.get())
 			.add(DelightfulBlocks.SALMONBERRY_SACK.get());
+
+		this.tag(DelightfulBlockTags.SUMMER_CROPS)
+			.add(DelightfulBlocks.SALMONBERRY_BUSH.get());
 	}
 
 	/**

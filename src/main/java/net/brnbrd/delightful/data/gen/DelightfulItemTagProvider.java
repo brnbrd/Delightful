@@ -330,6 +330,9 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Util.rl(Mods.FR, "dandelion_tea"))
 			.addOptional(Util.rl(Mods.FR, "purulent_tea"))
 			.addOptional(Util.rl(Mods.FR, "gamblers_tea"));
+
+		this.tag(DelightfulItemTags.SUMMER_CROPS)
+			.add(DelightfulItems.SALMONBERRY_PIPS.get());
 	}
 
 	/**

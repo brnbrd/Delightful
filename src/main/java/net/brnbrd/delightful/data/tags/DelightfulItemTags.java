@@ -134,6 +134,12 @@ public class DelightfulItemTags {
 	// Create
 	public static final TagKey<Item> UPRIGHT_ON_BELT = Util.it("create", "upright_on_belt");
 
+	// Serene Seasons
+	public static final TagKey<Item> WINTER_CROPS = Util.it("sereneseasons", "winter_crops");
+	public static final TagKey<Item> SUMMER_CROPS = Util.it("sereneseasons", "summer_crops");
+	public static final TagKey<Item> AUTUMN_CROPS = Util.it("sereneseasons", "autumn_crops");
+	public static final TagKey<Item> SPRING_CROPS = Util.it("sereneseasons", "spring_crops");
+
 	private static TagKey<Item> forge(String name) {
 		return Util.it("forge", name);
 	}
