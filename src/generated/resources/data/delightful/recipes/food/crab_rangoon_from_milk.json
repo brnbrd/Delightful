@@ -18,18 +18,17 @@
               }
             },
             {
-              "type": "forge:not",
-              "value": {
-                "type": "forge:tag_empty",
-                "tag": "forge:cheese"
-              }
-            },
-            {
-              "type": "forge:not",
-              "value": {
-                "type": "delightful:enabled",
-                "value": "use_milk_tag"
-              }
+              "type": "forge:or",
+              "values": [
+                {
+                  "type": "forge:tag_empty",
+                  "tag": "forge:cheese"
+                },
+                {
+                  "type": "delightful:enabled",
+                  "value": "use_milk_tag"
+                }
+              ]
             }
           ]
         }
@@ -41,7 +40,7 @@
             "tag": "forge:dough/wheat"
           },
           {
-            "tag": "forge:cheese"
+            "tag": "forge:milk"
           },
           {
             "tag": "forge:cooked_crab"

@@ -46,6 +46,20 @@
             {
               "type": "forge:tag_empty",
               "tag": "some_assembly_required:burger_bun"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:cheese"
+              }
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "delightful:enabled",
+                "value": "use_milk_tag"
+              }
             }
           ]
         }

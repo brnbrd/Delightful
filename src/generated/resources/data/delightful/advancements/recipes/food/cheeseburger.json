@@ -4,18 +4,11 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_beef_patty_and_cheese": {
+          "has_cheese": {
             "conditions": {
               "items": [
                 {
-                  "items": [
-                    "farmersdelight:beef_patty"
-                  ]
-                },
-                {
-                  "items": [
-                    "minecraft:milk_bucket"
-                  ]
+                  "tag": "forge:cheese"
                 }
               ]
             },
@@ -30,7 +23,7 @@
         },
         "requirements": [
           [
-            "has_beef_patty_and_cheese",
+            "has_cheese",
             "has_the_recipe"
           ]
         ],
@@ -51,6 +44,20 @@
             {
               "type": "forge:tag_empty",
               "tag": "some_assembly_required:burger_bun"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:cheese"
+              }
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "delightful:enabled",
+                "value": "use_milk_tag"
+              }
             }
           ]
         }

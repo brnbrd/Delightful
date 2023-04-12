@@ -11,22 +11,21 @@
               "value": "deluxe_cheeseburger"
             },
             {
-              "type": "forge:tag_empty",
-              "tag": "some_assembly_required:burger_bun"
-            },
-            {
-              "type": "forge:not",
-              "value": {
-                "type": "forge:tag_empty",
-                "tag": "forge:cheese"
-              }
-            },
-            {
-              "type": "forge:not",
-              "value": {
-                "type": "delightful:enabled",
-                "value": "use_milk_tag"
-              }
+              "type": "forge:or",
+              "values": [
+                {
+                  "type": "forge:tag_empty",
+                  "tag": "some_assembly_required:burger_bun"
+                },
+                {
+                  "type": "forge:tag_empty",
+                  "tag": "forge:cheese"
+                },
+                {
+                  "type": "delightful:enabled",
+                  "value": "use_milk_tag"
+                }
+              ]
             }
           ]
         }
@@ -41,13 +40,13 @@
             "item": "farmersdelight:beef_patty"
           },
           {
-            "tag": "forge:cheese"
+            "tag": "forge:milk"
           },
           {
             "item": "farmersdelight:beef_patty"
           },
           {
-            "tag": "forge:cheese"
+            "tag": "forge:milk"
           },
           {
             "item": "farmersdelight:cooked_bacon"

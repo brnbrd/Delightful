@@ -22,6 +22,7 @@ public class DelightfulConfig {
     public static ForgeConfigSpec.BooleanValue GIVE_SLICED_DIRECTLY;
     public static ForgeConfigSpec.BooleanValue MELON_JUICING;
     public static ForgeConfigSpec.BooleanValue PUMPKIN_PIE_OVERHAUL;
+    public static ForgeConfigSpec.BooleanValue USE_MILK_TAG;
     private static final ImmutableList<String> disabled_by_default_items = ImmutableList.of(
         "copper_knife",
         "bone_knife",
@@ -29,7 +30,8 @@ public class DelightfulConfig {
         "emerald_knife",
         "lapis_lazuli_knife",
         "raw_goat",
-        "cooked_goat"
+        "cooked_goat",
+        "green_tea_leaf"
     );
 
     DelightfulConfig(ForgeConfigSpec.Builder builder) {
@@ -43,12 +45,16 @@ public class DelightfulConfig {
                 .sorted()
                 .forEach(knife -> put(builder, stuff, knife, !disabled_by_default_items.contains(knife)));
         builder.pop();
-        builder.push("Registry");
+        builder.push("Registry & Recipes");
             items.stream()
                     .map(obj -> obj.getId().getPath())
                     .filter(path -> !path.contains("_knife"))
                     .sorted()
                     .forEach(not -> put(builder, stuff, not, !disabled_by_default_items.contains(not)));
+            USE_MILK_TAG = builder
+                .comment("Force the replacement of forge:cheese item tag in recipes with forge:milk")
+                .define("use_milk_tag", false);
+            stuff.put("use_milk_tag", USE_MILK_TAG);
             CRAFT_NUT_MILK = builder
               .comment("Allow cooking milk from nuts")
               .define("nut_milk", true);
@@ -80,7 +86,6 @@ public class DelightfulConfig {
             .defineInRange("chance_cantaloupe", 55, 0, Integer.MAX_VALUE);
         builder.pop();
     }
-
     private static void put(ForgeConfigSpec.Builder builder, Map<String, ForgeConfigSpec.BooleanValue> map, String name, boolean def) {
         map.put(name, builder.define(name, def));
     }

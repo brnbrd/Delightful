@@ -16,6 +16,20 @@
                 "type": "forge:tag_empty",
                 "tag": "some_assembly_required:burger_bun"
               }
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:cheese"
+              }
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "delightful:enabled",
+                "value": "use_milk_tag"
+              }
             }
           ]
         }
@@ -30,13 +44,13 @@
             "item": "farmersdelight:beef_patty"
           },
           {
-            "tag": "forge:cheese_or_milk"
+            "tag": "forge:cheese"
           },
           {
             "item": "farmersdelight:beef_patty"
           },
           {
-            "tag": "forge:cheese_or_milk"
+            "tag": "forge:cheese"
           },
           {
             "item": "farmersdelight:cooked_bacon"

@@ -8,24 +8,21 @@
           "values": [
             {
               "type": "delightful:enabled",
-              "value": "cheeseburger"
+              "value": "berry_matcha_latte"
             },
             {
-              "type": "forge:tag_empty",
-              "tag": "some_assembly_required:burger_bun"
+              "type": "delightful:enabled",
+              "value": "matcha_latte"
             },
             {
-              "type": "forge:not",
-              "value": {
-                "type": "forge:tag_empty",
-                "tag": "forge:cheese"
-              }
+              "type": "delightful:enabled",
+              "value": "matcha"
             },
             {
               "type": "forge:not",
               "value": {
-                "type": "delightful:enabled",
-                "value": "use_milk_tag"
+                "type": "forge:mod_loaded",
+                "modid": "farmersrespite"
               }
             }
           ]
@@ -35,26 +32,26 @@
         "type": "minecraft:crafting_shapeless",
         "ingredients": [
           {
-            "tag": "forge:bread"
+            "item": "minecraft:glass_bottle"
           },
           {
-            "item": "farmersdelight:beef_patty"
+            "tag": "forge:fruits/berries"
           },
           {
-            "tag": "forge:cheese"
+            "tag": "forge:ice_cubes"
           },
           {
-            "tag": "forge:salad_ingredients"
+            "tag": "forge:milk"
           },
           {
-            "tag": "forge:crops/tomato"
+            "item": "minecraft:honey_bottle"
           },
           {
-            "tag": "forge:crops/onion"
+            "item": "delightful:matcha"
           }
         ],
         "result": {
-          "item": "delightful:cheeseburger"
+          "item": "delightful:berry_matcha_latte"
         }
       }
     }

@@ -18,7 +18,7 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:food/berry_matcha_latte_from_matcha_latte"
+              "recipe": "delightful:food/berry_matcha_latte_from_matcha_latte_neapolitan"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
@@ -31,7 +31,7 @@
         ],
         "rewards": {
           "recipes": [
-            "delightful:food/berry_matcha_latte_from_matcha_latte"
+            "delightful:food/berry_matcha_latte_from_matcha_latte_neapolitan"
           ]
         }
       },
@@ -40,8 +40,11 @@
           "type": "forge:and",
           "values": [
             {
-              "type": "forge:tag_empty",
-              "tag": "forge:ice_cubes"
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:ice_cubes"
+              }
             },
             {
               "type": "delightful:enabled",

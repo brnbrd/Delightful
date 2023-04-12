@@ -47,6 +47,20 @@
                 "type": "forge:tag_empty",
                 "tag": "forge:cooked_crab"
               }
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:cheese"
+              }
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "delightful:enabled",
+                "value": "use_milk_tag"
+              }
             }
           ]
         }

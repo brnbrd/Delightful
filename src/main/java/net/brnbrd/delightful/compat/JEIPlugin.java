@@ -6,8 +6,6 @@ import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.registration.IRecipeRegistration;
 import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
-import net.brnbrd.delightful.common.DelightfulConfig;
-import net.brnbrd.delightful.common.item.CompatItem;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.IConfigured;
 import net.brnbrd.delightful.common.item.knife.DelightfulKnifeItem;
@@ -20,7 +18,7 @@ import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
 import vectorwing.farmersdelight.common.utility.TextUtils;
 import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.Collection;
+import java.util.List;
 
 @JeiPlugin
 @ParametersAreNonnullByDefault
@@ -33,24 +31,20 @@ public class JEIPlugin implements IModPlugin
     @Override
     public void registerRecipes(IRecipeRegistration registration) {
         // Remove all disabled Items from JEI
-        Collection<ItemStack> initialStacks = registration.getIngredientManager().getAllItemStacks();
-        registration.getIngredientManager().removeIngredientsAtRuntime(VanillaTypes.ITEM_STACK,
-            DelightfulItems.ITEMS.getEntries().stream()
-                .filter(i -> {
-                    if (i.get() instanceof IConfigured c) {
-                        return !c.isEnabled(); // Keep item if it is disabled
-                    }
-                    return !(Util.enabled(i)); // Keep only Items that are not enabled in the config
-                })
-                .map(Util::gs) // Get ItemStack
-                .filter(initialStacks::contains)
-                .toList());
+        List<ItemStack> remove = DelightfulItems.ITEMS.getEntries().stream()
+            .filter(i -> (i.get() instanceof IConfigured c) ? !c.isEnabled() : !Util.enabled(i)) // Keep items not enabled
+            .map(Util::gs) // Get ItemStack
+            .toList();
+        registration.getIngredientManager().removeIngredientsAtRuntime(VanillaTypes.ITEM_STACK, remove);
+
         // Add Knife translations
         DelightfulItems.ITEMS.getEntries().stream()
             .map(RegistryObject::get)
             .filter(k -> k instanceof DelightfulKnifeItem && ((DelightfulKnifeItem) k).isEnabled())
             .map(ItemStack::new)
             .forEach((k -> registration.addIngredientInfo(k, VanillaTypes.ITEM_STACK, TextUtils.getTranslation("jei.info.knife"))));
+
+        // Add other descriptions
         if (Util.enabled("green_tea_leaf") && !Mods.loaded(Mods.FR)) {
             registration.addIngredientInfo(DelightfulItems.GREEN_TEA_LEAF.get().getDefaultInstance(), VanillaTypes.ITEM_STACK, Component.translatable(Delightful.MODID + ".green_tea_leaf.desc"));
         }
