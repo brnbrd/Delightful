@@ -1,4 +1,4 @@
-// 1.19.2	2023-04-12T07:54:10.3255869	Recipes
+// 1.19.2	2023-04-27T08:57:11.6849994	Recipes
 60ffe246fc7cd82d396e8dc65184da554be1a88a data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 2cf937c163d47a583b4eb63671b5c4e3055179cc data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
 11671d2a84e33859724587ec84b710130c2e0a55 data/delightful/advancements/recipes/campfire/marshmallow_stick.json
@@ -141,7 +141,7 @@ e4effe42d4c7a98e3a8e6ba29363aa4145107e48 data/delightful/recipes/food/clover_hon
 14e41dbe215cb9666d647b5e86ac497315de0015 data/delightful/recipes/food/cooking/coconut_curry.json
 603b5b9a01a4ff2cbd7cd9a3ff5c317d5d9453e9 data/delightful/recipes/food/cooking/coconut_curry_no_ginger.json
 d0505d91081ce5073207fb1de6d70dd345850a9b data/delightful/recipes/food/cooking/ender_nectar.json
-fc7c7d0585540632fa6d4e829d4269abc5fe9250 data/delightful/recipes/food/cooking/glow_jelly_bottle.json
+8e3d158cdb00b4edea7933091db56072a113e5c4 data/delightful/recipes/food/cooking/glow_jelly_bottle.json
 c9ca8a35b0e90e346272ebf0856100fe54ae2f13 data/delightful/recipes/food/cooking/jelly_bottle.json
 27d700967e94dc7bd8615288a79cbbca25a9965a data/delightful/recipes/food/cooking/nut_butter_bottle.json
 49dd27476a29a44325c894d344c6b1dd02989207 data/delightful/recipes/food/cooking/nut_milk.json

@@ -1,19 +1,17 @@
 package net.brnbrd.delightful.data.gen;
 
-import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.block.*;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLoot;
-import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
-import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
+import org.jetbrains.annotations.NotNull;
 
 public class DelightfulBlockLoot extends BlockLoot {
 
@@ -100,14 +98,9 @@ public class DelightfulBlockLoot extends BlockLoot {
         this.dropSelf(DelightfulBlocks.SALMONBERRY_SACK.get());
         this.dropSelf(DelightfulBlocks.ACORN_SACK.get());
 
-        // Salmonberry Bushes
-        this.add(DelightfulBlocks.WILD_SALMONBERRIES.get(), (p_124096_) ->
-            applyExplosionDecay(p_124096_, LootTable.lootTable()
-                .withPool(LootPool.lootPool()
-                    .add(LootItem.lootTableItem(DelightfulItems.SALMONBERRIES.get()))
-                    .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F)))
-                    .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE)))));
+        // Salmonberry Bush drops Pips
         this.dropSelf(DelightfulBlocks.SALMONBERRY_BUSH.get());
+        this.empty(DelightfulBlocks.WILD_SALMONBERRIES);
 
         // Ice Cream Blocks
         this.dropSelf(DelightfulBlocks.SALMONBERRY_ICE_CREAM_BLOCK.get());
@@ -115,7 +108,7 @@ public class DelightfulBlockLoot extends BlockLoot {
     }
 
     @Override
-    protected Iterable<Block> getKnownBlocks() {
+    protected @NotNull Iterable<Block> getKnownBlocks() {
         return DelightfulBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
     }
 

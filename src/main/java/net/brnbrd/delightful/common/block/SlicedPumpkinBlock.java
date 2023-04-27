@@ -25,13 +25,10 @@ import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import org.jetbrains.annotations.NotNull;
 import java.util.function.Supplier;
 
 public class SlicedPumpkinBlock extends PumpkinBlock implements ISliceable {
-
-  private static final VoxelShape BITE1 = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 12.0D, 16.0D);
-  private static final VoxelShape BITE2 = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 8.0D, 16.0D);
-  private static final VoxelShape BITE3 = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 4.0D, 16.0D);
 
   public static final IntegerProperty BITES = IntegerProperty.create("bites", 1, 3);
   private final Supplier<Item> sliceItem;
@@ -42,39 +39,52 @@ public class SlicedPumpkinBlock extends PumpkinBlock implements ISliceable {
     this.sliceItem = sliceItem;
   }
 
-  @Override
-  public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
-    return byBite(pState);
-  }
-
-  @Override
-  public VoxelShape getOcclusionShape(BlockState pState, BlockGetter pLevel, BlockPos pPos) {
-    return byBite(pState);
-  }
-
   public VoxelShape byBite(BlockState state) {
-    return switch (state.getValue(BITES)) {
-      case 2 -> BITE2;
-      case 3 -> BITE3;
-      default -> BITE1;
-    };
+    return Block.box(0.0D, 0.0D, 0.0D, 16.0D, this.getHeight(state.getValue(BITES)), 16.0D);
   }
 
+  @Override
+  public @NotNull VoxelShape getShape(@NotNull BlockState pState, @NotNull BlockGetter pLevel, @NotNull BlockPos pPos, @NotNull CollisionContext pContext) {
+    return byBite(pState);
+  }
+
+  @Override
+  public @NotNull VoxelShape getOcclusionShape(@NotNull BlockState pState, @NotNull BlockGetter pLevel, @NotNull BlockPos pPos) {
+    return byBite(pState);
+  }
+
+  @Override
+  public IntegerProperty getBitesProperty() {
+    return BITES;
+  }
+
+  @Override
   public ItemStack getSliceItem() {
     return new ItemStack(this.sliceItem.get());
   }
 
+  @Override
   public int getMaxBites() {
     return 3;
   }
 
   @Override
-  public BlockState getStateForPlacement(BlockPlaceContext context) {
+  public float getBaseHeight() {
+    return 11f;
+  }
+
+  @Override
+  public int getSliceSize() {
+    return 5;
+  }
+
+  @Override
+  public BlockState getStateForPlacement(@NotNull BlockPlaceContext context) {
     return this.defaultBlockState();
   }
 
   @Override
-  public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+  public @NotNull InteractionResult use(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult hit) {
     ItemStack heldStack = player.getItemInHand(hand);
     if (heldStack.is(DelightfulItemTags.SCAVENGING_TOOLS)) {
       return this.cutSlice(level, pos, state, player, hand);
@@ -130,17 +140,17 @@ public class SlicedPumpkinBlock extends PumpkinBlock implements ISliceable {
   }
 
   @Override
-  public int getAnalogOutputSignal(BlockState blockState, Level level, BlockPos pos) {
+  public int getAnalogOutputSignal(BlockState blockState, @NotNull Level level, @NotNull BlockPos pos) {
     return this.getMaxBites() - blockState.getValue(BITES);
   }
 
   @Override
-  public boolean hasAnalogOutputSignal(BlockState state) {
+  public boolean hasAnalogOutputSignal(@NotNull BlockState state) {
     return true;
   }
 
   @Override
-  public boolean isPathfindable(BlockState state, BlockGetter level, BlockPos pos, PathComputationType type) {
+  public boolean isPathfindable(@NotNull BlockState state, @NotNull BlockGetter level, @NotNull BlockPos pos, @NotNull PathComputationType type) {
     return false;
   }
 }

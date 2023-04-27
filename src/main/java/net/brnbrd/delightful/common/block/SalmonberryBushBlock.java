@@ -13,6 +13,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.BushBlock;
@@ -70,16 +71,23 @@ public class SalmonberryBushBlock extends BushBlock implements BonemealableBlock
   @Override
   public void randomTick(BlockState pState, @NotNull ServerLevel pLevel, @NotNull BlockPos pPos, @NotNull RandomSource pRandom) {
     int i = pState.getValue(AGE);
-    if (i < MAX_AGE &&
-        pLevel.isRainingAt(pPos) &&
-        pLevel.getRawBrightness(pPos.above(), 0) >= 9 &&
-        ForgeHooks.onCropsGrowPre(pLevel, pPos, pState, pRandom.nextInt(6) == 0)) {
-      BlockState blockstate = pState.setValue(AGE, i + 1);
-      pLevel.setBlock(pPos, blockstate, 2);
-      pLevel.gameEvent(GameEvent.BLOCK_CHANGE, pPos, GameEvent.Context.of(blockstate));
-      ForgeHooks.onCropsGrowPost(pLevel, pPos, pState);
+    if (i < MAX_AGE && pLevel.getRawBrightness(pPos.above(), 0) >= 8){
+      int speed = 20;
+      Biome biome = pLevel.getBiome(pPos).value();
+      if (pLevel.isRainingAt(pPos) &&
+          biome.getPrecipitation() == Biome.Precipitation.RAIN &&
+          biome.warmEnoughToRain(pPos)) { // Hard raining ON the block
+        speed -= 15;
+      } else if (pLevel.isRaining()) { // Level just raining
+        speed -= 12;
+      }
+      if (ForgeHooks.onCropsGrowPre(pLevel, pPos, pState, pRandom.nextInt(speed) == 0)) {
+        BlockState blockstate = pState.setValue(AGE, i + 1);
+        pLevel.setBlock(pPos, blockstate, 2);
+        pLevel.gameEvent(GameEvent.BLOCK_CHANGE, pPos, GameEvent.Context.of(blockstate));
+        ForgeHooks.onCropsGrowPost(pLevel, pPos, pState);
+      }
     }
-
   }
 
   @SuppressWarnings("deprecation")

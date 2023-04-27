@@ -408,6 +408,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
         wrap(CookingPotRecipeBuilder.cookingPotRecipe(
             DelightfulItems.GLOW_JELLY_BOTTLE.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
                 .addIngredient(DelightfulItemTags.FRUITS_GLOW_BERRIES)
+                .addIngredient(DelightfulItemTags.FRUITS_GLOW_BERRIES)
                 .addIngredient(Tags.Items.DUSTS_GLOWSTONE)
                 .addIngredient(Ingredient.of(DelightfulItemTags.SUGAR), 2)
                 .unlockedBy("has_glow_berries", has(DelightfulItemTags.FRUITS_GLOW_BERRIES)),

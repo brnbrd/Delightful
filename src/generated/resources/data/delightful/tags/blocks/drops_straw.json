@@ -1,6 +1,10 @@
 {
   "values": [
     {
+      "id": "sprout:sprouts",
+      "required": false
+    },
+    {
       "id": "byg:prairie_grass",
       "required": false
     },

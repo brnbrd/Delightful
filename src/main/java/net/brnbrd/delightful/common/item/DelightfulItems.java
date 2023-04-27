@@ -22,6 +22,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import vectorwing.farmersdelight.FarmersDelight;
 import vectorwing.farmersdelight.common.item.ConsumableItem;
+import vectorwing.farmersdelight.common.registry.ModItems;
 import java.util.function.Supplier;
 
 public class DelightfulItems {
@@ -30,12 +31,18 @@ public class DelightfulItems {
 
     // Crafting Items (can be food)
     public static final RegistryObject<Item> ANIMAL_FAT = registerFood("animal_fat", Nutrition.ANIMAL_FAT);
-    public static final RegistryObject<Item> ANIMAL_OIL_BOTTLE = registerItem("animal_oil_bottle", () -> new FurnaceFuelItem((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE).tab(FarmersDelight.CREATIVE_TAB), 3200));
+    public static final RegistryObject<Item> ANIMAL_OIL_BOTTLE = registerItem("animal_oil_bottle",
+        () -> new FurnaceFuelItem((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE).tab(FarmersDelight.CREATIVE_TAB), 3200));
     public static final RegistryObject<Item> ACORN = registerFood("acorn", Nutrition.ACORN);
     public static final RegistryObject<Item> SALMONBERRIES = registerFood("salmonberries", Nutrition.SALMONBERRIES);
-    public static final RegistryObject<Item> SALMONBERRY_PIPS = registerItem("salmonberry_pips", () -> new ItemNameBlockItem(DelightfulBlocks.SALMONBERRY_BUSH.get(), (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
-    public static final RegistryObject<Item> SALMONBERRY_GUMMY = registerItem("salmonberry_gummy", () -> new GummyItem((new Item.Properties()).food(Nutrition.SALMONBERRY_GUMMY).tab(FarmersDelight.CREATIVE_TAB)));
-    public static final RegistryObject<Item> SALMONBERRY_PIE = registerItem("salmonberry_pie", () -> new BlockItem(DelightfulBlocks.SALMONBERRY_PIE.get(), (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
+    public static final RegistryObject<Item> SALMONBERRY_PIPS = registerItem("salmonberry_pips",
+        () -> new ItemNameBlockItem(DelightfulBlocks.SALMONBERRY_BUSH.get(), ModItems.basicItem()));
+    public static final RegistryObject<Item> WILD_SALMONBERRIES = registerItem("wild_salmonberries",
+        () -> new BlockItem(DelightfulBlocks.WILD_SALMONBERRIES.get(), ModItems.basicItem()));
+    public static final RegistryObject<Item> SALMONBERRY_GUMMY = registerItem("salmonberry_gummy",
+        () -> new GummyItem((new Item.Properties()).food(Nutrition.SALMONBERRY_GUMMY).tab(FarmersDelight.CREATIVE_TAB)));
+    public static final RegistryObject<Item> SALMONBERRY_PIE = registerItem("salmonberry_pie",
+        () -> new BlockItem(DelightfulBlocks.SALMONBERRY_PIE.get(), ModItems.basicItem()));
     public static final RegistryObject<Item> SALMONBERRY_PIE_SLICE = registerFood("salmonberry_pie_slice", Nutrition.SALMONBERRY_PIE_SLICE);
     public static final RegistryObject<Item> PUMPKIN_PIE_SLICE = registerFood("pumpkin_pie_slice", vectorwing.farmersdelight.common.FoodValues.PIE_SLICE);
     public static final RegistryObject<Item> SOURCE_BERRY_PIE_SLICE = registerCompatFood(ArsNouveauCompat.slice, ArsNouveauCompat.getPieSlice().get(),
@@ -100,21 +107,21 @@ public class DelightfulItems {
     public static final RegistryObject<Item> COOKED_GOAT = registerFood("cooked_goat", Nutrition.COOKED_GOAT);
     public static final RegistryObject<Item> CANTALOUPE_SLICE = registerFood("cantaloupe_slice", Nutrition.CANTALOUPE_SLICE);
     public static final RegistryObject<Item> CANTALOUPE = registerItem("cantaloupe", () ->
-        new BlockItem(DelightfulBlocks.CANTALOUPE.get(), (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
+        new BlockItem(DelightfulBlocks.CANTALOUPE.get(), ModItems.basicItem()));
     public static final RegistryObject<Item> MINI_MELON = registerItem("mini_melon", () ->
-        new BlockItem(DelightfulBlocks.MINI_MELON.get(), (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
+        new BlockItem(DelightfulBlocks.MINI_MELON.get(), ModItems.basicItem()));
     public static final RegistryObject<Item> SALMONBERRY_SACK = registerItem("salmonberry_sack", () ->
-        new BlockItem(DelightfulBlocks.SALMONBERRY_SACK.get(), (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
+        new BlockItem(DelightfulBlocks.SALMONBERRY_SACK.get(), ModItems.basicItem()));
     public static final RegistryObject<Item> ACORN_SACK = registerItem("acorn_sack", () ->
-        new BlockItem(DelightfulBlocks.ACORN_SACK.get(), (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
+        new BlockItem(DelightfulBlocks.ACORN_SACK.get(), ModItems.basicItem()));
 
     // Cabinets
     public static final RegistryObject<Item> QUARTZ_CABINET = registerItem("quartz_cabinet",
-            () -> new BlockItem(DelightfulBlocks.QUARTZ_CABINET.get(), (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
+            () -> new BlockItem(DelightfulBlocks.QUARTZ_CABINET.get(), ModItems.basicItem()));
     public static final RegistryObject<Item> BASALT_CABINET = registerItem("basalt_cabinet",
-            () -> new BlockItem(DelightfulBlocks.BASALT_CABINET.get(), (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
+            () -> new BlockItem(DelightfulBlocks.BASALT_CABINET.get(), ModItems.basicItem()));
 
-    // Registers a food to Farmer's Delight tab, optional craftRemainder
+    // Registers food to Farmer's Delight tab, optional craftRemainder
     public static RegistryObject<Item> registerFood(String name, FoodProperties food, Item... remainder) {
         if (remainder.length > 0) {
             if (remainder[0].equals(Items.BOWL)) {
@@ -133,6 +140,7 @@ public class DelightfulItems {
     }
 
     // Sets dynamic creative tab
+    @SuppressWarnings("unused")
     public static RegistryObject<Item> registerCompatItem(String name, Item.Properties props, String modid) {
         return registerItem(name, () -> new CompatItem(props, modid));
     }

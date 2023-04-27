@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/orientable",
+  "parent": "minecraft:block/orientable_with_bottom",
   "textures": {
+    "bottom": "delightful:block/quartz_cabinet_bottom",
     "front": "delightful:block/quartz_cabinet_front_open",
     "side": "delightful:block/quartz_cabinet_side",
     "top": "delightful:block/quartz_cabinet_top"

@@ -38,9 +38,12 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 			.add(DelightfulBlocks.GREEN_APPLE_PIE.get())
 			.add(DelightfulBlocks.NIGHTSHADE_BERRY_PIE.get())
 			.add(DelightfulBlocks.SOURCE_BERRY_PIE.get());
+		this.tag(ModTags.WILD_CROPS)
+			.add(DelightfulBlocks.WILD_SALMONBERRIES.get());
 
 		// Delightful
 		this.tag(DelightfulBlockTags.DROPS_STRAW)
+			.addOptional(Util.rl("sprout", "sprouts"))
 			.addOptional(Util.rl(Mods.BYG, BYGCompat.prairie_grass))
 			.addOptional(Util.rl(Mods.BYG, BYGCompat.tall_prairie_grass))
 			.addOptional(Util.rl(Mods.BYG, BYGCompat.beach_grass));
@@ -74,7 +77,10 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 		this.tag(BlockTags.MINEABLE_WITH_HOE)
 			.add(DelightfulBlocks.ACORN_SACK.get())
 			.add(DelightfulBlocks.SALMONBERRY_SACK.get());
+		this.tag(BlockTags.SMALL_FLOWERS)
+			.add(DelightfulBlocks.WILD_SALMONBERRIES.get());
 
+		// Serene Seasons
 		this.tag(DelightfulBlockTags.SUMMER_CROPS)
 			.add(DelightfulBlocks.SALMONBERRY_BUSH.get());
 	}

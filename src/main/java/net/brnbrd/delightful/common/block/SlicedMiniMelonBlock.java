@@ -29,15 +29,16 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.items.ItemHandlerHelper;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 import java.util.function.Supplier;
 
 public class SlicedMiniMelonBlock extends MelonBlock implements ISliceable {
 
-  protected static final VoxelShape SHAPE = Block.box(3.0D, 0.0D, 3.0D, 13.0D, 10.0D, 13.0D);
   public static final IntegerProperty BITES = IntegerProperty.create("bites", 1, 5);
   private final Supplier<Item> sliceItem;
   private final Supplier<Item> juiceItem;
-
 
   public SlicedMiniMelonBlock(Properties pProperties, Supplier<Item> sliceItem, Supplier<Item> juiceItem) {
     super(pProperties);
@@ -46,35 +47,57 @@ public class SlicedMiniMelonBlock extends MelonBlock implements ISliceable {
     this.juiceItem = juiceItem;
   }
 
-  @Override
-  public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
-    return SHAPE;
+  public VoxelShape byBite(BlockState state) {
+    return Block.box(3.0D, 0.0D, 3.0D, 13.0D, this.getHeight(state.getValue(BITES)), 13.0D);
   }
 
   @Override
-  public VoxelShape getOcclusionShape(BlockState pState, BlockGetter pLevel, BlockPos pPos) {
+  public @NotNull VoxelShape getShape(@NotNull BlockState pState, @NotNull BlockGetter pLevel, @NotNull BlockPos pPos, @NotNull CollisionContext pContext) {
+    return byBite(pState);
+  }
+
+  @Override
+  public @NotNull VoxelShape getOcclusionShape(@NotNull BlockState pState, @NotNull BlockGetter pLevel, @NotNull BlockPos pPos) {
     return Shapes.empty();
   }
 
+  @Override
+  public IntegerProperty getBitesProperty() {
+    return BITES;
+  }
+
+  @Override
   public ItemStack getSliceItem() {
     return this.sliceItem.get().getDefaultInstance();
   }
 
+  @Nullable
   public ItemStack getJuiceItem() {
     return this.juiceItem.get().getDefaultInstance();
   }
 
+  @Override
   public int getMaxBites() {
     return 5;
   }
 
   @Override
-  public BlockState getStateForPlacement(BlockPlaceContext context) {
+  public float getBaseHeight() {
+    return 9f;
+  }
+
+  @Override
+  public int getSliceSize() {
+    return 2;
+  }
+
+  @Override
+  public BlockState getStateForPlacement(@NotNull BlockPlaceContext context) {
     return this.defaultBlockState();
   }
 
   @Override
-  public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+  public @NotNull InteractionResult use(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult hit) {
     ItemStack heldStack = player.getItemInHand(hand);
     if (heldStack.is(DelightfulItemTags.SCAVENGING_TOOLS)) {
       return this.cutSlice(level, pos, state, player, hand);
@@ -127,7 +150,7 @@ public class SlicedMiniMelonBlock extends MelonBlock implements ISliceable {
   }
 
   protected InteractionResult bottleJuice(Level level, BlockPos pos, BlockState state, Player player, InteractionHand hand) {
-    if (!level.isClientSide()) {
+    if (!level.isClientSide() && this.getJuiceItem() != null) {
       int bites = state.getValue(BITES);
       int bites_left = ((this.getMaxBites() + 1) - bites);
       if (bites_left == 4) {
@@ -150,17 +173,17 @@ public class SlicedMiniMelonBlock extends MelonBlock implements ISliceable {
   }
 
   @Override
-  public int getAnalogOutputSignal(BlockState blockState, Level level, BlockPos pos) {
+  public int getAnalogOutputSignal(BlockState blockState, @NotNull Level level, @NotNull BlockPos pos) {
     return this.getMaxBites() - blockState.getValue(BITES);
   }
 
   @Override
-  public boolean hasAnalogOutputSignal(BlockState state) {
+  public boolean hasAnalogOutputSignal(@NotNull BlockState state) {
     return true;
   }
 
   @Override
-  public boolean isPathfindable(BlockState state, BlockGetter level, BlockPos pos, PathComputationType type) {
+  public boolean isPathfindable(@NotNull BlockState state, @NotNull BlockGetter level, @NotNull BlockPos pos, @NotNull PathComputationType type) {
     return false;
   }
 }

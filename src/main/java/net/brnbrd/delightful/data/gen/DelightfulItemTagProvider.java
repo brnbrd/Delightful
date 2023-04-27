@@ -43,6 +43,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.CABINETS_STONE)
 			.add(DelightfulItems.BASALT_CABINET.get())
 			.add(DelightfulItems.QUARTZ_CABINET.get());
+		this.tag(ModTags.WILD_CROPS_ITEM)
+			.add(DelightfulItems.WILD_SALMONBERRIES.get());
 
 		// Collector's Reap
 		this.tag(DelightfulItemTags.GUMMIES)
@@ -259,6 +261,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Util.rl("culturaldelights", "tortilla"));
 
 		// Minecraft
+		this.tag(ItemTags.FLOWERS)
+			.add(DelightfulItems.WILD_SALMONBERRIES.get());
 		this.tag(ItemTags.PIGLIN_LOVED).add(Knives.REFINED_GLOWSTONE.get());
 		this.tag(ForgeTags.TOOLS_KNIVES)
 			.addTag(ModTags.KNIVES)

@@ -34,15 +34,6 @@ import java.util.function.Supplier;
 
 public class SlicedMelonBlock extends MelonBlock implements ISliceable {
 
-  private static final VoxelShape BITE1 = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 15.0D, 16.0D);
-  private static final VoxelShape BITE2 = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 13.0D, 16.0D);
-  private static final VoxelShape BITE3 = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 11.0D, 16.0D);
-  private static final VoxelShape BITE4 = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 9.0D, 16.0D);
-  private static final VoxelShape BITE5 = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 7.0D, 16.0D);
-  private static final VoxelShape BITE6 = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 5.0D, 16.0D);
-  private static final VoxelShape BITE7 = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 3.0D, 16.0D);
-  private static final VoxelShape BITE8 = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 1.0D, 16.0D);
-
   public static final IntegerProperty BITES = IntegerProperty.create("bites", 1, 8);
   private final Supplier<Item> sliceItem;
   private final Supplier<Item> juiceItem;
@@ -52,6 +43,10 @@ public class SlicedMelonBlock extends MelonBlock implements ISliceable {
     this.registerDefaultState(this.stateDefinition.any().setValue(BITES, 1));
     this.sliceItem = sliceItem;
     this.juiceItem = juiceItem;
+  }
+
+  public VoxelShape byBite(BlockState state) {
+    return Block.box(0.0D, 0.0D, 0.0D, 16.0D, this.getHeight(state.getValue(BITES)), 16.0D);
   }
 
   @SuppressWarnings("deprecation")
@@ -66,19 +61,12 @@ public class SlicedMelonBlock extends MelonBlock implements ISliceable {
     return byBite(pState);
   }
 
-  public VoxelShape byBite(BlockState state) {
-    return switch (state.getValue(BITES)) {
-      case 2 -> BITE2;
-      case 3 -> BITE3;
-      case 4 -> BITE4;
-      case 5 -> BITE5;
-      case 6 -> BITE6;
-      case 7 -> BITE7;
-      case 8 -> BITE8;
-      default -> BITE1;
-    };
+  @Override
+  public IntegerProperty getBitesProperty() {
+    return BITES;
   }
 
+  @Override
   public ItemStack getSliceItem() {
     return new ItemStack(this.sliceItem.get());
   }
@@ -87,8 +75,19 @@ public class SlicedMelonBlock extends MelonBlock implements ISliceable {
     return this.juiceItem.get().getDefaultInstance();
   }
 
+  @Override
   public int getMaxBites() {
     return 8;
+  }
+
+  @Override
+  public float getBaseHeight() {
+    return 15f;
+  }
+
+  @Override
+  public int getSliceSize() {
+    return 2;
   }
 
   @Override
