@@ -580,24 +580,9 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
         CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(Items.SUGAR_CANE), Ingredient.of(DelightfulItemTags.SCAVENGING_TOOLS), Items.SUGAR, 1)
             .addResultWithChance(Items.SUGAR, 0.5F, 1)
             .build(finished, Util.rl(Delightful.MODID, "cutting/sugar_cane"));
-        /*stripLogForIWBark(finished, Items.OAK_LOG, Items.STRIPPED_OAK_LOG);
-        stripLogForIWBark(finished, Items.OAK_WOOD, Items.STRIPPED_OAK_WOOD);
-        stripLogForIWBark(finished, Items.BIRCH_LOG, Items.STRIPPED_BIRCH_LOG);
-        stripLogForIWBark(finished, Items.BIRCH_WOOD, Items.STRIPPED_BIRCH_WOOD);
-        stripLogForIWBark(finished, Items.SPRUCE_LOG, Items.STRIPPED_SPRUCE_LOG);
-        stripLogForIWBark(finished, Items.SPRUCE_WOOD, Items.STRIPPED_SPRUCE_WOOD);
-        stripLogForIWBark(finished, Items.JUNGLE_LOG, Items.STRIPPED_JUNGLE_LOG);
-        stripLogForIWBark(finished, Items.JUNGLE_WOOD, Items.STRIPPED_JUNGLE_WOOD);
-        stripLogForIWBark(finished, Items.ACACIA_LOG, Items.STRIPPED_ACACIA_LOG);
-        stripLogForIWBark(finished, Items.ACACIA_WOOD, Items.STRIPPED_ACACIA_WOOD);
-        stripLogForIWBark(finished, Items.DARK_OAK_LOG, Items.STRIPPED_DARK_OAK_LOG);
-        stripLogForIWBark(finished, Items.DARK_OAK_WOOD, Items.STRIPPED_DARK_OAK_WOOD);
-        stripLogForIWBark(finished, Items.MANGROVE_LOG, Items.STRIPPED_MANGROVE_LOG);
-        stripLogForIWBark(finished, Items.MANGROVE_WOOD, Items.STRIPPED_MANGROVE_WOOD);
-        stripLogForIWBark(finished, Items.CRIMSON_STEM, Items.STRIPPED_CRIMSON_STEM);
-        stripLogForIWBark(finished, Items.CRIMSON_HYPHAE, Items.STRIPPED_CRIMSON_HYPHAE);
-        stripLogForIWBark(finished, Items.WARPED_STEM, Items.STRIPPED_WARPED_STEM);
-        stripLogForIWBark(finished, Items.WARPED_HYPHAE, Items.STRIPPED_WARPED_HYPHAE);*/
+        CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(DelightfulItems.WILD_SALMONBERRIES.get()), Ingredient.of(DelightfulItemTags.SCAVENGING_TOOLS), DelightfulItems.SALMONBERRY_PIPS.get(), 1)
+            .addResultWithChance(Items.ORANGE_DYE, 0.5F, 2)
+            .build(finished, Util.rl(Delightful.MODID, "cutting/wild_salmonberries"));
         }
 
     private InventoryChangeTrigger.TriggerInstance has(ItemLike... items) {

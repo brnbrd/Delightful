@@ -1,4 +1,4 @@
-// 1.19.2	2023-04-27T08:57:11.6849994	Recipes
+// 1.19.2	2023-04-27T12:04:02.1599027	Recipes
 60ffe246fc7cd82d396e8dc65184da554be1a88a data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 2cf937c163d47a583b4eb63671b5c4e3055179cc data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
 11671d2a84e33859724587ec84b710130c2e0a55 data/delightful/advancements/recipes/campfire/marshmallow_stick.json
@@ -130,6 +130,7 @@ e29dba697d49ba3248a05fa6e619eab449388e65 data/delightful/recipes/cooking/rock_ca
 050fda0122a3832a878d937170e46ce596188ebc data/delightful/recipes/cutting/salmonberry_pie.json
 b510a9df302f48e17cd0a6bdf45d1aa6a87fc788 data/delightful/recipes/cutting/source_berry_pie.json
 1f6e11a557421f7c55020511b6e6fab788c47073 data/delightful/recipes/cutting/sugar_cane.json
+d21ff91addaae0a65773270b6ba0aa03894ce492 data/delightful/recipes/cutting/wild_salmonberries.json
 b12e26dec09419e11e4a622dcc8121d6113d252b data/delightful/recipes/food/berry_matcha_latte.json
 cb1710eeefd773bb16ef064dc23b0058ef77b6d0 data/delightful/recipes/food/berry_matcha_latte_from_matcha_latte.json
 aea8ec7fad245e6f605c88d5b01abaa824e0ace6 data/delightful/recipes/food/berry_matcha_latte_from_matcha_latte_neapolitan.json

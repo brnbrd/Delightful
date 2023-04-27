@@ -1,0 +1,21 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "delightful:wild_salmonberries"
+    }
+  ],
+  "result": [
+    {
+      "item": "delightful:salmonberry_pips"
+    },
+    {
+      "chance": 0.5,
+      "count": 2,
+      "item": "minecraft:orange_dye"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/scavenging"
+  }
+}

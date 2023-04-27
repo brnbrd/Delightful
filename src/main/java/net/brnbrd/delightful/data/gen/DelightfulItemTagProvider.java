@@ -261,7 +261,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Util.rl("culturaldelights", "tortilla"));
 
 		// Minecraft
-		this.tag(ItemTags.FLOWERS)
+		this.tag(ItemTags.SMALL_FLOWERS)
 			.add(DelightfulItems.WILD_SALMONBERRIES.get());
 		this.tag(ItemTags.PIGLIN_LOVED).add(Knives.REFINED_GLOWSTONE.get());
 		this.tag(ForgeTags.TOOLS_KNIVES)
