@@ -1,10 +1,9 @@
-# [Delightful](https://www.curseforge.com/minecraft/mc-mods/delightful)
-Farmer's Delight addon with immersive new content.
-
-<img src="https://onvoid.net/delightful/logo.png" height="50px" />
+# Delightful
 
 <a href="https://www.curseforge.com/minecraft/mc-mods/delightful">
   <img src="https://cf.way2muchnoise.eu/full_637529_downloads.svg" alt="Curseforge Downloads">
 </a>
+<br>
+<img src="https://i.imgur.com/sC7sSiQ.png" width="50%">
 
-[![1.19.2](https://github.com/brdle/Delightful/actions/workflows/build-1.19.2.yml/badge.svg?branch=1.19.2)](https://github.com/brdle/Delightful/actions/workflows/build-1.19.2.yml)
+### **[Farmer's Delight](https://github.com/vectorwing/FarmersDelight)** addon with immersive new content.
