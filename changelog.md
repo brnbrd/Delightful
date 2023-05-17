@@ -1,10 +1,13 @@
 # Changelog
 
+
 ## 3.3 — The Facelift Update
 
 ### Updates
-- Brand new textures for almost every asset in Delightful, courtesy of championhestu
-- Simpler models for Sliced Mini Melon and Sliced Cantaloupe, courtesy of championhestu
+- Complete texture overhaul for almost every asset in Delightful, courtesy of **championhestu**
+- Quartz and Basalt Cabinets are now crafted with Warped and Crimson Cabinets, respectively.
+  - Recipe now also requires Polished Blackstone for counter top
+- Simpler models for Sliced Mini Melon and Sliced Cantaloupe, courtesy of **championhestu**
   - A few adjustments have been made to some sliced blockstates and models for uniformity
 - Added Blazing Knife (for [Create Stuff & Additions](https://www.curseforge.com/minecraft/mc-mods/create-stuff-additions))
 - Added Adamantite Knife (for [Enlightend](https://www.curseforge.com/minecraft/mc-mods/enlightend))
