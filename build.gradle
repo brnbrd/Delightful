@@ -95,12 +95,7 @@ dependencies {
 
 task updateJson {
     String ver = mod_version.toString()
-    String log = "No changelog."
-    file('update/changelog.txt').eachLine { change ->
-        if (change.startsWith(ver + ":")) {
-            log = change.replace(ver + ":", "")
-        }
-    }
+    String log = "https://github.com/brnbrd/Delightful/blob/1.19.2/changelog.md"
     file('update/update.json').withWriter { w ->
         file('update/template.json').eachLine { line ->
             w << line.replace("latest_ver", ver).replace("latest_log", log) + System.getProperty("line.separator")
