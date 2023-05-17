@@ -34,6 +34,9 @@
     "3.1.4": "Removed disabled items from Creative Tab and JEI. Override some recipes from Wild Berries. Fix venison chops dupe.",
     "3.2": "Added Coconut Curry & Sinigang.",
     "3.2.1": "Renamed Goat to Chevon and updated texture. Slightly changed Sinigang texture. Recipe, tag, and other miscellaneous fixes.",
+    "3.2.2": "Wandering Trader support, Salmonberries require rain.",
+    "3.2.3": "Added Matcha and Salmonberry Ice Cream block, Salmonberries provide Water Breathing.",
+    "3.2.4": "Recipe and tag fixes.",
     "latest_ver": "latest_log"
   },
   "promos": {

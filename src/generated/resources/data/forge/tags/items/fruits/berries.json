@@ -17,6 +17,18 @@
     "#forge:fruits/crimson_berries",
     "#forge:fruits/cherry",
     "#forge:fruits/strawberries",
-    "#forge:fruits/wild_berries"
+    "#forge:fruits/wild_berries",
+    {
+      "id": "enlightened_end:zure_berry",
+      "required": false
+    },
+    {
+      "id": "phantasm:pream_berry",
+      "required": false
+    },
+    {
+      "id": "#forge:fruits/mulberry",
+      "required": false
+    }
   ]
 }

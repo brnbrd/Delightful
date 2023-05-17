@@ -14,7 +14,6 @@ import net.brnbrd.delightful.compat.ArsNouveauCompat;
 import net.brnbrd.delightful.compat.Mods;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
-import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
@@ -26,6 +25,7 @@ import net.minecraft.world.item.alchemy.PotionUtils;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.ConditionalRecipe;
@@ -35,9 +35,9 @@ import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
+import vectorwing.farmersdelight.common.registry.ModBlocks;
 import vectorwing.farmersdelight.common.registry.ModItems;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
-import vectorwing.farmersdelight.common.tag.ModTags;
 import vectorwing.farmersdelight.data.builder.CookingPotRecipeBuilder;
 import vectorwing.farmersdelight.data.builder.CuttingBoardRecipeBuilder;
 import vectorwing.farmersdelight.data.recipe.CookingRecipes;
@@ -52,10 +52,8 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
     @Override
     protected void buildCraftingRecipes(@NotNull Consumer<FinishedRecipe> finished) {
         // Cabinets
-        DelightfulBlocks.BLOCKS.getEntries().stream()
-            .map(RegistryObject::get)
-            .filter(block -> block instanceof DelightfulCabinetBlock)
-            .forEach(block -> cabinet((DelightfulCabinetBlock) block, finished));
+        cabinet(DelightfulBlocks.QUARTZ_CABINET.get(), ModBlocks.WARPED_CABINET.get(), Blocks.POLISHED_BLACKSTONE, finished);
+        cabinet(DelightfulBlocks.BASALT_CABINET.get(), ModBlocks.CRIMSON_CABINET.get(), Blocks.POLISHED_BLACKSTONE, finished);
 
         // Knives
         DelightfulItems.ITEMS.getEntries().stream()
@@ -669,18 +667,18 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             .build(consumer, loc);
     }
 
-    private void cabinet(DelightfulCabinetBlock block, Consumer<FinishedRecipe> finished) {
+    private void cabinet(Block block, Block wood, Block counter, Consumer<FinishedRecipe> finished) {
         String path = Util.name(block);
         ConditionalRecipe.builder()
             .addCondition(enabled(path))
             .addRecipe(f -> ShapedRecipeBuilder.shaped(block)
-                .define('b', block.getIngredient().get())
-                .define('c', ModTags.WOODEN_CABINETS)
-                .pattern("bbb")
+                .define('b', ((DelightfulCabinetBlock) block).getIngredient())
+                .define('c', wood)
+                .define('t', counter)
+                .pattern("ttt")
                 .pattern("bcb")
                 .pattern("bbb")
-                .unlockedBy("has_cabinet", inventoryTrigger(ItemPredicate.Builder.item()
-                    .of(ModTags.CABINETS).build()))
+                .unlockedBy("has_cabinet", has(wood))
                 .save(f))
             .generateAdvancement()
             .build(finished, Delightful.MODID, "cabinets/" + path);
@@ -707,7 +705,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             and(enabled(path), not(tagEmpty(tag)));
         wrap(ShapedRecipeBuilder.shaped(knife)
                 .define('m', Ingredient.of(tag))
-                .define('s', knife.getRod().get())
+                .define('s', knife.getRod())
                 .pattern("m")
                 .pattern("s")
                 .unlockedBy("has_" + path.replace("_knife", ""), has(tag)),

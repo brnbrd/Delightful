@@ -3,6 +3,7 @@ package net.brnbrd.delightful;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.brnbrd.delightful.common.DelightfulConfig;
 import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
@@ -66,16 +67,8 @@ public class Util {
     return reg.getId().getPath();
   }
 
-  public static Supplier<Ingredient> ing(ItemLike i) {
-    return () -> Ingredient.of(i);
-  }
-
   public static Supplier<Ingredient> ing(Supplier<? extends ItemLike> i) {
     return () -> Ingredient.of(i.get());
-  }
-
-  public static Supplier<Ingredient> ing(TagKey<Item> tag) {
-    return () -> Ingredient.of(tag);
   }
 
   public static void dropOrGive(ItemStack stack, Level world, BlockPos drop, Player give) {
@@ -84,6 +77,14 @@ public class Util {
     } else {
       Containers.dropItemStack(world, drop.getX(), drop.getY() + 0.25F, drop.getZ(), stack);
     }
+  }
+
+  public static boolean hasTagString(ItemStack stack, String key, String value) {
+    if (stack.hasTag()) {
+      CompoundTag tag = stack.getTag();
+      return tag != null && tag.contains(key) && tag.getString(key).equals(value);
+    }
+    return false;
   }
 
   public static boolean enabled(String item) {

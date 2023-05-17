@@ -1,0 +1,40 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "blazing_knife"
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "create_sa"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "create:mixing",
+        "ingredients": [
+          {
+            "item": "farmersdelight:golden_knife"
+          },
+          {
+            "item": "create:powdered_obsidian"
+          }
+        ],
+        "results": [
+          {
+            "item": "delightful:blazing_knife",
+            "count": 1
+          }
+        ],
+        "heatRequirement": "heated"
+      }
+    }
+  ]
+}

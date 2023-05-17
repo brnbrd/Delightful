@@ -4,12 +4,15 @@ import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.DelightfulTiers;
 import net.brnbrd.delightful.common.item.knife.allthemodium.AllthemodiumKnifeItem;
+import net.brnbrd.delightful.common.item.knife.create_sa.BlazingKnifeItem;
 import net.brnbrd.delightful.common.item.knife.create_sa.ExperienceKnifeItem;
 import net.brnbrd.delightful.common.item.knife.create_sa.GildedQuartzKnifeItem;
+import net.brnbrd.delightful.common.item.knife.enlightened_end.AdamantiteKnifeItem;
 import net.brnbrd.delightful.common.item.knife.forbidden_arcanus.DracoArcanusKnifeItem;
 import net.brnbrd.delightful.common.item.knife.lolenderite.ObsdianInfusedEnderiteKnifeItem;
 import net.brnbrd.delightful.common.item.knife.nethers_exoticism.KiwanoKnifeItem;
 import net.brnbrd.delightful.common.item.knife.oresabovediamonds.LargeAmethystKnifeItem;
+import net.brnbrd.delightful.common.item.knife.phantasm.StelliumKnifeItem;
 import net.brnbrd.delightful.common.item.knife.rootsclassic.LivingKnifeItem;
 import net.brnbrd.delightful.common.item.knife.seeds.LeafKnifeItem;
 import net.brnbrd.delightful.common.item.knife.twilightforest.FieryKnifeItem;
@@ -26,6 +29,7 @@ import net.minecraftforge.common.Tags;
 import net.minecraftforge.registries.RegistryObject;
 import vectorwing.farmersdelight.FarmersDelight;
 import vectorwing.farmersdelight.common.registry.ModItems;
+
 import java.util.function.Supplier;
 
 public class Knives extends DelightfulItems {
@@ -75,8 +79,12 @@ public class Knives extends DelightfulItems {
 	public static final RegistryObject<Item> WARDEN = registerItem("warden_knife", () -> new CompatKnifeItem(Mods.DD, DelightfulItemTags.REINFORCED_ECHO_SHARD, DelightfulTiers.WARDEN, (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB), Util.ing(ModItems.NETHERITE_KNIFE), ChatFormatting.LIGHT_PURPLE));
 	public static final RegistryObject<Item> EXPERIENCE = registerItem("experience_knife", () -> new ExperienceKnifeItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
 	public static final RegistryObject<Item> GILDED_QUARTZ = registerItem("gilded_quartz_knife", () -> new GildedQuartzKnifeItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
+	public static final RegistryObject<Item> BLAZING = registerItem("blazing_knife", () -> new BlazingKnifeItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
 	public static final RegistryObject<Item> LEAF = registerItem("leaf_knife", () -> new LeafKnifeItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
 	public static final RegistryObject<Item> KIWANO = registerItem("kiwano_knife", () -> new KiwanoKnifeItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
+	public static final RegistryObject<Item> ADAMANTITE = registerItem("adamantite_knife", () -> new AdamantiteKnifeItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
+	public static final RegistryObject<Item> CRYSTALLINE = registerCompatKnife("crystalline", Mods.EP, DelightfulItemTags.VOID_CRYSTAL_BLOCK);
+	public static final RegistryObject<Item> STELLIUM = registerItem("stellium_knife", () -> new StelliumKnifeItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
 
 	// Registers a knife to Farmer's Delight tab, requiring modid
 	public static RegistryObject<Item> registerCompatKnife(String name, String modid, TagKey<Item> tag, Component... tool) {

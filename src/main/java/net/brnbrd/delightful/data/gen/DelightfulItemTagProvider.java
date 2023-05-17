@@ -11,7 +11,6 @@ import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.data.tags.ItemTagsProvider;
-import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
@@ -30,6 +29,12 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 
 	@Override
 	protected void addTags() {
+
+		// Delightful
+		this.tag(DelightfulItemTags.FIRE_KNIVES)
+			.add(Knives.FIERY.get())
+			.add(Knives.KIWANO.get())
+			.add(Knives.BLAZING.get());
 
 		// Farmer's Delight
 		this.tag(ModTags.WOODEN_CABINETS)
@@ -112,7 +117,10 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_CRIMSON_BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_CHERRY)
 			.addTag(DelightfulItemTags.FRUITS_STRAWBERRIES)
-			.addTag(DelightfulItemTags.FRUITS_WILD_BERRIES);
+			.addTag(DelightfulItemTags.FRUITS_WILD_BERRIES)
+			.addOptional(Util.rl("enlightened_end", "zure_berry"))
+			.addOptional(Util.rl("phantasm", "pream_berry"))
+			.addOptionalTag(Util.rl("forge", "fruits/mulberry"));
 		this.tag(ForgeTags.BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_BERRIES);
 		this.tag(DelightfulItemTags.FRUITS)
@@ -129,7 +137,9 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_PITAYA)
 			.addTag(DelightfulItemTags.FRUITS_KIWANO)
 			.addOptional(Util.rl(Mods.AN, "mendosteen_pod"))
-			.addOptional(Util.rl(Mods.AN, "bastion_pod"));
+			.addOptional(Util.rl(Mods.AN, "bastion_pod"))
+			.addOptional(Util.rl(Mods.AN, "bombegranate_pod"))
+			.addOptional(Util.rl(Mods.AN, "frostaya_pod"));
 		this.tag(DelightfulItemTags.FRUITS_CITRUS)
 			.addTag(DelightfulItemTags.FRUITS_CITRON)
 			.addOptionalTag(DelightfulItemTags.FRUITS_MANDARIN.location())
@@ -261,6 +271,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Util.rl("culturaldelights", "tortilla"));
 
 		// Minecraft
+		this.tag(ItemTags.FOX_FOOD)
+			.addTag(DelightfulItemTags.FRUITS_SALMONBERRIES);
 		this.tag(ItemTags.SMALL_FLOWERS)
 			.add(DelightfulItems.WILD_SALMONBERRIES.get());
 		this.tag(ItemTags.PIGLIN_LOVED).add(Knives.REFINED_GLOWSTONE.get());
@@ -332,8 +344,17 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Util.rl(Mods.FR, "purulent_tea"))
 			.addOptional(Util.rl(Mods.FR, "gamblers_tea"));
 
+		// Serene Seasons
 		this.tag(DelightfulItemTags.SUMMER_CROPS)
 			.add(DelightfulItems.SALMONBERRY_PIPS.get());
+
+		// Phantasm
+		this.addSelf(DelightfulItemTags.VOID_CRYSTAL_BLOCK);
+		this.tag(DelightfulItemTags.CRYSTAL_SPIKE_TIPS)
+			.addOptional(Util.rl(Mods.EP, "crystal_spike_tip"))
+			.addOptional(Util.rl(Mods.EP, "void_crystal_spike_tip"));
+		this.tag(DelightfulItemTags.STELLIUM_INGOT)
+			.addOptional(Util.rl(Mods.EP, "stellium_ingot"));
 	}
 
 	/**
@@ -344,7 +365,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		return Delightful.MODID;
 	}
 
-	private TagsProvider.TagAppender<Item> addSelf(TagKey<Item> item) {
-		return this.tag(item).addOptional(item.location());
+	private void addSelf(TagKey<Item> item) {
+		this.tag(item).addOptional(item.location());
 	}
 }

@@ -4,6 +4,7 @@ import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.knife.DelightfulKnifeItem;
+import net.brnbrd.delightful.common.item.knife.Knives;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
@@ -12,6 +13,7 @@ import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
+import net.minecraftforge.client.model.generators.loaders.ItemLayersModelBuilder;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -28,12 +30,17 @@ public class DelightfulItemModelProvider extends ItemModelProvider {
     private static final List<ResourceLocation> ITEM_BLOCKS = List.of(
         DelightfulItems.SALMONBERRY_PIE.getId()
     );
+    private static final List<ResourceLocation> EMISSIVE = List.of(
+        Knives.FIERY.getId()
+    );
 
     @Override
     protected void registerModels() {
         for (RegistryObject<Item> entry : DelightfulItems.ITEMS.getEntries()) {
             ResourceLocation id = entry.getId();
-            if (entry.get() instanceof DelightfulKnifeItem) {
+            if (EMISSIVE.contains(id)) {
+                emissive(id);
+            } else if (entry.get() instanceof DelightfulKnifeItem) {
                 handheld(id);
             } else if (FLAT_BLOCKS.contains(id)) {
                 flatBlock(id);
@@ -54,5 +61,11 @@ public class DelightfulItemModelProvider extends ItemModelProvider {
 
     public ItemModelBuilder handheld(ResourceLocation item) {
         return withExistingParent(item.getPath(), "item/handheld").texture("layer0", Util.rl(Delightful.MODID, "item/" + item.getPath()));
+    }
+
+    public ItemModelBuilder emissive(ResourceLocation item) {
+        return withExistingParent(item.getPath(), "item/handheld")
+            .texture("layer0", Util.rl(Delightful.MODID, "item/" + item.getPath()))
+            .customLoader(ItemLayersModelBuilder::begin).emissive(0).end();
     }
 }

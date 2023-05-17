@@ -15,11 +15,14 @@
             "tag": "forge:gems/quartz"
           },
           "c": {
-            "tag": "farmersdelight:cabinets/wooden"
+            "item": "farmersdelight:warped_cabinet"
+          },
+          "t": {
+            "item": "minecraft:polished_blackstone"
           }
         },
         "pattern": [
-          "bbb",
+          "ttt",
           "bcb",
           "bbb"
         ],

@@ -163,12 +163,12 @@ public class DelightfulItems {
         return Util.it("forge", "gems/" + name);
     }
 
-    public static Supplier<Ingredient> getIngot(String name) {
-        return Util.ing(ingot(name));
+    public static Ingredient getIngot(String name) {
+        return Ingredient.of(ingot(name));
     }
 
-    public static Supplier<Ingredient> getGem(String name) {
-        return Util.ing(gem(name));
+    public static Ingredient getGem(String name) {
+        return Ingredient.of(gem(name));
     }
 
     public static void create(IEventBus bus) {

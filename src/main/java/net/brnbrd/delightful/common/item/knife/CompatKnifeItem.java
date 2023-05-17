@@ -10,6 +10,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import java.util.List;
 import java.util.function.Supplier;
+
 import org.jetbrains.annotations.NotNull;
 import javax.annotation.Nullable;
 

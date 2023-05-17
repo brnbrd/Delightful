@@ -1,0 +1,39 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "stellium_knife"
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "phantasm"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "group": "socket_fallenstar",
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "delightful:stellium_knife"
+          },
+          {
+            "item": "phantasm:fallen_star"
+          }
+        ],
+        "result": {
+          "item": "delightful:stellium_knife",
+          "count": 1,
+          "nbt": {"socket": "starlit"}
+        }
+      }
+    }
+  ]
+}

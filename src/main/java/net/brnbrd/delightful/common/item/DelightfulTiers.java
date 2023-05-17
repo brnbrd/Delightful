@@ -8,12 +8,11 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.Tags;
 import org.jetbrains.annotations.NotNull;
 import java.util.Locale;
-import java.util.function.Supplier;
 
 public enum DelightfulTiers implements Tier {
-    BONE(1, 190, 5.0F, 1.5F, 9, Util.ing(Tags.Items.BONES)),
-    AMETHYST(2, 44, 15.0F, 0.5F, 1, Util.ing(Tags.Items.GEMS_AMETHYST)),
-    EMERALD(2, 250, 14.0F, 3.5F, 24, Util.ing(Tags.Items.GEMS_EMERALD)),
+    BONE(1, 190, 5.0F, 1.5F, 9, Ingredient.of(Tags.Items.BONES)),
+    AMETHYST(2, 44, 15.0F, 0.5F, 1, Ingredient.of(Tags.Items.GEMS_AMETHYST)),
+    EMERALD(2, 250, 14.0F, 3.5F, 24, Ingredient.of(Tags.Items.GEMS_EMERALD)),
     COPPER(2, 150, 5.0F, 1.5F, 14, DelightfulItems.getIngot("copper")),
     TIN(1, 120, 13.0F, 1.5F, 18, DelightfulItems.getIngot("tin")),
     STEEL(2, 484, 6.5F, 2.5F, 16, DelightfulItems.getIngot("steel")),
@@ -38,32 +37,36 @@ public enum DelightfulTiers implements Tier {
     FIERY(4, 1024, 9F, 4, 10, DelightfulItems.getIngot("fiery")),
     STEELEAF(3, 131, 8.0F, 3, 9, DelightfulItems.getIngot("steeleaf")),
     KNIGHTMETAL(3, 512, 8.0F, 3, 8, DelightfulItems.getIngot("knightmetal")),
-    LIVING(2, 192, 6.0f, 2.0f, 18, () -> null),
-    DRACO_ARCANUS(4, 2661, 12.0F, 7.0F, 20, Util.ing(Util.it("forbidden_arcanus", "dragon_scale"))),
+    LIVING(2, 192, 6.0f, 2.0f, 18, null),
+    DRACO_ARCANUS(4, 2661, 12.0F, 7.0F, 20, Ingredient.of(Util.it("forbidden_arcanus", "dragon_scale"))),
     DEORUM(3, 1861, 9.0F, 3.5F, 26, DelightfulItems.getIngot("deorum")),
-    REINFORCED_DEORUM(3, 2561, 9.0F, 3.5F, 26, Util.ing(Util.it("forbidden_arcanus", "stellarite_piece"))),
+    REINFORCED_DEORUM(3, 2561, 9.0F, 3.5F, 26, Ingredient.of(Util.it("forbidden_arcanus", "stellarite_piece"))),
     MYTHRIL(Tiers.IRON.getLevel(), 800, 8.0F, 3.0F, 12, DelightfulItems.getIngot("mythril")),
     ADAMANTIUM(Tiers.IRON.getLevel(),1150, 14.0F, 3.0F, 3, DelightfulItems.getIngot("adamantium")),
     ONYX(Tiers.NETHERITE.getLevel(), 3280, 10.0F, 5.0F, 15, DelightfulItems.getIngot("onyx")),
     THYRIUM(Tiers.DIAMOND.getLevel(), 2000, 22.0F, 6.0F, 28, DelightfulItems.getIngot("thyrium")),
     SINISITE(5, 4100, 18.0F, 8.0F, 11, DelightfulItems.getIngot("sinisite")),
-    ALLTHEMODIUM(5, 15000, 10, 11.0F, 85, Util.ing(DelightfulItemTags.PLATES_ALLTHEMODIUM)),
-    PENDORITE(5, 2500, 10.0F, 4.0F, 15, Util.ing(DelightfulItemTags.INGOTS_PENDORITE)),
-    WARDEN(4, 2464, 11.0F, 7.0F, 21, Util.ing(DelightfulItemTags.REINFORCED_ECHO_SHARD)),
-    ZINC(2, 250, 7.0F, 2.0F, 11, Util.ing(DelightfulItemTags.INGOTS_ZINC)),
-    GILDED_QUARTZ(3, 1644, 9.0F, 4.0F, 14, Util.ing(DelightfulItemTags.POLISHED_ROSE_QUARTZ)),
-    EXPERIENCE(2, 270, 7.0F, 1.5F, 800, Util.ing(DelightfulItemTags.HEAP_EXPERIENCE)),
-    KIWANO(2, 250, 6.0F, 2.0F, 14, Util.ing(DelightfulItemTags.KIWANO_PEEL)),
-    LEAF(1, 16, 20.0F, 4.0F, 14, Util.ing(DelightfulItemTags.SHARP_LEAF));
+    ALLTHEMODIUM(5, 15000, 10, 11.0F, 85, Ingredient.of(DelightfulItemTags.PLATES_ALLTHEMODIUM)),
+    PENDORITE(5, 2500, 10.0F, 4.0F, 15, Ingredient.of(DelightfulItemTags.INGOTS_PENDORITE)),
+    WARDEN(4, 2464, 11.0F, 7.0F, 21, Ingredient.of(DelightfulItemTags.REINFORCED_ECHO_SHARD)),
+    ZINC(2, 250, 7.0F, 2.0F, 11, Ingredient.of(DelightfulItemTags.INGOTS_ZINC)),
+    GILDED_QUARTZ(3, 1644, 9.0F, 4.0F, 14, Ingredient.of(DelightfulItemTags.POLISHED_ROSE_QUARTZ)),
+    EXPERIENCE(2, 270, 7.0F, 1.5F, 800, Ingredient.of(DelightfulItemTags.HEAP_EXPERIENCE)),
+    KIWANO(2, 250, 6.0F, 2.0F, 14, Ingredient.of(DelightfulItemTags.KIWANO_PEEL)),
+    LEAF(1, 16, 20.0F, 4.0F, 14, Ingredient.of(DelightfulItemTags.SHARP_LEAF)),
+    BLAZING(3, 450, 12.0F, 2.5F, 2, Ingredient.of(Tags.Items.INGOTS_GOLD)),
+    ADAMANTITE(4, 0, 8.0F, 3.5F, 15, DelightfulItems.getIngot("adamantite")),
+    CRYSTALLINE(2, 183, 1.0F, 3.5F, 11, Ingredient.of(DelightfulItemTags.CRYSTAL_SPIKE_TIPS)),
+    STELLIUM(4, 1337, 7.5F, 5.0F, 17, Ingredient.of(DelightfulItemTags.STELLIUM_INGOT));
 
     private final int level;
     private final int uses;
     private final float speed;
     private final float damage;
     private final int enchantmentValue;
-    private final Supplier<Ingredient> repairIngredient;
+    private final Ingredient repairIngredient;
 
-    DelightfulTiers(int level, int uses, float speed, float damage, int enchantmentValue, Supplier<Ingredient> repairIngredient) {
+    DelightfulTiers(int level, int uses, float speed, float damage, int enchantmentValue, Ingredient repairIngredient) {
         this.level = level;
         this.uses = uses;
         this.speed = speed;
@@ -93,7 +96,7 @@ public enum DelightfulTiers implements Tier {
     }
 
     public @NotNull Ingredient getRepairIngredient() {
-        return this.repairIngredient.get();
+        return this.repairIngredient;
     }
 
     public static Tier get(String name) {

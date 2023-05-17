@@ -1,6 +1,8 @@
 package net.brnbrd.delightful.data.tags;
 
+import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
+import net.brnbrd.delightful.compat.Mods;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import vectorwing.farmersdelight.FarmersDelight;
@@ -8,6 +10,7 @@ import vectorwing.farmersdelight.FarmersDelight;
 public class DelightfulItemTags {
 
 	// Delightful
+	public static final TagKey<Item> FIRE_KNIVES = Util.it(Delightful.MODID, "fire_knives");
 
 	// FarmersDelight
 	public static final TagKey<Item> CABINETS_STONE = Util.it(FarmersDelight.MODID, "cabinets/stone");
@@ -138,6 +141,11 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> SUMMER_CROPS = Util.it("sereneseasons", "summer_crops");
 	public static final TagKey<Item> AUTUMN_CROPS = Util.it("sereneseasons", "autumn_crops");
 	public static final TagKey<Item> SPRING_CROPS = Util.it("sereneseasons", "spring_crops");
+
+	// Phantasm
+	public static final TagKey<Item> VOID_CRYSTAL_BLOCK = Util.it(Mods.EP, "void_crystal_block");
+	public static final TagKey<Item> CRYSTAL_SPIKE_TIPS = Util.it(Mods.EP, "crystal_spike_tips");
+	public static final TagKey<Item> STELLIUM_INGOT = forge("stellium_ingot");
 
 	private static TagKey<Item> forge(String name) {
 		return Util.it("forge", name);

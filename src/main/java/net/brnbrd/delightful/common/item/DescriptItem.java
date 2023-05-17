@@ -10,7 +10,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class DescriptItem extends Item {
-	Component desc;
+	private final Component desc;
 
 	public DescriptItem(Properties prop, Component desc) {
 		super(prop);
@@ -20,6 +20,6 @@ public class DescriptItem extends Item {
 	@Override
 	public void appendHoverText(@NotNull ItemStack pStack, @Nullable Level pLevel, @NotNull List<Component> tool, @NotNull TooltipFlag pIsAdvanced) {
 		super.appendHoverText(pStack, pLevel, tool, pIsAdvanced);
-		tool.add(desc);
+		tool.add(this.desc);
 	}
 }

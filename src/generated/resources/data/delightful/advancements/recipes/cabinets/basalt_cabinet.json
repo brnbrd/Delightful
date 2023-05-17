@@ -8,7 +8,9 @@
             "conditions": {
               "items": [
                 {
-                  "tag": "farmersdelight:cabinets"
+                  "items": [
+                    "farmersdelight:crimson_cabinet"
+                  ]
                 }
               ]
             },

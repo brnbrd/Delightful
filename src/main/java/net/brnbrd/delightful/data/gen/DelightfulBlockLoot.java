@@ -3,6 +3,7 @@ package net.brnbrd.delightful.data.gen;
 import net.brnbrd.delightful.common.block.*;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLoot;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
@@ -12,8 +13,13 @@ import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePrope
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
+import java.util.List;
 
 public class DelightfulBlockLoot extends BlockLoot {
+
+    private final static List<ResourceLocation> NO_GEN = List.of(
+        DelightfulBlocks.WILD_SALMONBERRIES.getId()
+    );
 
     @Override
     protected void addTables() {
@@ -100,7 +106,6 @@ public class DelightfulBlockLoot extends BlockLoot {
 
         // Salmonberry Bush drops Pips
         this.dropSelf(DelightfulBlocks.SALMONBERRY_BUSH.get());
-        this.empty(DelightfulBlocks.WILD_SALMONBERRIES);
 
         // Ice Cream Blocks
         this.dropSelf(DelightfulBlocks.SALMONBERRY_ICE_CREAM_BLOCK.get());
@@ -109,7 +114,11 @@ public class DelightfulBlockLoot extends BlockLoot {
 
     @Override
     protected @NotNull Iterable<Block> getKnownBlocks() {
-        return DelightfulBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
+        return DelightfulBlocks.BLOCKS.getEntries()
+            .stream()
+            .filter(o -> !NO_GEN.contains(o.getId()))
+            .map(RegistryObject::get)
+            ::iterator;
     }
 
     public void empty(RegistryObject<Block> block) {

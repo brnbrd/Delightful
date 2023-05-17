@@ -1,6 +1,18 @@
 {
   "parent": "farmersdelight:main/root",
   "criteria": {
+    "adamantite_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:adamantite_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "adamantium_knife": {
       "conditions": {
         "items": [
@@ -43,6 +55,18 @@
           {
             "items": [
               "delightful:black_opal_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "blazing_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:blazing_knife"
             ]
           }
         ]
@@ -103,6 +127,18 @@
           {
             "items": [
               "delightful:copper_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "crystalline_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:crystalline_knife"
             ]
           }
         ]
@@ -541,6 +577,18 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "stellium_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:stellium_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "thyrium_knife": {
       "conditions": {
         "items": [
@@ -655,8 +703,12 @@
       "warden_knife",
       "experience_knife",
       "gilded_quartz_knife",
+      "blazing_knife",
       "leaf_knife",
-      "kiwano_knife"
+      "kiwano_knife",
+      "adamantite_knife",
+      "crystalline_knife",
+      "stellium_knife"
     ]
   ]
 }

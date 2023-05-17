@@ -3,7 +3,6 @@ package net.brnbrd.delightful.common.item.knife;
 import com.google.common.collect.ImmutableList;
 import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
-import net.brnbrd.delightful.common.DelightfulConfig;
 import net.brnbrd.delightful.common.item.IConfigured;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -23,10 +22,10 @@ import java.util.function.Supplier;
 
 public class DelightfulKnifeItem extends KnifeItem implements IConfigured {
     private final TagKey<Item> tag;
-    private final Supplier<Ingredient> smithingBase;
+    @Nullable private final Supplier<Ingredient> smithingBase; // Null if knife isn't smithed
     protected final ImmutableList<CreativeModeTab> tabs = ImmutableList.of(CreativeModeTab.TAB_SEARCH, FarmersDelight.CREATIVE_TAB);
 
-    public DelightfulKnifeItem(TagKey<Item> tag, Tier tier, Properties properties, Supplier<Ingredient> smithingBase) {
+    public DelightfulKnifeItem(TagKey<Item> tag, Tier tier, Properties properties, @Nullable Supplier<Ingredient> smithingBase) {
         super(tier, 0.5F, -2.0F, properties);
         this.tag = tag;
         this.smithingBase = smithingBase;
@@ -64,8 +63,8 @@ public class DelightfulKnifeItem extends KnifeItem implements IConfigured {
         return this.config() && this.isTag();
     }
 
-    public Supplier<Ingredient> getRod() {
-        return Util.ing(Tags.Items.RODS_WOODEN);
+    public Ingredient getRod() {
+        return Ingredient.of(Tags.Items.RODS_WOODEN);
     }
 
     @Nullable

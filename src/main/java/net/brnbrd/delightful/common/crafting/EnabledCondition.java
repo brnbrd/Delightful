@@ -3,7 +3,6 @@ package net.brnbrd.delightful.common.crafting;
 import com.google.gson.JsonObject;
 import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
-import net.brnbrd.delightful.common.DelightfulConfig;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
 import net.minecraftforge.common.crafting.conditions.ICondition;

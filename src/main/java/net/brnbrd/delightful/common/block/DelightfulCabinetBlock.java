@@ -4,17 +4,16 @@ import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.item.IConfigured;
 import net.minecraft.world.item.crafting.Ingredient;
 import vectorwing.farmersdelight.common.block.CabinetBlock;
-import java.util.function.Supplier;
 
 public class DelightfulCabinetBlock extends CabinetBlock implements IConfigured {
-    private final Supplier<Ingredient> ingredient;
+    private final Ingredient ingredient;
 
-    public DelightfulCabinetBlock(Supplier<Ingredient> ingredient, Properties properties) {
+    public DelightfulCabinetBlock(Ingredient ingredient, Properties properties) {
         super(properties);
         this.ingredient = ingredient;
     }
 
-    public Supplier<Ingredient> getIngredient() {
+    public Ingredient getIngredient() {
         return this.ingredient;
     }
 

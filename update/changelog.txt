@@ -1,4 +1,4 @@
-3.3:New textures
+3.3:https://github.com/brnbrd/Delightful/blob/1.19.2/changelog.md
 3.2.2:Updated to Forge 43.2.
 3.2.1:Renamed Goat to Chevon and updated texture. Slightly changed Sinigang texture. Recipe, tag, and other miscellaneous fixes.
 3.2:Added Coconut Curry & Sinigang.
