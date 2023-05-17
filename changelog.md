@@ -20,4 +20,4 @@
 
 ### Translations
 - Updated:
-    - ru_ru (thanks, Kiberkotleta!);
+    - ru_ru (thanks, Kiberkotleta!)
