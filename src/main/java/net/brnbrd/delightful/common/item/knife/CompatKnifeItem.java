@@ -55,7 +55,7 @@ public class CompatKnifeItem extends DelightfulKnifeItem {
         if (!this.config()) {
             tool.add(Component.translatable(Delightful.MODID + ".disabled.desc").withStyle(ChatFormatting.UNDERLINE));
         } else if (!this.isLoaded()) {
-            tool.add(Component.translatable(Delightful.MODID + ".disabled.requiresmod").withStyle(ChatFormatting.GRAY));
+            tool.add(Component.translatable("tooltip.requires_modid").withStyle(ChatFormatting.GRAY));
             tool.add(Component.literal(this.modid).withStyle(ChatFormatting.UNDERLINE));
         } else if (!this.tool.equals(Component.empty())) {
             tool.add(this.tool);
