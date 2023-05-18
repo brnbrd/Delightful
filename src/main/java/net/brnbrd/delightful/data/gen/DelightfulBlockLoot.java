@@ -100,12 +100,14 @@ public class DelightfulBlockLoot extends BlockLoot {
             }
         );
 
-        // Sacks
-        this.dropSelf(DelightfulBlocks.SALMONBERRY_SACK.get());
-        this.dropSelf(DelightfulBlocks.ACORN_SACK.get());
-
         // Salmonberry Bush drops Pips
         this.dropSelf(DelightfulBlocks.SALMONBERRY_BUSH.get());
+
+        // Crates
+        this.dropSelf(DelightfulBlocks.SALMONBERRY_SACK.get());
+        this.dropSelf(DelightfulBlocks.ACORN_SACK.get());
+        this.dropSelf(DelightfulBlocks.GREEN_APPLE_CRATE.get());
+        this.dropSelf(DelightfulBlocks.JOSHUA_FRUIT_CRATE.get());
 
         // Ice Cream Blocks
         this.dropSelf(DelightfulBlocks.SALMONBERRY_ICE_CREAM_BLOCK.get());

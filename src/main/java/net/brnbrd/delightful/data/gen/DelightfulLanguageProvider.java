@@ -88,7 +88,6 @@ public class DelightfulLanguageProvider extends LanguageProvider {
         addBlock(DelightfulBlocks.SLICED_CANTALOUPE, "Sliced Cantaloupe");
         addBlock(DelightfulBlocks.SLICED_MELON, "Sliced Melon");
         addBlock(DelightfulBlocks.SLICED_PUMPKIN, "Sliced Pumpkin");
-        addBlock(DelightfulBlocks.ACORN_SACK, "Acorn Sack");
         addBlock(DelightfulBlocks.PUMPKIN_PIE, "Pumpkin Pie");
         addBlock(DelightfulBlocks.SOURCE_BERRY_PIE, "Source Berry Pie");
         addBlock(DelightfulBlocks.GREEN_APPLE_PIE, "Green Apple Pie");
@@ -96,13 +95,16 @@ public class DelightfulLanguageProvider extends LanguageProvider {
         addBlock(DelightfulBlocks.NIGHTSHADE_BERRY_PIE, "Nightshade Berry Pie");
         addBlock(DelightfulBlocks.CRIMSON_BERRY_PIE, "Crimson Berry Pie");
         addBlock(DelightfulBlocks.SALMONBERRY_PIE, "Salmonberry Pie");
-        addBlock(DelightfulBlocks.SALMONBERRY_SACK, "Salmonberry Sack");
         addBlock(DelightfulBlocks.SALMONBERRY_BUSH, "Salmonberry Bush");
         addBlock(DelightfulBlocks.WILD_SALMONBERRIES, "Wild Salmonberries");
         addBlock(DelightfulBlocks.QUARTZ_CABINET, "Quartz Cabinet");
         addBlock(DelightfulBlocks.BASALT_CABINET, "Basalt Cabinet");
         addBlock(DelightfulBlocks.SALMONBERRY_ICE_CREAM_BLOCK, "Salmonberry Ice Cream Block");
         addBlock(DelightfulBlocks.MATCHA_ICE_CREAM_BLOCK, "Matcha Ice Cream Block");
+        addBlock(DelightfulBlocks.ACORN_SACK, "Acorn Sack");
+        addBlock(DelightfulBlocks.SALMONBERRY_SACK, "Salmonberry Sack");
+        addBlock(DelightfulBlocks.GREEN_APPLE_CRATE, "Green Apple Crate");
+        addBlock(DelightfulBlocks.JOSHUA_FRUIT_CRATE, "Joshua Fruit Crate");
         add("farmersdelight.tooltip.matcha_latte", "Healthy");
         add("farmersdelight.tooltip.berry_matcha_latte", "Healthy");
         add("farmersdelight.tooltip.ender_nectar", "Otherworldly");

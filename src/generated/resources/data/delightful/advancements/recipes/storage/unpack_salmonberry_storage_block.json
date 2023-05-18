@@ -4,12 +4,12 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_acorn": {
+          "has_salmonberry_storage_block": {
             "conditions": {
               "items": [
                 {
                   "items": [
-                    "delightful:acorn"
+                    "delightful:salmonberry_sack"
                   ]
                 }
               ]
@@ -18,36 +18,27 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:storage/acorn_sack"
+              "recipe": "delightful:storage/unpack_salmonberry_storage_block"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
         },
         "requirements": [
           [
-            "has_acorn",
+            "has_salmonberry_storage_block",
             "has_the_recipe"
           ]
         ],
         "rewards": {
           "recipes": [
-            "delightful:storage/acorn_sack"
+            "delightful:storage/unpack_salmonberry_storage_block"
           ]
         }
       },
       "conditions": [
         {
-          "type": "forge:and",
-          "values": [
-            {
-              "type": "delightful:enabled",
-              "value": "acorn"
-            },
-            {
-              "type": "delightful:enabled",
-              "value": "acorn_sack"
-            }
-          ]
+          "type": "delightful:enabled",
+          "value": "salmonberry_sack"
         }
       ]
     }

@@ -37,12 +37,12 @@
     "3.2.2": "Wandering Trader support, Salmonberries require rain.",
     "3.2.3": "Added Matcha and Salmonberry Ice Cream block, Salmonberries provide Water Breathing.",
     "3.2.4": "Recipe and tag fixes.",
-    "3.3": "https://github.com/brnbrd/Delightful/blob/1.19.2/changelog.md"
+    "3.3.1": "https://github.com/brnbrd/Delightful/blob/1.19.2/changelog.md"
   },
   "promos": {
     "1.18.2-latest": "2.0",
     "1.18.2-recommended": "2.0",
-    "1.19-latest": "3.3",
-    "1.19-recommended": "3.3"
+    "1.19-latest": "3.3.1",
+    "1.19-recommended": "3.3.1"
   }
 }

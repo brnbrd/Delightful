@@ -64,8 +64,10 @@ public class DelightfulBlocks {
         () -> new Block(BlockBehaviour.Properties.of(Material.SNOW, MaterialColor.COLOR_ORANGE).strength(0.2F).sound(SoundType.SNOW)));
     public static final RegistryObject<Block> MATCHA_ICE_CREAM_BLOCK = BLOCKS.register("matcha_ice_cream_block",
         () -> new Block(BlockBehaviour.Properties.of(Material.SNOW, MaterialColor.COLOR_LIGHT_GREEN).strength(0.2F).sound(SoundType.SNOW)));
-
-
+    public static final RegistryObject<Block> GREEN_APPLE_CRATE = BLOCKS.register("green_apple_crate",
+        () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> JOSHUA_FRUIT_CRATE = BLOCKS.register("joshua_fruit_crate",
+        () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
     public static RegistryObject<Block> registerBlock(String name, Supplier<Block> block) {
         return BLOCKS.register(name, block);
     }

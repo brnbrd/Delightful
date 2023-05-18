@@ -62,6 +62,8 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
         this.cabinet(DelightfulBlocks.QUARTZ_CABINET.get());
         this.simpleBlock(DelightfulBlocks.SALMONBERRY_ICE_CREAM_BLOCK.get());
         this.simpleBlock(DelightfulBlocks.MATCHA_ICE_CREAM_BLOCK.get());
+        this.crateBlock(DelightfulBlocks.GREEN_APPLE_CRATE.get(), "green_apple");
+        this.crateBlock(DelightfulBlocks.JOSHUA_FRUIT_CRATE.get(), "joshua_fruit");
     }
 
     // Adapted from: https://github.com/vectorwing/FarmersDelight/blob/1.19/src/main/java/vectorwing/farmersdelight/data/BlockStates.java
@@ -71,6 +73,10 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
             return ConfiguredModel.builder()
                 .modelFile(models().cross(stageName, resourceBlock(stageName)).renderType("cutout")).build();
         });
+    }
+
+    public void crateBlock(Block block, String cropName) {
+        this.simpleBlock(block, this.models().cubeBottomTop(Util.name(block), resourceBlock(cropName + "_crate_side"), Util.rl(FarmersDelight.MODID, "block/crate_bottom"), resourceBlock(cropName + "_crate_top")));
     }
 
     public void wildCropBlock(Block block) {

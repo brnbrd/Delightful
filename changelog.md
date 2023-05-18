@@ -1,6 +1,15 @@
 # Changelog
 
 
+## 3.3.1
+
+### Updates
+- New Matcha and Salmonberry Ice Cream Block textures, courtesy of **championhestu**
+
+### Fixes
+- Fixed unlocalized description for disabled items by modid
+
+
 ## 3.3 — The Facelift Update
 
 ### Updates

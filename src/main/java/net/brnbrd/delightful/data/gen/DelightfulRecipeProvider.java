@@ -43,6 +43,7 @@ import vectorwing.farmersdelight.data.builder.CuttingBoardRecipeBuilder;
 import vectorwing.farmersdelight.data.recipe.CookingRecipes;
 import java.util.Objects;
 import java.util.function.Consumer;
+import java.util.function.Supplier;
 
 public class DelightfulRecipeProvider extends RecipeProvider implements IConditionBuilder {
     public DelightfulRecipeProvider(DataGenerator pGenerator) {
@@ -250,10 +251,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .requires(DelightfulItemTags.NUTS_ACORN)
                 .unlockedBy("has_cactus_steak", has(DelightfulItems.CACTUS_STEAK.get())),
             "food/field_salad", finished, enabled("field_salad"));
-        wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.SALMONBERRY_SACK.get(), 1)
-                .requires(DelightfulItems.SALMONBERRIES.get(), 9)
-                .unlockedBy("has_salmonberries", has(DelightfulItems.SALMONBERRIES.get())),
-            "storage/salmonberry_sack", finished, enabled(DelightfulItems.SALMONBERRIES), enabled(DelightfulItems.SALMONBERRY_SACK));
+        sack(DelightfulItems.SALMONBERRY_SACK, DelightfulItems.SALMONBERRIES, "salmonberry", finished);
         wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.SALMONBERRY_ICE_CREAM.get(), 1)
                 .requires(Items.BOWL)
                 .requires(DelightfulItemTags.FRUITS_SALMONBERRIES)
@@ -331,22 +329,11 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .requires(DelightfulItems.PUMPKIN_PIE_SLICE.get(), 4)
                 .unlockedBy("has_pumpkin_pie_slice", has(DelightfulItems.PUMPKIN_PIE_SLICE.get())),
             "food/pumpkin_pie_from_slices", finished, enabled("pumpkin_pie_overhaul"));
-        wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.SALMONBERRIES.get(), 9)
-                .requires(DelightfulItems.SALMONBERRY_SACK.get())
-                .unlockedBy("has_salmonberry_sack", has(DelightfulItems.SALMONBERRY_SACK.get())),
-            "storage/unpack_salmonberry_sack", finished, enabled("salmonberry_sack"));
         wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.SALMONBERRY_PIPS.get())
                 .requires(DelightfulItems.SALMONBERRIES.get())
                 .unlockedBy("has_salmonberries", has(DelightfulItemTags.FRUITS_SALMONBERRIES)),
             "salmonberry_pips", finished, enabled("salmonberry_pips"));
-        wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.ACORN_SACK.get(), 1)
-                .requires(DelightfulItems.ACORN.get(), 9)
-                .unlockedBy("has_acorn", has(DelightfulItems.ACORN.get())),
-            "storage/acorn_sack", finished, enabled(DelightfulItems.ACORN), enabled(DelightfulItems.ACORN_SACK));
-        wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.ACORN.get(), 9)
-                .requires(DelightfulItems.ACORN_SACK.get())
-                .unlockedBy("has_acorn_sack", has(DelightfulItems.ACORN_SACK.get())),
-            "storage/unpack_acorn_sack", finished, enabled(DelightfulItems.ACORN), enabled(DelightfulItems.ACORN_SACK));
+        sack(DelightfulItems.ACORN_SACK, DelightfulItems.ACORN, "acorn", finished);
         wrap(SimpleCookingRecipeBuilder.smelting(Ingredient.of(DelightfulItems.VENISON_CHOPS.get()),
                 DelightfulItems.COOKED_VENISON_CHOPS.get(), 0.35F, 200)
             .unlockedBy("has_venison_chops", has(DelightfulItems.VENISON_CHOPS.get())),
@@ -538,7 +525,6 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .unlockedBy("has_matcha_ice_cream", has(DelightfulItems.MATCHA_ICE_CREAM.get())),
             "matcha_ice_cream_block", finished, enabled(DelightfulItems.MATCHA_ICE_CREAM_BLOCK), enabled(DelightfulItems.MATCHA_ICE_CREAM), modLoaded("neapolitan"));
 
-
         // Unwrappables
         ConditionalRecipe.builder()
           .addCondition(not(tagEmpty(DelightfulItemTags.CHOCOLATE)))
@@ -665,6 +651,17 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
         cond.addRecipe(recipe[0])
             .generateAdvancement()
             .build(consumer, loc);
+    }
+
+    private void sack(RegistryObject<Item> sack, Supplier<Item> ingredient, String name, Consumer<FinishedRecipe> finished) {
+        wrap(ShapelessRecipeBuilder.shapeless(sack.get(), 1)
+                .requires(ingredient.get(), 9)
+                .unlockedBy("has_" + name, has(ingredient.get())),
+            "storage/" + name + "_storage_block", finished, enabled(sack));
+        wrap(ShapelessRecipeBuilder.shapeless(ingredient.get(), 9)
+                .requires(sack.get(), 1)
+                .unlockedBy("has_" + name + "_storage_block", has(sack.get())),
+            "storage/unpack_" + name + "_storage_block", finished, enabled(sack));
     }
 
     private void cabinet(Block block, Block wood, Block counter, Consumer<FinishedRecipe> finished) {

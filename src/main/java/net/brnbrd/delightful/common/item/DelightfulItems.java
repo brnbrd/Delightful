@@ -70,6 +70,16 @@ public class DelightfulItems {
             (new Item.Properties()).tab(CreativeModeTab.TAB_BUILDING_BLOCKS) :
             (new Item.Properties())
     ));
+    public static final RegistryObject<Item> GREEN_APPLE_CRATE = registerItem("green_apple_crate", () ->
+        new BlockItem(DelightfulBlocks.GREEN_APPLE_CRATE.get(), Mods.loaded(Mods.BYG) ?
+            (new Item.Properties()).tab(CreativeModeTab.TAB_BUILDING_BLOCKS) :
+            (new Item.Properties())
+        ));
+    public static final RegistryObject<Item> JOSHUA_FRUIT_CRATE = registerItem("joshua_fruit_crate", () ->
+        new BlockItem(DelightfulBlocks.JOSHUA_FRUIT_CRATE.get(), Mods.loaded(Mods.BYG) ?
+            (new Item.Properties()).tab(CreativeModeTab.TAB_BUILDING_BLOCKS) :
+            (new Item.Properties())
+        ));
     public static final RegistryObject<Item> COCONUT_CURRY = registerItem("coconut_curry", () -> new ConsumableItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB).food(Nutrition.COCONUT_CURRY).stacksTo(16).craftRemainder(Items.BOWL), true));
     public static final RegistryObject<Item> SINIGANG = registerItem("sinigang", () -> new ConsumableItem((new Item.Properties()).food(Nutrition.SINIGANG).craftRemainder(Items.BOWL).stacksTo(16).tab(FarmersDelight.CREATIVE_TAB), true, true));
     public static final RegistryObject<Item> CHOPPED_CLOVER = registerCompatFood("chopped_clover", Nutrition.CHOPPED_CLOVER,

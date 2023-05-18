@@ -1,14 +1,4 @@
-// 1.19.2	2023-05-17T11:54:03.3363025	delightful
-2469f55332d27164e5aade020a5d1f0d44c68df5 data/delightful/tags/blocks/add_acorn.json
-e4d28099b3557b120274c2ef7593e202019c4d65 data/delightful/tags/blocks/cantaloupe_spawns.json
-ba6ef28da1fcd146a5a73f41f83db71fb06d65f0 data/delightful/tags/blocks/drops_acorn.json
-a4e8097fff07f9a74259d6b5dd583f3437ff28a2 data/delightful/tags/blocks/drops_green_tea_leaf.json
-72dabca2e0e35886bb98adfc68853a19215adaa1 data/delightful/tags/blocks/drops_straw.json
-b4b2f8cde2ef492d0e642241fdb424db020921c2 data/farmersdelight/tags/blocks/mineable/knife.json
-46f279b6acd03b06ea14e9f62be7d48e200c002c data/farmersdelight/tags/blocks/wild_crops.json
-0a728a7c3daab83fad4aefb600c90e9cbfae481d data/minecraft/tags/blocks/mineable/axe.json
-4c9151a66807bda568fa8530c20e965a9d1fd734 data/minecraft/tags/blocks/mineable/hoe.json
-56652c93f5e1505b2c4875c8d14635f2a2c72350 data/minecraft/tags/blocks/mineable/pickaxe.json
-29368e834a67871eea4c932b990cc8cea8873f23 data/minecraft/tags/blocks/mineable/shovel.json
-46f279b6acd03b06ea14e9f62be7d48e200c002c data/minecraft/tags/blocks/small_flowers.json
-70f4933801abb0d395b9a5b4f114e870c9402935 data/sereneseasons/tags/blocks/summer_crops.json
+// 1.19.2	2023-05-18T07:35:50.9119176	delightful
+56dd5fb45d876faf2b72731f0d1531296baa5e35 data/delightful/tags/entity_types/drops_acorn.json
+8402c24b8872a973f5f97bfec0ac81ef2b167b89 data/delightful/tags/entity_types/drops_raw_goat.json
+20164735f562aff9a77de0ffb64ad7d8dc0c7fca data/delightful/tags/entity_types/fatty_animals.json

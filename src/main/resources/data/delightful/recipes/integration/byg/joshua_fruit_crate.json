@@ -7,12 +7,12 @@
           "type": "forge:and",
           "values": [
             {
-              "type": "delightful:enabled",
-              "value": "acorn"
+              "type": "forge:item_exists",
+              "item": "byg:joshua_fruit"
             },
             {
               "type": "delightful:enabled",
-              "value": "acorn_sack"
+              "value": "joshua_fruit_crate"
             }
           ]
         }
@@ -21,35 +21,35 @@
         "type": "minecraft:crafting_shapeless",
         "ingredients": [
           {
-            "item": "delightful:acorn"
+            "item": "byg:joshua_fruit"
           },
           {
-            "item": "delightful:acorn"
+            "item": "byg:joshua_fruit"
           },
           {
-            "item": "delightful:acorn"
+            "item": "byg:joshua_fruit"
           },
           {
-            "item": "delightful:acorn"
+            "item": "byg:joshua_fruit"
           },
           {
-            "item": "delightful:acorn"
+            "item": "byg:joshua_fruit"
           },
           {
-            "item": "delightful:acorn"
+            "item": "byg:joshua_fruit"
           },
           {
-            "item": "delightful:acorn"
+            "item": "byg:joshua_fruit"
           },
           {
-            "item": "delightful:acorn"
+            "item": "byg:joshua_fruit"
           },
           {
-            "item": "delightful:acorn"
+            "item": "byg:joshua_fruit"
           }
         ],
         "result": {
-          "item": "delightful:acorn_sack"
+          "item": "delightful:joshua_fruit_crate"
         }
       }
     }
