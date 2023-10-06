@@ -152,8 +152,5 @@
   "item.delightful.zinc_knife": "Zinc Knife",
   "tooltip.config_disabled": "Disabled",
   "tooltip.requires_modid": "Requires modid:",
-  "tooltip.requires_tag": "Requires non-empty tag:",
-  "farmersdelight.tooltip.azalea_tea": "Saludable",
-  "farmersdelight.tooltip.lavender_tea": "Very Healthy",
-  "farmersdelight.tooltip.prickly_pear_juice": "Muy saturante"
+  "tooltip.requires_tag": "Requires non-empty tag:"
 }

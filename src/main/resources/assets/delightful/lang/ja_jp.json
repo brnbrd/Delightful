@@ -152,8 +152,5 @@
   "item.delightful.zinc_knife": "亜鉛のナイフ",
   "tooltip.config_disabled": "無効",
   "tooltip.requires_modid": "MODが必要",
-  "tooltip.requires_tag": "Requires non-empty tag:",
-  "farmersdelight.tooltip.azalea_tea": "よく煮出していて健康的",
-  "farmersdelight.tooltip.lavender_tea": "とても健康的",
-  "farmersdelight.tooltip.prickly_pear_juice": "美味しく煮出している"
+  "tooltip.requires_tag": "Requires non-empty tag:"
 }

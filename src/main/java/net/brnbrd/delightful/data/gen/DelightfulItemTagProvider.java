@@ -217,7 +217,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.CHEESE)
 			.addOptional(Util.rl("brewinandchewin", "flaxen_cheese_wedge"))
 			.addOptional(Util.rl("farmlife", "tribull_cheese_wedge"))
-			.addOptional(Util.rl("croptopia", "cheese"));
+			.addOptional(Util.rl("croptopia", "cheese"))
+			.addOptional(Util.rl("thermal", "cheese_wedge"));
 		this.tag(ForgeTags.MILK)
 			.addOptional(Util.rl("dracovitadelight", "tribull_milk"));
 		this.tag(DelightfulItemTags.TEA_LEAVES)

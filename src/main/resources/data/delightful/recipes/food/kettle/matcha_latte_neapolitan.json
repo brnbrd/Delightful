@@ -1,0 +1,51 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "value": "matcha",
+              "type": "delightful:enabled"
+            },
+            {
+              "value": "matcha_latte",
+              "type": "delightful:enabled"
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "farmersrespite"
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "neapolitan"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "farmersrespite:brewing",
+        "container": {
+          "item": "neapolitan:milk_bottle"
+        },
+        "cookingtime": 2400,
+        "experience": 0.35,
+        "ingredients": [
+          {
+            "item": "delightful:matcha"
+          },
+          {
+            "item": "minecraft:honey_bottle"
+          }
+        ],
+        "needwater": true,
+        "recipe_book_tab": "drinks",
+        "result": {
+          "item": "delightful:matcha_latte"
+        }
+      }
+    }
+  ]
+}

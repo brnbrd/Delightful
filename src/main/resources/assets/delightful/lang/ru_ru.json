@@ -152,8 +152,5 @@
   "item.delightful.zinc_knife": "Цинковый нож",
   "tooltip.config_disabled": "Отключено",
   "tooltip.requires_modid": "Требуется мод:",
-  "tooltip.requires_tag": "Требует не пустой тег:",
-  "farmersdelight.tooltip.azalea_tea": "Полезный",
-  "farmersdelight.tooltip.lavender_tea": "Очень полезная",
-  "farmersdelight.tooltip.prickly_pear_juice": "Очень насыщающий"
+  "tooltip.requires_tag": "Требует не пустой тег:"
 }

@@ -152,8 +152,5 @@
   "item.delightful.zinc_knife": "Цинковий ніж",
   "tooltip.config_disabled": "Відключено",
   "tooltip.requires_modid": "Вимагає мод:",
-  "tooltip.requires_tag": "Потрібен непорожній тег:",
-  "farmersdelight.tooltip.azalea_tea": "Здорова та ситна їжа",
-  "farmersdelight.tooltip.lavender_tea": "Дуже здорова їжа",
-  "farmersdelight.tooltip.prickly_pear_juice": "Дуже ситній"
+  "tooltip.requires_tag": "Потрібен непорожній тег:"
 }

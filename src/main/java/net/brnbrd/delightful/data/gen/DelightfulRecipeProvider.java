@@ -738,8 +738,8 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 
     private void foodSmeltingRecipes(String name, ItemLike ingredient, ItemLike result, float experience, Consumer<FinishedRecipe> consumer) {
         wrap(SimpleCookingRecipeBuilder.smelting(Ingredient.of(ingredient), result, experience, 200).unlockedBy(name, has(ingredient)), "smelting/" + name, consumer, enabled(name));
-        wrap(SimpleCookingRecipeBuilder.cooking(Ingredient.of(ingredient), result, experience, 600, RecipeSerializer.CAMPFIRE_COOKING_RECIPE).unlockedBy(name, has(ingredient)), "campfire/" + name, consumer, enabled(name));
-        wrap(SimpleCookingRecipeBuilder.cooking(Ingredient.of(ingredient), result, experience, 100, RecipeSerializer.SMOKING_RECIPE).unlockedBy(name, has(ingredient)), "smoking/" + name, consumer, enabled(name));
+        wrap(SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(ingredient), result, experience, 600).unlockedBy(name, has(ingredient)), "campfire/" + name, consumer, enabled(name));
+        wrap(SimpleCookingRecipeBuilder.smoking(Ingredient.of(ingredient), result, experience, 100).unlockedBy(name, has(ingredient)), "smoking/" + name, consumer, enabled(name));
     }
 
     private ShapelessRecipeBuilder shapeless(RegistryObject<Item> returns, int... count) {

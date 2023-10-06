@@ -11,6 +11,10 @@
     {
       "id": "croptopia:cheese",
       "required": false
+    },
+    {
+      "id": "thermal:cheese_wedge",
+      "required": false
     }
   ]
 }

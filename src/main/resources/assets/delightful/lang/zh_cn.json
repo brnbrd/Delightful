@@ -152,8 +152,5 @@
   "item.delightful.zinc_knife": "锌刀",
   "tooltip.config_disabled": "Disabled",
   "tooltip.requires_modid": "Requires modid:",
-  "tooltip.requires_tag": "Requires non-empty tag:",
-  "farmersdelight.tooltip.azalea_tea": "健康且满足",
-  "farmersdelight.tooltip.lavender_tea": "绿色健康",
-  "farmersdelight.tooltip.prickly_pear_juice": "饱餐一顿"
+  "tooltip.requires_tag": "Requires non-empty tag:"
 }
