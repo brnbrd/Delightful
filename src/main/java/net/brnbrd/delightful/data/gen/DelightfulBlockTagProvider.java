@@ -35,11 +35,20 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 			.add(DelightfulBlocks.CRIMSON_BERRY_PIE.get())
 			.add(DelightfulBlocks.GREEN_APPLE_PIE.get())
 			.add(DelightfulBlocks.NIGHTSHADE_BERRY_PIE.get())
-			.add(DelightfulBlocks.SOURCE_BERRY_PIE.get());
+			.add(DelightfulBlocks.SOURCE_BERRY_PIE.get())
+			.add(DelightfulBlocks.GLOOMGOURD_PIE.get());
 		this.tag(ModTags.WILD_CROPS)
 			.add(DelightfulBlocks.WILD_SALMONBERRIES.get());
 
 		// Delightful
+		this.tag(DelightfulBlockTags.COMPAT_PIES)
+			.add(DelightfulBlocks.PUMPKIN_PIE.get())
+			.add(DelightfulBlocks.SOURCE_BERRY_PIE.get())
+			.add(DelightfulBlocks.GLOOMGOURD_PIE.get())
+			.add(DelightfulBlocks.BLUEBERRY_PIE.get())
+			.add(DelightfulBlocks.CRIMSON_BERRY_PIE.get())
+			.add(DelightfulBlocks.GREEN_APPLE_PIE.get())
+			.add(DelightfulBlocks.NIGHTSHADE_BERRY_PIE.get());
 		this.tag(DelightfulBlockTags.DROPS_STRAW)
 			.addOptional(Util.rl("sprout", "sprouts"))
 			.addOptional(Util.rl(Mods.BYG, BYGCompat.prairie_grass))
@@ -68,13 +77,19 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 			.add(DelightfulBlocks.CANTALOUPE.get())
 			.add(DelightfulBlocks.SLICED_CANTALOUPE.get())
 			.addOptional(Util.rl("fruittrees", "citrus_cabinet"))
-			.addOptional(Util.rl("fruittrees", "cherry_cabinet"));
+			.addOptional(Util.rl("fruittrees", "cherry_cabinet"))
+			.add(DelightfulBlocks.GREEN_APPLE_CRATE.get())
+			.add(DelightfulBlocks.JOSHUA_FRUIT_CRATE.get())
+			.add(DelightfulBlocks.BAOBAB_FRUIT_CRATE.get());
 		this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
 			.add(DelightfulBlocks.MATCHA_ICE_CREAM_BLOCK.get())
 			.add(DelightfulBlocks.SALMONBERRY_ICE_CREAM_BLOCK.get());
 		this.tag(BlockTags.MINEABLE_WITH_HOE)
 			.add(DelightfulBlocks.ACORN_SACK.get())
-			.add(DelightfulBlocks.SALMONBERRY_SACK.get());
+			.add(DelightfulBlocks.SALMONBERRY_SACK.get())
+			.add(DelightfulBlocks.BLUEBERRY_SACK.get())
+			.add(DelightfulBlocks.CRIMSON_BERRY_SACK.get())
+			.add(DelightfulBlocks.NIGHTSHADE_BERRY_SACK.get());
 		this.tag(BlockTags.SMALL_FLOWERS)
 			.add(DelightfulBlocks.WILD_SALMONBERRIES.get());
 

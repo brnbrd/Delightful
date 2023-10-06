@@ -35,7 +35,7 @@
           }
         ],
         "tool": {
-          "tag": "forge:tools/scavenging"
+          "tag": "forge:tools/knives"
         }
       }
     }

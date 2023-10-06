@@ -1,0 +1,34 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "forge:item_exists",
+              "item": "byg:baobab_fruit"
+            },
+            {
+              "type": "delightful:enabled",
+              "value": "baobab_fruit_crate"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "delightful:baobab_fruit_crate"
+          }
+        ],
+        "result": {
+          "count": 9,
+          "item": "byg:baobab_fruit"
+        }
+      }
+    }
+  ]
+}

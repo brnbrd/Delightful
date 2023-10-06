@@ -18,7 +18,7 @@
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
-                "tag": "forge:stellium_ingot"
+                "tag": "forge:ingots/stellium"
               }
             }
           ]
@@ -28,7 +28,7 @@
         "type": "minecraft:crafting_shaped",
         "key": {
           "m": {
-            "tag": "forge:stellium_ingot"
+            "tag": "forge:ingots/stellium"
           },
           "s": {
             "tag": "forge:rods/wooden"

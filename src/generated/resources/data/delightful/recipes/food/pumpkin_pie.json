@@ -5,7 +5,7 @@
       "conditions": [
         {
           "type": "delightful:enabled",
-          "value": "pumpkin_pie_overhaul"
+          "value": "pumpkin_pie_slice"
         }
       ],
       "recipe": {

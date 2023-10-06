@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "farmersdelight:block/crate_bottom",
+    "side": "delightful:block/baobab_fruit_crate_side",
+    "top": "delightful:block/baobab_fruit_crate_top"
+  }
+}

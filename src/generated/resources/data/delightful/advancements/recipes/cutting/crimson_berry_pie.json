@@ -1,0 +1,21 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "crimson_berry_pie_slice"
+            },
+            {
+              "type": "forge:item_exists",
+              "item": "byg:crimson_berry_pie"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

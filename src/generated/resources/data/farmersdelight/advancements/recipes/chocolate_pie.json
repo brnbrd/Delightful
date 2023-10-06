@@ -40,7 +40,7 @@
           "type": "forge:not",
           "value": {
             "type": "forge:tag_empty",
-            "tag": "forge:chocolate"
+            "tag": "forge:bars/chocolate"
           }
         }
       ]
@@ -83,7 +83,7 @@
       "conditions": [
         {
           "type": "forge:tag_empty",
-          "tag": "forge:chocolate"
+          "tag": "forge:bars/chocolate"
         }
       ]
     }

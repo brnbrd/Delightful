@@ -29,6 +29,10 @@
     {
       "id": "#forge:fruits/mulberry",
       "required": false
+    },
+    {
+      "id": "#undergarden:blisterberry",
+      "required": false
     }
   ]
 }

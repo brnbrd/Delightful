@@ -5,8 +5,10 @@ import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.knife.DelightfulKnifeItem;
 import net.brnbrd.delightful.common.item.knife.Knives;
+import net.brnbrd.delightful.compat.ArsNouveauCompat;
 import net.brnbrd.delightful.compat.BYGCompat;
 import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.UndergardenCompat;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
@@ -31,6 +33,14 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 	protected void addTags() {
 
 		// Delightful
+		this.tag(DelightfulItemTags.COMPAT_PIES)
+			.add(Items.PUMPKIN_PIE)
+			.addOptional(Util.rl(Mods.AN, ArsNouveauCompat.pie))
+			.addOptional(Util.rl(Mods.UG, UndergardenCompat.pie))
+			.addOptional(Util.rl(Mods.BYG, BYGCompat.blueberry_pie))
+			.addOptional(Util.rl(Mods.BYG, BYGCompat.crimson_berry_pie))
+			.addOptional(Util.rl(Mods.BYG, BYGCompat.green_apple_pie))
+			.addOptional(Util.rl(Mods.BYG, BYGCompat.nightshade_berry_pie));
 		this.tag(DelightfulItemTags.FIRE_KNIVES)
 			.add(Knives.FIERY.get())
 			.add(Knives.KIWANO.get())
@@ -56,11 +66,15 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.add(DelightfulItems.SALMONBERRY_GUMMY.get());
 
 		// Forge
-		this.tag(DelightfulItemTags.SCAVENGING_TOOLS)
+		this.tag(DelightfulItemTags.DOUGH_CORN)
+			.addOptional(Util.rl("culturaldelights", "corn_dough"));
+		this.tag(ForgeTags.DOUGH)
+			.addTag(DelightfulItemTags.DOUGH_CORN);
+		this.tag(DelightfulItemTags.TOOLS_MACHETES)
+			.addOptionalTag(Util.rl("nethersdelight", "tools/machetes"));
+		this.tag(DelightfulItemTags.TOOLS_SCAVENGING)
 			.addTag(ForgeTags.TOOLS_KNIVES)
-			.addOptional(Util.rl("nethersdelight", "scavenging_tools"))
-			.addOptional(Util.rl("nethersdelight", "tools/machetes"))
-			.addOptional(Util.rl("forge", "tools/machetes"));
+			.addOptionalTag(Util.rl("nethersdelight", "scavenging_tools"));
 		this.tag(DelightfulItemTags.LAVENDER)
 			.addOptional(Util.rl("biomesoplenty", "lavender"))
 			.addOptional(Util.rl("quark", "lavender_blossom_leaves"));
@@ -120,7 +134,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_WILD_BERRIES)
 			.addOptional(Util.rl("enlightened_end", "zure_berry"))
 			.addOptional(Util.rl("phantasm", "pream_berry"))
-			.addOptionalTag(Util.rl("forge", "fruits/mulberry"));
+			.addOptionalTag(Util.rl("forge", "fruits/mulberry"))
+			.addOptionalTag(Util.rl("undergarden", "blisterberry"));
 		this.tag(ForgeTags.BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_BERRIES);
 		this.tag(DelightfulItemTags.FRUITS)
@@ -259,6 +274,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Util.rl("neapolitan", "chocolate_bar"))
 			.addOptional(Util.rl("create", "bar_of_chocolate"))
 			.addOptionalTag(Util.rl("forge", "chocolatebar"));
+		this.tag(DelightfulItemTags.BARS_CHOCOLATE)
+			.addTag(DelightfulItemTags.CHOCOLATE);
 		this.tag(ForgeTags.SALAD_INGREDIENTS)
 			.add(DelightfulItems.CHOPPED_CLOVER.get())
 			.addOptional(Util.rl("babyfat", "water_lettuce"));
@@ -355,6 +372,36 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Util.rl(Mods.EP, "void_crystal_spike_tip"));
 		this.tag(DelightfulItemTags.STELLIUM_INGOT)
 			.addOptional(Util.rl(Mods.EP, "stellium_ingot"));
+
+		this.tag(DelightfulItemTags.SOUL_STEEL_INGOT)
+			.addOptional(Util.rl("spirit", "soul_steel_ingot"));
+		this.tag(DelightfulItemTags.SOUL_STEEL_MAINHAND)
+			.add(Knives.SOUL_STEEL.get());
+
+		// Botania
+		this.addSelf(DelightfulItemTags.LIVINGWOOD_TWIG);
+		this.addSelf(DelightfulItemTags.DREAMWOOD_TWIG);
+		this.tag(DelightfulItemTags.MANA_ITEMS)
+			.add(Knives.MANASTEEL.get())
+			.add(Knives.ELEMENTIUM.get())
+			.add(Knives.TERRA.get());
+		this.tag(DelightfulItems.ingot("alfsteel"))
+			.addOptional(Util.rl("mythicbotany", "alfsteel_ingot"));
+
+		// Additional Additions
+		this.addSelf(DelightfulItemTags.ROSE_GOLD_ALLOY);
+		this.addSelf(DelightfulItemTags.GOLD_RING);
+
+		// Nourished Nether
+		this.tag(DelightfulItemTags.NECRONIUM_INGOT)
+			.addOptional(Util.rl("nourished_nether", "necronium_ingot"));
+		this.tag(DelightfulItemTags.NECRONIUM_TOOLS)
+			.add(Knives.NECRONIUM.get());
+
+		// Undergarden
+		this.tag(DelightfulItemTags.CLOGGRUM_ITEMS).add(Knives.CLOGGRUM.get());
+		this.tag(DelightfulItemTags.FROSTSTEEL_ITEMS).add(Knives.FROSTSTEEL.get());
+		this.tag(DelightfulItemTags.UTHERIUM_ITEMS).add(Knives.UTHERIUM.get());
 	}
 
 	/**

@@ -4,17 +4,8 @@
     {
       "conditions": [
         {
-          "type": "forge:and",
-          "values": [
-            {
-              "type": "delightful:enabled",
-              "value": "pumpkin_pie_overhaul"
-            },
-            {
-              "type": "delightful:enabled",
-              "value": "pumpkin_pie_slice"
-            }
-          ]
+          "type": "delightful:enabled",
+          "value": "pumpkin_pie_slice"
         }
       ],
       "recipe": {
@@ -31,7 +22,7 @@
           }
         ],
         "tool": {
-          "tag": "forge:tools/scavenging"
+          "tag": "forge:tools/knives"
         }
       }
     }

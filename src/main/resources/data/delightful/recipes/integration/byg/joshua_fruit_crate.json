@@ -1,0 +1,57 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "forge:item_exists",
+              "item": "byg:joshua_fruit"
+            },
+            {
+              "type": "delightful:enabled",
+              "value": "joshua_fruit_crate"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "byg:joshua_fruit"
+          },
+          {
+            "item": "byg:joshua_fruit"
+          },
+          {
+            "item": "byg:joshua_fruit"
+          },
+          {
+            "item": "byg:joshua_fruit"
+          },
+          {
+            "item": "byg:joshua_fruit"
+          },
+          {
+            "item": "byg:joshua_fruit"
+          },
+          {
+            "item": "byg:joshua_fruit"
+          },
+          {
+            "item": "byg:joshua_fruit"
+          },
+          {
+            "item": "byg:joshua_fruit"
+          }
+        ],
+        "result": {
+          "item": "delightful:joshua_fruit_crate"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "forge:item_exists",
+              "item": "byg:green_apple"
+            },
+            {
+              "type": "delightful:enabled",
+              "value": "green_apple_crate"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "byg:green_apple"
+          },
+          {
+            "item": "byg:green_apple"
+          },
+          {
+            "item": "byg:green_apple"
+          },
+          {
+            "item": "byg:green_apple"
+          },
+          {
+            "item": "byg:green_apple"
+          },
+          {
+            "item": "byg:green_apple"
+          },
+          {
+            "item": "byg:green_apple"
+          },
+          {
+            "item": "byg:green_apple"
+          },
+          {
+            "item": "byg:green_apple"
+          }
+        ],
+        "result": {
+          "item": "delightful:green_apple_crate"
+        }
+      }
+    }
+  ]
+}

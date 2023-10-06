@@ -2,7 +2,6 @@ package net.brnbrd.delightful.common.block;
 
 import com.mojang.datafixers.util.Pair;
 import net.brnbrd.delightful.Util;
-import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -26,6 +25,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
+import vectorwing.farmersdelight.common.tag.ForgeTags;
 import java.util.function.Supplier;
 
 public class SlicedPumpkinBlock extends PumpkinBlock implements ISliceable {
@@ -86,7 +86,7 @@ public class SlicedPumpkinBlock extends PumpkinBlock implements ISliceable {
   @Override
   public @NotNull InteractionResult use(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult hit) {
     ItemStack heldStack = player.getItemInHand(hand);
-    if (heldStack.is(DelightfulItemTags.SCAVENGING_TOOLS)) {
+    if (heldStack.is(ForgeTags.TOOLS_KNIVES)) {
       return this.cutSlice(level, pos, state, player, hand);
     }
     return this.consumeBite(level, pos, state, player);

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "delightful:block/crimson_berry_sack_bottom",
+    "side": "delightful:block/crimson_berry_sack",
+    "top": "delightful:block/crimson_berry_sack_top"
+  }
+}

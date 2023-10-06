@@ -1,0 +1,37 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "alf_knife"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:ingots/alfsteel"
+              }
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:smithing",
+        "addition": {
+          "tag": "forge:ingots/alfsteel"
+        },
+        "base": {
+          "item": "delightful:terra_knife"
+        },
+        "result": {
+          "item": "delightful:alf_knife"
+        }
+      }
+    }
+  ]
+}

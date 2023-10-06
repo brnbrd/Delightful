@@ -79,6 +79,7 @@ dependencies {
     runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}-forge:${jei_version}")
     runtimeOnly fg.deobf("curse.maven:appleskin-248787:${appleskin_version}")
     runtimeOnly fg.deobf("curse.maven:configured-457570:${configured_version}")
+    implementation fg.deobf("curse.maven:jade-324717:${jade_version}")
     implementation fg.deobf("curse.maven:farmers-d-398521:${farmers_delight_version}")
     implementation fg.deobf("curse.maven:ecologics-570463:${ecologics_version}")
     implementation fg.deobf("curse.maven:farmers-respite-551453:${farmers_respite_version}")
@@ -86,22 +87,17 @@ dependencies {
     implementation fg.deobf("curse.maven:patchouli-306770:${patchouli_version}")
     implementation fg.deobf("curse.maven:curios-309927:${curios_version}")
     implementation fg.deobf("curse.maven:ars-nouveau-401955:${ars_nouveau_version}")
+    implementation fg.deobf("curse.maven:terrablender-563928:${terrablender_version}")
+    implementation fg.deobf("curse.maven:corgilib-693313:${corgilib_version}")
+    implementation fg.deobf("curse.maven:oh-the-biomes-youll-go-247560:${byg_version}")
+    implementation fg.deobf("curse.maven:spirit-495509:${spirit_version}")
+    implementation fg.deobf("curse.maven:botania-225643:${botania_version}")
     compileOnly fg.deobf("curse.maven:roots-classic-295780:${roots_version}")
     implementation fg.deobf("curse.maven:blueprint-382216:${blueprint_version}")
     implementation fg.deobf("curse.maven:neapolitan-382016:${neapolitan_version}")
     implementation fg.deobf("curse.maven:respiteful-836471:${respiteful_version}")
+    implementation fg.deobf("curse.maven:the-undergarden-379849:${undergarden_version}")
     compileOnly fg.deobf("com.tterrag.registrate:Registrate:${registrate_version}")
-}
-
-task updateJson {
-    String ver = mod_version.toString()
-    String log = "https://github.com/brnbrd/Delightful/blob/1.19.2/changelog.md"
-    file('update/update.json').withWriter { w ->
-        file('update/template.json').eachLine { line ->
-            w << line.replace("latest_ver", ver).replace("latest_log", log) + System.getProperty("line.separator")
-        }
-        w.close()
-    }
 }
 
 jar {

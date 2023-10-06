@@ -1,0 +1,34 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "cactus_flesh"
+        },
+        {
+          "item": "atmospheric:barrel_cactus_batch",
+          "type": "forge:item_exists"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "atmospheric:barrel_cactus_batch"
+          }
+        ],
+        "result": [
+          {
+            "count": 18,
+            "item": "delightful:cactus_flesh"
+          }
+        ],
+        "tool": {
+          "tag": "forge:tools/knives"
+        }
+      }
+    }
+  ]
+}

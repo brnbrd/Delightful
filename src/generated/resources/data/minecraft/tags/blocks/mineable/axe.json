@@ -13,6 +13,9 @@
     {
       "id": "fruittrees:cherry_cabinet",
       "required": false
-    }
+    },
+    "delightful:green_apple_crate",
+    "delightful:joshua_fruit_crate",
+    "delightful:baobab_fruit_crate"
   ]
 }

@@ -10,6 +10,7 @@ import net.brnbrd.delightful.common.item.food.Nutrition;
 import net.brnbrd.delightful.compat.ArsNouveauCompat;
 import net.brnbrd.delightful.compat.BYGCompat;
 import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.UndergardenCompat;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.tags.TagKey;
@@ -29,11 +30,57 @@ public class DelightfulItems {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Delightful.MODID);
 
-    // Crafting Items (can be food)
-    public static final RegistryObject<Item> ANIMAL_FAT = registerFood("animal_fat", Nutrition.ANIMAL_FAT);
-    public static final RegistryObject<Item> ANIMAL_OIL_BOTTLE = registerItem("animal_oil_bottle",
-        () -> new FurnaceFuelItem((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE).tab(FarmersDelight.CREATIVE_TAB), 3200));
-    public static final RegistryObject<Item> ACORN = registerFood("acorn", Nutrition.ACORN);
+
+    public static final RegistryObject<Item> QUARTZ_CABINET = registerItem("quartz_cabinet",
+        () -> new BlockItem(DelightfulBlocks.QUARTZ_CABINET.get(), ModItems.basicItem()));
+    public static final RegistryObject<Item> BASALT_CABINET = registerItem("basalt_cabinet",
+        () -> new BlockItem(DelightfulBlocks.BASALT_CABINET.get(), ModItems.basicItem()));
+    public static final RegistryObject<Item> BLUEBERRY_SACK = registerItem("blueberry_sack", () ->
+        new BlockItem(DelightfulBlocks.BLUEBERRY_SACK.get(), Mods.orLoaded(Mods.BYG, Mods.WB) ?
+            (new Item.Properties()).tab(CreativeModeTab.TAB_BUILDING_BLOCKS) :
+            (new Item.Properties())
+        ));
+    public static final RegistryObject<Item> CRIMSON_BERRY_SACK = registerItem("crimson_berry_sack", () ->
+        new BlockItem(DelightfulBlocks.CRIMSON_BERRY_SACK.get(), Mods.loaded(Mods.BYG) ?
+            (new Item.Properties()).tab(CreativeModeTab.TAB_BUILDING_BLOCKS) :
+            (new Item.Properties())
+        ));
+    public static final RegistryObject<Item> NIGHTSHADE_BERRY_SACK = registerItem("nightshade_berry_sack", () ->
+        new BlockItem(DelightfulBlocks.NIGHTSHADE_BERRY_SACK.get(), Mods.loaded(Mods.BYG) ?
+            (new Item.Properties()).tab(CreativeModeTab.TAB_BUILDING_BLOCKS) :
+            (new Item.Properties())
+        ));
+    public static final RegistryObject<Item> GREEN_APPLE_CRATE = registerItem("green_apple_crate", () ->
+        new BlockItem(DelightfulBlocks.GREEN_APPLE_CRATE.get(), Mods.loaded(Mods.BYG) ?
+            (new Item.Properties()).tab(CreativeModeTab.TAB_BUILDING_BLOCKS) :
+            (new Item.Properties())
+        ));
+    public static final RegistryObject<Item> JOSHUA_FRUIT_CRATE = registerItem("joshua_fruit_crate", () ->
+        new BlockItem(DelightfulBlocks.JOSHUA_FRUIT_CRATE.get(), Mods.loaded(Mods.BYG) ?
+            (new Item.Properties()).tab(CreativeModeTab.TAB_BUILDING_BLOCKS) :
+            (new Item.Properties())
+        ));
+    public static final RegistryObject<Item> BAOBAB_FRUIT_CRATE = registerItem("baobab_fruit_crate", () ->
+        new BlockItem(DelightfulBlocks.BAOBAB_FRUIT_CRATE.get(), Mods.loaded(Mods.BYG) ?
+            (new Item.Properties()).tab(CreativeModeTab.TAB_BUILDING_BLOCKS) :
+            (new Item.Properties())
+        ));
+    public static final RegistryObject<Item> MATCHA_ICE_CREAM_BLOCK = registerItem("matcha_ice_cream_block", () ->
+        new BlockItem(DelightfulBlocks.MATCHA_ICE_CREAM_BLOCK.get(), Mods.loaded(Mods.N) ?
+            (new Item.Properties()).tab(CreativeModeTab.TAB_BUILDING_BLOCKS) :
+            (new Item.Properties())
+        ));
+    public static final RegistryObject<Item> SALMONBERRY_ICE_CREAM_BLOCK = registerItem("salmonberry_ice_cream_block", () ->
+        new BlockItem(DelightfulBlocks.SALMONBERRY_ICE_CREAM_BLOCK.get(), Mods.loaded(Mods.N) ?
+            (new Item.Properties()).tab(CreativeModeTab.TAB_BUILDING_BLOCKS) :
+            (new Item.Properties())
+        ));
+
+    public static final RegistryObject<Item> MATCHA_ICE_CREAM = registerItem("matcha_ice_cream", () -> new BowlFoodItem((new Item.Properties()).food(Nutrition.MATCHA_ICE_CREAM).craftRemainder(Items.BOWL).stacksTo(1).tab(FarmersDelight.CREATIVE_TAB)));
+    public static final RegistryObject<Item> SALMONBERRY_ICE_CREAM = registerItem("salmonberry_ice_cream", () -> new BowlFoodItem((new Item.Properties()).food(Nutrition.SALMONBERRY_ICE_CREAM).craftRemainder(Items.BOWL).stacksTo(1).tab(FarmersDelight.CREATIVE_TAB)));
+    public static final RegistryObject<Item> MATCHA = registerItem("matcha", () -> new DescriptItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB), Component.translatable("delightful.matcha.desc").withStyle(ChatFormatting.GRAY)));
+    public static final RegistryObject<Item> GREEN_TEA_LEAF = registerFood("green_tea_leaf",
+        Nutrition.GREEN_TEA_LEAF);
     public static final RegistryObject<Item> SALMONBERRIES = registerFood("salmonberries", Nutrition.SALMONBERRIES);
     public static final RegistryObject<Item> SALMONBERRY_PIPS = registerItem("salmonberry_pips",
         () -> new ItemNameBlockItem(DelightfulBlocks.SALMONBERRY_BUSH.get(), ModItems.basicItem()));
@@ -45,31 +92,22 @@ public class DelightfulItems {
         () -> new BlockItem(DelightfulBlocks.SALMONBERRY_PIE.get(), ModItems.basicItem()));
     public static final RegistryObject<Item> SALMONBERRY_PIE_SLICE = registerFood("salmonberry_pie_slice", Nutrition.SALMONBERRY_PIE_SLICE);
     public static final RegistryObject<Item> PUMPKIN_PIE_SLICE = registerFood("pumpkin_pie_slice", vectorwing.farmersdelight.common.FoodValues.PIE_SLICE);
-    public static final RegistryObject<Item> SOURCE_BERRY_PIE_SLICE = registerCompatFood(ArsNouveauCompat.slice, ArsNouveauCompat.getPieSlice().get(),
+    public static final RegistryObject<Item> SOURCE_BERRY_PIE_SLICE = registerCompatFood(ArsNouveauCompat.pie + "_slice", ArsNouveauCompat.getPieSlice().get(),
         Mods.AN);
-    public static final RegistryObject<Item> BLUEBERRY_PIE_SLICE = registerCompatFood(BYGCompat.blueberry_pie_slice, BYGCompat.BLUEBERRY_PIE_SLICE.get(),
+    public static final RegistryObject<Item> GLOOMGOURD_PIE_SLICE = registerCompatFood(UndergardenCompat.pie + "_slice", UndergardenCompat.getPieSlice().get(),
+        Mods.UG);
+    public static final RegistryObject<Item> BLUEBERRY_PIE_SLICE = registerCompatFood(BYGCompat.blueberry_pie + "_slice", BYGCompat.BLUEBERRY_PIE_SLICE.get(),
         Mods.BYG);
-    public static final RegistryObject<Item> GREEN_APPLE_PIE_SLICE = registerCompatFood(BYGCompat.green_apple_pie_slice, BYGCompat.GREEN_APPLE_PIE_SLICE.get(),
+    public static final RegistryObject<Item> GREEN_APPLE_PIE_SLICE = registerCompatFood(BYGCompat.green_apple_pie + "_slice", BYGCompat.GREEN_APPLE_PIE_SLICE.get(),
         Mods.BYG);
-    public static final RegistryObject<Item> NIGHTSHADE_BERRY_PIE_SLICE = registerCompatFood(BYGCompat.nightshade_berry_pie_slice, BYGCompat.NIGHTSHADE_BERRY_PIE_SLICE.get(),
+    public static final RegistryObject<Item> NIGHTSHADE_BERRY_PIE_SLICE = registerCompatFood(BYGCompat.nightshade_berry_pie + "_slice", BYGCompat.NIGHTSHADE_BERRY_PIE_SLICE.get(),
         Mods.BYG);
-    public static final RegistryObject<Item> CRIMSON_BERRY_PIE_SLICE = registerCompatFood(BYGCompat.crimson_berry_pie_slice, BYGCompat.CRIMSON_BERRY_PIE_SLICE.get(),
+    public static final RegistryObject<Item> CRIMSON_BERRY_PIE_SLICE = registerCompatFood(BYGCompat.crimson_berry_pie + "_slice", BYGCompat.CRIMSON_BERRY_PIE_SLICE.get(),
         Mods.BYG);
-    public static final RegistryObject<Item> GREEN_TEA_LEAF = registerFood("green_tea_leaf",
-        Nutrition.GREEN_TEA_LEAF);
-    public static final RegistryObject<Item> MATCHA = registerItem("matcha", () -> new DescriptItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB), Component.translatable("delightful.matcha.desc").withStyle(ChatFormatting.GRAY)));
-    public static final RegistryObject<Item> MATCHA_ICE_CREAM = registerItem("matcha_ice_cream", () -> new BowlFoodItem((new Item.Properties()).food(Nutrition.MATCHA_ICE_CREAM).craftRemainder(Items.BOWL).stacksTo(1).tab(FarmersDelight.CREATIVE_TAB)));
-    public static final RegistryObject<Item> MATCHA_ICE_CREAM_BLOCK = registerItem("matcha_ice_cream_block", () ->
-        new BlockItem(DelightfulBlocks.MATCHA_ICE_CREAM_BLOCK.get(), Mods.loaded(Mods.N) ?
-            (new Item.Properties()).tab(CreativeModeTab.TAB_BUILDING_BLOCKS) :
-            (new Item.Properties())
-        ));
-    public static final RegistryObject<Item> SALMONBERRY_ICE_CREAM = registerItem("salmonberry_ice_cream", () -> new BowlFoodItem((new Item.Properties()).food(Nutrition.SALMONBERRY_ICE_CREAM).craftRemainder(Items.BOWL).stacksTo(1).tab(FarmersDelight.CREATIVE_TAB)));
-    public static final RegistryObject<Item> SALMONBERRY_ICE_CREAM_BLOCK = registerItem("salmonberry_ice_cream_block", () ->
-        new BlockItem(DelightfulBlocks.SALMONBERRY_ICE_CREAM_BLOCK.get(), Mods.loaded(Mods.N) ?
-            (new Item.Properties()).tab(CreativeModeTab.TAB_BUILDING_BLOCKS) :
-            (new Item.Properties())
-    ));
+    public static final RegistryObject<Item> ANIMAL_FAT = registerFood("animal_fat", Nutrition.ANIMAL_FAT);
+    public static final RegistryObject<Item> ANIMAL_OIL_BOTTLE = registerItem("animal_oil_bottle",
+        () -> new FurnaceFuelItem((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE).tab(FarmersDelight.CREATIVE_TAB), 3200));
+    public static final RegistryObject<Item> ACORN = registerFood("acorn", Nutrition.ACORN);
     public static final RegistryObject<Item> COCONUT_CURRY = registerItem("coconut_curry", () -> new ConsumableItem((new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB).food(Nutrition.COCONUT_CURRY).stacksTo(16).craftRemainder(Items.BOWL), true));
     public static final RegistryObject<Item> SINIGANG = registerItem("sinigang", () -> new ConsumableItem((new Item.Properties()).food(Nutrition.SINIGANG).craftRemainder(Items.BOWL).stacksTo(16).tab(FarmersDelight.CREATIVE_TAB), true, true));
     public static final RegistryObject<Item> CHOPPED_CLOVER = registerCompatFood("chopped_clover", Nutrition.CHOPPED_CLOVER,
@@ -114,12 +152,6 @@ public class DelightfulItems {
         new BlockItem(DelightfulBlocks.SALMONBERRY_SACK.get(), ModItems.basicItem()));
     public static final RegistryObject<Item> ACORN_SACK = registerItem("acorn_sack", () ->
         new BlockItem(DelightfulBlocks.ACORN_SACK.get(), ModItems.basicItem()));
-
-    // Cabinets
-    public static final RegistryObject<Item> QUARTZ_CABINET = registerItem("quartz_cabinet",
-            () -> new BlockItem(DelightfulBlocks.QUARTZ_CABINET.get(), ModItems.basicItem()));
-    public static final RegistryObject<Item> BASALT_CABINET = registerItem("basalt_cabinet",
-            () -> new BlockItem(DelightfulBlocks.BASALT_CABINET.get(), ModItems.basicItem()));
 
     // Registers food to Farmer's Delight tab, optional craftRemainder
     public static RegistryObject<Item> registerFood(String name, FoodProperties food, Item... remainder) {

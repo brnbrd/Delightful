@@ -1,0 +1,42 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "blueberry_pie_slice"
+            },
+            {
+              "type": "forge:item_exists",
+              "item": "byg:blueberry_pie"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "delightful:blueberry_pie_slice"
+          },
+          {
+            "item": "delightful:blueberry_pie_slice"
+          },
+          {
+            "item": "delightful:blueberry_pie_slice"
+          },
+          {
+            "item": "delightful:blueberry_pie_slice"
+          }
+        ],
+        "result": {
+          "item": "byg:blueberry_pie"
+        }
+      }
+    }
+  ]
+}

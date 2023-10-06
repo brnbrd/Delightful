@@ -41,14 +41,20 @@ public class Util {
     return before;
   }
 
-  @Nullable
-  public static Item item(String modid, String path) {
+  @Nullable public static Item item(String modid, String path) {
     return item(rl(modid, path));
   }
 
-  @Nullable
-  public static Item item(ResourceLocation rl) {
+  @Nullable public static Item item(ResourceLocation rl) {
     return ForgeRegistries.ITEMS.getValue(rl);
+  }
+
+  @Nullable public static Block block(String modid, String path) {
+    return block(rl(modid, path));
+  }
+
+  @Nullable public static Block block(ResourceLocation rl) {
+    return ForgeRegistries.BLOCKS.getValue(rl);
   }
 
   public static ItemStack gs(RegistryObject<Item> r) {

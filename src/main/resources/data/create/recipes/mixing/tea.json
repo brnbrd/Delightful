@@ -7,17 +7,18 @@
           "type": "forge:and",
           "values": [
             {
-              "type": "forge:or",
-              "values": [
-                {
-                  "type": "forge:mod_loaded",
-                  "modid": "farmersrespite"
-                },
-                {
-                  "type": "delightful:enabled",
-                  "value": "green_tea_leaf"
-                }
-              ]
+              "type": "forge:not",
+              "value": {
+                "type": "forge:mod_loaded",
+                "modid": "farmersrespite"
+              }
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "delightful:enabled",
+                "value": "green_tea_leaf"
+              }
             },
             {
               "type": "forge:item_exists",
@@ -31,7 +32,7 @@
         "heatRequirement": "heated",
         "ingredients": [
           {
-            "tag": "forge:tea_leaves"
+            "tag": "minecraft:leaves"
           },
           {
             "amount": 250,

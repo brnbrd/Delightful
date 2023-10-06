@@ -1,7 +1,6 @@
 package net.brnbrd.delightful.common.item.knife;
 
 import com.google.common.collect.ImmutableList;
-import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.item.IConfigured;
 import net.minecraft.ChatFormatting;
@@ -9,6 +8,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -22,13 +22,15 @@ import java.util.function.Supplier;
 
 public class DelightfulKnifeItem extends KnifeItem implements IConfigured {
     private final TagKey<Item> tag;
-    @Nullable private final Supplier<Ingredient> smithingBase; // Null if knife isn't smithed
-    protected final ImmutableList<CreativeModeTab> tabs = ImmutableList.of(CreativeModeTab.TAB_SEARCH, FarmersDelight.CREATIVE_TAB);
 
-    public DelightfulKnifeItem(TagKey<Item> tag, Tier tier, Properties properties, @Nullable Supplier<Ingredient> smithingBase) {
+    public DelightfulKnifeItem(TagKey<Item> tag, Tier tier, Properties properties) {
         super(tier, 0.5F, -2.0F, properties);
         this.tag = tag;
-        this.smithingBase = smithingBase;
+    }
+
+    @Override
+    public boolean isValidRepairItem(@NotNull ItemStack pToRepair, @NotNull ItemStack pRepair) {
+        return super.isValidRepairItem(pToRepair, pRepair);
     }
 
     /**
@@ -38,9 +40,9 @@ public class DelightfulKnifeItem extends KnifeItem implements IConfigured {
     public void appendHoverText(@NotNull ItemStack pStack, @Nullable Level pLevel, @NotNull List<Component> tool, @NotNull TooltipFlag pIsAdvanced) {
         super.appendHoverText(pStack, pLevel, tool, pIsAdvanced);
         if (!this.config()) {
-            tool.add(Component.translatable(Delightful.MODID + ".disabled.desc").withStyle(ChatFormatting.UNDERLINE));
+            tool.add(Component.translatable("tooltip.config_disabled").withStyle(ChatFormatting.UNDERLINE));
         } else if (!this.isTag()) {
-            tool.add(Component.translatable(Delightful.MODID + ".disabled.requirestag"));
+            tool.add(Component.translatable("tooltip.requires_tag"));
             tool.add(Component.literal(this.getTag().location().toString()).withStyle(ChatFormatting.UNDERLINE));
         }
     }
@@ -67,25 +69,27 @@ public class DelightfulKnifeItem extends KnifeItem implements IConfigured {
         return Ingredient.of(Tags.Items.RODS_WOODEN);
     }
 
-    @Nullable
-    public Ingredient getSmithingBase() {
-        return this.isSmithing() ? this.smithingBase.get() : null;
+    public Supplier<Ingredient> getSmithingBase() {
+        return () -> Ingredient.EMPTY;
     }
 
-    public boolean isSmithing() {
-        return this.smithingBase != null;
-    }
-
-    public boolean genRecipe() {
-        return true;
+    public @Nullable RecipeType<?> getRecipeType() {
+        return getSmithingBase().get().isEmpty() ? RecipeType.CRAFTING : RecipeType.SMITHING;
     }
 
     public boolean hasCustomName() {
         return false;
     }
 
+    public List<Component> getTools() {
+        return List.of();
+    }
+
     @Override
     protected boolean allowedIn(@NotNull CreativeModeTab cat) {
-        return tabs.contains(cat) && this.config();
+        return ImmutableList.of(
+            CreativeModeTab.TAB_SEARCH,
+            FarmersDelight.CREATIVE_TAB
+        ).contains(cat) && this.config();
     }
 }

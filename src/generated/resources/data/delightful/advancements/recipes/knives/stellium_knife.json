@@ -8,7 +8,7 @@
             "conditions": {
               "items": [
                 {
-                  "tag": "forge:stellium_ingot"
+                  "tag": "forge:ingots/stellium"
                 }
               ]
             },
@@ -49,7 +49,7 @@
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
-                "tag": "forge:stellium_ingot"
+                "tag": "forge:ingots/stellium"
               }
             }
           ]

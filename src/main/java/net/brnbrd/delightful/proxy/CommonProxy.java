@@ -1,10 +1,11 @@
 package net.brnbrd.delightful.proxy;
 
-import net.brnbrd.delightful.common.Events;
-import net.brnbrd.delightful.common.ForgeEvents;
+import net.brnbrd.delightful.common.events.ModEvents;
+import net.brnbrd.delightful.common.events.ForgeEvents;
 import net.brnbrd.delightful.common.block.DelightfulBlocks;
+import net.brnbrd.delightful.common.events.pie.PieEvents;
 import net.brnbrd.delightful.common.item.DelightfulItems;
-import net.brnbrd.delightful.common.item.knife.KnifeEvents;
+import net.brnbrd.delightful.common.events.KnifeEvents;
 import net.brnbrd.delightful.common.item.knife.Knives;
 import net.brnbrd.delightful.common.loot.DelightfulLootItemConditions;
 import net.brnbrd.delightful.common.loot.DelightfulLootModifiers;
@@ -21,7 +22,8 @@ public class CommonProxy {
         final var forgeBus = MinecraftForge.EVENT_BUS;
         forgeBus.register(new ForgeEvents());
         forgeBus.register(new KnifeEvents());
-        modBus.register(Events.class);
+        forgeBus.register(new PieEvents());
+        modBus.register(new ModEvents());
         modBus.register(Generators.class);
         DelightfulBlocks.create(modBus);
         Knives.create();

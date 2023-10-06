@@ -8,7 +8,7 @@
             {
               "type": "forge:not",
               "value": {
-                "tag": "forge:chocolate",
+                "tag": "forge:bars/chocolate",
                 "type": "forge:tag_empty"
               }
             },
@@ -29,7 +29,7 @@
         ],
         "key": {
           "#": {
-            "tag": "forge:chocolate"
+            "tag": "forge:bars/chocolate"
           },
           "E": {
             "tag": "forge:eggs"

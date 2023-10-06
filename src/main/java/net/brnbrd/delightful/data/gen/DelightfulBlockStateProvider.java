@@ -29,16 +29,8 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         this.wildCropBlock(DelightfulBlocks.WILD_SALMONBERRIES.get());
         this.stageBlock(DelightfulBlocks.SALMONBERRY_BUSH.get(), SalmonberryBushBlock.AGE);
-        this.simpleBlock(DelightfulBlocks.SALMONBERRY_SACK.get(),
-          models().cubeBottomTop("salmonberry_sack",
-            Util.rl(Delightful.MODID, "block/salmonberry_sack"),
-            Util.rl(Delightful.MODID, "block/salmonberry_sack_bottom"),
-            Util.rl(Delightful.MODID, "block/salmonberry_sack_top")));
-        this.simpleBlock(DelightfulBlocks.ACORN_SACK.get(),
-            models().cubeBottomTop("acorn_sack",
-                Util.rl(Delightful.MODID, "block/acorn_sack"),
-                Util.rl(Delightful.MODID, "block/acorn_sack_bottom"),
-                Util.rl(Delightful.MODID, "block/acorn_sack_top")));
+        this.sackBlock(DelightfulBlocks.SALMONBERRY_SACK.get(), "salmonberry");
+        this.sackBlock(DelightfulBlocks.ACORN_SACK.get(), "acorn");
         this.miniBlock((MiniBlock) DelightfulBlocks.CANTALOUPE.get(),
             resourceBlock("cantaloupe_side_small"), resourceBlock("cantaloupe_top"));
         this.miniBlock((MiniBlock) DelightfulBlocks.MINI_MELON.get(),
@@ -54,6 +46,7 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
         this.pieBlock(DelightfulBlocks.SALMONBERRY_PIE);
         this.pieBlock(DelightfulBlocks.PUMPKIN_PIE);
         this.pieBlock(DelightfulBlocks.SOURCE_BERRY_PIE);
+        this.pieBlock(DelightfulBlocks.GLOOMGOURD_PIE);
         this.pieBlock(DelightfulBlocks.GREEN_APPLE_PIE);
         this.pieBlock(DelightfulBlocks.BLUEBERRY_PIE);
         this.pieBlock(DelightfulBlocks.CRIMSON_BERRY_PIE);
@@ -62,6 +55,12 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
         this.cabinet(DelightfulBlocks.QUARTZ_CABINET.get());
         this.simpleBlock(DelightfulBlocks.SALMONBERRY_ICE_CREAM_BLOCK.get());
         this.simpleBlock(DelightfulBlocks.MATCHA_ICE_CREAM_BLOCK.get());
+        this.sackBlock(DelightfulBlocks.BLUEBERRY_SACK.get(), "blueberry");
+        this.sackBlock(DelightfulBlocks.CRIMSON_BERRY_SACK.get(), "crimson_berry");
+        this.sackBlock(DelightfulBlocks.NIGHTSHADE_BERRY_SACK.get(), "nightshade_berry");
+        this.crateBlock(DelightfulBlocks.GREEN_APPLE_CRATE.get(), "green_apple", true);
+        this.crateBlock(DelightfulBlocks.JOSHUA_FRUIT_CRATE.get(), "joshua_fruit", false);
+        this.crateBlock(DelightfulBlocks.BAOBAB_FRUIT_CRATE.get(), "baobab_fruit", false);
     }
 
     // Adapted from: https://github.com/vectorwing/FarmersDelight/blob/1.19/src/main/java/vectorwing/farmersdelight/data/BlockStates.java
@@ -71,6 +70,25 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
             return ConfiguredModel.builder()
                 .modelFile(models().cross(stageName, resourceBlock(stageName)).renderType("cutout")).build();
         });
+    }
+
+    public void sackBlock(Block block, String cropName) {
+        this.simpleBlock(block,
+            models().cubeBottomTop(Util.name(block),
+                resourceBlock(cropName + "_sack"),
+                resourceBlock(cropName + "_sack_bottom"),
+                resourceBlock(cropName + "_sack_top"))
+        );
+    }
+
+    public void crateBlock(Block block, String cropName, boolean customBottom) {
+        this.simpleBlock(block,
+            models().cubeBottomTop(Util.name(block),
+                resourceBlock(cropName + "_crate_side"),
+                customBottom ?
+                    resourceBlock(cropName + "_crate_bottom") :
+                    Util.rl(FarmersDelight.MODID, "block/crate_bottom"),
+                resourceBlock(cropName + "_crate_top")));
     }
 
     public void wildCropBlock(Block block) {

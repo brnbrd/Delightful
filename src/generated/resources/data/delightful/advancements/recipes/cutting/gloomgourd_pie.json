@@ -1,0 +1,21 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "gloomgourd_pie_slice"
+            },
+            {
+              "type": "forge:item_exists",
+              "item": "undergarden:gloomgourd_pie"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

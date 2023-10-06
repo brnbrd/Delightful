@@ -1,0 +1,21 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "nightshade_berry_pie_slice"
+            },
+            {
+              "type": "forge:item_exists",
+              "item": "byg:nightshade_berry_pie"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

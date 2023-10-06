@@ -1,7 +1,6 @@
 package net.brnbrd.delightful.common.block;
 
 import net.brnbrd.delightful.Util;
-import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
@@ -18,6 +17,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.common.ForgeHooks;
 import org.jetbrains.annotations.NotNull;
+import vectorwing.farmersdelight.common.tag.ForgeTags;
 
 public class MiniMelonBlock extends MiniBlock implements BonemealableBlock {
 
@@ -67,7 +67,7 @@ public class MiniMelonBlock extends MiniBlock implements BonemealableBlock {
   @SuppressWarnings("deprecation")
   @Override
   public @NotNull InteractionResult use(@NotNull BlockState pState, @NotNull Level world, @NotNull BlockPos pPos, Player pPlayer, @NotNull InteractionHand pHand, @NotNull BlockHitResult pHit) {
-    if (pPlayer.getItemInHand(pHand).is(DelightfulItemTags.SCAVENGING_TOOLS)) {
+    if (pPlayer.getItemInHand(pHand).is(ForgeTags.TOOLS_KNIVES)) {
       if (!world.isClientSide()) {
         SlicedMiniMelonBlock sliced = (SlicedMiniMelonBlock) DelightfulBlocks.SLICED_MINI_MELON.get();
         world.setBlock(pPos, sliced.defaultBlockState(), 2);
