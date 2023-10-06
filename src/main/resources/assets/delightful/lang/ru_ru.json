@@ -31,8 +31,6 @@
   "delightful.animal_fat.desc": "Убей жирное животное (Свинья, Корова, Рыба...) при помощи Ножа.",
   "delightful.animal_oil_bottle.desc": "Можно использовать (Приседание + нажатием правой кнопкой мыши) по любому рудоплавильному блоку (Печь, Плавильная печь...) для предоставления время горения до двух предметов.",
   "delightful.cantaloupe.desc": "Находится в пляжных биомх.",
-  "delightful.disabled.desc": "Отключено",
-  "delightful.disabled.requirestag": "Требует не пустой тег:",
   "delightful.green_tea_leaf.desc": "Сломай блок листвы при помощи Ножа.",
   "delightful.matcha.desc": "Измельчённый зелёный чай",
   "delightful.mini_melon.desc": "Находится в равнинных биомах. Вырастает в большой арбуз или нарезается ножом на ломтики (ПКМ).",
@@ -154,8 +152,5 @@
   "item.delightful.zinc_knife": "Цинковый нож",
   "tooltip.config_disabled": "Отключено",
   "tooltip.requires_modid": "Требуется мод:",
-  "tooltip.requires_tag": "Требует не пустой тег:",
-  "farmersdelight.tooltip.azalea_tea": "Полезный",
-  "farmersdelight.tooltip.lavender_tea": "Очень полезный",
-  "farmersdelight.tooltip.prickly_pear_juice": "Очень насыщающий"
+  "tooltip.requires_tag": "Требует не пустой тег:"
 }
