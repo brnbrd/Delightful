@@ -1,0 +1,60 @@
+{
+  "advancements": [
+    {
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "criteria": {
+          "has_soul_steel": {
+            "conditions": {
+              "items": [
+                {
+                  "tag": "forge:ingots/soul_steel"
+                }
+              ]
+            },
+            "trigger": "minecraft:inventory_changed"
+          },
+          "has_the_recipe": {
+            "conditions": {
+              "recipe": "delightful:knives/soul_steel_knife"
+            },
+            "trigger": "minecraft:recipe_unlocked"
+          }
+        },
+        "requirements": [
+          [
+            "has_soul_steel",
+            "has_the_recipe"
+          ]
+        ],
+        "rewards": {
+          "recipes": [
+            "delightful:knives/soul_steel_knife"
+          ]
+        }
+      },
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "soul_steel_knife"
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "spirit"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:ingots/soul_steel"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

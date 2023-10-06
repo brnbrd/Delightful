@@ -48,6 +48,52 @@
           "item": "ars_nouveau:source_berry_pie"
         }
       }
+    },
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "delightful:enabled",
+                "value": "source_berry_pie_slice"
+              }
+            },
+            {
+              "type": "forge:item_exists",
+              "item": "ars_nouveau:source_berry_pie"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "tag": "forge:eggs"
+          },
+          {
+            "item": "minecraft:sugar"
+          },
+          {
+            "item": "ars_nouveau:magebloom"
+          },
+          {
+            "item": "ars_nouveau:source_berry"
+          },
+          {
+            "item": "ars_nouveau:source_berry"
+          },
+          {
+            "item": "ars_nouveau:source_berry"
+          }
+        ],
+        "result": {
+          "item": "ars_nouveau:source_berry_pie"
+        }
+      }
     }
   ]
 }

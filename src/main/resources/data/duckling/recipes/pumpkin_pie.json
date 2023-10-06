@@ -4,19 +4,24 @@
     {
       "conditions": [
         {
-          "type": "forge:item_exists",
-          "item": "this_item:doesnt_exist"
+          "type": "forge:false"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shapeless",
         "ingredients": [
           {
-            "item": "this_item:doesnt_exist"
+            "item": "minecraft:pumpkin"
+          },
+          {
+            "item": "minecraft:sugar"
+          },
+          {
+            "item": "duckling:duck_egg"
           }
         ],
         "result": {
-          "item": "this_item:doesnt_exist"
+          "item": "minecraft:pumpkin_pie"
         }
       }
     }

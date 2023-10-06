@@ -1,14 +1,8 @@
 package net.brnbrd.delightful.compat;
 
-import net.brnbrd.delightful.Util;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.Item;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
-import potionstudios.byg.common.item.BYGItems;
-
 import java.util.function.Supplier;
 
 public class BYGCompat {
@@ -22,10 +16,6 @@ public class BYGCompat {
 	public static final String green_apple_pie = "green_apple_pie";
 	public static final String nightshade_berry_pie = "nightshade_berry_pie";
 	public static final String crimson_berry_pie = "crimson_berry_pie";
-	public static final String blueberry_pie_slice = "blueberry_pie_slice";
-	public static final String green_apple_pie_slice = "green_apple_pie_slice";
-	public static final String nightshade_berry_pie_slice = "nightshade_berry_pie_slice";
-	public static final String crimson_berry_pie_slice = "crimson_berry_pie_slice";
 
 	public static final Supplier<FoodProperties> BLUEBERRY_PIE_SLICE = () -> (new FoodProperties.Builder()).nutrition(3).saturationMod(0.3F).fast()
 		.effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 600, 1), 1.0F)

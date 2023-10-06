@@ -1,10 +1,28 @@
 # Changelog
 
 
-## 3.3.1
+## 3.4
 
 ### Updates
-- New Matcha and Salmonberry Ice Cream Block textures, courtesy of **championhestu**
+- Added Rose Gold Knife (for [Additional Additions](https://www.curseforge.com/minecraft/mc-mods/additional-additions-forge))
+- Added Gilded Netherite Knife (for [Additional Additions](https://www.curseforge.com/minecraft/mc-mods/additional-additions-forge))
+- Added Cloggrum Knife (for [The Undergarden](https://www.curseforge.com/minecraft/mc-mods/the-undergarden))
+- Added Forgotten Knife (for [The Undergarden](https://www.curseforge.com/minecraft/mc-mods/the-undergarden))
+- Added Froststeel Knife (for [The Undergarden](https://www.curseforge.com/minecraft/mc-mods/the-undergarden))
+- Added Utherium Knife (for [The Undergarden](https://www.curseforge.com/minecraft/mc-mods/the-undergarden))
+- Added Elementium Knife (for [Botania](https://www.curseforge.com/minecraft/mc-mods/botania))
+- Added Manasteel Knife (for [Botania](https://www.curseforge.com/minecraft/mc-mods/botania))
+- Added Terra Knife (for [Botania](https://www.curseforge.com/minecraft/mc-mods/botania))
+- Added Alf Knife (for [MythicBotany](https://www.curseforge.com/minecraft/mc-mods/mythicbotany))
+- Added Necronium Knife (for [Phantasmic](https://www.curseforge.com/minecraft/mc-mods/phantasmic))
+- Added Soul Steel Knife (for [Spirit](https://www.curseforge.com/minecraft/mc-mods/spirit))
+- Placeable Gloomgourd Pie and added Gloomgourd Pie Slice (for [The Undergarden](https://www.curseforge.com/minecraft/mc-mods/the-undergarden))
+- Added Baobab Fruit Crate (for [BYG](https://www.curseforge.com/minecraft/mc-mods/oh-the-biomes-youll-go))
+- Added Crimson Berry Sack (for [BYG](https://www.curseforge.com/minecraft/mc-mods/oh-the-biomes-youll-go))
+- Added Nightshade Berry Sack (for [BYG](https://www.curseforge.com/minecraft/mc-mods/oh-the-biomes-youll-go))
+- Added Blueberry Sack (for [BYG](https://www.curseforge.com/minecraft/mc-mods/oh-the-biomes-youll-go))
+- Minor tag updates and fixes
+- Some updated textures, courtesy of **championhestu**
 
 ### Fixes
 - Fixed unlocalized description for disabled items by modid

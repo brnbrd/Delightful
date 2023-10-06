@@ -1,0 +1,57 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "forge:item_exists",
+              "item": "byg:crimson_berries"
+            },
+            {
+              "type": "delightful:enabled",
+              "value": "crimson_berry_sack"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "byg:crimson_berries"
+          },
+          {
+            "item": "byg:crimson_berries"
+          },
+          {
+            "item": "byg:crimson_berries"
+          },
+          {
+            "item": "byg:crimson_berries"
+          },
+          {
+            "item": "byg:crimson_berries"
+          },
+          {
+            "item": "byg:crimson_berries"
+          },
+          {
+            "item": "byg:crimson_berries"
+          },
+          {
+            "item": "byg:crimson_berries"
+          },
+          {
+            "item": "byg:crimson_berries"
+          }
+        ],
+        "result": {
+          "item": "delightful:crimson_berry_sack"
+        }
+      }
+    }
+  ]
+}

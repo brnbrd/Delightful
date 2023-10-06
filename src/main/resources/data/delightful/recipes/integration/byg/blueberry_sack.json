@@ -1,0 +1,57 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "forge:item_exists",
+              "item": "byg:blueberries"
+            },
+            {
+              "type": "delightful:enabled",
+              "value": "blueberry_sack"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "byg:blueberries"
+          },
+          {
+            "item": "byg:blueberries"
+          },
+          {
+            "item": "byg:blueberries"
+          },
+          {
+            "item": "byg:blueberries"
+          },
+          {
+            "item": "byg:blueberries"
+          },
+          {
+            "item": "byg:blueberries"
+          },
+          {
+            "item": "byg:blueberries"
+          },
+          {
+            "item": "byg:blueberries"
+          },
+          {
+            "item": "byg:blueberries"
+          }
+        ],
+        "result": {
+          "item": "delightful:blueberry_sack"
+        }
+      }
+    }
+  ]
+}

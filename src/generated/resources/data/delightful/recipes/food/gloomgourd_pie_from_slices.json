@@ -1,0 +1,42 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "gloomgourd_pie_slice"
+            },
+            {
+              "type": "forge:item_exists",
+              "item": "undergarden:gloomgourd_pie"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "delightful:gloomgourd_pie_slice"
+          },
+          {
+            "item": "delightful:gloomgourd_pie_slice"
+          },
+          {
+            "item": "delightful:gloomgourd_pie_slice"
+          },
+          {
+            "item": "delightful:gloomgourd_pie_slice"
+          }
+        ],
+        "result": {
+          "item": "undergarden:gloomgourd_pie"
+        }
+      }
+    }
+  ]
+}

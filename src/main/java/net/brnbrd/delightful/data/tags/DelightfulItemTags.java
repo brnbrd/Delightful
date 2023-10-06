@@ -2,6 +2,7 @@ package net.brnbrd.delightful.data.tags;
 
 import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
+import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.compat.Mods;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
@@ -10,6 +11,7 @@ import vectorwing.farmersdelight.FarmersDelight;
 public class DelightfulItemTags {
 
 	// Delightful
+	public static final TagKey<Item> COMPAT_PIES = Util.it(Delightful.MODID, "compat_pies");
 	public static final TagKey<Item> FIRE_KNIVES = Util.it(Delightful.MODID, "fire_knives");
 
 	// FarmersDelight
@@ -22,7 +24,9 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> GUMMIES = Util.it("collectorsreap", "gummies");
 
 	// Forge
-	public static final TagKey<Item> SCAVENGING_TOOLS = forge("tools/scavenging");
+	public static final TagKey<Item> TOOLS_SCAVENGING = forge("tools/scavenging");
+	public static final TagKey<Item> TOOLS_MACHETES = forge("tools/machetes");
+	public static final TagKey<Item> DOUGH_CORN = forge("dough/corn");
 	public static final TagKey<Item> LAVENDER = forge("lavender");
 	public static final TagKey<Item> FRUITS = forge("fruits");
 	public static final TagKey<Item> FRUITS_APPLE = forge("fruits/apple");
@@ -66,6 +70,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> FRUITS_BERRIES = forge("fruits/berries");
 	public static final TagKey<Item> FRUITS_CITRUS = forge("fruits/citrus");
 	public static final TagKey<Item> CHOCOLATE = forge("chocolate");
+	public static final TagKey<Item> BARS_CHOCOLATE = forge("bars/chocolate");
 	public static final TagKey<Item> CHEESE = forge("cheese");
 	public static final TagKey<Item> COOKED_CRAB = forge("cooked_crab");
 	public static final TagKey<Item> CROPS_GINGER = forge("crops/ginger");
@@ -94,8 +99,8 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> FOOD_MEAT = forge("food/meat");
 	public static final TagKey<Item> MEAT = forge("meat");
 	public static final TagKey<Item> CATTAIL = forge("cattail");
-	public static final TagKey<Item> INGOTS_STEEL = forge("ingots/steel");
-	public static final TagKey<Item> INGOTS_ZINC = forge("ingots/zinc");
+	public static final TagKey<Item> INGOTS_STEEL = DelightfulItems.ingot("steel");
+	public static final TagKey<Item> INGOTS_ZINC = DelightfulItems.ingot("zinc");
 	public static final TagKey<Item> GEMS_ROSE_QUARTZ = forge("gems/rose_quartz");
 	public static final TagKey<Item> ICE_CUBES = forge("ice_cubes");
 	public static final TagKey<Item> SEEDS_SALMONBERRY = forge("seeds/salmonberry");
@@ -105,14 +110,14 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> STELLARITE_PIECE = Util.it("forbidden_arcanus", "stellarite_piece");
 	public static final TagKey<Item> DRAGON_SCALE = Util.it("forbidden_arcanus", "dragon_scale");
 	public static final TagKey<Item> DRACO_ARCANUS_STAFF = Util.it("forbidden_arcanus", "draco_arcanus_staff");
-	public static final TagKey<Item> INGOTS_DEORUM = forge("ingots/deorum");
+	public static final TagKey<Item> INGOTS_DEORUM = DelightfulItems.ingot("deorum");
 
 	// Allthemodium
 	public static final TagKey<Item> PLATES_ALLTHEMODIUM = forge("plates/allthemodium");
 	public static final TagKey<Item> RODS_ALLTHEMODIUM = forge("rods/allthemodium");
 
 	// Byg
-	public static final TagKey<Item> INGOTS_PENDORITE = forge("ingots/pendorite");
+	public static final TagKey<Item> INGOTS_PENDORITE = DelightfulItems.ingot("pendorite");
 
 	// Deeper and Darker
 	public static final TagKey<Item> REINFORCED_ECHO_SHARD = Util.it("deeperdarker", "reinforced_echo_shard");
@@ -143,9 +148,31 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> SPRING_CROPS = Util.it("sereneseasons", "spring_crops");
 
 	// Phantasm
+	public static final TagKey<Item> STELLIUM_INGOT = DelightfulItems.ingot("stellium");
 	public static final TagKey<Item> VOID_CRYSTAL_BLOCK = Util.it(Mods.EP, "void_crystal_block");
 	public static final TagKey<Item> CRYSTAL_SPIKE_TIPS = Util.it(Mods.EP, "crystal_spike_tips");
-	public static final TagKey<Item> STELLIUM_INGOT = forge("stellium_ingot");
+
+	// Spirit
+	public static final TagKey<Item> SOUL_STEEL_INGOT = DelightfulItems.ingot("soul_steel");
+	public static final TagKey<Item> SOUL_STEEL_MAINHAND = Util.it("spirit", "soul_steel_mainhand");
+
+	// Botania
+	public static final TagKey<Item> LIVINGWOOD_TWIG = Util.it(Mods.BTA, "livingwood_twig");
+	public static final TagKey<Item> DREAMWOOD_TWIG = Util.it(Mods.BTA, "dreamwood_twig");
+	public static final TagKey<Item> MANA_ITEMS = Util.it(Mods.BTA, "mana_using_items");
+
+	// Additional Additions
+	public static final TagKey<Item> ROSE_GOLD_ALLOY = Util.it("additionaladditions", "rose_gold_alloy");
+	public static final TagKey<Item> GOLD_RING = Util.it("additionaladditions", "gold_ring");
+
+	// Nourished Nether
+	public static final TagKey<Item> NECRONIUM_INGOT = DelightfulItems.ingot("necronium");
+	public static final TagKey<Item> NECRONIUM_TOOLS = Util.it("nourished_nether", "necronium_tools");
+
+	// Undergarden
+	public static final TagKey<Item> CLOGGRUM_ITEMS = Util.it(Mods.UG, "cloggrum_items");
+	public static final TagKey<Item> FROSTSTEEL_ITEMS  = Util.it(Mods.UG, "froststeel_items");
+	public static final TagKey<Item> UTHERIUM_ITEMS  = Util.it(Mods.UG, "utherium_items");
 
 	private static TagKey<Item> forge(String name) {
 		return Util.it("forge", name);

@@ -1,0 +1,60 @@
+{
+  "advancements": [
+    {
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "criteria": {
+          "has_the_recipe": {
+            "conditions": {
+              "recipe": "delightful:knives/utherium_knife"
+            },
+            "trigger": "minecraft:recipe_unlocked"
+          },
+          "has_utherium": {
+            "conditions": {
+              "items": [
+                {
+                  "tag": "forge:ingots/utherium"
+                }
+              ]
+            },
+            "trigger": "minecraft:inventory_changed"
+          }
+        },
+        "requirements": [
+          [
+            "has_utherium",
+            "has_the_recipe"
+          ]
+        ],
+        "rewards": {
+          "recipes": [
+            "delightful:knives/utherium_knife"
+          ]
+        }
+      },
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "utherium_knife"
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "undergarden"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:ingots/utherium"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

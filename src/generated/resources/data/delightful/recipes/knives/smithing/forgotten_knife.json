@@ -1,0 +1,37 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "forgotten_knife"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:ingots/forgotten_metal"
+              }
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:smithing",
+        "addition": {
+          "tag": "forge:ingots/forgotten_metal"
+        },
+        "base": {
+          "item": "delightful:cloggrum_knife"
+        },
+        "result": {
+          "item": "delightful:forgotten_knife"
+        }
+      }
+    }
+  ]
+}

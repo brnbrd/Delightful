@@ -1,0 +1,57 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "forge:item_exists",
+              "item": "byg:nightshade_berries"
+            },
+            {
+              "type": "delightful:enabled",
+              "value": "nightshade_berry_sack"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "byg:nightshade_berries"
+          },
+          {
+            "item": "byg:nightshade_berries"
+          },
+          {
+            "item": "byg:nightshade_berries"
+          },
+          {
+            "item": "byg:nightshade_berries"
+          },
+          {
+            "item": "byg:nightshade_berries"
+          },
+          {
+            "item": "byg:nightshade_berries"
+          },
+          {
+            "item": "byg:nightshade_berries"
+          },
+          {
+            "item": "byg:nightshade_berries"
+          },
+          {
+            "item": "byg:nightshade_berries"
+          }
+        ],
+        "result": {
+          "item": "delightful:nightshade_berry_sack"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "gloomgourd_pie_slice"
+            },
+            {
+              "type": "forge:item_exists",
+              "item": "undergarden:gloomgourd_pie"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "tag": "undergarden:mushrooms"
+          },
+          {
+            "item": "undergarden:gloomgourd"
+          },
+          {
+            "item": "undergarden:glitterkelp"
+          },
+          {
+            "item": "farmersdelight:pie_crust"
+          }
+        ],
+        "result": {
+          "item": "undergarden:gloomgourd_pie"
+        }
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "delightful:enabled",
+                "value": "gloomgourd_pie_slice"
+              }
+            },
+            {
+              "type": "forge:item_exists",
+              "item": "undergarden:gloomgourd_pie"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "tag": "undergarden:mushrooms"
+          },
+          {
+            "item": "undergarden:gloomgourd"
+          },
+          {
+            "item": "undergarden:glitterkelp"
+          }
+        ],
+        "result": {
+          "item": "undergarden:gloomgourd_pie"
+        }
+      }
+    }
+  ]
+}

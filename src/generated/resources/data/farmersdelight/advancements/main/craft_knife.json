@@ -25,6 +25,18 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "alf_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:alf_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "allthemodium_knife": {
       "conditions": {
         "items": [
@@ -103,6 +115,18 @@
           {
             "items": [
               "delightful:bronze_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "cloggrum_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:cloggrum_knife"
             ]
           }
         ]
@@ -193,6 +217,18 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "elementium_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:elementium_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "emerald_knife": {
       "conditions": {
         "items": [
@@ -247,6 +283,42 @@
           {
             "items": [
               "farmersdelight:flint_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "forgotten_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:forgotten_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "froststeel_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:froststeel_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "gilded_netherite_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:gilded_netherite_knife"
             ]
           }
         ]
@@ -397,12 +469,36 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "manasteel_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:manasteel_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "mythril_knife": {
       "conditions": {
         "items": [
           {
             "items": [
               "delightful:mythril_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "necronium_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:necronium_knife"
             ]
           }
         ]
@@ -529,6 +625,18 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "rose_gold_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:rose_gold_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "silver_knife": {
       "conditions": {
         "items": [
@@ -547,6 +655,18 @@
           {
             "items": [
               "delightful:sinisite_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "soul_steel_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:soul_steel_knife"
             ]
           }
         ]
@@ -589,6 +709,18 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "terra_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:terra_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "thyrium_knife": {
       "conditions": {
         "items": [
@@ -607,6 +739,18 @@
           {
             "items": [
               "delightful:tin_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "utherium_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:utherium_knife"
             ]
           }
         ]
@@ -708,7 +852,19 @@
       "kiwano_knife",
       "adamantite_knife",
       "crystalline_knife",
-      "stellium_knife"
+      "stellium_knife",
+      "soul_steel_knife",
+      "rose_gold_knife",
+      "gilded_netherite_knife",
+      "necronium_knife",
+      "cloggrum_knife",
+      "froststeel_knife",
+      "utherium_knife",
+      "forgotten_knife",
+      "manasteel_knife",
+      "elementium_knife",
+      "terra_knife",
+      "alf_knife"
     ]
   ]
 }
