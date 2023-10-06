@@ -2,15 +2,7 @@
   "values": [
     "#forge:tools/knives",
     {
-      "id": "nethersdelight:scavenging_tools",
-      "required": false
-    },
-    {
-      "id": "nethersdelight:tools/machetes",
-      "required": false
-    },
-    {
-      "id": "forge:tools/machetes",
+      "id": "#nethersdelight:scavenging_tools",
       "required": false
     }
   ]

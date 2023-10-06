@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "delightful:block/green_apple_crate_bottom",
+    "side": "delightful:block/green_apple_crate_side",
+    "top": "delightful:block/green_apple_crate_top"
+  }
+}

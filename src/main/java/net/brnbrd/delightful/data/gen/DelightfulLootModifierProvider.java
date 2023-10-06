@@ -32,7 +32,7 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 			new LootItemCondition[]{
 				LootItemEnabledCondition.enabled("green_tea_leaf"),
 				LootItemRandomChanceCondition.randomChance(0.08F).build(),
-				MatchTool.toolMatches(ItemPredicate.Builder.item().of(DelightfulItemTags.SCAVENGING_TOOLS)).build(),
+				MatchTool.toolMatches(ItemPredicate.Builder.item().of(DelightfulItemTags.TOOLS_SCAVENGING)).build(),
 				LootItemBlockIsTagCondition.isTag(DelightfulBlockTags.DROPS_GREEN_TEA_LEAF)
 			},
 			DelightfulItems.GREEN_TEA_LEAF.get(), 1, 1, true, Mods.FR, false
@@ -41,7 +41,7 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 			new LootItemCondition[]{
 				LootItemEnabledCondition.enabled("green_tea_leaf"),
 				LootItemRandomChanceCondition.randomChance(0.005F).build(),
-				MatchTool.toolMatches(ItemPredicate.Builder.item().of(DelightfulItemTags.SCAVENGING_TOOLS)).invert().build(),
+				MatchTool.toolMatches(ItemPredicate.Builder.item().of(DelightfulItemTags.TOOLS_SCAVENGING)).invert().build(),
 				LootItemBlockIsTagCondition.isTag(DelightfulBlockTags.DROPS_GREEN_TEA_LEAF)
 			},
 			DelightfulItems.GREEN_TEA_LEAF.get(), 1, 1, true, Mods.FR, false
@@ -60,7 +60,7 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 			new LootItemCondition[]{
 				LootItemEnabledCondition.enabled("acorn"),
 				LootItemRandomChanceCondition.randomChance(0.05F).build(),
-				MatchTool.toolMatches(ItemPredicate.Builder.item().of(DelightfulItemTags.SCAVENGING_TOOLS)).build(),
+				MatchTool.toolMatches(ItemPredicate.Builder.item().of(DelightfulItemTags.TOOLS_SCAVENGING)).build(),
 				MatchTool.toolMatches(ItemPredicate.Builder.item().hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.Ints.ANY))).invert().build(),
 				LootItemBlockIsTagCondition.isTag(DelightfulBlockTags.DROPS_ACORN)
 			},
@@ -88,7 +88,7 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 				LootItemRandomChanceWithLootingCondition.randomChanceAndLootingBoost(0.6F, 2.0F).build(),
 				LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.KILLER_PLAYER,
 					EntityPredicate.Builder.entity().equipment(
-					EntityEquipmentPredicate.Builder.equipment().mainhand(ItemPredicate.Builder.item().of(DelightfulItemTags.SCAVENGING_TOOLS).build()).build()).build()).build(),
+					EntityEquipmentPredicate.Builder.equipment().mainhand(ItemPredicate.Builder.item().of(DelightfulItemTags.TOOLS_SCAVENGING).build()).build()).build()).build(),
 				LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS, EntityPredicate.Builder.entity().of(DelightfulEntityTags.FATTY_ANIMALS)).build()
 			},
 			DelightfulItems.ANIMAL_FAT.get(), 1, 3, true
@@ -104,7 +104,7 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 		add("straw_from_compat", new AddItemLootModifier(
 			new LootItemCondition[]{
 				LootItemRandomChanceCondition.randomChance(0.2F).build(),
-				MatchTool.toolMatches(ItemPredicate.Builder.item().of(DelightfulItemTags.SCAVENGING_TOOLS)).build(),
+				MatchTool.toolMatches(ItemPredicate.Builder.item().of(DelightfulItemTags.TOOLS_SCAVENGING)).build(),
 				LootItemBlockIsTagCondition.isTag(DelightfulBlockTags.DROPS_STRAW)
 			},
 		ModItems.STRAW.get(), 1, 1, true

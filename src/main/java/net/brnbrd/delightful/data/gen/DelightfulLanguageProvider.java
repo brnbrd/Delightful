@@ -60,6 +60,7 @@ public class DelightfulLanguageProvider extends LanguageProvider {
         addItem(DelightfulItems.SALMONBERRY_PIE_SLICE, "Slice of Salmonberry Pie");
         addItem(DelightfulItems.PUMPKIN_PIE_SLICE, "Slice of Pumpkin Pie");
         addItem(DelightfulItems.SOURCE_BERRY_PIE_SLICE, "Slice of Source Berry Pie");
+        addItem(DelightfulItems.GLOOMGOURD_PIE_SLICE, "Slice of Gloomgourd Pie");
         addItem(DelightfulItems.GREEN_APPLE_PIE_SLICE, "Slice of Green Apple Pie");
         addItem(DelightfulItems.BLUEBERRY_PIE_SLICE, "Slice of Blueberry Pie");
         addItem(DelightfulItems.NIGHTSHADE_BERRY_PIE_SLICE, "Slice of Nightshade Berry Pie");
@@ -88,21 +89,28 @@ public class DelightfulLanguageProvider extends LanguageProvider {
         addBlock(DelightfulBlocks.SLICED_CANTALOUPE, "Sliced Cantaloupe");
         addBlock(DelightfulBlocks.SLICED_MELON, "Sliced Melon");
         addBlock(DelightfulBlocks.SLICED_PUMPKIN, "Sliced Pumpkin");
-        addBlock(DelightfulBlocks.ACORN_SACK, "Acorn Sack");
         addBlock(DelightfulBlocks.PUMPKIN_PIE, "Pumpkin Pie");
         addBlock(DelightfulBlocks.SOURCE_BERRY_PIE, "Source Berry Pie");
+        addBlock(DelightfulBlocks.GLOOMGOURD_PIE, "Gloomgourd Pie");
         addBlock(DelightfulBlocks.GREEN_APPLE_PIE, "Green Apple Pie");
         addBlock(DelightfulBlocks.BLUEBERRY_PIE, "Blueberry Pie");
         addBlock(DelightfulBlocks.NIGHTSHADE_BERRY_PIE, "Nightshade Berry Pie");
         addBlock(DelightfulBlocks.CRIMSON_BERRY_PIE, "Crimson Berry Pie");
         addBlock(DelightfulBlocks.SALMONBERRY_PIE, "Salmonberry Pie");
-        addBlock(DelightfulBlocks.SALMONBERRY_SACK, "Salmonberry Sack");
         addBlock(DelightfulBlocks.SALMONBERRY_BUSH, "Salmonberry Bush");
         addBlock(DelightfulBlocks.WILD_SALMONBERRIES, "Wild Salmonberries");
         addBlock(DelightfulBlocks.QUARTZ_CABINET, "Quartz Cabinet");
         addBlock(DelightfulBlocks.BASALT_CABINET, "Basalt Cabinet");
         addBlock(DelightfulBlocks.SALMONBERRY_ICE_CREAM_BLOCK, "Salmonberry Ice Cream Block");
         addBlock(DelightfulBlocks.MATCHA_ICE_CREAM_BLOCK, "Matcha Ice Cream Block");
+        addBlock(DelightfulBlocks.ACORN_SACK, "Acorn Sack");
+        addBlock(DelightfulBlocks.SALMONBERRY_SACK, "Salmonberry Sack");
+        addBlock(DelightfulBlocks.BLUEBERRY_SACK, "Blueberry Sack");
+        addBlock(DelightfulBlocks.CRIMSON_BERRY_SACK, "Crimson Berry Sack");
+        addBlock(DelightfulBlocks.NIGHTSHADE_BERRY_SACK, "Nightshade Berry Sack");
+        addBlock(DelightfulBlocks.GREEN_APPLE_CRATE, "Green Apple Crate");
+        addBlock(DelightfulBlocks.JOSHUA_FRUIT_CRATE, "Joshua Fruit Crate");
+        addBlock(DelightfulBlocks.BAOBAB_FRUIT_CRATE, "Baobab Fruit Crate");
         add("farmersdelight.tooltip.matcha_latte", "Healthy");
         add("farmersdelight.tooltip.berry_matcha_latte", "Healthy");
         add("farmersdelight.tooltip.ender_nectar", "Otherworldly");
@@ -117,8 +125,8 @@ public class DelightfulLanguageProvider extends LanguageProvider {
         add("delightful.cantaloupe.desc", "Found in Beach-like biomes.");
         add("delightful.sliceable.desc", "Can be sliced with a Knife.");
         add("delightful.placeable.desc", "Placeable");
-        add("delightful.disabled.desc", "Disabled");
-        add("delightful.disabled.requirestag", "Requires non-empty tag:");
+        add("tooltip.config_disabled", "Disabled");
+        add("tooltip.requires_tag", "Requires non-empty tag:");
         add("tooltip.requires_modid", "Requires modid:");
     }
 }

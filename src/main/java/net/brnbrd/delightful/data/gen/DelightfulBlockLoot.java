@@ -33,6 +33,7 @@ public class DelightfulBlockLoot extends BlockLoot {
         this.empty(DelightfulBlocks.SALMONBERRY_PIE);
         this.empty(DelightfulBlocks.PUMPKIN_PIE);
         this.empty(DelightfulBlocks.SOURCE_BERRY_PIE);
+        this.empty(DelightfulBlocks.GLOOMGOURD_PIE);
         this.empty(DelightfulBlocks.GREEN_APPLE_PIE);
         this.empty(DelightfulBlocks.BLUEBERRY_PIE);
         this.empty(DelightfulBlocks.CRIMSON_BERRY_PIE);
@@ -100,12 +101,18 @@ public class DelightfulBlockLoot extends BlockLoot {
             }
         );
 
-        // Sacks
-        this.dropSelf(DelightfulBlocks.SALMONBERRY_SACK.get());
-        this.dropSelf(DelightfulBlocks.ACORN_SACK.get());
-
         // Salmonberry Bush drops Pips
         this.dropSelf(DelightfulBlocks.SALMONBERRY_BUSH.get());
+
+        // Crates
+        this.dropSelf(DelightfulBlocks.SALMONBERRY_SACK.get());
+        this.dropSelf(DelightfulBlocks.ACORN_SACK.get());
+        this.dropSelf(DelightfulBlocks.BLUEBERRY_SACK.get());
+        this.dropSelf(DelightfulBlocks.CRIMSON_BERRY_SACK.get());
+        this.dropSelf(DelightfulBlocks.NIGHTSHADE_BERRY_SACK.get());
+        this.dropSelf(DelightfulBlocks.GREEN_APPLE_CRATE.get());
+        this.dropSelf(DelightfulBlocks.JOSHUA_FRUIT_CRATE.get());
+        this.dropSelf(DelightfulBlocks.BAOBAB_FRUIT_CRATE.get());
 
         // Ice Cream Blocks
         this.dropSelf(DelightfulBlocks.SALMONBERRY_ICE_CREAM_BLOCK.get());

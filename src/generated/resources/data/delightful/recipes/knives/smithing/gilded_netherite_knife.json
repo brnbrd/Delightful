@@ -1,0 +1,37 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "gilded_netherite_knife"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "additionaladditions:gold_ring"
+              }
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:smithing",
+        "addition": {
+          "tag": "additionaladditions:gold_ring"
+        },
+        "base": {
+          "item": "farmersdelight:netherite_knife"
+        },
+        "result": {
+          "item": "delightful:gilded_netherite_knife"
+        }
+      }
+    }
+  ]
+}

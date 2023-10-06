@@ -1,0 +1,22 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "cooked_venison_chops"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:smoking",
+        "cookingtime": 100,
+        "experience": 0.35,
+        "ingredient": {
+          "item": "delightful:venison_chops"
+        },
+        "result": "delightful:cooked_venison_chops"
+      }
+    }
+  ]
+}
