@@ -1,6 +1,6 @@
 package net.brnbrd.delightful.common.item.knife.compat.twilightforest;
 
-import net.brnbrd.delightful.Util;
+import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.DelightfulTiers;
 import net.brnbrd.delightful.common.item.knife.CompatKnifeItem;
 import net.minecraft.ChatFormatting;
@@ -15,7 +15,7 @@ import vectorwing.farmersdelight.common.registry.ModEnchantments;
 
 public class IronwoodKnifeItem extends CompatKnifeItem {
   public IronwoodKnifeItem(Item.Properties properties) {
-    super("twilightforest", Util.it("forge", "ingots/ironwood"), DelightfulTiers.IRONWOOD, properties, ChatFormatting.AQUA);
+    super("twilightforest", DelightfulItems.ingot("ironwood"), DelightfulTiers.IRONWOOD, properties, ChatFormatting.AQUA);
   }
 
   @Override

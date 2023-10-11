@@ -1,6 +1,6 @@
 package net.brnbrd.delightful.common.item.knife.compat.twilightforest;
 
-import net.brnbrd.delightful.Util;
+import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.DelightfulTiers;
 import net.brnbrd.delightful.common.item.knife.CompatKnifeItem;
 import net.minecraft.ChatFormatting;
@@ -14,7 +14,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class SteeleafKnifeItem extends CompatKnifeItem {
   public SteeleafKnifeItem(Properties properties) {
-    super("twilightforest", Util.it("forge", "ingots/steeleaf"), DelightfulTiers.STEELEAF, properties, ChatFormatting.AQUA);
+    super("twilightforest", DelightfulItems.ingot("steeleaf"), DelightfulTiers.STEELEAF, properties, ChatFormatting.AQUA);
   }
 
   @Override

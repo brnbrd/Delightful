@@ -14,7 +14,7 @@ public class CompatKnifeItem extends DelightfulKnifeItem {
     private final String modid;
     private final ChatFormatting[] formatting;
 
-    public CompatKnifeItem(String modid, TagKey<Item> tag, Tier tier, Properties properties, ChatFormatting... formatting) {
+    public CompatKnifeItem(String modid, @Nullable TagKey<Item> tag, Tier tier, Properties properties, ChatFormatting... formatting) {
         super(tag, tier, properties);
         this.modid = modid;
         this.formatting = formatting;

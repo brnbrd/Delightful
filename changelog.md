@@ -1,6 +1,15 @@
 # Changelog
 
 
+## 3.4.1
+
+### Updates
+- Translations
+
+### Fixes
+- Fixed crash when hovering over Living Knife
+
+
 ## 3.4
 
 ### Updates
@@ -23,6 +32,7 @@
 - Added Blueberry Sack (for [BYG](https://www.curseforge.com/minecraft/mc-mods/oh-the-biomes-youll-go))
 - Minor tag updates and fixes
 - Some updated textures, courtesy of **championhestu**
+- Translations
 
 ### Fixes
 - Fixed unlocalized description for disabled items by modid

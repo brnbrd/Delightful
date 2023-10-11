@@ -28,10 +28,9 @@ public class DPacketHandler {
 	);
 
 	public static void init() {
-		int i = 0;
 		// Serverbound
 		if (Mods.loaded(Mods.BTA)) {
-			INSTANCE.registerMessage(i++, BotaniaLCP.class, BotaniaLCP::encode, BotaniaLCP::decode,
+			INSTANCE.registerMessage(0, BotaniaLCP.class, BotaniaLCP::encode, BotaniaLCP::decode,
 				makeServerBoundHandler(BotaniaLCP::handle));
 		}
 	}

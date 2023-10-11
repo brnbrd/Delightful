@@ -1,4 +1,4 @@
-// 1.19.2	2023-10-06T01:44:41.3603241	delightful
+// 1.19.2	2023-10-10T16:28:21.1240158	delightful
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
 459ce97cdbc0fe7825ed7b320441d23013d6ab4c data/botania/tags/items/dreamwood_twig.json
@@ -6,7 +6,7 @@
 cc3ce1c9ecfdd40d917db77aeff124be1dd856b4 data/botania/tags/items/mana_using_items.json
 e643f71563232bb2ab722777c4fa1de27a4fcee6 data/collectorsreap/tags/items/gummies.json
 ed89bd00684e45c4198269c0053267c257e784c6 data/create/tags/items/polished_rose_quartz.json
-d6e09a6cacd79a53c53f9f59d93812877c10603d data/create/tags/items/upright_on_belt.json
+0e0930ad8b0613e7e86da5163805a2153bf93d55 data/create/tags/items/upright_on_belt.json
 3ec615c3b0619071ee2425164230a78256598991 data/create_sa/tags/items/heap_of_experience.json
 93e27377ca1c64c862cd4f76810c65106f132cea data/create_sa/tags/items/zinc_handle.json
 b306cd52d0a89b88fd149766a3ccc1f9d27d4e5f data/deeperdarker/tags/items/reinforced_echo_shard.json

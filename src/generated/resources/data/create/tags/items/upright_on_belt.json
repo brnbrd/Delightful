@@ -1,15 +1,15 @@
 {
   "values": [
-    "delightful:salmonberry_pie",
     "#forge:jams",
-    "delightful:animal_oil_bottle",
+    "delightful:nut_butter_bottle",
     "delightful:prickly_pear_juice",
     "delightful:ender_nectar",
-    "delightful:nut_butter_bottle",
     "delightful:azalea_tea",
     "delightful:lavender_tea",
     "delightful:matcha_latte",
     "delightful:berry_matcha_latte",
+    "delightful:animal_oil_bottle",
+    "delightful:salmonberry_pie",
     {
       "id": "farmersrespite:green_tea",
       "required": false
