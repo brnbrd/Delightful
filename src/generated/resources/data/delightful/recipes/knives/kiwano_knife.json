@@ -26,6 +26,7 @@
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
+        "category": "equipment",
         "key": {
           "m": {
             "tag": "nethers_exoticism:kiwano_peel"
@@ -40,7 +41,8 @@
         ],
         "result": {
           "item": "delightful:kiwano_knife"
-        }
+        },
+        "show_notification": true
       }
     }
   ]

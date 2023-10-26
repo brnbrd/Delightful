@@ -31,7 +31,8 @@
           "recipes": [
             "delightful:food/cooking/coconut_curry"
           ]
-        }
+        },
+        "sends_telemetry_event": true
       },
       "conditions": [
         {

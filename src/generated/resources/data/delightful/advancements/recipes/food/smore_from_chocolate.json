@@ -33,7 +33,8 @@
           "recipes": [
             "delightful:food/smore_from_chocolate"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

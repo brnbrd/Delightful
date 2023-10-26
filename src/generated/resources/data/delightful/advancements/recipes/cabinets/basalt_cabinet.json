@@ -33,7 +33,8 @@
           "recipes": [
             "delightful:basalt_cabinet"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

@@ -1,0 +1,50 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "living_knife"
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "rootsclassic"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "rootsclassic:ritual",
+        "effect": "rootsclassic:crafting",
+        "level": 0,
+        "color": "#92d62b",
+        "ingredients": [
+          {
+            "item": "farmersdelight:wooden_knife"
+          },
+          {
+            "item": "rootsclassic:verdant_sprig"
+          },
+          {
+            "item": "minecraft:gold_nugget"
+          }
+        ],
+        "incenses": [
+          {
+            "item": "rootsclassic:oak_bark"
+          },
+          {
+            "item": "rootsclassic:oak_bark"
+          }
+        ],
+        "result": {
+          "item": "delightful:living_knife"
+        }
+      }
+    }
+  ]
+}

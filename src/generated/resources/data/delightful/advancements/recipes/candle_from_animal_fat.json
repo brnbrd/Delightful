@@ -33,7 +33,8 @@
           "recipes": [
             "delightful:candle_from_animal_fat"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

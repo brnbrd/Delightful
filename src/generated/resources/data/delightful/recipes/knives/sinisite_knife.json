@@ -26,6 +26,7 @@
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
+        "category": "equipment",
         "key": {
           "m": {
             "tag": "forge:ingots/sinisite"
@@ -40,7 +41,8 @@
         ],
         "result": {
           "item": "delightful:sinisite_knife"
-        }
+        },
+        "show_notification": true
       }
     }
   ]

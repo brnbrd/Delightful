@@ -33,7 +33,8 @@
           "recipes": [
             "delightful:torch_from_animal_oil_bottle"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

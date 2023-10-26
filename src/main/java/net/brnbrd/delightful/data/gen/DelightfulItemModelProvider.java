@@ -5,23 +5,22 @@ import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.knife.DelightfulKnifeItem;
 import net.brnbrd.delightful.common.item.knife.Knives;
+import net.minecraft.client.renderer.block.model.BlockModel;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
-import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
-import net.minecraftforge.client.model.generators.loaders.ItemLayersModelBuilder;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
-
 import java.util.List;
 
 public class DelightfulItemModelProvider extends ItemModelProvider {
-    public DelightfulItemModelProvider(DataGenerator generator, ExistingFileHelper existingFileHelper) {
-        super(generator, Delightful.MODID, existingFileHelper);
+    public DelightfulItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
+        super(output, Delightful.MODID, existingFileHelper);
     }
 
     private static final List<ResourceLocation> FLAT_BLOCKS = List.of(
@@ -54,18 +53,18 @@ public class DelightfulItemModelProvider extends ItemModelProvider {
         }
     }
 
-    public ItemModelBuilder flatBlock(ResourceLocation id) {
-        return getBuilder(id.toString()).parent(new ModelFile.UncheckedModelFile("item/generated"))
+    public void flatBlock(ResourceLocation id) {
+        getBuilder(id.toString()).parent(new ModelFile.UncheckedModelFile("item/generated"))
             .texture("layer0", new ResourceLocation(id.getNamespace(), "block/" + id.getPath()));
     }
 
-    public ItemModelBuilder handheld(ResourceLocation item) {
-        return withExistingParent(item.getPath(), "item/handheld").texture("layer0", Util.rl(Delightful.MODID, "item/" + item.getPath()));
+    public void handheld(ResourceLocation item) {
+        withExistingParent(item.getPath(), "item/handheld").texture("layer0", Util.rl(Delightful.MODID, "item/" + item.getPath()));
     }
 
-    public ItemModelBuilder emissive(ResourceLocation item) {
-        return withExistingParent(item.getPath(), "item/handheld")
+    public void emissive(ResourceLocation item) {
+        withExistingParent(item.getPath(), "item/handheld")
             .texture("layer0", Util.rl(Delightful.MODID, "item/" + item.getPath()))
-            .customLoader(ItemLayersModelBuilder::begin).emissive(0).end();
+            .guiLight(BlockModel.GuiLight.FRONT);
     }
 }

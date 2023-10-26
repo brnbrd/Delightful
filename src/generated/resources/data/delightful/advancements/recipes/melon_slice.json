@@ -33,7 +33,8 @@
           "recipes": [
             "delightful:melon_slice"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

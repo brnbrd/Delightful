@@ -31,7 +31,8 @@
           "recipes": [
             "delightful:food/cooking/glow_jelly_bottle"
           ]
-        }
+        },
+        "sends_telemetry_event": true
       },
       "conditions": [
         {

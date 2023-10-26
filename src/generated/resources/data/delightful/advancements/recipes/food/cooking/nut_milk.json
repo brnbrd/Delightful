@@ -31,7 +31,8 @@
           "recipes": [
             "delightful:food/cooking/nut_milk"
           ]
-        }
+        },
+        "sends_telemetry_event": true
       },
       "conditions": [
         {

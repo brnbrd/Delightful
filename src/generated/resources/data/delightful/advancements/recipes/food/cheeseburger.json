@@ -31,7 +31,8 @@
           "recipes": [
             "delightful:food/cheeseburger"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

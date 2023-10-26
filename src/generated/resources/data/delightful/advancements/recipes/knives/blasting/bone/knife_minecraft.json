@@ -33,7 +33,8 @@
           "recipes": [
             "delightful:knives/blasting/bone/knife_minecraft"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

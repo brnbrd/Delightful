@@ -1,10 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
-  "emissive_layers": [
-    0
-  ],
-  "loader": "forge:item_layers",
-  "render_types": {},
+  "gui_light": "front",
   "textures": {
     "layer0": "delightful:item/fiery_knife"
   }

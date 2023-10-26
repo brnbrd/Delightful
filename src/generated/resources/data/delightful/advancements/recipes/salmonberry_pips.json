@@ -31,7 +31,8 @@
           "recipes": [
             "delightful:salmonberry_pips"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

@@ -33,7 +33,8 @@
           "recipes": [
             "delightful:cooking/animal_oil_bottle"
           ]
-        }
+        },
+        "sends_telemetry_event": true
       },
       "conditions": [
         {

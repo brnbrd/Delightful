@@ -31,7 +31,8 @@
           "recipes": [
             "delightful:food/salmonberry_ice_cream"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

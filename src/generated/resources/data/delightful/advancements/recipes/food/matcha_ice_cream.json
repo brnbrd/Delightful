@@ -31,7 +31,8 @@
           "recipes": [
             "delightful:food/matcha_ice_cream"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

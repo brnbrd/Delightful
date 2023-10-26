@@ -31,7 +31,8 @@
           "recipes": [
             "delightful:food/crab_rangoon"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

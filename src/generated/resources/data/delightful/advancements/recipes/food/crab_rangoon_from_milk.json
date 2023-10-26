@@ -31,7 +31,8 @@
           "recipes": [
             "delightful:food/crab_rangoon_from_milk"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

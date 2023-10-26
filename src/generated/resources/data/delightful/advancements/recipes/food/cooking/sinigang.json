@@ -31,7 +31,8 @@
           "recipes": [
             "delightful:food/cooking/sinigang"
           ]
-        }
+        },
+        "sends_telemetry_event": true
       },
       "conditions": [
         {

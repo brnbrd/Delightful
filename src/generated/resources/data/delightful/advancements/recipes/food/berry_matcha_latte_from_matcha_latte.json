@@ -33,7 +33,8 @@
           "recipes": [
             "delightful:food/berry_matcha_latte_from_matcha_latte"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

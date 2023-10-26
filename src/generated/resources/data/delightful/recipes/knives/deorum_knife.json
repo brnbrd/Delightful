@@ -26,6 +26,7 @@
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
+        "category": "equipment",
         "key": {
           "m": {
             "tag": "forge:ingots/deorum"
@@ -40,7 +41,8 @@
         ],
         "result": {
           "item": "delightful:deorum_knife"
-        }
+        },
+        "show_notification": true
       }
     }
   ]

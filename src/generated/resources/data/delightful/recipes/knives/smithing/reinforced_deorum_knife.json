@@ -21,7 +21,7 @@
         }
       ],
       "recipe": {
-        "type": "minecraft:smithing",
+        "type": "minecraft:smithing_transform",
         "addition": {
           "tag": "forbidden_arcanus:stellarite_piece"
         },
@@ -30,7 +30,8 @@
         },
         "result": {
           "item": "delightful:reinforced_deorum_knife"
-        }
+        },
+        "template": []
       }
     }
   ]

@@ -22,12 +22,12 @@ public class SteeleafKnifeItem extends CompatKnifeItem {
     return null;
   }
 
-  @Override
+  /*@Override
   public void fillItemCategory(@NotNull CreativeModeTab tab, @NotNull NonNullList<ItemStack> list) {
     if (this.allowedIn(tab)) {
       ItemStack stack = new ItemStack(this);
       stack.enchant(Enchantments.SMITE, 2);
       list.add(stack);
     }
-  }
+  }*/
 }

@@ -22,6 +22,7 @@
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
+        "category": "equipment",
         "key": {
           "m": {
             "tag": "forge:ingots/silver"
@@ -36,7 +37,8 @@
         ],
         "result": {
           "item": "delightful:silver_knife"
-        }
+        },
+        "show_notification": true
       }
     }
   ]

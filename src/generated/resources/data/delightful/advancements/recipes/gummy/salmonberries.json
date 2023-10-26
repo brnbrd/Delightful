@@ -31,7 +31,8 @@
           "recipes": [
             "delightful:gummy/salmonberries"
           ]
-        }
+        },
+        "sends_telemetry_event": true
       },
       "conditions": [
         {

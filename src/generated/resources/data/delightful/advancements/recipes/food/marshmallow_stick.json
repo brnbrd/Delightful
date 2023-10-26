@@ -31,7 +31,8 @@
           "recipes": [
             "delightful:food/marshmallow_stick"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

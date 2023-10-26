@@ -10,6 +10,7 @@
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
+        "category": "misc",
         "key": {
           "#": {
             "item": "minecraft:wheat"
@@ -34,7 +35,8 @@
         ],
         "result": {
           "item": "minecraft:pumpkin_pie"
-        }
+        },
+        "show_notification": true
       }
     }
   ]

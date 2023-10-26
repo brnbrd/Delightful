@@ -33,7 +33,8 @@
           "recipes": [
             "delightful:food/cooking/ender_nectar"
           ]
-        }
+        },
+        "sends_telemetry_event": true
       },
       "conditions": [
         {

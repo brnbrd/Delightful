@@ -31,7 +31,8 @@
           "recipes": [
             "delightful:knives/experience_knife"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

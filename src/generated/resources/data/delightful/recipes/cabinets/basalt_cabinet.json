@@ -10,6 +10,7 @@
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
+        "category": "misc",
         "key": {
           "b": {
             "item": "minecraft:basalt"
@@ -28,7 +29,8 @@
         ],
         "result": {
           "item": "delightful:basalt_cabinet"
-        }
+        },
+        "show_notification": true
       }
     }
   ]

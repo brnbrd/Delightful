@@ -20,11 +20,11 @@ public class StelliumKnifeItem extends CompatKnifeItem {
 
 	private void onHurt(LivingHurtEvent e) {
 		LivingEntity target = e.getEntity();
-		if (!target.getLevel().isClientSide() && e.getSource().getDirectEntity() instanceof LivingEntity attacker) {
+		if (!target.level().isClientSide() && e.getSource().getDirectEntity() instanceof LivingEntity attacker) {
 			ItemStack weapon = attacker.getMainHandItem();
 			if (!weapon.isEmpty() &&
 				weapon.is(Knives.STELLIUM.get()) &&
-				attacker.getLevel().dimension() != Level.END &&
+				attacker.level().dimension() != Level.END &&
 				!(Util.hasTagString(weapon, "socket", "starlit"))) {
 				e.setAmount(Math.min(1.0F, e.getAmount()));
 			}

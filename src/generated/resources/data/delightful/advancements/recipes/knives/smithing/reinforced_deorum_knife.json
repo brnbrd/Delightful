@@ -31,7 +31,8 @@
           "recipes": [
             "delightful:knives/smithing/reinforced_deorum_knife"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

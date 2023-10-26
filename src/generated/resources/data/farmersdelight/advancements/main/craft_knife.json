@@ -866,5 +866,6 @@
       "terra_knife",
       "alf_knife"
     ]
-  ]
+  ],
+  "sends_telemetry_event": true
 }

@@ -26,6 +26,7 @@
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
+        "category": "equipment",
         "key": {
           "m": {
             "tag": "forge:ingots/knightmetal"
@@ -40,7 +41,8 @@
         ],
         "result": {
           "item": "delightful:knightmetal_knife"
-        }
+        },
+        "show_notification": true
       }
     }
   ]

@@ -33,7 +33,8 @@
           "recipes": [
             "delightful:food/deluxe_cheeseburger_from_bun"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

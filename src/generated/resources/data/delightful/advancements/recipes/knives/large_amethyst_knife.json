@@ -31,7 +31,8 @@
           "recipes": [
             "delightful:knives/large_amethyst_knife"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

@@ -10,7 +10,7 @@ import net.brnbrd.delightful.compat.Mods;
 import net.brnbrd.delightful.data.tags.DelightfulBlockTags;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.advancements.critereon.*;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.predicates.*;
@@ -19,13 +19,10 @@ import net.minecraftforge.common.data.GlobalLootModifierProvider;
 import vectorwing.farmersdelight.common.registry.ModItems;
 
 public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
-	public DelightfulLootModifierProvider(DataGenerator gen) {
-		super(gen, Delightful.MODID);
+	public DelightfulLootModifierProvider(PackOutput output) {
+		super(output, Delightful.MODID);
 	}
 
-	/**
-	 * Call {@link #add} here, which will pass in the necessary information to write the jsons.
-	 */
 	@Override
 	protected void start() {
 		add("green_tea_leaf", new CompatAddItemLootModifier(

@@ -87,9 +87,9 @@ public class BotaniaCompat {
 		if (attackStr == 1) {
 			ManaBurstEntity burst = alf ?
 				getAlfBurst(player, stack, manaPerDamage) : getBurst(player, stack, manaPerDamage);
-			player.getLevel().addFreshEntity(burst);
+			player.level().addFreshEntity(burst);
 			stack.hurtAndBreak(1, player, p -> p.broadcastBreakEvent(InteractionHand.MAIN_HAND));
-			player.getLevel().playSound(
+			player.level().playSound(
 				null,
 				player.getX(),
 				player.getY(),

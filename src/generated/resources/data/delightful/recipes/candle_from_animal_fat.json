@@ -10,6 +10,7 @@
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
+        "category": "misc",
         "key": {
           "f": {
             "item": "delightful:animal_fat"
@@ -25,7 +26,8 @@
         ],
         "result": {
           "item": "minecraft:candle"
-        }
+        },
+        "show_notification": true
       }
     }
   ]

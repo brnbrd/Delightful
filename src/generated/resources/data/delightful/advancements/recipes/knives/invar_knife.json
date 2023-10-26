@@ -31,7 +31,8 @@
           "recipes": [
             "delightful:knives/invar_knife"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

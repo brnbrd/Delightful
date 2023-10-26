@@ -82,10 +82,7 @@ public class PieEvents {
 	private InteractionResult placePie(PieBlock pie, BlockPlaceContext context) {
 		BlockPos pos = context.getClickedPos();
 		Level level = context.getLevel();
-		if (
-			context.canPlace() &&
-			level.getBlockState(pos.below()).getMaterial().isSolid()
-		) {
+		if (context.canPlace()) {
 			Player player = context.getPlayer();
 			BlockState pieState = pie.getStateForPlacement(context);
 			if (canPlace(context, pieState) && level.setBlock(pos, pieState, 11)) {

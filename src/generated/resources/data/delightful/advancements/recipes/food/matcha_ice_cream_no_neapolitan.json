@@ -33,7 +33,8 @@
           "recipes": [
             "delightful:food/matcha_ice_cream_no_neapolitan"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

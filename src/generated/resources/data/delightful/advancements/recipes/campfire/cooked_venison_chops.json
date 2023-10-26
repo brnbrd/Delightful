@@ -33,7 +33,8 @@
           "recipes": [
             "delightful:campfire/cooked_venison_chops"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

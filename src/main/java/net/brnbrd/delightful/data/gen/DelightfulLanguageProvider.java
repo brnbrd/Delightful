@@ -5,15 +5,15 @@ import net.brnbrd.delightful.common.block.DelightfulBlocks;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.knife.DelightfulKnifeItem;
 import net.brnbrd.delightful.common.item.knife.Knives;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.util.Tuple;
 import net.minecraftforge.common.data.LanguageProvider;
 import org.codehaus.plexus.util.StringUtils;
 import java.util.Locale;
 
 public class DelightfulLanguageProvider extends LanguageProvider {
-    public DelightfulLanguageProvider(DataGenerator gen) {
-        super(gen, Delightful.MODID, "en_us");
+    public DelightfulLanguageProvider(PackOutput output) {
+        super(output, Delightful.MODID, "en_us");
     }
 
     @Override
@@ -128,5 +128,6 @@ public class DelightfulLanguageProvider extends LanguageProvider {
         add("tooltip.config_disabled", "Disabled");
         add("tooltip.requires_tag", "Requires non-empty tag:");
         add("tooltip.requires_modid", "Requires modid:");
+        add("config.jade.plugin_delightful.crop_progress", "Crop Progress");
     }
 }

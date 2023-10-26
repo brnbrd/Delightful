@@ -3,19 +3,20 @@ package net.brnbrd.delightful.data.gen;
 import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.compat.Mods;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.EntityTypeTagsProvider;
 import net.minecraft.world.entity.EntityType;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import org.jetbrains.annotations.NotNull;
+import java.util.concurrent.CompletableFuture;
 
 public class DelightfulEntityTagProvider extends EntityTypeTagsProvider {
-	public DelightfulEntityTagProvider(DataGenerator gen, ExistingFileHelper existingFileHelper) {
-		super(gen, Delightful.MODID, existingFileHelper);
+	public DelightfulEntityTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> provider, ExistingFileHelper existingFileHelper) {
+		super(output, provider, Delightful.MODID, existingFileHelper);
 	}
 
 	@Override
-	protected void addTags() {
+	protected void addTags(HolderLookup.Provider provider) {
 		this.tag(DelightfulEntityTags.FATTY_ANIMALS)
 			.add(EntityType.CAT)
 			.add(EntityType.WOLF)
@@ -112,13 +113,5 @@ public class DelightfulEntityTagProvider extends EntityTypeTagsProvider {
 			.addOptional(Util.rl("wandering_trapper", "trapper_dog"));
 		this.tag(DelightfulEntityTags.DROPS_ACORN).addOptional(Util.rl(Mods.ECO, "squirrel"));
 		this.tag(DelightfulEntityTags.DROPS_RAW_GOAT).add(EntityType.GOAT);
-	}
-
-	/**
-	 * Gets a name for this provider, to use in logging.
-	 */
-	@Override
-	public @NotNull String getName() {
-		return Delightful.MODID;
 	}
 }

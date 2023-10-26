@@ -6,6 +6,9 @@
     "delightful:sliced_pumpkin",
     "delightful:cantaloupe",
     "delightful:sliced_cantaloupe",
+    "delightful:green_apple_crate",
+    "delightful:joshua_fruit_crate",
+    "delightful:baobab_fruit_crate",
     {
       "id": "fruittrees:citrus_cabinet",
       "required": false
@@ -13,9 +16,6 @@
     {
       "id": "fruittrees:cherry_cabinet",
       "required": false
-    },
-    "delightful:green_apple_crate",
-    "delightful:joshua_fruit_crate",
-    "delightful:baobab_fruit_crate"
+    }
   ]
 }

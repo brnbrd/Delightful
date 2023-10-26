@@ -31,7 +31,8 @@
           "recipes": [
             "delightful:cooking/green_tea_leaves"
           ]
-        }
+        },
+        "sends_telemetry_event": true
       },
       "conditions": [
         {

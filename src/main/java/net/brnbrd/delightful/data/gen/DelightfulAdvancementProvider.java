@@ -7,46 +7,33 @@ import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.FrameType;
 import net.minecraft.advancements.RequirementsStrategy;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.advancements.AdvancementProvider;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.common.data.ForgeAdvancementProvider;
 import net.minecraftforge.registries.RegistryObject;
+import org.jetbrains.annotations.NotNull;
 import vectorwing.farmersdelight.FarmersDelight;
 import vectorwing.farmersdelight.common.registry.ModItems;
 import vectorwing.farmersdelight.common.utility.TextUtils;
 import java.util.function.Consumer;
 
-public class DelightfulAdvancementProvider extends AdvancementProvider {
-    public DelightfulAdvancementProvider(DataGenerator generatorIn, ExistingFileHelper fileHelperIn) {
-        super(generatorIn, fileHelperIn);
-    }
+public class DelightfulAdvancementProvider implements ForgeAdvancementProvider.AdvancementGenerator {
 
-    private String getNameId(String id) {
-        return FarmersDelight.MODID + ":" + id;
-    }
-
-    /**
-     * Override this method for registering and generating custom Advancements.
-     * Just use Advancement.Builder to build your Advancements, you don't need an extra consumer like the vanilla classes.
-     *
-     * @param consumer used for the register function from {@link Advancement.Builder}
-     * @param fileHelper used for the register function from {@link Advancement.Builder}
-     */
     @Override
-    protected void registerAdvancements(Consumer<Advancement> consumer, ExistingFileHelper fileHelper) {
-        // root advancement
-        Advancement farmersDelight = Advancement.Builder.advancement()
+    public void generate(HolderLookup.@NotNull Provider registries, @NotNull Consumer<Advancement> consumer, @NotNull ExistingFileHelper existingFileHelper) {
+        Advancement root = Advancement.Builder.advancement()
             .display(ModItems.COOKING_POT.get(),
                 TextUtils.getTranslation("advancement.root"),
                 TextUtils.getTranslation("advancement.root.desc"),
-                Util.rl("minecraft:textures/block/bricks.png"),
+                new ResourceLocation("minecraft:textures/block/bricks.png"),
                 FrameType.TASK, false, false, false)
             .addCriterion("seeds", InventoryChangeTrigger.TriggerInstance.hasItems(new ItemLike[]{}))
-            .build(Util.rl("farmersdelight", "main/root"));
+            .save(consumer, FarmersDelight.MODID + ":main/root");
 
         // craft_knife
-        Advancement.Builder huntAndGatherB = getAdvancement(farmersDelight, ModItems.FLINT_KNIFE.get(), "craft_knife", FrameType.TASK, true, true, false)
+        Advancement.Builder huntAndGatherB = getAdvancement(root, ModItems.FLINT_KNIFE.get(), "craft_knife", FrameType.TASK, true, true, false)
             .addCriterion("flint_knife", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.FLINT_KNIFE.get()))
             .addCriterion("iron_knife", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.IRON_KNIFE.get()))
             .addCriterion("diamond_knife", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.DIAMOND_KNIFE.get()))
@@ -56,7 +43,7 @@ public class DelightfulAdvancementProvider extends AdvancementProvider {
             .map(RegistryObject::get)
             .filter(item -> item instanceof DelightfulKnifeItem)
             .forEach(k -> huntAndGatherB.addCriterion(Util.name(k), InventoryChangeTrigger.TriggerInstance.hasItems(k)));
-        Advancement huntAndGather = huntAndGatherB.requirements(RequirementsStrategy.OR).save(consumer, getNameId("main/craft_knife"));
+        huntAndGatherB.requirements(RequirementsStrategy.OR).save(consumer, FarmersDelight.MODID + ":main/craft_knife");
     }
 
     protected static Advancement.Builder getAdvancement(Advancement parent, ItemLike display, String name, FrameType frame, boolean showToast, boolean announceToChat, boolean hidden) {

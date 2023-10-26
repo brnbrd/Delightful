@@ -33,7 +33,8 @@
           "recipes": [
             "delightful:campfire/marshmallow_stick"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

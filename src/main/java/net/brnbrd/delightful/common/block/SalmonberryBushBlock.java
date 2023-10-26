@@ -13,6 +13,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.BonemealableBlock;
@@ -75,7 +76,7 @@ public class SalmonberryBushBlock extends BushBlock implements BonemealableBlock
       int speed = 20;
       Biome biome = pLevel.getBiome(pPos).value();
       if (pLevel.isRainingAt(pPos) &&
-          biome.getPrecipitation() == Biome.Precipitation.RAIN &&
+          biome.getPrecipitationAt(pPos) == Biome.Precipitation.RAIN &&
           biome.warmEnoughToRain(pPos)) { // Hard raining ON the block
         speed -= 15;
       } else if (pLevel.isRaining()) { // Level just raining
@@ -113,11 +114,8 @@ public class SalmonberryBushBlock extends BushBlock implements BonemealableBlock
     pBuilder.add(AGE);
   }
 
-  /**
-   * @return whether bonemeal can be used on this block
-   */
   @Override
-  public boolean isValidBonemealTarget(@NotNull BlockGetter pLevel, @NotNull BlockPos pPos, BlockState state, boolean pIsClient) {
+  public boolean isValidBonemealTarget(@NotNull LevelReader pLevel, @NotNull BlockPos pPos, @NotNull BlockState state, boolean pIsClient) {
     return !this.isMaxAge(state);
   }
 

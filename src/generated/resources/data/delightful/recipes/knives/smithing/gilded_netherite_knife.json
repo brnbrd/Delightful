@@ -21,7 +21,7 @@
         }
       ],
       "recipe": {
-        "type": "minecraft:smithing",
+        "type": "minecraft:smithing_transform",
         "addition": {
           "tag": "additionaladditions:gold_ring"
         },
@@ -30,7 +30,8 @@
         },
         "result": {
           "item": "delightful:gilded_netherite_knife"
-        }
+        },
+        "template": []
       }
     }
   ]

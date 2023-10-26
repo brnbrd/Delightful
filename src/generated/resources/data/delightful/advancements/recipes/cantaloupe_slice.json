@@ -33,7 +33,8 @@
           "recipes": [
             "delightful:cantaloupe_slice"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

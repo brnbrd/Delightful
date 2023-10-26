@@ -2,8 +2,9 @@ package net.brnbrd.delightful.data.gen;
 
 import net.brnbrd.delightful.common.block.*;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
-import net.minecraft.data.loot.BlockLoot;
+import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
@@ -13,21 +14,26 @@ import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePrope
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
+import java.util.Collections;
 import java.util.List;
 
-public class DelightfulBlockLoot extends BlockLoot {
+public class DelightfulBlockLoot extends BlockLootSubProvider {
 
     private final static List<ResourceLocation> NO_GEN = List.of(
         DelightfulBlocks.WILD_SALMONBERRIES.getId()
     );
 
+    protected DelightfulBlockLoot() {
+        super(Collections.emptySet(), FeatureFlags.REGISTRY.allFlags());
+    }
+
     @Override
-    protected void addTables() {
+    protected void generate() {
         // Cabinets
         DelightfulBlocks.BLOCKS.getEntries().stream()
-                .map(RegistryObject::get)
-                .filter(block -> block instanceof DelightfulCabinetBlock)
-                .forEach(this::dropSelf);
+            .map(RegistryObject::get)
+            .filter(block -> block instanceof DelightfulCabinetBlock)
+            .forEach(this::dropSelf);
 
         // Pies
         this.empty(DelightfulBlocks.SALMONBERRY_PIE);
@@ -124,7 +130,7 @@ public class DelightfulBlockLoot extends BlockLoot {
         return DelightfulBlocks.BLOCKS.getEntries()
             .stream()
             .filter(o -> !NO_GEN.contains(o.getId()))
-            .map(RegistryObject::get)
+            .flatMap(RegistryObject::stream)
             ::iterator;
     }
 

@@ -31,7 +31,8 @@
           "recipes": [
             "delightful:food/cooking/sinigang_no_ginger_citrus"
           ]
-        }
+        },
+        "sends_telemetry_event": true
       },
       "conditions": [
         {

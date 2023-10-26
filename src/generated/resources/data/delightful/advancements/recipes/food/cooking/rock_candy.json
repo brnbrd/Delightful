@@ -4,13 +4,11 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_green_apple_pie_slice": {
+          "has_rose_quartz": {
             "conditions": {
               "items": [
                 {
-                  "items": [
-                    "delightful:green_apple_pie_slice"
-                  ]
+                  "tag": "forge:gems/rose_quartz"
                 }
               ]
             },
@@ -18,22 +16,23 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:food/green_apple_pie_from_slices"
+              "recipe": "delightful:food/cooking/rock_candy"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
         },
         "requirements": [
           [
-            "has_green_apple_pie_slice",
+            "has_rose_quartz",
             "has_the_recipe"
           ]
         ],
         "rewards": {
           "recipes": [
-            "delightful:food/green_apple_pie_from_slices"
+            "delightful:food/cooking/rock_candy"
           ]
-        }
+        },
+        "sends_telemetry_event": true
       },
       "conditions": [
         {
@@ -41,11 +40,14 @@
           "values": [
             {
               "type": "delightful:enabled",
-              "value": "green_apple_pie_slice"
+              "value": "rock_candy"
             },
             {
-              "type": "forge:item_exists",
-              "item": "byg:green_apple_pie"
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:gems/rose_quartz"
+              }
             }
           ]
         }

@@ -26,6 +26,7 @@
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
+        "category": "equipment",
         "key": {
           "m": {
             "tag": "phantasm:void_crystal_block"
@@ -40,7 +41,8 @@
         ],
         "result": {
           "item": "delightful:crystalline_knife"
-        }
+        },
+        "show_notification": true
       }
     }
   ]

@@ -31,7 +31,8 @@
           "recipes": [
             "delightful:knives/constantan_knife"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

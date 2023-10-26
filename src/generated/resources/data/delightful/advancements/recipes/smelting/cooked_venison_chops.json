@@ -33,7 +33,8 @@
           "recipes": [
             "delightful:smelting/cooked_venison_chops"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

@@ -26,6 +26,7 @@
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
+        "category": "equipment",
         "key": {
           "m": {
             "tag": "create_sa:heap_of_experience"
@@ -40,7 +41,8 @@
         ],
         "result": {
           "item": "delightful:experience_knife"
-        }
+        },
+        "show_notification": true
       }
     }
   ]

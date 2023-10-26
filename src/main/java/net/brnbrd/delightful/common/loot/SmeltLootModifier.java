@@ -7,7 +7,6 @@ import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.ExperienceOrb;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
-import net.minecraft.world.item.crafting.SmeltingRecipe;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
@@ -16,8 +15,8 @@ import net.minecraftforge.common.loot.LootModifier;
 import net.minecraftforge.items.ItemHandlerHelper;
 import org.jetbrains.annotations.NotNull;
 
-//Code adapted from https://github.com/MinecraftForge/MinecraftForge/blob/1.18.x/src/test/java/net/minecraftforge/debug/gameplay/loot/GlobalLootModifiersTest.java
-//LICENSE: https://github.com/MinecraftForge/MinecraftForge/blob/1.18.x/LICENSE.txt
+//Code adapted from https://github.com/MinecraftForge/MinecraftForge/blob/1.20.x/src/test/java/net/minecraftforge/debug/gameplay/loot/GlobalLootModifiersTest.java
+//LICENSE: https://github.com/MinecraftForge/MinecraftForge/blob/1.20.x/LICENSE.txt
 
 public class SmeltLootModifier extends LootModifier {
     public static final Codec<SmeltLootModifier> CODEC = RecordCodecBuilder.create(inst -> codecStart(inst).apply(inst, SmeltLootModifier::new));
@@ -37,9 +36,8 @@ public class SmeltLootModifier extends LootModifier {
     @Override
     protected @NotNull ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
         return generatedLoot.stream().map(stack -> {
-            var smelted = context.getLevel().getRecipeManager()
-                .getRecipeFor(RecipeType.SMELTING, new SimpleContainer(stack), context.getLevel())
-                .map(SmeltingRecipe::getResultItem)
+            var smelted = context.getLevel().getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SimpleContainer(stack), context.getLevel())
+                .map(recipe -> recipe.getResultItem(context.getLevel().registryAccess()))
                 .filter(itemStack -> !itemStack.isEmpty())
                 .map(itemStack -> ItemHandlerHelper.copyStackWithSize(itemStack, stack.getCount() * itemStack.getCount()))
                 .orElse(stack);

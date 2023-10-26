@@ -23,12 +23,12 @@ public class IronwoodKnifeItem extends CompatKnifeItem {
     return null;
   }
 
-  @Override
+  /*@Override
   public void fillItemCategory(@NotNull CreativeModeTab tab, @NotNull NonNullList<ItemStack> list) {
     if (this.allowedIn(tab)) {
       ItemStack stack = new ItemStack(this);
       stack.enchant(ModEnchantments.BACKSTABBING.get(), 1);
       list.add(stack);
     }
-  }
+  }*/
 }

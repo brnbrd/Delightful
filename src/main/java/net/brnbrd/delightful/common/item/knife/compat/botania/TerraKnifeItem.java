@@ -30,7 +30,7 @@ public class TerraKnifeItem extends ManasteelKnifeItem {
 	public void onLeftClick(PlayerInteractEvent.LeftClickEmpty e) {
 		if (
 			isEnabled() &&
-			e.getEntity().getLevel().isClientSide() &&
+			e.getEntity().level().isClientSide() &&
 			!e.getItemStack().isEmpty() &&
 			e.getItemStack().is(this)
 		) {
@@ -42,7 +42,7 @@ public class TerraKnifeItem extends ManasteelKnifeItem {
 		if (
 			isEnabled() &&
 			stack.is(this) &&
-			!p.getLevel().isClientSide() &&
+			!p.level().isClientSide() &&
 			!p.isSpectator()
 		) {
 			BotaniaCompat.trySpawnBurst(p, stack, this.getManaPerDamage(), scale, this instanceof AlfKnifeItem);

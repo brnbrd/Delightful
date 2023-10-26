@@ -33,7 +33,8 @@
           "recipes": [
             "delightful:food/field_salad"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

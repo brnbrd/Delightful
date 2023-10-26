@@ -21,7 +21,7 @@
         }
       ],
       "recipe": {
-        "type": "minecraft:smithing",
+        "type": "minecraft:smithing_transform",
         "addition": {
           "tag": "forge:ingots/adamantite"
         },
@@ -30,7 +30,8 @@
         },
         "result": {
           "item": "delightful:adamantite_knife"
-        }
+        },
+        "template": []
       }
     }
   ]

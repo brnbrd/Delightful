@@ -33,7 +33,8 @@
           "recipes": [
             "delightful:storage/unpack_salmonberry_storage_block"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

@@ -1,4 +1,4 @@
-// 1.19.2	2023-09-26T15:42:15.1021201	Item Models: delightful
+// 1.20.1	2023-10-25T11:51:33.3914653	Item Models: delightful
 f9af973b19b45f34017d8db4e6e54de90668031e assets/delightful/models/item/acorn.json
 9b4daf24b0d8e447735c5836d7ab76a3df1b3c1d assets/delightful/models/item/acorn_sack.json
 0837c7c506f6890c2f60b912c7e72aadd5f624e4 assets/delightful/models/item/adamantite_knife.json
@@ -48,7 +48,7 @@ f99627fcdfc60b0bdafe5db70ec3245f5b472a96 assets/delightful/models/item/enderite_
 5ee06700582f1a011e84784bec29d11a649210d5 assets/delightful/models/item/ender_nectar.json
 6c076f6f8cf73e04e5f2b3f844d0d9b12d9d418d assets/delightful/models/item/experience_knife.json
 205eb524f185fe9ba73267e1dc89e4d2ad4ee733 assets/delightful/models/item/field_salad.json
-f430d9029e80af04785e41993085afb351c18be3 assets/delightful/models/item/fiery_knife.json
+059e4f0425d79750e561f25b0a9f655f6120d7b1 assets/delightful/models/item/fiery_knife.json
 3cf0a8c06e6ec2cd6841a8d4dce1e38babacfa40 assets/delightful/models/item/forgotten_knife.json
 d0a8f38624984112f38755ccf0b85efde7f364d3 assets/delightful/models/item/froststeel_knife.json
 44a1171f79c935895aeaf83fb9ec52a8da4c0f7d assets/delightful/models/item/gilded_netherite_knife.json

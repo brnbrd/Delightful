@@ -33,7 +33,8 @@
           "recipes": [
             "delightful:food/smore"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

@@ -33,7 +33,8 @@
           "recipes": [
             "farmersdelight:chocolate_pie"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {
@@ -78,7 +79,8 @@
           "recipes": [
             "farmersdelight:chocolate_pie"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

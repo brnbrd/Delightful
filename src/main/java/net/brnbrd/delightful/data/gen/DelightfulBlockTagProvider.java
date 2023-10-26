@@ -6,23 +6,25 @@ import net.brnbrd.delightful.common.block.DelightfulBlocks;
 import net.brnbrd.delightful.compat.BYGCompat;
 import net.brnbrd.delightful.compat.Mods;
 import net.brnbrd.delightful.data.tags.DelightfulBlockTags;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.tags.BlockTagsProvider;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import vectorwing.farmersdelight.common.tag.ModTags;
+import java.util.concurrent.CompletableFuture;
 
 public class DelightfulBlockTagProvider extends BlockTagsProvider {
 
-	protected DelightfulBlockTagProvider(DataGenerator pGenerator, @Nullable ExistingFileHelper existingFileHelper) {
-		super(pGenerator, Delightful.MODID, existingFileHelper);
+	protected DelightfulBlockTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
+		super(output, lookupProvider, Delightful.MODID, existingFileHelper);
 	}
 
 	@Override
-	protected void addTags() {
+	protected void addTags(HolderLookup.@NotNull Provider provider) {
 		// Farmer's Delight
 		this.tag(ModTags.MINEABLE_WITH_KNIFE)
 			.add(DelightfulBlocks.MINI_MELON.get())
@@ -76,11 +78,11 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 			.add(DelightfulBlocks.SLICED_PUMPKIN.get())
 			.add(DelightfulBlocks.CANTALOUPE.get())
 			.add(DelightfulBlocks.SLICED_CANTALOUPE.get())
-			.addOptional(Util.rl("fruittrees", "citrus_cabinet"))
-			.addOptional(Util.rl("fruittrees", "cherry_cabinet"))
 			.add(DelightfulBlocks.GREEN_APPLE_CRATE.get())
 			.add(DelightfulBlocks.JOSHUA_FRUIT_CRATE.get())
-			.add(DelightfulBlocks.BAOBAB_FRUIT_CRATE.get());
+			.add(DelightfulBlocks.BAOBAB_FRUIT_CRATE.get())
+			.addOptional(Util.rl("fruittrees", "citrus_cabinet"))
+			.addOptional(Util.rl("fruittrees", "cherry_cabinet"));
 		this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
 			.add(DelightfulBlocks.MATCHA_ICE_CREAM_BLOCK.get())
 			.add(DelightfulBlocks.SALMONBERRY_ICE_CREAM_BLOCK.get());
@@ -96,13 +98,5 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 		// Serene Seasons
 		this.tag(DelightfulBlockTags.SUMMER_CROPS)
 			.add(DelightfulBlocks.SALMONBERRY_BUSH.get());
-	}
-
-	/**
-	 * Gets a name for this provider, to use in logging.
-	 */
-	@Override
-	public @NotNull String getName() {
-		return Delightful.MODID;
 	}
 }

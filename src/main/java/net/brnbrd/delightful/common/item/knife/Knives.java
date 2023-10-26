@@ -42,7 +42,6 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.registries.RegistryObject;
-import vectorwing.farmersdelight.FarmersDelight;
 
 public class Knives extends DelightfulItems {
 
@@ -126,32 +125,32 @@ public class Knives extends DelightfulItems {
 	));
 
 	private static Item.Properties props() {
-		return (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB);
+		return (new Item.Properties());
 	}
 
-	// Registers a knife to Farmer's Delight tab, requiring modid
+	// Registers a knife, requiring modid
 	public static RegistryObject<Item> registerCompatKnife(String name, String modid, TagKey<Item> tag) {
-		return registerItem(name + "_knife", () -> new CompatKnifeItem(modid, tag, DelightfulTiers.get(name), (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
+		return registerItem(name + "_knife", () -> new CompatKnifeItem(modid, tag, DelightfulTiers.get(name), (new Item.Properties())));
 	}
 
-	// Registers a knife to Farmer's Delight tab, requiring non-empty ingot tag
+	// Registers a knife, requiring non-empty ingot tag and modid
 	public static RegistryObject<Item> registerCompatIngotKnife(String name, String modid) {
-		return registerItem(name + "_knife", () -> new CompatKnifeItem(modid, ingot(name), DelightfulTiers.get(name), (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
+		return registerItem(name + "_knife", () -> new CompatKnifeItem(modid, ingot(name), DelightfulTiers.get(name), (new Item.Properties())));
 	}
 
-	// Registers a knife to Farmer's Delight tab, requiring non-empty ingot tag
+	// Registers a knife, requiring non-empty ingot tag
 	public static RegistryObject<Item> registerIngotKnife(String name) {
-		return registerItem(name + "_knife", () -> new DelightfulKnifeItem(ingot(name), DelightfulTiers.get(name), (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
+		return registerItem(name + "_knife", () -> new DelightfulKnifeItem(ingot(name), DelightfulTiers.get(name), (new Item.Properties())));
 	}
 
-	// Registers a knife to Farmer's Delight tab, requiring non-empty gem tag
+	// Registers a knife, requiring non-empty gem tag
 	public static RegistryObject<Item> registerGemKnife(String name) {
-		return registerItem(name + "_knife", () -> new DelightfulKnifeItem(gem(name), DelightfulTiers.get(name), (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
+		return registerItem(name + "_knife", () -> new DelightfulKnifeItem(gem(name), DelightfulTiers.get(name), (new Item.Properties())));
 	}
 
-	// Registers a knife to Farmer's Delight tab
+	// Registers a knife
 	public static RegistryObject<Item> registerKnife(String name, TagKey<Item> tag) {
-		return registerItem(name + "_knife", () -> new DelightfulKnifeItem(tag, DelightfulTiers.get(name), (new Item.Properties()).tab(FarmersDelight.CREATIVE_TAB)));
+		return registerItem(name + "_knife", () -> new DelightfulKnifeItem(tag, DelightfulTiers.get(name), (new Item.Properties())));
 	}
 
 	public static void create() {}

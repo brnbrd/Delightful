@@ -1,10 +1,25 @@
-plugins {
-    id 'eclipse'
-    id 'maven-publish'
-    id 'net.minecraftforge.gradle' version '5.1.+'
-    id 'org.parchmentmc.librarian.forgegradle' version '1.+'
-    id 'org.spongepowered.mixin' version '0.7.+'
+buildscript {
+    repositories {
+        maven { url = 'https://files.minecraftforge.net' }
+        maven { url = 'https://maven.parchmentmc.org' }
+        maven {
+            url "https://repo.spongepowered.org/repository/maven-public/"
+        }
+        mavenCentral()
+    }
+    dependencies {
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
+        classpath 'org.spongepowered:mixingradle:0.7.+'
+        classpath 'org.parchmentmc:librarian:1.+'
+    }
 }
+
+apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'org.parchmentmc.librarian.forgegradle'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'maven-publish'
+apply plugin: "org.spongepowered.mixin"
 
 version = "${mc_version}-${mod_version}"
 group = 'net.brnbrd.delightful'
@@ -12,12 +27,11 @@ archivesBaseName = 'Delightful'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
-println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 minecraft {
     mappings channel: 'parchment', version: "${parchment_version}-${mc_version}"
-    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg') // Currently, this location cannot be changed from the default.
+    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
     runs {
-        client {
+        configureEach {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
@@ -27,27 +41,15 @@ minecraft {
                 }
             }
         }
+        client {
+
+        }
         server {
-            workingDirectory project.file('run')
-            property 'forge.logging.markers', 'REGISTRIES'
-            property 'forge.logging.console.level', 'debug'
-            mods {
-                delightful {
-                    source sourceSets.main
-                }
-            }
+            args '--nogui'
         }
         data {
             workingDirectory project.file('run')
-            property 'forge.logging.markers', 'REGISTRIES'
-            property 'forge.logging.console.level', 'debug'
-            // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
             args '--mod', 'delightful', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/'), '--existing-mod', 'farmersdelight'
-            mods {
-                delightful {
-                    source sourceSets.main
-                }
-            }
         }
     }
 }
@@ -56,10 +58,7 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
     maven {
-        url = "https://repo.spongepowered.org/repository/maven-public/"
-    }
-    maven {
-        url = "https://www.cursemaven.com"
+        url "https://cursemaven.com"
         content {
             includeGroup "curse.maven"
         }
@@ -70,34 +69,22 @@ repositories {
     maven {
         url = "https://maven.tterrag.com/"
     }
+    maven { url "https://maven.ryanliptak.com/" }
 }
 
 dependencies {
     minecraft "net.minecraftforge:forge:${mc_version}-${forge_version}"
+
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+
+    implementation fg.deobf("curse.maven:farmers-delight-398521:${farmers_delight_version}")
     compileOnly fg.deobf("mezz.jei:jei-${mc_version}-common-api:${jei_version}")
     compileOnly fg.deobf("mezz.jei:jei-${mc_version}-forge-api:${jei_version}")
     runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}-forge:${jei_version}")
-    runtimeOnly fg.deobf("curse.maven:appleskin-248787:${appleskin_version}")
-    runtimeOnly fg.deobf("curse.maven:configured-457570:${configured_version}")
+    runtimeOnly fg.deobf("squeek.appleskin:appleskin-forge:${appleskin_version}")
     implementation fg.deobf("curse.maven:jade-324717:${jade_version}")
-    implementation fg.deobf("curse.maven:farmers-d-398521:${farmers_delight_version}")
-    implementation fg.deobf("curse.maven:ecologics-570463:${ecologics_version}")
-    implementation fg.deobf("curse.maven:farmers-respite-551453:${farmers_respite_version}")
-    implementation fg.deobf("curse.maven:geckolib-388172:${geckolib_version}")
-    implementation fg.deobf("curse.maven:patchouli-306770:${patchouli_version}")
-    implementation fg.deobf("curse.maven:curios-309927:${curios_version}")
-    implementation fg.deobf("curse.maven:ars-nouveau-401955:${ars_nouveau_version}")
-    implementation fg.deobf("curse.maven:terrablender-563928:${terrablender_version}")
-    implementation fg.deobf("curse.maven:corgilib-693313:${corgilib_version}")
-    implementation fg.deobf("curse.maven:oh-the-biomes-youll-go-247560:${byg_version}")
-    implementation fg.deobf("curse.maven:spirit-495509:${spirit_version}")
-    implementation fg.deobf("curse.maven:botania-225643:${botania_version}")
-    compileOnly fg.deobf("curse.maven:roots-classic-295780:${roots_version}")
-    implementation fg.deobf("curse.maven:blueprint-382216:${blueprint_version}")
-    implementation fg.deobf("curse.maven:neapolitan-382016:${neapolitan_version}")
-    implementation fg.deobf("curse.maven:respiteful-836471:${respiteful_version}")
-    implementation fg.deobf("curse.maven:the-undergarden-379849:${undergarden_version}")
-    compileOnly fg.deobf("com.tterrag.registrate:Registrate:${registrate_version}")
+    compileOnly fg.deobf("curse.maven:spirit-495509:${spirit_version}")
+    compileOnly fg.deobf("vazkii.botania:Botania:${botania_version}")
 }
 
 jar {
@@ -128,7 +115,6 @@ publishing {
         }
     }
 }
-
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation

@@ -31,7 +31,8 @@
           "recipes": [
             "delightful:knives/smithing/gilded_netherite_knife"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

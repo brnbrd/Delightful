@@ -26,6 +26,7 @@
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
+        "category": "equipment",
         "key": {
           "m": {
             "tag": "forge:ingots/mythril"
@@ -40,7 +41,8 @@
         ],
         "result": {
           "item": "delightful:mythril_knife"
-        }
+        },
+        "show_notification": true
       }
     }
   ]

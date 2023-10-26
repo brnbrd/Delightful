@@ -33,7 +33,8 @@
           "recipes": [
             "delightful:campfire/cactus_steak"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

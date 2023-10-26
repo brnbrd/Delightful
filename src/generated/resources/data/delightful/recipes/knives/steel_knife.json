@@ -22,6 +22,7 @@
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
+        "category": "equipment",
         "key": {
           "m": {
             "tag": "forge:ingots/steel"
@@ -36,7 +37,8 @@
         ],
         "result": {
           "item": "delightful:steel_knife"
-        }
+        },
+        "show_notification": true
       }
     }
   ]

@@ -33,7 +33,8 @@
           "recipes": [
             "delightful:food/matcha_latte"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

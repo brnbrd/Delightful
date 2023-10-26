@@ -33,12 +33,20 @@
           "recipes": [
             "delightful:food/berry_matcha_latte"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {
           "type": "forge:and",
           "values": [
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:mod_loaded",
+                "modid": "farmersrespite"
+              }
+            },
             {
               "type": "delightful:enabled",
               "value": "berry_matcha_latte"
@@ -50,13 +58,6 @@
             {
               "type": "delightful:enabled",
               "value": "matcha"
-            },
-            {
-              "type": "forge:not",
-              "value": {
-                "type": "forge:mod_loaded",
-                "modid": "farmersrespite"
-              }
             }
           ]
         }

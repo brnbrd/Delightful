@@ -10,6 +10,7 @@
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
+        "category": "misc",
         "key": {
           "b": {
             "tag": "forge:gems/quartz"
@@ -28,7 +29,8 @@
         ],
         "result": {
           "item": "delightful:quartz_cabinet"
-        }
+        },
+        "show_notification": true
       }
     }
   ]

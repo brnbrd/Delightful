@@ -1,6 +1,5 @@
 package net.brnbrd.delightful.common.item.knife;
 
-import com.google.common.collect.ImmutableList;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.item.IConfigured;
 import net.minecraft.ChatFormatting;
@@ -15,10 +14,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.tags.ITagManager;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import vectorwing.farmersdelight.FarmersDelight;
 import vectorwing.farmersdelight.common.item.KnifeItem;
 import java.util.List;
-import java.util.Objects;
 import java.util.function.Supplier;
 
 public class DelightfulKnifeItem extends KnifeItem implements IConfigured {
@@ -31,12 +28,9 @@ public class DelightfulKnifeItem extends KnifeItem implements IConfigured {
 
     @Override
     public boolean isValidRepairItem(@NotNull ItemStack pToRepair, @NotNull ItemStack pRepair) {
-        return super.isValidRepairItem(pToRepair, pRepair);
+        return isEnabled() && super.isValidRepairItem(pToRepair, pRepair);
     }
 
-    /**
-     * allows items to add custom lines of information to the mouseover description
-     */
     @Override
     public void appendHoverText(@NotNull ItemStack pStack, @Nullable Level pLevel, @NotNull List<Component> tool, @NotNull TooltipFlag pIsAdvanced) {
         super.appendHoverText(pStack, pLevel, tool, pIsAdvanced);
@@ -60,7 +54,8 @@ public class DelightfulKnifeItem extends KnifeItem implements IConfigured {
         return (
             tag != null &&
             tags != null &&
-            tags.isKnownTagName(tag)
+            tags.isKnownTagName(tag) &&
+            !tags.getTag(tag).isEmpty()
         );
     }
 
@@ -91,13 +86,5 @@ public class DelightfulKnifeItem extends KnifeItem implements IConfigured {
 
     public List<Component> getTools() {
         return List.of();
-    }
-
-    @Override
-    protected boolean allowedIn(@NotNull CreativeModeTab cat) {
-        return ImmutableList.of(
-            CreativeModeTab.TAB_SEARCH,
-            FarmersDelight.CREATIVE_TAB
-        ).contains(cat) && this.config();
     }
 }

@@ -10,6 +10,7 @@
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
+        "category": "misc",
         "key": {
           "o": {
             "item": "delightful:animal_oil_bottle"
@@ -25,7 +26,8 @@
         "result": {
           "count": 8,
           "item": "minecraft:torch"
-        }
+        },
+        "show_notification": true
       }
     }
   ]

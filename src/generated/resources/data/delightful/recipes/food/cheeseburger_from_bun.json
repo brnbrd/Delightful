@@ -36,6 +36,7 @@
       ],
       "recipe": {
         "type": "minecraft:crafting_shapeless",
+        "category": "misc",
         "ingredients": [
           {
             "tag": "some_assembly_required:burger_bun"

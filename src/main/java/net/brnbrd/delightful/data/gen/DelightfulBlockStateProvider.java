@@ -3,10 +3,10 @@ package net.brnbrd.delightful.data.gen;
 import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.block.*;
-import net.minecraft.client.renderer.block.model.ItemTransforms;
 import net.minecraft.core.Direction;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
@@ -21,8 +21,8 @@ import vectorwing.farmersdelight.common.block.PieBlock;
 import java.util.Objects;
 
 public class DelightfulBlockStateProvider extends BlockStateProvider {
-    public DelightfulBlockStateProvider(DataGenerator gen, ExistingFileHelper exFileHelper) {
-        super(gen, Delightful.MODID, exFileHelper);
+    public DelightfulBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
+        super(output, Delightful.MODID, exFileHelper);
     }
 
     @Override
@@ -122,23 +122,23 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
                 .face(Direction.UP).texture("#top").end()
                 .face(Direction.DOWN).texture("#top").end().end()
             .transforms()
-            .transform(ItemTransforms.TransformType.THIRD_PERSON_RIGHT_HAND)
+            .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND)
             .rotation(75f, 45f, 0f).translation(0f, 2.5f, 0f)
             .scale(0.375f, 0.375f, 0.375f).end()
-            .transform(ItemTransforms.TransformType.THIRD_PERSON_LEFT_HAND)
+            .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND)
             .rotation(75f, 45f, 0f).translation(0f, 2.5f, 0f)
             .scale(0.375f, 0.375f, 0.375f).end()
-            .transform(ItemTransforms.TransformType.FIRST_PERSON_RIGHT_HAND)
+            .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND)
             .rotation(0f, 45f, 0f).scale(0.4f, 0.4f, 0.4f).end()
-            .transform(ItemTransforms.TransformType.FIRST_PERSON_LEFT_HAND)
+            .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND)
             .rotation(0f, 225f, 0f).scale(0.4f, 0.4f, 0.4f).end()
-            .transform(ItemTransforms.TransformType.GROUND)
+            .transform(ItemDisplayContext.GROUND)
             .translation(0f, 3f, 0f).scale(0.25f, 0.25f, 0.25f).end()
-            .transform(ItemTransforms.TransformType.GUI)
+            .transform(ItemDisplayContext.GUI)
             .rotation(30f, 225f, 0f).scale(0.625f, 0.625f, 0.625f).end()
-            .transform(ItemTransforms.TransformType.HEAD)
+            .transform(ItemDisplayContext.HEAD)
             .translation(0f, 14.25f, 0f).end()
-            .transform(ItemTransforms.TransformType.FIXED)
+            .transform(ItemDisplayContext.FIXED)
             .scale(0.5f, 0.5f, 0.5f).end().end()
         );
     }
@@ -185,23 +185,23 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
                         .face(Direction.UP).uvs(3f, 6f, 13f, 16f).texture("#inside").end()
                         .face(Direction.DOWN).texture("#top").end().end()
                     .transforms()
-                        .transform(ItemTransforms.TransformType.THIRD_PERSON_RIGHT_HAND)
+                        .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND)
                             .rotation(75f, 45f, 0f).translation(0f, 2.5f, 0f)
                             .scale(0.375f, 0.375f, 0.375f).end()
-                        .transform(ItemTransforms.TransformType.THIRD_PERSON_LEFT_HAND)
+                        .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND)
                             .rotation(75f, 45f, 0f).translation(0f, 2.5f, 0f)
                             .scale(0.375f, 0.375f, 0.375f).end()
-                        .transform(ItemTransforms.TransformType.FIRST_PERSON_RIGHT_HAND)
+                        .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND)
                             .rotation(0f, 45f, 0f).scale(0.4f, 0.4f, 0.4f).end()
-                        .transform(ItemTransforms.TransformType.FIRST_PERSON_LEFT_HAND)
+                        .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND)
                             .rotation(0f, 225f, 0f).scale(0.4f, 0.4f, 0.4f).end()
-                        .transform(ItemTransforms.TransformType.GROUND)
+                        .transform(ItemDisplayContext.GROUND)
                             .translation(0f, 3f, 0f).scale(0.25f, 0.25f, 0.25f).end()
-                        .transform(ItemTransforms.TransformType.GUI)
+                        .transform(ItemDisplayContext.GUI)
                             .rotation(30f, 225f, 0f).scale(0.625f, 0.625f, 0.625f).end()
-                        .transform(ItemTransforms.TransformType.HEAD)
+                        .transform(ItemDisplayContext.HEAD)
                             .translation(0f, 14.25f, 0f).end()
-                        .transform(ItemTransforms.TransformType.FIXED)
+                        .transform(ItemDisplayContext.FIXED)
                             .scale(0.5f, 0.5f, 0.5f).end().end()
                 ).build();
             }

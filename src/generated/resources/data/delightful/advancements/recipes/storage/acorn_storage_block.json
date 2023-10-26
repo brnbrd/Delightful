@@ -33,7 +33,8 @@
           "recipes": [
             "delightful:storage/acorn_storage_block"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

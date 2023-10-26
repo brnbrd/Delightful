@@ -26,6 +26,7 @@
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
+        "category": "equipment",
         "key": {
           "m": {
             "tag": "forge:gems/large_amethyst"
@@ -40,7 +41,8 @@
         ],
         "result": {
           "item": "delightful:large_amethyst_knife"
-        }
+        },
+        "show_notification": true
       }
     }
   ]

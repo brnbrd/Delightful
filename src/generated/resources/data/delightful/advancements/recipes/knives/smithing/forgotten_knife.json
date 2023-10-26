@@ -31,7 +31,8 @@
           "recipes": [
             "delightful:knives/smithing/forgotten_knife"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

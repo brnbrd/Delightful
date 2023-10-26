@@ -23,7 +23,7 @@ public class KnightmetalKnifeItem extends CompatKnifeItem {
 
 	private void onHurt(LivingHurtEvent e) {
 		LivingEntity target = e.getEntity();
-		if (!target.getLevel().isClientSide() && e.getSource().getDirectEntity() instanceof LivingEntity attacker) {
+		if (!target.level().isClientSide() && e.getSource().getDirectEntity() instanceof LivingEntity attacker) {
 			ItemStack weapon = attacker.getMainHandItem();
 			if (!weapon.isEmpty() && target.getArmorValue() > 0 && weapon.is(Knives.KNIGHTMETAL.get())) {
 				if (target.getArmorCoverPercentage() > 0) {
@@ -32,7 +32,7 @@ public class KnightmetalKnifeItem extends CompatKnifeItem {
 				} else {
 					e.setAmount(e.getAmount() + 2);
 				}
-				((ServerLevel) target.getLevel()).getChunkSource().broadcastAndSend(target, new ClientboundAnimatePacket(target, 5));
+				((ServerLevel) target.level()).getChunkSource().broadcastAndSend(target, new ClientboundAnimatePacket(target, 5));
 			}
 		}
 	}

@@ -31,7 +31,8 @@
           "recipes": [
             "delightful:food/cooking/jelly_bottle"
           ]
-        }
+        },
+        "sends_telemetry_event": true
       },
       "conditions": [
         {

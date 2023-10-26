@@ -33,13 +33,11 @@ public class CompatKnifeItem extends DelightfulKnifeItem {
         return super.isEnabled() && this.isLoaded();
     }
 
-    /**
-     * allows items to add custom lines of information to the mouseover description
-     */
     @Override
     public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> comps, @NotNull TooltipFlag pIsAdvanced) {
         if (!this.isLoaded()) {
             comps.add(Component.translatable("tooltip.requires_modid"));
+            comps.add(Component.literal(this.modid).withStyle(ChatFormatting.UNDERLINE));
             return;
         }
         super.appendHoverText(stack, level, comps, pIsAdvanced);
@@ -53,10 +51,5 @@ public class CompatKnifeItem extends DelightfulKnifeItem {
         return (this.isEnabled() && this.formatting.length > 0) ?
             super.getName(stack).copy().withStyle(this.formatting) :
             super.getName(stack);
-    }
-
-    @Override
-    protected boolean allowedIn(@NotNull CreativeModeTab ct) {
-        return super.allowedIn(ct) && this.isEnabled();
     }
 }

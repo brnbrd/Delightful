@@ -22,6 +22,7 @@
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
+        "category": "equipment",
         "key": {
           "m": {
             "tag": "forge:gems/black_opal"
@@ -36,7 +37,8 @@
         ],
         "result": {
           "item": "delightful:black_opal_knife"
-        }
+        },
+        "show_notification": true
       }
     }
   ]

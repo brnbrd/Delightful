@@ -31,7 +31,8 @@
           "recipes": [
             "delightful:food/honey_glazed_walnut"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

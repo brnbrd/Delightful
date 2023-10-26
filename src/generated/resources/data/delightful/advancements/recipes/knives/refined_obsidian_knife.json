@@ -31,7 +31,8 @@
           "recipes": [
             "delightful:knives/refined_obsidian_knife"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {

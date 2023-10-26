@@ -5,7 +5,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.ContainerData;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
@@ -16,7 +15,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
-public class FurnaceFuelItem extends Item {
+public class FurnaceFuelItem extends DItem {
 
   private final int fuelTime;
 
@@ -57,7 +56,9 @@ public class FurnaceFuelItem extends Item {
   }
 
   private static void shrinkAdd(Player p, ItemStack i) {
-    if (i.hasCraftingRemainingItem()) p.addItem(i.getCraftingRemainingItem());
+    if (i.hasCraftingRemainingItem()) {
+      p.addItem(i.getCraftingRemainingItem());
+    }
     i.shrink(1);
   }
 }

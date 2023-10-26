@@ -31,7 +31,8 @@
           "recipes": [
             "delightful:food/cooking/nut_butter_bottle"
           ]
-        }
+        },
+        "sends_telemetry_event": true
       },
       "conditions": [
         {

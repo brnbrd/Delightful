@@ -1,15 +1,19 @@
 package net.brnbrd.delightful.common.events;
 
 import net.brnbrd.delightful.common.crafting.EnabledCondition;
+import net.brnbrd.delightful.common.item.DItem;
 import net.brnbrd.delightful.common.item.DelightfulItems;
-import net.brnbrd.delightful.common.world.DelightfulWildCropGeneration;
+import net.brnbrd.delightful.common.item.IConfigured;
 import net.brnbrd.delightful.network.DPacketHandler;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.common.crafting.CraftingHelper;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegisterEvent;
+import net.minecraftforge.registries.RegistryObject;
+import vectorwing.farmersdelight.common.registry.ModCreativeTabs;
 
 public class ModEvents {
 
@@ -17,7 +21,6 @@ public class ModEvents {
     void setup(FMLCommonSetupEvent e) {
         DPacketHandler.init(); // Botania
         e.enqueueWork(() -> {
-            DelightfulWildCropGeneration.registerWildCropGeneration();
             // Flammables
 
             // Compostables
@@ -60,6 +63,21 @@ public class ModEvents {
     void registerSerializers(RegisterEvent e) {
         if (e.getRegistryKey() == ForgeRegistries.RECIPE_SERIALIZERS.getRegistryKey()) {
             CraftingHelper.register(EnabledCondition.Serializer.INSTANCE);
+        }
+    }
+
+    @SubscribeEvent
+    public void buildContents(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == ModCreativeTabs.TAB_FARMERS_DELIGHT.getKey()) {
+            DelightfulItems.ITEMS.getEntries().stream().filter(RegistryObject::isPresent).forEach((item) -> {
+                if (item.get() instanceof IConfigured conf) {
+                    if (conf.isEnabled()) {
+                        event.accept(item);
+                    }
+                } else {
+                    event.accept(item);
+                }
+            });
         }
     }
 }

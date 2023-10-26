@@ -21,7 +21,7 @@
         }
       ],
       "recipe": {
-        "type": "minecraft:smithing",
+        "type": "minecraft:smithing_transform",
         "addition": {
           "tag": "forge:ingots/netherite"
         },
@@ -30,7 +30,8 @@
         },
         "result": {
           "item": "delightful:netherite_opal_knife"
-        }
+        },
+        "template": []
       }
     }
   ]

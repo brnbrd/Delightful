@@ -33,7 +33,8 @@
           "recipes": [
             "delightful:food/salmonberry_pie_from_slices"
           ]
-        }
+        },
+        "sends_telemetry_event": false
       },
       "conditions": [
         {
