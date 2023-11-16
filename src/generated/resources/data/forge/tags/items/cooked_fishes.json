@@ -3,6 +3,10 @@
     {
       "id": "biomemakeover:cooked_glowfish",
       "required": false
+    },
+    {
+      "id": "deep_aether:cooked_aerglow_fish",
+      "required": false
     }
   ]
 }

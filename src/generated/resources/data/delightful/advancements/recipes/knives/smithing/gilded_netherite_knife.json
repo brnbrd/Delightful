@@ -48,6 +48,10 @@
                 "type": "forge:tag_empty",
                 "tag": "additionaladditions:gold_ring"
               }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "additionaladditions"
             }
           ]
         }

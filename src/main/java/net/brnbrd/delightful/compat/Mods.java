@@ -11,6 +11,7 @@ import java.util.Optional;
 import java.util.function.Supplier;
 
 public class Mods {
+	public static final String AA = "additionaladditions";
 	public static final String AE = "aether";
 	public static final String AN = "ars_nouveau";
 	public static final String BOP = "biomesoplenty";
@@ -41,6 +42,9 @@ public class Mods {
 	}
 
 	public static boolean loaded(@NotNull String... modids) {
+		if (modids.length == 1) {
+			return loaded(modids[0]);
+		}
 		for (String mod : modids) {
 			if (!loaded(mod)) {
 				return false;
@@ -50,6 +54,9 @@ public class Mods {
 	}
 
 	public static boolean orLoaded(@NotNull String... modids) {
+		if (modids.length == 1) {
+			return loaded(modids[0]);
+		}
 		for (String mod : modids) {
 			if (loaded(mod)) {
 				return true;

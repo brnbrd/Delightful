@@ -4,7 +4,7 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_froststeel": {
+          "has_ingots/froststeel": {
             "conditions": {
               "items": [
                 {
@@ -23,7 +23,7 @@
         },
         "requirements": [
           [
-            "has_froststeel",
+            "has_ingots/froststeel",
             "has_the_recipe"
           ]
         ],
@@ -43,15 +43,15 @@
               "value": "froststeel_knife"
             },
             {
-              "type": "forge:mod_loaded",
-              "modid": "undergarden"
-            },
-            {
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
                 "tag": "forge:ingots/froststeel"
               }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "undergarden"
             }
           ]
         }

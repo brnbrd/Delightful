@@ -48,6 +48,10 @@
                 "type": "forge:tag_empty",
                 "tag": "forge:ingots/alfsteel"
               }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "mythicbotany"
             }
           ]
         }

@@ -7,6 +7,14 @@
     {
       "id": "wildberries:blueberries",
       "required": false
+    },
+    {
+      "id": "aether:blue_berry",
+      "required": false
+    },
+    {
+      "id": "aether:enchanted_berry",
+      "required": false
     }
   ]
 }

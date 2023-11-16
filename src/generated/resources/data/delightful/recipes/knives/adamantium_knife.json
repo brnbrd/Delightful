@@ -11,15 +11,15 @@
               "value": "adamantium_knife"
             },
             {
-              "type": "forge:mod_loaded",
-              "modid": "simpleores"
-            },
-            {
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
                 "tag": "forge:ingots/adamantium"
               }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "simpleores"
             }
           ]
         }

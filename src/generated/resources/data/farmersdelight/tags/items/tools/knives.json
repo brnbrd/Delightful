@@ -24,8 +24,6 @@
     "delightful:sinisite_knife",
     "delightful:allthemodium_knife",
     "delightful:enderite_knife",
-    "delightful:deorum_knife",
-    "delightful:reinforced_deorum_knife",
     "delightful:draco_arcanus_knife",
     "delightful:osmium_knife",
     "delightful:refined_glowstone_knife",
@@ -45,7 +43,6 @@
     "delightful:blazing_knife",
     "delightful:leaf_knife",
     "delightful:kiwano_knife",
-    "delightful:adamantite_knife",
     "delightful:crystalline_knife",
     "delightful:stellium_knife",
     "delightful:soul_steel_knife",
@@ -56,9 +53,17 @@
     "delightful:froststeel_knife",
     "delightful:utherium_knife",
     "delightful:forgotten_knife",
+    "delightful:gravitite_knife",
+    "delightful:holystone_knife",
+    "delightful:skyroot_knife",
+    "delightful:zanite_knife",
     "delightful:manasteel_knife",
     "delightful:elementium_knife",
     "delightful:terra_knife",
-    "delightful:alf_knife"
+    "delightful:alf_knife",
+    "delightful:veridium_knife",
+    "delightful:infused_veridium_knife",
+    "delightful:skyjade_knife",
+    "delightful:stratus_knife"
   ]
 }

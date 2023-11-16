@@ -2,6 +2,7 @@ package net.brnbrd.delightful.common.item.knife.compat.mythicbotany;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
+import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.knife.Knives;
 import net.brnbrd.delightful.common.item.knife.compat.botania.TerraKnifeItem;
@@ -14,9 +15,9 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.Lazy;
+import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.jetbrains.annotations.NotNull;
 import javax.annotation.Nonnull;
-import java.util.function.Supplier;
 
 public class AlfKnifeItem extends TerraKnifeItem {
 	private final Lazy<Multimap<Attribute, AttributeModifier>> defaultModifiers;
@@ -34,19 +35,22 @@ public class AlfKnifeItem extends TerraKnifeItem {
 
 	@Override
 	public Multimap<Attribute, AttributeModifier> getAttributeModifiers(@NotNull EquipmentSlot slot, @NotNull ItemStack stack) {
-		return (isEnabled() && slot == EquipmentSlot.MAINHAND) ?
+		return (enabled() && slot == EquipmentSlot.MAINHAND) ?
 			this.defaultModifiers.get() :
 			super.getDefaultAttributeModifiers(slot);
 	}
 
 	@Override
-	public String getModid() {
-		return "mythicbotany";
+	public String[] getModid() {
+		return new String[] { "mythicbotany" };
 	}
 
 	@Override
-	public Supplier<Ingredient> getSmithingBase() {
-		return () -> Ingredient.of(Knives.TERRA.get());
+	public ImmutablePair<Ingredient, Ingredient> getSmithing() {
+		return new ImmutablePair<>(
+			Ingredient.of(Util.it("mythicbotany", "alf_upgrade")),
+			Util.ing(Knives.TERRA)
+		);
 	}
 
 	@Override
@@ -56,6 +60,6 @@ public class AlfKnifeItem extends TerraKnifeItem {
 
 	@Override
 	public boolean isValidRepairItem(@Nonnull ItemStack toRepair, @Nonnull ItemStack repair) {
-		return isEnabled() && repair.is(DelightfulItems.ingot("alfsteel"));
+		return enabled() && repair.is(DelightfulItems.ingot("alfsteel"));
 	}
 }

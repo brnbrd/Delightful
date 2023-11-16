@@ -34,7 +34,7 @@ public class ManasteelKnifeItem extends CompatKnifeItem {
 
 	@Override
 	public <T extends LivingEntity> int damageItem(ItemStack stack, int amount, T entity, Consumer<T> onBroken) {
-		return isEnabled() ?
+		return enabled() ?
 			BotaniaCompat.damageItemIfPossible(stack, amount, entity, this.getManaPerDamage()) :
 			super.damageItem(stack, amount, entity, onBroken);
 	}
@@ -42,7 +42,7 @@ public class ManasteelKnifeItem extends CompatKnifeItem {
 	@Override
 	public void inventoryTick(@NotNull ItemStack stack, @NotNull Level world, @NotNull Entity entity, int slot, boolean selected) {
 		if (
-			isEnabled() &&
+			enabled() &&
 			!world.isClientSide() &&
 			entity instanceof Player player &&
 			stack.getDamageValue() > 0 &&

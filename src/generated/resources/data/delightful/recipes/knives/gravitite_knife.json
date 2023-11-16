@@ -1,0 +1,49 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "gravitite_knife"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "aether:enchanted_gravitite"
+              }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "aether"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "equipment",
+        "key": {
+          "m": {
+            "tag": "aether:enchanted_gravitite"
+          },
+          "s": {
+            "tag": "aether:skyroot_stick"
+          }
+        },
+        "pattern": [
+          "m",
+          "s"
+        ],
+        "result": {
+          "item": "delightful:gravitite_knife"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

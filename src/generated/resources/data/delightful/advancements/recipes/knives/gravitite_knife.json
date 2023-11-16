@@ -1,0 +1,61 @@
+{
+  "advancements": [
+    {
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "criteria": {
+          "has_enchanted_gravitite": {
+            "conditions": {
+              "items": [
+                {
+                  "tag": "aether:enchanted_gravitite"
+                }
+              ]
+            },
+            "trigger": "minecraft:inventory_changed"
+          },
+          "has_the_recipe": {
+            "conditions": {
+              "recipe": "delightful:knives/gravitite_knife"
+            },
+            "trigger": "minecraft:recipe_unlocked"
+          }
+        },
+        "requirements": [
+          [
+            "has_enchanted_gravitite",
+            "has_the_recipe"
+          ]
+        ],
+        "rewards": {
+          "recipes": [
+            "delightful:knives/gravitite_knife"
+          ]
+        },
+        "sends_telemetry_event": false
+      },
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "gravitite_knife"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "aether:enchanted_gravitite"
+              }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "aether"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

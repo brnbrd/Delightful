@@ -4,7 +4,7 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_osmium": {
+          "has_ingots/osmium": {
             "conditions": {
               "items": [
                 {
@@ -23,7 +23,7 @@
         },
         "requirements": [
           [
-            "has_osmium",
+            "has_ingots/osmium",
             "has_the_recipe"
           ]
         ],
@@ -43,15 +43,15 @@
               "value": "osmium_knife"
             },
             {
-              "type": "forge:mod_loaded",
-              "modid": "mekanismtools"
-            },
-            {
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
                 "tag": "forge:ingots/osmium"
               }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "mekanismtools"
             }
           ]
         }

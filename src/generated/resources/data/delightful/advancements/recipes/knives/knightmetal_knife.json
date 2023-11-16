@@ -4,7 +4,7 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_knightmetal": {
+          "has_ingots/knightmetal": {
             "conditions": {
               "items": [
                 {
@@ -23,7 +23,7 @@
         },
         "requirements": [
           [
-            "has_knightmetal",
+            "has_ingots/knightmetal",
             "has_the_recipe"
           ]
         ],
@@ -43,15 +43,15 @@
               "value": "knightmetal_knife"
             },
             {
-              "type": "forge:mod_loaded",
-              "modid": "twilightforest"
-            },
-            {
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
                 "tag": "forge:ingots/knightmetal"
               }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "twilightforest"
             }
           ]
         }

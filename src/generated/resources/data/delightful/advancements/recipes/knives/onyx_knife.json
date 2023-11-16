@@ -4,7 +4,7 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_onyx": {
+          "has_gems/onyx": {
             "conditions": {
               "items": [
                 {
@@ -23,7 +23,7 @@
         },
         "requirements": [
           [
-            "has_onyx",
+            "has_gems/onyx",
             "has_the_recipe"
           ]
         ],
@@ -43,15 +43,15 @@
               "value": "onyx_knife"
             },
             {
-              "type": "forge:mod_loaded",
-              "modid": "simpleores"
-            },
-            {
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
                 "tag": "forge:gems/onyx"
               }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "simpleores"
             }
           ]
         }

@@ -28,10 +28,10 @@ public class UtheriumKnifeItem extends CompatKnifeItem {
 
 	void onHurt(LivingHurtEvent e) {
 		if (
-			this.isEnabled() &&
+			this.enabled() &&
 			e.getSource().getEntity() instanceof Player player &&
 			player.getMainHandItem().is(this) &&
-			e.getEntity().getType().is(TagKey.create(ForgeRegistries.Keys.ENTITY_TYPES, Util.rl(this.getModid(), "rotspawn")))
+			e.getEntity().getType().is(TagKey.create(ForgeRegistries.Keys.ENTITY_TYPES, Util.rl(Mods.UG, "rotspawn")))
 		) {
 			e.setAmount(e.getAmount() * 1.5F);
 		}

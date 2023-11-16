@@ -1,0 +1,30 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "skyjade_knife"
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "deep_aether"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "aether:repairing",
+        "group": "altar_sword_repair",
+        "ingredient": {
+          "item": "delightful:skyjade_knife"
+        },
+        "repairTime": 750
+      }
+    }
+  ]
+}

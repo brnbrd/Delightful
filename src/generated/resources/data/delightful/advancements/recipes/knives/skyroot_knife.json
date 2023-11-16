@@ -1,0 +1,61 @@
+{
+  "advancements": [
+    {
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "criteria": {
+          "has_skyroot_tool_crafting": {
+            "conditions": {
+              "items": [
+                {
+                  "tag": "aether:skyroot_tool_crafting"
+                }
+              ]
+            },
+            "trigger": "minecraft:inventory_changed"
+          },
+          "has_the_recipe": {
+            "conditions": {
+              "recipe": "delightful:knives/skyroot_knife"
+            },
+            "trigger": "minecraft:recipe_unlocked"
+          }
+        },
+        "requirements": [
+          [
+            "has_skyroot_tool_crafting",
+            "has_the_recipe"
+          ]
+        ],
+        "rewards": {
+          "recipes": [
+            "delightful:knives/skyroot_knife"
+          ]
+        },
+        "sends_telemetry_event": false
+      },
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "skyroot_knife"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "aether:skyroot_tool_crafting"
+              }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "aether"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

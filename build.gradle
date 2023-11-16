@@ -83,8 +83,11 @@ dependencies {
     runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}-forge:${jei_version}")
     runtimeOnly fg.deobf("squeek.appleskin:appleskin-forge:${appleskin_version}")
     implementation fg.deobf("curse.maven:jade-324717:${jade_version}")
-    compileOnly fg.deobf("curse.maven:spirit-495509:${spirit_version}")
     compileOnly fg.deobf("vazkii.botania:Botania:${botania_version}")
+    compileOnly fg.deobf("curse.maven:spirit-495509:${spirit_version}")
+    compileOnly fg.deobf("curse.maven:aether-255308:${aether_version}")
+    compileOnly fg.deobf("curse.maven:aether-redux-867237:${aether_redux_version}")
+    compileOnly fg.deobf("curse.maven:deep-aether-852465:${deep_aether_version}")
 }
 
 jar {

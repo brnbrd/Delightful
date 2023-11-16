@@ -11,15 +11,15 @@
               "value": "stellium_knife"
             },
             {
-              "type": "forge:mod_loaded",
-              "modid": "phantasm"
-            },
-            {
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
                 "tag": "forge:ingots/stellium"
               }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "phantasm"
             }
           ]
         }

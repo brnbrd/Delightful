@@ -11,10 +11,6 @@
               "value": "raw_goat"
             },
             {
-              "type": "delightful:enabled",
-              "value": "raw_goat"
-            },
-            {
               "item": "windswept:goat_shanks",
               "type": "forge:item_exists"
             }

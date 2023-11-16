@@ -1,7 +1,5 @@
 package net.brnbrd.delightful.common.item;
 
-import net.brnbrd.delightful.Util;
-import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -17,16 +15,9 @@ public class DItem extends Item implements IConfigured {
 	}
 
 	@Override
-	public boolean isEnabled() {
-		return Util.enabled(this);
-	}
-
-	@Override
 	public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> comps, @NotNull TooltipFlag pIsAdvanced) {
-		if (!this.isEnabled()) {
-			comps.add(Component.translatable("tooltip.config_disabled").withStyle(ChatFormatting.UNDERLINE));
-			return;
+		if (this.enabledText(comps)) {
+			super.appendHoverText(stack, level, comps, pIsAdvanced);
 		}
-		super.appendHoverText(stack, level, comps, pIsAdvanced);
 	}
 }

@@ -4,7 +4,7 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_allthemodium": {
+          "has_plates/allthemodium": {
             "conditions": {
               "items": [
                 {
@@ -23,7 +23,7 @@
         },
         "requirements": [
           [
-            "has_allthemodium",
+            "has_plates/allthemodium",
             "has_the_recipe"
           ]
         ],
@@ -43,15 +43,15 @@
               "value": "allthemodium_knife"
             },
             {
-              "type": "forge:mod_loaded",
-              "modid": "allthemodium"
-            },
-            {
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
                 "tag": "forge:plates/allthemodium"
               }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "allthemodium"
             }
           ]
         }

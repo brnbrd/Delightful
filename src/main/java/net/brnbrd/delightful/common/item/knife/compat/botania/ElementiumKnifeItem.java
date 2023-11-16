@@ -28,7 +28,7 @@ public class ElementiumKnifeItem extends ManasteelKnifeItem {
 	@Override
 	public Multimap<Attribute, AttributeModifier> getDefaultAttributeModifiers(@NotNull EquipmentSlot slot) {
 		var ret = super.getDefaultAttributeModifiers(slot);
-		if (isEnabled() && slot == EquipmentSlot.MAINHAND) {
+		if (enabled() && slot == EquipmentSlot.MAINHAND) {
 			ret = HashMultimap.create(ret);
 			BotaniaCompat.handlePixies(ret, slot);
 		}

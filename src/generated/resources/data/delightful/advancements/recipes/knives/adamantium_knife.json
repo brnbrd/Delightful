@@ -4,7 +4,7 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_adamantium": {
+          "has_ingots/adamantium": {
             "conditions": {
               "items": [
                 {
@@ -23,7 +23,7 @@
         },
         "requirements": [
           [
-            "has_adamantium",
+            "has_ingots/adamantium",
             "has_the_recipe"
           ]
         ],
@@ -43,15 +43,15 @@
               "value": "adamantium_knife"
             },
             {
-              "type": "forge:mod_loaded",
-              "modid": "simpleores"
-            },
-            {
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
                 "tag": "forge:ingots/adamantium"
               }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "simpleores"
             }
           ]
         }

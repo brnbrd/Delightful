@@ -1,5 +1,19 @@
 # Changelog
 
+## 3.4.2 - The Aether Update
+
+### Updates
+- Added Gravitite Knife (for [The Aether](https://www.curseforge.com/minecraft/mc-mods/aether))
+- Added Holystone Knife (for [The Aether](https://www.curseforge.com/minecraft/mc-mods/aether))
+- Added Skyroot Knife (for [The Aether](https://www.curseforge.com/minecraft/mc-mods/aether))
+- Added Zanite Knife (for [The Aether](https://www.curseforge.com/minecraft/mc-mods/aether))
+- Added Skyjade Knife (for [Deep Aether](https://www.curseforge.com/minecraft/mc-mods/deep-aether))
+- Added Stratus Knife (for [Deep Aether](https://www.curseforge.com/minecraft/mc-mods/deep-aether))
+- Added Veridium Knife (for [The Aether: Redux](https://www.curseforge.com/minecraft/mc-mods/aether-redux))
+- Added Infused Veridium Knife (for [The Aether: Redux](https://www.curseforge.com/minecraft/mc-mods/aether-redux))
+- Added smithing templates to appropriate recipes
+- Removed Adamantite Knife (Enlightend supports natively)
+- Removed Deorum and Reinforced Deorum Knives (F&A toolset no longer craftable)
 
 ## 3.4.1
 

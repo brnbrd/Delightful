@@ -11,15 +11,15 @@
               "value": "large_amethyst_knife"
             },
             {
-              "type": "forge:mod_loaded",
-              "modid": "oresabovediamonds"
-            },
-            {
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
                 "tag": "forge:gems/large_amethyst"
               }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "oresabovediamonds"
             }
           ]
         }

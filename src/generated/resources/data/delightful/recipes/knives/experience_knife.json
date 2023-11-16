@@ -11,15 +11,15 @@
               "value": "experience_knife"
             },
             {
-              "type": "forge:mod_loaded",
-              "modid": "create_sa"
-            },
-            {
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
                 "tag": "create_sa:heap_of_experience"
               }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "create_sa"
             }
           ]
         }

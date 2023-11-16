@@ -1,0 +1,28 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "enlightened_end:adamantite_knife"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:smithing_transform",
+        "addition": {
+          "tag": "forge:ingots/adamantite"
+        },
+        "base": {
+          "item": "farmersdelight:iron_knife"
+        },
+        "result": {
+          "item": "enlightened_end:adamantite_knife"
+        },
+        "template": {
+          "item": "enlightened_end:ender_smithing_template"
+        }
+      }
+    }
+  ]
+}

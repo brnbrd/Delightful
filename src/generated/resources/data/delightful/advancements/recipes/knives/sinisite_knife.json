@@ -4,7 +4,7 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_sinisite": {
+          "has_ingots/sinisite": {
             "conditions": {
               "items": [
                 {
@@ -23,7 +23,7 @@
         },
         "requirements": [
           [
-            "has_sinisite",
+            "has_ingots/sinisite",
             "has_the_recipe"
           ]
         ],
@@ -43,15 +43,15 @@
               "value": "sinisite_knife"
             },
             {
-              "type": "forge:mod_loaded",
-              "modid": "fusion"
-            },
-            {
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
                 "tag": "forge:ingots/sinisite"
               }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "fusion"
             }
           ]
         }

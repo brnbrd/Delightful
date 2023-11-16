@@ -11,15 +11,15 @@
               "value": "kiwano_knife"
             },
             {
-              "type": "forge:mod_loaded",
-              "modid": "nethers_exoticism"
-            },
-            {
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
                 "tag": "nethers_exoticism:kiwano_peel"
               }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "nethers_exoticism"
             }
           ]
         }

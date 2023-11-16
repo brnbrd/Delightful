@@ -16,6 +16,10 @@
                 "type": "forge:tag_empty",
                 "tag": "forge:ingots/forgotten_metal"
               }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "undergarden"
             }
           ]
         }
@@ -31,7 +35,9 @@
         "result": {
           "item": "delightful:forgotten_knife"
         },
-        "template": []
+        "template": {
+          "tag": "undergarden:forgotten_upgrade_smithing_template"
+        }
       }
     }
   ]

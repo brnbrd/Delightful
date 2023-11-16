@@ -16,6 +16,10 @@
                 "type": "forge:tag_empty",
                 "tag": "additionaladditions:rose_gold_alloy"
               }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "additionaladditions"
             }
           ]
         }
@@ -31,7 +35,9 @@
         "result": {
           "item": "delightful:rose_gold_knife"
         },
-        "template": []
+        "template": {
+          "tag": "additionaladditions:rose_gold_upgrade"
+        }
       }
     }
   ]

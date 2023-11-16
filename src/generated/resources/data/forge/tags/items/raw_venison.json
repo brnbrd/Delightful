@@ -1,17 +1,6 @@
 {
   "values": [
     "delightful:venison_chops",
-    {
-      "id": "naturalist:venison",
-      "required": false
-    },
-    {
-      "id": "goodall:raw_venison",
-      "required": false
-    },
-    {
-      "id": "twilightforest:raw_venison",
-      "required": false
-    }
+    "#forge:raw_venison_compat"
   ]
 }

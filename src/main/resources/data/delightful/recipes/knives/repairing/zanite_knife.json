@@ -1,0 +1,30 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "zanite_knife"
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "aether"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "aether:repairing",
+        "group": "altar_sword_repair",
+        "ingredient": {
+          "item": "delightful:zanite_knife"
+        },
+        "repairTime": 750
+      }
+    }
+  ]
+}

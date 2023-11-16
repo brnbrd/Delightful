@@ -22,7 +22,7 @@ public class FieryKnifeItem extends CompatKnifeItem {
   @Override
   public List<Component> getTools() {
     return List.of(
-        Component.translatable("item.twilightforest.fiery_sword.tooltip").withStyle(ChatFormatting.GRAY)
+        Component.translatable("item.twilightforest.fiery_sword.desc").withStyle(ChatFormatting.GRAY)
     );
   }
 

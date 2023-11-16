@@ -26,7 +26,7 @@ public class FroststeelKnifeItem extends CompatKnifeItem {
 
 	private void onHurt(LivingHurtEvent e) {
 		if (
-			this.isEnabled() &&
+			this.enabled() &&
 			e.getSource().getEntity() instanceof Player player &&
 			player.getMainHandItem().is(this)
 		) {

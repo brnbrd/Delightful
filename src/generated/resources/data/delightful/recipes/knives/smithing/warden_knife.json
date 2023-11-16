@@ -16,6 +16,10 @@
                 "type": "forge:tag_empty",
                 "tag": "deeperdarker:reinforced_echo_shard"
               }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "deeperdarker"
             }
           ]
         }
@@ -31,7 +35,9 @@
         "result": {
           "item": "delightful:warden_knife"
         },
-        "template": []
+        "template": {
+          "tag": "deeperdarker:warden_upgrade_smithing_template"
+        }
       }
     }
   ]

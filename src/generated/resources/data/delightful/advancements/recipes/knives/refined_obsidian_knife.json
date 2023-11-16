@@ -4,7 +4,7 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_refined_obsidian": {
+          "has_ingots/refined_obsidian": {
             "conditions": {
               "items": [
                 {
@@ -23,7 +23,7 @@
         },
         "requirements": [
           [
-            "has_refined_obsidian",
+            "has_ingots/refined_obsidian",
             "has_the_recipe"
           ]
         ],
@@ -43,15 +43,15 @@
               "value": "refined_obsidian_knife"
             },
             {
-              "type": "forge:mod_loaded",
-              "modid": "mekanismtools"
-            },
-            {
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
                 "tag": "forge:ingots/refined_obsidian"
               }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "mekanismtools"
             }
           ]
         }

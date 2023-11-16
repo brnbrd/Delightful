@@ -11,15 +11,15 @@
               "value": "draco_arcanus_knife"
             },
             {
-              "type": "forge:mod_loaded",
-              "modid": "forbidden_arcanus"
-            },
-            {
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
                 "tag": "forbidden_arcanus:dragon_scale"
               }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "forbidden_arcanus"
             }
           ]
         }

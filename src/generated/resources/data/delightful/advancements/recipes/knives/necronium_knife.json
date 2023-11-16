@@ -4,7 +4,7 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_necronium": {
+          "has_ingots/necronium": {
             "conditions": {
               "items": [
                 {
@@ -23,7 +23,7 @@
         },
         "requirements": [
           [
-            "has_necronium",
+            "has_ingots/necronium",
             "has_the_recipe"
           ]
         ],
@@ -43,15 +43,15 @@
               "value": "necronium_knife"
             },
             {
-              "type": "forge:mod_loaded",
-              "modid": "nourished_nether"
-            },
-            {
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
                 "tag": "forge:ingots/necronium"
               }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "nourished_nether"
             }
           ]
         }

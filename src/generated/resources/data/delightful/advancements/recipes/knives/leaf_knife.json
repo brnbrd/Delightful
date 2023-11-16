@@ -4,7 +4,7 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_leaf": {
+          "has_sharp_leaf": {
             "conditions": {
               "items": [
                 {
@@ -23,7 +23,7 @@
         },
         "requirements": [
           [
-            "has_leaf",
+            "has_sharp_leaf",
             "has_the_recipe"
           ]
         ],
@@ -43,15 +43,15 @@
               "value": "leaf_knife"
             },
             {
-              "type": "forge:mod_loaded",
-              "modid": "seeds"
-            },
-            {
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
                 "tag": "seeds:sharp_leaf"
               }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "seeds"
             }
           ]
         }

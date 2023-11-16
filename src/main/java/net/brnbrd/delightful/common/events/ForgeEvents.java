@@ -33,13 +33,6 @@ import java.util.Objects;
 public class ForgeEvents {
 
 	@SubscribeEvent
-	void burnTime(FurnaceFuelBurnTimeEvent e) {
-		if (e.getItemStack().getItem() instanceof FurnaceFuelItem fuel) {
-			e.setBurnTime(fuel.getFuelTime());
-		}
-	}
-
-	@SubscribeEvent
 	void onWanderingTrader(WandererTradesEvent e) {
 		List<VillagerTrades.ItemListing> trades = e.getGenericTrades();
 		if (Util.enabled(DelightfulItems.SALMONBERRIES) && Util.enabled(DelightfulItems.SALMONBERRY_PIPS)) {

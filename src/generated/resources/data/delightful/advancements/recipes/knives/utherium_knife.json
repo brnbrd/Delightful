@@ -4,13 +4,7 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_the_recipe": {
-            "conditions": {
-              "recipe": "delightful:knives/utherium_knife"
-            },
-            "trigger": "minecraft:recipe_unlocked"
-          },
-          "has_utherium": {
+          "has_ingots/utherium": {
             "conditions": {
               "items": [
                 {
@@ -19,11 +13,17 @@
               ]
             },
             "trigger": "minecraft:inventory_changed"
+          },
+          "has_the_recipe": {
+            "conditions": {
+              "recipe": "delightful:knives/utherium_knife"
+            },
+            "trigger": "minecraft:recipe_unlocked"
           }
         },
         "requirements": [
           [
-            "has_utherium",
+            "has_ingots/utherium",
             "has_the_recipe"
           ]
         ],
@@ -43,15 +43,15 @@
               "value": "utherium_knife"
             },
             {
-              "type": "forge:mod_loaded",
-              "modid": "undergarden"
-            },
-            {
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
                 "tag": "forge:ingots/utherium"
               }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "undergarden"
             }
           ]
         }

@@ -14,7 +14,7 @@ import net.minecraftforge.event.entity.living.LivingHurtEvent;
 
 public class StelliumKnifeItem extends CompatKnifeItem {
 	public StelliumKnifeItem(Properties properties) {
-		super(Mods.EP, DelightfulItemTags.STELLIUM_INGOT, DelightfulTiers.STELLIUM, properties);
+		super(Mods.EP, DelightfulItemTags.INGOTS_STELLIUM, DelightfulTiers.STELLIUM, properties);
 		MinecraftForge.EVENT_BUS.addListener(this::onHurt);
 	}
 

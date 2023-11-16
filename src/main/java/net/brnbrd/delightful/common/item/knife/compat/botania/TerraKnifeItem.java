@@ -29,7 +29,7 @@ public class TerraKnifeItem extends ManasteelKnifeItem {
 
 	public void onLeftClick(PlayerInteractEvent.LeftClickEmpty e) {
 		if (
-			isEnabled() &&
+			enabled() &&
 			e.getEntity().level().isClientSide() &&
 			!e.getItemStack().isEmpty() &&
 			e.getItemStack().is(this)
@@ -40,7 +40,7 @@ public class TerraKnifeItem extends ManasteelKnifeItem {
 
 	public void handle(Player p, ItemStack stack, float scale) {
 		if (
-			isEnabled() &&
+			enabled() &&
 			stack.is(this) &&
 			!p.level().isClientSide() &&
 			!p.isSpectator()
@@ -56,7 +56,7 @@ public class TerraKnifeItem extends ManasteelKnifeItem {
 
 	@Override
 	public boolean hurtEnemy(@NotNull ItemStack stack, @NotNull LivingEntity target, @NotNull LivingEntity attacker) {
-		if (isEnabled() && attacker instanceof Player p) {
+		if (enabled() && attacker instanceof Player p) {
 			handle(p, stack, p.getAttackStrengthScale(0F));
 		}
 		return false;

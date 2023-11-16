@@ -42,7 +42,7 @@ public class SoulSteelKnifeItem extends CompatKnifeItem {
 
 	@Override
 	public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> tool, @NotNull TooltipFlag pIsAdvanced) {
-		if (this.isLoaded() && this.isEnabled()) {
+		if (this.isLoaded() && this.enabled()) {
 			SpiritCompat.appendEmpoweredText(stack, tool);
 		}
 		super.appendHoverText(stack, level, tool, pIsAdvanced);

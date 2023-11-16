@@ -7,7 +7,7 @@ import net.brnbrd.delightful.common.item.knife.CompatKnifeItem;
 import net.brnbrd.delightful.common.item.knife.Knives;
 import net.brnbrd.delightful.compat.Mods;
 import net.minecraft.world.item.crafting.Ingredient;
-import java.util.function.Supplier;
+import org.apache.commons.lang3.tuple.ImmutablePair;
 
 public class ObsdianInfusedEnderiteKnifeItem extends CompatKnifeItem {
 	public ObsdianInfusedEnderiteKnifeItem(Properties properties) {
@@ -15,8 +15,11 @@ public class ObsdianInfusedEnderiteKnifeItem extends CompatKnifeItem {
 	}
 
 	@Override
-	public Supplier<Ingredient> getSmithingBase() {
-		return Util.ing(Knives.ENDERITE);
+	public ImmutablePair<Ingredient, Ingredient> getSmithing() {
+		return new ImmutablePair<>(
+			Ingredient.of(EnderiteKnifeItem.upgrade),
+			Util.ing(Knives.ENDERITE)
+		);
 	}
 
 	@Override

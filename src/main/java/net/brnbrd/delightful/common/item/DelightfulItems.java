@@ -3,10 +3,7 @@ package net.brnbrd.delightful.common.item;
 import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.block.DelightfulBlocks;
-import net.brnbrd.delightful.common.item.food.DrinkItem;
-import net.brnbrd.delightful.common.item.food.EnderNectarItem;
-import net.brnbrd.delightful.common.item.food.GummyItem;
-import net.brnbrd.delightful.common.item.food.Nutrition;
+import net.brnbrd.delightful.common.item.food.*;
 import net.brnbrd.delightful.compat.ArsNouveauCompat;
 import net.brnbrd.delightful.compat.BYGCompat;
 import net.brnbrd.delightful.compat.Mods;
@@ -53,9 +50,8 @@ public class DelightfulItems {
 
     public static final RegistryObject<Item> MATCHA_ICE_CREAM = registerItem("matcha_ice_cream", () -> new BowlFoodItem((new Item.Properties()).food(Nutrition.MATCHA_ICE_CREAM).craftRemainder(Items.BOWL).stacksTo(1)));
     public static final RegistryObject<Item> SALMONBERRY_ICE_CREAM = registerItem("salmonberry_ice_cream", () -> new BowlFoodItem((new Item.Properties()).food(Nutrition.SALMONBERRY_ICE_CREAM).craftRemainder(Items.BOWL).stacksTo(1)));
-    public static final RegistryObject<Item> MATCHA = registerItem("matcha", () -> new DescriptItem((new Item.Properties()), Component.translatable("delightful.matcha.desc").withStyle(ChatFormatting.GRAY)));
-    public static final RegistryObject<Item> GREEN_TEA_LEAF = registerFood("green_tea_leaf",
-        Nutrition.GREEN_TEA_LEAF);
+    public static final RegistryObject<Item> MATCHA = registerItem("matcha", () -> new DItem(new Item.Properties()));
+    public static final RegistryObject<Item> GREEN_TEA_LEAF = registerFood("green_tea_leaf", Nutrition.GREEN_TEA_LEAF);
     public static final RegistryObject<Item> SALMONBERRIES = registerFood("salmonberries", Nutrition.SALMONBERRIES);
     public static final RegistryObject<Item> SALMONBERRY_PIPS = registerItem("salmonberry_pips",
         () -> new ItemNameBlockItem(DelightfulBlocks.SALMONBERRY_BUSH.get(), ModItems.basicItem()));
@@ -83,16 +79,17 @@ public class DelightfulItems {
     public static final RegistryObject<Item> ANIMAL_OIL_BOTTLE = registerItem("animal_oil_bottle",
         () -> new FurnaceFuelItem((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE), 3200));
     public static final RegistryObject<Item> ACORN = registerFood("acorn", Nutrition.ACORN);
-    public static final RegistryObject<Item> COCONUT_CURRY = registerItem("coconut_curry", () -> new ConsumableItem((new Item.Properties()).food(Nutrition.COCONUT_CURRY).stacksTo(16).craftRemainder(Items.BOWL), true));
+    public static final RegistryObject<Item> COCONUT_CURRY = registerItem("coconut_curry",
+        () -> new CoconutCurryItem((new Item.Properties()).food(Nutrition.COCONUT_CURRY).stacksTo(16).craftRemainder(Items.BOWL)));
     public static final RegistryObject<Item> SINIGANG = registerItem("sinigang", () -> new ConsumableItem((new Item.Properties()).food(Nutrition.SINIGANG).craftRemainder(Items.BOWL).stacksTo(16), true, true));
     public static final RegistryObject<Item> CHOPPED_CLOVER = registerCompatFood("chopped_clover", Nutrition.CHOPPED_CLOVER,
         Mods.BOP);
     public static final RegistryObject<Item> CACTUS_FLESH = registerFood("cactus_flesh", Nutrition.CACTUS_FLESH);
     public static final RegistryObject<Item> CACTUS_STEAK = registerFood("cactus_steak", Nutrition.CACTUS_STEAK);
     public static final RegistryObject<Item> FIELD_SALAD = registerItem("field_salad", () -> new ConsumableItem((new Item.Properties()).food(Nutrition.FIELD_SALAD).stacksTo(16).craftRemainder(Items.BOWL), true));
-    public static final RegistryObject<Item> LAVENDER_TEA = registerItem("lavender_tea", () -> new DrinkItem((new Item.Properties()).food(Nutrition.LAVENDER_TEA).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16), 0.0F, true, false));
-    public static final RegistryObject<Item> AZALEA_TEA = registerItem("azalea_tea", () -> new DrinkItem((new Item.Properties()).food(Nutrition.AZALEA_TEA).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16), 0.0F, true, false));
-    public static final RegistryObject<Item> PRICKLY_PEAR_JUICE = registerItem("prickly_pear_juice", () -> new DrinkItem((new Item.Properties()).food(Nutrition.PRICKLY_PEAR_JUICE).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16), 0.0F, true, false));
+    public static final RegistryObject<Item> LAVENDER_TEA = registerItem("lavender_tea", () -> new LavenderTeaItem((new Item.Properties()).food(Nutrition.LAVENDER_TEA).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16), 0.0F, true, false));
+    public static final RegistryObject<Item> AZALEA_TEA = registerItem("azalea_tea", () -> new CompatDrinkItem((new Item.Properties()).food(Nutrition.AZALEA_TEA).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16), 0.0F, true, false, "ecologics"));
+    public static final RegistryObject<Item> PRICKLY_PEAR_JUICE = registerItem("prickly_pear_juice", () -> new CompatDrinkItem((new Item.Properties()).food(Nutrition.PRICKLY_PEAR_JUICE).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16), 0.0F, true, false, "ecologics"));
     public static final RegistryObject<Item> ENDER_NECTAR = registerItem("ender_nectar", () -> new EnderNectarItem((new Item.Properties()).food(Nutrition.ENDER_NECTAR).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16)));
     public static final RegistryObject<Item> MATCHA_LATTE = registerItem("matcha_latte", () -> new DrinkItem((new Item.Properties()).food(Nutrition.MATCHA_LATTE).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16), 2.0F, true, true));
     public static final RegistryObject<Item> BERRY_MATCHA_LATTE = registerItem("berry_matcha_latte", () -> new DrinkItem((new Item.Properties()).food(Nutrition.BERRY_MATCHA_LATTE).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16), 2.0F, true, true));
@@ -107,17 +104,23 @@ public class DelightfulItems {
     public static final RegistryObject<Item> CHUNK_NUGGET = registerCompatFood("chunk_nugget", Nutrition.CHUNK_NUGGET,
         Mods.RL);
     public static final RegistryObject<Item> ROCK_CANDY = registerItem("rock_candy",
-        () -> new ConsumableItem((new Item.Properties()).food(Nutrition.ROCK_CANDY).craftRemainder(Items.STICK), true));
+        () -> new RockCandyItem((new Item.Properties()).food(Nutrition.ROCK_CANDY).craftRemainder(Items.STICK)));
     public static final RegistryObject<Item> MARSHMALLOW_STICK = registerFood("marshmallow_stick", Nutrition.MARSHMALLOW_STICK, Items.STICK);
     public static final RegistryObject<Item> COOKED_MARSHMALLOW_STICK = registerFood("cooked_marshmallow_stick", Nutrition.COOKED_MARSHMALLOW_STICK, Items.STICK);
     public static final RegistryObject<Item> SMORE = registerItem("smore",
         () -> new ConsumableItem((new Item.Properties()).food(Nutrition.SMORE), true));
-    public static final RegistryObject<Item> CRAB_RANGOON = registerFood("crab_rangoon", Nutrition.CRAB_RANGOON);
-    public static final RegistryObject<Item> HONEY_GLAZED_WALNUT = registerFood("honey_glazed_walnut", Nutrition.HONEY_GLAZED_WALNUT);
-    public static final RegistryObject<Item> VENISON_CHOPS = registerFood("venison_chops", Nutrition.VENISON_CHOPS);
-    public static final RegistryObject<Item> COOKED_VENISON_CHOPS = registerFood("cooked_venison_chops", Nutrition.COOKED_VENISON_CHOPS);
-    public static final RegistryObject<Item> RAW_GOAT = registerFood("raw_goat", Nutrition.RAW_GOAT);
-    public static final RegistryObject<Item> COOKED_GOAT = registerFood("cooked_goat", Nutrition.COOKED_GOAT);
+    public static final RegistryObject<Item> CRAB_RANGOON = registerItem("crab_rangoon",
+        () -> new CrabRangoonItem(new Item.Properties().food(Nutrition.CRAB_RANGOON)));
+    public static final RegistryObject<Item> HONEY_GLAZED_WALNUT = registerItem("honey_glazed_walnut",
+        () -> new HoneyGlazedWalnutItem(new Item.Properties().food(Nutrition.HONEY_GLAZED_WALNUT)));
+    public static final RegistryObject<Item> VENISON_CHOPS = registerItem("venison_chops",
+        () -> new VenisonItem(new Item.Properties().food(Nutrition.VENISON_CHOPS)));
+    public static final RegistryObject<Item> COOKED_VENISON_CHOPS = registerItem("cooked_venison_chops",
+        () -> new VenisonItem(new Item.Properties().food(Nutrition.COOKED_VENISON_CHOPS)));
+    public static final RegistryObject<Item> RAW_GOAT = registerItem("raw_goat",
+        () -> new DItem(new Item.Properties().food(Nutrition.RAW_GOAT)));
+    public static final RegistryObject<Item> COOKED_GOAT = registerItem("cooked_goat",
+        () -> new DItem(new Item.Properties().food(Nutrition.COOKED_GOAT)));
     public static final RegistryObject<Item> CANTALOUPE_SLICE = registerFood("cantaloupe_slice", Nutrition.CANTALOUPE_SLICE);
     public static final RegistryObject<Item> CANTALOUPE = registerItem("cantaloupe", () ->
         new BlockItem(DelightfulBlocks.CANTALOUPE.get(), ModItems.basicItem()));
@@ -134,11 +137,12 @@ public class DelightfulItems {
             if (remainder[0].equals(Items.BOWL)) {
                 return registerItem(name,
                     () -> new BowlFoodItem((new Item.Properties()).food(food).craftRemainder(Items.BOWL)));
+            } else {
+                return registerItem(name,
+                    () -> new ConsumableItem((new Item.Properties()).food(food).craftRemainder(remainder[0])));
             }
-            return registerItem(name,
-                () -> new ConsumableItem((new Item.Properties()).food(food).craftRemainder(remainder[0])));
         }
-        return registerItem(name, () -> new Item((new Item.Properties()).food(food)));
+        return registerItem(name, () -> new DItem((new Item.Properties()).food(food)));
     }
 
     public static RegistryObject<Item> registerCompatFood(String name, FoodProperties food, String modid) {

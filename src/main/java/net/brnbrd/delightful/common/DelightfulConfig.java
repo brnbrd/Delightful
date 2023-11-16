@@ -4,9 +4,7 @@ import com.google.common.collect.ImmutableList;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.knife.Knives;
-import net.minecraft.world.item.Item;
 import net.minecraftforge.common.ForgeConfigSpec;
-import net.minecraftforge.registries.RegistryObject;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -24,15 +22,14 @@ public class DelightfulConfig {
     public static ForgeConfigSpec.BooleanValue GIVE_SLICED_DIRECTLY;
     public static ForgeConfigSpec.BooleanValue MELON_JUICING;
     public static ForgeConfigSpec.BooleanValue USE_MILK_TAG;
-    private static final ImmutableList<String> disabled_by_default_items = ImmutableList.of(
+    private static final ImmutableList<String> DEFAULT_DISABLED = ImmutableList.of(
         Util.name(Knives.COPPER),
         Util.name(Knives.BONE),
         Util.name(Knives.AMETHYST),
         Util.name(Knives.EMERALD),
         Util.name(Knives.LAPIS_LAZULI),
         Util.name(DelightfulItems.RAW_GOAT),
-        Util.name(DelightfulItems.COOKED_GOAT),
-        Util.name(DelightfulItems.GREEN_TEA_LEAF)
+        Util.name(DelightfulItems.COOKED_GOAT)
     );
 
     DelightfulConfig(ForgeConfigSpec.Builder builder) {
@@ -45,17 +42,17 @@ public class DelightfulConfig {
         builder.push("Knives");
             items.stream()
                 .filter(path -> path.contains("_knife"))
-                .forEach(knife -> put(builder, stuff, knife, !disabled_by_default_items.contains(knife)));
+                .forEach(knife -> put(builder, stuff, knife, !DEFAULT_DISABLED.contains(knife)));
         builder.pop();
         builder.push("Pie Overhauls");
             items.stream()
                 .filter(path -> path.contains("_pie_slice"))
-                .forEach(knife -> put(builder, stuff, knife, !disabled_by_default_items.contains(knife)));
+                .forEach(knife -> put(builder, stuff, knife, !DEFAULT_DISABLED.contains(knife)));
         builder.pop();
         builder.push("Registry & Recipes");
             items.stream()
                 .filter(path -> !path.contains("_knife") && !path.contains("_pie_slice"))
-                .forEach(not -> put(builder, stuff, not, !disabled_by_default_items.contains(not)));
+                .forEach(not -> put(builder, stuff, not, !DEFAULT_DISABLED.contains(not)));
             USE_MILK_TAG = builder
                 .comment("Force the replacement of forge:cheese item tag in recipes with forge:milk")
                 .define("use_milk_tag", false);
@@ -94,14 +91,6 @@ public class DelightfulConfig {
 
     public boolean verify(String item) {
         return CONFIG.stuff.get(item).get();
-    }
-
-    public boolean verify(RegistryObject<Item> item) {
-        return verify(item.getId().getPath());
-    }
-
-    public boolean verify(Item item) {
-        return verify(Util.name(item));
     }
 
     static {

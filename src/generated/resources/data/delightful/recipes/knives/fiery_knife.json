@@ -11,15 +11,15 @@
               "value": "fiery_knife"
             },
             {
-              "type": "forge:mod_loaded",
-              "modid": "twilightforest"
-            },
-            {
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
                 "tag": "forge:ingots/fiery"
               }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "twilightforest"
             }
           ]
         }

@@ -4,7 +4,7 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_constantan": {
+          "has_ingots/constantan": {
             "conditions": {
               "items": [
                 {
@@ -23,7 +23,7 @@
         },
         "requirements": [
           [
-            "has_constantan",
+            "has_ingots/constantan",
             "has_the_recipe"
           ]
         ],

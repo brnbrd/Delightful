@@ -3,11 +3,13 @@ package net.brnbrd.delightful;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.brnbrd.delightful.common.DelightfulConfig;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.Containers;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -36,6 +38,10 @@ public class Util {
     return ItemTags.create(rl(modid, path));
   }
 
+  public static TagKey<EntityType<?>> et(String modid, String path) {
+    return TagKey.create(Registries.ENTITY_TYPE, rl(modid, path));
+  }
+
   public static ObjectArrayList<ItemStack> with(ObjectArrayList<ItemStack> before, ItemStack addition) {
     before.add(addition);
     return before;
@@ -62,7 +68,10 @@ public class Util {
   }
 
   public static String name(Item item) {
-    return Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath();
+    if (ForgeRegistries.ITEMS.containsValue(item)) {
+      return ForgeRegistries.ITEMS.getKey(item).getPath();
+    }
+    return "";
   }
 
   public static String name(Block block) {
@@ -73,8 +82,8 @@ public class Util {
     return reg.getId().getPath();
   }
 
-  public static Supplier<Ingredient> ing(Supplier<? extends ItemLike> i) {
-    return () -> Ingredient.of(i.get());
+  public static Ingredient ing(Supplier<? extends ItemLike> i) {
+    return Ingredient.of(i.get());
   }
 
   public static void dropOrGive(ItemStack stack, Level world, BlockPos drop, Player give) {
@@ -98,10 +107,10 @@ public class Util {
   }
 
   public static boolean enabled(RegistryObject<Item> item) {
-    return DelightfulConfig.CONFIG.verify(item);
+    return enabled(item.getId().getPath());
   }
 
   public static boolean enabled(Item item) {
-    return DelightfulConfig.CONFIG.verify(item);
+    return enabled(Util.name(item));
   }
 }

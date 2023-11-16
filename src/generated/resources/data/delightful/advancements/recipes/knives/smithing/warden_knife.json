@@ -48,6 +48,10 @@
                 "type": "forge:tag_empty",
                 "tag": "deeperdarker:reinforced_echo_shard"
               }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "deeperdarker"
             }
           ]
         }

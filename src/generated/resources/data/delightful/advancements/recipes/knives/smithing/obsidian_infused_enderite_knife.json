@@ -48,6 +48,10 @@
                 "type": "forge:tag_empty",
                 "tag": "forge:ingots/obsidian_infused_enderite"
               }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "lolenderite"
             }
           ]
         }

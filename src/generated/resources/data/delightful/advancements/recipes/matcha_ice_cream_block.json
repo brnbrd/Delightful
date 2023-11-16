@@ -49,6 +49,10 @@
               "value": "matcha_ice_cream"
             },
             {
+              "type": "delightful:enabled",
+              "value": "matcha"
+            },
+            {
               "type": "forge:mod_loaded",
               "modid": "neapolitan"
             }

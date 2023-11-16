@@ -4,7 +4,7 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_steel": {
+          "has_ingots/steel": {
             "conditions": {
               "items": [
                 {
@@ -23,7 +23,7 @@
         },
         "requirements": [
           [
-            "has_steel",
+            "has_ingots/steel",
             "has_the_recipe"
           ]
         ],

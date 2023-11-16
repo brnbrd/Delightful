@@ -4,7 +4,7 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_elementium": {
+          "has_ingots/elementium": {
             "conditions": {
               "items": [
                 {
@@ -23,7 +23,7 @@
         },
         "requirements": [
           [
-            "has_elementium",
+            "has_ingots/elementium",
             "has_the_recipe"
           ]
         ],
@@ -43,15 +43,15 @@
               "value": "elementium_knife"
             },
             {
-              "type": "forge:mod_loaded",
-              "modid": "botania"
-            },
-            {
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
                 "tag": "forge:ingots/elementium"
               }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "botania"
             }
           ]
         }

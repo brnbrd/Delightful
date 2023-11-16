@@ -19,19 +19,27 @@
     "#forge:fruits/strawberries",
     "#forge:fruits/wild_berries",
     {
+      "id": "#forge:fruits/mulberry",
+      "required": false
+    },
+    {
+      "id": "aether_redux:chromaberry",
+      "required": false
+    },
+    {
+      "id": "deep_aether:goldenleaf_berries",
+      "required": false
+    },
+    {
+      "id": "undergarden:blisterberry",
+      "required": false
+    },
+    {
       "id": "enlightened_end:zure_berry",
       "required": false
     },
     {
       "id": "phantasm:pream_berry",
-      "required": false
-    },
-    {
-      "id": "#forge:fruits/mulberry",
-      "required": false
-    },
-    {
-      "id": "#undergarden:blisterberry",
       "required": false
     }
   ]

@@ -16,6 +16,10 @@
                 "type": "forge:tag_empty",
                 "tag": "forge:ingots/pendorite"
               }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "byg"
             }
           ]
         }
@@ -31,7 +35,9 @@
         "result": {
           "item": "delightful:pendorite_knife"
         },
-        "template": []
+        "template": {
+          "item": "farmersdelight:netherite_knife"
+        }
       }
     }
   ]

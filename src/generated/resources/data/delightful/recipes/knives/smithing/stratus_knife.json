@@ -1,0 +1,48 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "stratus_knife"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:ingots/stratus"
+              }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "deep_aether"
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "aether"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:smithing_transform",
+        "addition": {
+          "tag": "forge:ingots/stratus"
+        },
+        "base": {
+          "item": "delightful:gravitite_knife"
+        },
+        "result": {
+          "item": "delightful:stratus_knife"
+        },
+        "template": {
+          "tag": "deep_aether:stratus_smithing_template"
+        }
+      }
+    }
+  ]
+}

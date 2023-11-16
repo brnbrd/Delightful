@@ -1,18 +1,6 @@
 {
   "parent": "farmersdelight:main/root",
   "criteria": {
-    "adamantite_knife": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "delightful:adamantite_knife"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "adamantium_knife": {
       "conditions": {
         "items": [
@@ -163,18 +151,6 @@
           {
             "items": [
               "delightful:crystalline_knife"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "deorum_knife": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "delightful:deorum_knife"
             ]
           }
         ]
@@ -343,6 +319,42 @@
           {
             "items": [
               "farmersdelight:golden_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "gravitite_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:gravitite_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "holystone_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:holystone_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "infused_veridium_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:infused_veridium_knife"
             ]
           }
         ]
@@ -613,18 +625,6 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "reinforced_deorum_knife": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "delightful:reinforced_deorum_knife"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "rose_gold_knife": {
       "conditions": {
         "items": [
@@ -655,6 +655,30 @@
           {
             "items": [
               "delightful:sinisite_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "skyjade_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:skyjade_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "skyroot_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:skyroot_knife"
             ]
           }
         ]
@@ -709,6 +733,18 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "stratus_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:stratus_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "terra_knife": {
       "conditions": {
         "items": [
@@ -757,12 +793,36 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "veridium_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:veridium_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "warden_knife": {
       "conditions": {
         "items": [
           {
             "items": [
               "delightful:warden_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "zanite_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:zanite_knife"
             ]
           }
         ]
@@ -829,8 +889,6 @@
       "sinisite_knife",
       "allthemodium_knife",
       "enderite_knife",
-      "deorum_knife",
-      "reinforced_deorum_knife",
       "draco_arcanus_knife",
       "osmium_knife",
       "refined_glowstone_knife",
@@ -850,7 +908,6 @@
       "blazing_knife",
       "leaf_knife",
       "kiwano_knife",
-      "adamantite_knife",
       "crystalline_knife",
       "stellium_knife",
       "soul_steel_knife",
@@ -861,10 +918,18 @@
       "froststeel_knife",
       "utherium_knife",
       "forgotten_knife",
+      "gravitite_knife",
+      "holystone_knife",
+      "skyroot_knife",
+      "zanite_knife",
       "manasteel_knife",
       "elementium_knife",
       "terra_knife",
-      "alf_knife"
+      "alf_knife",
+      "veridium_knife",
+      "infused_veridium_knife",
+      "skyjade_knife",
+      "stratus_knife"
     ]
   ],
   "sends_telemetry_event": true

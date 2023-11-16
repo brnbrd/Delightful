@@ -6,8 +6,8 @@ import net.brnbrd.delightful.common.item.DelightfulTiers;
 import net.brnbrd.delightful.common.item.knife.CompatKnifeItem;
 import net.brnbrd.delightful.compat.Mods;
 import net.minecraft.world.item.crafting.Ingredient;
+import org.apache.commons.lang3.tuple.ImmutablePair;
 import vectorwing.farmersdelight.common.registry.ModItems;
-import java.util.function.Supplier;
 
 public class PendoriteKnifeItem extends CompatKnifeItem {
 	public PendoriteKnifeItem(Properties properties) {
@@ -15,7 +15,10 @@ public class PendoriteKnifeItem extends CompatKnifeItem {
 	}
 
 	@Override
-	public Supplier<Ingredient> getSmithingBase() {
-		return Util.ing(ModItems.NETHERITE_KNIFE);
+	public ImmutablePair<Ingredient, Ingredient> getSmithing() {
+		return new ImmutablePair<>(
+			Util.ing(ModItems.NETHERITE_KNIFE),
+			Util.ing(ModItems.NETHERITE_KNIFE)
+		);
 	}
 }

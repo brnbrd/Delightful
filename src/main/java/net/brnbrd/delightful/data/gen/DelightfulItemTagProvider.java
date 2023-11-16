@@ -5,6 +5,11 @@ import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.knife.DelightfulKnifeItem;
 import net.brnbrd.delightful.common.item.knife.Knives;
+import net.brnbrd.delightful.common.item.knife.compat.additionaladditions.GildedNetheriteKnifeItem;
+import net.brnbrd.delightful.common.item.knife.compat.additionaladditions.RoseGoldKnifeItem;
+import net.brnbrd.delightful.common.item.knife.compat.deeperdarker.WardenKnifeItem;
+import net.brnbrd.delightful.common.item.knife.compat.lolenderite.EnderiteKnifeItem;
+import net.brnbrd.delightful.common.item.knife.compat.undergarden.ForgottenKnifeItem;
 import net.brnbrd.delightful.compat.ArsNouveauCompat;
 import net.brnbrd.delightful.compat.BYGCompat;
 import net.brnbrd.delightful.compat.Mods;
@@ -92,14 +97,16 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		tag(DelightfulItemTags.FRUITS_KIWI).addOptional(Util.rl("hedgehog", "kiwi"));
 		tag(DelightfulItemTags.FRUITS_PRICKLY_PEAR).addOptional(Util.rl(Mods.ECO, "prickly_pear"));
 		tag(DelightfulItemTags.FRUITS_TORCHBERRIES).addOptional(Util.rl(Mods.TF, "torchberries"));
-		tag(DelightfulItemTags.FRUITS_SOURCEBERRY).addOptional(Util.rl(Mods.AN, "source_berry"));
+		tag(DelightfulItemTags.FRUITS_SOURCEBERRY).addOptional(Util.rl(Mods.AN, "sourceberry_bush"));
 		tag(DelightfulItemTags.FRUITS_ELDERBERRY).addOptional(Util.rl(Mods.RC, "elderberry"));
 		tag(DelightfulItemTags.FRUITS_BLACKCURRANT).addOptional(Util.rl(Mods.RC, "blackcurrant"));
 		tag(DelightfulItemTags.FRUITS_REDCURRANT).addOptional(Util.rl(Mods.RC, "redcurrant"));
 		tag(DelightfulItemTags.FRUITS_WHITECURRANT).addOptional(Util.rl(Mods.RC, "whitecurrant"));
 		tag(DelightfulItemTags.FRUITS_BLUEBERRIES)
 			.addOptional(Util.rl(Mods.BYG, "blueberries"))
-			.addOptional(Util.rl(Mods.WB, "blueberries"));
+			.addOptional(Util.rl(Mods.WB, "blueberries"))
+			.addOptional(Util.rl(Mods.AE, "blue_berry"))
+			.addOptional(Util.rl(Mods.AE, "enchanted_berry"));
 		tag(DelightfulItemTags.FRUITS_RASPBERRIES)
 			.addOptional(Util.rl(Mods.WB, "raspberry"));
 		tag(DelightfulItemTags.FRUITS_BLACKBERRIES)
@@ -136,10 +143,12 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_CHERRY)
 			.addTag(DelightfulItemTags.FRUITS_STRAWBERRIES)
 			.addTag(DelightfulItemTags.FRUITS_WILD_BERRIES)
-			.addOptional(Util.rl("enlightened_end", "zure_berry"))
-			.addOptional(Util.rl("phantasm", "pream_berry"))
 			.addOptionalTag(Util.rl("forge", "fruits/mulberry"))
-			.addOptionalTag(Util.rl("undergarden", "blisterberry"));
+			.addOptional(Util.rl("aether_redux", "chromaberry"))
+			.addOptional(Util.rl("deep_aether", "goldenleaf_berries"))
+			.addOptional(Util.rl("undergarden", "blisterberry"))
+			.addOptional(Util.rl("enlightened_end", "zure_berry"))
+			.addOptional(Util.rl("phantasm", "pream_berry"));
 		tag(ForgeTags.BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_BERRIES);
 		tag(DelightfulItemTags.FRUITS)
@@ -215,6 +224,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.JAM)
 			.addOptionalTag(Util.rl(Mods.WB, "berry_jams"));
 		tag(DelightfulItemTags.SUGAR).add(Items.SUGAR);
+		tag(ForgeTags.EGGS)
+			.addOptional(Util.rl("deep_aether", "quail_egg"));
 		tag(DelightfulItemTags.COOKED_CRAB)
 			.addOptional(Util.rl(Mods.ECO, "crab_meat"))
 			.addOptional(Util.rl("quark", "cooked_crab_leg"));
@@ -234,23 +245,27 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		tag(DelightfulItemTags.RAW_FISHES_KOI)
 			.addOptional(Util.rl("environmental", "koi"))
 			.addOptional(Util.rl("crittersandcompanions", "koi_fish"));
-		tag(DelightfulItemTags.RAW_FISHES_GLOWFISH)
-			.addOptional(Util.rl("biomemakeover", "glowfish"));
 		tag(ForgeTags.RAW_FISHES)
 			.addTag(DelightfulItemTags.RAW_FISHES_KOI)
-			.addTag(DelightfulItemTags.RAW_FISHES_GLOWFISH);
+			.addOptional(Util.rl("biomemakeover", "glowfish"))
+			.addOptional(Util.rl("deep_aether", "raw_aerglow_fish"));
 		tag(ForgeTags.COOKED_FISHES)
-			.addOptional(Util.rl("biomemakeover", "cooked_glowfish"));
-		tag(DelightfulItemTags.RAW_VENISON)
-			.add(DelightfulItems.VENISON_CHOPS.get())
+			.addOptional(Util.rl("biomemakeover", "cooked_glowfish"))
+			.addOptional(Util.rl("deep_aether", "cooked_aerglow_fish"));
+		tag(DelightfulItemTags.RAW_VENISON_COMPAT)
 			.addOptional(Util.rl("naturalist", "venison"))
 			.addOptional(Util.rl("goodall", "raw_venison"))
 			.addOptional(Util.rl(Mods.TF, "raw_venison"));
-		tag(DelightfulItemTags.COOKED_VENISON)
-			.add(DelightfulItems.COOKED_VENISON_CHOPS.get())
+		tag(DelightfulItemTags.RAW_VENISON)
+			.add(DelightfulItems.VENISON_CHOPS.get())
+			.addTag(DelightfulItemTags.RAW_VENISON_COMPAT);
+		tag(DelightfulItemTags.COOKED_VENISON_COMPAT)
 			.addOptional(Util.rl("naturalist", "cooked_venison"))
 			.addOptional(Util.rl("goodall", "cooked_venison"))
 			.addOptional(Util.rl(Mods.TF, "cooked_venison"));
+		tag(DelightfulItemTags.COOKED_VENISON)
+			.add(DelightfulItems.COOKED_VENISON_CHOPS.get())
+			.addTag(DelightfulItemTags.COOKED_VENISON_COMPAT);
 		tag(DelightfulItemTags.RAW_GOAT)
 			.add(DelightfulItems.RAW_GOAT.get());
 		tag(DelightfulItemTags.COOKED_GOAT)
@@ -275,6 +290,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		tag(DelightfulItemTags.GEMS_ROSE_QUARTZ)
 			.addOptional(Util.rl(Mods.BOP, "rose_quartz_shard"))
 			.addOptional(Util.rl("create", "rose_quartz"));
+		tag(DelightfulItemTags.GEMS_ZANITE).addOptional(Util.rl(Mods.AE, "zanite_gemstone"));
 		tag(DelightfulItemTags.CHOCOLATE)
 			.addOptional(Util.rl("neapolitan", "chocolate_bar"))
 			.addOptional(Util.rl("create", "bar_of_chocolate"))
@@ -367,21 +383,19 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Util.rl(Mods.FR, "gamblers_tea"));
 
 		// Serene Seasons
-		tag(DelightfulItemTags.SUMMER_CROPS)
-			.add(DelightfulItems.SALMONBERRY_PIPS.get());
+		tag(DelightfulItemTags.SUMMER_CROPS).add(DelightfulItems.SALMONBERRY_PIPS.get());
 
 		// Phantasm
 		this.addSelf(DelightfulItemTags.VOID_CRYSTAL_BLOCK);
 		tag(DelightfulItemTags.CRYSTAL_SPIKE_TIPS)
 			.addOptional(Util.rl(Mods.EP, "crystal_spike_tip"))
 			.addOptional(Util.rl(Mods.EP, "void_crystal_spike_tip"));
-		tag(DelightfulItemTags.STELLIUM_INGOT)
+		tag(DelightfulItemTags.INGOTS_STELLIUM)
 			.addOptional(Util.rl(Mods.EP, "stellium_ingot"));
 
 		tag(DelightfulItemTags.SOUL_STEEL_INGOT)
 			.addOptional(Util.rl("spirit", "soul_steel_ingot"));
-		tag(DelightfulItemTags.SOUL_STEEL_MAINHAND)
-			.add(Knives.SOUL_STEEL.get());
+		tag(DelightfulItemTags.SOUL_STEEL_MAINHAND).add(Knives.SOUL_STEEL.get());
 
 		// Botania
 		this.addSelf(DelightfulItemTags.LIVINGWOOD_TWIG);
@@ -396,17 +410,40 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		// Additional Additions
 		this.addSelf(DelightfulItemTags.ROSE_GOLD_ALLOY);
 		this.addSelf(DelightfulItemTags.GOLD_RING);
+		this.addSelf(GildedNetheriteKnifeItem.upgrade);
+		this.addSelf(RoseGoldKnifeItem.upgrade);
+
+		// Enderite
+		this.addSelf(EnderiteKnifeItem.upgrade);
 
 		// Nourished Nether
 		tag(DelightfulItemTags.NECRONIUM_INGOT)
 			.addOptional(Util.rl("nourished_nether", "necronium_ingot"));
-		tag(DelightfulItemTags.NECRONIUM_TOOLS)
-			.add(Knives.NECRONIUM.get());
+		tag(DelightfulItemTags.NECRONIUM_TOOLS).add(Knives.NECRONIUM.get());
 
 		// Undergarden
 		tag(DelightfulItemTags.CLOGGRUM_ITEMS).add(Knives.CLOGGRUM.get());
 		tag(DelightfulItemTags.FROSTSTEEL_ITEMS).add(Knives.FROSTSTEEL.get());
 		tag(DelightfulItemTags.UTHERIUM_ITEMS).add(Knives.UTHERIUM.get());
+		this.addSelf(ForgottenKnifeItem.upgrade);
+
+		// Deeper and Darker
+		this.addSelf(WardenKnifeItem.upgrade);
+
+		// Aether
+		this.addSelf(DelightfulItemTags.ENCHANTED_GRAVITITE);
+		this.addSelf(DelightfulItemTags.HOLYSTONE);
+
+		// Aether Redux
+		this.tag(DelightfulItemTags.INGOTS_VERIDIUM)
+			.addOptional(Util.rl("aether_redux", "veridium_ingot"));
+
+		// Deep Aether
+		this.tag(DelightfulItemTags.GEMS_SKYJADE)
+			.addOptionalTag(Util.rl("deep_aether", "skyjade_repairing"));
+		this.tag(DelightfulItemTags.INGOTS_STRATUS)
+			.addOptionalTag(Util.rl("deep_aether", "stratus_repairing"));
+		this.addSelf(DelightfulItemTags.STRATUS_UPGRADE);
 	}
 
 	/**

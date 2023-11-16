@@ -4,7 +4,7 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_stellium": {
+          "has_ingots/stellium": {
             "conditions": {
               "items": [
                 {
@@ -23,7 +23,7 @@
         },
         "requirements": [
           [
-            "has_stellium",
+            "has_ingots/stellium",
             "has_the_recipe"
           ]
         ],
@@ -43,15 +43,15 @@
               "value": "stellium_knife"
             },
             {
-              "type": "forge:mod_loaded",
-              "modid": "phantasm"
-            },
-            {
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
                 "tag": "forge:ingots/stellium"
               }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "phantasm"
             }
           ]
         }

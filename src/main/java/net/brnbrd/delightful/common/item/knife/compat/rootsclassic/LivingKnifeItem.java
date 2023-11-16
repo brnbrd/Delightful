@@ -25,7 +25,7 @@ public class LivingKnifeItem extends CompatKnifeItem {
 	}
 
 	@Override
-	public boolean isEnabled() {
-		return this.isLoaded();
+	public boolean enabled() {
+		return this.isLoaded() && super.enabled();
 	}
 }

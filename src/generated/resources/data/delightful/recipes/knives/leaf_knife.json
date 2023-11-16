@@ -11,15 +11,15 @@
               "value": "leaf_knife"
             },
             {
-              "type": "forge:mod_loaded",
-              "modid": "seeds"
-            },
-            {
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
                 "tag": "seeds:sharp_leaf"
               }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "seeds"
             }
           ]
         }

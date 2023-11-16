@@ -4,7 +4,7 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_experience": {
+          "has_heap_of_experience": {
             "conditions": {
               "items": [
                 {
@@ -23,7 +23,7 @@
         },
         "requirements": [
           [
-            "has_experience",
+            "has_heap_of_experience",
             "has_the_recipe"
           ]
         ],
@@ -43,15 +43,15 @@
               "value": "experience_knife"
             },
             {
-              "type": "forge:mod_loaded",
-              "modid": "create_sa"
-            },
-            {
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
                 "tag": "create_sa:heap_of_experience"
               }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "create_sa"
             }
           ]
         }

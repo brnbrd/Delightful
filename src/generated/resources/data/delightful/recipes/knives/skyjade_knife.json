@@ -1,0 +1,53 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "skyjade_knife"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:gems/skyjade"
+              }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "aether"
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "deep_aether"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "equipment",
+        "key": {
+          "m": {
+            "tag": "forge:gems/skyjade"
+          },
+          "s": {
+            "tag": "aether:skyroot_stick"
+          }
+        },
+        "pattern": [
+          "m",
+          "s"
+        ],
+        "result": {
+          "item": "delightful:skyjade_knife"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

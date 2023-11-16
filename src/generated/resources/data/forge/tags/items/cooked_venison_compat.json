@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "naturalist:cooked_venison",
+      "required": false
+    },
+    {
+      "id": "goodall:cooked_venison",
+      "required": false
+    },
+    {
+      "id": "twilightforest:cooked_venison",
+      "required": false
+    }
+  ]
+}

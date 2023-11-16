@@ -4,7 +4,7 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_black_opal": {
+          "has_gems/black_opal": {
             "conditions": {
               "items": [
                 {
@@ -23,7 +23,7 @@
         },
         "requirements": [
           [
-            "has_black_opal",
+            "has_gems/black_opal",
             "has_the_recipe"
           ]
         ],

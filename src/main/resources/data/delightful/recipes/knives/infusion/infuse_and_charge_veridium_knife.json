@@ -1,0 +1,32 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "infused_veridium_knife"
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "aether_redux"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "aether_redux:infusion",
+        "infusion_increase": 8,
+        "ingredient": {
+          "item": "delightful:veridium_knife"
+        },
+        "result": {
+          "item": "delightful:infused_veridium_knife"
+        }
+      }
+    }
+  ]
+}

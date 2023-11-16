@@ -40,7 +40,7 @@ public class KnightmetalKnifeItem extends CompatKnifeItem {
 	@Override
 	public List<Component> getTools() {
 		return List.of(
-			Component.translatable("item." + Mods.TF + ".knightmetal_sword.tooltip").withStyle(ChatFormatting.GRAY)
+			Component.translatable("item." + Mods.TF + ".knightmetal_sword.desc").withStyle(ChatFormatting.GRAY)
 		);
 	}
 }

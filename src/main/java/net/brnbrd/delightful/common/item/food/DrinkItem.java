@@ -1,5 +1,6 @@
 package net.brnbrd.delightful.common.item.food;
 
+import net.brnbrd.delightful.common.item.IConfigured;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -7,7 +8,7 @@ import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 import vectorwing.farmersdelight.common.item.DrinkableItem;
 
-public class DrinkItem extends DrinkableItem {
+public class DrinkItem extends DrinkableItem implements IConfigured {
     private final float heal;
 
     public DrinkItem(Item.Properties properties, float heal, boolean hasPotionEffectTooltip, boolean hasCustomTooltip) {

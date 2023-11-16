@@ -43,20 +43,11 @@
               "value": "matcha"
             },
             {
-              "type": "forge:or",
-              "values": [
-                {
-                  "type": "delightful:enabled",
-                  "value": "green_tea_leaf"
-                },
-                {
-                  "type": "forge:not",
-                  "value": {
-                    "type": "forge:tag_empty",
-                    "tag": "forge:tea_leaves/green"
-                  }
-                }
-              ]
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:tea_leaves/green"
+              }
             }
           ]
         }

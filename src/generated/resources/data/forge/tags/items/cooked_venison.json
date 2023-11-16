@@ -1,17 +1,6 @@
 {
   "values": [
     "delightful:cooked_venison_chops",
-    {
-      "id": "naturalist:cooked_venison",
-      "required": false
-    },
-    {
-      "id": "goodall:cooked_venison",
-      "required": false
-    },
-    {
-      "id": "twilightforest:cooked_venison",
-      "required": false
-    }
+    "#forge:cooked_venison_compat"
   ]
 }

@@ -8,6 +8,7 @@ import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -16,7 +17,6 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class FurnaceFuelItem extends DItem {
-
   private final int fuelTime;
 
   public FurnaceFuelItem(Properties pProperties, int fuelTime) {
@@ -24,14 +24,13 @@ public class FurnaceFuelItem extends DItem {
     this.fuelTime = fuelTime;
   }
 
-  public int getFuelTime() {
-    return this.fuelTime;
-  }
-
   @Override
-  public void appendHoverText(@NotNull ItemStack pStack, @Nullable Level pLevel, List<Component> comps, @NotNull TooltipFlag pIsAdvanced) {
-    comps.add(Component.literal("Sneak Right Click:").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.UNDERLINE));
-    comps.add(Component.literal("Applies " + (this.getFuelTime() / 20) + "s of burn time"));
+  public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> comps, @NotNull TooltipFlag pIsAdvanced) {
+    if (this.enabled()) {
+      comps.add(Component.literal("Sneak Right Click:").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.UNDERLINE));
+      comps.add(Component.literal("Applies " + (this.fuelTime / 20) + "s of burn time"));
+    }
+    super.appendHoverText(stack, level, comps, pIsAdvanced);
   }
 
   @Override
@@ -45,7 +44,7 @@ public class FurnaceFuelItem extends DItem {
     if (stack.getItem() instanceof FurnaceFuelItem fuel &&
       entity instanceof AbstractFurnaceBlockEntity furnace) {
       ContainerData data = furnace.dataAccess;
-      int newTime = data.get(0) + fuel.getFuelTime() + 1;
+      int newTime = data.get(0) + fuel.fuelTime + 1;
       data.set(0, newTime);
       data.set(1, newTime);
       furnace.setChanged();
@@ -60,5 +59,10 @@ public class FurnaceFuelItem extends DItem {
       p.addItem(i.getCraftingRemainingItem());
     }
     i.shrink(1);
+  }
+
+  @Override
+  public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
+    return this.fuelTime;
   }
 }

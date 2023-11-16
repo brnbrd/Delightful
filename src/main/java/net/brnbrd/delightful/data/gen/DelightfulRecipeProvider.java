@@ -6,7 +6,7 @@ import net.brnbrd.delightful.common.block.DelightfulBlocks;
 import net.brnbrd.delightful.common.block.DelightfulCabinetBlock;
 import net.brnbrd.delightful.common.crafting.EnabledCondition;
 import net.brnbrd.delightful.common.item.DelightfulItems;
-import net.brnbrd.delightful.common.item.knife.CompatKnifeItem;
+import net.brnbrd.delightful.common.item.ICompat;
 import net.brnbrd.delightful.common.item.knife.DelightfulKnifeItem;
 import net.brnbrd.delightful.common.item.knife.Knives;
 import net.brnbrd.delightful.compat.Mods;
@@ -29,6 +29,7 @@ import net.minecraftforge.common.crafting.conditions.ICondition;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import org.apache.commons.lang3.ArrayUtils;
 import org.jetbrains.annotations.NotNull;
 import vectorwing.farmersdelight.common.registry.ModBlocks;
 import vectorwing.farmersdelight.common.registry.ModItems;
@@ -36,6 +37,7 @@ import vectorwing.farmersdelight.common.tag.ForgeTags;
 import vectorwing.farmersdelight.data.builder.CookingPotRecipeBuilder;
 import vectorwing.farmersdelight.data.builder.CuttingBoardRecipeBuilder;
 import vectorwing.farmersdelight.data.recipe.CookingRecipes;
+import java.util.Arrays;
 import java.util.Objects;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
@@ -189,7 +191,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                     DelightfulItems.MATCHA.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
                 .addIngredient(Ingredient.of(DelightfulItemTags.TEA_LEAVES_GREEN), 2)
                 .unlockedBy("has_green_tea_leaves", has(DelightfulItemTags.TEA_LEAVES_GREEN)),
-            "cooking/green_tea_leaves", finished, enabled("matcha"), or(enabled(DelightfulItems.GREEN_TEA_LEAF), not(tagEmpty(DelightfulItemTags.TEA_LEAVES_GREEN))));
+            "cooking/green_tea_leaves", finished, enabled("matcha"), not(tagEmpty(DelightfulItemTags.TEA_LEAVES_GREEN)));
         wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.MATCHA_LATTE.get(), 1)
                 .requires(Items.GLASS_BOTTLE)
                 .requires(ForgeTags.MILK)
@@ -428,7 +430,8 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 Ingredient.of(Items.PUMPKIN_PIE),
                 Ingredient.of(ForgeTags.TOOLS_KNIVES),
                 DelightfulItems.PUMPKIN_PIE_SLICE.get(), 4),
-            "cutting/pumpkin_pie", finished, enabled("pumpkin_pie_slice"));wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
+            "cutting/pumpkin_pie", finished, enabled("pumpkin_pie_slice"));
+        wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
                 Ingredient.of(Items.CACTUS),
                 Ingredient.of(ForgeTags.TOOLS_KNIVES),
                 DelightfulItems.CACTUS_FLESH.get(), 2),
@@ -464,7 +467,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .define('s', Blocks.SNOW_BLOCK)
                 .define('i', DelightfulItems.MATCHA_ICE_CREAM.get())
                 .unlockedBy("has_matcha_ice_cream", has(DelightfulItems.MATCHA_ICE_CREAM.get())),
-            "matcha_ice_cream_block", finished, enabled(DelightfulItems.MATCHA_ICE_CREAM_BLOCK), enabled(DelightfulItems.MATCHA_ICE_CREAM), modLoaded("neapolitan"));
+            "matcha_ice_cream_block", finished, enabled(DelightfulItems.MATCHA_ICE_CREAM_BLOCK), enabled(DelightfulItems.MATCHA_ICE_CREAM), enabled("matcha"), modLoaded("neapolitan"));
 
         // Unwrappables
         ConditionalRecipe.builder()
@@ -520,13 +523,11 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 
     private void wrap(RecipeBuilder builder, String modid, String name, Consumer<FinishedRecipe> consumer, ICondition... conds) {
         ResourceLocation loc = Util.rl(modid, name);
-        ConditionalRecipe.Builder cond;
+        ConditionalRecipe.Builder cond = ConditionalRecipe.builder();
         if (conds.length > 1) {
-            cond = ConditionalRecipe.builder().addCondition(and(conds));
+            cond.addCondition(and(conds));
         } else if (conds.length == 1) {
-            cond = ConditionalRecipe.builder().addCondition(conds[0]);
-        } else {
-            cond = ConditionalRecipe.builder();
+            cond.addCondition(conds[0]);
         }
         FinishedRecipe[] recipe = new FinishedRecipe[1];
         builder.save(f -> recipe[0] = f, loc);
@@ -537,13 +538,11 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 
     private void wrap(SmithingTransformRecipeBuilder builder, String name, Consumer<FinishedRecipe> consumer, ICondition... conds) {
         ResourceLocation loc = Util.rl(Delightful.MODID, name);
-        ConditionalRecipe.Builder cond;
+        ConditionalRecipe.Builder cond = ConditionalRecipe.builder();
         if (conds.length > 1) {
-            cond = ConditionalRecipe.builder().addCondition(and(conds));
+            cond.addCondition(and(conds));
         } else if (conds.length == 1) {
-            cond = ConditionalRecipe.builder().addCondition(conds[0]);
-        } else {
-            cond = ConditionalRecipe.builder();
+            cond.addCondition(conds[0]);
         }
         FinishedRecipe[] recipe = new FinishedRecipe[1];
         builder.save(f -> recipe[0] = f, loc);
@@ -623,22 +622,27 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
     }
 
     private void knife(DelightfulKnifeItem knife, Consumer<FinishedRecipe> finished) {
-        if (knife.getRecipeType() == RecipeType.SMITHING) {
-            knifeSmith(knife, finished);
-            return;
-        }
-        String path = Util.name(knife);
         TagKey<Item> tag = knife.getTag();
-        ICondition cond = (knife instanceof CompatKnifeItem cki) ?
-            and(enabled(path), modLoaded(cki.getModid()), not(tagEmpty(tag))) :
-            and(enabled(path), not(tagEmpty(tag)));
-        wrap(ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, knife)
-                .define('m', Ingredient.of(tag))
-                .define('s', knife.getRod())
-                .pattern("m")
-                .pattern("s")
-                .unlockedBy("has_" + path.replace("_knife", ""), has(tag)),
-            "knives/" + path, finished, cond);
+        if (tag != null) {
+            String path = Util.name(knife);
+            ICondition[] conds = new ICondition[] { enabled(path), not(tagEmpty(tag)) };
+            if (knife instanceof ICompat compat) {
+                conds = ArrayUtils.addAll(conds, Arrays.stream(compat.getModid()).map(this::modLoaded).toList().toArray(new ICondition[0]));
+            }
+            if (knife.getRecipeType() == RecipeType.SMITHING) {
+                wrap(SmithingTransformRecipeBuilder.smithing(knife.getSmithing().getLeft(), knife.getSmithing().getRight(), Ingredient.of(tag), RecipeCategory.COMBAT, knife)
+                    .unlocks("has_" + tag.location().getPath(), has(tag)),
+                    "knives/smithing/" + path, finished, conds);
+            } else {
+                wrap(ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, knife)
+                    .define('m', Ingredient.of(tag))
+                    .define('s', knife.getRod())
+                    .pattern("m")
+                    .pattern("s")
+                    .unlockedBy("has_" + tag.location().getPath(), has(tag)),
+                    "knives/" + path, finished, conds);
+            }
+        }
     }
 
     private void knifeSmeltAndBlast(DelightfulKnifeItem knife, String metal, ResourceLocation nugget, Consumer<FinishedRecipe> finished) {
@@ -658,14 +662,6 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             .build(finished, Delightful.MODID, "knives/blasting/" + metal + "_" + nugget.getNamespace());
     }
 
-    private void knifeSmith(DelightfulKnifeItem knife, Consumer<FinishedRecipe> finished) {
-        String path = Util.name(knife);
-        TagKey<Item> tag = knife.getTag();
-        wrap(SmithingTransformRecipeBuilder.smithing(Ingredient.EMPTY, knife.getSmithingBase().get(), Ingredient.of(tag), RecipeCategory.COMBAT, knife)
-            .unlocks("has_" + tag.location().getPath(), has(tag)),
-            "knives/smithing/" + path, finished, enabled(path), not(tagEmpty(tag)));
-    }
-
     private EnabledCondition enabled(RegistryObject<Item> item) {
         return new EnabledCondition(Util.name(item));
     }
@@ -680,10 +676,11 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
         wrap(SimpleCookingRecipeBuilder.smoking(Ingredient.of(ingredient), RecipeCategory.FOOD, result, experience, 100).unlockedBy(name, has(ingredient)), "smoking/" + name, consumer, enabled(name));
     }
 
-    private ShapedRecipeBuilder shaped(RecipeCategory category, RegistryObject<Item> returns, int... count) {
-        if (count.length > 0 && count[0] > 1) {
-            return ShapedRecipeBuilder.shaped(category, returns.get(), count[0]);
-        }
-        return ShapedRecipeBuilder.shaped(category, returns.get());
+    private ShapedRecipeBuilder shaped(RecipeCategory category, RegistryObject<Item> returns, int count) {
+        return ShapedRecipeBuilder.shaped(category, returns.get(), count);
+    }
+
+    private ShapedRecipeBuilder shaped(RecipeCategory category, RegistryObject<Item> returns) {
+        return shaped(category, returns, 1);
     }
 }

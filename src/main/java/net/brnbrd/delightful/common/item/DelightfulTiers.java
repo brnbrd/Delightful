@@ -1,6 +1,7 @@
 package net.brnbrd.delightful.common.item;
 
 import net.brnbrd.delightful.Util;
+import net.brnbrd.delightful.compat.Mods;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.Tiers;
@@ -57,7 +58,7 @@ public enum DelightfulTiers implements Tier {
     BLAZING(3, 450, 12F, 2.5F, 2, Ingredient.of(Tags.Items.INGOTS_GOLD)),
     ADAMANTITE(4, 0, 8F, 3.5F, 15, DelightfulItems.getIngot("adamantite")),
     CRYSTALLINE(2, 183, 1F, 3.5F, 11, Ingredient.of(DelightfulItemTags.CRYSTAL_SPIKE_TIPS)),
-    STELLIUM(4, 1337, 7.5F, 5F, 17, Ingredient.of(DelightfulItemTags.STELLIUM_INGOT)),
+    STELLIUM(4, 1337, 7.5F, 5F, 17, Ingredient.of(DelightfulItemTags.INGOTS_STELLIUM)),
     ROSE_GOLD(2, 900, 9F, 2F, 17, Ingredient.of(Tags.Items.INGOTS_COPPER)),
     GILDED_NETHERITE(4, 2031, 10F, 4F, 20, Ingredient.of(Tags.Items.INGOTS_NETHERITE)),
     SOUL_STEEL(3, 200, 9F, 3.5F, 25, Ingredient.EMPTY),
@@ -65,7 +66,13 @@ public enum DelightfulTiers implements Tier {
     CLOGGRUM(2, 286, 6.0F, 3.0F, 8, DelightfulItems.getIngot("cloggrum")),
     FROSTSTEEL(2, 575, 7.0F, 2.0F, 20, DelightfulItems.getIngot("froststeel")),
     UTHERIUM(3, 1279, 8.5F, 3.5F, 17, DelightfulItems.getIngot("utherium")),
-    FORGOTTEN(4, 1876, 8.0F, 3.0F, 2, DelightfulItems.getIngot("forgotten_metal"));
+    FORGOTTEN(4, 1876, 8.0F, 3.0F, 2, DelightfulItems.getIngot("forgotten_metal")),
+    SKYROOT(0, 59, 2.0F, 0.0F, 15, Ingredient.of(Util.it(Mods.AE, "skyroot_repairing"))),
+    HOLYSTONE(1, 131, 4.0F, 1.0F, 5, Ingredient.of(Util.it(Mods.AE, "holystone_repairing"))),
+    ZANITE(2, 250, 6.0F, 2.0F, 14, Ingredient.of(Util.it(Mods.AE, "zanite_repairing"))),
+    GRAVITITE(3, 1561, 8.0F, 3.0F, 10, Ingredient.of(Util.it(Mods.AE, "gravitite_repairing"))),
+    VERIDIUM(2, 750, 2.25F, 1.0F, 0, Ingredient.of(DelightfulItemTags.INGOTS_VERIDIUM)),
+    INFUSED_VERIDIUM(2, 750, 7.0F, 1.0F, 0, Ingredient.of(DelightfulItemTags.INGOTS_VERIDIUM));
 
     private final int level;
     private final int uses;

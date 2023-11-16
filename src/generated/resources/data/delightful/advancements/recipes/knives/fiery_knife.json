@@ -4,7 +4,7 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_fiery": {
+          "has_ingots/fiery": {
             "conditions": {
               "items": [
                 {
@@ -23,7 +23,7 @@
         },
         "requirements": [
           [
-            "has_fiery",
+            "has_ingots/fiery",
             "has_the_recipe"
           ]
         ],
@@ -43,15 +43,15 @@
               "value": "fiery_knife"
             },
             {
-              "type": "forge:mod_loaded",
-              "modid": "twilightforest"
-            },
-            {
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
                 "tag": "forge:ingots/fiery"
               }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "twilightforest"
             }
           ]
         }

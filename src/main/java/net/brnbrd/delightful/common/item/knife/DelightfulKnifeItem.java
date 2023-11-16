@@ -1,6 +1,7 @@
 package net.brnbrd.delightful.common.item.knife;
 
 import net.brnbrd.delightful.Util;
+import net.brnbrd.delightful.common.item.ICompat;
 import net.brnbrd.delightful.common.item.IConfigured;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -12,11 +13,12 @@ import net.minecraft.world.level.Level;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.tags.ITagManager;
+import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import vectorwing.farmersdelight.common.item.KnifeItem;
+import java.util.Collections;
 import java.util.List;
-import java.util.function.Supplier;
 
 public class DelightfulKnifeItem extends KnifeItem implements IConfigured {
     private final TagKey<Item> tag;
@@ -28,18 +30,22 @@ public class DelightfulKnifeItem extends KnifeItem implements IConfigured {
 
     @Override
     public boolean isValidRepairItem(@NotNull ItemStack pToRepair, @NotNull ItemStack pRepair) {
-        return isEnabled() && super.isValidRepairItem(pToRepair, pRepair);
+        return this.enabled() && super.isValidRepairItem(pToRepair, pRepair);
     }
 
     @Override
-    public void appendHoverText(@NotNull ItemStack pStack, @Nullable Level pLevel, @NotNull List<Component> tool, @NotNull TooltipFlag pIsAdvanced) {
-        super.appendHoverText(pStack, pLevel, tool, pIsAdvanced);
-        if (!this.config()) {
-            tool.add(Component.translatable("tooltip.config_disabled").withStyle(ChatFormatting.UNDERLINE));
-        } else if (!this.isTag() && this.getTag() != null) {
-            tool.add(Component.translatable("tooltip.requires_tag"));
-            tool.add(Component.literal(this.getTag().location().toString()).withStyle(ChatFormatting.UNDERLINE));
+    public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> comps, @NotNull TooltipFlag pIsAdvanced) {
+        if (
+            this.enabledText(comps) &&
+            !(this instanceof ICompat) &&
+            Util.enabled(this) &&
+            !this.isTag() &&
+            this.getTag() != null
+        ) {
+            comps.add(Component.translatable("tooltip.requires_tag"));
+            comps.add(Component.literal(this.getTag().location().toString()).withStyle(ChatFormatting.UNDERLINE));
         }
+        super.appendHoverText(stack, level, comps, pIsAdvanced);
     }
 
     @Nullable
@@ -59,25 +65,21 @@ public class DelightfulKnifeItem extends KnifeItem implements IConfigured {
         );
     }
 
-    public boolean config() {
-        return Util.enabled(this);
-    }
-
     @Override
-    public boolean isEnabled() {
-        return this.config() && this.isTag();
+    public boolean enabled() {
+        return IConfigured.super.enabled() && this.isTag();
     }
 
     public Ingredient getRod() {
         return Ingredient.of(Tags.Items.RODS_WOODEN);
     }
 
-    public Supplier<Ingredient> getSmithingBase() {
-        return () -> Ingredient.EMPTY;
+    public ImmutablePair<Ingredient, Ingredient> getSmithing() {
+        return ImmutablePair.nullPair();
     }
 
     public @Nullable RecipeType<?> getRecipeType() {
-        return getSmithingBase().get().isEmpty() ? RecipeType.CRAFTING : RecipeType.SMITHING;
+        return getSmithing().equals(ImmutablePair.nullPair()) ? RecipeType.CRAFTING : RecipeType.SMITHING;
     }
 
     public boolean hasCustomName() {
@@ -85,6 +87,6 @@ public class DelightfulKnifeItem extends KnifeItem implements IConfigured {
     }
 
     public List<Component> getTools() {
-        return List.of();
+        return Collections.emptyList();
     }
 }

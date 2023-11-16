@@ -16,6 +16,10 @@
                 "type": "forge:tag_empty",
                 "tag": "forge:ingots/netherite"
               }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "oresabovediamonds"
             }
           ]
         }
@@ -31,7 +35,9 @@
         "result": {
           "item": "delightful:netherite_opal_knife"
         },
-        "template": []
+        "template": {
+          "item": "minecraft:netherite_upgrade_smithing_template"
+        }
       }
     }
   ]

@@ -4,7 +4,7 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_lead": {
+          "has_ingots/lead": {
             "conditions": {
               "items": [
                 {
@@ -23,7 +23,7 @@
         },
         "requirements": [
           [
-            "has_lead",
+            "has_ingots/lead",
             "has_the_recipe"
           ]
         ],

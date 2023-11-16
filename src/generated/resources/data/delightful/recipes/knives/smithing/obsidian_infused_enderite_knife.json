@@ -16,6 +16,10 @@
                 "type": "forge:tag_empty",
                 "tag": "forge:ingots/obsidian_infused_enderite"
               }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "lolenderite"
             }
           ]
         }
@@ -31,7 +35,9 @@
         "result": {
           "item": "delightful:obsidian_infused_enderite_knife"
         },
-        "template": []
+        "template": {
+          "tag": "lolenderite:enderite_upgrade_smithing_template"
+        }
       }
     }
   ]

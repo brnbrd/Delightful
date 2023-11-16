@@ -89,9 +89,10 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> JAM = forge("jam");
 	public static final TagKey<Item> JAMS = forge("jams");
 	public static final TagKey<Item> RAW_FISHES_KOI = forge("raw_fishes/koi");
-	public static final TagKey<Item> RAW_FISHES_GLOWFISH = forge("raw_fishes/glowfish");
 	public static final TagKey<Item> RAW_VENISON = forge("raw_venison");
+	public static final TagKey<Item> RAW_VENISON_COMPAT = forge("raw_venison_compat");
 	public static final TagKey<Item> COOKED_VENISON = forge("cooked_venison");
+	public static final TagKey<Item> COOKED_VENISON_COMPAT = forge("cooked_venison_compat");
 	public static final TagKey<Item> RAW_GOAT = forge("raw_goat");
 	public static final TagKey<Item> COOKED_GOAT = forge("cooked_goat");
 	public static final TagKey<Item> RAW_FROG = forge("raw_frog");
@@ -102,6 +103,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> INGOTS_STEEL = DelightfulItems.ingot("steel");
 	public static final TagKey<Item> INGOTS_ZINC = DelightfulItems.ingot("zinc");
 	public static final TagKey<Item> GEMS_ROSE_QUARTZ = forge("gems/rose_quartz");
+	public static final TagKey<Item> GEMS_ZANITE = forge("gems/zanite");
 	public static final TagKey<Item> ICE_CUBES = forge("ice_cubes");
 	public static final TagKey<Item> SEEDS_SALMONBERRY = forge("seeds/salmonberry");
 	public static final TagKey<Item> TORTILLA = forge("tortilla");
@@ -148,7 +150,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> SPRING_CROPS = Util.it("sereneseasons", "spring_crops");
 
 	// Phantasm
-	public static final TagKey<Item> STELLIUM_INGOT = DelightfulItems.ingot("stellium");
+	public static final TagKey<Item> INGOTS_STELLIUM = DelightfulItems.ingot("stellium");
 	public static final TagKey<Item> VOID_CRYSTAL_BLOCK = Util.it(Mods.EP, "void_crystal_block");
 	public static final TagKey<Item> CRYSTAL_SPIKE_TIPS = Util.it(Mods.EP, "crystal_spike_tips");
 
@@ -173,6 +175,20 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> CLOGGRUM_ITEMS = Util.it(Mods.UG, "cloggrum_items");
 	public static final TagKey<Item> FROSTSTEEL_ITEMS  = Util.it(Mods.UG, "froststeel_items");
 	public static final TagKey<Item> UTHERIUM_ITEMS  = Util.it(Mods.UG, "utherium_items");
+
+	// Aether
+	public static final TagKey<Item> SKYROOT_STICK = Util.it(Mods.AE, "skyroot_stick");
+	public static final TagKey<Item> SKYROOT_TOOL_CRAFTING = Util.it(Mods.AE, "skyroot_tool_crafting");
+	public static final TagKey<Item> ENCHANTED_GRAVITITE = Util.it(Mods.AE, "enchanted_gravitite");
+	public static final TagKey<Item> HOLYSTONE = Util.it(Mods.AE, "holystone");
+
+	// Aether Redux
+	public static final TagKey<Item> INGOTS_VERIDIUM = DelightfulItems.ingot("veridium");
+
+	// Deep Aether
+	public static final TagKey<Item> GEMS_SKYJADE = DelightfulItems.gem("skyjade");
+	public static final TagKey<Item> INGOTS_STRATUS = DelightfulItems.ingot("stratus");
+	public final static TagKey<Item> STRATUS_UPGRADE = Util.it("deep_aether", "stratus_smithing_template");
 
 	private static TagKey<Item> forge(String name) {
 		return Util.it("forge", name);
