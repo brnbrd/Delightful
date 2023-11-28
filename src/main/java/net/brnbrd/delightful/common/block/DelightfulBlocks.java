@@ -1,7 +1,9 @@
 package net.brnbrd.delightful.common.block;
 
 import net.brnbrd.delightful.Delightful;
+import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.item.DelightfulItems;
+import net.brnbrd.delightful.compat.Mods;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
@@ -45,19 +47,26 @@ public class DelightfulBlocks {
     public static final RegistryObject<Block> SALMONBERRY_PIE = BLOCKS.register("salmonberry_pie",
         () -> new PieBlock(Block.Properties.copy(ModBlocks.APPLE_PIE.get()), DelightfulItems.SALMONBERRY_PIE_SLICE));
     public static final RegistryObject<Block> PUMPKIN_PIE = BLOCKS.register("pumpkin_pie",
-        () -> new PieBlock(Block.Properties.copy(ModBlocks.APPLE_PIE.get()), DelightfulItems.PUMPKIN_PIE_SLICE));
+        () -> new DPieBlock(Block.Properties.copy(ModBlocks.APPLE_PIE.get()),
+            DelightfulItems.PUMPKIN_PIE_SLICE, Util.rl("minecraft", "pumpkin_pie")));
     public static final RegistryObject<Block> SOURCE_BERRY_PIE = BLOCKS.register("source_berry_pie",
-        () -> new PieBlock(Block.Properties.copy(ModBlocks.APPLE_PIE.get()), DelightfulItems.SOURCE_BERRY_PIE_SLICE));
+        () -> new DPieBlock(Block.Properties.copy(ModBlocks.APPLE_PIE.get()),
+            DelightfulItems.SOURCE_BERRY_PIE_SLICE, Util.rl(Mods.AN, "source_berry_pie")));
     public static final RegistryObject<Block> GLOOMGOURD_PIE = BLOCKS.register("gloomgourd_pie",
-        () -> new PieBlock(Block.Properties.copy(ModBlocks.APPLE_PIE.get()), DelightfulItems.GLOOMGOURD_PIE_SLICE));
+        () -> new DPieBlock(Block.Properties.copy(ModBlocks.APPLE_PIE.get()),
+            DelightfulItems.GLOOMGOURD_PIE_SLICE, Util.rl(Mods.UG, "gloomgourd_pie")));
     public static final RegistryObject<Block> BLUEBERRY_PIE = BLOCKS.register("blueberry_pie",
-        () -> new PieBlock(Block.Properties.copy(ModBlocks.APPLE_PIE.get()), DelightfulItems.BLUEBERRY_PIE_SLICE));
+        () -> new DPieBlock(Block.Properties.copy(ModBlocks.APPLE_PIE.get()),
+            DelightfulItems.BLUEBERRY_PIE_SLICE, Util.rl(Mods.BYG, "blueberry_pie")));
     public static final RegistryObject<Block> GREEN_APPLE_PIE = BLOCKS.register("green_apple_pie",
-        () -> new PieBlock(Block.Properties.copy(ModBlocks.APPLE_PIE.get()), DelightfulItems.GREEN_APPLE_PIE_SLICE));
+        () -> new DPieBlock(Block.Properties.copy(ModBlocks.APPLE_PIE.get()),
+            DelightfulItems.GREEN_APPLE_PIE_SLICE, Util.rl(Mods.BYG, "green_apple_pie")));
     public static final RegistryObject<Block> NIGHTSHADE_BERRY_PIE = BLOCKS.register("nightshade_berry_pie",
-        () -> new PieBlock(Block.Properties.copy(ModBlocks.APPLE_PIE.get()), DelightfulItems.NIGHTSHADE_BERRY_PIE_SLICE));
+        () -> new DPieBlock(Block.Properties.copy(ModBlocks.APPLE_PIE.get()),
+            DelightfulItems.NIGHTSHADE_BERRY_PIE_SLICE, Util.rl(Mods.BYG, "nightshade_berry_pie")));
     public static final RegistryObject<Block> CRIMSON_BERRY_PIE = BLOCKS.register("crimson_berry_pie",
-        () -> new PieBlock(Block.Properties.copy(ModBlocks.APPLE_PIE.get()), DelightfulItems.CRIMSON_BERRY_PIE_SLICE));
+        () -> new DPieBlock(Block.Properties.copy(ModBlocks.APPLE_PIE.get()),
+            DelightfulItems.CRIMSON_BERRY_PIE_SLICE, Util.rl(Mods.BYG, "crimson_berry_pie")));
     public static final RegistryObject<Block> ACORN_SACK = BLOCKS.register("acorn_sack",
         () ->  new Block(Block.Properties.copy(Blocks.BROWN_WOOL).strength(.5f).sound(SoundType.WOOL)));
     public static final RegistryObject<Block> SALMONBERRY_ICE_CREAM_BLOCK = BLOCKS.register("salmonberry_ice_cream_block",

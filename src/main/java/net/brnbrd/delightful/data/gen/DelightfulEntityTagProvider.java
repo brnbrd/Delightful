@@ -3,6 +3,7 @@ package net.brnbrd.delightful.data.gen;
 import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.data.tags.DelightfulEntityTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.EntityTypeTagsProvider;

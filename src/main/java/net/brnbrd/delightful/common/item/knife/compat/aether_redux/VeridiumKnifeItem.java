@@ -29,8 +29,8 @@ public class VeridiumKnifeItem extends AetherKnifeItem implements VeridiumItem {
 	}
 
 	@Override
-	public ItemStack getCreative() {
-		ItemStack stack = super.getCreative();
+	public @NotNull ItemStack getDefaultInstance() {
+		ItemStack stack = super.getDefaultInstance().copy();
 		return isCharged(this) ?
 			VeridiumItem.infuse(stack, VeridiumItem.MAXIUMUM_VERIDIUM_INFUSION)
 			: stack;

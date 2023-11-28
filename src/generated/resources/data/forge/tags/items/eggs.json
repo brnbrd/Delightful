@@ -3,6 +3,18 @@
     {
       "id": "deep_aether:quail_egg",
       "required": false
+    },
+    {
+      "id": "etcetera:eggple",
+      "required": false
+    },
+    {
+      "id": "naturalist:tortoise_egg",
+      "required": false
+    },
+    {
+      "id": "naturalist:alligator_egg",
+      "required": false
     }
   ]
 }

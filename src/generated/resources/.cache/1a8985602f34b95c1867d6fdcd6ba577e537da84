@@ -1,4 +1,4 @@
-// 1.20.1	2023-11-13T16:11:18.606378	delightful
+// 1.20.1	2023-11-27T18:45:12.9365917	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -34,7 +34,8 @@ d5906318c5440b26518838add68e4f83560e7b5a data/forge/tags/items/bars/chocolate.js
 523b85c9a41634acc4ce0f3fa92fa8112752c022 data/forge/tags/items/chocolate.json
 b660f1a0311fc2203d72ff4458a59fc12bbc7db2 data/forge/tags/items/coconut.json
 3d3bd338173ce8bc0b281103b27622e5ccb14dd0 data/forge/tags/items/cooked_crab.json
-271a4e4d23270ef82cc1b0eeca87d78b1d79246b data/forge/tags/items/cooked_fishes.json
+3bdd3f494645eb479237e608dc388ce706852bca data/forge/tags/items/cooked_fishes.json
+48e602c6f4f273972ce8f4a41af2bf1a7c1e42b5 data/forge/tags/items/cooked_fishes/tuna.json
 00e918264f91150bfbf5329246b99cf630f9a8c7 data/forge/tags/items/cooked_frog.json
 1c85522976cad2572285f27729fe2cc7a683eeb9 data/forge/tags/items/cooked_goat.json
 e08198559f958b742fad0449e0c6c7f0a3d2df90 data/forge/tags/items/cooked_venison.json
@@ -42,7 +43,7 @@ e08198559f958b742fad0449e0c6c7f0a3d2df90 data/forge/tags/items/cooked_venison.js
 ce0cca03b997a0f5c8225b24a328f87ad007c76a data/forge/tags/items/crops/ginger.json
 8bb46e6415e3da5064bc3040a988e6ba21adc2cc data/forge/tags/items/dough.json
 7640d02b3c85e174322059097d96b529ba37ac78 data/forge/tags/items/dough/corn.json
-e8d296365cd87f24cd283aa88c334ee04ede3061 data/forge/tags/items/eggs.json
+4daddade2cc94b1b00c95f3c5bb1d3ad147eca4b data/forge/tags/items/eggs.json
 2bc728dc60343f5b07e9e47386ba9fc94143168c data/forge/tags/items/food/meat.json
 1c81d3e07f385f66cb2f1f94cd77f8454b885384 data/forge/tags/items/fruits.json
 b33dde3cf95c3f821d49bc84b8c46f9fd65289e8 data/forge/tags/items/fruits/apple.json
@@ -103,8 +104,9 @@ cb32dc7ec073cb5f8ad2cd8c61bd9003968dfbfe data/forge/tags/items/meat.json
 94b6847f07f6f126dce1fd83b01efdf67a2ffab7 data/forge/tags/items/nuts/chestnut.json
 8f8e52b081e678ea1e4498dfac0a5b0c7a97314b data/forge/tags/items/nuts/peanut.json
 f68eda2d82738cd84af2fb721e59b68d26022945 data/forge/tags/items/nuts/walnut.json
-031261b3bcf93914d5c51822f2cd2cb724e69111 data/forge/tags/items/raw_fishes.json
+19cf4aa8419c259ce95e1f5d24a0534a73acf0e1 data/forge/tags/items/raw_fishes.json
 7a3289909b879db8b0b7b764c7a4735a44546b3c data/forge/tags/items/raw_fishes/koi.json
+9f462470dc335b8293a9de28fff2b04e59f2b7e6 data/forge/tags/items/raw_fishes/tuna.json
 03dcf73d5c5e443d47b74a94cd0d51c81ca3fe72 data/forge/tags/items/raw_frog.json
 c73bbf3e77db2da1be1a030628742d1b1bb3b6f6 data/forge/tags/items/raw_goat.json
 da20014e08a0b65e939b4344e9370ca740376689 data/forge/tags/items/raw_venison.json

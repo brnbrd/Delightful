@@ -1,5 +1,6 @@
 {
   "values": [
+    "#forge:cooked_fishes/tuna",
     {
       "id": "biomemakeover:cooked_glowfish",
       "required": false

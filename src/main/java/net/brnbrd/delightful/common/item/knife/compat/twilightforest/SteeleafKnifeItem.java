@@ -1,5 +1,6 @@
 package net.brnbrd.delightful.common.item.knife.compat.twilightforest;
 
+import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.DelightfulTiers;
 import net.brnbrd.delightful.common.item.knife.CompatKnifeItem;
@@ -7,6 +8,7 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.item.enchantment.Enchantments;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class SteeleafKnifeItem extends CompatKnifeItem {
@@ -20,9 +22,7 @@ public class SteeleafKnifeItem extends CompatKnifeItem {
   }
 
   @Override
-  public ItemStack getCreative() {
-    ItemStack knife = super.getCreative();
-    knife.enchant(Enchantments.SMITE, 2);
-    return knife;
+  public @NotNull ItemStack getDefaultInstance() {
+    return Util.enchant(super.getDefaultInstance(), Enchantments.SMITE, 2);
   }
 }

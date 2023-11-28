@@ -1,4 +1,4 @@
-package net.brnbrd.delightful.data.gen;
+package net.brnbrd.delightful.data.tags;
 
 import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;

@@ -14,6 +14,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -84,6 +85,12 @@ public class Util {
 
   public static Ingredient ing(Supplier<? extends ItemLike> i) {
     return Ingredient.of(i.get());
+  }
+
+  public static ItemStack enchant(ItemStack stack, Enchantment enchantment, int level) {
+    ItemStack enchanted = stack.copy();
+    enchanted.enchant(enchantment, level);
+    return enchanted;
   }
 
   public static void dropOrGive(ItemStack stack, Level world, BlockPos drop, Player give) {

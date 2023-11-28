@@ -225,7 +225,10 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptionalTag(Util.rl(Mods.WB, "berry_jams"));
 		tag(DelightfulItemTags.SUGAR).add(Items.SUGAR);
 		tag(ForgeTags.EGGS)
-			.addOptional(Util.rl("deep_aether", "quail_egg"));
+			.addOptional(Util.rl("deep_aether", "quail_egg"))
+			.addOptional(Util.rl("etcetera", "eggple"))
+			.addOptional(Util.rl("naturalist", "tortoise_egg"))
+			.addOptional(Util.rl("naturalist", "alligator_egg"));
 		tag(DelightfulItemTags.COOKED_CRAB)
 			.addOptional(Util.rl(Mods.ECO, "crab_meat"))
 			.addOptional(Util.rl("quark", "cooked_crab_leg"));
@@ -245,11 +248,18 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		tag(DelightfulItemTags.RAW_FISHES_KOI)
 			.addOptional(Util.rl("environmental", "koi"))
 			.addOptional(Util.rl("crittersandcompanions", "koi_fish"));
+		tag(DelightfulItemTags.RAW_FISHES_TUNA)
+			.addOptional(Util.rl("spawn", "tuna_chunk"));
+		tag(DelightfulItemTags.COOKED_FISHES_TUNA)
+			.addOptional(Util.rl("spawn", "cooked_tuna_chunk"));
 		tag(ForgeTags.RAW_FISHES)
 			.addTag(DelightfulItemTags.RAW_FISHES_KOI)
+			.addTag(DelightfulItemTags.RAW_FISHES_TUNA)
 			.addOptional(Util.rl("biomemakeover", "glowfish"))
-			.addOptional(Util.rl("deep_aether", "raw_aerglow_fish"));
+			.addOptional(Util.rl("deep_aether", "raw_aerglow_fish"))
+			.addOptional(Util.rl("spawn", "angler_fish"));
 		tag(ForgeTags.COOKED_FISHES)
+			.addTag(DelightfulItemTags.COOKED_FISHES_TUNA)
 			.addOptional(Util.rl("biomemakeover", "cooked_glowfish"))
 			.addOptional(Util.rl("deep_aether", "cooked_aerglow_fish"));
 		tag(DelightfulItemTags.RAW_VENISON_COMPAT)

@@ -6,6 +6,7 @@ import net.brnbrd.delightful.common.item.IConfigured;
 import net.brnbrd.delightful.network.DPacketHandler;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -72,11 +73,12 @@ public class ModEvents {
         if (event.getTabKey() == ModCreativeTabs.TAB_FARMERS_DELIGHT.getKey()) {
             DelightfulItems.ITEMS.getEntries().stream().filter(RegistryObject::isPresent).forEach((item) -> {
                 Item i = item.get();
+                ItemStack inst = i.getDefaultInstance();
                 if (
-                    (i instanceof IConfigured conf && conf.enabled() && !conf.getCreative().isEmpty()) ||
+                    (i instanceof IConfigured conf && conf.enabled() && !inst.isEmpty()) ||
                     !(i instanceof IConfigured))
                 {
-                    event.accept(i, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                    event.accept(inst, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 }
             });
         }

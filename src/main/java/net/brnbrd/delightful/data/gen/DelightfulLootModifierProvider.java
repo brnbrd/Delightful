@@ -8,6 +8,7 @@ import net.brnbrd.delightful.common.loot.LootItemBlockIsTagCondition;
 import net.brnbrd.delightful.common.loot.LootItemEnabledCondition;
 import net.brnbrd.delightful.compat.Mods;
 import net.brnbrd.delightful.data.tags.DelightfulBlockTags;
+import net.brnbrd.delightful.data.tags.DelightfulEntityTags;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.advancements.critereon.*;
 import net.minecraft.data.PackOutput;

@@ -1,7 +1,7 @@
 package net.brnbrd.delightful.common.item.knife.compat.aether;
 
 import net.brnbrd.delightful.common.item.DelightfulTiers;
-import net.brnbrd.delightful.data.gen.DelightfulEntityTags;
+import net.brnbrd.delightful.data.tags.DelightfulEntityTags;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.network.protocol.game.ClientboundSetEntityMotionPacket;
 import net.minecraft.server.level.ServerPlayer;

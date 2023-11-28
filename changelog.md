@@ -1,5 +1,16 @@
 # Changelog
 
+## 3.4.3
+
+### Updates
+- Added Jade icons for compat pies
+- More compat tags
+
+### Translations
+- Updated:
+  - zh_cn (thanks, Junnaturefox!)
+
+
 ## 3.4.2 - The Aether Update
 
 ### Updates
@@ -14,6 +25,7 @@
 - Added smithing templates to appropriate recipes
 - Removed Adamantite Knife (Enlightend supports natively)
 - Removed Deorum and Reinforced Deorum Knives (F&A toolset no longer craftable)
+
 
 ## 3.4.1
 

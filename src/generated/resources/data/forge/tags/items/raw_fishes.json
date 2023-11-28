@@ -1,12 +1,17 @@
 {
   "values": [
     "#forge:raw_fishes/koi",
+    "#forge:raw_fishes/tuna",
     {
       "id": "biomemakeover:glowfish",
       "required": false
     },
     {
       "id": "deep_aether:raw_aerglow_fish",
+      "required": false
+    },
+    {
+      "id": "spawn:angler_fish",
       "required": false
     }
   ]

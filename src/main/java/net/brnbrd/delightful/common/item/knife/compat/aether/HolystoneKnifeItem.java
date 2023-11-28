@@ -3,7 +3,7 @@ package net.brnbrd.delightful.common.item.knife.compat.aether;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.item.DelightfulTiers;
 import net.brnbrd.delightful.compat.Mods;
-import net.brnbrd.delightful.data.gen.DelightfulEntityTags;
+import net.brnbrd.delightful.data.tags.DelightfulEntityTags;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;

@@ -1,0 +1,31 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "spawn:tuna_sandwich"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "minecraft:bread"
+          },
+          {
+            "tag": "forge:cooked_fishes/tuna"
+          },
+          {
+            "tag": "forge:salad_ingredients"
+          }
+        ],
+        "result": {
+          "item": "spawn:tuna_sandwich",
+          "count": 1
+        }
+      }
+    }
+  ]
+}

@@ -129,5 +129,6 @@ public class DelightfulLanguageProvider extends LanguageProvider {
         add("tooltip.requires_tag", "Requires non-empty tag:");
         add("tooltip.requires_modid", "Requires modid:");
         add("config.jade.plugin_delightful.crop_progress", "Crop Progress");
+        add("config.jade.plugin_delightful.pie_icons", "Pie Icons");
     }
 }
