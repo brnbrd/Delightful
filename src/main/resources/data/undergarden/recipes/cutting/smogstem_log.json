@@ -1,0 +1,34 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "undergarden:smogstem_log"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "undergarden:smogstem_log"
+          }
+        ],
+        "result": [
+          {
+            "item": "undergarden:stripped_smogstem_log"
+          },
+          {
+            "item": "farmersdelight:tree_bark"
+          }
+        ],
+        "sound": "minecraft:item.axe.strip",
+        "tool": {
+          "type": "farmersdelight:tool_action",
+          "action": "axe_strip"
+        }
+      }
+    }
+  ]
+}

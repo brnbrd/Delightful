@@ -1,0 +1,34 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "aether:skyroot_log"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "aether:skyroot_log"
+          }
+        ],
+        "result": [
+          {
+            "item": "aether:stripped_skyroot_log"
+          },
+          {
+            "item": "farmersdelight:tree_bark"
+          }
+        ],
+        "sound": "minecraft:item.axe.strip",
+        "tool": {
+          "type": "farmersdelight:tool_action",
+          "action": "axe_strip"
+        }
+      }
+    }
+  ]
+}

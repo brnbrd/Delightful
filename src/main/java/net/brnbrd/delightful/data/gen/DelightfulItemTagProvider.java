@@ -238,7 +238,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Util.rl("croptopia", "cheese"))
 			.addOptional(Util.rl("thermal", "cheese_wedge"));
 		tag(ForgeTags.MILK)
-			.addOptional(Util.rl("dracovitadelight", "tribull_milk"));
+			.addOptional(Util.rl("dracovitadelight", "tribull_milk"))
+			.addOptional(Util.rl(Mods.AE, "skyroot_milk_bucket"));
 		tag(DelightfulItemTags.TEA_LEAVES)
 			.addTag(DelightfulItemTags.TEA_LEAVES_GREEN)
 			.addOptionalTag(Util.rl(Mods.FR, "tea_leaves"));

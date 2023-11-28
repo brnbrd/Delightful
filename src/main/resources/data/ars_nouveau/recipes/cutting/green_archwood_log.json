@@ -1,0 +1,34 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "ars_nouveau:green_archwood_log"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "ars_nouveau:green_archwood_log"
+          }
+        ],
+        "result": [
+          {
+            "item": "ars_nouveau:stripped_green_archwood_log"
+          },
+          {
+            "item": "farmersdelight:tree_bark"
+          }
+        ],
+        "sound": "minecraft:item.axe.strip",
+        "tool": {
+          "type": "farmersdelight:tool_action",
+          "action": "axe_strip"
+        }
+      }
+    }
+  ]
+}

@@ -3,6 +3,10 @@
     {
       "id": "dracovitadelight:tribull_milk",
       "required": false
+    },
+    {
+      "id": "aether:skyroot_milk_bucket",
+      "required": false
     }
   ]
 }

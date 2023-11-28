@@ -1,4 +1,4 @@
-// 1.20.1	2023-11-27T18:45:12.9365917	delightful
+// 1.20.1	2023-11-28T11:20:20.8738704	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -98,7 +98,7 @@ aadee531028bb9ab4dc01e4d7efafaa837fff885 data/forge/tags/items/jellies.json
 141ced3812a57c60e6bc14245cea3118b7c7a7e4 data/forge/tags/items/jelly.json
 4fe4a4f1390c34bcb1e6c6d0448171bb634783c6 data/forge/tags/items/lavender.json
 cb32dc7ec073cb5f8ad2cd8c61bd9003968dfbfe data/forge/tags/items/meat.json
-381db8c8245ab6fbfd68fb9ec9b724ebe8b23ae2 data/forge/tags/items/milk.json
+cf117be3f8853ef5f7d2b40c16edbf1eae3951f2 data/forge/tags/items/milk.json
 8a3c2977c79d8942e1c12afaceec80b345fd3d92 data/forge/tags/items/nuts.json
 6af11aa5504f33d9e620a7cb9b7bc797476c0a7f data/forge/tags/items/nuts/acorn.json
 94b6847f07f6f126dce1fd83b01efdf67a2ffab7 data/forge/tags/items/nuts/chestnut.json
