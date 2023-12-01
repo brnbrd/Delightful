@@ -4,6 +4,7 @@
 
 ### Updates
 - Added Jade icons for compat pies
+- Tree Bark compat for: Ars Nouveau, Ecologics, Undergarden, Spawn, Aether, Deep Aether, Aether Redux
 - More compat tags and recipe overrides
 
 ### Translations
