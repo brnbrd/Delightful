@@ -54,7 +54,7 @@
               "values": [
                 {
                   "type": "forge:tag_empty",
-                  "tag": "forge:cheese"
+                  "tag": "forge:cheeses"
                 },
                 {
                   "type": "delightful:enabled",

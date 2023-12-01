@@ -4,7 +4,7 @@
 
 ### Updates
 - Added Jade icons for compat pies
-- More compat tags
+- More compat tags and recipe overrides
 
 ### Translations
 - Updated:

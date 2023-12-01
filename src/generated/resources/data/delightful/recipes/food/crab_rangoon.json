@@ -21,7 +21,7 @@
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
-                "tag": "forge:cheese"
+                "tag": "forge:cheeses"
               }
             },
             {
@@ -42,7 +42,7 @@
             "tag": "forge:dough/wheat"
           },
           {
-            "tag": "forge:cheese"
+            "tag": "forge:cheeses"
           },
           {
             "tag": "forge:cooked_crab"

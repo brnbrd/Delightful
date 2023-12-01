@@ -1,0 +1,37 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:cheeses"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "key": {
+          "O": {
+            "item": "farmersdelight:pie_crust"
+          },
+          "m": {
+            "tag": "forge:milk"
+          },
+          "s": {
+            "item": "minecraft:sweet_berries"
+          }
+        },
+        "pattern": [
+          "sss",
+          "sss",
+          "mOm"
+        ],
+        "result": {
+          "item": "farmersdelight:sweet_berry_cheesecake"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

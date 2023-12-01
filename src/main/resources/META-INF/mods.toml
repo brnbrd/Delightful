@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[43,)"
+loaderVersion="[47,)"
 license="MIT License"
 issueTrackerURL="https://github.com/brnbrd/Delightful/issues"
 
@@ -11,7 +11,7 @@ displayURL="https://www.curseforge.com/minecraft/mc-mods/delightful"
 updateJSONURL="https://raw.githubusercontent.com/brnbrd/Delightful/1.19/update/update.json"
 logoFile="delightful.png"
 logoBlur=false
-credits=""
+credits="championhestu (artist), vectorwing"
 authors="brnbrd"
 description="Farmer's Delight addon with mod compatibility features and fun new foods."
 itemIcon="delightful:smore"
@@ -20,14 +20,21 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
 [[dependencies.delightful]]
     modId="forge"
     mandatory=true
-    versionRange="[43.2,)"
+    versionRange="[47,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.delightful]]
     modId="farmersdelight"
     mandatory=true
-    versionRange="[1.19-1.2,)"
+    versionRange="[1.20.1-1.2.3,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.delightful]]
+    modId="miners_delight"
+    mandatory=false
+    versionRange="[0,)"
     ordering="AFTER"
     side="BOTH"
 

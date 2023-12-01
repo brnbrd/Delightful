@@ -231,12 +231,15 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Util.rl("naturalist", "alligator_egg"));
 		tag(DelightfulItemTags.COOKED_CRAB)
 			.addOptional(Util.rl(Mods.ECO, "crab_meat"))
-			.addOptional(Util.rl("quark", "cooked_crab_leg"));
+			.addOptional(Util.rl("quark", "cooked_crab_leg"))
+			.addOptional(Util.rl("crabbersdelight", "cooked_crab"));
 		tag(DelightfulItemTags.CHEESE)
 			.addOptional(Util.rl("brewinandchewin", "flaxen_cheese_wedge"))
 			.addOptional(Util.rl("farmlife", "tribull_cheese_wedge"))
 			.addOptional(Util.rl("croptopia", "cheese"))
 			.addOptional(Util.rl("thermal", "cheese_wedge"));
+		tag(DelightfulItemTags.CHEESES)
+			.addTag(DelightfulItemTags.CHEESE);
 		tag(ForgeTags.MILK)
 			.addOptional(Util.rl("dracovitadelight", "tribull_milk"))
 			.addOptional(Util.rl(Mods.AE, "skyroot_milk_bucket"));

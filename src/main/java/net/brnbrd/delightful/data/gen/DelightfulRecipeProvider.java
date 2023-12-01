@@ -84,12 +84,12 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
         wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.CHEESEBURGER.get())
                 .requires(ForgeTags.BREAD)
                 .requires(ModItems.BEEF_PATTY.get())
-                .requires(DelightfulItemTags.CHEESE)
+                .requires(DelightfulItemTags.CHEESES)
                 .requires(ForgeTags.SALAD_INGREDIENTS)
                 .requires(ForgeTags.CROPS_TOMATO)
                 .requires(ForgeTags.CROPS_ONION)
-                .unlockedBy("has_cheese", has(DelightfulItemTags.CHEESE)),
-            "food/cheeseburger", finished, enabled("cheeseburger"), tagEmpty(DelightfulItemTags.BURGER_BUN), not(tagEmpty(DelightfulItemTags.CHEESE)), not(enabled("use_milk_tag")));
+                .unlockedBy("has_cheese", has(DelightfulItemTags.CHEESES)),
+            "food/cheeseburger", finished, enabled("cheeseburger"), tagEmpty(DelightfulItemTags.BURGER_BUN), not(tagEmpty(DelightfulItemTags.CHEESES)), not(enabled("use_milk_tag")));
         wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.CHEESEBURGER.get())
                 .requires(ForgeTags.BREAD)
                 .requires(ModItems.BEEF_PATTY.get())
@@ -98,28 +98,28 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .requires(ForgeTags.CROPS_TOMATO)
                 .requires(ForgeTags.CROPS_ONION)
                 .unlockedBy("has_beef_patty_and_cheese", has(ModItems.BEEF_PATTY.get(), Items.MILK_BUCKET)),
-            "food/cheeseburger_from_milk", finished, enabled("cheeseburger"), or(tagEmpty(DelightfulItemTags.BURGER_BUN), tagEmpty(DelightfulItemTags.CHEESE), enabled("use_milk_tag")));
+            "food/cheeseburger_from_milk", finished, enabled("cheeseburger"), or(tagEmpty(DelightfulItemTags.BURGER_BUN), tagEmpty(DelightfulItemTags.CHEESES), enabled("use_milk_tag")));
         wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.CHEESEBURGER.get())
                 .requires(DelightfulItemTags.BURGER_BUN)
                 .requires(ModItems.BEEF_PATTY.get())
-                .requires(DelightfulItemTags.CHEESE)
+                .requires(DelightfulItemTags.CHEESES)
                 .requires(ForgeTags.SALAD_INGREDIENTS)
                 .requires(ForgeTags.CROPS_TOMATO)
                 .requires(ForgeTags.CROPS_ONION)
                 .unlockedBy("has_beef_patty_and_cheese", has(ModItems.BEEF_PATTY.get(), Items.MILK_BUCKET)),
-            "food/cheeseburger_from_bun", finished, enabled("cheeseburger"), not(tagEmpty(DelightfulItemTags.BURGER_BUN)), not(tagEmpty(DelightfulItemTags.CHEESE)), not(enabled("use_milk_tag")));
+            "food/cheeseburger_from_bun", finished, enabled("cheeseburger"), not(tagEmpty(DelightfulItemTags.BURGER_BUN)), not(tagEmpty(DelightfulItemTags.CHEESES)), not(enabled("use_milk_tag")));
         wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.DELUXE_CHEESEBURGER.get())
                 .requires(ForgeTags.BREAD)
                 .requires(ModItems.BEEF_PATTY.get())
-                .requires(DelightfulItemTags.CHEESE)
+                .requires(DelightfulItemTags.CHEESES)
                 .requires(ModItems.BEEF_PATTY.get())
-                .requires(DelightfulItemTags.CHEESE)
+                .requires(DelightfulItemTags.CHEESES)
                 .requires(ModItems.COOKED_BACON.get())
                 .requires(ForgeTags.SALAD_INGREDIENTS)
                 .requires(ForgeTags.CROPS_TOMATO)
                 .requires(ForgeTags.CROPS_ONION)
                 .unlockedBy("has_bacon", has(ModItems.COOKED_BACON.get())),
-            "food/deluxe_cheeseburger", finished, enabled("deluxe_cheeseburger"), tagEmpty(DelightfulItemTags.BURGER_BUN), not(tagEmpty(DelightfulItemTags.CHEESE)), not(enabled("use_milk_tag")));
+            "food/deluxe_cheeseburger", finished, enabled("deluxe_cheeseburger"), tagEmpty(DelightfulItemTags.BURGER_BUN), not(tagEmpty(DelightfulItemTags.CHEESES)), not(enabled("use_milk_tag")));
         wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.DELUXE_CHEESEBURGER.get())
                 .requires(ForgeTags.BREAD)
                 .requires(ModItems.BEEF_PATTY.get())
@@ -131,19 +131,19 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .requires(ForgeTags.CROPS_TOMATO)
                 .requires(ForgeTags.CROPS_ONION)
                 .unlockedBy("has_bacon", has(ModItems.COOKED_BACON.get())),
-            "food/deluxe_cheeseburger_from_milk", finished, enabled("deluxe_cheeseburger"), or(tagEmpty(DelightfulItemTags.BURGER_BUN), tagEmpty(DelightfulItemTags.CHEESE), enabled("use_milk_tag")));
+            "food/deluxe_cheeseburger_from_milk", finished, enabled("deluxe_cheeseburger"), or(tagEmpty(DelightfulItemTags.BURGER_BUN), tagEmpty(DelightfulItemTags.CHEESES), enabled("use_milk_tag")));
         wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.DELUXE_CHEESEBURGER.get())
                 .requires(DelightfulItemTags.BURGER_BUN)
                 .requires(ModItems.BEEF_PATTY.get())
-                .requires(DelightfulItemTags.CHEESE)
+                .requires(DelightfulItemTags.CHEESES)
                 .requires(ModItems.BEEF_PATTY.get())
-                .requires(DelightfulItemTags.CHEESE)
+                .requires(DelightfulItemTags.CHEESES)
                 .requires(ModItems.COOKED_BACON.get())
                 .requires(ForgeTags.SALAD_INGREDIENTS)
                 .requires(ForgeTags.CROPS_TOMATO)
                 .requires(ForgeTags.CROPS_ONION)
                 .unlockedBy("has_bacon", has(ModItems.COOKED_BACON.get())),
-            "food/deluxe_cheeseburger_from_bun", finished, enabled("deluxe_cheeseburger"), not(tagEmpty(DelightfulItemTags.BURGER_BUN)), not(tagEmpty(DelightfulItemTags.CHEESE)), not(enabled("use_milk_tag")));
+            "food/deluxe_cheeseburger_from_bun", finished, enabled("deluxe_cheeseburger"), not(tagEmpty(DelightfulItemTags.BURGER_BUN)), not(tagEmpty(DelightfulItemTags.CHEESES)), not(enabled("use_milk_tag")));
         wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.MARSHMALLOW_STICK.get(), 2)
                 .requires(DelightfulItemTags.SUGAR)
                 .requires(DelightfulItemTags.WATER)
@@ -168,16 +168,16 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             "food/smore_from_chocolate", finished, enabled("smore"), not(tagEmpty(DelightfulItemTags.BARS_CHOCOLATE)));
         wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.CRAB_RANGOON.get())
                 .requires(ForgeTags.DOUGH_WHEAT)
-                .requires(DelightfulItemTags.CHEESE)
+                .requires(DelightfulItemTags.CHEESES)
                 .requires(DelightfulItemTags.COOKED_CRAB)
                 .unlockedBy("has_cooked_crab", has(DelightfulItemTags.COOKED_CRAB)),
-            "food/crab_rangoon", finished, enabled("crab_rangoon"), not(tagEmpty(DelightfulItemTags.COOKED_CRAB)), not(tagEmpty(DelightfulItemTags.CHEESE)), not(enabled("use_milk_tag")));
+            "food/crab_rangoon", finished, enabled("crab_rangoon"), not(tagEmpty(DelightfulItemTags.COOKED_CRAB)), not(tagEmpty(DelightfulItemTags.CHEESES)), not(enabled("use_milk_tag")));
         wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.CRAB_RANGOON.get())
                 .requires(ForgeTags.DOUGH_WHEAT)
                 .requires(ForgeTags.MILK)
                 .requires(DelightfulItemTags.COOKED_CRAB)
                 .unlockedBy("has_cooked_crab", has(DelightfulItemTags.COOKED_CRAB)),
-            "food/crab_rangoon_from_milk", finished, enabled("crab_rangoon"), not(tagEmpty(DelightfulItemTags.COOKED_CRAB)), or(tagEmpty(DelightfulItemTags.CHEESE), enabled("use_milk_tag")));
+            "food/crab_rangoon_from_milk", finished, enabled("crab_rangoon"), not(tagEmpty(DelightfulItemTags.COOKED_CRAB)), or(tagEmpty(DelightfulItemTags.CHEESES), enabled("use_milk_tag")));
         wrap(SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(DelightfulItems.MARSHMALLOW_STICK.get()), RecipeCategory.FOOD,
                     DelightfulItems.COOKED_MARSHMALLOW_STICK.get(), 0.5F, 600)
                 .unlockedBy("has_marshmallow_stick", has(DelightfulItems.MARSHMALLOW_STICK.get())),

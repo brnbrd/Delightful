@@ -18,7 +18,7 @@
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
-                "tag": "forge:cheese"
+                "tag": "forge:cheeses"
               }
             },
             {
@@ -42,13 +42,13 @@
             "item": "farmersdelight:beef_patty"
           },
           {
-            "tag": "forge:cheese"
+            "tag": "forge:cheeses"
           },
           {
             "item": "farmersdelight:beef_patty"
           },
           {
-            "tag": "forge:cheese"
+            "tag": "forge:cheeses"
           },
           {
             "item": "farmersdelight:cooked_bacon"
