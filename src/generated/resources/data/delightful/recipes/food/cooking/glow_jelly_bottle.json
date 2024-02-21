@@ -4,8 +4,20 @@
     {
       "conditions": [
         {
-          "type": "delightful:enabled",
-          "value": "glow_jelly_bottle"
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "glow_jelly_bottle"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:mod_loaded",
+                "modid": "fruitsdelight"
+              }
+            }
+          ]
         }
       ],
       "recipe": {

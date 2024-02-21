@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-21T12:22:53.2949161	Recipes
+// 1.20.1	2024-02-21T13:03:23.2371613	Recipes
 6c217dd6477efa10f6042809ba959d53036ab5e2 data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 5b82f87851220644287d771121677deac66b3b89 data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
 cf29033c1c919355c261025df529938e6ebc73f8 data/delightful/advancements/recipes/campfire/cactus_steak.json
@@ -20,8 +20,8 @@ b23790b73831cc516485de3895282215a4bb12f7 data/delightful/advancements/recipes/fo
 17b4fd952211ac573c199ff8dce265f9a3ee001d data/delightful/advancements/recipes/food/cooking/coconut_curry.json
 44c7615d509a5eb2efd30b1c7f87bea7a26bb232 data/delightful/advancements/recipes/food/cooking/coconut_curry_no_ginger.json
 1499e66b8288740c89cefe418256eb7b0838e2ba data/delightful/advancements/recipes/food/cooking/ender_nectar.json
-403c776e076c0ca14f8aa2a6565ac1f3b4c9491e data/delightful/advancements/recipes/food/cooking/glow_jelly_bottle.json
-68cd7019faa9ff9795bff3f255b8afe834d5b659 data/delightful/advancements/recipes/food/cooking/jelly_bottle.json
+f2e9f953457ba1d9475ab11f67373a76b605968e data/delightful/advancements/recipes/food/cooking/glow_jelly_bottle.json
+8d336038679ac6606a45cddbf36ecb66dee87692 data/delightful/advancements/recipes/food/cooking/jelly_bottle.json
 0cded452749c026a1a1db7f7a65c1bd88dc4e9a9 data/delightful/advancements/recipes/food/cooking/nut_butter_bottle.json
 ba11239f2804485150013f8cc109072b0c5bbdf9 data/delightful/advancements/recipes/food/cooking/nut_milk.json
 e0f9a87be509a8fc39dbe38f5857ce5e944f10c6 data/delightful/advancements/recipes/food/cooking/rock_candy.json
@@ -153,8 +153,8 @@ e4effe42d4c7a98e3a8e6ba29363aa4145107e48 data/delightful/recipes/food/clover_hon
 14e41dbe215cb9666d647b5e86ac497315de0015 data/delightful/recipes/food/cooking/coconut_curry.json
 603b5b9a01a4ff2cbd7cd9a3ff5c317d5d9453e9 data/delightful/recipes/food/cooking/coconut_curry_no_ginger.json
 d0505d91081ce5073207fb1de6d70dd345850a9b data/delightful/recipes/food/cooking/ender_nectar.json
-8e3d158cdb00b4edea7933091db56072a113e5c4 data/delightful/recipes/food/cooking/glow_jelly_bottle.json
-c9ca8a35b0e90e346272ebf0856100fe54ae2f13 data/delightful/recipes/food/cooking/jelly_bottle.json
+0c749dc1e0be103ca712eb954b2d760237d787b8 data/delightful/recipes/food/cooking/glow_jelly_bottle.json
+35cbdd330d7f7b01d9f5260f8dfbabd0fadf58d3 data/delightful/recipes/food/cooking/jelly_bottle.json
 27d700967e94dc7bd8615288a79cbbca25a9965a data/delightful/recipes/food/cooking/nut_butter_bottle.json
 49dd27476a29a44325c894d344c6b1dd02989207 data/delightful/recipes/food/cooking/nut_milk.json
 e29dba697d49ba3248a05fa6e619eab449388e65 data/delightful/recipes/food/cooking/rock_candy.json
