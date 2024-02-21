@@ -24,7 +24,8 @@ public class VenisonItem extends DItem {
 
 	public boolean isTag() {
 		var tags = ForgeRegistries.ITEMS.tags();
-		return tags.isKnownTagName(DelightfulItemTags.RAW_VENISON_COMPAT) &&
+		return tags != null &&
+			tags.isKnownTagName(DelightfulItemTags.RAW_VENISON_COMPAT) &&
 			!tags.getTag(DelightfulItemTags.RAW_VENISON_COMPAT).isEmpty() &&
 			tags.isKnownTagName(DelightfulItemTags.COOKED_VENISON_COMPAT) &&
 			!tags.getTag(DelightfulItemTags.COOKED_VENISON_COMPAT).isEmpty();

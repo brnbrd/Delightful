@@ -1,6 +1,7 @@
 package net.brnbrd.delightful.data.gen;
 
 import net.brnbrd.delightful.common.block.*;
+import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.resources.ResourceLocation;
@@ -107,8 +108,21 @@ public class DelightfulBlockLoot extends BlockLootSubProvider {
             }
         );
 
-        // Salmonberry Bush drops Pips
-        this.dropSelf(DelightfulBlocks.SALMONBERRY_BUSH.get());
+        // Salmonberry Bush drops Pips and optional Berry
+        this.add(DelightfulBlocks.SALMONBERRY_BUSH.get(), (b) -> {
+                LootTable.Builder loot = LootTable.lootTable().withPool(
+                    LootPool.lootPool().add(LootItem.lootTableItem(DelightfulItems.SALMONBERRY_PIPS.get()))
+                );
+                for (int i = 2; i <= SalmonberryBushBlock.MAX_AGE; i++) {
+                    loot = loot.withPool(LootPool.lootPool()
+                        .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(b)
+                            .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(SalmonberryBushBlock.AGE, i)))
+                        .add(LootItem.lootTableItem(DelightfulItems.SALMONBERRIES.get()))
+                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, (float) i - 1))));
+                }
+                return applyExplosionDecay(b, loot);
+            }
+        );
 
         // Crates
         this.dropSelf(DelightfulBlocks.SALMONBERRY_SACK.get());

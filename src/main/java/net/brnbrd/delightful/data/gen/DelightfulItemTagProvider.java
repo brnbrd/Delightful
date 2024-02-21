@@ -229,10 +229,10 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Util.rl("etcetera", "eggple"))
 			.addOptional(Util.rl("naturalist", "tortoise_egg"))
 			.addOptional(Util.rl("naturalist", "alligator_egg"));
-		tag(DelightfulItemTags.COOKED_CRAB)
+		tag(DelightfulItemTags.CRAB_MEAT)
 			.addOptional(Util.rl(Mods.ECO, "crab_meat"))
 			.addOptional(Util.rl("quark", "cooked_crab_leg"))
-			.addOptional(Util.rl("crabbersdelight", "cooked_crab"));
+			.addOptional(Util.rl("crabbersdelight", "crab_legs"));
 		tag(DelightfulItemTags.CHEESE)
 			.addOptional(Util.rl("brewinandchewin", "flaxen_cheese_wedge"))
 			.addOptional(Util.rl("farmlife", "tribull_cheese_wedge"))

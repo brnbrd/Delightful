@@ -3,9 +3,12 @@
 ## 3.4.3
 
 ### Updates
+- Crab Rangoon now uses tag "forge:crab_meat" rather than "forge:cooked_crab"'
+- Planted Salmonberry Bushes now correctly drop berries when broken
 - Added Jade icons for compat pies
 - Tree Bark compat for: Ars Nouveau, Ecologics, Undergarden, Spawn, Aether, Deep Aether, Aether Redux
 - More compat tags and recipe overrides
+- Cleanup console output at mod startup
 
 ### Translations
 - Updated:

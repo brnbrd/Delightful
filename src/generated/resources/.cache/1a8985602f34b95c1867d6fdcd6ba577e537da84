@@ -1,4 +1,4 @@
-// 1.20.1	2023-11-30T15:33:31.3943265	delightful
+// 1.20.1	2024-02-21T12:22:53.2929139	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -34,13 +34,13 @@ d5906318c5440b26518838add68e4f83560e7b5a data/forge/tags/items/bars/chocolate.js
 4a8cdc77e14731d7decd9c89def602f12485efd8 data/forge/tags/items/cheeses.json
 523b85c9a41634acc4ce0f3fa92fa8112752c022 data/forge/tags/items/chocolate.json
 b660f1a0311fc2203d72ff4458a59fc12bbc7db2 data/forge/tags/items/coconut.json
-d760d91fcc3c8d25fcc131bcf1c9a73d50ca4dd7 data/forge/tags/items/cooked_crab.json
 3bdd3f494645eb479237e608dc388ce706852bca data/forge/tags/items/cooked_fishes.json
 48e602c6f4f273972ce8f4a41af2bf1a7c1e42b5 data/forge/tags/items/cooked_fishes/tuna.json
 00e918264f91150bfbf5329246b99cf630f9a8c7 data/forge/tags/items/cooked_frog.json
 1c85522976cad2572285f27729fe2cc7a683eeb9 data/forge/tags/items/cooked_goat.json
 e08198559f958b742fad0449e0c6c7f0a3d2df90 data/forge/tags/items/cooked_venison.json
 32dc374a8a29e1eafe41f59d25780cf9b6a73a23 data/forge/tags/items/cooked_venison_compat.json
+75e9eb74f6e31c8e4683fa8370a6ce7bfb60c605 data/forge/tags/items/crab_meat.json
 ce0cca03b997a0f5c8225b24a328f87ad007c76a data/forge/tags/items/crops/ginger.json
 8bb46e6415e3da5064bc3040a988e6ba21adc2cc data/forge/tags/items/dough.json
 7640d02b3c85e174322059097d96b529ba37ac78 data/forge/tags/items/dough/corn.json

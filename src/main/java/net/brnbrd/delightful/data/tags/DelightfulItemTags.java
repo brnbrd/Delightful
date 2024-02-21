@@ -73,7 +73,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> BARS_CHOCOLATE = forge("bars/chocolate");
 	public static final TagKey<Item> CHEESES = forge("cheeses");
 	public static final TagKey<Item> CHEESE = forge("cheese");
-	public static final TagKey<Item> COOKED_CRAB = forge("cooked_crab");
+	public static final TagKey<Item> CRAB_MEAT = forge("crab_meat");
 	public static final TagKey<Item> CROPS_GINGER = forge("crops/ginger");
 	public static final TagKey<Item> COCONUT = forge("coconut");
 	public static final TagKey<Item> NUTS = forge("nuts");

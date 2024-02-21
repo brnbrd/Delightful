@@ -72,7 +72,7 @@ public class Mods {
 				return manaRegen.get();
 			}
 		}
-		return () -> MobEffects.DIG_SPEED;
+		return () -> MobEffects.ABSORPTION;
 	}
 
 	public static Supplier<MobEffect> getVitality() {
@@ -82,7 +82,7 @@ public class Mods {
 				return vitality.get();
 			}
 		}
-		return () -> MobEffects.DIG_SPEED;
+		return () -> MobEffects.DAMAGE_RESISTANCE;
 	}
 
 	public static Supplier<MobEffect> getCaffeinated() {
@@ -102,6 +102,6 @@ public class Mods {
 				return virulent.get();
 			}
 		}
-		return () -> MobEffects.DIG_SPEED;
+		return () -> MobEffects.FIRE_RESISTANCE;
 	}
 }

@@ -8,7 +8,7 @@
             "conditions": {
               "items": [
                 {
-                  "tag": "forge:cooked_crab"
+                  "tag": "forge:crab_meat"
                 }
               ]
             },
@@ -46,7 +46,7 @@
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
-                "tag": "forge:cooked_crab"
+                "tag": "forge:crab_meat"
               }
             },
             {

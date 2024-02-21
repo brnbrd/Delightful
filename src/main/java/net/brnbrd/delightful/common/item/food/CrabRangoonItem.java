@@ -24,18 +24,15 @@ public class CrabRangoonItem extends DItem {
 
 	public boolean isTag() {
 		var tags = ForgeRegistries.ITEMS.tags();
-		return tags.isKnownTagName(DelightfulItemTags.COOKED_CRAB) &&
-			!tags.getTag(DelightfulItemTags.COOKED_CRAB).isEmpty() &&
-			tags.isKnownTagName(DelightfulItemTags.CHEESES) &&
-			!tags.getTag(DelightfulItemTags.CHEESES).isEmpty();
+		return tags.isKnownTagName(DelightfulItemTags.CRAB_MEAT) &&
+			!tags.getTag(DelightfulItemTags.CRAB_MEAT).isEmpty();
 	}
 
 	@Override
 	public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> comps, @NotNull TooltipFlag pIsAdvanced) {
 		if (!this.isTag()) {
 			comps.add(Component.translatable("tooltip.requires_tag"));
-			comps.add(Component.literal(DelightfulItemTags.COOKED_CRAB.location().toString()).withStyle(ChatFormatting.UNDERLINE));
-			comps.add(Component.literal(DelightfulItemTags.CHEESES.location().toString()).withStyle(ChatFormatting.UNDERLINE));
+			comps.add(Component.literal(DelightfulItemTags.CRAB_MEAT.location().toString()).withStyle(ChatFormatting.UNDERLINE));
 		} else {
 			super.appendHoverText(stack, level, comps, pIsAdvanced);
 		}

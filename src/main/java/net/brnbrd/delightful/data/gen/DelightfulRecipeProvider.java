@@ -169,15 +169,15 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
         wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.CRAB_RANGOON.get())
                 .requires(ForgeTags.DOUGH_WHEAT)
                 .requires(DelightfulItemTags.CHEESES)
-                .requires(DelightfulItemTags.COOKED_CRAB)
-                .unlockedBy("has_cooked_crab", has(DelightfulItemTags.COOKED_CRAB)),
-            "food/crab_rangoon", finished, enabled("crab_rangoon"), not(tagEmpty(DelightfulItemTags.COOKED_CRAB)), not(tagEmpty(DelightfulItemTags.CHEESES)), not(enabled("use_milk_tag")));
+                .requires(DelightfulItemTags.CRAB_MEAT)
+                .unlockedBy("has_cooked_crab", has(DelightfulItemTags.CRAB_MEAT)),
+            "food/crab_rangoon", finished, enabled("crab_rangoon"), not(tagEmpty(DelightfulItemTags.CRAB_MEAT)), not(tagEmpty(DelightfulItemTags.CHEESES)), not(enabled("use_milk_tag")));
         wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.CRAB_RANGOON.get())
                 .requires(ForgeTags.DOUGH_WHEAT)
                 .requires(ForgeTags.MILK)
-                .requires(DelightfulItemTags.COOKED_CRAB)
-                .unlockedBy("has_cooked_crab", has(DelightfulItemTags.COOKED_CRAB)),
-            "food/crab_rangoon_from_milk", finished, enabled("crab_rangoon"), not(tagEmpty(DelightfulItemTags.COOKED_CRAB)), or(tagEmpty(DelightfulItemTags.CHEESES), enabled("use_milk_tag")));
+                .requires(DelightfulItemTags.CRAB_MEAT)
+                .unlockedBy("has_cooked_crab", has(DelightfulItemTags.CRAB_MEAT)),
+            "food/crab_rangoon_from_milk", finished, enabled("crab_rangoon"), not(tagEmpty(DelightfulItemTags.CRAB_MEAT)), or(tagEmpty(DelightfulItemTags.CHEESES), enabled("use_milk_tag")));
         wrap(SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(DelightfulItems.MARSHMALLOW_STICK.get()), RecipeCategory.FOOD,
                     DelightfulItems.COOKED_MARSHMALLOW_STICK.get(), 0.5F, 600)
                 .unlockedBy("has_marshmallow_stick", has(DelightfulItems.MARSHMALLOW_STICK.get())),
@@ -568,7 +568,6 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
         FinishedRecipe[] recipe = new FinishedRecipe[1];
         builder.build(f -> recipe[0] = f, loc);
         cond.addRecipe(recipe[0])
-            .generateAdvancement()
             .build(consumer, loc);
     }
 
