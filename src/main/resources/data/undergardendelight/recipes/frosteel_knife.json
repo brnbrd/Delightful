@@ -7,21 +7,14 @@
           "type": "forge:and",
           "values": [
             {
-              "type": "delightful:enabled",
-              "value": "froststeel_knife"
+              "type": "forge:item_exists",
+              "item": "undergardendelight:frosteel_knife"
             },
             {
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
                 "tag": "forge:ingots/froststeel"
-              }
-            },
-            {
-              "type": "forge:not",
-              "value": {
-                "type": "forge:mod_loaded",
-                "modid": "undergardendelight"
               }
             },
             {
@@ -47,7 +40,7 @@
           "s"
         ],
         "result": {
-          "item": "delightful:froststeel_knife"
+          "item": "undergardendelight:frosteel_knife"
         },
         "show_notification": true
       }

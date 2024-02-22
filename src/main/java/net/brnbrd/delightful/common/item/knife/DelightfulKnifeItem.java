@@ -28,6 +28,8 @@ public class DelightfulKnifeItem extends KnifeItem implements IConfigured {
         this.tag = tag;
     }
 
+
+
     @Override
     public boolean isValidRepairItem(@NotNull ItemStack pToRepair, @NotNull ItemStack pRepair) {
         return this.enabled() && super.isValidRepairItem(pToRepair, pRepair);

@@ -41,25 +41,33 @@ public class Mods {
 		return ModList.get().isLoaded(modid);
 	}
 
+	// All must be loaded
 	public static boolean loaded(@NotNull String... modids) {
-		if (modids.length == 1) {
+		if (modids.length < 1) {
+			return true;
+		} else if (modids.length == 1) {
 			return loaded(modids[0]);
-		}
-		for (String mod : modids) {
-			if (!loaded(mod)) {
-				return false;
+		} else {
+			for (String mod : modids) {
+				if (!loaded(mod)) {
+					return false;
+				}
 			}
 		}
 		return true;
 	}
 
+	// One must be loaded
 	public static boolean orLoaded(@NotNull String... modids) {
-		if (modids.length == 1) {
+		if (modids.length < 1) {
+			return false;
+		} else if (modids.length == 1) {
 			return loaded(modids[0]);
-		}
-		for (String mod : modids) {
-			if (loaded(mod)) {
-				return true;
+		} else {
+			for (String mod : modids) {
+				if (loaded(mod)) {
+					return true;
+				}
 			}
 		}
 		return false;

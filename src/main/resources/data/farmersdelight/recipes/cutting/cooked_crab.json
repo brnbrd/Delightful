@@ -1,0 +1,37 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "crabbersdelight:cooked_crab"
+        },
+        {
+          "type": "forge:not",
+          "value":         {
+            "type": "forge:item_exists",
+            "item": "ecologics:crab_meat"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "crabbersdelight:cooked_crab"
+          }
+        ],
+        "result": [
+          {
+            "count": 4,
+            "item": "crabbersdelight:crab_legs"
+          }
+        ],
+        "tool": {
+          "tag": "forge:tools/knives"
+        }
+      }
+    }
+  ]
+}

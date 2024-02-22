@@ -15,6 +15,8 @@ public class DelightfulLootItemConditions {
 		() -> new LootItemConditionType(new LootItemBlockIsTagCondition.Serializer()));
 	public static final RegistryObject<LootItemConditionType> ENABLED = LICT.register("enabled",
 		() -> new LootItemConditionType(new LootItemEnabledCondition.Serializer()));
+	public static final RegistryObject<LootItemConditionType> MOD_LOADED = LICT.register("mod_loaded",
+		() -> new LootItemConditionType(new LootItemModLoadedCondition.Serializer()));
 
 	public static void create(IEventBus bus) {
 		LICT.register(bus);

@@ -61,19 +61,20 @@ public class DelightfulItems {
         () -> new GummyItem((new Item.Properties()).food(Nutrition.SALMONBERRY_GUMMY)));
     public static final RegistryObject<Item> SALMONBERRY_PIE = registerItem("salmonberry_pie",
         () -> new BlockItem(DelightfulBlocks.SALMONBERRY_PIE.get(), ModItems.basicItem()));
-    public static final RegistryObject<Item> SALMONBERRY_PIE_SLICE = registerFood("salmonberry_pie_slice", Nutrition.SALMONBERRY_PIE_SLICE);
+    public static final RegistryObject<Item> SALMONBERRY_PIE_SLICE = registerItem("salmonberry_pie_slice",
+        () -> new DItem((new Item.Properties()).food(Nutrition.SALMONBERRY_PIE_SLICE), true));
     public static final RegistryObject<Item> PUMPKIN_PIE_SLICE = registerFood("pumpkin_pie_slice", FoodValues.PIE_SLICE);
-    public static final RegistryObject<Item> SOURCE_BERRY_PIE_SLICE = registerCompatFood(ArsNouveauCompat.pie + "_slice", ArsNouveauCompat.SOURCE_BERRY_PIE_SLICE,
+    public static final RegistryObject<Item> SOURCE_BERRY_PIE_SLICE = registerCompatPieSlice(ArsNouveauCompat.pie + "_slice", ArsNouveauCompat.SOURCE_BERRY_PIE_SLICE,
         Mods.AN);
-    public static final RegistryObject<Item> GLOOMGOURD_PIE_SLICE = registerCompatFood(UndergardenCompat.pie + "_slice", UndergardenCompat.GLOOMGOURD_PIE_SLICE.get(),
+    public static final RegistryObject<Item> GLOOMGOURD_PIE_SLICE = registerCompatPieSlice(UndergardenCompat.pie + "_slice", UndergardenCompat.GLOOMGOURD_PIE_SLICE.get(),
         Mods.UG);
-    public static final RegistryObject<Item> BLUEBERRY_PIE_SLICE = registerCompatFood(BYGCompat.blueberry_pie + "_slice", BYGCompat.BLUEBERRY_PIE_SLICE.get(),
+    public static final RegistryObject<Item> BLUEBERRY_PIE_SLICE = registerCompatPieSlice(BYGCompat.blueberry_pie + "_slice", BYGCompat.BLUEBERRY_PIE_SLICE.get(),
         Mods.BYG);
-    public static final RegistryObject<Item> GREEN_APPLE_PIE_SLICE = registerCompatFood(BYGCompat.green_apple_pie + "_slice", BYGCompat.GREEN_APPLE_PIE_SLICE.get(),
+    public static final RegistryObject<Item> GREEN_APPLE_PIE_SLICE = registerCompatPieSlice(BYGCompat.green_apple_pie + "_slice", BYGCompat.GREEN_APPLE_PIE_SLICE.get(),
         Mods.BYG);
-    public static final RegistryObject<Item> NIGHTSHADE_BERRY_PIE_SLICE = registerCompatFood(BYGCompat.nightshade_berry_pie + "_slice", BYGCompat.NIGHTSHADE_BERRY_PIE_SLICE.get(),
+    public static final RegistryObject<Item> NIGHTSHADE_BERRY_PIE_SLICE = registerCompatPieSlice(BYGCompat.nightshade_berry_pie + "_slice", BYGCompat.NIGHTSHADE_BERRY_PIE_SLICE.get(),
         Mods.BYG);
-    public static final RegistryObject<Item> CRIMSON_BERRY_PIE_SLICE = registerCompatFood(BYGCompat.crimson_berry_pie + "_slice", BYGCompat.CRIMSON_BERRY_PIE_SLICE.get(),
+    public static final RegistryObject<Item> CRIMSON_BERRY_PIE_SLICE = registerCompatPieSlice(BYGCompat.crimson_berry_pie + "_slice", BYGCompat.CRIMSON_BERRY_PIE_SLICE.get(),
         Mods.BYG);
     public static final RegistryObject<Item> ANIMAL_FAT = registerFood("animal_fat", Nutrition.ANIMAL_FAT);
     public static final RegistryObject<Item> ANIMAL_OIL_BOTTLE = registerItem("animal_oil_bottle",
@@ -143,6 +144,10 @@ public class DelightfulItems {
             }
         }
         return registerItem(name, () -> new DItem((new Item.Properties()).food(food)));
+    }
+
+    public static RegistryObject<Item> registerCompatPieSlice(String name, FoodProperties food, String modid) {
+        return registerItem(name, () -> new CompatItem((new Item.Properties().food(food)), true, modid));
     }
 
     public static RegistryObject<Item> registerCompatFood(String name, FoodProperties food, String modid) {

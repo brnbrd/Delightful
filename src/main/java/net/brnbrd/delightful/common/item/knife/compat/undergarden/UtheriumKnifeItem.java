@@ -22,6 +22,11 @@ public class UtheriumKnifeItem extends CompatKnifeItem {
 	}
 
 	@Override
+	public String[] getConflicts() {
+		return new String[]{"undergardendelight"};
+	}
+
+	@Override
 	public List<Component> getTools() {
 		return List.of(Component.translatable("tooltip.utheric_sword").withStyle(ChatFormatting.RED));
 	}

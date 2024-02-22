@@ -20,6 +20,11 @@ public class FroststeelKnifeItem extends CompatKnifeItem {
 	}
 
 	@Override
+	public String[] getConflicts() {
+		return new String[]{"undergardendelight"};
+	}
+
+	@Override
 	public List<Component> getTools() {
 		return List.of(Component.translatable("tooltip.froststeel_sword").withStyle(ChatFormatting.AQUA));
 	}

@@ -18,6 +18,13 @@
               }
             },
             {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:mod_loaded",
+                "modid": "undergardendelight"
+              }
+            },
+            {
               "type": "forge:mod_loaded",
               "modid": "undergarden"
             }

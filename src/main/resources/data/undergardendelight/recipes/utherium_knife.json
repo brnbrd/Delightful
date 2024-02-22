@@ -7,21 +7,14 @@
           "type": "forge:and",
           "values": [
             {
-              "type": "delightful:enabled",
-              "value": "froststeel_knife"
+              "type": "forge:item_exists",
+              "item": "undergardendelight:utherium_knife"
             },
             {
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
-                "tag": "forge:ingots/froststeel"
-              }
-            },
-            {
-              "type": "forge:not",
-              "value": {
-                "type": "forge:mod_loaded",
-                "modid": "undergardendelight"
+                "tag": "forge:ingots/utherium"
               }
             },
             {
@@ -36,7 +29,7 @@
         "category": "equipment",
         "key": {
           "m": {
-            "tag": "forge:ingots/froststeel"
+            "tag": "forge:ingots/utherium"
           },
           "s": {
             "tag": "forge:rods/wooden"
@@ -47,7 +40,7 @@
           "s"
         ],
         "result": {
-          "item": "delightful:froststeel_knife"
+          "item": "undergardendelight:utherium_knife"
         },
         "show_notification": true
       }

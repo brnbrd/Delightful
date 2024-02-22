@@ -7,6 +7,7 @@ import net.brnbrd.delightful.common.block.DelightfulCabinetBlock;
 import net.brnbrd.delightful.common.crafting.EnabledCondition;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.ICompat;
+import net.brnbrd.delightful.common.item.IConfigured;
 import net.brnbrd.delightful.common.item.knife.DelightfulKnifeItem;
 import net.brnbrd.delightful.common.item.knife.Knives;
 import net.brnbrd.delightful.compat.Mods;
@@ -38,6 +39,7 @@ import vectorwing.farmersdelight.data.builder.CookingPotRecipeBuilder;
 import vectorwing.farmersdelight.data.builder.CuttingBoardRecipeBuilder;
 import vectorwing.farmersdelight.data.recipe.CookingRecipes;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
@@ -624,7 +626,14 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
         TagKey<Item> tag = knife.getTag();
         if (tag != null) {
             String path = Util.name(knife);
-            ICondition[] conds = new ICondition[] { enabled(path), not(tagEmpty(tag)) };
+            ICondition[] conds = new ICondition[] {
+                enabled(path),
+                not(tagEmpty(tag))
+            };
+            String[] conflicts = knife.getConflicts();
+            if (conflicts.length > 0) {
+                conds = ArrayUtils.addAll(conds, Arrays.stream(conflicts).map(conf -> not(modLoaded(conf))).toList().toArray(new ICondition[0]));
+            }
             if (knife instanceof ICompat compat) {
                 conds = ArrayUtils.addAll(conds, Arrays.stream(compat.getModid()).map(this::modLoaded).toList().toArray(new ICondition[0]));
             }

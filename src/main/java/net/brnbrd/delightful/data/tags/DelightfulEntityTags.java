@@ -10,6 +10,7 @@ public class DelightfulEntityTags {
 
 	public static final TagKey<EntityType<?>> FATTY_ANIMALS = create("fatty_animals");
 	public static final TagKey<EntityType<?>> DROPS_ACORN = create("drops_acorn");
+	public static final TagKey<EntityType<?>> DROPS_CRAB_LEGS = create("drops_crab_legs");
 	public static final TagKey<EntityType<?>> DROPS_RAW_GOAT = create("drops_raw_goat");
 
 	// Aether

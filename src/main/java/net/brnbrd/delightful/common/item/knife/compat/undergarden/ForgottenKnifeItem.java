@@ -12,12 +12,15 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.apache.commons.lang3.tuple.ImmutablePair;
+import org.jetbrains.annotations.Nullable;
+
 import java.util.List;
 
 public class ForgottenKnifeItem extends CompatKnifeItem {
@@ -27,6 +30,11 @@ public class ForgottenKnifeItem extends CompatKnifeItem {
 		super(Mods.UG, DelightfulItems.ingot("forgotten_metal"), DelightfulTiers.FORGOTTEN, properties, ChatFormatting.GREEN);
 		MinecraftForge.EVENT_BUS.addListener(this::onHurt);
 		MinecraftForge.EVENT_BUS.addListener(this::onDig);
+	}
+
+	@Override
+	public String[] getConflicts() {
+		return new String[]{"undergardendelight"};
 	}
 
 	@Override

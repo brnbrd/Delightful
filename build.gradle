@@ -88,6 +88,8 @@ dependencies {
     compileOnly fg.deobf("curse.maven:aether-255308:${aether_version}")
     compileOnly fg.deobf("curse.maven:aether-redux-867237:${aether_redux_version}")
     compileOnly fg.deobf("curse.maven:deep-aether-852465:${deep_aether_version}")
+    runtimeOnly fg.deobf("curse.maven:geckolib-388172:${geckolib_version}")
+    implementation fg.deobf("curse.maven:crabbers-delight-892827:${crabbers_delight_version}")
 }
 
 jar {

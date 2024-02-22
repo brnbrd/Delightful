@@ -113,6 +113,7 @@ public class DelightfulEntityTagProvider extends EntityTypeTagsProvider {
 			.addOptional(Util.rl("sprout", "elephant"))
 			.addOptional(Util.rl("wandering_trapper", "trapper_dog"));
 		this.tag(DelightfulEntityTags.DROPS_ACORN).addOptional(Util.rl(Mods.ECO, "squirrel"));
+		this.tag(DelightfulEntityTags.DROPS_CRAB_LEGS).addOptional(Util.rl(Mods.ECO, "coconut_crab"));
 		this.tag(DelightfulEntityTags.DROPS_RAW_GOAT).add(EntityType.GOAT);
 	}
 }

@@ -35,6 +35,7 @@ import net.brnbrd.delightful.common.item.knife.compat.twilightforest.FieryKnifeI
 import net.brnbrd.delightful.common.item.knife.compat.twilightforest.IronwoodKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.twilightforest.KnightmetalKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.twilightforest.SteeleafKnifeItem;
+import net.brnbrd.delightful.common.item.knife.compat.undergarden.CloggrumKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.undergarden.ForgottenKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.undergarden.FroststeelKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.undergarden.UtheriumKnifeItem;
@@ -104,7 +105,7 @@ public class Knives extends DelightfulItems {
 	public static final RegistryObject<Item> ROSE_GOLD = registerItem("rose_gold_knife", () -> new RoseGoldKnifeItem(props()));
 	public static final RegistryObject<Item> GILDED_NETHERITE = registerItem("gilded_netherite_knife", () -> new GildedNetheriteKnifeItem(props()));
 	public static final RegistryObject<Item> NECRONIUM = registerItem("necronium_knife", () -> new NecroniumKnifeItem(props()));
-	public static final RegistryObject<Item> CLOGGRUM = registerCompatIngotKnife("cloggrum", Mods.UG);
+	public static final RegistryObject<Item> CLOGGRUM = registerItem("cloggrum_knife", () -> new CloggrumKnifeItem(props()));
 	public static final RegistryObject<Item> FROSTSTEEL = registerItem("froststeel_knife", () -> new FroststeelKnifeItem(props()));
 	public static final RegistryObject<Item> UTHERIUM = registerItem("utherium_knife", () -> new UtheriumKnifeItem(props()));
 	public static final RegistryObject<Item> FORGOTTEN = registerItem("forgotten_knife", () -> new ForgottenKnifeItem(props()));
