@@ -72,13 +72,13 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
         // Foods
         wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.NUT_BUTTER_AND_JELLY_SANDWICH.get())
                 .requires(ForgeTags.BREAD)
-                .requires(DelightfulItems.NUT_BUTTER_BOTTLE.get())
+                .requires(DelightfulItemTags.NUT_BUTTER)
                 .requires(DelightfulItemTags.JAMS)
                 .unlockedBy("has_nut_butter", has(DelightfulItems.NUT_BUTTER_BOTTLE.get())),
             "food/nut_butter_and_jelly_sandwich", finished, enabled("nut_butter_and_jelly_sandwich"), not(tagEmpty(DelightfulItemTags.NUTS)), tagEmpty(DelightfulItemTags.BREAD_SLICE));
         wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.NUT_BUTTER_AND_JELLY_SANDWICH.get())
                 .requires(DelightfulItemTags.BREAD_SLICE)
-                .requires(DelightfulItems.NUT_BUTTER_BOTTLE.get())
+                .requires(DelightfulItemTags.NUT_BUTTER)
                 .requires(DelightfulItemTags.JAMS)
                 .requires(DelightfulItemTags.BREAD_SLICE)
                 .unlockedBy("has_nut_butter", has(DelightfulItems.NUT_BUTTER_BOTTLE.get())),
@@ -91,7 +91,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .requires(ForgeTags.CROPS_TOMATO)
                 .requires(ForgeTags.CROPS_ONION)
                 .unlockedBy("has_cheese", has(DelightfulItemTags.CHEESES)),
-            "food/cheeseburger", finished, enabled("cheeseburger"), tagEmpty(DelightfulItemTags.BURGER_BUN), not(tagEmpty(DelightfulItemTags.CHEESES)), not(enabled("use_milk_tag")));
+            "food/cheeseburger", finished, enabled("cheeseburger"), tagEmpty(DelightfulItemTags.BURGER_BUN), not(tagEmpty(DelightfulItemTags.CHEESES)), not(enabled("use_milk_tag")), not(modLoaded("vintagedelight")));
         wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.CHEESEBURGER.get())
                 .requires(ForgeTags.BREAD)
                 .requires(ModItems.BEEF_PATTY.get())
@@ -100,7 +100,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .requires(ForgeTags.CROPS_TOMATO)
                 .requires(ForgeTags.CROPS_ONION)
                 .unlockedBy("has_beef_patty_and_cheese", has(ModItems.BEEF_PATTY.get(), Items.MILK_BUCKET)),
-            "food/cheeseburger_from_milk", finished, enabled("cheeseburger"), or(tagEmpty(DelightfulItemTags.BURGER_BUN), tagEmpty(DelightfulItemTags.CHEESES), enabled("use_milk_tag")));
+            "food/cheeseburger_from_milk", finished, enabled("cheeseburger"), or(tagEmpty(DelightfulItemTags.CHEESES), enabled("use_milk_tag")), not(modLoaded("vintagedelight")));
         wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.CHEESEBURGER.get())
                 .requires(DelightfulItemTags.BURGER_BUN)
                 .requires(ModItems.BEEF_PATTY.get())
@@ -109,7 +109,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .requires(ForgeTags.CROPS_TOMATO)
                 .requires(ForgeTags.CROPS_ONION)
                 .unlockedBy("has_beef_patty_and_cheese", has(ModItems.BEEF_PATTY.get(), Items.MILK_BUCKET)),
-            "food/cheeseburger_from_bun", finished, enabled("cheeseburger"), not(tagEmpty(DelightfulItemTags.BURGER_BUN)), not(tagEmpty(DelightfulItemTags.CHEESES)), not(enabled("use_milk_tag")));
+            "food/cheeseburger_from_bun", finished, enabled("cheeseburger"), not(tagEmpty(DelightfulItemTags.BURGER_BUN)), not(tagEmpty(DelightfulItemTags.CHEESES)), not(enabled("use_milk_tag")), not(modLoaded("vintagedelight")));
         wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.DELUXE_CHEESEBURGER.get())
                 .requires(ForgeTags.BREAD)
                 .requires(ModItems.BEEF_PATTY.get())
@@ -133,7 +133,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .requires(ForgeTags.CROPS_TOMATO)
                 .requires(ForgeTags.CROPS_ONION)
                 .unlockedBy("has_bacon", has(ModItems.COOKED_BACON.get())),
-            "food/deluxe_cheeseburger_from_milk", finished, enabled("deluxe_cheeseburger"), or(tagEmpty(DelightfulItemTags.BURGER_BUN), tagEmpty(DelightfulItemTags.CHEESES), enabled("use_milk_tag")));
+            "food/deluxe_cheeseburger_from_milk", finished, enabled("deluxe_cheeseburger"), or(tagEmpty(DelightfulItemTags.CHEESES), enabled("use_milk_tag")));
         wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.DELUXE_CHEESEBURGER.get())
                 .requires(DelightfulItemTags.BURGER_BUN)
                 .requires(ModItems.BEEF_PATTY.get())
@@ -354,7 +354,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .addIngredient(DelightfulItemTags.NUTS)
                 .addIngredient(DelightfulItemTags.SUGAR)
                 .unlockedBy("has_nuts", has(DelightfulItemTags.NUTS)),
-            "food/cooking/nut_butter_bottle", finished, enabled("nut_butter_bottle"), not(tagEmpty(DelightfulItemTags.NUTS)));
+            "food/cooking/nut_butter_bottle", finished, enabled("nut_butter_bottle"), not(tagEmpty(DelightfulItemTags.NUTS)), not(modLoaded("vintagedelight")));
         wrap(CookingPotRecipeBuilder.cookingPotRecipe(
                     DelightfulItems.COCONUT_CURRY.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
                 .addIngredient(DelightfulItemTags.COCONUT)
@@ -402,7 +402,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .addIngredient(DelightfulItemTags.NUTS)
                 .addIngredient(DelightfulItemTags.SUGAR)
                 .unlockedBy("has_nuts", has(DelightfulItemTags.NUTS)),
-            "food/cooking/nut_milk", finished, enabled("nut_milk"));
+            "food/cooking/nut_milk", finished, enabled("nut_milk"), not(modLoaded("vintagedelight")));
         wrap(ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Items.TORCH, 8)
                 .define('o', DelightfulItems.ANIMAL_OIL_BOTTLE.get())
                 .define('s', Tags.Items.RODS_WOODEN)

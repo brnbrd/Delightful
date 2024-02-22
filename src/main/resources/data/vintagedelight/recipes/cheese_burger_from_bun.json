@@ -7,10 +7,6 @@
           "type": "forge:and",
           "values": [
             {
-              "type": "delightful:enabled",
-              "value": "cheeseburger"
-            },
-            {
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
@@ -18,25 +14,8 @@
               }
             },
             {
-              "type": "forge:not",
-              "value": {
-                "type": "forge:tag_empty",
-                "tag": "forge:cheeses"
-              }
-            },
-            {
-              "type": "forge:not",
-              "value": {
-                "type": "delightful:enabled",
-                "value": "use_milk_tag"
-              }
-            },
-            {
-              "type": "forge:not",
-              "value": {
-                "type": "forge:mod_loaded",
-                "modid": "vintagedelight"
-              }
+              "type": "forge:mod_loaded",
+              "modid": "vintagedelight"
             }
           ]
         }
@@ -65,7 +44,7 @@
           }
         ],
         "result": {
-          "item": "delightful:cheeseburger"
+          "item": "vintagedelight:cheese_burger"
         }
       }
     }

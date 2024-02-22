@@ -4,6 +4,10 @@
     {
       "id": "#wildberries:berry_jams",
       "required": false
+    },
+    {
+      "id": "#vintagedelight:sweet_jam_bottles",
+      "required": false
     }
   ]
 }

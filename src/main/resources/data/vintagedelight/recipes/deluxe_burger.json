@@ -7,33 +7,12 @@
           "type": "forge:and",
           "values": [
             {
-              "type": "delightful:enabled",
-              "value": "cheeseburger"
-            },
-            {
               "type": "forge:tag_empty",
               "tag": "some_assembly_required:burger_bun"
             },
             {
-              "type": "forge:not",
-              "value": {
-                "type": "forge:tag_empty",
-                "tag": "forge:cheeses"
-              }
-            },
-            {
-              "type": "forge:not",
-              "value": {
-                "type": "delightful:enabled",
-                "value": "use_milk_tag"
-              }
-            },
-            {
-              "type": "forge:not",
-              "value": {
-                "type": "forge:mod_loaded",
-                "modid": "vintagedelight"
-              }
+              "type": "forge:mod_loaded",
+              "modid": "vintagedelight"
             }
           ]
         }
@@ -59,10 +38,16 @@
           },
           {
             "tag": "forge:crops/onion"
+          },
+          {
+            "tag": "forge:cooked_eggs"
+          },
+          {
+            "tag": "forge:cooked_bacon"
           }
         ],
         "result": {
-          "item": "delightful:cheeseburger"
+          "item": "vintagedelight:deluxe_burger"
         }
       }
     }

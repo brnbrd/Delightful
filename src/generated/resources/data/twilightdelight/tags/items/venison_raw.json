@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "naturalist:venison",
+      "required": false
+    },
+    {
+      "id": "goodall:raw_venison",
+      "required": false
+    },
+    {
+      "id": "twilightforest:raw_venison",
+      "required": false
+    }
+  ]
+}

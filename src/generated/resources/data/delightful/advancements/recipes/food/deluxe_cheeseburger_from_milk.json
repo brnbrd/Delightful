@@ -49,10 +49,6 @@
               "values": [
                 {
                   "type": "forge:tag_empty",
-                  "tag": "some_assembly_required:burger_bun"
-                },
-                {
-                  "type": "forge:tag_empty",
                   "tag": "forge:cheeses"
                 },
                 {

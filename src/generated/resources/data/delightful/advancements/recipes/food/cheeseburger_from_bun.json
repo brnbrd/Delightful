@@ -69,6 +69,13 @@
                 "type": "delightful:enabled",
                 "value": "use_milk_tag"
               }
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:mod_loaded",
+                "modid": "vintagedelight"
+              }
             }
           ]
         }

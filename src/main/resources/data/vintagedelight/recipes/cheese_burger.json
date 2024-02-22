@@ -7,21 +7,12 @@
           "type": "forge:and",
           "values": [
             {
-              "type": "delightful:enabled",
-              "value": "deluxe_cheeseburger"
+              "type": "forge:tag_empty",
+              "tag": "some_assembly_required:burger_bun"
             },
             {
-              "type": "forge:or",
-              "values": [
-                {
-                  "type": "forge:tag_empty",
-                  "tag": "forge:cheeses"
-                },
-                {
-                  "type": "delightful:enabled",
-                  "value": "use_milk_tag"
-                }
-              ]
+              "type": "forge:mod_loaded",
+              "modid": "vintagedelight"
             }
           ]
         }
@@ -37,16 +28,7 @@
             "item": "farmersdelight:beef_patty"
           },
           {
-            "tag": "forge:milk"
-          },
-          {
-            "item": "farmersdelight:beef_patty"
-          },
-          {
-            "tag": "forge:milk"
-          },
-          {
-            "item": "farmersdelight:cooked_bacon"
+            "tag": "forge:cheeses"
           },
           {
             "tag": "forge:salad_ingredients"
@@ -59,7 +41,7 @@
           }
         ],
         "result": {
-          "item": "delightful:deluxe_cheeseburger"
+          "item": "vintagedelight:cheese_burger"
         }
       }
     }

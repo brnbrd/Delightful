@@ -96,9 +96,9 @@ public class DelightfulItems {
     public static final RegistryObject<Item> BERRY_MATCHA_LATTE = registerItem("berry_matcha_latte", () -> new DrinkItem((new Item.Properties()).food(Nutrition.BERRY_MATCHA_LATTE).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16), 2.0F, true, true));
     public static final RegistryObject<Item> JELLY_BOTTLE = registerItem("jelly_bottle", () -> new JamJarItem((new Item.Properties()).food(Nutrition.JELLY_BOTTLE).craftRemainder(Items.GLASS_BOTTLE), false, false));
     public static final RegistryObject<Item> GLOW_JELLY_BOTTLE = registerItem("glow_jelly_bottle", () -> new JamJarItem((new Item.Properties()).food(Nutrition.GLOW_JELLY_BOTTLE).craftRemainder(Items.GLASS_BOTTLE), true, false));
-    public static final RegistryObject<Item> NUT_BUTTER_BOTTLE = registerItem("nut_butter_bottle", () -> new ConsumableItem((new Item.Properties()).food(Nutrition.NUT_BUTTER_BOTTLE).craftRemainder(Items.GLASS_BOTTLE)));
+    public static final RegistryObject<Item> NUT_BUTTER_BOTTLE = registerItem("nut_butter_bottle", () -> new NutButterBottleItem(((new Item.Properties()).food(Nutrition.NUT_BUTTER_BOTTLE).craftRemainder(Items.GLASS_BOTTLE))));
     public static final RegistryObject<Item> NUT_BUTTER_AND_JELLY_SANDWICH = registerItem("nut_butter_and_jelly_sandwich", () -> new ConsumableItem((new Item.Properties()).food(Nutrition.NUT_BUTTER_AND_JELLY_SANDWICH), true));
-    public static final RegistryObject<Item> CHEESEBURGER = registerItem("cheeseburger", () -> new ConsumableItem((new Item.Properties()).food(Nutrition.CHEESEBURGER), true));
+    public static final RegistryObject<Item> CHEESEBURGER = registerItem("cheeseburger", () -> new CheeseburgerItem((new Item.Properties()).food(Nutrition.CHEESEBURGER)));
     public static final RegistryObject<Item> DELUXE_CHEESEBURGER = registerItem("deluxe_cheeseburger", () -> new ConsumableItem((new Item.Properties()).food(Nutrition.DELUXE_CHEESEBURGER), true));
     public static final RegistryObject<Item> CHUNKWICH = registerCompatFood("chunkwich", Nutrition.CHUNKWICH,
         Mods.RL);

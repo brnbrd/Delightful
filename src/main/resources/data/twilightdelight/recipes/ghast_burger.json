@@ -7,19 +7,12 @@
           "type": "forge:and",
           "values": [
             {
-              "type": "delightful:enabled",
-              "value": "nut_butter_and_jelly_sandwich"
-            },
-            {
-              "type": "forge:not",
-              "value": {
-                "type": "forge:tag_empty",
-                "tag": "forge:nuts"
-              }
-            },
-            {
               "type": "forge:tag_empty",
-              "tag": "some_assembly_required:bread_slice"
+              "tag": "some_assembly_required:burger_bun"
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "twilightdelight"
             }
           ]
         }
@@ -32,14 +25,20 @@
             "tag": "forge:bread"
           },
           {
-            "tag": "forge:nut_butter"
+            "item": "twilightforest:experiment_115"
           },
           {
-            "tag": "forge:jams"
+            "tag": "forge:crops/beetroot"
+          },
+          {
+            "tag": "forge:crops/tomato"
+          },
+          {
+            "tag": "forge:crops/onion"
           }
         ],
         "result": {
-          "item": "delightful:nut_butter_and_jelly_sandwich"
+          "item": "twilightdelight:ghast_burger"
         }
       }
     }

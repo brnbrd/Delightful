@@ -202,7 +202,9 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		tag(DelightfulItemTags.CROPS_GINGER).addOptional(Util.rl("snowyspirit", "ginger"));
 		tag(DelightfulItemTags.COCONUT).addOptional(Util.rl(Mods.ECO, "coconut_slice"));
 		tag(DelightfulItemTags.NUTS_WALNUT).addOptional(Util.rl(Mods.ECO, "walnut"));
-		tag(DelightfulItemTags.NUTS_PEANUT).addOptional(Util.rl("sprout", "peanut"));
+		tag(DelightfulItemTags.NUTS_PEANUT)
+			.addOptionalTag(Util.rl("forge", "peanut"))
+			.addOptional(Util.rl("sprout", "peanut"));
 		tag(DelightfulItemTags.NUTS_CHESTNUT).addOptional(Util.rl("windswept", "chestnuts"));
 		tag(DelightfulItemTags.NUTS_ACORN)
 			.add(DelightfulItems.ACORN.get());
@@ -217,12 +219,17 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.add(DelightfulItems.JELLY_BOTTLE.get())
 			.add(DelightfulItems.GLOW_JELLY_BOTTLE.get());
 		tag(DelightfulItemTags.JELLIES)
-			.addTag(DelightfulItemTags.JELLY);
+			.addTag(DelightfulItemTags.JELLY)
+			.addOptionalTag(Util.rl("fruitsdelight", "jelly"));
 		tag(DelightfulItemTags.JAM)
 			.addTag(DelightfulItemTags.JELLIES);
 		tag(DelightfulItemTags.JAMS)
 			.addTag(DelightfulItemTags.JAM)
-			.addOptionalTag(Util.rl(Mods.WB, "berry_jams"));
+			.addOptionalTag(Util.rl(Mods.WB, "berry_jams"))
+			.addOptionalTag(Util.rl("vintagedelight", "sweet_jam_bottles"));
+		tag(DelightfulItemTags.NUT_BUTTER)
+			.add(DelightfulItems.NUT_BUTTER_BOTTLE.get())
+			.addOptional(Util.rl("vintagedelight", "nut_mash_bottle"));
 		tag(DelightfulItemTags.SUGAR).add(Items.SUGAR);
 		tag(ForgeTags.EGGS)
 			.addOptional(Util.rl("deep_aether", "quail_egg"))
@@ -266,17 +273,21 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.COOKED_FISHES_TUNA)
 			.addOptional(Util.rl("biomemakeover", "cooked_glowfish"))
 			.addOptional(Util.rl("deep_aether", "cooked_aerglow_fish"));
-		tag(DelightfulItemTags.RAW_VENISON_COMPAT)
+		tag(DelightfulItemTags.TD_VENISON_RAW)
 			.addOptional(Util.rl("naturalist", "venison"))
 			.addOptional(Util.rl("goodall", "raw_venison"))
 			.addOptional(Util.rl(Mods.TF, "raw_venison"));
+		tag(DelightfulItemTags.RAW_VENISON_COMPAT)
+			.addTag(DelightfulItemTags.TD_VENISON_RAW);
 		tag(DelightfulItemTags.RAW_VENISON)
 			.add(DelightfulItems.VENISON_CHOPS.get())
 			.addTag(DelightfulItemTags.RAW_VENISON_COMPAT);
-		tag(DelightfulItemTags.COOKED_VENISON_COMPAT)
+		tag(DelightfulItemTags.TD_VENISON_COOKED)
 			.addOptional(Util.rl("naturalist", "cooked_venison"))
 			.addOptional(Util.rl("goodall", "cooked_venison"))
 			.addOptional(Util.rl(Mods.TF, "cooked_venison"));
+		tag(DelightfulItemTags.COOKED_VENISON_COMPAT)
+			.addTag(DelightfulItemTags.TD_VENISON_COOKED);
 		tag(DelightfulItemTags.COOKED_VENISON)
 			.add(DelightfulItems.COOKED_VENISON_CHOPS.get())
 			.addTag(DelightfulItemTags.COOKED_VENISON_COMPAT);

@@ -1,0 +1,39 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "forge:item_exists",
+              "item": "naturalist:venison"
+            },
+            {
+              "type": "forge:item_exists",
+              "item": "twilightdelight:raw_venison_rib"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "naturalist:venison"
+          }
+        ],
+        "result": [
+          {
+            "item": "twilightdelight:raw_venison_rib",
+            "count": 2
+          }
+        ],
+        "tool": {
+          "tag": "forge:tools/knives"
+        }
+      }
+    }
+  ]
+}

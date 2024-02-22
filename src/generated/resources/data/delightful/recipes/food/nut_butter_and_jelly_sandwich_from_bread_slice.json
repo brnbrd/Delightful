@@ -35,7 +35,7 @@
             "tag": "some_assembly_required:bread_slice"
           },
           {
-            "item": "delightful:nut_butter_bottle"
+            "tag": "forge:nut_butter"
           },
           {
             "tag": "forge:jams"

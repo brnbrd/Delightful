@@ -1,6 +1,10 @@
 {
   "values": [
     {
+      "id": "#forge:peanut",
+      "required": false
+    },
+    {
       "id": "sprout:peanut",
       "required": false
     }

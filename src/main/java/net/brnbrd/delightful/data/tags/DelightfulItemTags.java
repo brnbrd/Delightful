@@ -89,9 +89,12 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> JELLIES = forge("jellies");
 	public static final TagKey<Item> JAM = forge("jam");
 	public static final TagKey<Item> JAMS = forge("jams");
+	public static final TagKey<Item> NUT_BUTTER = forge("nut_butter");
 	public static final TagKey<Item> RAW_FISHES_KOI = forge("raw_fishes/koi");
 	public static final TagKey<Item> RAW_FISHES_TUNA = forge("raw_fishes/tuna");
 	public static final TagKey<Item> COOKED_FISHES_TUNA = forge("cooked_fishes/tuna");
+	public static final TagKey<Item> TD_VENISON_RAW = Util.it("twilightdelight", "venison_raw"); // Twilight Delight
+	public static final TagKey<Item> TD_VENISON_COOKED = Util.it("twilightdelight", "venison_cooked"); // Twilight Delight
 	public static final TagKey<Item> RAW_VENISON = forge("raw_venison");
 	public static final TagKey<Item> RAW_VENISON_COMPAT = forge("raw_venison_compat");
 	public static final TagKey<Item> COOKED_VENISON = forge("cooked_venison");
