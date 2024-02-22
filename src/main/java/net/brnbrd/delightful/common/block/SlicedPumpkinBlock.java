@@ -22,6 +22,7 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
@@ -37,6 +38,11 @@ public class SlicedPumpkinBlock extends PumpkinBlock implements ISliceable {
     super(pProperties);
     this.registerDefaultState(this.stateDefinition.any().setValue(BITES, 1));
     this.sliceItem = sliceItem;
+  }
+
+  @Override
+  public ItemStack getCloneItemStack(BlockState state, HitResult target, BlockGetter level, BlockPos pos, Player player) {
+    return this.getSliceItem();
   }
 
   public VoxelShape byBite(BlockState state) {
