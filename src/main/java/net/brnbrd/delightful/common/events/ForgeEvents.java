@@ -2,10 +2,9 @@ package net.brnbrd.delightful.common.events;
 
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.block.DelightfulBlocks;
+import net.brnbrd.delightful.common.block.SlicedGourdBlock;
 import net.brnbrd.delightful.common.block.SlicedMelonBlock;
-import net.brnbrd.delightful.common.block.SlicedPumpkinBlock;
 import net.brnbrd.delightful.common.item.DelightfulItems;
-import net.brnbrd.delightful.common.item.FurnaceFuelItem;
 import net.brnbrd.delightful.compat.Mods;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;
@@ -22,10 +21,10 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.event.furnace.FurnaceFuelBurnTimeEvent;
 import net.minecraftforge.event.village.WandererTradesEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.registries.ForgeRegistries;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
 import java.util.List;
 import java.util.Objects;
@@ -55,7 +54,13 @@ public class ForgeEvents {
 				SlicedMelonBlock sliced = (SlicedMelonBlock) DelightfulBlocks.SLICED_MELON.get();
 				slice(sliced.defaultBlockState(), sliced.getSliceItem(), world, pos, SoundEvents.BAMBOO_BREAK, e, client);
 			} else if (current.getBlock() == Blocks.PUMPKIN && !e.getEntity().isCrouching()) {
-				SlicedPumpkinBlock sliced = (SlicedPumpkinBlock) DelightfulBlocks.SLICED_PUMPKIN.get();
+				SlicedGourdBlock sliced = (SlicedGourdBlock) DelightfulBlocks.SLICED_PUMPKIN.get();
+				slice(sliced.defaultBlockState(), sliced.getSliceItem(), world, pos, SoundEvents.BAMBOO_BREAK, e, client);
+			} else if (
+				Mods.loaded("undergardendelight") &&
+				Objects.equals(ForgeRegistries.BLOCKS.getKey(current.getBlock()), Util.rl(Mods.UG, "gloomgourd"))
+			) {
+				SlicedGourdBlock sliced = (SlicedGourdBlock) DelightfulBlocks.SLICED_GLOOMGOURD.get();
 				slice(sliced.defaultBlockState(), sliced.getSliceItem(), world, pos, SoundEvents.BAMBOO_BREAK, e, client);
 			} else if (Mods.loaded(Mods.FU, Mods.FUD) &&
 				Util.name(current.getBlock()).equals("truffle_cake")) {

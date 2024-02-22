@@ -53,7 +53,7 @@
             },
             {
               "type": "forge:tag_empty",
-              "tag": "some_assembly_required:bread_slice"
+              "tag": "forge:bread_slices"
             }
           ]
         }

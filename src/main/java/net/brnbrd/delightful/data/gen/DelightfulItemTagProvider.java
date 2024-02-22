@@ -24,6 +24,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -69,6 +70,24 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.add(DelightfulItems.QUARTZ_CABINET.get());
 		tag(ModTags.WILD_CROPS_ITEM)
 			.add(DelightfulItems.WILD_SALMONBERRIES.get());
+		tag(ForgeTags.CROPS_TOMATO)
+			.addOptional(Util.rl("some_assembly_required", "tomato_slices"));
+		tag(ForgeTags.VEGETABLES_TOMATO)
+			.addOptional(Util.rl("some_assembly_required", "tomato_slices"));
+		tag(ForgeTags.CROPS_ONION)
+			.addOptional(Util.rl("some_assembly_required", "sliced_onion"));
+		tag(ForgeTags.VEGETABLES_ONION)
+			.addOptional(Util.rl("some_assembly_required", "sliced_onion"));
+		tag(DelightfulItemTags.CROPS_CARROT)
+			.add(Items.CARROT)
+			.addOptional(Util.rl("some_assembly_required", "chopped_carrot"));
+		tag(ForgeTags.VEGETABLES_CARROT)
+			.addOptional(Util.rl("some_assembly_required", "chopped_carrot"));
+		tag(DelightfulItemTags.CROPS_BEETROOT)
+			.add(Items.BEETROOT)
+			.addOptional(Util.rl("some_assembly_required", "chopped_beetroot"));
+		tag(ForgeTags.VEGETABLES_BEETROOT)
+			.addOptional(Util.rl("some_assembly_required", "chopped_beetroot"));
 
 		// Collector's Reap
 		tag(DelightfulItemTags.GUMMIES)

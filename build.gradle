@@ -49,7 +49,7 @@ minecraft {
         }
         data {
             workingDirectory project.file('run')
-            args '--mod', 'delightful', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/'), '--existing-mod', 'farmersdelight'
+            args '--mod', 'delightful', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/'), '--existing-mod', 'farmersdelight', '--existing-mod', 'undergarden'
         }
     }
 }
@@ -90,6 +90,7 @@ dependencies {
     compileOnly fg.deobf("curse.maven:deep-aether-852465:${deep_aether_version}")
     runtimeOnly fg.deobf("curse.maven:geckolib-388172:${geckolib_version}")
     implementation fg.deobf("curse.maven:crabbers-delight-892827:${crabbers_delight_version}")
+    implementation fg.deobf("curse.maven:the-undergarden-379849:${undergarden_version}")
 }
 
 jar {

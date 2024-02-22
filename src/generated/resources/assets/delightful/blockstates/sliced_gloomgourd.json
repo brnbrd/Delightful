@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "bites=1": {
+      "model": "delightful:block/sliced_gloomgourd_bite1"
+    },
+    "bites=2": {
+      "model": "delightful:block/sliced_gloomgourd_bite2"
+    },
+    "bites=3": {
+      "model": "delightful:block/sliced_gloomgourd_bite3"
+    }
+  }
+}

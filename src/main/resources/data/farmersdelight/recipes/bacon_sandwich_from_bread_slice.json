@@ -4,8 +4,11 @@
     {
       "conditions": [
         {
-          "type": "delightful:enabled",
-          "value": "field_salad"
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:bread_slices"
+          }
         }
       ],
       "recipe": {
@@ -13,29 +16,23 @@
         "category": "misc",
         "ingredients": [
           {
-            "item": "minecraft:bowl"
+            "tag": "forge:bread_slices"
+          },
+          {
+            "tag": "forge:cooked_bacon"
           },
           {
             "tag": "forge:salad_ingredients"
           },
           {
-            "tag": "forge:salad_ingredients"
+            "tag": "forge:crops/tomato"
           },
           {
-            "item": "delightful:cactus_steak"
-          },
-          {
-            "tag": "forge:crops/carrot"
-          },
-          {
-            "tag": "forge:fruits/salmonberries"
-          },
-          {
-            "tag": "forge:nuts/acorn"
+            "tag": "forge:bread_slices"
           }
         ],
         "result": {
-          "item": "delightful:field_salad"
+          "item": "farmersdelight:bacon_sandwich"
         }
       }
     }

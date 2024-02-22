@@ -95,13 +95,27 @@ public class DelightfulBlockLoot extends BlockLootSubProvider {
         );
         this.add(DelightfulBlocks.SLICED_PUMPKIN.get(), (b) -> {
                 LootTable.Builder loot = LootTable.lootTable();
-                int maxbites = ((SlicedPumpkinBlock)DelightfulBlocks.SLICED_PUMPKIN.get()).getMaxBites();
+                int maxbites = ((SlicedGourdBlock)DelightfulBlocks.SLICED_PUMPKIN.get()).getMaxBites();
                 for (int i = 1; i <= maxbites; i++) {
                     final float left = (float) i;
                     loot = loot.withPool(LootPool.lootPool()
                         .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(b)
-                            .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(SlicedPumpkinBlock.BITES, i)))
-                        .add(LootItem.lootTableItem(((SlicedPumpkinBlock) b).getSliceItem().getItem()))
+                            .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(SlicedGourdBlock.BITES, i)))
+                        .add(LootItem.lootTableItem(((SlicedGourdBlock) b).getSliceItem().getItem()))
+                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, ((float)maxbites) - left + 1.0F))));
+                }
+                return applyExplosionDecay(b, loot);
+            }
+        );
+        this.add(DelightfulBlocks.SLICED_GLOOMGOURD.get(), (b) -> {
+                LootTable.Builder loot = LootTable.lootTable();
+                int maxbites = ((SlicedGourdBlock)DelightfulBlocks.SLICED_GLOOMGOURD.get()).getMaxBites();
+                for (int i = 1; i <= maxbites; i++) {
+                    final float left = (float) i;
+                    loot = loot.withPool(LootPool.lootPool()
+                        .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(b)
+                            .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(SlicedGourdBlock.BITES, i)))
+                        .add(LootItem.lootTableItem(((SlicedGourdBlock) b).getSliceItem().getItem()))
                         .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, ((float)maxbites) - left + 1.0F))));
                 }
                 return applyExplosionDecay(b, loot);

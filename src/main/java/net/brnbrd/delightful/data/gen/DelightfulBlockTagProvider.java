@@ -76,6 +76,7 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 			.add(DelightfulBlocks.SLICED_MINI_MELON.get())
 			.add(DelightfulBlocks.SLICED_MELON.get())
 			.add(DelightfulBlocks.SLICED_PUMPKIN.get())
+			.add(DelightfulBlocks.SLICED_GLOOMGOURD.get())
 			.add(DelightfulBlocks.CANTALOUPE.get())
 			.add(DelightfulBlocks.SLICED_CANTALOUPE.get())
 			.add(DelightfulBlocks.GREEN_APPLE_CRATE.get())

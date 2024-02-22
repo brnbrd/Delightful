@@ -1,0 +1,37 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:bread_slices"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "tag": "forge:bread_slices"
+          },
+          {
+            "tag": "miners_delight:cooked_insect_meat"
+          },
+          {
+            "tag": "miners_delight:cooked_insect_meat"
+          },
+          {
+            "tag": "forge:bread_slices"
+          }
+        ],
+        "result": {
+          "item": "miners_delight:insect_sandwich"
+        }
+      }
+    }
+  ]
+}

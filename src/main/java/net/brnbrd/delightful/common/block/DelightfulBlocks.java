@@ -4,6 +4,7 @@ import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.UndergardenCompat;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
@@ -41,7 +42,26 @@ public class DelightfulBlocks {
     public static final RegistryObject<Block> SLICED_MELON = BLOCKS.register("sliced_melon",
         () -> new SlicedMelonBlock(Block.Properties.copy(Blocks.MELON), () -> Items.MELON_SLICE, ModItems.MELON_JUICE));
     public static final RegistryObject<Block> SLICED_PUMPKIN = BLOCKS.register("sliced_pumpkin",
-        () -> new SlicedPumpkinBlock(Block.Properties.copy(Blocks.PUMPKIN), ModItems.PUMPKIN_SLICE));
+        () -> new SlicedGourdBlock(
+            Block.Properties.copy(Blocks.PUMPKIN),
+            ModItems.PUMPKIN_SLICE,
+            () -> Blocks.PUMPKIN_STEM,
+            () -> Blocks.ATTACHED_PUMPKIN_STEM)
+    );
+    public static final RegistryObject<Block> SLICED_GLOOMGOURD = BLOCKS.register("sliced_gloomgourd",
+        Mods.loaded(Mods.UG) ?
+        () -> new SlicedGourdBlock(
+            Block.Properties.copy(UndergardenCompat.gloomgourd().get()),
+            UndergardenCompat.gloomgourd_slice(),
+            UndergardenCompat.gloomgourd_stem(),
+            UndergardenCompat.gloomgourd_attached_stem())
+        :
+        () -> new SlicedGourdBlock(
+            Block.Properties.copy(Blocks.PUMPKIN),
+            ModItems.PUMPKIN_SLICE,
+            () -> Blocks.PUMPKIN_STEM,
+            () -> Blocks.ATTACHED_PUMPKIN_STEM)
+    );
     public static final RegistryObject<Block> SALMONBERRY_SACK = BLOCKS.register("salmonberry_sack",
       () -> new Block(Block.Properties.copy(Blocks.ORANGE_WOOL).strength(.5f).sound(SoundType.WOOL)));
     public static final RegistryObject<Block> SALMONBERRY_PIE = BLOCKS.register("salmonberry_pie",

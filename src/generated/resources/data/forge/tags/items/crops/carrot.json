@@ -1,0 +1,9 @@
+{
+  "values": [
+    "minecraft:carrot",
+    {
+      "id": "some_assembly_required:chopped_carrot",
+      "required": false
+    }
+  ]
+}

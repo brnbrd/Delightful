@@ -89,6 +89,7 @@ public class DelightfulLanguageProvider extends LanguageProvider {
         addBlock(DelightfulBlocks.SLICED_CANTALOUPE, "Sliced Cantaloupe");
         addBlock(DelightfulBlocks.SLICED_MELON, "Sliced Melon");
         addBlock(DelightfulBlocks.SLICED_PUMPKIN, "Sliced Pumpkin");
+        addBlock(DelightfulBlocks.SLICED_GLOOMGOURD, "Sliced Gloomgourd");
         addBlock(DelightfulBlocks.PUMPKIN_PIE, "Pumpkin Pie");
         addBlock(DelightfulBlocks.SOURCE_BERRY_PIE, "Source Berry Pie");
         addBlock(DelightfulBlocks.GLOOMGOURD_PIE, "Gloomgourd Pie");

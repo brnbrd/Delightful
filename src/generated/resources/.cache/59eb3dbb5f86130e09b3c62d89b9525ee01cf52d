@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-20T23:10:44.4307907	Loot Tables
+// 1.20.1	2024-02-22T13:44:53.8389164	Loot Tables
 2b9b2e38c5ea1b16ab49d97e8273a06d9522ff89 data/delightful/loot_tables/blocks/acorn_sack.json
 1363024576f5e67e0984401cb699644221da8f5b data/delightful/loot_tables/blocks/baobab_fruit_crate.json
 b2b2afb8acde3c9aa1a3c3a6cd0826249dcac91b data/delightful/loot_tables/blocks/basalt_cabinet.json
@@ -22,6 +22,7 @@ b5cdb0727bd106aab19da3a674caceafb8c6e847 data/delightful/loot_tables/blocks/salm
 73fac5bd94cdd7111fe9a3da9ae55bbe792af061 data/delightful/loot_tables/blocks/salmonberry_pie.json
 0f6204aac3bc7f455452c3af6cdfc070015ec533 data/delightful/loot_tables/blocks/salmonberry_sack.json
 6ac049994f6029f83633a259cc42da022f734837 data/delightful/loot_tables/blocks/sliced_cantaloupe.json
+cd62ddb76c0b02607bd3441b15a8de100da0d5d1 data/delightful/loot_tables/blocks/sliced_gloomgourd.json
 fa1bb2ac6ba9e649644308bd64ec90542c7cf00c data/delightful/loot_tables/blocks/sliced_melon.json
 2e5a54fed39193b92915532bf007776ac67d322b data/delightful/loot_tables/blocks/sliced_mini_melon.json
 eac0355031c511c78f4cf8c15554d06b10350bbf data/delightful/loot_tables/blocks/sliced_pumpkin.json

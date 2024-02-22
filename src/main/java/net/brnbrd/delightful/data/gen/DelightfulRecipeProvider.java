@@ -35,6 +35,7 @@ import org.jetbrains.annotations.NotNull;
 import vectorwing.farmersdelight.common.registry.ModBlocks;
 import vectorwing.farmersdelight.common.registry.ModItems;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
+import vectorwing.farmersdelight.common.tag.ModTags;
 import vectorwing.farmersdelight.data.builder.CookingPotRecipeBuilder;
 import vectorwing.farmersdelight.data.builder.CuttingBoardRecipeBuilder;
 import vectorwing.farmersdelight.data.recipe.CookingRecipes;
@@ -237,7 +238,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .requires(Items.BOWL)
                 .requires(Ingredient.of(ForgeTags.SALAD_INGREDIENTS), 2)
                 .requires(DelightfulItems.CACTUS_STEAK.get())
-                .requires(Items.CARROT)
+                .requires(DelightfulItemTags.CROPS_CARROT)
                 .requires(DelightfulItemTags.FRUITS_SALMONBERRIES)
                 .requires(DelightfulItemTags.NUTS_ACORN)
                 .unlockedBy("has_cactus_steak", has(DelightfulItems.CACTUS_STEAK.get())),
