@@ -20,6 +20,13 @@
                 "type": "forge:tag_empty",
                 "tag": "twilightforest:fiery_vial"
               }
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:mod_loaded",
+                "modid": "twilightdelight"
+              }
             }
           ]
         }

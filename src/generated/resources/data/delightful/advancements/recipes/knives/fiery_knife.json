@@ -50,6 +50,13 @@
               }
             },
             {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:mod_loaded",
+                "modid": "twilightdelight"
+              }
+            },
+            {
               "type": "forge:mod_loaded",
               "modid": "twilightforest"
             }

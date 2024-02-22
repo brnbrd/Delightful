@@ -18,6 +18,11 @@ public class IronwoodKnifeItem extends CompatKnifeItem {
   }
 
   @Override
+  public String[] getConflicts() {
+    return new String[]{"twilightdelight"};
+  }
+
+  @Override
   public @Nullable RecipeType<?> getRecipeType() {
     return null;
   }

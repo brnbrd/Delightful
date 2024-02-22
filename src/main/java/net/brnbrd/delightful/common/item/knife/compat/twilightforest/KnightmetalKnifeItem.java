@@ -21,6 +21,11 @@ public class KnightmetalKnifeItem extends CompatKnifeItem {
 		MinecraftForge.EVENT_BUS.addListener(this::onHurt);
 	}
 
+	@Override
+	public String[] getConflicts() {
+		return new String[]{"twilightdelight"};
+	}
+
 	private void onHurt(LivingHurtEvent e) {
 		LivingEntity target = e.getEntity();
 		if (!target.level().isClientSide() && e.getSource().getDirectEntity() instanceof LivingEntity attacker) {
