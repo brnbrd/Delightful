@@ -4,11 +4,14 @@
 
 ### Updates
 - Crab Rangoon now uses tag "forge:crab_meat" rather than "forge:cooked_crab"'
-- Planted Salmonberry Bushes now correctly drop berries when broken
 - Added Jade icons for compat pies
 - Tree Bark compat for: Ars Nouveau, Ecologics, Undergarden, Spawn, Aether, Deep Aether, Aether Redux
+- Sliced Gloomgourd block for Undergarden / Undergarden Delight
+- Planted Salmonberry Bushes now correctly drop berries when broken
+- Crabber's Delight and Ecologics' crafting parity
 - More compat tags and recipe overrides
-- Cleanup console output at mod startup
+- Cleaned up console output at mod startup
+- Removed outdated config variable
 
 ### Translations
 - Updated:
