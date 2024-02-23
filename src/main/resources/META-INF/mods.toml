@@ -135,3 +135,10 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
     versionRange="[0,)"
     ordering="AFTER"
     side="BOTH"
+
+[[dependencies.delightful]]
+    modId="sunflowerdelight"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="AFTER"
+    side="BOTH"
