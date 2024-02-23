@@ -45,17 +45,8 @@
               "value": "deluxe_cheeseburger"
             },
             {
-              "type": "forge:or",
-              "values": [
-                {
-                  "type": "forge:tag_empty",
-                  "tag": "forge:cheeses"
-                },
-                {
-                  "type": "delightful:enabled",
-                  "value": "use_milk_tag"
-                }
-              ]
+              "type": "forge:tag_empty",
+              "tag": "forge:cheeses"
             }
           ]
         }

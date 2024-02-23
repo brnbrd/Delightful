@@ -14,14 +14,10 @@ public class DelightfulConfig {
     public static final DelightfulConfig CONFIG;
     public static final ForgeConfigSpec SPEC;
     private final Map<String, ForgeConfigSpec.BooleanValue> stuff = new HashMap<>();
-    public static ForgeConfigSpec.IntValue CHANCE_WILD_SALMONBERRIES;
-    public static ForgeConfigSpec.IntValue CHANCE_MINI_MELON;
-    public static ForgeConfigSpec.IntValue CHANCE_CANTALOUPE;
     public static ForgeConfigSpec.BooleanValue CRAFT_NUT_MILK;
     public static ForgeConfigSpec.BooleanValue COOK_CLOVER_HONEY;
     public static ForgeConfigSpec.BooleanValue GIVE_SLICED_DIRECTLY;
     public static ForgeConfigSpec.BooleanValue MELON_JUICING;
-    public static ForgeConfigSpec.BooleanValue USE_MILK_TAG;
     private static final ImmutableList<String> DEFAULT_DISABLED = ImmutableList.of(
         Util.name(Knives.COPPER),
         Util.name(Knives.BONE),
@@ -53,10 +49,6 @@ public class DelightfulConfig {
             items.stream()
                 .filter(path -> !path.contains("_knife") && !path.contains("_pie_slice"))
                 .forEach(not -> put(builder, stuff, not, !DEFAULT_DISABLED.contains(not)));
-            USE_MILK_TAG = builder
-                .comment("Force the replacement of forge:cheese item tag in recipes with forge:milk")
-                .define("use_milk_tag", false);
-            stuff.put("use_milk_tag", USE_MILK_TAG);
             CRAFT_NUT_MILK = builder
               .comment("Allow cooking milk from nuts")
               .define("nut_milk", true);
@@ -71,17 +63,6 @@ public class DelightfulConfig {
             MELON_JUICING = builder
                 .comment("Allow sliced melons to be juiced in-world (right click)")
                 .define("melon_juicing", true);
-        builder.pop();
-        builder.push("Generation");
-            CHANCE_WILD_SALMONBERRIES = builder
-              .comment("Chance of generating clusters. Smaller value = more frequent (once every ...). To disable, set the item Salmonberries to false above.")
-              .defineInRange("chance_wild_salmonberries", 35, 0, Integer.MAX_VALUE);
-            CHANCE_MINI_MELON = builder
-              .comment("Chance of generating clusters. Smaller value = more frequent (once every ...). To disable, set the item Mini Melon to false above.")
-              .defineInRange("chance_mini_melon", 35, 0, Integer.MAX_VALUE);
-            CHANCE_CANTALOUPE = builder
-            .comment("Chance of generating clusters. Smaller value = more frequent (once every ...). To disable, set the item Cantaloupe to false above.")
-            .defineInRange("chance_cantaloupe", 55, 0, Integer.MAX_VALUE);
         builder.pop();
     }
 

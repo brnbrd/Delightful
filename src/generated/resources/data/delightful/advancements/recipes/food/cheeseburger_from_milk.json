@@ -50,24 +50,8 @@
               "value": "cheeseburger"
             },
             {
-              "type": "forge:or",
-              "values": [
-                {
-                  "type": "forge:tag_empty",
-                  "tag": "forge:cheeses"
-                },
-                {
-                  "type": "delightful:enabled",
-                  "value": "use_milk_tag"
-                }
-              ]
-            },
-            {
-              "type": "forge:not",
-              "value": {
-                "type": "forge:mod_loaded",
-                "modid": "vintagedelight"
-              }
+              "type": "forge:tag_empty",
+              "tag": "forge:cheeses"
             }
           ]
         }

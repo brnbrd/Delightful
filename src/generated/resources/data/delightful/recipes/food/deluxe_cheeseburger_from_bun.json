@@ -23,13 +23,6 @@
                 "type": "forge:tag_empty",
                 "tag": "forge:cheeses"
               }
-            },
-            {
-              "type": "forge:not",
-              "value": {
-                "type": "delightful:enabled",
-                "value": "use_milk_tag"
-              }
             }
           ]
         }
