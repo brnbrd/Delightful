@@ -78,7 +78,6 @@ public class Nutrition {
     public static final FoodProperties SALMONBERRIES = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.6F)
         .effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 100, 0), 1.0F).build();
     public static final FoodProperties SALMONBERRY_PIE_SLICE = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.3F).fast()
-        .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 600, 0), 1.0F)
         .effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 600, 0), 1.0F).build();
     public static final FoodProperties SALMONBERRY_GUMMY = (new FoodProperties.Builder())
         .nutrition(2).saturationMod(0.0F).alwaysEat()

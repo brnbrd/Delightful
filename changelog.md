@@ -10,6 +10,7 @@
 ### Fixes
 - Crab Rangoon now uses tag "forge:crab_meat" rather than "forge:cooked_crab"'
 - Planted Salmonberry Bushes now correctly drop berries when broken
+- Removed speed from Salmonberry and Source Berry pie slices
 - Crabber's Delight and Ecologics' crafting parity
 - More compat tags and recipe overrides
 - Cleaned up console output at mod startup
