@@ -118,12 +118,12 @@ public class DelightfulLanguageProvider extends LanguageProvider {
         add("farmersdelight.tooltip.sinigang", "Sour Fish Stew");
         add("delightful.matcha.desc", "Green Tea Powder");
         add("delightful.green_tea_leaf.desc", "Get lucky using a Knife on any Leaves block.");
-        add("delightful.animal_fat.desc", "Get lucky using a Knife on a fatty animal.");
+        add("delightful.animal_fat.desc", "Can be scavenged from some dead animals.");
+        add("delightful.animal_oil_bottle.desc", "Use on any furnace for a small amount of heat.");
         add("delightful.acorn.desc", "Drops from Oak Leaves or a Squirrel.");
         add("delightful.salmonberries.desc", "Salmonberries can be commonly found as a wild plant in forests.");
-        add("delightful.animal_oil_bottle.desc", "Can be used on any smelting block to provide two items of burn time.");
-        add("delightful.mini_melon.desc", "Found in Plains-like biomes. Can grow into a big Melon or be sliced with a Knife.");
-        add("delightful.cantaloupe.desc", "Found in Beach-like biomes.");
+        add("delightful.mini_melon.desc", "Mini melons can be commonly found in plains. Can grow into a big Melon or be sliced with a Knife.");
+        add("delightful.cantaloupe.desc", "Cantaloupes can be commonly found on beaches.");
         add("delightful.sliceable.desc", "Can be sliced with a Knife.");
         add("delightful.placeable.desc", "Placeable");
         add("tooltip.config_disabled", "Disabled");
