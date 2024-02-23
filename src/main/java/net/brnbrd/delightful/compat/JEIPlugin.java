@@ -18,6 +18,7 @@ import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
 import vectorwing.farmersdelight.common.utility.TextUtils;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.List;
 
 @JeiPlugin
 @ParametersAreNonnullByDefault
@@ -45,14 +46,17 @@ public class JEIPlugin implements IModPlugin
             .forEach(i -> registration.addIngredientInfo(i, VanillaTypes.ITEM_STACK, TextUtils.getTranslation("jei.info.knife")));
 
         // Add other descriptions
+        if (Util.enabled(DelightfulItems.SALMONBERRIES)) {
+            registration.addIngredientInfo(
+                List.of(Util.gs(DelightfulItems.SALMONBERRIES), Util.gs(DelightfulItems.WILD_SALMONBERRIES)),
+                VanillaTypes.ITEM_STACK, Component.translatable(Delightful.MODID + ".salmonberries.desc")
+            );
+        }
         if (Util.enabled(DelightfulItems.GREEN_TEA_LEAF)) {
             registration.addIngredientInfo(DelightfulItems.GREEN_TEA_LEAF.get().getDefaultInstance(), VanillaTypes.ITEM_STACK, Component.translatable(Delightful.MODID + ".green_tea_leaf.desc"));
         }
         if (Util.enabled(DelightfulItems.ACORN)) {
             registration.addIngredientInfo(Util.gs(DelightfulItems.ACORN), VanillaTypes.ITEM_STACK, Component.translatable(Delightful.MODID + ".acorn.desc"));
-        }
-        if (Util.enabled(DelightfulItems.SALMONBERRIES)) {
-            registration.addIngredientInfo(Util.gs(DelightfulItems.SALMONBERRIES), VanillaTypes.ITEM_STACK, Component.translatable(Delightful.MODID + ".salmonberries.desc"));
         }
         if (Util.enabled(DelightfulItems.MINI_MELON)) {
             registration.addIngredientInfo(Util.gs(DelightfulItems.MINI_MELON), VanillaTypes.ITEM_STACK, Component.translatable(Delightful.MODID + ".mini_melon.desc"));
