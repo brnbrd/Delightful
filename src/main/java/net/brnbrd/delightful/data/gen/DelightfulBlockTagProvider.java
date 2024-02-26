@@ -56,7 +56,6 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 		this.tag(DelightfulBlockTags.DROPS_GREEN_TEA_LEAF)
 			.addTag(BlockTags.LEAVES);
 		this.tag(DelightfulBlockTags.CANTALOUPE_SPAWNS)
-			.addTag(BlockTags.DIRT)
 			.addTag(BlockTags.SAND);
 
 		// Minecraft
