@@ -63,14 +63,16 @@ public class PieEvents {
 		) {
 			PieBlock pie = Pies.get(e.getItemStack());
 			if (pie != null) {
-				e.setUseItem(Event.Result.DENY);
-				e.setUseBlock(Event.Result.DENY);
 				InteractionResult place = placePie(pie, new BlockPlaceContext(
-						e.getEntity(),
-						e.getHand(),
-						e.getItemStack(),
-						e.getHitVec()
+					e.getEntity(),
+					e.getHand(),
+					e.getItemStack(),
+					e.getHitVec()
 				));
+				if (place.consumesAction()) {
+					e.setUseItem(Event.Result.DENY);
+					e.setUseBlock(Event.Result.DENY);
+				}
 				e.setCancellationResult(place);
 				e.setCanceled(place.consumesAction());
 			}
