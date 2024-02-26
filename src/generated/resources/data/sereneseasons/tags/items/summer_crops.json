@@ -1,5 +1,6 @@
 {
   "values": [
-    "delightful:salmonberry_pips"
+    "#forge:seeds/salmonberry",
+    "#forge:seeds/cantaloupe"
   ]
 }

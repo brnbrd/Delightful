@@ -437,7 +437,9 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Util.rl(Mods.FR, "gamblers_tea"));
 
 		// Serene Seasons
-		tag(DelightfulItemTags.SUMMER_CROPS).add(DelightfulItems.SALMONBERRY_PIPS.get());
+		tag(DelightfulItemTags.SUMMER_CROPS)
+			.addTag(DelightfulItemTags.SEEDS_SALMONBERRY)
+			.addTag(DelightfulItemTags.SEEDS_CANTALOUPE);
 
 		// Phantasm
 		this.addSelf(DelightfulItemTags.VOID_CRYSTAL_BLOCK);
