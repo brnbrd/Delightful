@@ -63,19 +63,19 @@ public class CantaloupePlantBlock extends BushBlock implements BonemealableBlock
 		return SHAPE_BY_AGE[pState.getValue(AGE)];
 	}
 
+	@Override
+	public void tick(BlockState pState, @NotNull ServerLevel pLevel, @NotNull BlockPos pPos, @NotNull RandomSource pRandom) {
+		if (!pState.canSurvive(pLevel, pPos)) {
+			pLevel.destroyBlock(pPos, true);
+		}
+	}
+
 	/**
 	 * @return whether this block needs random ticking.
 	 */
 	@Override
 	public boolean isRandomlyTicking(@NotNull BlockState state) {
 		return !this.isMaxAge(state);
-	}
-
-	@Override
-	public void tick(BlockState pState, @NotNull ServerLevel pLevel, @NotNull BlockPos pPos, @NotNull RandomSource pRandom) {
-		if (!pState.canSurvive(pLevel, pPos)) {
-			pLevel.destroyBlock(pPos, true);
-		}
 	}
 
 	@Override
