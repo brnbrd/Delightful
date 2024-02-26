@@ -33,8 +33,8 @@ import net.minecraftforge.common.PlantType;
 import org.jetbrains.annotations.NotNull;
 
 public class CantaloupePlantBlock extends BushBlock implements BonemealableBlock {
-	public static final int MAX_AGE = 4;
-	public static final IntegerProperty AGE = BlockStateProperties.AGE_4;
+	public static final int MAX_AGE = 3;
+	public static final IntegerProperty AGE = BlockStateProperties.AGE_3;
 	protected static final VoxelShape SHAPE = Shapes.block();
 
 	public CantaloupePlantBlock(BlockBehaviour.Properties pProperties) {

@@ -11,9 +11,6 @@
     },
     "age=3": {
       "model": "delightful:block/cantaloupe_plant_stage3"
-    },
-    "age=4": {
-      "model": "delightful:block/cantaloupe_plant_stage4"
     }
   }
 }
