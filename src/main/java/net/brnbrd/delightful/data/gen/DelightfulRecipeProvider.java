@@ -515,7 +515,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
         CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(Items.SUGAR_CANE), Ingredient.of(ForgeTags.TOOLS_KNIVES), Items.SUGAR, 1)
             .addResultWithChance(Items.SUGAR, 0.5F, 1)
             .build(finished, Util.rl(Delightful.MODID, "cutting/sugar_cane"));
-        CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(DelightfulItems.WILD_SALMONBERRIES.get()), Ingredient.of(ForgeTags.TOOLS_KNIVES), DelightfulItems.SALMONBERRY_PIPS.get(), 1)
+        CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(DelightfulItems.WILD_SALMONBERRIES.get()), Ingredient.of(ForgeTags.TOOLS_KNIVES), DelightfulItems.SALMONBERRIES.get(), 1)
             .addResult(Items.ORANGE_DYE, 1)
             .build(finished, Util.rl(Delightful.MODID, "cutting/wild_salmonberries"));
         }

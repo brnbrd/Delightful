@@ -370,8 +370,6 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		tag(ItemTags.PIGLIN_LOVED).add(Knives.REFINED_GLOWSTONE.get());
 		tag(ForgeTags.TOOLS_KNIVES)
 			.addTag(ModTags.KNIVES)
-			.addOptional(Util.rl("ae2", "certus_quartz_cutting_knife"))
-			.addOptional(Util.rl("ae2", "nether_quartz_cutting_knife"))
 			.addOptional(Util.rl("occultism", "butcher_knife"));
 		var build = tag(ModTags.KNIVES);
 		DelightfulItems.ITEMS.getEntries().stream()
