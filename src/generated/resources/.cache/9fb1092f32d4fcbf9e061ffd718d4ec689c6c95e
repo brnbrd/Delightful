@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-22T16:16:53.7764318	Recipes
+// 1.20.1	2024-02-25T17:03:40.8979005	Recipes
 6c217dd6477efa10f6042809ba959d53036ab5e2 data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 5b82f87851220644287d771121677deac66b3b89 data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
 cf29033c1c919355c261025df529938e6ebc73f8 data/delightful/advancements/recipes/campfire/cactus_steak.json
@@ -57,6 +57,7 @@ c28a3acc20f3f995de383ba35ea72f36f261a1d0 data/delightful/advancements/recipes/kn
 932e6eae4ae6cbfa0fb1de92f9168c2add06ecb5 data/delightful/advancements/recipes/knives/bone_knife.json
 67d6ab01a5ba3ebc3f5f9c2c84cb244e3e17c3b5 data/delightful/advancements/recipes/knives/brass_knife.json
 fd94bff46c25850e089a945f44357393e3e22a12 data/delightful/advancements/recipes/knives/bronze_knife.json
+f91fb5b9ffe14b4cef7314887134d8a71cbd5eaf data/delightful/advancements/recipes/knives/certus_quartz_knife.json
 0b738570554d2398ba090ea318593776f843cb05 data/delightful/advancements/recipes/knives/cloggrum_knife.json
 6ce61e0076218033b74ae28ec1af8cf70f8dfbce data/delightful/advancements/recipes/knives/constantan_knife.json
 ee0eaffb3b79b054ca0e9e697014ece5768180aa data/delightful/advancements/recipes/knives/copper_knife.json
@@ -80,6 +81,7 @@ e78605aea639e3e2a841b18b42a0e948a31e7b99 data/delightful/advancements/recipes/kn
 6d0af0e486151c2034c832f30777e895d04f25b6 data/delightful/advancements/recipes/knives/manasteel_knife.json
 ad799041b2d8a4b7c59894344c15a3d50a6e94be data/delightful/advancements/recipes/knives/mythril_knife.json
 14d28f2230ee29b9857af24da6369afbc63d7f0f data/delightful/advancements/recipes/knives/necronium_knife.json
+74ac2d906f0ae0d39f495ebb29d3a2794885fefb data/delightful/advancements/recipes/knives/nether_quartz_knife.json
 9907ace548d221bd6ac0e8b66580bf5e04a1f836 data/delightful/advancements/recipes/knives/nickel_knife.json
 e826aad1fbd61704a144f5bb8b39bd4fd83f6ec8 data/delightful/advancements/recipes/knives/onyx_knife.json
 cba8826bb72edde5b40729c87dbf81baecdf38c4 data/delightful/advancements/recipes/knives/osmium_knife.json
@@ -92,6 +94,7 @@ b19af83a44af26636d381e43acc894f227d7627b data/delightful/advancements/recipes/kn
 3eb35cac05eed82cdc024de8537d9597e7473ea3 data/delightful/advancements/recipes/knives/smelting/bone/knife_minecraft.json
 aef73e034ba412e826de04c5c987da9c4fdeeed4 data/delightful/advancements/recipes/knives/smithing/alf_knife.json
 8bc905b06170a544b408b8104dc57f5d2bcb80fc data/delightful/advancements/recipes/knives/smithing/enderite_knife.json
+5eb853a77c9dc445d5be98949a5eab3a68752c69 data/delightful/advancements/recipes/knives/smithing/fluix_knife.json
 14f649e65db1d64d9efb15b5325cd4aa80b8b242 data/delightful/advancements/recipes/knives/smithing/forgotten_knife.json
 7b40346141edf98099e060af344bcd96a04c7e0e data/delightful/advancements/recipes/knives/smithing/gilded_netherite_knife.json
 c45a079a9e779846ac986fd09b1c1ab3cde29ddd data/delightful/advancements/recipes/knives/smithing/netherite_opal_knife.json
@@ -141,7 +144,7 @@ ef210c25b1a3d2453c0b37c587390bec5d6dadd0 data/delightful/recipes/cutting/cantalo
 94844bad124bf4c999bd39f9e661e44611b2db92 data/delightful/recipes/cutting/pumpkin_pie.json
 976a72b1df05888cdf33d4446eb42d611d502417 data/delightful/recipes/cutting/salmonberry_pie.json
 8f93cb7f47ffb3a6b38c14fc5ad15d08f00fdeeb data/delightful/recipes/cutting/sugar_cane.json
-97d10b1a49b1b0fe88b9aafa69f01ce1adcbe626 data/delightful/recipes/cutting/wild_salmonberries.json
+c0a79eb80ddc34c2bf8584fea85a215c98bb5979 data/delightful/recipes/cutting/wild_salmonberries.json
 b7bf0c9ee63c6d1c12f3fdb81c953bf684c1f11b data/delightful/recipes/food/berry_matcha_latte.json
 17bcdcb892436fa58931f29a5180472d62306b7f data/delightful/recipes/food/berry_matcha_latte_from_matcha_latte.json
 9fb1f7cff50973acdea26f3f958856d6647b7aa5 data/delightful/recipes/food/berry_matcha_latte_from_matcha_latte_neapolitan.json
@@ -190,6 +193,7 @@ f83deb283dd4e6ac692c0d65849a8c3100043df6 data/delightful/recipes/knives/black_op
 cd5eb1e1d195673c74d40926148b62e5c1730f69 data/delightful/recipes/knives/bone_knife.json
 54047e51519994438f03e17cadc0d468f4af8d3c data/delightful/recipes/knives/brass_knife.json
 b8463b190233ddf4a62e25d5f0f5f4c03c77c009 data/delightful/recipes/knives/bronze_knife.json
+c21b96b24e5b672a35e21181a06d7bded28e116c data/delightful/recipes/knives/certus_quartz_knife.json
 7cf460956d49fba50ae47537f05f0c13c596b731 data/delightful/recipes/knives/cloggrum_knife.json
 f1c050b7220dce76ebbacc70b3b0898c981db516 data/delightful/recipes/knives/constantan_knife.json
 af63cf63543a40c74e6eaa7248075258aa096323 data/delightful/recipes/knives/copper_knife.json
@@ -213,6 +217,7 @@ a8b2865647ac28c301c99e6ef20171c7ac1debf6 data/delightful/recipes/knives/lead_kni
 293d4abd845691a53fe98b58f598cb63014bddd1 data/delightful/recipes/knives/manasteel_knife.json
 59c8a4998b048aa83c83ae466da46f602c850af1 data/delightful/recipes/knives/mythril_knife.json
 06d3d2d214572f82ed5c3d0363a50effc0539925 data/delightful/recipes/knives/necronium_knife.json
+b2aaa93c134eb08496ef073e90ae0544a0a5d9cf data/delightful/recipes/knives/nether_quartz_knife.json
 7dfbb6001ff3f97836dc752dfbe2d6aebb95c407 data/delightful/recipes/knives/nickel_knife.json
 eddd9b510f064512c5fe89b09759018033610be6 data/delightful/recipes/knives/onyx_knife.json
 e4d2930d0c2c2d7224a9b7e4d464b06062a2aa3c data/delightful/recipes/knives/osmium_knife.json
@@ -225,6 +230,7 @@ baefbb65988ff573a3123465f5e81a31b57c42d5 data/delightful/recipes/knives/skyroot_
 e405d5ea434d65ba48e8cd7b275d3a0ff0877a4f data/delightful/recipes/knives/smelting/bone/knife_minecraft.json
 b6bf859ae3db98af7539dcd41aaaac814207e7ce data/delightful/recipes/knives/smithing/alf_knife.json
 b613919fb3f30dd06393aeab2da2b07d5f819c60 data/delightful/recipes/knives/smithing/enderite_knife.json
+55a4d2791c4736813112211a755102717af0ea31 data/delightful/recipes/knives/smithing/fluix_knife.json
 84cb45fb6a606c2629cc893becb0aa5e2ba2f30c data/delightful/recipes/knives/smithing/forgotten_knife.json
 be6383ad3965a76cbbee2098c51be419de92eb57 data/delightful/recipes/knives/smithing/gilded_netherite_knife.json
 44dc8ba030ef2c8fe2ac933a951b845c1bc4dcf2 data/delightful/recipes/knives/smithing/netherite_opal_knife.json

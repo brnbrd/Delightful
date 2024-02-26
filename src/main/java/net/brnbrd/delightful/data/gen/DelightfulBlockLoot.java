@@ -50,6 +50,9 @@ public class DelightfulBlockLoot extends BlockLootSubProvider {
         this.dropSelf(DelightfulBlocks.MINI_MELON.get());
         this.dropSelf(DelightfulBlocks.CANTALOUPE.get());
 
+        // Plants
+        this.dropOther(DelightfulBlocks.CANTALOUPE_PLANT.get(), DelightfulItems.CANTALOUPE_SEEDS.get());
+
         // Sliced
         this.add(DelightfulBlocks.SLICED_MINI_MELON.get(), (b) -> {
                 LootTable.Builder loot = LootTable.lootTable();

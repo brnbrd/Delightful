@@ -1,5 +1,13 @@
 # Changelog
 
+# 3.4.4
+
+### Updates
+- Added Nether Quartz Knife (for [Applied Energistics 2](https://www.curseforge.com/minecraft/mc-mods/applied-energistics-2))
+- Added Certus Quartz Knife (for [Applied Energistics 2](https://www.curseforge.com/minecraft/mc-mods/applied-energistics-2))
+- Added Fluix Knife (for [Applied Energistics 2](https://www.curseforge.com/minecraft/mc-mods/applied-energistics-2))
+
+
 ## 3.4.3
 
 ### Updates

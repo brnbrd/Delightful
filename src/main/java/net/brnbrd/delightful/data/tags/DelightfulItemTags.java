@@ -3,6 +3,7 @@ package net.brnbrd.delightful.data.tags;
 import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.item.DelightfulItems;
+import net.brnbrd.delightful.common.item.knife.Knives;
 import net.brnbrd.delightful.compat.Mods;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
@@ -114,6 +115,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> GEMS_ZANITE = forge("gems/zanite");
 	public static final TagKey<Item> ICE_CUBES = forge("ice_cubes");
 	public static final TagKey<Item> SEEDS_SALMONBERRY = forge("seeds/salmonberry");
+	public static final TagKey<Item> SEEDS_CANTALOUPE = forge("seeds/cantaloupe");
 	public static final TagKey<Item> TORTILLA = forge("tortilla");
 
 	// Forbidden and Arcanus
@@ -161,6 +163,13 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> INGOTS_STELLIUM = DelightfulItems.ingot("stellium");
 	public static final TagKey<Item> VOID_CRYSTAL_BLOCK = Util.it(Mods.EP, "void_crystal_block");
 	public static final TagKey<Item> CRYSTAL_SPIKE_TIPS = Util.it(Mods.EP, "crystal_spike_tips");
+
+	// AE2
+	public static final TagKey<Item> QUARTZ_KNIFE = Util.it(Delightful.MODID, "quartz_knife");
+	public static final TagKey<Item> CERTUS_QUARTZ = Knives.gem("certus_quartz");
+	public static final TagKey<Item> FLUIX_CRYSTAL = Knives.gem("fluix");
+	public static final TagKey<Item> FLUIX_BLOCK = Util.it(Mods.AE2, "fluix_block");
+	public static final TagKey<Item> FLUIX_UPGRADE_SMITHING_TEMPLATE = Util.it(Mods.AE2, "fluix_upgrade_smithing_template");
 
 	// Spirit
 	public static final TagKey<Item> SOUL_STEEL_INGOT = DelightfulItems.ingot("soul_steel");

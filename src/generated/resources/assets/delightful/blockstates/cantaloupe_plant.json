@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "delightful:block/cantaloupe_plant_stage0"
+    },
+    "age=1": {
+      "model": "delightful:block/cantaloupe_plant_stage1"
+    },
+    "age=2": {
+      "model": "delightful:block/cantaloupe_plant_stage2"
+    },
+    "age=3": {
+      "model": "delightful:block/cantaloupe_plant_stage3"
+    },
+    "age=4": {
+      "model": "delightful:block/cantaloupe_plant_stage4"
+    }
+  }
+}

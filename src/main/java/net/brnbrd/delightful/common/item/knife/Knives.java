@@ -5,6 +5,7 @@ import net.brnbrd.delightful.common.item.DelightfulTiers;
 import net.brnbrd.delightful.common.item.knife.compat.DummyKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.additionaladditions.GildedNetheriteKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.additionaladditions.RoseGoldKnifeItem;
+import net.brnbrd.delightful.common.item.knife.compat.ae2.FluixKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.aether.GravititeKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.aether.HolystoneKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.aether.SkyrootKnifeItem;
@@ -155,6 +156,12 @@ public class Knives extends DelightfulItems {
 		DeepAetherCompat.STRATUS.get() :
 		new DummyStratusKnifeItem(props(), Tiers.IRON)
 	);
+	public static final RegistryObject<Item> NETHER_QUARTZ = registerItem("nether_quartz_knife", () ->
+		new CompatKnifeItem(Mods.AE2, Tags.Items.GEMS_QUARTZ, DelightfulTiers.NETHER_QUARTZ, props()));
+	public static final RegistryObject<Item> CERTUS_QUARTZ = registerItem("certus_quartz_knife", () ->
+		new CompatKnifeItem(Mods.AE2, DelightfulItemTags.CERTUS_QUARTZ, DelightfulTiers.CERTUS_QUARTZ, props()));
+	public static final RegistryObject<Item> FLUIX = registerItem("fluix_knife", () ->
+		new FluixKnifeItem(props()));
 
 	public static Item.Properties props() {
 		return (new Item.Properties());

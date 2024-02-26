@@ -109,6 +109,18 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "certus_quartz_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:certus_quartz_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "cloggrum_knife": {
       "conditions": {
         "items": [
@@ -259,6 +271,18 @@
           {
             "items": [
               "farmersdelight:flint_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "fluix_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:fluix_knife"
             ]
           }
         ]
@@ -511,6 +535,18 @@
           {
             "items": [
               "delightful:necronium_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "nether_quartz_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:nether_quartz_knife"
             ]
           }
         ]
@@ -929,7 +965,10 @@
       "veridium_knife",
       "infused_veridium_knife",
       "skyjade_knife",
-      "stratus_knife"
+      "stratus_knife",
+      "nether_quartz_knife",
+      "certus_quartz_knife",
+      "fluix_knife"
     ]
   ],
   "sends_telemetry_event": true

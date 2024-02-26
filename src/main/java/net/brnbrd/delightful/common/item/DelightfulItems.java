@@ -121,6 +121,8 @@ public class DelightfulItems {
     public static final RegistryObject<Item> COOKED_GOAT = registerItem("cooked_goat",
         () -> new DItem(new Item.Properties().food(Nutrition.COOKED_GOAT)));
     public static final RegistryObject<Item> CANTALOUPE_SLICE = registerFood("cantaloupe_slice", Nutrition.CANTALOUPE_SLICE);
+    public static final RegistryObject<Item> CANTALOUPE_SEEDS = registerItem("cantaloupe_seeds",
+        () -> new ItemNameBlockItem(DelightfulBlocks.CANTALOUPE_PLANT.get(), ModItems.basicItem()));
     public static final RegistryObject<Item> CANTALOUPE = registerItem("cantaloupe", () ->
         new BlockItem(DelightfulBlocks.CANTALOUPE.get(), ModItems.basicItem()));
     public static final RegistryObject<Item> MINI_MELON = registerItem("mini_melon", () ->

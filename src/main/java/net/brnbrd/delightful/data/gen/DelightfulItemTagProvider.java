@@ -23,6 +23,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
@@ -346,11 +347,20 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Util.rl("babyfat", "water_lettuce"));
 		tag(DelightfulItemTags.SEEDS_SALMONBERRY)
 			.add(DelightfulItems.SALMONBERRY_PIPS.get());
+		tag(DelightfulItemTags.SEEDS_CANTALOUPE)
+			.add(DelightfulItems.CANTALOUPE_SEEDS.get());
 		tag(ForgeTags.SEEDS)
 			.addTag(DelightfulItemTags.SEEDS_SALMONBERRY)
+			.addTag(DelightfulItemTags.SEEDS_CANTALOUPE)
 			.addOptional(Util.rl(Mods.FR, "tea_seeds"));
 		tag(DelightfulItemTags.TORTILLA)
 			.addOptional(Util.rl("culturaldelights", "tortilla"));
+		tag(Tags.Items.SEEDS)
+			.addOptional(Util.rl("vintagedelight", "oat_seeds"))
+			.addOptional(Util.rl("vintagedelight", "ghost_pepper_seeds"))
+			.addOptional(Util.rl("vintagedelight", "cucumber_seeds"))
+			.addOptional(Util.rl("fruitsdelight", "lemon_seeds"))
+			.addOptional(Util.rl("fruitsdelight", "hamimelon_seeds"));
 
 		// Minecraft
 		tag(ItemTags.FOX_FOOD)
@@ -488,6 +498,16 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.INGOTS_STRATUS)
 			.addOptionalTag(Util.rl("deep_aether", "stratus_repairing"));
 		this.addSelf(DelightfulItemTags.STRATUS_UPGRADE);
+
+		// AE2
+		this.addSelf(DelightfulItemTags.FLUIX_BLOCK);
+		this.addSelf(DelightfulItemTags.FLUIX_UPGRADE_SMITHING_TEMPLATE);
+		this.tag(DelightfulItemTags.QUARTZ_KNIFE)
+			.add(Knives.NETHER_QUARTZ.get())
+			.add(Knives.CERTUS_QUARTZ.get());
+
+		// Naturalist
+		this.tag(Util.it("naturalist", "bird_food_items")).addTag(Tags.Items.SEEDS);
 	}
 
 	/**

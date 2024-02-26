@@ -1,10 +1,11 @@
-// 1.20.1	2024-02-22T13:44:53.8389164	Loot Tables
+// 1.20.1	2024-02-25T17:03:40.8958986	Loot Tables
 2b9b2e38c5ea1b16ab49d97e8273a06d9522ff89 data/delightful/loot_tables/blocks/acorn_sack.json
 1363024576f5e67e0984401cb699644221da8f5b data/delightful/loot_tables/blocks/baobab_fruit_crate.json
 b2b2afb8acde3c9aa1a3c3a6cd0826249dcac91b data/delightful/loot_tables/blocks/basalt_cabinet.json
 1896924805700c28c1e6b4fd3feffd89ed8aa8a3 data/delightful/loot_tables/blocks/blueberry_pie.json
 3644fed50799bd8861780cf4237435c1216814cd data/delightful/loot_tables/blocks/blueberry_sack.json
 556b8e70b7714b1280d900d203cce6c2cae89ea5 data/delightful/loot_tables/blocks/cantaloupe.json
+f2ab721ce52fda8a1535e71e951866257792df46 data/delightful/loot_tables/blocks/cantaloupe_plant.json
 a769a60414c847b72197ade6d98ecd83e15f6998 data/delightful/loot_tables/blocks/crimson_berry_pie.json
 c4312feb74f90fd4080374885bed9a9a494db837 data/delightful/loot_tables/blocks/crimson_berry_sack.json
 204ffae7b2b334ee52fd49ac0118ea9988b08b97 data/delightful/loot_tables/blocks/gloomgourd_pie.json

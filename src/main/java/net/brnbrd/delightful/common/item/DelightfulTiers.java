@@ -3,6 +3,7 @@ package net.brnbrd.delightful.common.item;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.compat.Mods;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -72,7 +73,28 @@ public enum DelightfulTiers implements Tier {
     ZANITE(2, 250, 6.0F, 2.0F, 14, Ingredient.of(Util.it(Mods.AE, "zanite_repairing"))),
     GRAVITITE(3, 1561, 8.0F, 3.0F, 10, Ingredient.of(Util.it(Mods.AE, "gravitite_repairing"))),
     VERIDIUM(2, 750, 2.25F, 1.0F, 0, Ingredient.of(DelightfulItemTags.INGOTS_VERIDIUM)),
-    INFUSED_VERIDIUM(2, 750, 7.0F, 1.0F, 0, Ingredient.of(DelightfulItemTags.INGOTS_VERIDIUM));
+    INFUSED_VERIDIUM(2, 750, 7.0F, 1.0F, 0, Ingredient.of(DelightfulItemTags.INGOTS_VERIDIUM)),
+    NETHER_QUARTZ(
+        Tiers.IRON.getLevel(),
+        Tiers.IRON.getUses(),
+        Tiers.IRON.getSpeed(),
+        Tiers.IRON.getAttackDamageBonus(),
+        Tiers.IRON.getEnchantmentValue(),
+        Ingredient.of(Tags.Items.GEMS_QUARTZ)),
+    CERTUS_QUARTZ(
+        Tiers.IRON.getLevel(),
+        Tiers.IRON.getUses(),
+        Tiers.IRON.getSpeed(),
+        Tiers.IRON.getAttackDamageBonus(),
+        Tiers.IRON.getEnchantmentValue(),
+        Ingredient.of(DelightfulItemTags.CERTUS_QUARTZ)),
+    FLUIX(
+        Tiers.IRON.getLevel(),
+        Tiers.IRON.getUses() * 3,
+        Tiers.IRON.getSpeed() * 1.2F,
+        Tiers.IRON.getAttackDamageBonus() * 1.2F,
+        Tiers.IRON.getEnchantmentValue(),
+        Ingredient.of(DelightfulItemTags.FLUIX_CRYSTAL));
 
     private final int level;
     private final int uses;
