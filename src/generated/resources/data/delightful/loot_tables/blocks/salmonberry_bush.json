@@ -8,40 +8,15 @@
   "pools": [
     {
       "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
       "entries": [
         {
           "type": "minecraft:item",
           "name": "delightful:salmonberry_pips"
-        }
-      ],
-      "rolls": 1.0
-    },
-    {
-      "bonus_rolls": 0.0,
-      "conditions": [
-        {
-          "block": "delightful:salmonberry_bush",
-          "condition": "minecraft:block_state_property",
-          "properties": {
-            "age": "2"
-          }
-        }
-      ],
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "delightful:salmonberries"
-        }
-      ],
-      "functions": [
-        {
-          "add": false,
-          "count": {
-            "type": "minecraft:uniform",
-            "max": 1.0,
-            "min": 1.0
-          },
-          "function": "minecraft:set_count"
         }
       ],
       "rolls": 1.0

@@ -51,7 +51,15 @@ public class DelightfulBlockLoot extends BlockLootSubProvider {
         this.dropSelf(DelightfulBlocks.CANTALOUPE.get());
 
         // Plants
-        this.dropOther(DelightfulBlocks.CANTALOUPE_PLANT.get(), DelightfulItems.CANTALOUPE_SEEDS.get());
+        this.add(DelightfulBlocks.CANTALOUPE_PLANT.get(), (b) -> {
+                LootTable.Builder loot = this.createSingleItemTable(DelightfulItems.CANTALOUPE_SEEDS.get())
+                    .withPool(LootPool.lootPool()
+                    .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(b)
+                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CantaloupePlantBlock.AGE, CantaloupePlantBlock.MAX_AGE)))
+                    .add(LootItem.lootTableItem(DelightfulItems.CANTALOUPE.get())));
+                return applyExplosionDecay(b, loot);
+            }
+        );
 
         // Sliced
         this.add(DelightfulBlocks.SLICED_MINI_MELON.get(), (b) -> {
@@ -127,10 +135,8 @@ public class DelightfulBlockLoot extends BlockLootSubProvider {
 
         // Salmonberry Bush drops Pips and optional Berry
         this.add(DelightfulBlocks.SALMONBERRY_BUSH.get(), (b) -> {
-                LootTable.Builder loot = LootTable.lootTable().withPool(
-                    LootPool.lootPool().add(LootItem.lootTableItem(DelightfulItems.SALMONBERRY_PIPS.get()))
-                );
-                for (int i = 2; i <= SalmonberryBushBlock.MAX_AGE; i++) {
+                LootTable.Builder loot = this.createSingleItemTable(DelightfulItems.SALMONBERRY_PIPS.get());
+                for (int i = 3; i <= SalmonberryBushBlock.MAX_AGE; i++) {
                     loot = loot.withPool(LootPool.lootPool()
                         .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(b)
                             .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(SalmonberryBushBlock.AGE, i)))

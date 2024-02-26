@@ -1,11 +1,11 @@
-// 1.20.1	2024-02-25T17:03:40.8958986	Loot Tables
+// 1.20.1	2024-02-26T01:54:01.9201487	Loot Tables
 2b9b2e38c5ea1b16ab49d97e8273a06d9522ff89 data/delightful/loot_tables/blocks/acorn_sack.json
 1363024576f5e67e0984401cb699644221da8f5b data/delightful/loot_tables/blocks/baobab_fruit_crate.json
 b2b2afb8acde3c9aa1a3c3a6cd0826249dcac91b data/delightful/loot_tables/blocks/basalt_cabinet.json
 1896924805700c28c1e6b4fd3feffd89ed8aa8a3 data/delightful/loot_tables/blocks/blueberry_pie.json
 3644fed50799bd8861780cf4237435c1216814cd data/delightful/loot_tables/blocks/blueberry_sack.json
 556b8e70b7714b1280d900d203cce6c2cae89ea5 data/delightful/loot_tables/blocks/cantaloupe.json
-f2ab721ce52fda8a1535e71e951866257792df46 data/delightful/loot_tables/blocks/cantaloupe_plant.json
+06573c323b889e3ebea85b882ec12fe13a4a1bfe data/delightful/loot_tables/blocks/cantaloupe_plant.json
 a769a60414c847b72197ade6d98ecd83e15f6998 data/delightful/loot_tables/blocks/crimson_berry_pie.json
 c4312feb74f90fd4080374885bed9a9a494db837 data/delightful/loot_tables/blocks/crimson_berry_sack.json
 204ffae7b2b334ee52fd49ac0118ea9988b08b97 data/delightful/loot_tables/blocks/gloomgourd_pie.json
@@ -18,7 +18,7 @@ a8f504d501bb258e892639972f15d255cc773e7d data/delightful/loot_tables/blocks/matc
 cf1e5556f7fb6c3de2c83064065ab27647f4f836 data/delightful/loot_tables/blocks/nightshade_berry_sack.json
 a7ae700762d9f1280f78fe183e7a08ef8c1454d6 data/delightful/loot_tables/blocks/pumpkin_pie.json
 c5fd2099e0d7c4ce13c429f69ac8c3e797f94a64 data/delightful/loot_tables/blocks/quartz_cabinet.json
-2988674e940dc600fab4add6c8b0dc02e00cd635 data/delightful/loot_tables/blocks/salmonberry_bush.json
+c3ebebce4bd2b1b925274f5aeb1520e476aa5cd8 data/delightful/loot_tables/blocks/salmonberry_bush.json
 b5cdb0727bd106aab19da3a674caceafb8c6e847 data/delightful/loot_tables/blocks/salmonberry_ice_cream_block.json
 73fac5bd94cdd7111fe9a3da9ae55bbe792af061 data/delightful/loot_tables/blocks/salmonberry_pie.json
 0f6204aac3bc7f455452c3af6cdfc070015ec533 data/delightful/loot_tables/blocks/salmonberry_sack.json

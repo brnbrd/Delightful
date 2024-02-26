@@ -40,7 +40,7 @@ public class DelightfulBlocks {
     public static final RegistryObject<Block> SLICED_CANTALOUPE = BLOCKS.register("sliced_cantaloupe",
         () -> new SlicedMiniMelonBlock(Block.Properties.copy(SLICED_MINI_MELON.get()).noOcclusion(), DelightfulItems.CANTALOUPE_SLICE, null));
     public static final RegistryObject<Block> CANTALOUPE_PLANT = BLOCKS.register("cantaloupe_plant",
-        () -> new CantaloupePlantBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.HARD_CROP).pushReaction(PushReaction.DESTROY)));
+        () -> new CantaloupePlantBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP).pushReaction(PushReaction.DESTROY)));
     public static final RegistryObject<Block> SLICED_MELON = BLOCKS.register("sliced_melon",
         () -> new SlicedMelonBlock(Block.Properties.copy(Blocks.MELON), () -> Items.MELON_SLICE, ModItems.MELON_JUICE));
     public static final RegistryObject<Block> SLICED_PUMPKIN = BLOCKS.register("sliced_pumpkin",

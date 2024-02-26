@@ -59,10 +59,14 @@ public class JEIPlugin implements IModPlugin
             registration.addIngredientInfo(Util.gs(DelightfulItems.ACORN), VanillaTypes.ITEM_STACK, Component.translatable(Delightful.MODID + ".acorn.desc"));
         }
         if (Util.enabled(DelightfulItems.MINI_MELON)) {
-            registration.addIngredientInfo(Util.gs(DelightfulItems.MINI_MELON), VanillaTypes.ITEM_STACK, Component.translatable(Delightful.MODID + ".mini_melon.desc"));
+            registration.addIngredientInfo(
+                List.of(Items.MELON_SLICE.getDefaultInstance(), Util.gs(DelightfulItems.MINI_MELON)),
+                VanillaTypes.ITEM_STACK, Component.translatable(Delightful.MODID + ".mini_melon.desc"));
         }
         if (Util.enabled(DelightfulItems.CANTALOUPE)) {
-            registration.addIngredientInfo(Util.gs(DelightfulItems.CANTALOUPE), VanillaTypes.ITEM_STACK, Component.translatable(Delightful.MODID + ".cantaloupe.desc").append(" ").append(Component.translatable(Delightful.MODID + ".sliceable.desc")));
+            registration.addIngredientInfo(
+                List.of(Util.gs(DelightfulItems.CANTALOUPE_SLICE), Util.gs(DelightfulItems.CANTALOUPE)),
+                VanillaTypes.ITEM_STACK, Component.translatable(Delightful.MODID + ".cantaloupe.desc").append(" ").append(Component.translatable(Delightful.MODID + ".sliceable.desc")));
         }
         if (Util.enabled(DelightfulItems.ANIMAL_FAT)) {
             registration.addIngredientInfo(Util.gs(DelightfulItems.ANIMAL_FAT), VanillaTypes.ITEM_STACK, Component.translatable(Delightful.MODID + ".animal_fat.desc"));
