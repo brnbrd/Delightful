@@ -68,17 +68,24 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 			.addTag(BlockTags.SAND);
 
 		// Minecraft
+		this.tag(BlockTags.SWORD_EFFICIENT)
+			.add(DelightfulBlocks.MINI_MELON.get())
+			.add(DelightfulBlocks.SLICED_MINI_MELON.get())
+			.add(DelightfulBlocks.CANTALOUPE.get())
+			.add(DelightfulBlocks.SLICED_CANTALOUPE.get())
+			.add(DelightfulBlocks.SLICED_MELON.get())
+			.add(DelightfulBlocks.SLICED_PUMPKIN.get());
 		this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
 			.add(DelightfulBlocks.BASALT_CABINET.get())
 			.add(DelightfulBlocks.QUARTZ_CABINET.get());
 		this.tag(BlockTags.MINEABLE_WITH_AXE)
 			.add(DelightfulBlocks.MINI_MELON.get())
 			.add(DelightfulBlocks.SLICED_MINI_MELON.get())
+			.add(DelightfulBlocks.CANTALOUPE.get())
+			.add(DelightfulBlocks.SLICED_CANTALOUPE.get())
 			.add(DelightfulBlocks.SLICED_MELON.get())
 			.add(DelightfulBlocks.SLICED_PUMPKIN.get())
 			.add(DelightfulBlocks.SLICED_GLOOMGOURD.get())
-			.add(DelightfulBlocks.CANTALOUPE.get())
-			.add(DelightfulBlocks.SLICED_CANTALOUPE.get())
 			.add(DelightfulBlocks.GREEN_APPLE_CRATE.get())
 			.add(DelightfulBlocks.JOSHUA_FRUIT_CRATE.get())
 			.add(DelightfulBlocks.BAOBAB_FRUIT_CRATE.get())
