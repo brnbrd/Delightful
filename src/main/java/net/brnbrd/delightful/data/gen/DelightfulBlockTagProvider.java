@@ -43,14 +43,6 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 			.add(DelightfulBlocks.WILD_SALMONBERRIES.get());
 
 		// Delightful
-		this.tag(DelightfulBlockTags.COMPAT_PIES)
-			.add(DelightfulBlocks.PUMPKIN_PIE.get())
-			.add(DelightfulBlocks.SOURCE_BERRY_PIE.get())
-			.add(DelightfulBlocks.GLOOMGOURD_PIE.get())
-			.add(DelightfulBlocks.BLUEBERRY_PIE.get())
-			.add(DelightfulBlocks.CRIMSON_BERRY_PIE.get())
-			.add(DelightfulBlocks.GREEN_APPLE_PIE.get())
-			.add(DelightfulBlocks.NIGHTSHADE_BERRY_PIE.get());
 		this.tag(DelightfulBlockTags.DROPS_STRAW)
 			.addOptional(Util.rl("sprout", "sprouts"))
 			.addOptional(Util.rl(Mods.BYG, BYGCompat.prairie_grass))
