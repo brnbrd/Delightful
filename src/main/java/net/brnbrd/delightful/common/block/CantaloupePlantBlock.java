@@ -1,18 +1,21 @@
 package net.brnbrd.delightful.common.block;
 
-import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.BonemealableBlock;
@@ -23,7 +26,7 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.gameevent.GameEvent;
-import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -70,47 +73,58 @@ public class CantaloupePlantBlock extends BushBlock implements BonemealableBlock
 		if (!pState.canSurvive(pLevel, pPos)) {
 			pLevel.destroyBlock(pPos, true);
 		}
-
 	}
 
 	@Override
 	public void randomTick(BlockState pState, @NotNull ServerLevel pLevel, @NotNull BlockPos pPos, @NotNull RandomSource pRandom) {
 		int i = pState.getValue(AGE);
-		if (i < MAX_AGE && pLevel.getRawBrightness(pPos.above(), 0) >= 8){
-			int speed = 20;
-			Biome biome = pLevel.getBiome(pPos).value();
-			if (pLevel.isRainingAt(pPos) &&
-				biome.getPrecipitationAt(pPos) == Biome.Precipitation.RAIN &&
-				biome.warmEnoughToRain(pPos)) { // Hard raining ON the block
-				speed -= 15;
-			} else if (pLevel.isRaining()) { // Level just raining
-				speed -= 12;
-			}
-			if (ForgeHooks.onCropsGrowPre(pLevel, pPos, pState, pRandom.nextInt(speed) == 0)) {
-				BlockState blockstate = pState.setValue(AGE, i + 1);
-				pLevel.setBlock(pPos, blockstate, 2);
-				pLevel.gameEvent(GameEvent.BLOCK_CHANGE, pPos, GameEvent.Context.of(blockstate));
-				ForgeHooks.onCropsGrowPost(pLevel, pPos, pState);
-			}
+		if (
+			i < MAX_AGE &&
+			pLevel.getRawBrightness(pPos.above(), 0) >= 8 &&
+			ForgeHooks.onCropsGrowPre(pLevel, pPos, pState, pRandom.nextInt(16) == 0)
+		) {
+			BlockState blockstate = pState.setValue(AGE, i + 1);
+			pLevel.setBlock(pPos, blockstate, 2);
+			pLevel.gameEvent(GameEvent.BLOCK_CHANGE, pPos, GameEvent.Context.of(blockstate));
+			ForgeHooks.onCropsGrowPost(pLevel, pPos, pState);
 		}
 	}
 
 	@Override
 	public boolean canSurvive(@NotNull BlockState pState, LevelReader pLevel, BlockPos pPos) {
-		BlockState soil = pLevel.getBlockState(pPos.below());
-		if (soil.canSustainPlant(pLevel, pPos.below(), Direction.UP, this)) return true;
+		if (pLevel.getBlockState(pPos.below()).canSustainPlant(pLevel, pPos.below(), Direction.UP, this)) {
+			return true;
+		}
 		BlockState blockstate = pLevel.getBlockState(pPos.below());
 		if (blockstate.is(BlockTags.SAND)) {
 			BlockPos blockpos = pPos.below();
 			for (Direction direction : Direction.Plane.HORIZONTAL) {
-				BlockState blockstate1 = pLevel.getBlockState(blockpos.relative(direction));
-				FluidState fluidstate = pLevel.getFluidState(blockpos.relative(direction));
-				if (pState.canBeHydrated(pLevel, pPos, fluidstate, blockpos.relative(direction)) || blockstate1.is(Blocks.FROSTED_ICE)) {
+				if (
+					pState.canBeHydrated(pLevel, pPos, pLevel.getFluidState(blockpos.relative(direction)), blockpos.relative(direction)) ||
+					pLevel.getBlockState(blockpos.relative(direction)).is(Blocks.FROSTED_ICE)
+				) {
 					return true;
 				}
 			}
 		}
 		return false;
+	}
+
+	@Override
+	public @NotNull InteractionResult use(@NotNull BlockState state, @NotNull Level pLevel, @NotNull BlockPos pPos, @NotNull Player pPlayer, @NotNull InteractionHand pHand, @NotNull BlockHitResult pHit) {
+		boolean flag = this.isMaxAge(state);
+		if (!flag && pPlayer.getItemInHand(pHand).is(Items.BONE_MEAL)) {
+			return InteractionResult.PASS;
+		} else if (flag) {
+			popResource(pLevel, pPos, new ItemStack(DelightfulItems.CANTALOUPE.get(), 1));
+			pLevel.playSound(null, pPos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + pLevel.random.nextFloat() * 0.4F);
+			BlockState blockstate = state.setValue(AGE, 1);
+			pLevel.setBlock(pPos, blockstate, 2);
+			pLevel.gameEvent(GameEvent.BLOCK_CHANGE, pPos, GameEvent.Context.of(pPlayer, blockstate));
+			return InteractionResult.sidedSuccess(pLevel.isClientSide);
+		} else {
+			return super.use(state, pLevel, pPos, pPlayer, pHand, pHit);
+		}
 	}
 
 	@Override

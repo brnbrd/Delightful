@@ -319,6 +319,10 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 Ingredient.of(ForgeTags.TOOLS_KNIVES),
                 DelightfulItems.CANTALOUPE_SLICE.get(), 6),
             "cutting/cantaloupe", finished, enabled("cantaloupe_slice"));
+        wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, DelightfulItems.CANTALOUPE_SEEDS.get())
+                .requires(DelightfulItems.CANTALOUPE_SLICE.get())
+                .unlockedBy("has_cantaloupe", has(DelightfulItemTags.FRUITS_CANTALOUPE)),
+            "cantaloupe_seeds", finished, enabled(DelightfulItems.CANTALOUPE_SEEDS));
         wrap(CookingPotRecipeBuilder.cookingPotRecipe(
             DelightfulItems.ENDER_NECTAR.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
                 .addIngredient(Items.ENDER_EYE)

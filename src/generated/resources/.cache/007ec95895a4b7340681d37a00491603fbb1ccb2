@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-25T17:43:43.4524585	Block States: delightful
+// 1.20.1	2024-02-25T17:58:34.0070135	Block States: delightful
 145873edaa6daa864281813f124aa4243f0ecdb0 assets/delightful/blockstates/acorn_sack.json
 5a39134df9dc1c66d66496452c41a49e9660d397 assets/delightful/blockstates/baobab_fruit_crate.json
 395f9101d711fd7836c168976f3357cadf13597d assets/delightful/blockstates/basalt_cabinet.json
@@ -39,10 +39,6 @@ f95bd7304364106aa210e67b004cd4a832cf5e3b assets/delightful/models/block/baobab_f
 4dded1a4437aa788d500ada130eb9f39aeda73b7 assets/delightful/models/block/blueberry_pie_slice3.json
 1e2ee8524e42cfd341e3943257ea1e154903e148 assets/delightful/models/block/blueberry_sack.json
 127990f0b6448bcded1879f0e8299c1ec2a88288 assets/delightful/models/block/cantaloupe.json
-71732056e9591f894a44442853d03cfc4429e71c assets/delightful/models/block/cantaloupe_plant_stage0.json
-8dbba6074f3553844ae9cb3ebb0c4c4828ceeb85 assets/delightful/models/block/cantaloupe_plant_stage1.json
-d351b854355c3e9a78b01a0488f7cbd537e7896b assets/delightful/models/block/cantaloupe_plant_stage2.json
-3dfe385767c3f5effb5a90f3b20c171e7d38a00e assets/delightful/models/block/cantaloupe_plant_stage3.json
 cac958428bf1060aa7aef52c789ed4720cf1b528 assets/delightful/models/block/crimson_berry_pie.json
 52b144fb0b9cf92fc0ed47959b2c0970aabd889b assets/delightful/models/block/crimson_berry_pie_slice1.json
 2771661f12892383483bd641fe6fd85c21ff8459 assets/delightful/models/block/crimson_berry_pie_slice2.json

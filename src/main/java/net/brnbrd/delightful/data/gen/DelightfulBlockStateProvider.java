@@ -30,7 +30,7 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         this.wildCropBlock(DelightfulBlocks.WILD_SALMONBERRIES.get());
         this.stageBlock(DelightfulBlocks.SALMONBERRY_BUSH.get(), SalmonberryBushBlock.AGE);
-        this.stageBlock(DelightfulBlocks.CANTALOUPE_PLANT.get(), CantaloupePlantBlock.AGE);
+        this.existingStageBlock(DelightfulBlocks.CANTALOUPE_PLANT.get(), CantaloupePlantBlock.AGE);
         this.sackBlock(DelightfulBlocks.SALMONBERRY_SACK.get(), "salmonberry");
         this.sackBlock(DelightfulBlocks.ACORN_SACK.get(), "acorn");
         this.miniBlock((MiniBlock) DelightfulBlocks.CANTALOUPE.get(),
@@ -73,6 +73,13 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
             String stageName = Util.name(block) + "_stage" + state.getValue(ageProperty);
             return ConfiguredModel.builder()
                 .modelFile(models().cross(stageName, resourceBlock(stageName)).renderType("cutout")).build();
+        });
+    }
+
+    public void existingStageBlock(Block block, IntegerProperty ageProperty) {
+        getVariantBuilder(block).forAllStates(state -> {
+            String stageName = Util.name(block) + "_stage" + state.getValue(ageProperty);
+            return ConfiguredModel.builder().modelFile(existingModel(stageName)).build();
         });
     }
 

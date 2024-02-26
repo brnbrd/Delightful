@@ -1,0 +1,25 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "cantaloupe_seeds"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "delightful:cantaloupe_slice"
+          }
+        ],
+        "result": {
+          "item": "delightful:cantaloupe_seeds"
+        }
+      }
+    }
+  ]
+}
