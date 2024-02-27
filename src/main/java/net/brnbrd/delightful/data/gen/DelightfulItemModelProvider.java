@@ -24,7 +24,8 @@ public class DelightfulItemModelProvider extends ItemModelProvider {
     }
 
     private static final List<ResourceLocation> FLAT_BLOCKS = List.of(
-        DelightfulItems.WILD_SALMONBERRIES.getId()
+        DelightfulItems.WILD_SALMONBERRIES.getId(),
+        DelightfulItems.STUFFED_CANTALOUPE_BLOCK.getId()
     );
     private static final List<ResourceLocation> ITEM_BLOCKS = List.of(
         DelightfulItems.SALMONBERRY_PIE.getId()

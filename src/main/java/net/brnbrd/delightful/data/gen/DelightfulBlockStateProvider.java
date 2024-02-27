@@ -18,6 +18,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import vectorwing.farmersdelight.FarmersDelight;
 import vectorwing.farmersdelight.common.block.CabinetBlock;
+import vectorwing.farmersdelight.common.block.FeastBlock;
 import vectorwing.farmersdelight.common.block.PieBlock;
 import java.util.Objects;
 
@@ -25,6 +26,7 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
     public DelightfulBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, Delightful.MODID, exFileHelper);
     }
+
 
     @Override
     protected void registerStatesAndModels() {
@@ -65,6 +67,7 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
         this.crateBlock(DelightfulBlocks.GREEN_APPLE_CRATE.get(), "green_apple", true);
         this.crateBlock(DelightfulBlocks.JOSHUA_FRUIT_CRATE.get(), "joshua_fruit", false);
         this.crateBlock(DelightfulBlocks.BAOBAB_FRUIT_CRATE.get(), "baobab_fruit", false);
+        this.feastBlock(DelightfulBlocks.STUFFED_CANTALOUPE_BLOCK.get());
     }
 
     // Adapted from: https://github.com/vectorwing/FarmersDelight/blob/1.19/src/main/java/vectorwing/farmersdelight/data/BlockStates.java
@@ -74,6 +77,23 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
             return ConfiguredModel.builder()
                 .modelFile(models().cross(stageName, resourceBlock(stageName)).renderType("cutout")).build();
         });
+    }
+
+    // Adapted from: https://github.com/vectorwing/FarmersDelight/blob/1.19/src/main/java/vectorwing/farmersdelight/data/BlockStates.java
+    public void feastBlock(FeastBlock block) {
+        getVariantBuilder(block)
+            .forAllStates(state -> {
+                IntegerProperty servingsProperty = block.getServingsProperty();
+                int servings = state.getValue(servingsProperty);
+                String suffix = "_stage" + (block.getMaxServings() - servings);
+                if (servings == 0) {
+                    suffix = block.hasLeftovers ? "_leftover" : "_stage" + (servingsProperty.getPossibleValues().toArray().length - 2);
+                }
+                return ConfiguredModel.builder()
+                    .modelFile(existingModel(Util.name(block) + suffix))
+                    .rotationY(((int) state.getValue(FeastBlock.FACING).toYRot() + 180) % 360)
+                    .build();
+            });
     }
 
     public void existingStageBlock(Block block, IntegerProperty ageProperty) {

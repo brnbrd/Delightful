@@ -15,6 +15,8 @@ import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePrope
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
+import vectorwing.farmersdelight.common.block.FeastBlock;
+
 import java.util.Collections;
 import java.util.List;
 
@@ -160,6 +162,14 @@ public class DelightfulBlockLoot extends BlockLootSubProvider {
         // Ice Cream Blocks
         this.dropSelf(DelightfulBlocks.SALMONBERRY_ICE_CREAM_BLOCK.get());
         this.dropSelf(DelightfulBlocks.MATCHA_ICE_CREAM_BLOCK.get());
+
+        this.add(DelightfulBlocks.STUFFED_CANTALOUPE_BLOCK.get(), (b) -> {
+            LootTable.Builder loot = LootTable.lootTable().withPool(LootPool.lootPool()
+                .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(b)
+                    .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(FeastBlock.SERVINGS, 4)))
+                .add(LootItem.lootTableItem(DelightfulItems.STUFFED_CANTALOUPE_BLOCK.get())));
+            return applyExplosionDecay(b, loot);
+        });
     }
 
     @Override

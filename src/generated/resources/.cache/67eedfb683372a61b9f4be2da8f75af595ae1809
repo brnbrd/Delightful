@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-25T17:03:40.8928959	Item Models: delightful
+// 1.20.1	2024-02-26T20:26:48.2736703	Item Models: delightful
 f9af973b19b45f34017d8db4e6e54de90668031e assets/delightful/models/item/acorn.json
 9b4daf24b0d8e447735c5836d7ab76a3df1b3c1d assets/delightful/models/item/acorn_sack.json
 5d9531a6795e7d2281f99609672d866743329211 assets/delightful/models/item/adamantium_knife.json
@@ -21,6 +21,8 @@ c438745d5ec4d59ac6559f8b91a2060f3b04bed4 assets/delightful/models/item/bone_knif
 22fe76d7f03570240cf257a29f52ab1fbaa2c121 assets/delightful/models/item/cactus_flesh.json
 93c2e681be221d6845388544480e718e884fef69 assets/delightful/models/item/cactus_steak.json
 bda86a27e8b358834ae68ceaae0750bacccfee0f assets/delightful/models/item/cantaloupe.json
+c086142da53f90fe1c1d65bd20d3b625173ad239 assets/delightful/models/item/cantaloupe_bread.json
+e99631c5bf267d82d68c0c59258f7a8b60f9d97e assets/delightful/models/item/cantaloupe_popsicle.json
 c3c8cd60e0c07762582487e409f48737987e296a assets/delightful/models/item/cantaloupe_seeds.json
 5411e7eae57d359607e6fd217e53ee1441f5bb85 assets/delightful/models/item/cantaloupe_slice.json
 35d1251c68e25ffa5a12a584ab4ce57ebb198465 assets/delightful/models/item/certus_quartz_knife.json
@@ -123,6 +125,8 @@ eef048602f4ed10f74334ae435e3eefbac4465ee assets/delightful/models/item/soul_stee
 fa21d3f6934a3d417d47702d35401da6f8c681fd assets/delightful/models/item/steel_knife.json
 04a6c48a2984e8e73a3e1145c1c921581a256db4 assets/delightful/models/item/stellium_knife.json
 f142325442ee5a0f708f475d41a7c5ffe7c79fca assets/delightful/models/item/stratus_knife.json
+5e57620e177876c585344c551c2447ddce1a6bf8 assets/delightful/models/item/stuffed_cantaloupe.json
+a0af49bc2f408e1e6f725a69b419f786b34de6a0 assets/delightful/models/item/stuffed_cantaloupe_block.json
 905fabc071918d1e2f0935e6b66a658c7096b4ec assets/delightful/models/item/terra_knife.json
 0ab74d74b4514b342efd03b05a9dba44d592f5de assets/delightful/models/item/thyrium_knife.json
 1ad81cca1db81723a6158d578021fb2706b28124 assets/delightful/models/item/tin_knife.json
@@ -131,5 +135,6 @@ f142325442ee5a0f708f475d41a7c5ffe7c79fca assets/delightful/models/item/stratus_k
 409d3f917ef5afc9b3023f7e420927c9feef5022 assets/delightful/models/item/veridium_knife.json
 a339c4a4abeeb4baaa9ba1fd326a49e291764d35 assets/delightful/models/item/warden_knife.json
 07df64491163fda8fd808620466fa94b3e4db71b assets/delightful/models/item/wild_salmonberries.json
+8a934f8acb38bdb42be0c421828ffdc371c7382d assets/delightful/models/item/wrapped_cantaloupe.json
 69522200bf73a3dd449146360573aaa37e261e6a assets/delightful/models/item/zanite_knife.json
 19fbec2b8862be5e5d63dcd723a6197e62299482 assets/delightful/models/item/zinc_knife.json

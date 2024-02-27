@@ -120,13 +120,20 @@ public class DelightfulItems {
         () -> new DItem(new Item.Properties().food(Nutrition.RAW_GOAT)));
     public static final RegistryObject<Item> COOKED_GOAT = registerItem("cooked_goat",
         () -> new DItem(new Item.Properties().food(Nutrition.COOKED_GOAT)));
-    public static final RegistryObject<Item> CANTALOUPE_SLICE = registerFood("cantaloupe_slice", Nutrition.CANTALOUPE_SLICE);
-    public static final RegistryObject<Item> CANTALOUPE_SEEDS = registerItem("cantaloupe_seeds",
-        () -> new ItemNameBlockItem(DelightfulBlocks.CANTALOUPE_PLANT.get(), ModItems.basicItem()));
-    public static final RegistryObject<Item> CANTALOUPE = registerItem("cantaloupe", () ->
-        new BlockItem(DelightfulBlocks.CANTALOUPE.get(), ModItems.basicItem()));
     public static final RegistryObject<Item> MINI_MELON = registerItem("mini_melon", () ->
         new BlockItem(DelightfulBlocks.MINI_MELON.get(), ModItems.basicItem()));
+    public static final RegistryObject<Item> CANTALOUPE = registerItem("cantaloupe", () ->
+        new BlockItem(DelightfulBlocks.CANTALOUPE.get(), ModItems.basicItem()));
+    public static final RegistryObject<Item> CANTALOUPE_SEEDS = registerItem("cantaloupe_seeds",
+        () -> new ItemNameBlockItem(DelightfulBlocks.CANTALOUPE_PLANT.get(), ModItems.basicItem()));
+    public static final RegistryObject<Item> CANTALOUPE_SLICE = registerFood("cantaloupe_slice", Nutrition.CANTALOUPE_SLICE);
+    public static final RegistryObject<Item> CANTALOUPE_BREAD = registerFood("cantaloupe_bread", Nutrition.CANTALOUPE_BREAD);
+    public static final RegistryObject<Item> WRAPPED_CANTALOUPE = registerFood("wrapped_cantaloupe", Nutrition.WRAPPED_CANTALOUPE);
+    public static final RegistryObject<Item> CANTALOUPE_POPSICLE = registerFood("cantaloupe_popsicle", Nutrition.CANTALOUPE_POPSICLE);
+    public static final RegistryObject<Item> STUFFED_CANTALOUPE_BLOCK = registerItem("stuffed_cantaloupe_block",
+        () -> new BlockItem(DelightfulBlocks.STUFFED_CANTALOUPE_BLOCK.get(), ModItems.basicItem().stacksTo(1)));
+    public static final RegistryObject<Item> STUFFED_CANTALOUPE = registerFood("stuffed_cantaloupe", Nutrition.STUFFED_CANTALOUPE, Items.BOWL);
+
     public static final RegistryObject<Item> SALMONBERRY_SACK = registerItem("salmonberry_sack", () ->
         new BlockItem(DelightfulBlocks.SALMONBERRY_SACK.get(), ModItems.basicItem()));
     public static final RegistryObject<Item> ACORN_SACK = registerItem("acorn_sack", () ->

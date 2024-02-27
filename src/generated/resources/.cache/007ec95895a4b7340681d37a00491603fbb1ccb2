@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-25T17:58:34.0070135	Block States: delightful
+// 1.20.1	2024-02-26T20:26:48.2786749	Block States: delightful
 145873edaa6daa864281813f124aa4243f0ecdb0 assets/delightful/blockstates/acorn_sack.json
 5a39134df9dc1c66d66496452c41a49e9660d397 assets/delightful/blockstates/baobab_fruit_crate.json
 395f9101d711fd7836c168976f3357cadf13597d assets/delightful/blockstates/basalt_cabinet.json
@@ -28,6 +28,7 @@ a05d9fdeed7b19b38918830b83bb651ec166b8da assets/delightful/blockstates/sliced_gl
 019ba45d9a7bb790f16567f51619edc94e7b3fbb assets/delightful/blockstates/sliced_mini_melon.json
 f307f05d30a1b06d5b9f0f281557e93288421d6f assets/delightful/blockstates/sliced_pumpkin.json
 a579ceb297a78da5c7b86686811bf50c98458bf4 assets/delightful/blockstates/source_berry_pie.json
+5ef5f07520559662a3c03345b8b4c6dff9358d54 assets/delightful/blockstates/stuffed_cantaloupe_block.json
 bb391ea35e7293199e6269f60c85b986db5533b0 assets/delightful/blockstates/wild_salmonberries.json
 26bae55cb9b2d40fde67deb7e5a7f5bcfbab0eeb assets/delightful/models/block/acorn_sack.json
 f95bd7304364106aa210e67b004cd4a832cf5e3b assets/delightful/models/block/baobab_fruit_crate.json
