@@ -1,0 +1,53 @@
+{
+	"credit": "Made with Blockbench, by Championhestu.",
+	"ambientocclusion": false,
+	"textures": {
+		"0": "delightful:block/stuffed_cantaloupe_details",
+		"1": "delightful:block/cantaloupe_inside_small",
+		"2": "delightful:block/cantaloupe_side_small",
+		"3": "delightful:block/cantaloupe_top",
+		"particle": "delightful:block/cantaloupe_top"
+	},
+	"elements": [
+		{
+			"name": "spoon",
+			"from": [6, 5, 7],
+			"to": [8, 15, 9],
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [9, 9, 8]},
+			"faces": {
+				"north": {"uv": [2, 3, 4, 13], "texture": "#0"},
+				"east": {"uv": [2, 3, 4, 13], "rotation": 180, "texture": "#0"},
+				"south": {"uv": [2, 3, 4, 13], "texture": "#0"},
+				"west": {"uv": [2, 3, 4, 13], "rotation": 180, "texture": "#0"},
+				"up": {"uv": [2, 1, 4, 3], "texture": "#0"},
+				"down": {"uv": [2, 1, 4, 3], "texture": "#0"}
+			}
+		},
+		{
+			"name": "stuffing",
+			"from": [4, 7, 4],
+			"to": [12, 9, 12],
+			"faces": {
+				"north": {"uv": [6, 4, 14, 6], "rotation": 180, "texture": "#0"},
+				"east": {"uv": [12, 4, 14, 12], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [6, 10, 14, 12], "texture": "#0"},
+				"west": {"uv": [6, 4, 8, 12], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [6, 4, 14, 12], "texture": "#0"},
+				"down": {"uv": [6, 4, 14, 12], "texture": "#0"}
+			}
+		},
+		{
+			"name": "cantaloupe",
+			"from": [3, 0, 3],
+			"to": [13, 8, 13],
+			"faces": {
+				"north": {"uv": [3, 8, 13, 16], "texture": "#2"},
+				"east": {"uv": [3, 8, 13, 16], "texture": "#2"},
+				"south": {"uv": [3, 8, 13, 16], "texture": "#2"},
+				"west": {"uv": [3, 8, 13, 16], "texture": "#2"},
+				"up": {"uv": [3, 6, 13, 16], "texture": "#1"},
+				"down": {"uv": [3, 3, 13, 13], "texture": "#3"}
+			}
+		}
+	]
+}
