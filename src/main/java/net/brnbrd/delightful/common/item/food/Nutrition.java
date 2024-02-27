@@ -4,6 +4,7 @@ import net.brnbrd.delightful.compat.Mods;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
+import vectorwing.farmersdelight.common.FoodValues;
 import vectorwing.farmersdelight.common.registry.ModEffects;
 
 public class Nutrition {
@@ -45,16 +46,16 @@ public class Nutrition {
     public static final FoodProperties COOKED_GOAT = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.8F).meat().build();
     public static final FoodProperties CANTALOUPE_SLICE = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.8F)
         .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 200, 0), 1.0F).build();
-    public static final FoodProperties CANTALOUPE_BREAD = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.8F)
-        .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 200, 0), 1.0F).build();
-    public static final FoodProperties WRAPPED_CANTALOUPE = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.8F)
-        .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 200, 0), 1.0F).build();
+    public static final FoodProperties CANTALOUPE_BREAD = (new FoodProperties.Builder()).nutrition(8).saturationMod(0.85F)
+        .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 400, 0), 1.0F).build();
+    public static final FoodProperties WRAPPED_CANTALOUPE = (new FoodProperties.Builder()).nutrition(7).saturationMod(0.85F)
+        .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 400, 0), 1.0F).build();
     public static final FoodProperties CANTALOUPE_POPSICLE = (new FoodProperties.Builder())
-        .nutrition(4).saturationMod(0.8F)
-        .fast().alwaysEat()
-        .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 200, 0), 1.0F).build();
-    public static final FoodProperties STUFFED_CANTALOUPE = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.8F)
-        .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 200, 0), 1.0F).build();
+        .nutrition(3).saturationMod(0.2F).fast().alwaysEat()
+        .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 400, 0), 1.0F).build();
+    public static final FoodProperties STUFFED_CANTALOUPE = (new FoodProperties.Builder()).nutrition(8).saturationMod(0.75F)
+        .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3600, 0), 1.0F)
+        .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 600, 0), 1.0F).build();
     public static final FoodProperties COCONUT_CURRY = (new FoodProperties.Builder()).nutrition(15).saturationMod(0.9F)
         .effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 6000, 0), 1.0F)
         .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 600, 0), 1.0F).build();

@@ -16,6 +16,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import org.jetbrains.annotations.Nullable;
 import vectorwing.farmersdelight.common.FoodValues;
 import vectorwing.farmersdelight.common.item.ConsumableItem;
 import vectorwing.farmersdelight.common.registry.ModItems;
@@ -95,9 +96,9 @@ public class DelightfulItems {
     public static final RegistryObject<Item> JELLY_BOTTLE = registerItem("jelly_bottle", () -> new JamJarItem((new Item.Properties()).food(Nutrition.JELLY_BOTTLE).craftRemainder(Items.GLASS_BOTTLE), false, false));
     public static final RegistryObject<Item> GLOW_JELLY_BOTTLE = registerItem("glow_jelly_bottle", () -> new JamJarItem((new Item.Properties()).food(Nutrition.GLOW_JELLY_BOTTLE).craftRemainder(Items.GLASS_BOTTLE), true, false));
     public static final RegistryObject<Item> NUT_BUTTER_BOTTLE = registerItem("nut_butter_bottle", () -> new NutButterBottleItem(((new Item.Properties()).food(Nutrition.NUT_BUTTER_BOTTLE).craftRemainder(Items.GLASS_BOTTLE))));
-    public static final RegistryObject<Item> NUT_BUTTER_AND_JELLY_SANDWICH = registerItem("nut_butter_and_jelly_sandwich", () -> new ConsumableItem((new Item.Properties()).food(Nutrition.NUT_BUTTER_AND_JELLY_SANDWICH), true));
+    public static final RegistryObject<Item> NUT_BUTTER_AND_JELLY_SANDWICH = registerConsumable("nut_butter_and_jelly_sandwich", Nutrition.NUT_BUTTER_AND_JELLY_SANDWICH, null, true, false);
     public static final RegistryObject<Item> CHEESEBURGER = registerItem("cheeseburger", () -> new CheeseburgerItem((new Item.Properties()).food(Nutrition.CHEESEBURGER)));
-    public static final RegistryObject<Item> DELUXE_CHEESEBURGER = registerItem("deluxe_cheeseburger", () -> new ConsumableItem((new Item.Properties()).food(Nutrition.DELUXE_CHEESEBURGER), true));
+    public static final RegistryObject<Item> DELUXE_CHEESEBURGER = registerConsumable("deluxe_cheeseburger", Nutrition.DELUXE_CHEESEBURGER, null, true, false);
     public static final RegistryObject<Item> CHUNKWICH = registerCompatFood("chunkwich", Nutrition.CHUNKWICH,
         Mods.RL);
     public static final RegistryObject<Item> CHUNK_NUGGET = registerCompatFood("chunk_nugget", Nutrition.CHUNK_NUGGET,
@@ -106,8 +107,7 @@ public class DelightfulItems {
         () -> new RockCandyItem((new Item.Properties()).food(Nutrition.ROCK_CANDY).craftRemainder(Items.STICK)));
     public static final RegistryObject<Item> MARSHMALLOW_STICK = registerFood("marshmallow_stick", Nutrition.MARSHMALLOW_STICK, Items.STICK);
     public static final RegistryObject<Item> COOKED_MARSHMALLOW_STICK = registerFood("cooked_marshmallow_stick", Nutrition.COOKED_MARSHMALLOW_STICK, Items.STICK);
-    public static final RegistryObject<Item> SMORE = registerItem("smore",
-        () -> new ConsumableItem((new Item.Properties()).food(Nutrition.SMORE), true));
+    public static final RegistryObject<Item> SMORE = registerConsumable("smore", Nutrition.SMORE, null, true, false);
     public static final RegistryObject<Item> CRAB_RANGOON = registerItem("crab_rangoon",
         () -> new CrabRangoonItem(new Item.Properties().food(Nutrition.CRAB_RANGOON)));
     public static final RegistryObject<Item> HONEY_GLAZED_WALNUT = registerItem("honey_glazed_walnut",
@@ -127,12 +127,12 @@ public class DelightfulItems {
     public static final RegistryObject<Item> CANTALOUPE_SEEDS = registerItem("cantaloupe_seeds",
         () -> new ItemNameBlockItem(DelightfulBlocks.CANTALOUPE_PLANT.get(), ModItems.basicItem()));
     public static final RegistryObject<Item> CANTALOUPE_SLICE = registerFood("cantaloupe_slice", Nutrition.CANTALOUPE_SLICE);
-    public static final RegistryObject<Item> CANTALOUPE_BREAD = registerFood("cantaloupe_bread", Nutrition.CANTALOUPE_BREAD);
-    public static final RegistryObject<Item> WRAPPED_CANTALOUPE = registerFood("wrapped_cantaloupe", Nutrition.WRAPPED_CANTALOUPE);
-    public static final RegistryObject<Item> CANTALOUPE_POPSICLE = registerFood("cantaloupe_popsicle", Nutrition.CANTALOUPE_POPSICLE);
+    public static final RegistryObject<Item> CANTALOUPE_BREAD = registerConsumable("cantaloupe_bread", Nutrition.CANTALOUPE_BREAD, null, true, false);
+    public static final RegistryObject<Item> WRAPPED_CANTALOUPE = registerConsumable("wrapped_cantaloupe", Nutrition.WRAPPED_CANTALOUPE, null, true, false);
+    public static final RegistryObject<Item> CANTALOUPE_POPSICLE = registerConsumable("cantaloupe_popsicle", Nutrition.CANTALOUPE_POPSICLE, Items.STICK, true, false);
     public static final RegistryObject<Item> STUFFED_CANTALOUPE_BLOCK = registerItem("stuffed_cantaloupe_block",
         () -> new BlockItem(DelightfulBlocks.STUFFED_CANTALOUPE_BLOCK.get(), ModItems.basicItem().stacksTo(1)));
-    public static final RegistryObject<Item> STUFFED_CANTALOUPE = registerFood("stuffed_cantaloupe", Nutrition.STUFFED_CANTALOUPE, Items.BOWL);
+    public static final RegistryObject<Item> STUFFED_CANTALOUPE = registerConsumable("stuffed_cantaloupe", Nutrition.STUFFED_CANTALOUPE, Items.BOWL, true, false);
 
     public static final RegistryObject<Item> SALMONBERRY_SACK = registerItem("salmonberry_sack", () ->
         new BlockItem(DelightfulBlocks.SALMONBERRY_SACK.get(), ModItems.basicItem()));
@@ -146,11 +146,15 @@ public class DelightfulItems {
                 return registerItem(name,
                     () -> new BowlFoodItem((new Item.Properties()).food(food).craftRemainder(Items.BOWL)));
             } else {
-                return registerItem(name,
-                    () -> new ConsumableItem((new Item.Properties()).food(food).craftRemainder(remainder[0])));
+                return registerConsumable(name, food, remainder[0], false, false);
             }
         }
         return registerItem(name, () -> new DItem((new Item.Properties()).food(food)));
+    }
+
+    public static RegistryObject<Item> registerConsumable(String name, FoodProperties food, @Nullable Item remainder, boolean hasFoodEffectTooltip, boolean hasCustomTooltip) {
+        return registerItem(name,
+            () -> new ConsumableItem((new Item.Properties()).food(food).craftRemainder(remainder), hasFoodEffectTooltip, hasCustomTooltip));
     }
 
     public static RegistryObject<Item> registerCompatPieSlice(String name, FoodProperties food, String modid) {
