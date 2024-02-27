@@ -54,7 +54,7 @@ public class Nutrition {
         .nutrition(3).saturationMod(0.2F).fast().alwaysEat()
         .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 400, 0), 1.0F).build();
     public static final FoodProperties STUFFED_CANTALOUPE = (new FoodProperties.Builder()).nutrition(8).saturationMod(0.75F)
-        .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3600, 0), 1.0F)
+        .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 4800, 0), 1.0F)
         .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 600, 0), 1.0F).build();
     public static final FoodProperties COCONUT_CURRY = (new FoodProperties.Builder()).nutrition(15).saturationMod(0.9F)
         .effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 6000, 0), 1.0F)
