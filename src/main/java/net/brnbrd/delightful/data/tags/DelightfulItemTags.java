@@ -15,8 +15,11 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> COMPAT_PIES = Util.it(Delightful.MODID, "compat_pies");
 	public static final TagKey<Item> FIRE_KNIVES = Util.it(Delightful.MODID, "fire_knives");
 
-	// FarmersDelight
+	// Farmers Delight
 	public static final TagKey<Item> CABINETS_STONE = Util.it(FarmersDelight.MODID, "cabinets/stone");
+
+	// Nethers Delight
+	public static final TagKey<Item> MEAL_ITEM = Util.it("nethersdelight", "meal_item");
 
 	// Ecologics
 	public static final TagKey<Item> COOKED_PRICKLY_PEAR = Util.it("ecologics", "cooked_prickly_pear");

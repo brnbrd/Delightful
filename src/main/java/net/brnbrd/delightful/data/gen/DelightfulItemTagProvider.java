@@ -164,6 +164,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_STRAWBERRIES)
 			.addTag(DelightfulItemTags.FRUITS_WILD_BERRIES)
 			.addOptionalTag(Util.rl("forge", "fruits/mulberry"))
+			.addOptionalTag(Util.rl("forge", "fruits/hawberry"))
+			.addOptionalTag(Util.rl("forge", "fruits/bayberry"))
 			.addOptional(Util.rl("aether_redux", "chromaberry"))
 			.addOptional(Util.rl("deep_aether", "goldenleaf_berries"))
 			.addOptional(Util.rl("undergarden", "blisterberry"))
@@ -370,6 +372,11 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.map(RegistryObject::get)
 			.filter(item -> item instanceof DelightfulKnifeItem)
 			.forEach(build::add);
+
+		// Nether's Delight
+		this.tag(DelightfulItemTags.MEAL_ITEM)
+			.add(DelightfulItems.STUFFED_CANTALOUPE.get())
+			.addOptional(Util.rl("miners_delight", "bowl_of_stuffed_squid"));
 
 		// Ecologics
 		this.addSelf(DelightfulItemTags.COOKED_PRICKLY_PEAR);

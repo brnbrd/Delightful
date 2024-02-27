@@ -1,0 +1,9 @@
+{
+  "values": [
+    "delightful:stuffed_cantaloupe",
+    {
+      "id": "miners_delight:bowl_of_stuffed_squid",
+      "required": false
+    }
+  ]
+}
