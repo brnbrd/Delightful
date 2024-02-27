@@ -1,0 +1,41 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "stuffed_cantaloupe"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "delightful:cantaloupe"
+        },
+        "cookingtime": 400,
+        "experience": 0.35,
+        "ingredients": [
+          {
+            "tag": "forge:crops/rice"
+          },
+          {
+            "tag": "forge:cooked_mutton"
+          },
+          {
+            "tag": "forge:crops/onion"
+          },
+          {
+            "tag": "forge:berries"
+          },
+          {
+            "tag": "forge:seeds"
+          }
+        ],
+        "result": {
+          "item": "delightful:stuffed_cantaloupe_block"
+        }
+      }
+    }
+  ]
+}

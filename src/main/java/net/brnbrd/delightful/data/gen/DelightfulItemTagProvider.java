@@ -144,7 +144,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Util.rl("neapolitan", "banana"));
 		tag(DelightfulItemTags.FRUITS_CHERRY)
 			.addOptional(Util.rl(Mods.FA, "cherry_peach"));
-		tag(DelightfulItemTags.FRUITS_BERRIES)
+		tag(ForgeTags.BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_SWEET_BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_GLOW_BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_SALMONBERRIES)
@@ -169,21 +169,11 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Util.rl("undergarden", "blisterberry"))
 			.addOptional(Util.rl("enlightened_end", "zure_berry"))
 			.addOptional(Util.rl("phantasm", "pream_berry"));
-		tag(ForgeTags.BERRIES)
-			.addTag(DelightfulItemTags.FRUITS_BERRIES);
 		tag(DelightfulItemTags.FRUITS)
-			.addTag(DelightfulItemTags.FRUITS_APPLE)
-			.addTag(DelightfulItemTags.FRUITS_KIWI)
-			.addTag(DelightfulItemTags.FRUITS_MELON)
-			.addTag(DelightfulItemTags.FRUITS_CANTALOUPE)
-			.addTag(DelightfulItemTags.FRUITS_PRICKLY_PEAR)
-			.addTag(DelightfulItemTags.FRUITS_BERRIES)
+			.addTag(ForgeTags.BERRIES)
+			.addTag(DelightfulItemTags.FRUITS_CITRUS)
+			.addTag(DelightfulItemTags.FRUITS_SWEET)
 			.addTag(DelightfulItemTags.FRUITS_CHORUS)
-			.addTag(DelightfulItemTags.FRUITS_CITRON)
-			.addTag(DelightfulItemTags.FRUITS_JABUTICABA)
-			.addTag(DelightfulItemTags.FRUITS_RAMBUTAN)
-			.addTag(DelightfulItemTags.FRUITS_PITAYA)
-			.addTag(DelightfulItemTags.FRUITS_KIWANO)
 			.addOptional(Util.rl(Mods.AN, "mendosteen_pod"))
 			.addOptional(Util.rl(Mods.AN, "bastion_pod"))
 			.addOptional(Util.rl(Mods.AN, "bombegranate_pod"))
@@ -214,18 +204,21 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_WILD_BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_RAMBUTAN)
 			.addTag(DelightfulItemTags.FRUITS_PITAYA)
-			.addOptionalTag(DelightfulItemTags.FRUITS_MANDARIN.location())
+			.addTag(DelightfulItemTags.FRUITS_JABUTICABA)
+			.addTag(DelightfulItemTags.FRUITS_KIWANO)
 			.addOptionalTag(DelightfulItemTags.FRUITS_ORANGE.location())
+			.addOptionalTag(DelightfulItemTags.FRUITS_MANDARIN.location())
 			.addOptionalTag(Util.rl("forge", "fruits/redlove"));
 		tag(DelightfulItemTags.FRUITS_GREEN_APPLE)
 			.addOptional(Util.rl(Mods.BYG, BYGCompat.green_apple));
-		tag(DelightfulItemTags.CROPS_GINGER).addOptional(Util.rl("snowyspirit", "ginger"));
 		tag(DelightfulItemTags.COCONUT).addOptional(Util.rl(Mods.ECO, "coconut_slice"));
-		tag(DelightfulItemTags.NUTS_WALNUT).addOptional(Util.rl(Mods.ECO, "walnut"));
+		tag(DelightfulItemTags.NUTS_WALNUT
+		).addOptional(Util.rl(Mods.ECO, "walnut"));
 		tag(DelightfulItemTags.NUTS_PEANUT)
 			.addOptionalTag(Util.rl("forge", "peanut"))
 			.addOptional(Util.rl("sprout", "peanut"));
-		tag(DelightfulItemTags.NUTS_CHESTNUT).addOptional(Util.rl("windswept", "chestnuts"));
+		tag(DelightfulItemTags.NUTS_CHESTNUT)
+			.addOptional(Util.rl("windswept", "chestnuts"));
 		tag(DelightfulItemTags.NUTS_ACORN)
 			.add(DelightfulItems.ACORN.get());
 		tag(DelightfulItemTags.NUTS)
@@ -233,6 +226,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.NUTS_WALNUT)
 			.addTag(DelightfulItemTags.NUTS_PEANUT)
 			.addTag(DelightfulItemTags.NUTS_CHESTNUT);
+		tag(DelightfulItemTags.CROPS_GINGER).addOptional(Util.rl("snowyspirit", "ginger"));
 		tag(DelightfulItemTags.INGOTS_STEEL).addOptional(Util.rl("simplysteel", "steel_ingot"));
 		tag(DelightfulItemTags.WATER).add(Items.WATER_BUCKET);
 		tag(DelightfulItemTags.JELLY)

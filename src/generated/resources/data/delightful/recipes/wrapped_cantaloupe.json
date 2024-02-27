@@ -1,0 +1,28 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "wrapped_cantaloupe"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "tag": "forge:fruits/cantaloupe"
+          },
+          {
+            "tag": "forge:cooked_bacon"
+          }
+        ],
+        "result": {
+          "item": "delightful:wrapped_cantaloupe"
+        }
+      }
+    }
+  ]
+}

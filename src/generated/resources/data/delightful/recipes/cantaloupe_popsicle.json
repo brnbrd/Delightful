@@ -1,0 +1,37 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "cantaloupe_popsicle"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "key": {
+          "c": {
+            "tag": "forge:fruits/cantaloupe"
+          },
+          "i": {
+            "item": "minecraft:ice"
+          },
+          "s": {
+            "tag": "forge:rods/wooden"
+          }
+        },
+        "pattern": [
+          " cc",
+          "icc",
+          "si "
+        ],
+        "result": {
+          "item": "delightful:cantaloupe_popsicle"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

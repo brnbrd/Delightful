@@ -16,6 +16,7 @@ import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -169,18 +170,6 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .requires(ModItems.HONEY_COOKIE.get())
                 .unlockedBy("has_cooked_marshmallow_stick", has(DelightfulItems.COOKED_MARSHMALLOW_STICK.get())),
             "food/smore_from_chocolate", finished, enabled("smore"), not(tagEmpty(DelightfulItemTags.BARS_CHOCOLATE)));
-        wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.CRAB_RANGOON.get())
-                .requires(ForgeTags.DOUGH_WHEAT)
-                .requires(DelightfulItemTags.CHEESES)
-                .requires(DelightfulItemTags.CRAB_MEAT)
-                .unlockedBy("has_cooked_crab", has(DelightfulItemTags.CRAB_MEAT)),
-            "food/crab_rangoon", finished, enabled("crab_rangoon"), not(tagEmpty(DelightfulItemTags.CRAB_MEAT)), not(tagEmpty(DelightfulItemTags.CHEESES)));
-        wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.CRAB_RANGOON.get())
-                .requires(ForgeTags.DOUGH_WHEAT)
-                .requires(ForgeTags.MILK)
-                .requires(DelightfulItemTags.CRAB_MEAT)
-                .unlockedBy("has_cooked_crab", has(DelightfulItemTags.CRAB_MEAT)),
-            "food/crab_rangoon_from_milk", finished, enabled("crab_rangoon"), not(tagEmpty(DelightfulItemTags.CRAB_MEAT)), tagEmpty(DelightfulItemTags.CHEESES));
         wrap(SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(DelightfulItems.MARSHMALLOW_STICK.get()), RecipeCategory.FOOD,
                     DelightfulItems.COOKED_MARSHMALLOW_STICK.get(), 0.5F, 600)
                 .unlockedBy("has_marshmallow_stick", has(DelightfulItems.MARSHMALLOW_STICK.get())),
@@ -204,7 +193,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             "food/matcha_latte", finished, enabled("matcha_latte"), enabled("matcha"), not(modLoaded(Mods.FR)));
         wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.BERRY_MATCHA_LATTE.get(), 1)
                 .requires(Items.GLASS_BOTTLE)
-                .requires(DelightfulItemTags.FRUITS_BERRIES)
+                .requires(ForgeTags.BERRIES)
                 .requires(DelightfulItemTags.ICE_CUBES)
                 .requires(ForgeTags.MILK)
                 .requires(Items.HONEY_BOTTLE)
@@ -213,7 +202,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             "food/berry_matcha_latte_neapolitan", finished, not(modLoaded(Mods.FR)), not(tagEmpty(DelightfulItemTags.ICE_CUBES)), enabled("berry_matcha_latte"), enabled("matcha_latte"), enabled("matcha"));
         wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.BERRY_MATCHA_LATTE.get(), 1)
                 .requires(Items.GLASS_BOTTLE)
-                .requires(DelightfulItemTags.FRUITS_BERRIES)
+                .requires(ForgeTags.BERRIES)
                 .requires(Items.ICE)
                 .requires(ForgeTags.MILK)
                 .requires(Items.HONEY_BOTTLE)
@@ -223,14 +212,14 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
         wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.BERRY_MATCHA_LATTE.get(), 1)
                 .requires(Items.GLASS_BOTTLE)
                 .requires(DelightfulItems.MATCHA_LATTE.get())
-                .requires(DelightfulItemTags.FRUITS_BERRIES)
+                .requires(ForgeTags.BERRIES)
                 .requires(DelightfulItemTags.ICE_CUBES)
                 .unlockedBy("has_matcha_latte", has(DelightfulItems.MATCHA_LATTE.get())),
             "food/berry_matcha_latte_from_matcha_latte_neapolitan", finished, not(tagEmpty(DelightfulItemTags.ICE_CUBES)), enabled("berry_matcha_latte"), enabled("matcha_latte"), enabled("matcha"));
         wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.BERRY_MATCHA_LATTE.get(), 1)
                 .requires(Items.GLASS_BOTTLE)
                 .requires(DelightfulItems.MATCHA_LATTE.get())
-                .requires(DelightfulItemTags.FRUITS_BERRIES)
+                .requires(ForgeTags.BERRIES)
                 .requires(Items.ICE)
                 .unlockedBy("has_matcha_latte", has(DelightfulItems.MATCHA_LATTE.get())),
             "food/berry_matcha_latte_from_matcha_latte", finished, tagEmpty(DelightfulItemTags.ICE_CUBES), enabled("berry_matcha_latte"), enabled("matcha_latte"), enabled("matcha"));
@@ -310,7 +299,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .requires(DelightfulItems.SALMONBERRIES.get())
                 .unlockedBy("has_salmonberries", has(DelightfulItemTags.FRUITS_SALMONBERRIES)),
             "salmonberry_pips", finished, enabled("salmonberry_pips"));
-        wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, DelightfulItems.CANTALOUPE_SLICE.get(), 3)
+        wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.CANTALOUPE_SLICE.get(), 3)
                 .requires(DelightfulItems.CANTALOUPE.get())
                 .unlockedBy("has_cantaloupe", has(DelightfulItems.CANTALOUPE.get())),
             "cantaloupe_slice", finished, enabled("cantaloupe_slice"));
@@ -319,10 +308,38 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 Ingredient.of(ForgeTags.TOOLS_KNIVES),
                 DelightfulItems.CANTALOUPE_SLICE.get(), 6),
             "cutting/cantaloupe", finished, enabled("cantaloupe_slice"));
-        wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, DelightfulItems.CANTALOUPE_SEEDS.get())
+        wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.CANTALOUPE_SEEDS.get())
                 .requires(DelightfulItems.CANTALOUPE_SLICE.get())
                 .unlockedBy("has_cantaloupe", has(DelightfulItemTags.FRUITS_CANTALOUPE)),
             "cantaloupe_seeds", finished, enabled(DelightfulItems.CANTALOUPE_SEEDS));
+        wrap(CookingPotRecipeBuilder.cookingPotRecipe(DelightfulItems.STUFFED_CANTALOUPE_BLOCK.get(), 1,
+                    CookingRecipes.SLOW_COOKING, 0.35F, DelightfulItems.CANTALOUPE.get())
+                .addIngredient(ForgeTags.CROPS_RICE)
+                .addIngredient(ForgeTags.COOKED_MUTTON)
+                .addIngredient(ForgeTags.CROPS_ONION)
+                .addIngredient(ForgeTags.BERRIES)
+                .addIngredient(ForgeTags.SEEDS)
+                .unlockedBy("has_cantaloupe", has(DelightfulItems.CANTALOUPE.get())),
+            "food/cooking/stuffed_cantaloupe", finished, enabled("stuffed_cantaloupe"));
+        wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.WRAPPED_CANTALOUPE.get(), 1)
+                .requires(DelightfulItemTags.FRUITS_CANTALOUPE)
+                .requires(ForgeTags.COOKED_BACON)
+                .unlockedBy("has_cantaloupe_slice", has(DelightfulItemTags.FRUITS_CANTALOUPE)),
+            "wrapped_cantaloupe", finished, enabled("wrapped_cantaloupe"));
+        wrap(ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, DelightfulItems.CANTALOUPE_POPSICLE.get(), 1)
+                .define('s', Tags.Items.RODS_WOODEN)
+                .define('i', Items.ICE)
+                .define('c', DelightfulItemTags.FRUITS_CANTALOUPE)
+                .pattern(" cc")
+                .pattern("icc")
+                .pattern("si ")
+                .unlockedBy("has_cantaloupe_slice", has(DelightfulItemTags.FRUITS_CANTALOUPE)),
+            "cantaloupe_popsicle", finished, enabled("cantaloupe_popsicle"));
+        wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.CANTALOUPE_BREAD.get(), 1)
+                .requires(ForgeTags.DOUGH)
+                .requires(DelightfulItemTags.FRUITS_CANTALOUPE)
+                .unlockedBy("has_cantaloupe_slice", has(DelightfulItemTags.FRUITS_CANTALOUPE)),
+            "cantaloupe_bread", finished, enabled("cantaloupe_bread"));
         wrap(CookingPotRecipeBuilder.cookingPotRecipe(
             DelightfulItems.ENDER_NECTAR.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
                 .addIngredient(Items.ENDER_EYE)
@@ -401,13 +418,32 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .unlockedBy("has_ginger", has(DelightfulItemTags.FRUITS)),
             "food/cooking/sinigang_no_ginger_citrus", finished, enabled("sinigang"), or(tagEmpty(DelightfulItemTags.CROPS_GINGER), tagEmpty(DelightfulItemTags.FRUITS_CITRUS)));
         wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-            Items.MILK_BUCKET, 1, CookingRecipes.NORMAL_COOKING, 0.35F, Items.BUCKET)
+                    DelightfulItems.CRAB_RANGOON.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
+                .addIngredient(ForgeTags.DOUGH)
+                .addIngredient(DelightfulItemTags.CHEESES)
+                .addIngredient(DelightfulItemTags.CRAB_MEAT)
+                .unlockedBy("has_cooked_crab", has(DelightfulItemTags.CRAB_MEAT)),
+            "food/cooking/crab_rangoon", finished, enabled("crab_rangoon"), not(tagEmpty(DelightfulItemTags.CRAB_MEAT)), not(tagEmpty(DelightfulItemTags.CHEESES)));
+        wrap(CookingPotRecipeBuilder.cookingPotRecipe(
+                    DelightfulItems.CRAB_RANGOON.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
+                .addIngredient(ForgeTags.DOUGH)
+                .addIngredient(ForgeTags.MILK)
+                .addIngredient(DelightfulItemTags.CRAB_MEAT)
+                .unlockedBy("has_cooked_crab", has(DelightfulItemTags.CRAB_MEAT)),
+            "food/cooking/crab_rangoon_from_milk", finished, enabled("crab_rangoon"), not(tagEmpty(DelightfulItemTags.CRAB_MEAT)), tagEmpty(DelightfulItemTags.CHEESES));
+        wrap(CookingPotRecipeBuilder.cookingPotRecipe(
+                    Items.MILK_BUCKET, 1, CookingRecipes.NORMAL_COOKING, 0.35F, Items.BUCKET)
                 .addIngredient(DelightfulItemTags.WATER)
                 .addIngredient(DelightfulItemTags.NUTS)
                 .addIngredient(DelightfulItemTags.NUTS)
                 .addIngredient(DelightfulItemTags.SUGAR)
                 .unlockedBy("has_nuts", has(DelightfulItemTags.NUTS)),
             "food/cooking/nut_milk", finished, enabled("nut_milk"), not(modLoaded("vintagedelight")));
+        wrap(CookingPotRecipeBuilder.cookingPotRecipe(
+                    Items.HONEY_BOTTLE, 3, CookingRecipes.NORMAL_COOKING, 0.35F)
+                .addIngredient(Items.HONEY_BOTTLE, 2)
+                .addIngredient(DelightfulItems.CHOPPED_CLOVER.get(), 4),
+            "food/clover_honey", finished, enabled("clover_honey"), modLoaded("biomesoplenty"));
         wrap(ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Items.TORCH, 8)
                 .define('o', DelightfulItems.ANIMAL_OIL_BOTTLE.get())
                 .define('s', Tags.Items.RODS_WOODEN)
@@ -423,11 +459,6 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .pattern("f")
                 .unlockedBy("has_fat", has(DelightfulItems.ANIMAL_FAT.get())),
             "candle_from_animal_fat", finished, enabled("animal_fat"));
-        wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-                    Items.HONEY_BOTTLE, 3, CookingRecipes.NORMAL_COOKING, 0.35F)
-                .addIngredient(Items.HONEY_BOTTLE, 2)
-                .addIngredient(DelightfulItems.CHOPPED_CLOVER.get(), 4),
-            "food/clover_honey", finished, enabled("clover_honey"), modLoaded("biomesoplenty"));
         wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
                 Ingredient.of(DelightfulItems.SALMONBERRY_PIE.get()),
                 Ingredient.of(ForgeTags.TOOLS_KNIVES),

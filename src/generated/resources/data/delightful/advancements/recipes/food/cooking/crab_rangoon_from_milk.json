@@ -16,7 +16,7 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:food/crab_rangoon"
+              "recipe": "delightful:food/cooking/crab_rangoon_from_milk"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
@@ -29,10 +29,10 @@
         ],
         "rewards": {
           "recipes": [
-            "delightful:food/crab_rangoon"
+            "delightful:food/cooking/crab_rangoon_from_milk"
           ]
         },
-        "sends_telemetry_event": false
+        "sends_telemetry_event": true
       },
       "conditions": [
         {
@@ -50,11 +50,8 @@
               }
             },
             {
-              "type": "forge:not",
-              "value": {
-                "type": "forge:tag_empty",
-                "tag": "forge:cheeses"
-              }
+              "type": "forge:tag_empty",
+              "tag": "forge:cheeses"
             }
           ]
         }

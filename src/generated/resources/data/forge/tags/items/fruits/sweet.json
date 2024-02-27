@@ -17,12 +17,14 @@
     "#forge:fruits/wild_berries",
     "#forge:fruits/rambutan",
     "#forge:fruits/pitaya",
+    "#forge:fruits/jabuticaba",
+    "#forge:fruits/kiwano",
     {
-      "id": "#forge:fruits/mandarin",
+      "id": "#forge:fruits/orange",
       "required": false
     },
     {
-      "id": "#forge:fruits/orange",
+      "id": "#forge:fruits/mandarin",
       "required": false
     },
     {

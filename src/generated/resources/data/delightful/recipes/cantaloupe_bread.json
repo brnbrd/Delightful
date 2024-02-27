@@ -1,0 +1,28 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "cantaloupe_bread"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "tag": "forge:dough"
+          },
+          {
+            "tag": "forge:fruits/cantaloupe"
+          }
+        ],
+        "result": {
+          "item": "delightful:cantaloupe_bread"
+        }
+      }
+    }
+  ]
+}
