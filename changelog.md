@@ -1,6 +1,6 @@
 # Changelog
 
-# 3.4.4
+# 3.5 - The Cantaloupe Update
 
 ### Updates
 - Added Nether Quartz Knife (for [Applied Energistics 2](https://www.curseforge.com/minecraft/mc-mods/applied-energistics-2))
@@ -8,6 +8,11 @@
 - Added Fluix Knife (for [Applied Energistics 2](https://www.curseforge.com/minecraft/mc-mods/applied-energistics-2))
 - Added Cantaloupe Seeds
 - Added Cantaloupe Plant
+- Added Cantaloupe Bread
+- Added Wrapped Cantaloupe
+- Added Cantaloupe Popsicle
+- Added Stuffed Cantaloupe / Bowl of Stuffed Cantaloupe
+- Cantaloupe patches will now spawn with intermixed Cantaloupe Plants
 
 
 ## 3.4.3
