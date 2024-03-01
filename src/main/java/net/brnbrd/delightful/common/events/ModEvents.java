@@ -67,8 +67,16 @@ public class ModEvents {
             ComposterBlock.COMPOSTABLES.put(DelightfulItems.STUFFED_CANTALOUPE_BLOCK.get(), 1.0F);
 
             // Animal Foods
-            Chicken.FOOD_ITEMS = CompoundIngredient.of(Chicken.FOOD_ITEMS, Util.ing(DelightfulItems.SALMONBERRY_PIPS));
-            Collections.addAll(Parrot.TAME_FOOD, DelightfulItems.SALMONBERRY_PIPS.get());
+            Chicken.FOOD_ITEMS = CompoundIngredient.of(
+                Chicken.FOOD_ITEMS,
+                Util.ing(DelightfulItems.SALMONBERRY_PIPS),
+                Util.ing(DelightfulItems.CANTALOUPE_SEEDS)
+            );
+            Collections.addAll(
+                Parrot.TAME_FOOD,
+                DelightfulItems.SALMONBERRY_PIPS.get(),
+                DelightfulItems.CANTALOUPE_SEEDS.get()
+            );
         });
     }
 
