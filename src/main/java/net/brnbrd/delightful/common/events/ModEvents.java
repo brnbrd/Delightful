@@ -64,6 +64,8 @@ public class ModEvents {
             ComposterBlock.COMPOSTABLES.put(DelightfulItems.GREEN_APPLE_CRATE.get(), 1.0F);
             ComposterBlock.COMPOSTABLES.put(DelightfulItems.JOSHUA_FRUIT_CRATE.get(), 1.0F);
             ComposterBlock.COMPOSTABLES.put(DelightfulItems.BAOBAB_FRUIT_CRATE.get(), 1.0F);
+            ComposterBlock.COMPOSTABLES.put(DelightfulItems.CANTALOUPE_BREAD.get(), 1.0F);
+            ComposterBlock.COMPOSTABLES.put(DelightfulItems.STUFFED_CANTALOUPE_BLOCK.get(), 1.0F);
 
             // Animal Foods
             Chicken.FOOD_ITEMS = CompoundIngredient.of(Chicken.FOOD_ITEMS, Util.ing(DelightfulItems.SALMONBERRY_PIPS));
