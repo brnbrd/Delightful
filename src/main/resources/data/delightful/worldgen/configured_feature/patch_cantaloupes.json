@@ -8,10 +8,7 @@
           "to_place": {
             "type": "minecraft:simple_state_provider",
             "state": {
-              "Name": "delightful:cantaloupe_plant",
-              "Properties": {
-                "age": "3"
-              }
+              "Name": "delightful:cantaloupe"
             }
           }
         }
@@ -47,7 +44,10 @@
           "to_place": {
             "type": "minecraft:simple_state_provider",
             "state": {
-              "Name": "delightful:cantaloupe"
+              "Name": "delightful:cantaloupe_plant",
+              "Properties": {
+                "age": "3"
+              }
             }
           }
         }
