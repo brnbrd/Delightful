@@ -1,7 +1,6 @@
 {
-  "type": "farmersdelight:add_features_by_filter",
-  "allowed_biomes": "#delightful:salmonberry_spawns",
-  "denied_biomes": "#forge:is_underground",
+  "type": "forge:add_features",
+  "biomes": "#delightful:salmonberry_spawns",
   "features": "delightful:patch_salmonberries",
   "step": "vegetal_decoration"
 }

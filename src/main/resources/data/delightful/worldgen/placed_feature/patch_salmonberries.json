@@ -3,7 +3,7 @@
   "placement": [
     {
       "type": "minecraft:rarity_filter",
-      "chance": 100
+      "chance": 65
     },
     {
       "type": "minecraft:in_square"
@@ -17,7 +17,7 @@
     },
     {
       "type": "farmersdelight:biome_tag",
-      "tag": "delightful:salmonberry_spawns"
+      "tag": "minecraft:is_overworld"
     }
   ]
 }

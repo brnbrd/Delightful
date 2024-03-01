@@ -1,7 +1,6 @@
 {
-  "type": "farmersdelight:add_features_by_filter",
-  "allowed_biomes": "#delightful:cantaloupe_spawns",
-  "denied_biomes": "#forge:is_underground",
+  "type": "forge:add_features",
+  "biomes": "#delightful:cantaloupe_spawns",
   "features": "delightful:patch_cantaloupes",
   "step": "vegetal_decoration"
 }

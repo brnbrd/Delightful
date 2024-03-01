@@ -1,7 +1,6 @@
 {
-  "type": "farmersdelight:add_features_by_filter",
-  "allowed_biomes": "#delightful:mini_melon_spawns",
-  "denied_biomes": "#forge:is_underground",
+  "type": "forge:add_features",
+  "biomes": "#delightful:mini_melon_spawns",
   "features": "delightful:patch_mini_melons",
   "step": "vegetal_decoration"
 }
