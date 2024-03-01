@@ -170,8 +170,5 @@
   "item.delightful.zinc_knife": "Цинковый нож",
   "tooltip.config_disabled": "Отключено",
   "tooltip.requires_modid": "Требуется мод:",
-  "tooltip.requires_tag": "Требует не пустой тег:",
-  "item.delightful.adamantite_knife": "Adamantite нож",
-  "item.delightful.deorum_knife": "Нож из деорума",
-  "item.delightful.reinforced_deorum_knife": "Укреплённый деорумовый нож"
+  "tooltip.requires_tag": "Требует не пустой тег:"
 }

@@ -80,14 +80,13 @@ public class PieEvents {
 	}
 
 	// Places pie Block in world using Item
-	@SuppressWarnings("ConstantConditions")
 	private InteractionResult placePie(PieBlock pie, BlockPlaceContext context) {
 		BlockPos pos = context.getClickedPos();
 		Level level = context.getLevel();
 		if (context.canPlace()) {
 			Player player = context.getPlayer();
 			BlockState pieState = pie.getStateForPlacement(context);
-			if (canPlace(context, pieState) && level.setBlock(pos, pieState, 11)) {
+			if (pieState != null && canPlace(context, pieState) && level.setBlock(pos, pieState, 11)) {
 				BlockState placedState = level.getBlockState(pos);
 				if (placedState.is(pieState.getBlock())) {
 					placedState.getBlock().setPlacedBy(level, pos, placedState, player, context.getItemInHand());
@@ -102,7 +101,7 @@ public class PieEvents {
 					(soundtype.getVolume() + 1.0F) / 2.0F,
 					soundtype.getPitch() * 0.8F
 				);
-				if (!player.getAbilities().instabuild) {
+				if (player != null && !player.getAbilities().instabuild) {
 					context.getItemInHand().shrink(1);
 				}
 				return InteractionResult.sidedSuccess(level.isClientSide());

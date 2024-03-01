@@ -170,8 +170,5 @@
   "item.delightful.zinc_knife": "Zinc Knife",
   "tooltip.config_disabled": "Disabled",
   "tooltip.requires_modid": "Requires modid:",
-  "tooltip.requires_tag": "Requires non-empty tag:",
-  "item.delightful.adamantite_knife": "Adamantite Knife",
-  "item.delightful.deorum_knife": "Deorum Knife",
-  "item.delightful.reinforced_deorum_knife": "Reinforced Deorum Knife"
+  "tooltip.requires_tag": "Requires non-empty tag:"
 }
