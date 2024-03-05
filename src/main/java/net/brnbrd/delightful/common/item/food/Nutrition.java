@@ -47,15 +47,15 @@ public class Nutrition {
     public static final FoodProperties CANTALOUPE_SLICE = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.8F)
         .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 200, 0), 1.0F).build();
     public static final FoodProperties CANTALOUPE_BREAD = (new FoodProperties.Builder()).nutrition(9).saturationMod(0.35F)
-        .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 400, 0), 1.0F).build();
+        .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 300, 0), 1.0F).build();
     public static final FoodProperties WRAPPED_CANTALOUPE = (new FoodProperties.Builder()).nutrition(8).saturationMod(0.95F)
-        .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 400, 0), 1.0F).build();
+        .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 300, 0), 1.0F).build();
     public static final FoodProperties CANTALOUPE_POPSICLE = (new FoodProperties.Builder())
         .nutrition(3).saturationMod(0.2F).fast().alwaysEat()
-        .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 500, 0), 1.0F).build();
+        .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 600, 0), 1.0F).build();
     public static final FoodProperties STUFFED_CANTALOUPE = (new FoodProperties.Builder()).nutrition(14).saturationMod(0.75F)
         .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 4800, 0), 1.0F)
-        .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 600, 1), 1.0F).build();
+        .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 900, 1), 1.0F).build();
     public static final FoodProperties COCONUT_CURRY = (new FoodProperties.Builder()).nutrition(15).saturationMod(0.9F)
         .effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 6000, 0), 1.0F)
         .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 600, 0), 1.0F).build();
