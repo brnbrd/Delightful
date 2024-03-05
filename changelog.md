@@ -1,13 +1,18 @@
 # Changelog
 
+
 # 3.5.1
 
+### Updates
+- Slightly adjusted Resistance potion effect length for some Cantaloupe foods
+
 ### Fixes
-- Fix crash when interacting with some disabled items in GUI
+- Fixed crash when interacting with some disabled items in GUI
 
 ### Translations
 - Updated:
   - zh_cn (thanks, Junnaturefox!)
+
 
 # 3.5 - The Cantaloupe Update
 
