@@ -1,5 +1,13 @@
 # Changelog
 
+# 3.5.1
+
+### Fixes
+- Fix crash when interacting with some disabled items in GUI
+
+### Translations
+- Updated:
+  - zh_cn (thanks, Junnaturefox!)
 
 # 3.5 - The Cantaloupe Update
 
