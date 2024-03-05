@@ -22,6 +22,7 @@ import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.Nullable;
+
 import java.util.Objects;
 import java.util.function.Supplier;
 
@@ -69,14 +70,13 @@ public class Util {
   }
 
   public static String name(Item item) {
-    if (ForgeRegistries.ITEMS.containsValue(item)) {
-      return ForgeRegistries.ITEMS.getKey(item).getPath();
-    }
-    return "";
+    return (ForgeRegistries.ITEMS.containsValue(item)) ?
+      Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath() : "";
   }
 
   public static String name(Block block) {
-    return Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath();
+    return (ForgeRegistries.BLOCKS.containsValue(block)) ?
+      Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath() : "";
   }
 
   public static String name(RegistryObject<?> reg) {
