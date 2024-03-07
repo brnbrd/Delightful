@@ -3,6 +3,12 @@
 
 # 3.5.1
 
+### Fixes
+- Fixed crash with some updated dependencies
+
+
+# 3.5.1
+
 ### Updates
 - Slightly adjusted Resistance potion effect length for some Cantaloupe foods
 

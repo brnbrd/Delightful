@@ -28,6 +28,10 @@ public class VeridiumKnifeItem extends AetherKnifeItem implements VeridiumItem {
 		super("aether_redux", DelightfulItems.ingot("veridium"), tier, properties);
 	}
 
+	public boolean isCharged(Item item) {
+		return item == Knives.INFUSED_VERIDIUM.get();
+	}
+
 	@Override
 	public @NotNull ItemStack getDefaultInstance() {
 		ItemStack stack = super.getDefaultInstance().copy();
@@ -37,19 +41,14 @@ public class VeridiumKnifeItem extends AetherKnifeItem implements VeridiumItem {
 	}
 
 	@Override
-	public boolean isCharged(Item item) {
-		return item == Knives.INFUSED_VERIDIUM.get();
-	}
-
-	@Override
 	public Item getReplacementItem(ItemStack itemStack) {
-		return this.isCharged(itemStack) ? Knives.VERIDIUM.get() : Knives.INFUSED_VERIDIUM.get();
+		return this.isCharged(itemStack.getItem()) ? Knives.VERIDIUM.get() : Knives.INFUSED_VERIDIUM.get();
 	}
 
 	public void appendHoverText(@NotNull ItemStack pStack, @Nullable Level pLevel, @NotNull List<Component> comps, @NotNull TooltipFlag pIsAdvanced) {
 		if (this.enabled()) {
 			MutableComponent component = Component.translatable("tooltip.aether_redux.ambrosium_charge",
-				VeridiumItem.getCharge(pStack)).withStyle(ChatFormatting.GRAY);
+				VeridiumItem.getInfusion(pStack)).withStyle(ChatFormatting.GRAY);
 			comps.add(component);
 			Component c = ReduxItems.TooltipUtils.SHIFT_OR_DEFAULT.apply(Component.translatable("gui.aether_redux.infusion_tooltip"));
 			comps.add(c);
@@ -58,8 +57,8 @@ public class VeridiumKnifeItem extends AetherKnifeItem implements VeridiumItem {
 	}
 
 	public boolean hurtEnemy(@NotNull ItemStack pStack, @NotNull LivingEntity pTarget, @NotNull LivingEntity pAttacker) {
-		if (this.isCharged(pStack) && !pAttacker.level().isClientSide() && (!(pAttacker instanceof Player) || !((Player)pAttacker).getAbilities().instabuild)) {
-			ItemStack stackReplacement = VeridiumItem.decreaseCharge(pStack);
+		if (this.isCharged(pStack.getItem()) && !pAttacker.level().isClientSide() && (!(pAttacker instanceof Player) || !((Player)pAttacker).getAbilities().instabuild)) {
+			ItemStack stackReplacement = VeridiumItem.depleteInfusion(pStack, pAttacker);
 			if (!stackReplacement.getItem().equals(pStack.getItem())) {
 				pAttacker.setItemSlot(EquipmentSlot.MAINHAND, stackReplacement);
 			} else {
@@ -70,13 +69,13 @@ public class VeridiumKnifeItem extends AetherKnifeItem implements VeridiumItem {
 	}
 
 	public boolean mineBlock(@NotNull ItemStack pStack, @NotNull Level pLevel, BlockState pState, @NotNull BlockPos pPos, @NotNull LivingEntity pEntityLiving) {
-		if (pState.getDestroySpeed(pLevel, pPos) != 0.0F && this.isCharged(pStack) && !pEntityLiving.level().isClientSide()) {
+		if (pState.getDestroySpeed(pLevel, pPos) != 0.0F && this.isCharged(pStack.getItem()) && !pEntityLiving.level().isClientSide()) {
 			if (pEntityLiving instanceof Player p) {
 				if (p.getAbilities().instabuild) {
 					return super.mineBlock(pStack, pLevel, pState, pPos, pEntityLiving);
 				}
 			}
-			ItemStack stackReplacement = VeridiumItem.decreaseCharge(pStack);
+			ItemStack stackReplacement = VeridiumItem.depleteInfusion(pStack, pEntityLiving);
 			if (!stackReplacement.getItem().equals(pStack.getItem())) {
 				pEntityLiving.setItemSlot(EquipmentSlot.MAINHAND, stackReplacement);
 			} else {
@@ -87,6 +86,6 @@ public class VeridiumKnifeItem extends AetherKnifeItem implements VeridiumItem {
 	}
 
 	public <T extends LivingEntity> int damageItem(ItemStack stack, int amount, T entity, Consumer<T> onBroken) {
-		return this.isCharged(stack) ? amount * 4 : amount;
+		return this.isCharged(stack.getItem()) ? amount * this.CHARGED_DAMAGE_MULTIPLIER : amount;
 	}
 }
