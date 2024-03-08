@@ -9,6 +9,7 @@
 ### Fixes
 - Fixed crash with Aether Redux
 - Updated Veridium and Infused Veridium Knife textures for newer Aether Redux versions
+- Blazing Knife and Experience Knife now have their correct properties
 
 
 # 3.5.1
