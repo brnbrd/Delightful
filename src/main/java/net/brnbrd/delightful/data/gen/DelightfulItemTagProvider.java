@@ -500,6 +500,9 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptionalTag(Util.rl("deep_aether", "stratus_repairing"));
 		this.addSelf(DelightfulItemTags.STRATUS_UPGRADE);
 
+		// Ancient Aether
+		this.addSelf(Util.it("ancient_aether", "valkyrum"));
+
 		// AE2
 		this.addSelf(DelightfulItemTags.FLUIX_BLOCK);
 		this.addSelf(DelightfulItemTags.FLUIX_UPGRADE_SMITHING_TEMPLATE);

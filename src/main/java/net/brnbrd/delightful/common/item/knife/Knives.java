@@ -11,6 +11,7 @@ import net.brnbrd.delightful.common.item.knife.compat.aether.HolystoneKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.aether.SkyrootKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.aether.ZaniteKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.allthemodium.AllthemodiumKnifeItem;
+import net.brnbrd.delightful.common.item.knife.compat.ancient_aether.ValkyrumKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.botania.ElementiumKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.botania.ManasteelKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.botania.TerraKnifeItem;
@@ -156,6 +157,7 @@ public class Knives extends DelightfulItems {
 		DeepAetherCompat.STRATUS.get() :
 		new DummyStratusKnifeItem(props(), Tiers.IRON)
 	);
+	public static final RegistryObject<Item> VALKYRUM = registerItem("valkyrum_knife", () -> new ValkyrumKnifeItem(props()));
 	public static final RegistryObject<Item> NETHER_QUARTZ = registerItem("nether_quartz_knife", () ->
 		new CompatKnifeItem(Mods.AE2, Tags.Items.GEMS_QUARTZ, DelightfulTiers.NETHER_QUARTZ, props()));
 	public static final RegistryObject<Item> CERTUS_QUARTZ = registerItem("certus_quartz_knife", () ->

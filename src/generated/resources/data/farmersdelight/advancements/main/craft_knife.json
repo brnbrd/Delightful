@@ -829,6 +829,18 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "valkyrum_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delightful:valkyrum_knife"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "veridium_knife": {
       "conditions": {
         "items": [
@@ -966,6 +978,7 @@
       "infused_veridium_knife",
       "skyjade_knife",
       "stratus_knife",
+      "valkyrum_knife",
       "nether_quartz_knife",
       "certus_quartz_knife",
       "fluix_knife"

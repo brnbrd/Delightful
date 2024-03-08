@@ -1,0 +1,65 @@
+{
+  "advancements": [
+    {
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "criteria": {
+          "has_the_recipe": {
+            "conditions": {
+              "recipe": "delightful:knives/valkyrum_knife"
+            },
+            "trigger": "minecraft:recipe_unlocked"
+          },
+          "has_valkyrum": {
+            "conditions": {
+              "items": [
+                {
+                  "tag": "ancient_aether:valkyrum"
+                }
+              ]
+            },
+            "trigger": "minecraft:inventory_changed"
+          }
+        },
+        "requirements": [
+          [
+            "has_valkyrum",
+            "has_the_recipe"
+          ]
+        ],
+        "rewards": {
+          "recipes": [
+            "delightful:knives/valkyrum_knife"
+          ]
+        },
+        "sends_telemetry_event": false
+      },
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "valkyrum_knife"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "ancient_aether:valkyrum"
+              }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "ancient_aether"
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "aether"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

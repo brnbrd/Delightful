@@ -1,0 +1,53 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "valkyrum_knife"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "ancient_aether:valkyrum"
+              }
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "ancient_aether"
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "aether"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "equipment",
+        "key": {
+          "m": {
+            "tag": "ancient_aether:valkyrum"
+          },
+          "s": {
+            "tag": "aether:skyroot_stick"
+          }
+        },
+        "pattern": [
+          "m",
+          "s"
+        ],
+        "result": {
+          "item": "delightful:valkyrum_knife"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

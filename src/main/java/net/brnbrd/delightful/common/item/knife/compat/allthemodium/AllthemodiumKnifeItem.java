@@ -40,12 +40,6 @@ public class AllthemodiumKnifeItem extends CompatKnifeItem {
 	}
 
 	@Override
-	public int getMaxDamage(ItemStack stack) {
-		return 0;
-	}
-
-
-	@Override
 	public <T extends LivingEntity> int damageItem(ItemStack stack, int amount, T entity, Consumer<T> onBroken) {
 		return 0;
 	}

@@ -1,4 +1,4 @@
-// 1.20.1	2024-03-05T11:24:19.4663865	Item Models: delightful
+// 1.20.1	2024-03-07T14:21:08.5382565	Item Models: delightful
 f9af973b19b45f34017d8db4e6e54de90668031e assets/delightful/models/item/acorn.json
 9b4daf24b0d8e447735c5836d7ab76a3df1b3c1d assets/delightful/models/item/acorn_sack.json
 5d9531a6795e7d2281f99609672d866743329211 assets/delightful/models/item/adamantium_knife.json
@@ -131,6 +131,7 @@ a0af49bc2f408e1e6f725a69b419f786b34de6a0 assets/delightful/models/item/stuffed_c
 0ab74d74b4514b342efd03b05a9dba44d592f5de assets/delightful/models/item/thyrium_knife.json
 1ad81cca1db81723a6158d578021fb2706b28124 assets/delightful/models/item/tin_knife.json
 2b8d55969def43e97d935b4af1db70b6279d0455 assets/delightful/models/item/utherium_knife.json
+f0543eb99987aa98c2b8dda8ee428f7e18dd8cbd assets/delightful/models/item/valkyrum_knife.json
 48a0e16433693c5d37ea5d02d29cad8997625fdc assets/delightful/models/item/venison_chops.json
 409d3f917ef5afc9b3023f7e420927c9feef5022 assets/delightful/models/item/veridium_knife.json
 a339c4a4abeeb4baaa9ba1fd326a49e291764d35 assets/delightful/models/item/warden_knife.json

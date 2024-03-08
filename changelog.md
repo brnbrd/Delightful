@@ -1,10 +1,14 @@
 # Changelog
 
 
-# 3.5.1
+# 3.5.2
+
+### Updates
+- Added Valkyrum Knife (for [Ancient Aether](https://www.curseforge.com/minecraft/mc-mods/ancient-aether))
 
 ### Fixes
-- Fixed crash with some updated dependencies
+- Fixed crash with Aether Redux
+- Updated Veridium and Infused Veridium Knife textures for newer Aether Redux versions
 
 
 # 3.5.1

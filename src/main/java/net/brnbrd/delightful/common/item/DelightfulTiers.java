@@ -74,6 +74,7 @@ public enum DelightfulTiers implements Tier {
     GRAVITITE(3, 1561, 8.0F, 3.0F, 10, Ingredient.of(Util.it(Mods.AE, "gravitite_repairing"))),
     VERIDIUM(2, 750, 2.25F, 1.0F, 0, Ingredient.of(DelightfulItemTags.INGOTS_VERIDIUM)),
     INFUSED_VERIDIUM(2, 750, 7.0F, 1.0F, 0, Ingredient.of(DelightfulItemTags.INGOTS_VERIDIUM)),
+    VALKYRUM(5, 2031, 9.0F, 4.0F, 15, Ingredient.of(Util.it("ancient_aether", "valkyrum_repairing"))),
     NETHER_QUARTZ(
         Tiers.IRON.getLevel(),
         Tiers.IRON.getUses(),
