@@ -4,7 +4,6 @@ import net.brnbrd.delightful.compat.Mods;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
-import vectorwing.farmersdelight.common.FoodValues;
 import vectorwing.farmersdelight.common.registry.ModEffects;
 
 public class Nutrition {
@@ -30,7 +29,10 @@ public class Nutrition {
         .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3600, 0), 1.0F).build();
     public static final FoodProperties HONEY_GLAZED_WALNUT = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.5F).build();
     public static final FoodProperties ACORN = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.1F).build();
-    public static final FoodProperties GREEN_TEA_LEAF = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.2F).build();
+    public static final FoodProperties GREEN_TEA_LEAF = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.2F)
+        .effect(() -> new MobEffectInstance(Mods.getGreenTeaEffect().get(), 60, 0), 1.0F).build();
+    public static final FoodProperties MATCHA = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.4F)
+        .effect(() -> new MobEffectInstance(Mods.getGreenTeaEffect().get(), 100, 0), 1.0F).build();
     public static final FoodProperties ANIMAL_FAT = (new FoodProperties.Builder()).nutrition(1).saturationMod(2.0F).alwaysEat().fast().build();
     public static final FoodProperties CHOPPED_CLOVER = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.3F).fast().build();
     public static final FoodProperties CACTUS_FLESH = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.3F).build();
@@ -73,14 +75,14 @@ public class Nutrition {
         .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 1200, 0), 1.0F)
         .effect(() -> new MobEffectInstance(Mods.getCaffeinated().get(), 200, 0), 1.0F).build();
     public static final FoodProperties MATCHA_LATTE = (new FoodProperties.Builder()).alwaysEat().nutrition(6).saturationMod(0.5F)
-        .effect(() -> new MobEffectInstance(Mods.getVitality().get(), 1200, 1), 1.0F)
+        .effect(() -> new MobEffectInstance(Mods.getGreenTeaEffect().get(), 1200, 1), 1.0F)
         .effect(() -> new MobEffectInstance(Mods.getCaffeinated().get(), 1200, 0), 1.0F).build();
     public static final FoodProperties BERRY_MATCHA_LATTE = (new FoodProperties.Builder()).alwaysEat().nutrition(8).saturationMod(0.65F)
-        .effect(() -> new MobEffectInstance(Mods.getVitality().get(), 1200, 1), 1.0F)
+        .effect(() -> new MobEffectInstance(Mods.getGreenTeaEffect().get(), 1200, 1), 1.0F)
         .effect(() -> new MobEffectInstance(Mods.getCaffeinated().get(), 1200, 0), 1.0F).build();
     public static final FoodProperties MATCHA_ICE_CREAM = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.5F)
         .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 2), 1.0F)
-        .effect(() -> new MobEffectInstance(Mods.getVitality().get(), 1200, 1), 1.0F)
+        .effect(() -> new MobEffectInstance(Mods.getGreenTeaEffect().get(), 1200, 1), 1.0F)
         .effect(() -> new MobEffectInstance(Mods.getCaffeinated().get(), 1200, 0), 1.0F).build();
     public static final FoodProperties SALMONBERRY_ICE_CREAM = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.4F)
         .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 2), 1.0F)

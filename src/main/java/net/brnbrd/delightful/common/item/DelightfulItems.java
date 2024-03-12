@@ -49,8 +49,8 @@ public class DelightfulItems {
 
     public static final RegistryObject<Item> MATCHA_ICE_CREAM = registerItem("matcha_ice_cream", () -> new BowlFoodItem((new Item.Properties()).food(Nutrition.MATCHA_ICE_CREAM).craftRemainder(Items.BOWL).stacksTo(1)));
     public static final RegistryObject<Item> SALMONBERRY_ICE_CREAM = registerItem("salmonberry_ice_cream", () -> new BowlFoodItem((new Item.Properties()).food(Nutrition.SALMONBERRY_ICE_CREAM).craftRemainder(Items.BOWL).stacksTo(1)));
-    public static final RegistryObject<Item> MATCHA = registerItem("matcha", () -> new DItem(new Item.Properties()));
-    public static final RegistryObject<Item> GREEN_TEA_LEAF = registerFood("green_tea_leaf", Nutrition.GREEN_TEA_LEAF);
+    public static final RegistryObject<Item> MATCHA = registerItem("matcha", () -> new MatchaItem(new Item.Properties().food(Nutrition.MATCHA)));
+    public static final RegistryObject<Item> GREEN_TEA_LEAF = registerItem("green_tea_leaf", () -> new GreenTeaLeavesItem(new Item.Properties().food(Nutrition.GREEN_TEA_LEAF)));
     public static final RegistryObject<Item> SALMONBERRIES = registerFood("salmonberries", Nutrition.SALMONBERRIES);
     public static final RegistryObject<Item> SALMONBERRY_PIPS = registerItem("salmonberry_pips",
         () -> new ItemNameBlockItem(DelightfulBlocks.SALMONBERRY_BUSH.get(), ModItems.basicItem()));

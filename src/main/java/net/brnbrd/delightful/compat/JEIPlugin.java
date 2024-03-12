@@ -8,6 +8,7 @@ import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.IConfigured;
+import net.brnbrd.delightful.common.item.food.GreenTeaLeavesItem;
 import net.brnbrd.delightful.common.item.knife.DelightfulKnifeItem;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
@@ -52,7 +53,7 @@ public class JEIPlugin implements IModPlugin
                 VanillaTypes.ITEM_STACK, Component.translatable(Delightful.MODID + ".salmonberries.desc")
             );
         }
-        if (Util.enabled(DelightfulItems.GREEN_TEA_LEAF)) {
+        if (((GreenTeaLeavesItem)DelightfulItems.GREEN_TEA_LEAF.get()).enabled()) {
             registration.addIngredientInfo(DelightfulItems.GREEN_TEA_LEAF.get().getDefaultInstance(), VanillaTypes.ITEM_STACK, Component.translatable(Delightful.MODID + ".green_tea_leaf.desc"));
         }
         if (Util.enabled(DelightfulItems.ACORN)) {

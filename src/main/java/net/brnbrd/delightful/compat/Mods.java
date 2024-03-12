@@ -84,11 +84,16 @@ public class Mods {
 		return () -> MobEffects.ABSORPTION;
 	}
 
-	public static Supplier<MobEffect> getVitality() {
+	public static Supplier<MobEffect> getGreenTeaEffect() {
 		if (loaded(RF)) {
 			Optional<Holder<MobEffect>> vitality = ForgeRegistries.MOB_EFFECTS.getHolder(Util.rl(Mods.RF, "vitality"));
 			if (vitality.isPresent()) {
 				return vitality.get();
+			}
+		} else if (loaded("youkaishomecoming")) {
+			Optional<Holder<MobEffect>> polyphenols = ForgeRegistries.MOB_EFFECTS.getHolder(Util.rl("youkaishomecoming", "tea_polyphenols"));
+			if (polyphenols.isPresent()) {
+				return polyphenols.get();
 			}
 		}
 		return () -> MobEffects.DAMAGE_RESISTANCE;
@@ -99,6 +104,11 @@ public class Mods {
 			Optional<Holder<MobEffect>> caffeinated = ForgeRegistries.MOB_EFFECTS.getHolder(Util.rl(Mods.FR, "caffeinated"));
 			if (caffeinated.isPresent()) {
 				return caffeinated.get();
+			}
+		} else if (loaded("youkaishomecoming")) {
+			Optional<Holder<MobEffect>> sober = ForgeRegistries.MOB_EFFECTS.getHolder(Util.rl("youkaishomecoming", "sober"));
+			if (sober.isPresent()) {
+				return sober.get();
 			}
 		}
 		return () -> MobEffects.DIG_SPEED;

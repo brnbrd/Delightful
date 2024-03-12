@@ -25,7 +25,7 @@
             "item": "minecraft:bowl"
           },
           {
-            "item": "delightful:matcha"
+            "tag": "forge:matcha"
           },
           {
             "tag": "forge:milk"

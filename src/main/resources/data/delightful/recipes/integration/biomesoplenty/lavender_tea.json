@@ -11,14 +11,24 @@
               "value": "lavender_tea"
             },
             {
-              "type": "forge:item_exists",
-              "item": "biomesoplenty:lavender"
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:lavender"
+              }
             },
             {
               "type": "forge:not",
               "value": {
                 "type": "forge:mod_loaded",
                 "modid": "farmersrespite"
+              }
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:mod_loaded",
+                "modid": "youkaishomecoming"
               }
             }
           ]
@@ -36,10 +46,10 @@
             "nbt": "{Potion:\"minecraft:water\"}"
           },
           {
-            "item": "delightful:green_tea_leaf"
+            "tag": "forge:tea_leaves"
           },
           {
-            "item": "biomesoplenty:lavender"
+            "tag": "forge:lavender"
           }
         ],
         "result": {

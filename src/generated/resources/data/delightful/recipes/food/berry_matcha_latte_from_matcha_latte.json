@@ -17,10 +17,6 @@
             {
               "type": "delightful:enabled",
               "value": "matcha_latte"
-            },
-            {
-              "type": "delightful:enabled",
-              "value": "matcha"
             }
           ]
         }

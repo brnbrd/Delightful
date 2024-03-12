@@ -25,7 +25,6 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -95,6 +94,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.add(DelightfulItems.SALMONBERRY_GUMMY.get());
 
 		// Forge
+		tag(DelightfulItemTags.MATCHA)
+			.add(DelightfulItems.MATCHA.get());
 		tag(DelightfulItemTags.DOUGH_CORN)
 			.addOptional(Util.rl("culturaldelights", "corn_dough"));
 		tag(ForgeTags.DOUGH)

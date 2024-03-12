@@ -20,6 +20,13 @@
                 "type": "forge:mod_loaded",
                 "modid": "farmersrespite"
               }
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:mod_loaded",
+                "modid": "youkaishomecoming"
+              }
             }
           ]
         }
@@ -36,7 +43,7 @@
             "nbt": "{Potion:\"minecraft:water\"}"
           },
           {
-            "item": "delightful:green_tea_leaf"
+            "tag": "forge:tea_leaves"
           },
           {
             "item": "ecologics:azalea_flower"

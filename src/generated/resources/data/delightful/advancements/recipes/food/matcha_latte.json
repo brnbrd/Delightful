@@ -8,9 +8,7 @@
             "conditions": {
               "items": [
                 {
-                  "items": [
-                    "delightful:matcha"
-                  ]
+                  "tag": "forge:matcha"
                 }
               ]
             },
@@ -38,24 +36,8 @@
       },
       "conditions": [
         {
-          "type": "forge:and",
-          "values": [
-            {
-              "type": "delightful:enabled",
-              "value": "matcha_latte"
-            },
-            {
-              "type": "delightful:enabled",
-              "value": "matcha"
-            },
-            {
-              "type": "forge:not",
-              "value": {
-                "type": "forge:mod_loaded",
-                "modid": "farmersrespite"
-              }
-            }
-          ]
+          "type": "delightful:enabled",
+          "value": "matcha_latte"
         }
       ]
     }

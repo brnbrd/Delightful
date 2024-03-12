@@ -1,0 +1,47 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "azalea_tea",
+              "type": "delightful:enabled"
+            },
+            {
+              "item": "ecologics:azalea_flower",
+              "type": "forge:item_exists"
+            },
+            {
+              "modid": "youkaishomecoming",
+              "type": "forge:mod_loaded"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
+      "recipe":
+      {
+        "type": "youkaishomecoming:kettle",
+        "container": {
+          "item": "minecraft:glass_bottle"
+        },
+        "cookingtime": 200,
+        "experience": 0.35,
+        "ingredients": [
+          {
+            "tag": "forge:tea_leaves"
+          },
+          {
+            "item": "ecologics:azalea_flower"
+          }
+        ],
+        "recipe_book_tab": "drinks",
+        "result": {
+          "item": "delightful:azalea_tea"
+        }
+      }
+    }
+  ]
+}

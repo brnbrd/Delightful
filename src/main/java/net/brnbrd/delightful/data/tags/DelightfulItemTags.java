@@ -28,6 +28,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> GUMMIES = Util.it("collectorsreap", "gummies");
 
 	// Forge
+	public static final TagKey<Item> MATCHA = forge("matcha");
 	public static final TagKey<Item> TOOLS_SCAVENGING = forge("tools/scavenging");
 	public static final TagKey<Item> TOOLS_MACHETES = forge("tools/machetes");
 	public static final TagKey<Item> DOUGH_CORN = forge("dough/corn");

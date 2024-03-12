@@ -1,0 +1,50 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "values": [
+            {
+              "value": "lavender_tea",
+              "type": "delightful:enabled"
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:lavender"
+              }
+            },
+            {
+              "modid": "youkaishomecoming",
+              "type": "forge:mod_loaded"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
+      "recipe":
+      {
+        "type": "youkaishomecoming:kettle",
+        "container": {
+          "item": "minecraft:glass_bottle"
+        },
+        "cookingtime": 200,
+        "experience": 0.35,
+        "ingredients": [
+          {
+            "tag": "forge:tea_leaves"
+          },
+          {
+            "tag": "forge:lavender"
+          }
+        ],
+        "recipe_book_tab": "drinks",
+        "result": {
+          "item": "delightful:lavender_tea"
+        }
+      }
+    }
+  ]
+}
