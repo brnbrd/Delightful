@@ -1,4 +1,4 @@
-// 1.20.1	2024-03-12T13:24:36.6859165	Recipes
+// 1.20.1	2024-03-12T13:55:26.5058027	Recipes
 6c217dd6477efa10f6042809ba959d53036ab5e2 data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 5b82f87851220644287d771121677deac66b3b89 data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
 cf29033c1c919355c261025df529938e6ebc73f8 data/delightful/advancements/recipes/campfire/cactus_steak.json
@@ -170,7 +170,7 @@ d0505d91081ce5073207fb1de6d70dd345850a9b data/delightful/recipes/food/cooking/en
 0c749dc1e0be103ca712eb954b2d760237d787b8 data/delightful/recipes/food/cooking/glow_jelly_bottle.json
 35cbdd330d7f7b01d9f5260f8dfbabd0fadf58d3 data/delightful/recipes/food/cooking/jelly_bottle.json
 bc2568adede6c6b1ef62407596548e7737eca2a6 data/delightful/recipes/food/cooking/nut_butter_bottle.json
-61a9b4037ac256852aedd8aa3451a50ecba8d7f9 data/delightful/recipes/food/cooking/nut_milk.json
+58863747b620e592f65a1b47527b923264a88237 data/delightful/recipes/food/cooking/nut_milk.json
 e29dba697d49ba3248a05fa6e619eab449388e65 data/delightful/recipes/food/cooking/rock_candy.json
 8e8f4c05cd506f628f720c9d1f04d8e5ac73ef23 data/delightful/recipes/food/cooking/sinigang.json
 4390c27de92c89b8a46363fbf21f7d5025b44c86 data/delightful/recipes/food/cooking/sinigang_no_ginger_citrus.json

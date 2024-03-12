@@ -427,8 +427,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .unlockedBy("has_cooked_crab", has(DelightfulItemTags.CRAB_MEAT)),
             "food/cooking/crab_rangoon_from_milk", finished, enabled("crab_rangoon"), not(tagEmpty(DelightfulItemTags.CRAB_MEAT)), tagEmpty(DelightfulItemTags.CHEESES));
         wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-                    Items.MILK_BUCKET, 1, CookingRecipes.NORMAL_COOKING, 0.35F, Items.BUCKET)
-                .addIngredient(DelightfulItemTags.WATER)
+                    Items.MILK_BUCKET, 1, CookingRecipes.NORMAL_COOKING, 0.35F, Items.WATER_BUCKET)
                 .addIngredient(DelightfulItemTags.NUTS)
                 .addIngredient(DelightfulItemTags.NUTS)
                 .addIngredient(DelightfulItemTags.SUGAR)

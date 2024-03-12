@@ -11,6 +11,10 @@
               "value": "nut_milk"
             },
             {
+              "type": "forge:item_exists",
+              "item": "aether:skyroot_bucket"
+            },
+            {
               "type": "forge:not",
               "value": {
                 "type": "forge:mod_loaded",
@@ -23,7 +27,7 @@
       "recipe": {
         "type": "farmersdelight:cooking",
         "container": {
-          "item": "minecraft:water_bucket"
+          "item": "aether:skyroot_water_bucket"
         },
         "cookingtime": 200,
         "experience": 0.35,
@@ -39,7 +43,7 @@
           }
         ],
         "result": {
-          "item": "minecraft:milk_bucket"
+          "item": "aether:skyroot_milk_bucket"
         }
       }
     }
