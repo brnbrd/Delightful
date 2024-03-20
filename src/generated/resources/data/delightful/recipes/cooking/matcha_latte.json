@@ -9,17 +9,15 @@
         }
       ],
       "recipe": {
-        "type": "minecraft:crafting_shapeless",
-        "category": "misc",
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:honey_bottle"
+        },
+        "cookingtime": 100,
+        "experience": 0.35,
         "ingredients": [
           {
-            "item": "minecraft:glass_bottle"
-          },
-          {
             "tag": "forge:milk"
-          },
-          {
-            "item": "minecraft:honey_bottle"
           },
           {
             "tag": "forge:matcha"

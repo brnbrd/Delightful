@@ -27,8 +27,11 @@ public class FurnaceFuelItem extends DItem {
   @Override
   public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> comps, @NotNull TooltipFlag pIsAdvanced) {
     if (this.enabled()) {
-      comps.add(Component.literal("Sneak Right Click:").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.UNDERLINE));
-      comps.add(Component.literal("Applies " + (this.fuelTime / 20) + "s of burn time"));
+      comps.add(Component.translatable("tooltip.sneak_right").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.UNDERLINE));
+      comps.add(
+        Component.literal(String.valueOf(this.fuelTime / 20)).withStyle(ChatFormatting.YELLOW)
+          .append(Component.translatable("tooltip.furnace_fuel_burn_time").withStyle(ChatFormatting.WHITE))
+      );
     }
     super.appendHoverText(stack, level, comps, pIsAdvanced);
   }
@@ -41,8 +44,10 @@ public class FurnaceFuelItem extends DItem {
   }
 
   public static InteractionResult useFuel(ItemStack stack, BlockEntity entity, Player player) {
-    if (stack.getItem() instanceof FurnaceFuelItem fuel &&
-      entity instanceof AbstractFurnaceBlockEntity furnace) {
+    if (
+      stack.getItem() instanceof FurnaceFuelItem fuel &&
+      entity instanceof AbstractFurnaceBlockEntity furnace
+    ) {
       ContainerData data = furnace.dataAccess;
       int newTime = data.get(0) + fuel.fuelTime + 1;
       data.set(0, newTime);

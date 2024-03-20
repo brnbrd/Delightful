@@ -36,6 +36,7 @@
   "delightful.animal_fat.desc": "通过对一只富含脂肪的动物动刀可能掉落。",
   "delightful.animal_oil_bottle.desc": "可在任意熔炼炉上使用，能烧制两个物品。",
   "delightful.cantaloupe.desc": "可在海滩类生物群系中找到。",
+  "delightful.cantaloupe_seeds.desc": "Cantaloupe Seeds will sprout when planted in sand.",
   "delightful.green_tea_leaf.desc": "使用刀破坏任意树叶可能获得。",
   "delightful.matcha.desc": "绿茶粉",
   "delightful.mini_melon.desc": "可在平原类生物群系中找到。可以长成大西瓜，也可用刀切片。",
@@ -162,6 +163,7 @@
   "item.delightful.thyrium_knife": "鍪银刀",
   "item.delightful.tin_knife": "锡刀",
   "item.delightful.utherium_knife": "御腐刀",
+  "item.delightful.valkyrum_knife": "Valkyrum Knife",
   "item.delightful.venison_chops": "生鹿排",
   "item.delightful.veridium_knife": "维蓝铁刀",
   "item.delightful.warden_knife": "监守者刀",
@@ -169,6 +171,8 @@
   "item.delightful.zanite_knife": "紫金石刀",
   "item.delightful.zinc_knife": "锌刀",
   "tooltip.config_disabled": "已禁用",
+  "tooltip.furnace_fuel_burn_time": "s of burn time",
   "tooltip.requires_modid": "需安装模组：",
-  "tooltip.requires_tag": "需要包含此标签的物品："
+  "tooltip.requires_tag": "需要包含此标签的物品：",
+  "tooltip.sneak_right": "Sneak R-Click for:"
 }

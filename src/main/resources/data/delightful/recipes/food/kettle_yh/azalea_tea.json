@@ -4,25 +4,33 @@
     {
       "conditions": [
         {
+          "type": "forge:and",
           "values": [
             {
-              "value": "azalea_tea",
-              "type": "delightful:enabled"
+              "type": "delightful:enabled",
+              "value": "azalea_tea"
             },
             {
-              "item": "ecologics:azalea_flower",
-              "type": "forge:item_exists"
+              "type": "forge:or",
+              "values": [
+                {
+                  "type": "forge:mod_loaded",
+                  "modid": "ecologics"
+                },
+                {
+                  "type": "forge:mod_loaded",
+                  "modid": "twigs"
+                }
+              ]
             },
             {
-              "modid": "youkaishomecoming",
-              "type": "forge:mod_loaded"
+              "type": "forge:mod_loaded",
+              "modid": "youkaishomecoming"
             }
-          ],
-          "type": "forge:and"
+          ]
         }
       ],
-      "recipe":
-      {
+      "recipe": {
         "type": "youkaishomecoming:kettle",
         "container": {
           "item": "minecraft:glass_bottle"
@@ -34,7 +42,10 @@
             "tag": "forge:tea_leaves"
           },
           {
-            "item": "ecologics:azalea_flower"
+            "tag": "minecraft:flowers/azalea"
+          },
+          {
+            "tag": "minecraft:flowers/azalea"
           }
         ],
         "recipe_book_tab": "drinks",

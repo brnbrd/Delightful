@@ -4,21 +4,30 @@
     {
       "conditions": [
         {
+          "type": "forge:and",
           "values": [
             {
-              "value": "azalea_tea",
-              "type": "delightful:enabled"
+              "type": "delightful:enabled",
+              "value": "azalea_tea"
             },
             {
-              "item": "ecologics:azalea_flower",
-              "type": "forge:item_exists"
+              "type": "forge:or",
+              "values": [
+                {
+                  "type": "forge:mod_loaded",
+                  "modid": "ecologics"
+                },
+                {
+                  "type": "forge:mod_loaded",
+                  "modid": "twigs"
+                }
+              ]
             },
             {
-              "modid": "farmersrespite",
-              "type": "forge:mod_loaded"
+              "type": "forge:mod_loaded",
+              "modid": "farmersrespite"
             }
-          ],
-          "type": "forge:and"
+          ]
         }
       ],
       "recipe":
@@ -34,7 +43,10 @@
             "tag": "forge:tea_leaves"
           },
           {
-            "item": "ecologics:azalea_flower"
+            "tag": "minecraft:flowers/azalea"
+          },
+          {
+            "tag": "minecraft:flowers/azalea"
           }
         ],
         "needwater": true,

@@ -36,15 +36,16 @@
   "delightful.animal_fat.desc": "Can be scavenged from some dead animals.",
   "delightful.animal_oil_bottle.desc": "Use on any furnace for a small amount of heat.",
   "delightful.cantaloupe.desc": "Cantaloupes can be commonly found on beaches.",
+  "delightful.cantaloupe_seeds.desc": "Cantaloupe Seeds will sprout when planted in sand.",
   "delightful.green_tea_leaf.desc": "Get lucky using a Knife on any Leaves block.",
   "delightful.matcha.desc": "Green Tea Powder",
   "delightful.mini_melon.desc": "Mini Melons can be commonly found in plains. Can grow into a big Melon or be sliced with a Knife.",
   "delightful.placeable.desc": "Placeable",
   "delightful.salmonberries.desc": "Salmonberries can be commonly found as a wild plant in forests.",
   "delightful.sliceable.desc": "Can be sliced with a Knife.",
-  "farmersdelight.tooltip.berry_matcha_latte": "Healthy",
+  "farmersdelight.tooltip.berry_matcha_latte": "Minor Instant Health",
   "farmersdelight.tooltip.ender_nectar": "Otherworldly",
-  "farmersdelight.tooltip.matcha_latte": "Healthy",
+  "farmersdelight.tooltip.matcha_latte": "Minor Instant Health",
   "farmersdelight.tooltip.sinigang": "Sour Fish Stew",
   "item.delightful.acorn": "Acorn",
   "item.delightful.adamantium_knife": "Adamantium Knife",
@@ -170,6 +171,8 @@
   "item.delightful.zanite_knife": "Zanite Knife",
   "item.delightful.zinc_knife": "Zinc Knife",
   "tooltip.config_disabled": "Disabled",
+  "tooltip.furnace_fuel_burn_time": "s of burn time",
   "tooltip.requires_modid": "Requires modid:",
-  "tooltip.requires_tag": "Requires non-empty tag:"
+  "tooltip.requires_tag": "Requires non-empty tag:",
+  "tooltip.sneak_right": "Sneak R-Click for:"
 }

@@ -11,8 +11,17 @@
               "value": "azalea_tea"
             },
             {
-              "type": "forge:item_exists",
-              "item": "ecologics:azalea_flower"
+              "type": "forge:or",
+              "values": [
+                {
+                  "type": "forge:mod_loaded",
+                  "modid": "ecologics"
+                },
+                {
+                  "type": "forge:mod_loaded",
+                  "modid": "twigs"
+                }
+              ]
             },
             {
               "type": "forge:not",
@@ -46,7 +55,10 @@
             "tag": "forge:tea_leaves"
           },
           {
-            "item": "ecologics:azalea_flower"
+            "tag": "minecraft:flowers/azalea"
+          },
+          {
+            "tag": "minecraft:flowers/azalea"
           }
         ],
         "result": {

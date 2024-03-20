@@ -360,6 +360,11 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Util.rl("fruitsdelight", "hamimelon_seeds"));
 
 		// Minecraft
+		tag(ItemTags.SMALL_FLOWERS)
+			.addTag(DelightfulItemTags.FLOWERS_AZALEA);
+		tag(DelightfulItemTags.FLOWERS_AZALEA)
+			.addOptional(Util.rl(Mods.ECO, "azalea_flower"))
+			.addOptional(Util.rl("twigs", "azalea_flowers"));
 		tag(ItemTags.FOX_FOOD)
 			.addTag(DelightfulItemTags.FRUITS_SALMONBERRIES);
 		tag(ItemTags.SMALL_FLOWERS)

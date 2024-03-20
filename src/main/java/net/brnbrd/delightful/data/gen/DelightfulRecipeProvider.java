@@ -9,6 +9,7 @@ import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.ICompat;
 import net.brnbrd.delightful.common.item.knife.DelightfulKnifeItem;
 import net.brnbrd.delightful.common.item.knife.Knives;
+import net.brnbrd.delightful.compat.Mods;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.data.PackOutput;
@@ -179,45 +180,30 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .addIngredient(Ingredient.of(DelightfulItemTags.TEA_LEAVES_GREEN), 2)
                 .unlockedBy("has_green_tea_leaves", has(DelightfulItemTags.TEA_LEAVES_GREEN)),
             "cooking/green_tea_leaves", finished, enabled("matcha"), not(tagEmpty(DelightfulItemTags.TEA_LEAVES_GREEN)), not(modLoaded("youkaishomecoming")));
-        wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.MATCHA_LATTE.get(), 1)
-                .requires(Items.GLASS_BOTTLE)
-                .requires(ForgeTags.MILK)
-                .requires(Items.HONEY_BOTTLE)
-                .requires(DelightfulItemTags.MATCHA)
+        wrap(CookingPotRecipeBuilder.cookingPotRecipe(
+                    DelightfulItems.MATCHA_LATTE.get(), 1, CookingRecipes.FAST_COOKING, 0.35F, Items.HONEY_BOTTLE)
+                .addIngredient(Ingredient.of(ForgeTags.MILK))
+                .addIngredient(Ingredient.of(DelightfulItemTags.MATCHA))
                 .unlockedBy("has_matcha", has(DelightfulItemTags.MATCHA)),
-            "food/matcha_latte", finished, enabled("matcha_latte"));
+            "cooking/matcha_latte", finished, enabled("matcha_latte"));
         wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.BERRY_MATCHA_LATTE.get(), 1)
                 .requires(Items.GLASS_BOTTLE)
-                .requires(ForgeTags.BERRIES)
-                .requires(DelightfulItemTags.ICE_CUBES)
-                .requires(ForgeTags.MILK)
                 .requires(Items.HONEY_BOTTLE)
+                .requires(ForgeTags.MILK)
                 .requires(DelightfulItemTags.MATCHA)
-                .unlockedBy("has_matcha", has(DelightfulItemTags.MATCHA)),
-            "food/berry_matcha_latte_neapolitan", finished, not(tagEmpty(DelightfulItemTags.ICE_CUBES)), enabled("berry_matcha_latte"));
-        wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.BERRY_MATCHA_LATTE.get(), 1)
-                .requires(Items.GLASS_BOTTLE)
                 .requires(ForgeTags.BERRIES)
                 .requires(Items.ICE)
-                .requires(ForgeTags.MILK)
-                .requires(Items.HONEY_BOTTLE)
-                .requires(DelightfulItemTags.MATCHA)
                 .unlockedBy("has_matcha", has(DelightfulItemTags.MATCHA)),
-            "food/berry_matcha_latte", finished, enabled("berry_matcha_latte"));
+            "food/berry_matcha_latte", finished, enabled("berry_matcha_latte"), tagEmpty(DelightfulItemTags.ICE_CUBES));
         wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.BERRY_MATCHA_LATTE.get(), 1)
                 .requires(Items.GLASS_BOTTLE)
-                .requires(DelightfulItems.MATCHA_LATTE.get())
+                .requires(Items.HONEY_BOTTLE)
+                .requires(ForgeTags.MILK)
+                .requires(DelightfulItemTags.MATCHA)
                 .requires(ForgeTags.BERRIES)
                 .requires(DelightfulItemTags.ICE_CUBES)
-                .unlockedBy("has_matcha_latte", has(DelightfulItems.MATCHA_LATTE.get())),
-            "food/berry_matcha_latte_from_matcha_latte_neapolitan", finished, not(tagEmpty(DelightfulItemTags.ICE_CUBES)), enabled("berry_matcha_latte"), enabled("matcha_latte"));
-        wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.BERRY_MATCHA_LATTE.get(), 1)
-                .requires(Items.GLASS_BOTTLE)
-                .requires(DelightfulItems.MATCHA_LATTE.get())
-                .requires(ForgeTags.BERRIES)
-                .requires(Items.ICE)
-                .unlockedBy("has_matcha_latte", has(DelightfulItems.MATCHA_LATTE.get())),
-            "food/berry_matcha_latte_from_matcha_latte", finished, tagEmpty(DelightfulItemTags.ICE_CUBES), enabled("berry_matcha_latte"), enabled("matcha_latte"));
+                .unlockedBy("has_matcha", has(DelightfulItemTags.MATCHA)),
+            "food/berry_matcha_latte_neapolitan", finished, enabled("berry_matcha_latte"), not(tagEmpty(DelightfulItemTags.ICE_CUBES)));
         wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.FIELD_SALAD.get(), 1)
                 .requires(Items.BOWL)
                 .requires(Ingredient.of(ForgeTags.SALAD_INGREDIENTS), 2)
@@ -349,7 +335,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             "food/cooking/rock_candy", finished, enabled(DelightfulItems.ROCK_CANDY), not(tagEmpty(DelightfulItemTags.GEMS_ROSE_QUARTZ)));
         wrap(CookingPotRecipeBuilder.cookingPotRecipe(
             DelightfulItems.ANIMAL_OIL_BOTTLE.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
-                .addIngredient(DelightfulItems.ANIMAL_FAT.get(), 2)
+                .addIngredient(DelightfulItems.ANIMAL_FAT.get(), 3)
                 .unlockedBy("has_animal_fat", has(DelightfulItems.ANIMAL_FAT.get())),
             "cooking/animal_oil_bottle", finished, enabled("animal_oil_bottle"));
         wrap(CookingPotRecipeBuilder.cookingPotRecipe(

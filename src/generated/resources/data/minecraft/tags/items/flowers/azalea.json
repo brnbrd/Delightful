@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "ecologics:azalea_flower",
+      "required": false
+    },
+    {
+      "id": "twigs:azalea_flowers",
+      "required": false
+    }
+  ]
+}

@@ -88,7 +88,8 @@ public class DelightfulItems {
     public static final RegistryObject<Item> CACTUS_STEAK = registerFood("cactus_steak", Nutrition.CACTUS_STEAK);
     public static final RegistryObject<Item> FIELD_SALAD = registerItem("field_salad", () -> new ConsumableItem((new Item.Properties()).food(Nutrition.FIELD_SALAD).stacksTo(16).craftRemainder(Items.BOWL), true));
     public static final RegistryObject<Item> LAVENDER_TEA = registerItem("lavender_tea", () -> new LavenderTeaItem((new Item.Properties()).food(Nutrition.LAVENDER_TEA).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16), 0.0F, true, false));
-    public static final RegistryObject<Item> AZALEA_TEA = registerItem("azalea_tea", () -> new CompatDrinkItem((new Item.Properties()).food(Nutrition.AZALEA_TEA).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16), 0.0F, true, false, "ecologics"));
+    public static final RegistryObject<Item> AZALEA_TEA = registerItem("azalea_tea",
+        () -> new CompatDrinkItem((new Item.Properties()).food(Nutrition.AZALEA_TEA).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16), 0.0F, true, false, "ecologics", "twigs"));
     public static final RegistryObject<Item> PRICKLY_PEAR_JUICE = registerItem("prickly_pear_juice", () -> new CompatDrinkItem((new Item.Properties()).food(Nutrition.PRICKLY_PEAR_JUICE).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16), 0.0F, true, false, "ecologics"));
     public static final RegistryObject<Item> ENDER_NECTAR = registerItem("ender_nectar", () -> new EnderNectarItem((new Item.Properties()).food(Nutrition.ENDER_NECTAR).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16)));
     public static final RegistryObject<Item> MATCHA_LATTE = registerItem("matcha_latte", () -> new DrinkItem((new Item.Properties()).food(Nutrition.MATCHA_LATTE).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16), 2.0F, true, true));

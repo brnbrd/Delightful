@@ -27,6 +27,9 @@ public class DelightfulItemTags {
 	// Collector's Reap
 	public static final TagKey<Item> GUMMIES = Util.it("collectorsreap", "gummies");
 
+	// Minecraft
+	public static final TagKey<Item> FLOWERS_AZALEA = Util.it("minecraft", "flowers/azalea");
+
 	// Forge
 	public static final TagKey<Item> MATCHA = forge("matcha");
 	public static final TagKey<Item> TOOLS_SCAVENGING = forge("tools/scavenging");

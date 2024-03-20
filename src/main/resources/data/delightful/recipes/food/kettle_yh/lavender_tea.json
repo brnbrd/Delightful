@@ -24,8 +24,7 @@
           "type": "forge:and"
         }
       ],
-      "recipe":
-      {
+      "recipe": {
         "type": "youkaishomecoming:kettle",
         "container": {
           "item": "minecraft:glass_bottle"

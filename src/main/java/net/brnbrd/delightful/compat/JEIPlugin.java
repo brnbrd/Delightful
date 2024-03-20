@@ -69,6 +69,11 @@ public class JEIPlugin implements IModPlugin
                 List.of(Util.gs(DelightfulItems.CANTALOUPE_SLICE), Util.gs(DelightfulItems.CANTALOUPE)),
                 VanillaTypes.ITEM_STACK, Component.translatable(Delightful.MODID + ".cantaloupe.desc").append(" ").append(Component.translatable(Delightful.MODID + ".sliceable.desc")));
         }
+        if (Util.enabled(DelightfulItems.CANTALOUPE_SEEDS)) {
+            registration.addIngredientInfo(
+                Util.gs(DelightfulItems.CANTALOUPE_SEEDS),
+                VanillaTypes.ITEM_STACK, Component.translatable(Delightful.MODID + ".cantaloupe_seeds.desc"));
+        }
         if (Util.enabled(DelightfulItems.ANIMAL_FAT)) {
             registration.addIngredientInfo(Util.gs(DelightfulItems.ANIMAL_FAT), VanillaTypes.ITEM_STACK, Component.translatable(Delightful.MODID + ".animal_fat.desc"));
         }

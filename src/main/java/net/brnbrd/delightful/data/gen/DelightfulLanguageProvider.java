@@ -119,8 +119,8 @@ public class DelightfulLanguageProvider extends LanguageProvider {
         addBlock(DelightfulBlocks.GREEN_APPLE_CRATE, "Green Apple Crate");
         addBlock(DelightfulBlocks.JOSHUA_FRUIT_CRATE, "Joshua Fruit Crate");
         addBlock(DelightfulBlocks.BAOBAB_FRUIT_CRATE, "Baobab Fruit Crate");
-        add("farmersdelight.tooltip.matcha_latte", "Healthy");
-        add("farmersdelight.tooltip.berry_matcha_latte", "Healthy");
+        add("farmersdelight.tooltip.matcha_latte", "Minor Instant Health");
+        add("farmersdelight.tooltip.berry_matcha_latte", "Minor Instant Health");
         add("farmersdelight.tooltip.ender_nectar", "Otherworldly");
         add("farmersdelight.tooltip.sinigang", "Sour Fish Stew");
         add("delightful.matcha.desc", "Green Tea Powder");
@@ -131,11 +131,14 @@ public class DelightfulLanguageProvider extends LanguageProvider {
         add("delightful.salmonberries.desc", "Salmonberries can be commonly found as a wild plant in forests.");
         add("delightful.mini_melon.desc", "Mini Melons can be commonly found in plains. Can grow into a big Melon or be sliced with a Knife.");
         add("delightful.cantaloupe.desc", "Cantaloupes can be commonly found on beaches.");
+        add("delightful.cantaloupe_seeds.desc", "Cantaloupe Seeds will sprout when planted in sand.");
         add("delightful.sliceable.desc", "Can be sliced with a Knife.");
         add("delightful.placeable.desc", "Placeable");
         add("tooltip.config_disabled", "Disabled");
         add("tooltip.requires_tag", "Requires non-empty tag:");
         add("tooltip.requires_modid", "Requires modid:");
+        add("tooltip.sneak_right", "Sneak R-Click for:");
+        add("tooltip.furnace_fuel_burn_time", "s of burn time");
         add("config.jade.plugin_delightful.crop_progress", "Crop Progress");
         add("config.jade.plugin_delightful.pie_icons", "Pie Icons");
     }

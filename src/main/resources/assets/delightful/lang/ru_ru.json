@@ -36,6 +36,7 @@
   "delightful.animal_fat.desc": "Убей жирное животное (Свинья, Корова, Рыба...) при помощи ножа.",
   "delightful.animal_oil_bottle.desc": "Можно использовать (Приседание + нажатием правой кнопкой мыши) по любому рудоплавильному блоку (Печь, Плавильная печь...) для предоставления время горения до двух предметов.",
   "delightful.cantaloupe.desc": "Находится в пляжных биомах.",
+  "delightful.cantaloupe_seeds.desc": "Cantaloupe Seeds will sprout when planted in sand.",
   "delightful.green_tea_leaf.desc": "Сломай блок листвы при помощи ножа.",
   "delightful.matcha.desc": "Измельчённый зелёный чай",
   "delightful.mini_melon.desc": "Находится в равнинных биомах. Вырастает в большой арбуз или нарезается ножом на ломтики (ПКМ).",
@@ -162,6 +163,7 @@
   "item.delightful.thyrium_knife": "Нож из фирии",
   "item.delightful.tin_knife": "Оловянный нож",
   "item.delightful.utherium_knife": "Utherium нож",
+  "item.delightful.valkyrum_knife": "Valkyrum Knife",
   "item.delightful.venison_chops": "Сырые куски оленины",
   "item.delightful.veridium_knife": "Veridium Knife",
   "item.delightful.warden_knife": "Нож стража",
@@ -169,6 +171,8 @@
   "item.delightful.zanite_knife": "Zanite Knife",
   "item.delightful.zinc_knife": "Цинковый нож",
   "tooltip.config_disabled": "Отключено",
+  "tooltip.furnace_fuel_burn_time": "s of burn time",
   "tooltip.requires_modid": "Требуется мод:",
-  "tooltip.requires_tag": "Требует не пустой тег:"
+  "tooltip.requires_tag": "Требует не пустой тег:",
+  "tooltip.sneak_right": "Sneak R-Click for:"
 }

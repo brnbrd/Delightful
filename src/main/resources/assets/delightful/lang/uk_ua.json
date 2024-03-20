@@ -36,6 +36,7 @@
   "delightful.animal_fat.desc": "Шанс отримати використовуючи ніж на жирну тварину (свиню, корову, рибу...).",
   "delightful.animal_oil_bottle.desc": "Може бути використаний на будь-якому плавильному блоці(піч, плавильня..), що забезпечує час для переплавлення двох предметів.",
   "delightful.cantaloupe.desc": "Зустрічається в пляжних біомах.",
+  "delightful.cantaloupe_seeds.desc": "Cantaloupe Seeds will sprout when planted in sand.",
   "delightful.green_tea_leaf.desc": "Шанс отрмати використовуючи ніж на будь-якому блоці листя.",
   "delightful.matcha.desc": "Порошок зеленого чаю",
   "delightful.mini_melon.desc": "Може бути знайдений в рівнинних біомах. Також може вирости в великий кавун або порізаний ножем(ПКМ).",
@@ -162,6 +163,7 @@
   "item.delightful.thyrium_knife": "Тирієвий ніж",
   "item.delightful.tin_knife": "Олов'яний ніж",
   "item.delightful.utherium_knife": "Utherium Knife",
+  "item.delightful.valkyrum_knife": "Valkyrum Knife",
   "item.delightful.venison_chops": "Сирі відбивні з оленини",
   "item.delightful.veridium_knife": "Veridium Knife",
   "item.delightful.warden_knife": "Ніж боронителя",
@@ -169,6 +171,8 @@
   "item.delightful.zanite_knife": "Zanite Knife",
   "item.delightful.zinc_knife": "Цинковий ніж",
   "tooltip.config_disabled": "Відключено",
+  "tooltip.furnace_fuel_burn_time": "s of burn time",
   "tooltip.requires_modid": "Вимагає мод:",
-  "tooltip.requires_tag": "Потрібен непорожній тег:"
+  "tooltip.requires_tag": "Потрібен непорожній тег:",
+  "tooltip.sneak_right": "Sneak R-Click for:"
 }
