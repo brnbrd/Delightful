@@ -1,4 +1,4 @@
-// 1.20.1	2024-03-22T12:11:46.0156228	Item Models: delightful
+// 1.20.1	2024-03-22T14:40:40.7975768	Item Models: delightful
 f9af973b19b45f34017d8db4e6e54de90668031e assets/delightful/models/item/acorn.json
 9b4daf24b0d8e447735c5836d7ab76a3df1b3c1d assets/delightful/models/item/acorn_sack.json
 5d9531a6795e7d2281f99609672d866743329211 assets/delightful/models/item/adamantium_knife.json
@@ -83,6 +83,7 @@ ff23d40528b51e117f75432e3be95029f89471e1 assets/delightful/models/item/matcha.js
 2471e1f71ef27cab17bbbe447665bf7fd739e02c assets/delightful/models/item/matcha_ice_cream.json
 bcc3a4d6799c7f5d26555ca871c235617345d02b assets/delightful/models/item/matcha_ice_cream_block.json
 666c0f5fe17c98c62dd18b48680c1fe343d63deb assets/delightful/models/item/matcha_latte.json
+3de3a208251533a0fe2c90d667fd3a9173acf527 assets/delightful/models/item/matcha_milkshake.json
 7493a07a364f24dc14f541c6ab08d12b1b8157d5 assets/delightful/models/item/mini_melon.json
 1b0fc825ef58b3ec0cc4361b0066cf4361eac64b assets/delightful/models/item/mythril_knife.json
 77cadcbea7b53d1a911d2d2fdd71a8d26e626f07 assets/delightful/models/item/necronium_knife.json
@@ -109,6 +110,7 @@ e8851e8a9cf72237cbcb58703316f012d965c5ae assets/delightful/models/item/salmonber
 faf1a238d449659e09435230101ee18aa1eff0a5 assets/delightful/models/item/salmonberry_gummy.json
 c49aa91484e622afeee4037b2de92bb39519a38f assets/delightful/models/item/salmonberry_ice_cream.json
 6f031907d11b442ff2690b22cef268026b12322a assets/delightful/models/item/salmonberry_ice_cream_block.json
+8f99187e77d0a5af671ca92c5e59b1ab9cec1af0 assets/delightful/models/item/salmonberry_milkshake.json
 956c55adc3284c82244c8c25f6168ba0fd9981e1 assets/delightful/models/item/salmonberry_pie.json
 c85b551a079857106bae590bf01434c23c595a98 assets/delightful/models/item/salmonberry_pie_slice.json
 929deaa04cf179dc86268dc6d88494287c8fc874 assets/delightful/models/item/salmonberry_pips.json

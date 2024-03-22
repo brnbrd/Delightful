@@ -74,7 +74,9 @@ public class DelightfulLanguageProvider extends LanguageProvider {
         addItem(DelightfulItems.STUFFED_CANTALOUPE, "Bowl of Stuffed Cantaloupe");
         addItem(DelightfulItems.MATCHA, "Matcha");
         addItem(DelightfulItems.MATCHA_ICE_CREAM, "Matcha Ice Cream");
+        addItem(DelightfulItems.MATCHA_MILKSHAKE, "Matcha Milkshake");
         addItem(DelightfulItems.SALMONBERRY_ICE_CREAM, "Salmonberry Ice Cream");
+        addItem(DelightfulItems.SALMONBERRY_MILKSHAKE, "Salmonberry Milkshake");
         addItem(DelightfulItems.ACORN, "Acorn");
         addItem(DelightfulItems.ANIMAL_FAT, "Animal Fat");
         addItem(DelightfulItems.ANIMAL_OIL_BOTTLE, "Animal Oil Bottle");

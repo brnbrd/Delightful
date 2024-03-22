@@ -17,6 +17,10 @@ public class DConsumableItem extends ConsumableItem implements IConfigured {
 		super(properties, hasPotionEffectTooltip, hasCustomTooltip);
 	}
 
+	public DConsumableItem(Item.Properties properties) {
+		super(properties, false, false);
+	}
+
 	@Override
 	public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> comps, @NotNull TooltipFlag pIsAdvanced) {
 		if (this.enabledText(comps)) {

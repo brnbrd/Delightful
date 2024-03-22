@@ -231,6 +231,12 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .requires(DelightfulItemTags.SUGAR)
                 .unlockedBy("has_ice", has(Items.ICE)),
             "food/salmonberry_ice_cream_no_neapolitan", finished, enabled("salmonberry_ice_cream"), tagEmpty(DelightfulItemTags.ICE_CUBES));
+        wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.SALMONBERRY_MILKSHAKE.get(), 3)
+                .requires(Items.GLASS_BOTTLE, 3)
+                .requires(DelightfulItems.SALMONBERRY_ICE_CREAM.get())
+                .requires(ForgeTags.MILK)
+                .unlockedBy("has_salmonberry_ice_cream", has(DelightfulItems.SALMONBERRY_ICE_CREAM.get())),
+            "food/salmonberry_milkshake", finished, enabled(DelightfulItems.SALMONBERRY_MILKSHAKE), enabled(DelightfulItems.SALMONBERRY_ICE_CREAM));
         wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.MATCHA_ICE_CREAM.get(), 1)
                 .requires(Items.BOWL)
                 .requires(DelightfulItemTags.MATCHA)
@@ -238,7 +244,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .requires(DelightfulItemTags.ICE_CUBES)
                 .requires(DelightfulItemTags.SUGAR)
                 .unlockedBy("has_ice_cubes", has(DelightfulItemTags.ICE_CUBES)),
-            "food/matcha_ice_cream", finished, enabled("matcha_ice_cream"), not(tagEmpty(DelightfulItemTags.ICE_CUBES)));
+            "food/matcha_ice_cream", finished, enabled(DelightfulItems.MATCHA_ICE_CREAM), not(tagEmpty(DelightfulItemTags.ICE_CUBES)));
         wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.MATCHA_ICE_CREAM.get(), 1)
                 .requires(Items.BOWL)
                 .requires(DelightfulItemTags.MATCHA)
@@ -246,7 +252,13 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .requires(Items.ICE)
                 .requires(DelightfulItemTags.SUGAR)
                 .unlockedBy("has_ice", has(Items.ICE)),
-            "food/matcha_ice_cream_no_neapolitan", finished, enabled("matcha_ice_cream"), tagEmpty(DelightfulItemTags.ICE_CUBES));
+            "food/matcha_ice_cream_no_neapolitan", finished, enabled(DelightfulItems.MATCHA_ICE_CREAM), tagEmpty(DelightfulItemTags.ICE_CUBES));
+        wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.MATCHA_MILKSHAKE.get(), 3)
+                .requires(Items.GLASS_BOTTLE, 3)
+                .requires(DelightfulItems.MATCHA_ICE_CREAM.get())
+                .requires(ForgeTags.MILK)
+                .unlockedBy("has_matcha_ice_cream", has(DelightfulItems.MATCHA_ICE_CREAM.get())),
+            "food/matcha_milkshake", finished, enabled(DelightfulItems.MATCHA_MILKSHAKE), enabled(DelightfulItems.MATCHA_ICE_CREAM));
         wrap(ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, DelightfulItems.SALMONBERRY_PIE.get(), 1)
                 .pattern("###")
                 .pattern("aaa")

@@ -1,0 +1,47 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "delightful:enabled",
+              "value": "matcha_milkshake"
+            },
+            {
+              "type": "delightful:enabled",
+              "value": "matcha_ice_cream"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "minecraft:glass_bottle"
+          },
+          {
+            "item": "minecraft:glass_bottle"
+          },
+          {
+            "item": "minecraft:glass_bottle"
+          },
+          {
+            "item": "delightful:matcha_ice_cream"
+          },
+          {
+            "tag": "forge:milk"
+          }
+        ],
+        "result": {
+          "count": 3,
+          "item": "delightful:matcha_milkshake"
+        }
+      }
+    }
+  ]
+}
