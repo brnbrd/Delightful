@@ -52,7 +52,7 @@ public class DelightfulLanguageProvider extends LanguageProvider {
         addItem(DelightfulItems.LAVENDER_TEA, "Lavender Tea");
         addItem(DelightfulItems.HONEY_GLAZED_WALNUT, "Honey Glazed Walnut");
         addItem(DelightfulItems.MATCHA_LATTE, "Matcha Latte");
-        addItem(DelightfulItems.BERRY_MATCHA_LATTE, "Berry Matcha Latte");
+        addItem(DelightfulItems.BERRY_MATCHA_LATTE, "Iced Berry Matcha Latte");
         addItem(DelightfulItems.GREEN_TEA_LEAF, "Green Tea Leaves");
         addItem(DelightfulItems.SALMONBERRIES, "Salmonberries");
         addItem(DelightfulItems.SALMONBERRY_PIPS, "Salmonberry Pips");
