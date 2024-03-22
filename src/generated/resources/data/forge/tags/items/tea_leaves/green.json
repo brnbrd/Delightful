@@ -4,6 +4,10 @@
     {
       "id": "farmersrespite:green_tea_leaves",
       "required": false
+    },
+    {
+      "id": "croptopia:tea_leaves",
+      "required": false
     }
   ]
 }

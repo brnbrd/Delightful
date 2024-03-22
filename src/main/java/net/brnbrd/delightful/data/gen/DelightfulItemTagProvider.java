@@ -96,8 +96,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		// Forge
 		tag(DelightfulItemTags.LAVENDER)
 			.addOptional(Util.rl(Mods.BOP, "lavender"))
-			.addOptional(Util.rl(Mods.BOP, "tall_lavender"))
-			.addOptional(Util.rl("quark", "lavender_blossom_leaves"));
+			.addOptional(Util.rl(Mods.BOP, "tall_lavender"));
 		tag(DelightfulItemTags.CLOVER)
 			.addOptional(Util.rl(Mods.BOP, "clover"))
 			.addOptional(Util.rl(Mods.TF, "clover_patch"));
@@ -278,12 +277,13 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		tag(ForgeTags.MILK)
 			.addOptional(Util.rl("dracovitadelight", "tribull_milk"))
 			.addOptional(Util.rl(Mods.AE, "skyroot_milk_bucket"));
+		tag(DelightfulItemTags.TEA_LEAVES_GREEN)
+			.add(DelightfulItems.GREEN_TEA_LEAF.get())
+			.addOptional(Util.rl(Mods.FR, "green_tea_leaves"))
+			.addOptional(Util.rl("croptopia", "tea_leaves"));
 		tag(DelightfulItemTags.TEA_LEAVES)
 			.addTag(DelightfulItemTags.TEA_LEAVES_GREEN)
 			.addOptionalTag(Util.rl(Mods.FR, "tea_leaves"));
-		tag(DelightfulItemTags.TEA_LEAVES_GREEN)
-			.add(DelightfulItems.GREEN_TEA_LEAF.get())
-			.addOptional(Util.rl(Mods.FR, "green_tea_leaves"));
 		tag(DelightfulItemTags.RAW_FISHES_KOI)
 			.addOptional(Util.rl("environmental", "koi"))
 			.addOptional(Util.rl("crittersandcompanions", "koi_fish"));

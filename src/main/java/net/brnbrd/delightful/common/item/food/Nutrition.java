@@ -34,7 +34,7 @@ public class Nutrition {
     public static final FoodProperties MATCHA = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.4F)
         .effect(() -> new MobEffectInstance(Mods.getGreenTeaEffect().get(), 100, 0), 1.0F).build();
     public static final FoodProperties ANIMAL_FAT = (new FoodProperties.Builder()).nutrition(1).saturationMod(2.0F).alwaysEat().fast().build();
-    public static final FoodProperties CHOPPED_CLOVER = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.3F).fast().build();
+    public static final FoodProperties CHOPPED_CLOVER = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.35F).fast().build();
     public static final FoodProperties CACTUS_FLESH = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.3F).build();
     public static final FoodProperties CACTUS_STEAK = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.5F).build();
     public static final FoodProperties FIELD_SALAD = (new FoodProperties.Builder()).nutrition(10).saturationMod(0.55F)
