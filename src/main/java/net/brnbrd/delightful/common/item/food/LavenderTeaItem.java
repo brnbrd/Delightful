@@ -1,6 +1,6 @@
 package net.brnbrd.delightful.common.item.food;
 
-import net.brnbrd.delightful.Util;
+import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.tags.TagKey;
@@ -25,16 +25,16 @@ public class LavenderTeaItem extends DrinkItem {
 	}
 
 	public boolean isTag() {
-		TagKey<Item> lavender = Util.it("forge", "lavender");
+		TagKey<Item> lavender = DelightfulItemTags.LAVENDER;
 		ITagManager<Item> tags = ForgeRegistries.ITEMS.tags();
 		return tags != null && tags.isKnownTagName(lavender) && !tags.getTag(lavender).isEmpty();
 	}
 
 	@Override
 	public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> comps, @NotNull TooltipFlag pIsAdvanced) {
-		if (!this.isTag()) {
+		if (super.enabled() && !this.isTag()) {
 			comps.add(Component.translatable("tooltip.requires_tag"));
-			comps.add(Component.literal("forge:lavender").withStyle(ChatFormatting.UNDERLINE));
+			comps.add(Component.literal(DelightfulItemTags.LAVENDER.location().toString()).withStyle(ChatFormatting.UNDERLINE));
 		} else {
 			super.appendHoverText(stack, level, comps, pIsAdvanced);
 		}

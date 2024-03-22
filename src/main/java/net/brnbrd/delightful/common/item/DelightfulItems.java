@@ -8,6 +8,7 @@ import net.brnbrd.delightful.compat.ArsNouveauCompat;
 import net.brnbrd.delightful.compat.BYGCompat;
 import net.brnbrd.delightful.compat.Mods;
 import net.brnbrd.delightful.compat.UndergardenCompat;
+import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
@@ -82,7 +83,7 @@ public class DelightfulItems {
     public static final RegistryObject<Item> COCONUT_CURRY = registerItem("coconut_curry",
         () -> new CoconutCurryItem((new Item.Properties()).food(Nutrition.COCONUT_CURRY).stacksTo(16).craftRemainder(Items.BOWL)));
     public static final RegistryObject<Item> SINIGANG = registerItem("sinigang", () -> new ConsumableItem((new Item.Properties()).food(Nutrition.SINIGANG).craftRemainder(Items.BOWL).stacksTo(16), true, true));
-    public static final RegistryObject<Item> CHOPPED_CLOVER = registerItem("chopped_clover", () -> new ChoppedCloverItem((new Item.Properties()).food(Nutrition.CHOPPED_CLOVER)));
+    public static final RegistryObject<Item> CHOPPED_CLOVER = registerItem("chopped_clover", () -> new TagItem((new Item.Properties()).food(Nutrition.CHOPPED_CLOVER), DelightfulItemTags.CLOVER));
     public static final RegistryObject<Item> CACTUS_FLESH = registerFood("cactus_flesh", Nutrition.CACTUS_FLESH);
     public static final RegistryObject<Item> CACTUS_STEAK = registerFood("cactus_steak", Nutrition.CACTUS_STEAK);
     public static final RegistryObject<Item> FIELD_SALAD = registerItem("field_salad", () -> new ConsumableItem((new Item.Properties()).food(Nutrition.FIELD_SALAD).stacksTo(16).craftRemainder(Items.BOWL), true));
@@ -109,9 +110,9 @@ public class DelightfulItems {
     public static final RegistryObject<Item> COOKED_MARSHMALLOW_STICK = registerFood("cooked_marshmallow_stick", Nutrition.COOKED_MARSHMALLOW_STICK, Items.STICK);
     public static final RegistryObject<Item> SMORE = registerConsumable("smore", Nutrition.SMORE, null, true, false);
     public static final RegistryObject<Item> CRAB_RANGOON = registerItem("crab_rangoon",
-        () -> new CrabRangoonItem(new Item.Properties().food(Nutrition.CRAB_RANGOON)));
+        () -> new TagItem(new Item.Properties().food(Nutrition.CRAB_RANGOON), DelightfulItemTags.CRAB_MEAT));
     public static final RegistryObject<Item> HONEY_GLAZED_WALNUT = registerItem("honey_glazed_walnut",
-        () -> new HoneyGlazedWalnutItem(new Item.Properties().food(Nutrition.HONEY_GLAZED_WALNUT)));
+        () -> new TagItem(new Item.Properties().food(Nutrition.HONEY_GLAZED_WALNUT), DelightfulItemTags.NUTS_WALNUT));
     public static final RegistryObject<Item> VENISON_CHOPS = registerItem("venison_chops",
         () -> new VenisonItem(new Item.Properties().food(Nutrition.VENISON_CHOPS)));
     public static final RegistryObject<Item> COOKED_VENISON_CHOPS = registerItem("cooked_venison_chops",

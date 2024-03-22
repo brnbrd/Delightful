@@ -1,6 +1,5 @@
 package net.brnbrd.delightful.common.item.food;
 
-import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -21,7 +20,7 @@ public class RockCandyItem extends DConsumableItem {
 
 	@Override
 	public boolean enabled() {
-		return this.isTag() && Util.enabled(this);
+		return this.isTag() && super.enabled();
 	}
 
 	public boolean isTag() {
