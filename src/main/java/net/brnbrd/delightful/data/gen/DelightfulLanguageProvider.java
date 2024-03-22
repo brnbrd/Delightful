@@ -112,7 +112,9 @@ public class DelightfulLanguageProvider extends LanguageProvider {
         addBlock(DelightfulBlocks.QUARTZ_CABINET, "Quartz Cabinet");
         addBlock(DelightfulBlocks.BASALT_CABINET, "Basalt Cabinet");
         addBlock(DelightfulBlocks.SALMONBERRY_ICE_CREAM_BLOCK, "Salmonberry Ice Cream Block");
+        addBlock(DelightfulBlocks.SALMONBERRY_MILKSHAKE_CAULDRON, "Salmonberry Milkshake Cauldron");
         addBlock(DelightfulBlocks.MATCHA_ICE_CREAM_BLOCK, "Matcha Ice Cream Block");
+        addBlock(DelightfulBlocks.MATCHA_MILKSHAKE_CAULDRON, "Matcha Milkshake Cauldron");
         addBlock(DelightfulBlocks.ACORN_SACK, "Acorn Sack");
         addBlock(DelightfulBlocks.SALMONBERRY_SACK, "Salmonberry Sack");
         addBlock(DelightfulBlocks.BLUEBERRY_SACK, "Blueberry Sack");

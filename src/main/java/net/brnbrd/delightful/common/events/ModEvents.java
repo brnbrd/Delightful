@@ -1,9 +1,11 @@
 package net.brnbrd.delightful.common.events;
 
 import net.brnbrd.delightful.Util;
+import net.brnbrd.delightful.common.block.DelightfulCauldronInteractions;
 import net.brnbrd.delightful.common.crafting.EnabledCondition;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.IConfigured;
+import net.brnbrd.delightful.compat.Mods;
 import net.brnbrd.delightful.network.DPacketHandler;
 import net.minecraft.world.entity.animal.Chicken;
 import net.minecraft.world.entity.animal.Parrot;
@@ -15,6 +17,7 @@ import net.minecraftforge.common.crafting.CompoundIngredient;
 import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegisterEvent;
@@ -77,6 +80,9 @@ public class ModEvents {
                 DelightfulItems.SALMONBERRY_PIPS.get(),
                 DelightfulItems.CANTALOUPE_SEEDS.get()
             );
+            if (ModList.get().isLoaded(Mods.N)) {
+                DelightfulCauldronInteractions.registerCauldronInteractions();
+            }
         });
     }
 

@@ -75,17 +75,17 @@ public class Nutrition {
         .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 900, 0), 1.0F)
         .effect(() -> new MobEffectInstance(Mods.getCaffeinated().get(), 300, 0), 1.0F).build();
     public static final FoodProperties MATCHA_LATTE = (new FoodProperties.Builder()).alwaysEat().nutrition(6).saturationMod(0.5F)
-        .effect(() -> new MobEffectInstance(Mods.getGreenTeaEffect().get(), 400, 1), 1.0F)
-        .effect(() -> new MobEffectInstance(Mods.getCaffeinated().get(), 1200, 0), 1.0F).build();
+        .effect(() -> new MobEffectInstance(Mods.getGreenTeaEffect().get(), 400, 0), 1.0F)
+        .effect(() -> new MobEffectInstance(Mods.getCaffeinated().get(), 400, 1), 1.0F).build();
     public static final FoodProperties BERRY_MATCHA_LATTE = (new FoodProperties.Builder()).alwaysEat().nutrition(8).saturationMod(0.65F)
-        .effect(() -> new MobEffectInstance(Mods.getGreenTeaEffect().get(), 400, 1), 1.0F)
-        .effect(() -> new MobEffectInstance(Mods.getCaffeinated().get(), 1600, 0), 1.0F).build();
+        .effect(() -> new MobEffectInstance(Mods.getGreenTeaEffect().get(), 400, 0), 1.0F)
+        .effect(() -> new MobEffectInstance(Mods.getCaffeinated().get(), 500, 1), 1.0F).build();
     public static final FoodProperties MATCHA_ICE_CREAM = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.5F)
-        .effect(() -> new MobEffectInstance(Mods.getGreenTeaEffect().get(), 400, 1), 1.0F)
+        .effect(() -> new MobEffectInstance(Mods.getGreenTeaEffect().get(), 500, 0), 1.0F)
         .effect(() -> new MobEffectInstance(Mods.getCaffeinated().get(), 400, 0), 1.0F).build();
     public static final FoodProperties MATCHA_MILKSHAKE = (new FoodProperties.Builder())
         .nutrition(2).saturationMod(1.6F).alwaysEat()
-        .effect(() -> new MobEffectInstance(Mods.getGreenTeaEffect().get(), 200, 1), 1.0F)
+        .effect(() -> new MobEffectInstance(Mods.getGreenTeaEffect().get(), 200, 0), 1.0F)
         .effect(() -> new MobEffectInstance(Mods.getCaffeinated().get(), 300, 0), 1.0F).build();
     public static final FoodProperties SALMONBERRY_ICE_CREAM = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.4F)
         .effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 1200), 1.0F).build();

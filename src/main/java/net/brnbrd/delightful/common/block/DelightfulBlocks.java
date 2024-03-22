@@ -5,6 +5,7 @@ import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.compat.Mods;
 import net.brnbrd.delightful.compat.UndergardenCompat;
+import net.minecraft.core.cauldron.CauldronInteraction;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.*;
@@ -12,6 +13,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -98,6 +100,18 @@ public class DelightfulBlocks {
         () -> new Block(Block.Properties.copy(Blocks.SNOW_BLOCK).mapColor(MapColor.COLOR_ORANGE).strength(0.2F).sound(SoundType.SNOW)));
     public static final RegistryObject<Block> MATCHA_ICE_CREAM_BLOCK = BLOCKS.register("matcha_ice_cream_block",
         () -> new Block(Block.Properties.copy(Blocks.SNOW_BLOCK).mapColor(MapColor.COLOR_LIGHT_GREEN).strength(0.2F).sound(SoundType.SNOW)));
+    public static final RegistryObject<Block> SALMONBERRY_MILKSHAKE_CAULDRON = BLOCKS.register("salmonberry_milkshake_cauldron",
+        () -> new DelightfulMilkshakeCauldronBlock(
+            ModList.get().isLoaded(Mods.N) ?
+                DelightfulCauldronInteractions.SALMONBERRY_MILKSHAKE.map() :
+                CauldronInteraction.newInteractionMap())
+    );
+    public static final RegistryObject<Block> MATCHA_MILKSHAKE_CAULDRON = BLOCKS.register("matcha_milkshake_cauldron",
+        () -> new DelightfulMilkshakeCauldronBlock(
+            ModList.get().isLoaded(Mods.N) ?
+                DelightfulCauldronInteractions.MATCHA_MILKSHAKE.map() :
+                CauldronInteraction.newInteractionMap())
+    );
     public static final RegistryObject<Block> BLUEBERRY_SACK = BLOCKS.register("blueberry_sack",
         () ->  new Block(Block.Properties.copy(Blocks.BLUE_WOOL).strength(.5f).sound(SoundType.WOOL)));
     public static final RegistryObject<Block> CRIMSON_BERRY_SACK = BLOCKS.register("crimson_berry_sack",

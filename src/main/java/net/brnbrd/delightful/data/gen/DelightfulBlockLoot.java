@@ -7,6 +7,7 @@ import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
@@ -162,6 +163,10 @@ public class DelightfulBlockLoot extends BlockLootSubProvider {
         // Ice Cream Blocks
         this.dropSelf(DelightfulBlocks.SALMONBERRY_ICE_CREAM_BLOCK.get());
         this.dropSelf(DelightfulBlocks.MATCHA_ICE_CREAM_BLOCK.get());
+
+        // Milkshake Cauldrons
+        this.dropOther(DelightfulBlocks.SALMONBERRY_MILKSHAKE_CAULDRON.get(), Blocks.CAULDRON);
+        this.dropOther(DelightfulBlocks.MATCHA_MILKSHAKE_CAULDRON.get(), Blocks.CAULDRON);
 
         this.add(DelightfulBlocks.STUFFED_CANTALOUPE_BLOCK.get(), (b) -> {
             LootTable.Builder loot = LootTable.lootTable().withPool(LootPool.lootPool()
