@@ -1,15 +1,23 @@
 {
   "values": [
     {
+      "id": "#forge:chocolates",
+      "required": false
+    },
+    {
+      "id": "#forge:bars/chocolate",
+      "required": false
+    },
+    {
+      "id": "#forge:chocolatebar",
+      "required": false
+    },
+    {
       "id": "neapolitan:chocolate_bar",
       "required": false
     },
     {
       "id": "create:bar_of_chocolate",
-      "required": false
-    },
-    {
-      "id": "#forge:chocolatebar",
       "required": false
     }
   ]

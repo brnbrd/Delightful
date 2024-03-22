@@ -334,11 +334,11 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Util.rl("create", "rose_quartz"));
 		tag(DelightfulItemTags.GEMS_ZANITE).addOptional(Util.rl(Mods.AE, "zanite_gemstone"));
 		tag(DelightfulItemTags.CHOCOLATE)
+			.addOptionalTag(Util.rl("forge", "chocolates"))
+			.addOptionalTag(Util.rl("forge", "bars/chocolate"))
+			.addOptionalTag(Util.rl("forge", "chocolatebar"))
 			.addOptional(Util.rl("neapolitan", "chocolate_bar"))
-			.addOptional(Util.rl("create", "bar_of_chocolate"))
-			.addOptionalTag(Util.rl("forge", "chocolatebar"));
-		tag(DelightfulItemTags.BARS_CHOCOLATE)
-			.addTag(DelightfulItemTags.CHOCOLATE);
+			.addOptional(Util.rl("create", "bar_of_chocolate"));
 		tag(ForgeTags.SALAD_INGREDIENTS)
 			.add(DelightfulItems.CHOPPED_CLOVER.get())
 			.addOptional(Util.rl("babyfat", "water_lettuce"));

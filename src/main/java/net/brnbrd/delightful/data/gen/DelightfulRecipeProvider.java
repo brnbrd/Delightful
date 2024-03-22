@@ -158,14 +158,14 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .requires(DelightfulItems.COOKED_MARSHMALLOW_STICK.get())
                 .requires(ModItems.HONEY_COOKIE.get())
                 .unlockedBy("has_cooked_marshmallow_stick", has(DelightfulItems.COOKED_MARSHMALLOW_STICK.get())),
-            "food/smore", finished, enabled("smore"), tagEmpty(DelightfulItemTags.BARS_CHOCOLATE));
+            "food/smore", finished, enabled("smore"), tagEmpty(DelightfulItemTags.CHOCOLATE));
         wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.SMORE.get())
                 .requires(ModItems.HONEY_COOKIE.get())
-                .requires(DelightfulItemTags.BARS_CHOCOLATE)
+                .requires(DelightfulItemTags.CHOCOLATE)
                 .requires(DelightfulItems.COOKED_MARSHMALLOW_STICK.get())
                 .requires(ModItems.HONEY_COOKIE.get())
                 .unlockedBy("has_cooked_marshmallow_stick", has(DelightfulItems.COOKED_MARSHMALLOW_STICK.get())),
-            "food/smore_from_chocolate", finished, enabled("smore"), not(tagEmpty(DelightfulItemTags.BARS_CHOCOLATE)));
+            "food/smore_from_chocolate", finished, enabled("smore"), not(tagEmpty(DelightfulItemTags.CHOCOLATE)));
         wrap(SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(DelightfulItems.MARSHMALLOW_STICK.get()), RecipeCategory.FOOD,
                     DelightfulItems.COOKED_MARSHMALLOW_STICK.get(), 0.5F, 600)
                 .unlockedBy("has_marshmallow_stick", has(DelightfulItems.MARSHMALLOW_STICK.get())),
@@ -489,18 +489,18 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 
         // Unwrappables
         ConditionalRecipe.builder()
-          .addCondition(not(tagEmpty(DelightfulItemTags.BARS_CHOCOLATE)))
+          .addCondition(not(tagEmpty(DelightfulItemTags.CHOCOLATE)))
           .addRecipe(f -> ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.CHOCOLATE_PIE.get(), 1)
             .pattern("ccc")
             .pattern("mmm")
             .pattern("xOx")
-            .define('c', DelightfulItemTags.BARS_CHOCOLATE)
+            .define('c', DelightfulItemTags.CHOCOLATE)
             .define('m', ForgeTags.MILK)
             .define('x', Items.SUGAR)
             .define('O', ModItems.PIE_CRUST.get())
             .unlockedBy("has_pie_crust", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.PIE_CRUST.get()))
             .save(f))
-          .addCondition(tagEmpty(DelightfulItemTags.BARS_CHOCOLATE))
+          .addCondition(tagEmpty(DelightfulItemTags.CHOCOLATE))
           .addRecipe(f -> ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.CHOCOLATE_PIE.get(), 1)
             .pattern("ccc")
             .pattern("mmm")

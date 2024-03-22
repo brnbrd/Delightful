@@ -7,7 +7,7 @@
           "type": "forge:not",
           "value": {
             "type": "forge:tag_empty",
-            "tag": "forge:bars/chocolate"
+            "tag": "forge:chocolate"
           }
         }
       ],
@@ -19,7 +19,7 @@
             "item": "farmersdelight:pie_crust"
           },
           "c": {
-            "tag": "forge:bars/chocolate"
+            "tag": "forge:chocolate"
           },
           "m": {
             "tag": "forge:milk"
@@ -43,7 +43,7 @@
       "conditions": [
         {
           "type": "forge:tag_empty",
-          "tag": "forge:bars/chocolate"
+          "tag": "forge:chocolate"
         }
       ],
       "recipe": {

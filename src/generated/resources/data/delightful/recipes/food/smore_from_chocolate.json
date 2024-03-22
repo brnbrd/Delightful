@@ -14,7 +14,7 @@
               "type": "forge:not",
               "value": {
                 "type": "forge:tag_empty",
-                "tag": "forge:bars/chocolate"
+                "tag": "forge:chocolate"
               }
             }
           ]
@@ -28,7 +28,7 @@
             "item": "farmersdelight:honey_cookie"
           },
           {
-            "tag": "forge:bars/chocolate"
+            "tag": "forge:chocolate"
           },
           {
             "item": "delightful:cooked_marshmallow_stick"
