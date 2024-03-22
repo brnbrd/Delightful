@@ -215,8 +215,9 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		tag(DelightfulItemTags.FRUITS_GREEN_APPLE)
 			.addOptional(Util.rl(Mods.BYG, BYGCompat.green_apple));
 		tag(DelightfulItemTags.COCONUT).addOptional(Util.rl(Mods.ECO, "coconut_slice"));
-		tag(DelightfulItemTags.NUTS_WALNUT
-		).addOptional(Util.rl(Mods.ECO, "walnut"));
+		tag(DelightfulItemTags.NUTS_WALNUT)
+			.addOptional(Util.rl(Mods.ECO, "walnut"))
+			.addOptional(Util.rl("caupona", "walnut"));
 		tag(DelightfulItemTags.NUTS_PEANUT)
 			.addOptionalTag(Util.rl("forge", "peanut"))
 			.addOptional(Util.rl("sprout", "peanut"));
@@ -253,10 +254,12 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Util.rl("etcetera", "eggple"))
 			.addOptional(Util.rl("naturalist", "tortoise_egg"))
 			.addOptional(Util.rl("naturalist", "alligator_egg"));
-		tag(DelightfulItemTags.CRAB_MEAT)
-			.addOptional(Util.rl(Mods.ECO, "crab_meat"))
+		tag(DelightfulItemTags.CRAB_LEGS)
 			.addOptional(Util.rl("quark", "cooked_crab_leg"))
 			.addOptional(Util.rl("crabbersdelight", "crab_legs"));
+		tag(DelightfulItemTags.CRAB_MEAT)
+			.addTag(DelightfulItemTags.CRAB_LEGS)
+			.addOptional(Util.rl(Mods.ECO, "crab_meat"));
 		tag(DelightfulItemTags.CHEESE)
 			.addOptional(Util.rl("brewinandchewin", "flaxen_cheese_wedge"))
 			.addOptional(Util.rl("farmlife", "tribull_cheese_wedge"))
@@ -291,18 +294,20 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Util.rl("biomemakeover", "cooked_glowfish"))
 			.addOptional(Util.rl("deep_aether", "cooked_aerglow_fish"));
 		tag(DelightfulItemTags.TD_VENISON_RAW)
+			.addOptional(Util.rl(Mods.TF, "raw_venison"))
 			.addOptional(Util.rl("naturalist", "venison"))
 			.addOptional(Util.rl("goodall", "raw_venison"))
-			.addOptional(Util.rl(Mods.TF, "raw_venison"));
+			.addOptional(Util.rl("blue_skies", "venison"));
 		tag(DelightfulItemTags.RAW_VENISON_COMPAT)
 			.addTag(DelightfulItemTags.TD_VENISON_RAW);
 		tag(DelightfulItemTags.RAW_VENISON)
 			.add(DelightfulItems.VENISON_CHOPS.get())
 			.addTag(DelightfulItemTags.RAW_VENISON_COMPAT);
 		tag(DelightfulItemTags.TD_VENISON_COOKED)
+			.addOptional(Util.rl(Mods.TF, "cooked_venison"))
 			.addOptional(Util.rl("naturalist", "cooked_venison"))
 			.addOptional(Util.rl("goodall", "cooked_venison"))
-			.addOptional(Util.rl(Mods.TF, "cooked_venison"));
+			.addOptional(Util.rl("blue_skies", "cooked_venison"));
 		tag(DelightfulItemTags.COOKED_VENISON_COMPAT)
 			.addTag(DelightfulItemTags.TD_VENISON_COOKED);
 		tag(DelightfulItemTags.COOKED_VENISON)

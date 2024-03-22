@@ -1,11 +1,11 @@
 {
   "values": [
     {
-      "id": "ecologics:walnut",
+      "id": "quark:cooked_crab_leg",
       "required": false
     },
     {
-      "id": "caupona:walnut",
+      "id": "crabbersdelight:crab_legs",
       "required": false
     }
   ]

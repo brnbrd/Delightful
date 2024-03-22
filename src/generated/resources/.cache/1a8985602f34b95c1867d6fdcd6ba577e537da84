@@ -1,4 +1,4 @@
-// 1.20.1	2024-03-22T10:28:10.9272857	delightful
+// 1.20.1	2024-03-22T10:39:06.6550123	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -44,7 +44,8 @@ b660f1a0311fc2203d72ff4458a59fc12bbc7db2 data/forge/tags/items/coconut.json
 1c85522976cad2572285f27729fe2cc7a683eeb9 data/forge/tags/items/cooked_goat.json
 e08198559f958b742fad0449e0c6c7f0a3d2df90 data/forge/tags/items/cooked_venison.json
 4363ceab8e6a6fb56dccef3e5c43e4fc66821bab data/forge/tags/items/cooked_venison_compat.json
-75e9eb74f6e31c8e4683fa8370a6ce7bfb60c605 data/forge/tags/items/crab_meat.json
+1f26f8777d393c3369244c78ef4df146d3d8aa4e data/forge/tags/items/crab_legs.json
+5d20ec50cdd02593b25bcd29072d771edc381b17 data/forge/tags/items/crab_meat.json
 79aa6e03ceec8b193a2bfefaf428f190753919d5 data/forge/tags/items/crops/beetroot.json
 16e62cef94c91d948c32ce45821f8343159c416a data/forge/tags/items/crops/carrot.json
 ce0cca03b997a0f5c8225b24a328f87ad007c76a data/forge/tags/items/crops/ginger.json
@@ -112,7 +113,7 @@ cf117be3f8853ef5f7d2b40c16edbf1eae3951f2 data/forge/tags/items/milk.json
 6af11aa5504f33d9e620a7cb9b7bc797476c0a7f data/forge/tags/items/nuts/acorn.json
 94b6847f07f6f126dce1fd83b01efdf67a2ffab7 data/forge/tags/items/nuts/chestnut.json
 644b6ccf5403a61798b058d669d7db51a1efd45d data/forge/tags/items/nuts/peanut.json
-f68eda2d82738cd84af2fb721e59b68d26022945 data/forge/tags/items/nuts/walnut.json
+5e0143ff80e69f935e44dddd3a10b00c21aa5fa2 data/forge/tags/items/nuts/walnut.json
 ee2dbf7530a3cdf527e59df08faf3be1c49589ed data/forge/tags/items/nut_butter.json
 19cf4aa8419c259ce95e1f5d24a0534a73acf0e1 data/forge/tags/items/raw_fishes.json
 7a3289909b879db8b0b7b764c7a4735a44546b3c data/forge/tags/items/raw_fishes/koi.json
@@ -153,8 +154,8 @@ a8f06d7dc1646ce181a8dc82c1d2a179064212a9 data/phantasm/tags/items/void_crystal_b
 e8907bb6383992d824e326f554fcbab430f7e5ce data/sereneseasons/tags/items/summer_crops.json
 cbd47de368751306e7d7f0cfb8054fc816b1695d data/some_assembly_required/tags/items/burger_bun.json
 5ca5c9750568ae0343de46dc7bae0316ddffd566 data/spirit/tags/items/soul_steel_mainhand.json
-32dc374a8a29e1eafe41f59d25780cf9b6a73a23 data/twilightdelight/tags/items/venison_cooked.json
-b3c3ae85086d0f800b8a3c26e29bf569b1a13f99 data/twilightdelight/tags/items/venison_raw.json
+ec26eac8c439e33b61bbe3145d045e07d28907c9 data/twilightdelight/tags/items/venison_cooked.json
+6b8423b41b301028dafaa49f2d608194b47373ea data/twilightdelight/tags/items/venison_raw.json
 7c3909099c341f706262b4b4f435f526fb1dd27a data/undergarden/tags/items/cloggrum_items.json
 22b57d1edd6bf7fe04627e0b2bba1a01f62a9a11 data/undergarden/tags/items/forgotten_upgrade_smithing_template.json
 4892cca57979307b755da1e942f5ad115fe6e9d6 data/undergarden/tags/items/froststeel_items.json
