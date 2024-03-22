@@ -20,7 +20,7 @@ public class VenisonItem extends DItem {
 
 	@Override
 	public boolean enabled() {
-		return super.enabled() && !Mods.loaded("twilightdelight") && this.isTag();
+		return !Mods.loaded("twilightdelight") && this.isTag() && super.enabled();
 	}
 
 	public boolean isTag() {
