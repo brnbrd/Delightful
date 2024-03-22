@@ -494,7 +494,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .define('s', Blocks.SNOW_BLOCK)
                 .define('i', DelightfulItems.SALMONBERRY_ICE_CREAM.get())
                 .unlockedBy("has_salmonberry_ice_cream", has(DelightfulItems.SALMONBERRY_ICE_CREAM.get())),
-            "salmonberry_ice_cream_block", finished, enabled(DelightfulItems.SALMONBERRY_ICE_CREAM_BLOCK), enabled(DelightfulItems.SALMONBERRY_ICE_CREAM), modLoaded("neapolitan"));
+            "salmonberry_ice_cream_block", finished, enabled(DelightfulItems.SALMONBERRY_ICE_CREAM_BLOCK), enabled(DelightfulItems.SALMONBERRY_ICE_CREAM), modLoaded(Mods.N));
         wrap(shaped(RecipeCategory.BUILDING_BLOCKS, DelightfulItems.MATCHA_ICE_CREAM_BLOCK, 8)
                 .pattern("sss")
                 .pattern("sis")
@@ -502,7 +502,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .define('s', Blocks.SNOW_BLOCK)
                 .define('i', DelightfulItems.MATCHA_ICE_CREAM.get())
                 .unlockedBy("has_matcha_ice_cream", has(DelightfulItems.MATCHA_ICE_CREAM.get())),
-            "matcha_ice_cream_block", finished, enabled(DelightfulItems.MATCHA_ICE_CREAM_BLOCK), enabled(DelightfulItems.MATCHA_ICE_CREAM), enabled("matcha"), modLoaded("neapolitan"));
+            "matcha_ice_cream_block", finished, enabled(DelightfulItems.MATCHA_ICE_CREAM_BLOCK), enabled(DelightfulItems.MATCHA_ICE_CREAM), enabled(DelightfulItems.MATCHA), modLoaded(Mods.N));
 
         // Unwrappables
         ConditionalRecipe.builder()

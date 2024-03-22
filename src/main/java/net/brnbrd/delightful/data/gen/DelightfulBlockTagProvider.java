@@ -94,6 +94,9 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 			.add(DelightfulBlocks.NIGHTSHADE_BERRY_SACK.get());
 		this.tag(BlockTags.SMALL_FLOWERS)
 			.add(DelightfulBlocks.WILD_SALMONBERRIES.get());
+		this.tag(BlockTags.CAULDRONS)
+			.add(DelightfulBlocks.SALMONBERRY_MILKSHAKE_CAULDRON.get())
+			.add(DelightfulBlocks.MATCHA_MILKSHAKE_CAULDRON.get());
 
 		// Serene Seasons
 		this.tag(DelightfulBlockTags.SUMMER_CROPS)

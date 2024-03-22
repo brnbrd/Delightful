@@ -142,10 +142,10 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		tag(DelightfulItemTags.FRUITS_WILD_BERRIES)
 			.addOptional(Util.rl("windswept", "wild_berries"));
 		tag(DelightfulItemTags.FRUITS_STRAWBERRIES)
-			.addOptional(Util.rl("neapolitan", "strawberries"))
-			.addOptional(Util.rl("neapolitan", "white_strawberries"));
+			.addOptional(Util.rl(Mods.N, "strawberries"))
+			.addOptional(Util.rl(Mods.N, "white_strawberries"));
 		tag(DelightfulItemTags.FRUITS_BANANA)
-			.addOptional(Util.rl("neapolitan", "banana"));
+			.addOptional(Util.rl(Mods.N, "banana"));
 		tag(DelightfulItemTags.FRUITS_CHERRY)
 			.addOptional(Util.rl(Mods.FA, "cherry_peach"));
 		tag(ForgeTags.BERRIES)
@@ -350,7 +350,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptionalTag(Util.rl("forge", "chocolates"))
 			.addOptionalTag(Util.rl("forge", "bars/chocolate"))
 			.addOptionalTag(Util.rl("forge", "chocolatebar"))
-			.addOptional(Util.rl("neapolitan", "chocolate_bar"))
+			.addOptional(Util.rl(Mods.N, "chocolate_bar"))
 			.addOptional(Util.rl("create", "bar_of_chocolate"));
 		tag(ForgeTags.SALAD_INGREDIENTS)
 			.add(DelightfulItems.CHOPPED_CLOVER.get())
@@ -531,6 +531,11 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 
 		// Naturalist
 		this.tag(Util.it("naturalist", "bird_food_items")).addTag(Tags.Items.SEEDS);
+
+		// Neapolitan
+		this.tag(Util.it(Mods.N, "ice_cream"))
+			.add(DelightfulItems.MATCHA_ICE_CREAM.get())
+			.add(DelightfulItems.SALMONBERRY_ICE_CREAM.get());
 	}
 
 	/**
