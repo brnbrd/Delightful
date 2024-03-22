@@ -179,7 +179,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                     DelightfulItems.MATCHA.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
                 .addIngredient(Ingredient.of(DelightfulItemTags.TEA_LEAVES_GREEN), 2)
                 .unlockedBy("has_green_tea_leaves", has(DelightfulItemTags.TEA_LEAVES_GREEN)),
-            "cooking/green_tea_leaves", finished, enabled("matcha"), not(tagEmpty(DelightfulItemTags.TEA_LEAVES_GREEN)), not(modLoaded("youkaishomecoming")));
+            "cooking/green_tea_leaves", finished, enabled("matcha"), not(tagEmpty(DelightfulItemTags.TEA_LEAVES_GREEN)), not(modLoaded(Mods.YH)));
         wrap(CookingPotRecipeBuilder.cookingPotRecipe(
                     DelightfulItems.MATCHA_LATTE.get(), 1, CookingRecipes.FAST_COOKING, 0.35F, Items.HONEY_BOTTLE)
                 .addIngredient(Ingredient.of(ForgeTags.MILK))

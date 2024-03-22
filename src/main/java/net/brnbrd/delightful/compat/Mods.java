@@ -37,6 +37,7 @@ public class Mods {
 	public static final String TF = "twilightforest";
 	public static final String UG = "undergarden";
 	public static final String WB = "wildberries";
+	public static final String YH = "youkaishomecoming";
 
 	public static boolean loaded(@NotNull String modid) {
 		return ModList.get().isLoaded(modid);
@@ -90,13 +91,13 @@ public class Mods {
 			if (vitality.isPresent()) {
 				return vitality.get();
 			}
-		} else if (loaded("youkaishomecoming")) {
-			Optional<Holder<MobEffect>> polyphenols = ForgeRegistries.MOB_EFFECTS.getHolder(Util.rl("youkaishomecoming", "tea_polyphenols"));
+		} else if (loaded(Mods.YH)) {
+			Optional<Holder<MobEffect>> polyphenols = ForgeRegistries.MOB_EFFECTS.getHolder(Util.rl(Mods.YH, "tea_polyphenols"));
 			if (polyphenols.isPresent()) {
 				return polyphenols.get();
 			}
 		}
-		return () -> MobEffects.DAMAGE_RESISTANCE;
+		return () -> MobEffects.REGENERATION;
 	}
 
 	public static Supplier<MobEffect> getCaffeinated() {
@@ -105,8 +106,8 @@ public class Mods {
 			if (caffeinated.isPresent()) {
 				return caffeinated.get();
 			}
-		} else if (loaded("youkaishomecoming")) {
-			Optional<Holder<MobEffect>> sober = ForgeRegistries.MOB_EFFECTS.getHolder(Util.rl("youkaishomecoming", "sober"));
+		} else if (loaded(Mods.YH)) {
+			Optional<Holder<MobEffect>> sober = ForgeRegistries.MOB_EFFECTS.getHolder(Util.rl(Mods.YH, "sober"));
 			if (sober.isPresent()) {
 				return sober.get();
 			}
