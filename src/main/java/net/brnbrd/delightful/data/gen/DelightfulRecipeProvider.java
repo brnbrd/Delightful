@@ -423,7 +423,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                     Items.HONEY_BOTTLE, 3, CookingRecipes.NORMAL_COOKING, 0.35F)
                 .addIngredient(Items.HONEY_BOTTLE, 2)
                 .addIngredient(DelightfulItems.CHOPPED_CLOVER.get(), 4),
-            "food/clover_honey", finished, enabled("clover_honey"), modLoaded("biomesoplenty"));
+            "food/clover_honey", finished, enabled("clover_honey"), enabled(DelightfulItems.CHOPPED_CLOVER), not(tagEmpty(DelightfulItemTags.CLOVER)));
         wrap(ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Items.TORCH, 8)
                 .define('o', DelightfulItems.ANIMAL_OIL_BOTTLE.get())
                 .define('s', Tags.Items.RODS_WOODEN)
@@ -439,6 +439,11 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .pattern("f")
                 .unlockedBy("has_fat", has(DelightfulItems.ANIMAL_FAT.get())),
             "candle_from_animal_fat", finished, enabled("animal_fat"));
+        wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
+                Ingredient.of(DelightfulItemTags.CLOVER),
+                Ingredient.of(ForgeTags.TOOLS_KNIVES),
+                DelightfulItems.CHOPPED_CLOVER.get(), 2),
+            "cutting/clover", finished, enabled(DelightfulItems.CHOPPED_CLOVER), not(tagEmpty(DelightfulItemTags.CLOVER)));
         wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
                 Ingredient.of(DelightfulItems.SALMONBERRY_PIE.get()),
                 Ingredient.of(ForgeTags.TOOLS_KNIVES),

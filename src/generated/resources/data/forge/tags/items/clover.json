@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "biomesoplenty:clover",
+      "required": false
+    },
+    {
+      "id": "twilightforest:clover_patch",
+      "required": false
+    }
+  ]
+}

@@ -94,6 +94,12 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.add(DelightfulItems.SALMONBERRY_GUMMY.get());
 
 		// Forge
+		tag(DelightfulItemTags.LAVENDER)
+			.addOptional(Util.rl(Mods.BOP, "lavender"))
+			.addOptional(Util.rl("quark", "lavender_blossom_leaves"));
+		tag(DelightfulItemTags.CLOVER)
+			.addOptional(Util.rl(Mods.BOP, "clover"))
+			.addOptional(Util.rl(Mods.TF, "clover_patch"));
 		tag(DelightfulItemTags.MATCHA)
 			.add(DelightfulItems.MATCHA.get());
 		tag(DelightfulItemTags.DOUGH_CORN)
@@ -105,9 +111,6 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		tag(DelightfulItemTags.TOOLS_SCAVENGING)
 			.addTag(ForgeTags.TOOLS_KNIVES)
 			.addOptionalTag(Util.rl("nethersdelight", "scavenging_tools"));
-		tag(DelightfulItemTags.LAVENDER)
-			.addOptional(Util.rl("biomesoplenty", "lavender"))
-			.addOptional(Util.rl("quark", "lavender_blossom_leaves"));
 		tag(DelightfulItemTags.FRUITS_APPLE).add(Items.APPLE);
 		tag(DelightfulItemTags.FRUITS_MELON).add(Items.MELON_SLICE);
 		tag(DelightfulItemTags.FRUITS_CANTALOUPE).add(DelightfulItems.CANTALOUPE_SLICE.get());

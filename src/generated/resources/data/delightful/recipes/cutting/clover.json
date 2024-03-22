@@ -11,8 +11,11 @@
               "value": "chopped_clover"
             },
             {
-              "type": "forge:item_exists",
-              "item": "biomesoplenty:clover"
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:clover"
+              }
             }
           ]
         }
@@ -21,7 +24,7 @@
         "type": "farmersdelight:cutting",
         "ingredients": [
           {
-            "item": "biomesoplenty:clover"
+            "tag": "forge:clover"
           }
         ],
         "result": [

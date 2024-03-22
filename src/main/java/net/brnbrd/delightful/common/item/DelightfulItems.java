@@ -82,8 +82,7 @@ public class DelightfulItems {
     public static final RegistryObject<Item> COCONUT_CURRY = registerItem("coconut_curry",
         () -> new CoconutCurryItem((new Item.Properties()).food(Nutrition.COCONUT_CURRY).stacksTo(16).craftRemainder(Items.BOWL)));
     public static final RegistryObject<Item> SINIGANG = registerItem("sinigang", () -> new ConsumableItem((new Item.Properties()).food(Nutrition.SINIGANG).craftRemainder(Items.BOWL).stacksTo(16), true, true));
-    public static final RegistryObject<Item> CHOPPED_CLOVER = registerCompatFood("chopped_clover", Nutrition.CHOPPED_CLOVER,
-        Mods.BOP);
+    public static final RegistryObject<Item> CHOPPED_CLOVER = registerItem("chopped_clover", () -> new ChoppedCloverItem((new Item.Properties()).food(Nutrition.CHOPPED_CLOVER)));
     public static final RegistryObject<Item> CACTUS_FLESH = registerFood("cactus_flesh", Nutrition.CACTUS_FLESH);
     public static final RegistryObject<Item> CACTUS_STEAK = registerFood("cactus_steak", Nutrition.CACTUS_STEAK);
     public static final RegistryObject<Item> FIELD_SALAD = registerItem("field_salad", () -> new ConsumableItem((new Item.Properties()).food(Nutrition.FIELD_SALAD).stacksTo(16).craftRemainder(Items.BOWL), true));

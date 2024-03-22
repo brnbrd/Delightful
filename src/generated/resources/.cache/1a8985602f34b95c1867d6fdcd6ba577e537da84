@@ -1,4 +1,4 @@
-// 1.20.1	2024-03-22T10:39:06.6550123	delightful
+// 1.20.1	2024-03-22T11:17:15.7330832	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -37,6 +37,7 @@ cfa01c68f0a165ee8f4cb2ffdf3c84d288224411 data/forge/tags/items/bread_slices.json
 3515355d242e52882e52cf196c32cfd649793047 data/forge/tags/items/cheese.json
 4a8cdc77e14731d7decd9c89def602f12485efd8 data/forge/tags/items/cheeses.json
 60e7e6d1a0a3d75c8428f09ec314b78f674b5f80 data/forge/tags/items/chocolate.json
+e24f8e0af6129550d22a74d26442cef313f8249a data/forge/tags/items/clover.json
 b660f1a0311fc2203d72ff4458a59fc12bbc7db2 data/forge/tags/items/coconut.json
 3bdd3f494645eb479237e608dc388ce706852bca data/forge/tags/items/cooked_fishes.json
 48e602c6f4f273972ce8f4a41af2bf1a7c1e42b5 data/forge/tags/items/cooked_fishes/tuna.json

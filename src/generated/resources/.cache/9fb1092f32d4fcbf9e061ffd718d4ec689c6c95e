@@ -1,4 +1,4 @@
-// 1.20.1	2024-03-22T10:39:06.6570142	Recipes
+// 1.20.1	2024-03-22T11:17:15.7340843	Recipes
 6c217dd6477efa10f6042809ba959d53036ab5e2 data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 5b82f87851220644287d771121677deac66b3b89 data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
 cf29033c1c919355c261025df529938e6ebc73f8 data/delightful/advancements/recipes/campfire/cactus_steak.json
@@ -18,7 +18,7 @@ ca78b65409037d7ee47d64f2b9a0c91704a18461 data/delightful/advancements/recipes/fo
 d98b587d6c1de47315e81ce9692860b8f3d68aa0 data/delightful/advancements/recipes/food/cheeseburger.json
 40dd41d1512133c68c8f6c14e1f2754f7e72d493 data/delightful/advancements/recipes/food/cheeseburger_from_bun.json
 fd900d1ffd4d43d2f8f0df626995bd493293f4f1 data/delightful/advancements/recipes/food/cheeseburger_from_milk.json
-66a6560878220049c96cc9d1774d1c23926555ee data/delightful/advancements/recipes/food/clover_honey.json
+0b6152138648cf1540c60df977fa00703a1164fd data/delightful/advancements/recipes/food/clover_honey.json
 17b4fd952211ac573c199ff8dce265f9a3ee001d data/delightful/advancements/recipes/food/cooking/coconut_curry.json
 44c7615d509a5eb2efd30b1c7f87bea7a26bb232 data/delightful/advancements/recipes/food/cooking/coconut_curry_no_ginger.json
 190593e1da582acc342a6b99b16ed918c9df62fb data/delightful/advancements/recipes/food/cooking/crab_rangoon.json
@@ -148,6 +148,7 @@ f5145dc30bbe16a2ca29995df89fb45235fd3b99 data/delightful/recipes/cooking/green_t
 1b81cd56f336fdc01a31a5ca08a5ddfa8ae84e29 data/delightful/recipes/cooking/matcha_latte.json
 0d5d2333e9578ece744fac84ca2681fba2fcbef3 data/delightful/recipes/cutting/cactus.json
 ef210c25b1a3d2453c0b37c587390bec5d6dadd0 data/delightful/recipes/cutting/cantaloupe.json
+8e0db6a0685710c3fec0ac3134b186f63ab498a8 data/delightful/recipes/cutting/clover.json
 170a8e1f1ce519b51ee4ecd9a1735441b4436724 data/delightful/recipes/cutting/mini_melon.json
 94844bad124bf4c999bd39f9e661e44611b2db92 data/delightful/recipes/cutting/pumpkin_pie.json
 976a72b1df05888cdf33d4446eb42d611d502417 data/delightful/recipes/cutting/salmonberry_pie.json
@@ -158,7 +159,7 @@ ca80e6cc7b48e11d73c5cb27cddab3c1f018fdd9 data/delightful/recipes/food/berry_matc
 d1c03a6bbf9515a1e26e247d5f5094803f818e9e data/delightful/recipes/food/cheeseburger.json
 3f29f25cbb05a99b81d60a8a23da56f4688b3de5 data/delightful/recipes/food/cheeseburger_from_bun.json
 17f0da28753b6c9ab670c4073f8600fd416becfc data/delightful/recipes/food/cheeseburger_from_milk.json
-e4effe42d4c7a98e3a8e6ba29363aa4145107e48 data/delightful/recipes/food/clover_honey.json
+af932ba6149aa4b05bef88fa1460cd058043b9e3 data/delightful/recipes/food/clover_honey.json
 14e41dbe215cb9666d647b5e86ac497315de0015 data/delightful/recipes/food/cooking/coconut_curry.json
 603b5b9a01a4ff2cbd7cd9a3ff5c317d5d9453e9 data/delightful/recipes/food/cooking/coconut_curry_no_ginger.json
 d477e956be82256edca38e3182f03f83c02e93a0 data/delightful/recipes/food/cooking/crab_rangoon.json

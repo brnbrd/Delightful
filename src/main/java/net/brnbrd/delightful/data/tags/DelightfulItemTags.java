@@ -31,11 +31,12 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> FLOWERS_AZALEA = Util.it("minecraft", "flowers/azalea");
 
 	// Forge
+	public static final TagKey<Item> LAVENDER = forge("lavender");
+	public static final TagKey<Item> CLOVER = forge("clover");
 	public static final TagKey<Item> MATCHA = forge("matcha");
 	public static final TagKey<Item> TOOLS_SCAVENGING = forge("tools/scavenging");
 	public static final TagKey<Item> TOOLS_MACHETES = forge("tools/machetes");
 	public static final TagKey<Item> DOUGH_CORN = forge("dough/corn");
-	public static final TagKey<Item> LAVENDER = forge("lavender");
 	public static final TagKey<Item> FRUITS = forge("fruits");
 	public static final TagKey<Item> FRUITS_APPLE = forge("fruits/apple");
 	public static final TagKey<Item> FRUITS_KIWI = forge("fruits/kiwi");

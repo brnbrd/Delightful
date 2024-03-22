@@ -55,7 +55,7 @@ public class DelightfulConfig {
             stuff.put("nut_milk", CRAFT_NUT_MILK);
             COOK_CLOVER_HONEY = builder
               .comment("Allow cooking honey from honey and clovers")
-              .define("clover_honey", true);
+              .define("clover_honey", false);
             stuff.put("clover_honey", COOK_CLOVER_HONEY);
             GIVE_SLICED_DIRECTLY = builder
                 .comment("Give items that are sliced off of blocks directly to player's inventory instead of dropping")
