@@ -5,6 +5,10 @@
       "required": false
     },
     {
+      "id": "biomesoplenty:tall_lavender",
+      "required": false
+    },
+    {
       "id": "quark:lavender_blossom_leaves",
       "required": false
     }

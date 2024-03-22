@@ -96,6 +96,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		// Forge
 		tag(DelightfulItemTags.LAVENDER)
 			.addOptional(Util.rl(Mods.BOP, "lavender"))
+			.addOptional(Util.rl(Mods.BOP, "tall_lavender"))
 			.addOptional(Util.rl("quark", "lavender_blossom_leaves"));
 		tag(DelightfulItemTags.CLOVER)
 			.addOptional(Util.rl(Mods.BOP, "clover"))
