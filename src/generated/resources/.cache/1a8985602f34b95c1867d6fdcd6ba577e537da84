@@ -1,4 +1,4 @@
-// 1.20.1	2024-03-22T11:18:59.0559858	delightful
+// 1.20.1	2024-03-22T11:43:59.6058781	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -115,7 +115,8 @@ cf117be3f8853ef5f7d2b40c16edbf1eae3951f2 data/forge/tags/items/milk.json
 94b6847f07f6f126dce1fd83b01efdf67a2ffab7 data/forge/tags/items/nuts/chestnut.json
 644b6ccf5403a61798b058d669d7db51a1efd45d data/forge/tags/items/nuts/peanut.json
 5e0143ff80e69f935e44dddd3a10b00c21aa5fa2 data/forge/tags/items/nuts/walnut.json
-ee2dbf7530a3cdf527e59df08faf3be1c49589ed data/forge/tags/items/nut_butter.json
+590133215d0e3db746c20780adf419bb44a64295 data/forge/tags/items/nut_butter.json
+a7a8eaefd81f0196c2ad1de9179abc8641a726c5 data/forge/tags/items/peanut_butter.json
 19cf4aa8419c259ce95e1f5d24a0534a73acf0e1 data/forge/tags/items/raw_fishes.json
 7a3289909b879db8b0b7b764c7a4735a44546b3c data/forge/tags/items/raw_fishes/koi.json
 9f462470dc335b8293a9de28fff2b04e59f2b7e6 data/forge/tags/items/raw_fishes/tuna.json

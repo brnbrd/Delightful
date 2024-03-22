@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "thermal:peanut_butter",
+      "required": false
+    },
+    {
+      "id": "croptopia:peanut_butter",
+      "required": false
+    }
+  ]
+}

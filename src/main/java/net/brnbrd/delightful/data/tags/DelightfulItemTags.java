@@ -99,6 +99,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> JELLIES = forge("jellies");
 	public static final TagKey<Item> JAM = forge("jam");
 	public static final TagKey<Item> JAMS = forge("jams");
+	public static final TagKey<Item> PEANUT_BUTTER = forge("peanut_butter");
 	public static final TagKey<Item> NUT_BUTTER = forge("nut_butter");
 	public static final TagKey<Item> RAW_FISHES_KOI = forge("raw_fishes/koi");
 	public static final TagKey<Item> RAW_FISHES_TUNA = forge("raw_fishes/tuna");

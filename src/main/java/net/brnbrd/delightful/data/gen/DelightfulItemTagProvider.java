@@ -248,7 +248,11 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.JAM)
 			.addOptionalTag(Util.rl(Mods.WB, "berry_jams"))
 			.addOptionalTag(Util.rl("vintagedelight", "sweet_jam_bottles"));
+		tag(DelightfulItemTags.PEANUT_BUTTER)
+			.addOptional(Util.rl("thermal", "peanut_butter"))
+			.addOptional(Util.rl("croptopia", "peanut_butter"));
 		tag(DelightfulItemTags.NUT_BUTTER)
+			.addTag(DelightfulItemTags.PEANUT_BUTTER)
 			.add(DelightfulItems.NUT_BUTTER_BOTTLE.get())
 			.addOptional(Util.rl("vintagedelight", "nut_mash_bottle"));
 		tag(DelightfulItemTags.SUGAR).add(Items.SUGAR);
