@@ -1,6 +1,7 @@
 package net.brnbrd.delightful.common.item.food;
 
 import net.brnbrd.delightful.common.item.DItem;
+import net.brnbrd.delightful.compat.Mods;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -19,7 +20,7 @@ public class VenisonItem extends DItem {
 
 	@Override
 	public boolean enabled() {
-		return super.enabled() && this.isTag();
+		return super.enabled() && !Mods.loaded("twilightdelight") && this.isTag();
 	}
 
 	public boolean isTag() {
