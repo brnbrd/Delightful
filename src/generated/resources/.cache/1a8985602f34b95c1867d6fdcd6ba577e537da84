@@ -1,4 +1,4 @@
-// 1.20.1	2024-03-22T11:17:15.7330832	delightful
+// 1.20.1	2024-03-22T11:18:59.0559858	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -90,7 +90,7 @@ d3ac5caff21a72e9cde16be715f916d249db85ef data/forge/tags/items/fruits/sourceberr
 ef58bcce9f0d3d6e68fdc0afe94d732282c43dba data/forge/tags/items/fruits/torchberries.json
 4fbda205b7c5ed3a2d9763485710d97ba308840f data/forge/tags/items/fruits/whitecurrant.json
 d6c74500b2d44fbad3f18f4213772b35ce41a9ca data/forge/tags/items/fruits/wild_berries.json
-adaf54eec1412d48f7620cde4ee0a483dbe56bbb data/forge/tags/items/gems/rose_quartz.json
+3b38cdc0e94694bbb035f70966c704394748acd4 data/forge/tags/items/gems/rose_quartz.json
 78cac37f0ee6dd6b721fa29f42197a86e08ca5ed data/forge/tags/items/gems/skyjade.json
 b3d5bd87cc20e4f6a39f331a575350af129f3bc7 data/forge/tags/items/gems/zanite.json
 1d56151bc106a5979925295ca4d9faeff01dbe6e data/forge/tags/items/ingots/alfsteel.json

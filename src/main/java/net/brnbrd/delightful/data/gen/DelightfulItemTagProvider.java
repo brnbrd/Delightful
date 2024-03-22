@@ -338,7 +338,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Util.rl(Mods.BOP, "cattail"))
 			.addOptional(Util.rl("biomemakeover", "cattail"));
 		tag(DelightfulItemTags.GEMS_ROSE_QUARTZ)
-			.addOptional(Util.rl(Mods.BOP, "rose_quartz_shard"))
+			.addOptional(Util.rl(Mods.BOP, "rose_quartz_chunk"))
 			.addOptional(Util.rl("create", "rose_quartz"));
 		tag(DelightfulItemTags.GEMS_ZANITE).addOptional(Util.rl(Mods.AE, "zanite_gemstone"));
 		tag(DelightfulItemTags.CHOCOLATE)
