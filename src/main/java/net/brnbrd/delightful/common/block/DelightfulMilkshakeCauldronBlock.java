@@ -19,7 +19,7 @@ public class DelightfulMilkshakeCauldronBlock extends LayeredCauldronBlock {
 	public static final Predicate<Biome.Precipitation> FALSE = (precipitation) -> false;
 
 	public DelightfulMilkshakeCauldronBlock(Map<Item, CauldronInteraction> map) {
-		super(Properties.copy(Blocks.CAULDRON).requiresCorrectToolForDrops().noOcclusion(), FALSE, map);
+		super(Properties.copy(Blocks.CAULDRON), FALSE, map);
 	}
 
 	@Override
