@@ -17,7 +17,7 @@
   "soil": {
     "item": "minecraft:dirt"
   },
-  "time": 800,
+  "time": 900,
   "render": {
     "type": "crop",
     "block": "delightful:cantaloupe_plant"

@@ -18,7 +18,7 @@
   "soil": {
     "item": "farmersdelight:rich_soil"
   },
-  "time": 800,
+  "time": 700,
   "render": {
     "type": "crop",
     "block": "delightful:salmonberry_bush"
