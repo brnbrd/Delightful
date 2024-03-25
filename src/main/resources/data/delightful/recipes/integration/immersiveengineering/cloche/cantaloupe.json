@@ -8,12 +8,11 @@
   "type": "immersiveengineering:cloche",
   "results": [
     {
-      "item": "delightful:salmonberries",
-      "count": 3
+      "item": "delightful:cantaloupe"
     }
   ],
   "input": {
-    "item": "delightful:salmonberry_pips"
+    "item": "delightful:cantaloupe_seeds"
   },
   "soil": {
     "item": "minecraft:dirt"
@@ -21,6 +20,6 @@
   "time": 800,
   "render": {
     "type": "crop",
-    "block": "delightful:salmonberry_bush"
+    "block": "delightful:cantaloupe_plant"
   }
 }

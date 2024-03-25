@@ -9,14 +9,14 @@
   "results": [
     {
       "item": "delightful:salmonberries",
-      "count": 3
+      "count": 4
     }
   ],
   "input": {
     "item": "delightful:salmonberry_pips"
   },
   "soil": {
-    "item": "minecraft:dirt"
+    "item": "farmersdelight:rich_soil"
   },
   "time": 800,
   "render": {
