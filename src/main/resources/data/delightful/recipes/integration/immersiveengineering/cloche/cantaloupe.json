@@ -15,7 +15,7 @@
     "item": "delightful:cantaloupe_seeds"
   },
   "soil": {
-    "item": "minecraft:dirt"
+    "item": "minecraft:sand"
   },
   "time": 900,
   "render": {
