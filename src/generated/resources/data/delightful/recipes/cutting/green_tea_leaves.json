@@ -28,19 +28,23 @@
         }
       ],
       "recipe": {
-        "type": "farmersdelight:cooking",
-        "cookingtime": 200,
-        "experience": 0.35,
+        "type": "farmersdelight:cutting",
         "ingredients": [
-          {
-            "tag": "forge:tea_leaves/green"
-          },
           {
             "tag": "forge:tea_leaves/green"
           }
         ],
-        "result": {
-          "item": "delightful:matcha"
+        "result": [
+          {
+            "item": "minecraft:green_dye"
+          },
+          {
+            "chance": 0.4,
+            "item": "delightful:matcha"
+          }
+        ],
+        "tool": {
+          "tag": "forge:tools/shovels"
         }
       }
     }

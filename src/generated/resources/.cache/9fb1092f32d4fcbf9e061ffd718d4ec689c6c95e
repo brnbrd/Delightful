@@ -1,4 +1,4 @@
-// 1.20.1	2024-03-22T15:06:12.1949628	Recipes
+// 1.20.1	2024-03-26T18:46:02.398056	Recipes
 6c217dd6477efa10f6042809ba959d53036ab5e2 data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 5b82f87851220644287d771121677deac66b3b89 data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
 cf29033c1c919355c261025df529938e6ebc73f8 data/delightful/advancements/recipes/campfire/cactus_steak.json
@@ -11,7 +11,6 @@ f56a4753c69fc3b3ab4b03aa528e518e8f23a589 data/delightful/advancements/recipes/ca
 3778a6e1475779a19a3c0b04bc62763773bad94e data/delightful/advancements/recipes/cantaloupe_seeds.json
 280656e795db0c70c4cabbcc16b786fe134aade7 data/delightful/advancements/recipes/cantaloupe_slice.json
 ff94c8097c97eeb15909fa193291ff1088a7cd05 data/delightful/advancements/recipes/cooking/animal_oil_bottle.json
-44402091959b375f13c9e715d294eb31d5893821 data/delightful/advancements/recipes/cooking/green_tea_leaves.json
 b10b99a2dc63cc5bc06a866c8ab9674940ce670b data/delightful/advancements/recipes/cooking/matcha_latte.json
 522ea48e0b597105213dc388a8c41a5ca547d034 data/delightful/advancements/recipes/food/berry_matcha_latte.json
 ca78b65409037d7ee47d64f2b9a0c91704a18461 data/delightful/advancements/recipes/food/berry_matcha_latte_neapolitan.json
@@ -146,11 +145,11 @@ c8e5ff6e6f154d1e389df467743d7be34eeead03 data/delightful/recipes/cantaloupe_pops
 4ec6056e9ad24f7243ac486e7bada7834dbd1efb data/delightful/recipes/cantaloupe_seeds.json
 3969d709b683b3eabe48e75225a46529edfa71d4 data/delightful/recipes/cantaloupe_slice.json
 0ad070142d2c20cf6a500f88ba545b22206aabb8 data/delightful/recipes/cooking/animal_oil_bottle.json
-f5145dc30bbe16a2ca29995df89fb45235fd3b99 data/delightful/recipes/cooking/green_tea_leaves.json
 1b81cd56f336fdc01a31a5ca08a5ddfa8ae84e29 data/delightful/recipes/cooking/matcha_latte.json
 0d5d2333e9578ece744fac84ca2681fba2fcbef3 data/delightful/recipes/cutting/cactus.json
 ef210c25b1a3d2453c0b37c587390bec5d6dadd0 data/delightful/recipes/cutting/cantaloupe.json
 8e0db6a0685710c3fec0ac3134b186f63ab498a8 data/delightful/recipes/cutting/clover.json
+fa31cd0b90406dda4c172e07db3bc94fe3d0a2a6 data/delightful/recipes/cutting/green_tea_leaves.json
 170a8e1f1ce519b51ee4ecd9a1735441b4436724 data/delightful/recipes/cutting/mini_melon.json
 94844bad124bf4c999bd39f9e661e44611b2db92 data/delightful/recipes/cutting/pumpkin_pie.json
 976a72b1df05888cdf33d4446eb42d611d502417 data/delightful/recipes/cutting/salmonberry_pie.json

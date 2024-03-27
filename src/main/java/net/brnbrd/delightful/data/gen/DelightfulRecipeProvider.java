@@ -176,11 +176,6 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .unlockedBy("has_walnut", has(DelightfulItemTags.NUTS_WALNUT)),
             "food/honey_glazed_walnut", finished, enabled("honey_glazed_walnut"), not(tagEmpty(DelightfulItemTags.NUTS_WALNUT)));
         wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-                    DelightfulItems.MATCHA.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
-                .addIngredient(Ingredient.of(DelightfulItemTags.TEA_LEAVES_GREEN), 2)
-                .unlockedBy("has_green_tea_leaves", has(DelightfulItemTags.TEA_LEAVES_GREEN)),
-            "cooking/green_tea_leaves", finished, enabled("matcha"), not(tagEmpty(DelightfulItemTags.TEA_LEAVES_GREEN)), not(modLoaded(Mods.YH)));
-        wrap(CookingPotRecipeBuilder.cookingPotRecipe(
                     DelightfulItems.MATCHA_LATTE.get(), 1, CookingRecipes.FAST_COOKING, 0.35F, Items.HONEY_BOTTLE)
                 .addIngredient(Ingredient.of(ForgeTags.MILK))
                 .addIngredient(Ingredient.of(DelightfulItemTags.MATCHA))
@@ -451,6 +446,11 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
                 .pattern("f")
                 .unlockedBy("has_fat", has(DelightfulItems.ANIMAL_FAT.get())),
             "candle_from_animal_fat", finished, enabled("animal_fat"));
+        wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
+                Ingredient.of(DelightfulItemTags.TEA_LEAVES_GREEN),
+                Ingredient.of(ForgeTags.TOOLS_SHOVELS),
+                Items.GREEN_DYE, 1).addResultWithChance(DelightfulItems.MATCHA.get(), 0.4f),
+            "cutting/green_tea_leaves", finished, enabled("matcha"), not(tagEmpty(DelightfulItemTags.TEA_LEAVES_GREEN)), not(modLoaded(Mods.YH)));
         wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
                 Ingredient.of(DelightfulItemTags.CLOVER),
                 Ingredient.of(ForgeTags.TOOLS_KNIVES),
