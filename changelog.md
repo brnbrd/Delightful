@@ -4,12 +4,14 @@
 # 3.5.3
 
 ### Updates
-- Azalea Tea can now be made with Twigs' Azalea Flowers
-- Matcha items now use tag "forge:matcha"
+- Matcha is now created using Green Tea Leaves with a shovel on a cutting board
+- Matcha now uses item tag "forge:matcha"
+- Matcha will be disabled in the presence of [Youkai's Homecoming](https://www.curseforge.com/minecraft/mc-mods/youkais-homecoming), in favor of theirs
 - Some items (such as teas) can be made in [Youkai's Homecoming](https://www.curseforge.com/minecraft/mc-mods/youkais-homecoming)'s kettle
-- Matcha will be disabled in the presence of [Farmer's Respite](https://www.curseforge.com/minecraft/mc-mods/farmers-respite) or [Youkai's Homecoming](https://www.curseforge.com/minecraft/mc-mods/youkais-homecoming), in favor of theirs
 - Matcha Latte's recipe is now bottled in a Honey Bottle
+- Azalea Tea can now be made with Twigs' Azalea Flowers
 - Nut Milk recipe compat for Miner's Delight's Copper Cup
+- Immersive Engineering garden cloche compat fixes, and support for Cantaloupes
 
 
 # 3.5.2
