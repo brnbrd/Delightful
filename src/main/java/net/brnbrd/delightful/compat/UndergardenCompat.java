@@ -15,5 +15,5 @@ public class UndergardenCompat {
 
 	public static final Supplier<FoodProperties> GLOOMGOURD_PIE_SLICE = () ->
 			(new FoodProperties.Builder()).nutrition(3).saturationMod(0.3F).fast()
-			.effect(() -> new MobEffectInstance(getVirulentResistance(), 160, 0), 1.0F).build();
+			.effect(() -> new MobEffectInstance(getVirulentResistance(), 600, 0), 1.0F).build();
 }
