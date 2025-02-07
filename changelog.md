@@ -4,7 +4,7 @@
 # 3.7
 
 ### Updates
-- Added `Delightful Overhauls` built-in resource pack (16x)
+- Added `Delightful Overhauls` built-in resource pack (16x) by championhestu
   - Retextures of supported items from other mods in a Farmer's Delight style
   - Appears in Resource Pack selection page, disabled by default
 - Added Aluminum Knife (closes [#106](https://github.com/brnbrd/Delightful/issues/106))
@@ -24,7 +24,7 @@
 - Allow tea Cooking Pot recipes to accept Water Buckets, or any item tagged `forge:water` (closes [#108](https://github.com/brnbrd/Delightful/issues/108))
 - Stews must be cooked in a Cooking Pot
 - Fixed Ecologics cooking recipe container issues
-- Fixed typo in `quark:parrot_egg_gray` in `forge:eggs` tag (closes [#109](https://github.com/brnbrd/Delightful/pull/109))
+- Fixed typo in `quark:parrot_egg_gray` in `forge:eggs` tag (merged [#109](https://github.com/brnbrd/Delightful/pull/109))
 
 ### Translations
 - Updated zh_cn (merged [#110](https://github.com/brnbrd/Delightful/pull/110))
