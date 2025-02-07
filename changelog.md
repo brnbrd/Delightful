@@ -21,6 +21,7 @@
 
 ### Fixes
 - Fixed Acorns not dropping from Oak Leaves blocks (closes [#111](https://github.com/brnbrd/Delightful/issues/111))
+- Allow tea Cooking Pot recipes to accept Water Buckets, or any item tagged `forge:water` (closes [#108](https://github.com/brnbrd/Delightful/issues/108))
 - Stews must be cooked in a Cooking Pot
 - Fixed Ecologics cooking recipe container issues
 - Fixed typo in `quark:parrot_egg_gray` in `forge:eggs` tag (closes [#109](https://github.com/brnbrd/Delightful/pull/109))
