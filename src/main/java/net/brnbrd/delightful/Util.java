@@ -86,7 +86,10 @@ public class Util {
 	}
 
 	public static ObjectArrayList<ItemStack> with(ObjectArrayList<ItemStack> before, Item addition, RandomSource rand, int min, int max) {
-		return (max <= min) ? before : with(before, addition, rand.nextIntBetweenInclusive(min, max));
+		if (max < min) {
+			return before;
+		}
+		return with(before, addition, (max == min) ? min : rand.nextIntBetweenInclusive(min, max));
 	}
 
 	public static ObjectArrayList<ItemStack> with(ObjectArrayList<ItemStack> before, Item addition) {
@@ -236,11 +239,13 @@ public class Util {
 	}
 
 	public static boolean enabled(String item) {
-		List<Item> found = DelightfulItems.ITEMS.getEntries()
+		return (
+			DelightfulItems.ITEMS.getEntries()
 				.stream()
-				.filter(reg -> Objects.equals(reg.getId(), Util.rl(Delightful.MODID, item)))
-				.map(RegistryObject::get)
-				.toList();
-		return found.isEmpty() ? configEnabled(item) : enabled(found.get(0));
+				.filter(reg -> reg.getId().getPath().equals(item))
+				.map(Util::enabled)
+				.findAny()
+				.orElse(configEnabled(item))
+		);
 	}
 }

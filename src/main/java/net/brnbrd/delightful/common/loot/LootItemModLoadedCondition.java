@@ -11,15 +11,10 @@ import net.minecraft.world.level.storage.loot.predicates.LootItemConditionType;
 import org.jetbrains.annotations.NotNull;
 
 public class LootItemModLoadedCondition implements LootItemCondition {
-
 	final String modid;
 
-	LootItemModLoadedCondition(String modid) {
+	public LootItemModLoadedCondition(String modid) {
 		this.modid = modid;
-	}
-
-	public static LootItemModLoadedCondition loaded(String modid) {
-		return new LootItemModLoadedCondition(modid);
 	}
 
 	@Override
@@ -27,29 +22,16 @@ public class LootItemModLoadedCondition implements LootItemCondition {
 		return DelightfulLootItemConditions.MOD_LOADED.get();
 	}
 
-	/**
-	 * Evaluates this predicate on the given argument.
-	 *
-	 * @param lootContext the input argument
-	 * @return {@code true} if the input argument matches the predicate,
-	 * otherwise {@code false}
-	 */
 	@Override
 	public boolean test(LootContext lootContext) {
 		return Mods.loaded(this.modid);
 	}
 
 	public static class Serializer implements net.minecraft.world.level.storage.loot.Serializer<LootItemModLoadedCondition> {
-		/**
-		 * Serialize the value by putting its data into the JsonObject.
-		 */
 		public void serialize(JsonObject object, LootItemModLoadedCondition cond, @NotNull JsonSerializationContext context) {
 			object.addProperty("modid", cond.modid);
 		}
 
-		/**
-		 * Deserialize a value by reading it from the JsonObject.
-		 */
 		public @NotNull LootItemModLoadedCondition deserialize(@NotNull JsonObject object, @NotNull JsonDeserializationContext context) {
 			return new LootItemModLoadedCondition(GsonHelper.getAsString(object, "modid"));
 		}

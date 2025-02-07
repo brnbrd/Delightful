@@ -1,19 +1,19 @@
 {
+  "replace": false,
   "entries": [
-    "delightful:animal_fat",
-    "delightful:acorn",
     "delightful:acorn_from_knife",
+    "delightful:acorn_rare",
     "delightful:green_tea_leaf",
     "delightful:green_tea_leaf_rare",
     "delightful:raw_goat",
     "delightful:cooked_goat",
-    "delightful:compat/straw",
+    "delightful:scavenging_animal_fat",
+    "delightful:scavenging_cantaloupe",
+    "delightful:scavenging_mini_melon",
     "delightful:compat/acorn_block",
     "delightful:compat/scavenging_acorn",
     "delightful:compat/scavenging_ham",
     "delightful:compat/scavenging_smoked_ham",
-    "delightful:scavenging_cantaloupe",
-    "delightful:scavenging_mini_melon"
-  ],
-  "replace": false
+    "delightful:compat/straw"
+  ]
 }

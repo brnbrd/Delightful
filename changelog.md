@@ -17,8 +17,10 @@
 - Removed support for `forge:tools/scavenging` tag
 - Added recipe for cutting Ecologics' Coconut Husk into Straw
 - Slightly increased nutrition and saturation of Slice of Baklava
+- Slice of Gloomgourd Pie now gives 30 seconds of Virulent Resistance (from 8)
 
 ### Fixes
+- Fixed Acorns not dropping from Oak Leaves blocks (closes [#111](https://github.com/brnbrd/Delightful/issues/111))
 - Stews must be cooked in a Cooking Pot
 - Fixed Ecologics cooking recipe container issues
 - Fixed typo in `quark:parrot_egg_gray` in `forge:eggs` tag (closes [#109](https://github.com/brnbrd/Delightful/pull/109))

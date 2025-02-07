@@ -16,29 +16,17 @@ import net.minecraft.world.level.storage.loot.predicates.LootItemConditionType;
 import org.jetbrains.annotations.NotNull;
 
 public class LootItemBlockIsTagCondition implements LootItemCondition {
-
 	final TagKey<Block> tag;
 
-	LootItemBlockIsTagCondition(TagKey<Block> tag) {
+	public LootItemBlockIsTagCondition(TagKey<Block> tag) {
 		this.tag = tag;
 	}
 
-	public static LootItemBlockIsTagCondition isTag(TagKey<Block> tag) {
-		return new LootItemBlockIsTagCondition(tag);
-	}
-
 	@Override
-	public LootItemConditionType getType() {
+	public @NotNull LootItemConditionType getType() {
 		return DelightfulLootItemConditions.IS_TAG.get();
 	}
 
-	/**
-	 * Evaluates this predicate on the given argument.
-	 *
-	 * @param lootContext the input argument
-	 * @return {@code true} if the input argument matches the predicate,
-	 * otherwise {@code false}
-	 */
 	@Override
 	public boolean test(LootContext lootContext) {
 		BlockState state = lootContext.getParamOrNull(LootContextParams.BLOCK_STATE);
@@ -46,17 +34,11 @@ public class LootItemBlockIsTagCondition implements LootItemCondition {
 	}
 
 	public static class Serializer implements net.minecraft.world.level.storage.loot.Serializer<LootItemBlockIsTagCondition> {
-		/**
-		 * Serialize the value by putting its data into the JsonObject.
-		 */
 		public void serialize(JsonObject object, LootItemBlockIsTagCondition cond, @NotNull JsonSerializationContext context) {
 			object.addProperty("tag", cond.tag.location().toString());
 		}
 
-		/**
-		 * Deserialize a value by reading it from the JsonObject.
-		 */
-		public LootItemBlockIsTagCondition deserialize(@NotNull JsonObject object, @NotNull JsonDeserializationContext context) {
+		public @NotNull LootItemBlockIsTagCondition deserialize(@NotNull JsonObject object, @NotNull JsonDeserializationContext context) {
 			return new LootItemBlockIsTagCondition(BlockTags.create(Util.rl(GsonHelper.getAsString(object, "tag"))));
 		}
 	}

@@ -13,11 +13,11 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
 import vectorwing.farmersdelight.common.tag.ModTags;
 import java.util.concurrent.CompletableFuture;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 public class DelightfulBlockTagProvider extends BlockTagsProvider {
 
@@ -33,23 +33,23 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 
 		// Mineable
 		this.tag(ForgeTags.MINEABLE_WITH_KNIFE)
-			.add(DelightfulBlocks.SLICED_PUMPKIN.get())
-			.add(DelightfulBlocks.SLICED_MELON.get())
-			.add(DelightfulBlocks.MINI_MELON.get())
-			.add(DelightfulBlocks.SLICED_MINI_MELON.get())
-			.add(DelightfulBlocks.CANTALOUPE.get())
-			.add(DelightfulBlocks.SLICED_CANTALOUPE.get())
-			.add(DelightfulBlocks.SLICED_GLOOMGOURD.get())
-			.add(DelightfulBlocks.SALMONBERRY_PIE.get())
-			.add(DelightfulBlocks.PUMPKIN_PIE.get())
-			.add(DelightfulBlocks.BLUEBERRY_PIE.get())
-			.add(DelightfulBlocks.GREEN_APPLE_PIE.get())
-			.add(DelightfulBlocks.SOURCE_BERRY_PIE.get())
-			.add(DelightfulBlocks.GLOOMGOURD_PIE.get())
-			.add(DelightfulBlocks.CHORUS_PIE.get())
-			.add(DelightfulBlocks.BAKLAVA.get())
-			.addOptional(Util.rl(Mods.UG, "gloomgourd"))
-			.addOptional(Util.rl(Mods.UG, "carved_gloomgourd"));
+				.add(DelightfulBlocks.SLICED_PUMPKIN.get())
+				.add(DelightfulBlocks.SLICED_MELON.get())
+				.add(DelightfulBlocks.MINI_MELON.get())
+				.add(DelightfulBlocks.SLICED_MINI_MELON.get())
+				.add(DelightfulBlocks.CANTALOUPE.get())
+				.add(DelightfulBlocks.SLICED_CANTALOUPE.get())
+				.add(DelightfulBlocks.SLICED_GLOOMGOURD.get())
+				.add(DelightfulBlocks.SALMONBERRY_PIE.get())
+				.add(DelightfulBlocks.PUMPKIN_PIE.get())
+				.add(DelightfulBlocks.BLUEBERRY_PIE.get())
+				.add(DelightfulBlocks.GREEN_APPLE_PIE.get())
+				.add(DelightfulBlocks.SOURCE_BERRY_PIE.get())
+				.add(DelightfulBlocks.GLOOMGOURD_PIE.get())
+				.add(DelightfulBlocks.CHORUS_PIE.get())
+				.add(DelightfulBlocks.BAKLAVA.get())
+				.addOptional(Util.rl(Mods.UG, "gloomgourd"))
+				.addOptional(Util.rl(Mods.UG, "carved_gloomgourd"));
 
 		// Delightful
 		this.tag(DelightfulBlockTags.DROPS_STRAW)
@@ -120,7 +120,6 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 				.addOptional(Util.rl(Mods.CD, "wild_cucumbers"))
 				.addOptional(Util.rl(Mods.CD, "wild_corn"))
 				.addOptional(Util.rl(Mods.CD, "wild_eggplants"));
-
 		this.tag(BlockTags.CAULDRONS)
 				.add(DelightfulBlocks.SALMONBERRY_MILKSHAKE_CAULDRON.get())
 				.add(DelightfulBlocks.MATCHA_MILKSHAKE_CAULDRON.get());

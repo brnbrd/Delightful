@@ -8,7 +8,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
 public class DelightfulLootItemConditions {
-
 	private static final DeferredRegister<LootItemConditionType> LICT = DeferredRegister.create(Registries.LOOT_CONDITION_TYPE, Delightful.MODID);
 
 	public static final RegistryObject<LootItemConditionType> IS_TAG = LICT.register("is_tag",
@@ -21,5 +20,4 @@ public class DelightfulLootItemConditions {
 	public static void create(IEventBus bus) {
 		LICT.register(bus);
 	}
-
 }
