@@ -26,6 +26,9 @@
 - Fixed Ecologics cooking recipe container issues
 - Fixed typo in `quark:parrot_egg_gray` in `forge:eggs` tag (closes [#109](https://github.com/brnbrd/Delightful/pull/109))
 
+### Translations
+- Updated zh_cn (merged [#110](https://github.com/brnbrd/Delightful/pull/110))
+
 
 # 3.6.2
 
