@@ -9,11 +9,11 @@ version="${file.jarVersion}"
 displayName="Delightful"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/delightful"
 updateJSONURL="https://raw.githubusercontent.com/brnbrd/Delightful/1.20.1/update/update.json"
+description="Farmer's Delight addon with mod compatibility features and fun new foods."
+authors="brnbrd"
+credits="championhestu (artist), vectorwing"
 logoFile="delightful.png"
 logoBlur=false
-credits="championhestu (artist), vectorwing"
-authors="brnbrd"
-description="Farmer's Delight addon with mod compatibility features and fun new foods."
 itemIcon="delightful:smore"
 configBackground="farmersdelight:textures/block/tatami_mat_half.png"
 
@@ -27,7 +27,7 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
 [[dependencies.delightful]]
     modId="farmersdelight"
     mandatory=true
-    versionRange="[1.20.1-1.2.5,)"
+    versionRange="[1.20.1-1.2.7,)"
     ordering="AFTER"
     side="BOTH"
 
