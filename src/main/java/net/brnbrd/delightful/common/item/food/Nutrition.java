@@ -54,9 +54,12 @@ public class Nutrition {
 			.nutrition(1).saturationMod(0.4F)
 			.effect(() -> new MobEffectInstance(Mods.getGreenTeaEffect().get(), 100, 0), 1.0F).build();
 	public static final FoodProperties ANIMAL_FAT = (new FoodProperties.Builder())
-			.nutrition(1).saturationMod(2.0F).alwaysEat().fast().build();
+			.nutrition(1).saturationMod(2.0F)
+			.alwaysEat()
+			.fast().build();
 	public static final FoodProperties CHOPPED_CLOVER = (new FoodProperties.Builder())
-			.nutrition(1).saturationMod(0.35F).fast().build();
+			.nutrition(1).saturationMod(0.35F)
+			.fast().build();
 	public static final FoodProperties CACTUS_FLESH = (new FoodProperties.Builder())
 			.nutrition(3).saturationMod(0.3F).build();
 	public static final FoodProperties CACTUS_STEAK = (new FoodProperties.Builder())
@@ -82,12 +85,17 @@ public class Nutrition {
 			.effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 100, 0), 1.0F)
 			.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 600, 0), 1.0F).build();
 	public static final FoodProperties ROCK_CANDY = (new FoodProperties.Builder())
-			.nutrition(4).saturationMod(0.2F).fast()
+			.nutrition(4).saturationMod(0.2F)
+			.fast()
 			.effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 120, 0), 1.0F).build();
 	public static final FoodProperties VENISON_CHOPS = (new FoodProperties.Builder())
-			.nutrition(1).saturationMod(0.3F).meat().fast().build();
+			.nutrition(1).saturationMod(0.3F)
+			.meat()
+			.fast().build();
 	public static final FoodProperties COOKED_VENISON_CHOPS = (new FoodProperties.Builder())
-			.nutrition(3).saturationMod(0.8F).meat().fast().build();
+			.nutrition(3).saturationMod(0.8F)
+			.meat()
+			.fast().build();
 	public static final FoodProperties RAW_GOAT = (new FoodProperties.Builder())
 			.nutrition(2).saturationMod(0.3F).meat().build();
 	public static final FoodProperties COOKED_GOAT = (new FoodProperties.Builder())
@@ -102,7 +110,9 @@ public class Nutrition {
 			.nutrition(8).saturationMod(0.95F)
 			.effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 300, 0), 1.0F).build();
 	public static final FoodProperties CANTALOUPE_POPSICLE = (new FoodProperties.Builder())
-			.nutrition(3).saturationMod(0.2F).fast().alwaysEat()
+			.nutrition(3).saturationMod(0.2F)
+			.fast()
+			.alwaysEat()
 			.effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 600, 0), 1.0F).build();
 	public static final FoodProperties STUFFED_CANTALOUPE = (new FoodProperties.Builder())
 			.nutrition(14).saturationMod(0.75F)
@@ -153,11 +163,13 @@ public class Nutrition {
 			.nutrition(2).saturationMod(0.6F)
 			.effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 100, 0), 1.0F).build();
 	public static final FoodProperties SALMONBERRY_PIE_SLICE = (new FoodProperties.Builder())
-			.nutrition(3).saturationMod(0.3F).fast()
+			.nutrition(3).saturationMod(0.3F)
+			.fast()
 			.effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 600, 0), 1.0F).build();
 	public static final FoodProperties BAKLAVA_SLICE = (new FoodProperties.Builder())
-		.nutrition(5).saturationMod(0.4F).fast()
-		.effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 600, 0, false, false), 1.0F).build();
+			.nutrition(5).saturationMod(0.4F)
+			.fast()
+			.effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 600, 0, false, false), 1.0F).build();
 	public static final FoodProperties SALMONBERRY_GUMMY = (new FoodProperties.Builder())
 			.nutrition(2).saturationMod(0.0F).alwaysEat()
 			.effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 400, 0), 1.0F).build();

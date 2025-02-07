@@ -1,10 +1,8 @@
 package net.brnbrd.delightful.common.item.food;
 
-import net.brnbrd.delightful.common.item.DItem;
-
-public class PumpkinPieSliceItem extends DItem {
+public class PumpkinPieSliceItem extends CompatPieSliceItem {
 	public PumpkinPieSliceItem(Properties prop) {
-		super(prop, false);
+		super(prop, null);
 	}
 
 	@Override

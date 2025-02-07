@@ -15,7 +15,7 @@ public class CompatItem extends DItem implements ICompat {
 	public CompatItem(Item.Properties prop, boolean hasFoodEffectTooltip, @Nullable String conflict, String... modid) {
 		super(prop, hasFoodEffectTooltip);
 		this.conflict = conflict;
-		if (modid.length > 0) {
+		if (modid != null && modid.length > 0) {
 			this.modid = modid.clone();
 		} else {
 			this.modid = new String[0];

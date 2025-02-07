@@ -79,7 +79,7 @@ public class DelightfulItems {
 	public static final RegistryObject<Item> SALMONBERRY_PIE = registerItem("salmonberry_pie",
 			() -> new BlockItem(DelightfulBlocks.SALMONBERRY_PIE.get(), ModItems.basicItem()));
 	public static final RegistryObject<Item> SALMONBERRY_PIE_SLICE = registerItem("salmonberry_pie_slice",
-			() -> new DItem((new Item.Properties()).food(Nutrition.SALMONBERRY_PIE_SLICE), false));
+			() -> new DItem((new Item.Properties()).food(Nutrition.SALMONBERRY_PIE_SLICE), true));
 	public static final RegistryObject<Item> PUMPKIN_PIE_SLICE = registerItem("pumpkin_pie_slice",
 			() -> new PumpkinPieSliceItem((new Item.Properties()).food(FoodValues.PIE_SLICE)));
 	public static final RegistryObject<Item> GLOOMGOURD_PIE_SLICE = registerCompatPieSlice("gloomgourd_pie",
@@ -192,7 +192,7 @@ public class DelightfulItems {
 	}
 
 	public static RegistryObject<Item> registerCompatPieSlice(String pieName, FoodProperties food, String modid) {
-		return registerItem(pieName + "_slice", () -> new CompatItem((new Item.Properties().food(food)), false, null, modid));
+		return registerItem(pieName + "_slice", () -> new CompatPieSliceItem((new Item.Properties().food(food)), null, modid));
 	}
 
 	public static RegistryObject<Item> registerCompatFood(String name, FoodProperties food, String modid, boolean hasFoodEffectTooltip) {
