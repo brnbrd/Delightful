@@ -164,6 +164,7 @@ public class DelightfulItems {
 			() -> new BlockItem(DelightfulBlocks.STUFFED_CANTALOUPE_BLOCK.get(), ModItems.basicItem().stacksTo(1)));
 	public static final RegistryObject<Item> STUFFED_CANTALOUPE = registerConsumable("stuffed_cantaloupe", Nutrition.STUFFED_CANTALOUPE, Items.BOWL, true, false);
 
+	// Gummies
 	public static final RegistryObject<Item> SALMONBERRY_GUMMY = registerItem("salmonberry_gummy",
 			() -> new GummyItem((new Item.Properties()).food(Nutrition.SALMONBERRY_GUMMY)));
 	public static final RegistryObject<Item> MATCHA_GUMMY = registerItem("matcha_gummy",
