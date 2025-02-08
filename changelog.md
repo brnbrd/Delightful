@@ -1,6 +1,13 @@
 # Changelog
 
 
+# 3.7.1
+
+### Updates
+- Matcha products (but not Matcha itself) now give level 2 of the green tea effect
+- Gummy effects are now displayed in their tooltip
+
+
 # 3.7
 
 ### Updates
