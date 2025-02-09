@@ -86,6 +86,8 @@ public class DelightfulBlocks {
 			() -> new DPieBlock(DelightfulItems.BLUEBERRY_PIE_SLICE, Util.rl(Mods.BWG, "blueberry_pie")));
 	public static final RegistryObject<Block> GREEN_APPLE_PIE = BLOCKS.register("green_apple_pie",
 			() -> new DPieBlock(DelightfulItems.GREEN_APPLE_PIE_SLICE, Util.rl(Mods.BWG, "green_apple_pie")));
+	public static final RegistryObject<Block> MULBERRY_PIE = BLOCKS.register("mulberry_pie",
+			() -> new DPieBlock(DelightfulItems.MULBERRY_PIE_SLICE, Util.rl(Mods.UA, "mulberry_pie")));
 	public static final RegistryObject<Block> ACORN_SACK = BLOCKS.register("acorn_sack",
 			() -> new Block(Block.Properties.copy(Blocks.BROWN_WOOL).strength(.5f).sound(SoundType.WOOL)));
 	public static final RegistryObject<Block> SALMONBERRY_ICE_CREAM_BLOCK = BLOCKS.register("salmonberry_ice_cream_block",

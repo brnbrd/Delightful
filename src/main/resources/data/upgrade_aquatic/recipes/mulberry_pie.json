@@ -4,38 +4,52 @@
     {
       "conditions": [
         {
-          "type": "forge:item_exists",
-          "item": "upgrade_aquatic:mulberry_pie"
+          "type": "delightful:enabled",
+          "value": "mulberry_pie_slice"
         },
         {
           "type": "forge:item_exists",
-          "item": "create_central_kitchen:mulberry_pie_slice"
+          "item": "upgrade_aquatic:mulberry_pie"
         }
       ],
       "recipe": {
-        "type": "minecraft:crafting_shapeless",
-        "ingredients": [
-          {
-            "item": "this_item:does_not_exist"
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "#": {
+            "tag": "forge:grain/wheat"
+          },
+          "O": {
+            "item": "farmersdelight:pie_crust"
+          },
+          "a": {
+            "tag": "forge:fruits/mulberry"
+          },
+          "x": {
+            "tag": "forge:sugar"
           }
+        },
+        "pattern": [
+          "###",
+          "aaa",
+          "xOx"
         ],
         "result": {
-          "item": "this_item:does_not_exist"
+          "item": "upgrade_aquatic:mulberry_pie"
         }
       }
     },
     {
       "conditions": [
         {
-          "type": "forge:item_exists",
-          "item": "upgrade_aquatic:mulberry_pie"
-        },
-        {
           "type": "forge:not",
           "value": {
-            "type": "forge:item_exists",
-            "item": "create_central_kitchen:mulberry_pie_slice"
+            "type": "delightful:enabled",
+            "value": "mulberry_pie_slice"
           }
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "upgrade_aquatic:mulberry_pie"
         }
       ],
       "recipe": {

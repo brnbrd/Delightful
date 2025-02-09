@@ -64,6 +64,7 @@ public class Mods {
 	public static final String SUP = "supplementaries";
 	public static final String TF = "twilightforest";
 	public static final String TFD = "twilightdelight";
+	public static final String UA = "upgrade_aquatic";
 	public static final String UE = "unusualend";
 	public static final String UG = "undergarden";
 	public static final String UGD = "undergardendelight";

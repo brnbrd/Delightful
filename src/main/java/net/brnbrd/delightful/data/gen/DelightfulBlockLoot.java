@@ -46,6 +46,7 @@ public class DelightfulBlockLoot extends BlockLootSubProvider {
 		this.empty(DelightfulBlocks.GREEN_APPLE_PIE);
 		this.empty(DelightfulBlocks.BLUEBERRY_PIE);
 		this.empty(DelightfulBlocks.CHORUS_PIE);
+		this.empty(DelightfulBlocks.MULBERRY_PIE);
 		this.empty(DelightfulBlocks.BAKLAVA);
 
 		// Whole melons

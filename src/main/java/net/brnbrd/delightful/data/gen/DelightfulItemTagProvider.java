@@ -5,6 +5,7 @@ import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.knife.DelightfulKnifeItem;
 import net.brnbrd.delightful.common.item.knife.Knives;
+import net.brnbrd.delightful.compat.AquaticCompat;
 import net.brnbrd.delightful.compat.BWGCompat;
 import net.brnbrd.delightful.compat.Mods;
 import net.brnbrd.delightful.compat.UnusualEndCompat;
@@ -61,7 +62,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 				.addOptional(Util.rl(Mods.UG, "gloomgourd_pie"))
 				.addOptional(Util.rl(Mods.BWG, BWGCompat.blueberry_pie))
 				.addOptional(Util.rl(Mods.BWG, BWGCompat.green_apple_pie))
-				.addOptional(Util.rl(Mods.UE, UnusualEndCompat.chorus_pie));
+				.addOptional(Util.rl(Mods.UE, UnusualEndCompat.chorus_pie))
+				.addOptional(Util.rl(Mods.UA, AquaticCompat.mulberry_pie));
 		this.tag(DelightfulItemTags.FIRE_KNIVES)
 				.add(Knives.FIERY.get())
 				.add(Knives.KIWANO.get())
@@ -70,8 +72,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 				.add(Items.GRASS)
 				.add(Items.TALL_GRASS)
 				.add(ModItems.SANDY_SHRUB.get())
-				.addOptional(Util.rl("upgrade_aquatic", "beachgrass"))
-				.addOptional(Util.rl("upgrade_aquatic", "tall_beachgrass"));
+				.addOptional(Util.rl(Mods.UA, "beachgrass"))
+				.addOptional(Util.rl(Mods.UA, "tall_beachgrass"));
 		this.tag(DelightfulItemTags.ROTTEN)
 				.add(Items.ROTTEN_FLESH)
 				.addOptional(Util.rl(Mods.RL, "rotten_chunk"))
@@ -415,7 +417,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 				.addOptional(Util.rl(Mods.BC, "sweet_berry_jam"))
 				.addOptional(Util.rl(Mods.BC, "glow_berry_marmalade"))
 				.addOptional(Util.rl(Mods.BC, "apple_jelly"))
-				.addOptional(Util.rl("upgrade_aquatic", "mulberry_jam_bottle"));
+				.addOptional(Util.rl(Mods.UA, "mulberry_jam_bottle"));
 		this.tag(DelightfulItemTags.PEANUT_BUTTER)
 				.addOptional(Util.rl("thermal", "peanut_butter"))
 				.addOptional(Util.rl("croptopia", "peanut_butter"));
@@ -610,7 +612,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.BONES)
 				.addOptional(Util.rl(Mods.DD, "sculk_bone"))
 				.addOptional(Util.rl("alexscaves", "heavy_bone"))
-				.addOptional(Util.rl("upgrade_aquatic", "thrasher_tooth"))
+				.addOptional(Util.rl(Mods.UA, "thrasher_tooth"))
 				.addOptional(Util.rl(Mods.SM, "piranha_tooth"));
 		this.tag(DelightfulItemTags.SYRUP)
 				.addOptionalTag(Util.rl(Mods.SUP, "pancake_syrup"))

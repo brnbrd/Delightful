@@ -20,6 +20,10 @@
     {
       "id": "unusualend:chorus_pie",
       "required": false
+    },
+    {
+      "id": "upgrade_aquatic:mulberry_pie",
+      "required": false
     }
   ]
 }

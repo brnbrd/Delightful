@@ -3,11 +3,8 @@ package net.brnbrd.delightful.common.item;
 import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.common.block.DelightfulBlocks;
 import net.brnbrd.delightful.common.item.food.*;
-import net.brnbrd.delightful.compat.UnusualEndCompat;
+import net.brnbrd.delightful.compat.*;
 import net.brnbrd.delightful.compat.ars_nouveau.*;
-import net.brnbrd.delightful.compat.BWGCompat;
-import net.brnbrd.delightful.compat.Mods;
-import net.brnbrd.delightful.compat.UndergardenCompat;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.food.FoodProperties;
@@ -88,6 +85,8 @@ public class DelightfulItems {
 			FoodValues.PIE_SLICE, Mods.BWG);
 	public static final RegistryObject<Item> GREEN_APPLE_PIE_SLICE = registerCompatPieSlice(BWGCompat.green_apple_pie,
 			BWGCompat.GREEN_APPLE_PIE_SLICE.get(), Mods.BWG);
+	public static final RegistryObject<Item> MULBERRY_PIE_SLICE = registerCompatPieSlice(AquaticCompat.mulberry_pie,
+			AquaticCompat.MULBERRY_PIE_SLICE, Mods.UA);
 	public static final RegistryObject<Item> CHORUS_PIE_SLICE = registerCompatPieSlice(UnusualEndCompat.chorus_pie,
 			UnusualEndCompat.CHORUS_PIE_SLICE, Mods.UE);
 	public static final RegistryObject<Item> CHORUS_MUFFIN = registerItem("chorus_muffin",

@@ -47,6 +47,7 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		addItem(DelightfulItems.GLOOMGOURD_PIE_SLICE, "Slice of Gloomgourd Pie");
 		addItem(DelightfulItems.GREEN_APPLE_PIE_SLICE, "Slice of Green Apple Pie");
 		addItem(DelightfulItems.BLUEBERRY_PIE_SLICE, "Slice of Blueberry Pie");
+		addItem(DelightfulItems.MULBERRY_PIE_SLICE, "Slice of Mulberry Pie");
 		addItem(DelightfulItems.BAKLAVA_SLICE, "Slice of Baklava");
 		addItem(DelightfulItems.CHORUS_PIE_SLICE, "Slice of Chorus Pie");
 		addItem(DelightfulItems.CHORUS_MUFFIN, "Chorus Muffin");
@@ -104,6 +105,7 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		addBlock(DelightfulBlocks.GREEN_APPLE_PIE, "Green Apple Pie");
 		addBlock(DelightfulBlocks.BLUEBERRY_PIE, "Blueberry Pie");
 		addBlock(DelightfulBlocks.CHORUS_PIE, "Chorus Pie");
+		addBlock(DelightfulBlocks.MULBERRY_PIE, "Mulberry Pie");
 		addBlock(DelightfulBlocks.SALMONBERRY_PIE, "Salmonberry Pie");
 		addBlock(DelightfulBlocks.SALMONBERRY_BUSH, "Salmonberry Bush");
 		addBlock(DelightfulBlocks.WILD_SALMONBERRIES, "Wild Salmonberries");
