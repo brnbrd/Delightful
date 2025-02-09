@@ -4,10 +4,10 @@
 # 3.7.1
 
 ### Updates
+- Placeable Mulberry Pie, added Mulberry Pie Slice (for [Upgrade Aquatic](https://www.curseforge.com/minecraft/mc-mods/upgrade-aquatic)) (closes [#107](https://github.com/brnbrd/Delightful/issues/107))
+  - Retexture of Mulberry Pie in `Delightful Overhauls` built-in resource pack
 - Matcha products (but not Matcha itself) now give level 2 of the green tea effect
 - Gummy effects are now displayed in their tooltip
-- Placeable Mulberry Pie, added Mulberry Pie Slice (for [Upgrade Aquatic](https://www.curseforge.com/minecraft/mc-mods/upgrade-aquatic))
-  - Retexture of Mulberry Pie in `Delightful Overhauls` built-in resource pack
 
 
 # 3.7
