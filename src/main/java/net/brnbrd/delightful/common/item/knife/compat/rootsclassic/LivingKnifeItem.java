@@ -1,15 +1,15 @@
 package net.brnbrd.delightful.common.item.knife.compat.rootsclassic;
 
 import net.brnbrd.delightful.common.item.DelightfulTiers;
-import net.brnbrd.delightful.common.item.knife.CompatKnifeItem;
+import net.brnbrd.delightful.common.item.knife.DKnifeItem;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 
-public class LivingKnifeItem extends CompatKnifeItem {
+public class LivingKnifeItem extends DKnifeItem {
 	public LivingKnifeItem(Properties properties) {
-		super("rootsclassic", null, DelightfulTiers.LIVING, properties);
+		super(null, DelightfulTiers.LIVING, properties, "rootsclassic");
 	}
 
 	@Override

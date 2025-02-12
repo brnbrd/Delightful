@@ -1,6 +1,5 @@
 package net.brnbrd.delightful.common.item.food;
 
-import net.brnbrd.delightful.common.item.ICompat;
 import net.brnbrd.delightful.compat.Mods;
 import net.brnbrd.delightful.compat.UnusualEndCompat;
 import net.minecraft.ChatFormatting;
@@ -14,22 +13,16 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
-public class ChorusMuffinItem extends DConsumableItem implements ICompat {
+public class ChorusMuffinItem extends CompatConsumableItem {
 	public ChorusMuffinItem(Properties properties) {
-		super(properties, true, false);
+		super(properties, true, false, Mods.UE);
 	}
 
-	@Override
-	public String[] getModid() {
-		return new String[]{Mods.UE};
-	}
-
+	@SuppressWarnings("NoTranslation")
 	@Override
 	public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> comps, @NotNull TooltipFlag pIsAdvanced) {
 		if (this.enabled()) {
-			comps.add(
-				Component.translatable("lore.unusualend.clear_infection").withStyle(ChatFormatting.BLUE)
-			);
+			comps.add(Component.translatable("lore.unusualend.clear_infection").withStyle(ChatFormatting.BLUE));
 		}
 		super.appendHoverText(stack, level, comps, pIsAdvanced);
 	}

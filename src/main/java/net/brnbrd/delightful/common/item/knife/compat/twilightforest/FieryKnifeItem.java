@@ -1,8 +1,9 @@
 package net.brnbrd.delightful.common.item.knife.compat.twilightforest;
 
-import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.DelightfulTiers;
-import net.brnbrd.delightful.common.item.knife.CompatKnifeItem;
+import net.brnbrd.delightful.common.item.knife.DKnifeItem;
+import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
@@ -14,21 +15,26 @@ import net.minecraft.world.item.enchantment.Enchantments;
 import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
-public class FieryKnifeItem extends CompatKnifeItem {
+public class FieryKnifeItem extends DKnifeItem {
 	public FieryKnifeItem(Properties properties) {
-		super("twilightforest", DelightfulItems.ingot("fiery"), DelightfulTiers.FIERY, properties, ChatFormatting.YELLOW);
+		super(DelightfulItemTags.ingot("fiery"), DelightfulTiers.FIERY, properties, Mods.TF);
+	}
+
+	@Override
+	public @NotNull Component getName(@NotNull ItemStack stack) {
+		Component name = super.getName(stack);
+		return this.enabled() ? name.copy().withStyle(ChatFormatting.YELLOW) : name;
+	}
+
+	@SuppressWarnings("NoTranslation")
+	@Override
+	public List<Component> getTools() {
+		return List.of(Component.translatable("item.twilightforest.fiery_sword.desc").withStyle(ChatFormatting.GRAY));
 	}
 
 	@Override
 	public String[] getConflicts() {
-		return new String[]{"twilightdelight"};
-	}
-
-	@Override
-	public List<Component> getTools() {
-		return List.of(
-				Component.translatable("item.twilightforest.fiery_sword.desc").withStyle(ChatFormatting.GRAY)
-		);
+		return new String[]{Mods.TFD};
 	}
 
 	@Override

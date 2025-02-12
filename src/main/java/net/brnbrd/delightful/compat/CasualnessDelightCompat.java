@@ -7,6 +7,6 @@ import org.jetbrains.annotations.Nullable;
 public class CasualnessDelightCompat {
 	@Nullable
 	public static MobEffect getRotten() {
-		return Util.effect(Mods.CAD, "rotten", null);
+		return Util.effect(Mods.CAD, "rotten");
 	}
 }

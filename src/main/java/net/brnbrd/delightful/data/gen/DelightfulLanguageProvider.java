@@ -3,7 +3,7 @@ package net.brnbrd.delightful.data.gen;
 import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.common.block.DelightfulBlocks;
 import net.brnbrd.delightful.common.item.DelightfulItems;
-import net.brnbrd.delightful.common.item.knife.DelightfulKnifeItem;
+import net.brnbrd.delightful.common.item.knife.DKnifeItem;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
 
@@ -14,10 +14,16 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 
 	@Override
 	protected void addTranslations() {
-		DelightfulItems.ITEMS.getEntries().stream()
-				.filter(reg -> reg.get() instanceof DelightfulKnifeItem)
-				.forEach(knife -> addItem(knife, ((DelightfulKnifeItem) knife.get()).getTranslation()));
+		addKnives();
 		addItems();
+		addBlocks();
+		addOther();
+	}
+
+	private void addKnives() {
+		DelightfulItems.ITEMS.getEntries().stream()
+			.filter(k -> k.get() instanceof DKnifeItem)
+			.forEach(k -> addItem(k, ((DKnifeItem) k.get()).getTranslation()));
 	}
 
 	private void addItems() {
@@ -90,6 +96,9 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		addItem(DelightfulItems.MATCHA_GUMMY, "Matcha Gummy");
 		addItem(DelightfulItems.CANTALOUPE_GUMMY, "Cantaloupe Gummy");
 		addItem(DelightfulItems.SOURCE_BERRY_GUMMY, "Source Berry Gummy");
+	}
+
+	private void addBlocks() {
 		addBlock(DelightfulBlocks.MINI_MELON, "Mini Melon");
 		addBlock(DelightfulBlocks.SLICED_MINI_MELON, "Sliced Mini Melon");
 		addBlock(DelightfulBlocks.CANTALOUPE, "Cantaloupe");
@@ -127,34 +136,56 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		addBlock(DelightfulBlocks.GREEN_APPLE_CRATE, "Green Apple Crate");
 		addBlock(DelightfulBlocks.YUCCA_FRUIT_CRATE, "Yucca Fruit Crate");
 		addBlock(DelightfulBlocks.BAOBAB_FRUIT_CRATE, "Baobab Fruit Crate");
+	}
+
+	private void addOther() {
+		// Fluids
 		addItem(DelightfulItems.AZALEA_TEA, "Azalea Tea");
 		add("fluid_type." + Delightful.MODID + ".azalea_tea_type", "Azalea Tea");
 		addItem(DelightfulItems.LAVENDER_TEA, "Lavender Tea");
 		add("fluid_type." + Delightful.MODID + ".lavender_tea_type", "Lavender Tea");
+
+		// Other
+		add("delightful.overhauls", "Overhauls");
+
+		// Tooltips
+		addTooltip("placeable", "Placeable");
+		addTooltip("disabled", "Disabled");
+		addTooltip("sneak_right", "Sneak R-Click for:");
+		addTooltip("furnace_fuel_burn_time", "s of burn time");
+		addTooltip("requires_empty_tag", "Requires empty tag:");
+
+		// Tooltips not specific to Delightful
+		add("tooltip.requires_tag", "Requires tag:");
+		add("tooltip.requires_modid", "Requires modid:");
 		add("farmersdelight.tooltip.matcha_latte", "Minor Instant Health");
 		add("farmersdelight.tooltip.berry_matcha_latte", "Minor Instant Health");
 		add("farmersdelight.tooltip.ender_nectar", "Otherworldly");
-		add("delightful.matcha.desc", "Green Tea Powder");
-		add("delightful.green_tea_leaf.desc", "Get lucky using a Knife on any Leaves block.");
-		add("delightful.animal_fat.desc", "Can be scavenged from some dead animals.");
-		add("delightful.animal_oil_bottle.desc", "Use on any furnace for a small amount of heat.");
-		add("delightful.acorn.desc", "Acorns are tough nuts that drop from Oak Leaves or Squirrels.");
-		add("delightful.salmonberries.desc", "Salmonberries can be commonly found as a wild plant in forests.");
-		add("delightful.mini_melon.desc", "Mini Melons can be commonly found in plains. Can grow into a big Melon or be sliced with a Knife.");
-		add("delightful.cantaloupe.desc", "Cantaloupes can be commonly found on beaches.");
-		add("delightful.cantaloupe_seeds.desc", "Cantaloupe Seeds will sprout when planted in sand.");
-		add("delightful.sliceable.desc", "Sliceable with a Knife.");
-		add("delightful.placeable.desc", "Placeable");
-		add("delightful.overhauls", "Overhauls");
-		add("tooltip.disabled", "Disabled");
-		add("tooltip.requires_tag", "Requires tag:");
-		add("tooltip.requires_empty_tag", "Requires empty tag:");
-		add("tooltip.requires_modid", "Requires modid:");
-		add("tooltip.sneak_right", "Sneak R-Click for:");
-		add("tooltip.furnace_fuel_burn_time", "s of burn time");
+
+		// JEI Descriptions
+		addDescription("matcha", "Green Tea Powder");
+		addDescription("green_tea_leaf", "Get lucky using a Knife on any Leaves block.");
+		addDescription("animal_fat", "Can be scavenged from some dead animals.");
+		addDescription("animal_oil_bottle", "Use on any furnace for a small amount of heat.");
+		addDescription("acorn", "Acorns are tough nuts that drop from Oak Leaves or Squirrels.");
+		addDescription("salmonberries", "Salmonberries can be commonly found as a wild plant in forests.");
+		addDescription("mini_melon", "Mini Melons can be commonly found in plains. Can grow into a big Melon or be sliced with a Knife.");
+		addDescription("cantaloupe", "Cantaloupes can be commonly found on beaches.");
+		addDescription("cantaloupe_seeds", "Cantaloupe Seeds will sprout when planted in sand.");
+		addDescription("sliceable", "Sliceable with a Knife.");
+
+		// Jade
 		add("tooltip.jade.age", "Age: %s");
 		add("config.jade.plugin_delightful.crop_progress", "Crop Progress");
 		add("config.jade.plugin_delightful.mushroom_colony", "Mushroom Colony");
 		add("config.jade.plugin_delightful.pie_icons", "Pie Icons");
+	}
+
+	public void addDescription(String key, String value) {
+		add("desc." + Delightful.MODID + "." + key, value);
+	}
+
+	public void addTooltip(String key, String value) {
+		add("tooltip." + Delightful.MODID + "." + key, value);
 	}
 }

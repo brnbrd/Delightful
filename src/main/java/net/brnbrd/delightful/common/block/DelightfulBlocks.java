@@ -5,6 +5,7 @@ import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.compat.Mods;
 import net.brnbrd.delightful.compat.UnusualEndCompat;
+import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.core.cauldron.CauldronInteraction;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -29,7 +30,7 @@ public class DelightfulBlocks {
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Delightful.MODID);
 
 	public static final RegistryObject<Block> QUARTZ_CABINET = registerBlock("quartz_cabinet",
-			() -> new DelightfulCabinetBlock(DelightfulItems.getGem("quartz"), Block.Properties.copy(Blocks.QUARTZ_BLOCK).requiresCorrectToolForDrops().strength(0.8F)));
+			() -> new DelightfulCabinetBlock(DelightfulItemTags.getGem("quartz"), Block.Properties.copy(Blocks.QUARTZ_BLOCK).requiresCorrectToolForDrops().strength(0.8F)));
 	public static final RegistryObject<Block> BASALT_CABINET = registerBlock("basalt_cabinet",
 			() -> new DelightfulCabinetBlock(Ingredient.of(Items.BASALT), Block.Properties.copy(Blocks.BASALT).requiresCorrectToolForDrops().strength(1.25F, 4.2F).sound(SoundType.BASALT)));
 	public static final RegistryObject<Block> WILD_SALMONBERRIES = BLOCKS.register("wild_salmonberries",

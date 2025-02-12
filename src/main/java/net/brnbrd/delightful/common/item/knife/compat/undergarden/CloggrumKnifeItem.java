@@ -1,13 +1,13 @@
 package net.brnbrd.delightful.common.item.knife.compat.undergarden;
 
-import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.DelightfulTiers;
-import net.brnbrd.delightful.common.item.knife.CompatKnifeItem;
+import net.brnbrd.delightful.common.item.knife.DKnifeItem;
 import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 
-public class CloggrumKnifeItem extends CompatKnifeItem {
+public class CloggrumKnifeItem extends DKnifeItem {
 	public CloggrumKnifeItem(Properties properties) {
-		super(Mods.UG, DelightfulItems.ingot("cloggrum"), DelightfulTiers.CLOGGRUM, properties);
+		super(DelightfulItemTags.ingot("cloggrum"), DelightfulTiers.CLOGGRUM, properties, Mods.UG);
 	}
 
 	@Override

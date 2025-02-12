@@ -8,6 +8,8 @@ import net.brnbrd.delightful.compat.Mods;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
@@ -27,17 +29,16 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.tags.ITagManager;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
-import java.util.List;
-import java.util.Objects;
 import java.util.UUID;
 import java.util.function.Supplier;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 public class Util {
-
+	public static final String[] EMPTY = new String[0];
 	public static final String LOADER = "forge";
 	public static final UUID BLOCK_REACH = UUID.fromString("C18598A9-F66A-44E7-9CE1-99B1EE178678");
 	public static final UUID ENTITY_REACH = UUID.fromString("61F992E6-276F-4D2B-88A7-823CB64BA459");
@@ -48,6 +49,21 @@ public class Util {
 
 	public static ResourceLocation rl(String separated) {
 		return new ResourceLocation(separated);
+	}
+
+	public static ResourceLocation rl(ItemLike itemLike) {
+		if (itemLike instanceof Item item) {
+			IForgeRegistry<Item> reg = ForgeRegistries.ITEMS;
+			if (reg.containsValue(item)) return reg.getKey(item);
+		} else if (itemLike instanceof Block block) {
+			IForgeRegistry<Block> reg = ForgeRegistries.BLOCKS;
+			if (reg.containsValue(block)) return reg.getKey(block);
+		}
+		return rl("", "");
+	}
+
+	public static ResourceLocation delight(String path) {
+		return rl(Delightful.MODID, path);
 	}
 
 	public static TagKey<Item> it(String modid, String path) {
@@ -76,6 +92,14 @@ public class Util {
 		return tags != null && tags.isKnownTagName(tag) && !tags.getTag(tag).isEmpty();
 	}
 
+	public static String tagName(TagKey<?> tagKey) {
+		return tagKey.location().toString();
+	}
+
+	public static MutableComponent tagComponent(TagKey<?> tagKey) {
+		return Component.literal(tagName(tagKey));
+	}
+
 	public static ObjectArrayList<ItemStack> with(ObjectArrayList<ItemStack> before, ItemStack addition) {
 		before.add(addition);
 		return before.clone();
@@ -97,7 +121,7 @@ public class Util {
 	}
 
 	public static boolean itemExists(ResourceLocation location) {
-		return ForgeRegistries.ITEMS.containsKey(location);
+		return Mods.loaded(location.getNamespace()) && ForgeRegistries.ITEMS.containsKey(location);
 	}
 
 	@Nullable
@@ -112,7 +136,13 @@ public class Util {
 
 	@NotNull
 	public static Item item(ResourceLocation location, @NotNull Item backup) {
-		return itemExists(location) ? Objects.requireNonNull(item(location)) : backup;
+		if (itemExists(location)) {
+			Item item = item(location);
+			if (item != null) {
+				return item;
+			}
+		}
+		return backup;
 	}
 
 	@NotNull
@@ -122,19 +152,17 @@ public class Util {
 
 	@NotNull
 	public static ItemStack itemStack(ResourceLocation location, @NotNull ItemStack backup) {
-		return (
-			itemExists(location) ?
-			new ItemStack(Objects.requireNonNull(item(location))) :
-			backup
-		);
+		if (itemExists(location)) {
+			Item returnItem = item(location);
+			if (returnItem != null) {
+				return new ItemStack(returnItem);
+			}
+		}
+		return backup;
 	}
 
 	public static boolean itemStackIs(ItemStack stack, ResourceLocation location) {
-		return (
-			Mods.loaded(location.getNamespace()) &&
-			itemExists(location) &&
-			stack.is(item(location))
-		);
+		return itemExists(location) && stack.is(item(location));
 	}
 
 	@Nullable
@@ -152,48 +180,50 @@ public class Util {
 	}
 
 	@Nullable
-	public static MobEffect effect(String modid, String name, @Nullable MobEffect backup) {
-		ResourceLocation effLocation = Util.rl(modid, name);
+	public static MobEffect effect(ResourceLocation effLocation, MobEffect... backup) {
 		return (
 			effectExists(effLocation) ?
 			ForgeRegistries.MOB_EFFECTS.getValue(effLocation) :
-			backup
+			backup.length > 0 ? backup[0] : null
 		);
 	}
 
+	@Nullable
+	public static MobEffect effect(String modid, String name, MobEffect... backup) {
+		return effect(Util.rl(modid, name), backup);
+	}
+
 	public static void addEffect(LivingEntity entity, @Nullable MobEffect effect, int duration, int amp) {
-		if (effect != null) {
-			entity.addEffect(new MobEffectInstance(effect, duration, amp));
-		}
+		if (effect != null) entity.addEffect(new MobEffectInstance(effect, duration, amp));
 	}
 
 	public static void addEffect(LivingEntity entity, String modid, String name, int duration, int amp, MobEffect... backup) {
 		MobEffect me = backup.length >= 1 ? effect(modid, name, backup[0]) : effect(modid, name, null);
-		if (me != null) {
-			addEffect(entity, me, duration, amp);
-		}
+		if (me != null) addEffect(entity, me, duration, amp);
 	}
 
-	public static ItemStack gs(RegistryObject<Item> r, int count) {
-		return new ItemStack(r.get(), count);
+	public static ItemStack gs(RegistryObject<Item> r, int... count) { // Only considers first vararg entry
+		return new ItemStack(r.get(), count.length > 0 ? count[0] : 1);
 	}
 
-	public static ItemStack gs(RegistryObject<Item> r) {
-		return gs(r, 1);
+	public static String nameSpace(ItemLike itemLike) {
+		return rl(itemLike).getNamespace();
 	}
 
-	public static String name(Item item) {
-		return (ForgeRegistries.ITEMS.containsValue(item)) ?
-				Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath() : "";
-	}
-
-	public static String name(Block block) {
-		return (ForgeRegistries.BLOCKS.containsValue(block)) ?
-				Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath() : "";
+	public static String name(ItemLike itemLike) {
+		return rl(itemLike).getPath();
 	}
 
 	public static String name(RegistryObject<?> reg) {
 		return reg.getId().getPath();
+	}
+
+	public static String nameSpace(ItemStack stack) {
+		return nameSpace(stack.getItem());
+	}
+
+	public static String name(ItemStack stack) {
+		return name(stack.getItem());
 	}
 
 	public static Ingredient ing(Supplier<? extends ItemLike> i) {
@@ -247,5 +277,21 @@ public class Util {
 				.findAny()
 				.orElse(configEnabled(item))
 		);
+	}
+
+	public static MutableComponent translation(String modid, String key) {
+		return Component.translatable(modid + "." + key);
+	}
+
+	public static MutableComponent translation(String modid, String prefix, String key) {
+		return Component.translatable(prefix + "." + modid + "." + key);
+	}
+
+	public static MutableComponent description(String key) {
+		return Component.translatable("desc." + Delightful.MODID + "." + key);
+	}
+
+	public static MutableComponent tooltip(String key) {
+		return Component.translatable("tooltip." + Delightful.MODID + "." + key);
 	}
 }

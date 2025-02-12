@@ -1,12 +1,11 @@
-package net.brnbrd.delightful.common.item.knife.compat.aether_redux;
+package net.brnbrd.delightful.common.item.knife.compat.aether.aether_redux;
 
-import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.knife.compat.aether.AetherKnifeItem;
 import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -28,7 +27,7 @@ public class VeridiumKnifeItem extends AetherKnifeItem implements VeridiumItem {
 	private final Supplier<? extends Item> uninfused;
 
 	public VeridiumKnifeItem(Tier tier, Properties properties, Supplier<? extends Item> uninfused) {
-		super(Mods.AER, DelightfulItems.ingot("veridium"), tier, properties);
+		super(DelightfulItemTags.ingot("veridium"), tier, properties, Mods.AER);
 		this.uninfused = uninfused;
 	}
 
@@ -38,13 +37,13 @@ public class VeridiumKnifeItem extends AetherKnifeItem implements VeridiumItem {
 	}
 
 	@Override
-	public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltips, @NotNull TooltipFlag advanced) {
-		MutableComponent infusion = Component.translatable("tooltip.aether_redux.infusion_charge",
+	public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> tooltips, @NotNull TooltipFlag advanced) {
+		tooltips.add(Component.translatable(
+				"tooltip.aether_redux.infusion_charge",
 				stack.getTag() == null ? 0 : stack.getTag().getByte(VeridiumItem.NBT_KEY)
-		).withStyle(ChatFormatting.GRAY);
-		tooltips.add(infusion);
-		Component info = TooltipUtils.TOOLTIP_SHIFT_FOR_INFO.apply(Component.translatable("gui.aether_redux.infusion_info"));
-		tooltips.add(info);
+			).withStyle(ChatFormatting.GRAY)
+		);
+		tooltips.add(TooltipUtils.TOOLTIP_SHIFT_FOR_INFO.apply(Component.translatable("gui.aether_redux.infusion_info")));
 		super.appendHoverText(stack, level, tooltips, advanced);
 	}
 
@@ -75,13 +74,12 @@ public class VeridiumKnifeItem extends AetherKnifeItem implements VeridiumItem {
 	}
 
 	public static class Uninfused extends AetherKnifeItem {
-
 		public Uninfused(Tier tier, Properties properties) {
-			super(Mods.AER, DelightfulItems.ingot("veridium"), tier, properties);
+			super(DelightfulItemTags.ingot("veridium"), tier, properties, Mods.AER);
 		}
 
 		@Override
-		public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, List<Component> tooltips, @NotNull TooltipFlag advanced) {
+		public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> tooltips, @NotNull TooltipFlag advanced) {
 			Component info = TooltipUtils.TOOLTIP_SHIFT_FOR_INFO.apply(Component.translatable("gui.aether_redux.infusion_info"));
 			tooltips.add(info);
 			super.appendHoverText(stack, level, tooltips, advanced);

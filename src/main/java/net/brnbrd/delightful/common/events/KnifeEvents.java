@@ -6,13 +6,14 @@ import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public class KnifeEvents {
-
 	// Twilight Forest, Nether's Exoticism, Create Stuff & Additions Compat
 	@SubscribeEvent
 	void onFireKnife(LivingAttackEvent e) {
-		if (e.getSource().getEntity() instanceof LivingEntity living &&
-				living.getMainHandItem().is(DelightfulItemTags.FIRE_KNIVES) &&
-				!e.getEntity().fireImmune()) {
+		if (
+			e.getSource().getEntity() instanceof LivingEntity living &&
+			living.getMainHandItem().is(DelightfulItemTags.FIRE_KNIVES) &&
+			!e.getEntity().fireImmune()
+		) {
 			e.getEntity().setSecondsOnFire(15);
 		}
 	}

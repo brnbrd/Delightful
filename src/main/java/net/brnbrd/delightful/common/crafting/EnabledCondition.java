@@ -1,7 +1,6 @@
 package net.brnbrd.delightful.common.crafting;
 
 import com.google.gson.JsonObject;
-import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
@@ -9,7 +8,7 @@ import net.minecraftforge.common.crafting.conditions.ICondition;
 import net.minecraftforge.common.crafting.conditions.IConditionSerializer;
 
 public class EnabledCondition implements ICondition {
-	private static final ResourceLocation NAME = Util.rl(Delightful.MODID, "enabled");
+	private static final ResourceLocation NAME = Util.delight("enabled");
 	private final String value;
 
 	public EnabledCondition(String value) {

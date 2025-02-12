@@ -7,9 +7,11 @@ import net.minecraft.world.item.Items;
 public class VenisonStewCupItem extends VenisonStewItem {
 	public VenisonStewCupItem(Properties properties, boolean hasPotionEffectTooltip, boolean hasCustomTooltip) {
 		super(
-				properties.stacksTo(16).craftRemainder(Util.item(Util.rl(Mods.MD, "copper_cup"), Items.BOWL)),
-				hasPotionEffectTooltip,
-				hasCustomTooltip
+			properties
+				.stacksTo(16)
+				.craftRemainder(Util.item(Util.rl(Mods.MD, "copper_cup"), Items.BOWL)),
+			hasPotionEffectTooltip,
+			hasCustomTooltip
 		);
 	}
 

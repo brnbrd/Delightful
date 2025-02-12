@@ -1,7 +1,7 @@
 package net.brnbrd.delightful.compat;
 
 import net.brnbrd.delightful.common.item.knife.Knives;
-import net.brnbrd.delightful.common.item.knife.compat.aether_redux.VeridiumKnifeItem;
+import net.brnbrd.delightful.common.item.knife.compat.aether.aether_redux.VeridiumKnifeItem;
 import net.zepalesque.redux.item.util.ReduxItemTiers;
 import java.util.function.Supplier;
 

@@ -22,8 +22,12 @@ public class ZaniteKnifeItem extends AetherKnifeItem {
 		ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
 		if (this.enabled() && slot == EquipmentSlot.MAINHAND) {
 			builder.putAll(map);
-			builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_UUID,
-					"Attack damage modifier", calculateIncrease(map, stack), AttributeModifier.Operation.ADDITION));
+			builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(
+				BASE_ATTACK_DAMAGE_UUID,
+				"Attack damage modifier",
+				calculateIncrease(map, stack),
+				AttributeModifier.Operation.ADDITION)
+			);
 			return builder.build();
 		}
 		return map;
@@ -31,7 +35,7 @@ public class ZaniteKnifeItem extends AetherKnifeItem {
 
 	private int calculateIncrease(Multimap<Attribute, AttributeModifier> map, ItemStack stack) {
 		double baseDamage = 0.0;
-		for (Iterator<AttributeModifier> it = map.get(Attributes.ATTACK_DAMAGE).stream().iterator(); it.hasNext(); ) {
+		for (Iterator<AttributeModifier> it = map.get(Attributes.ATTACK_DAMAGE).stream().iterator(); it.hasNext();) {
 			AttributeModifier modifier = it.next();
 			baseDamage += modifier.getAmount();
 		}

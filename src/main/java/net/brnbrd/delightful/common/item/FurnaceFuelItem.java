@@ -1,5 +1,6 @@
 package net.brnbrd.delightful.common.item;
 
+import net.brnbrd.delightful.Util;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionResult;
@@ -26,44 +27,50 @@ public class FurnaceFuelItem extends DItem {
 
 	public static InteractionResult useFuel(ItemStack stack, BlockEntity entity, Player player) {
 		if (
-				stack.getItem() instanceof FurnaceFuelItem fuel &&
-						entity instanceof AbstractFurnaceBlockEntity furnace
+			stack.getItem() instanceof FurnaceFuelItem fuel &&
+			entity instanceof AbstractFurnaceBlockEntity furnace
 		) {
 			ContainerData data = furnace.dataAccess;
 			int newTime = data.get(0) + fuel.fuelTime + 1;
 			data.set(0, newTime);
 			data.set(1, newTime);
 			furnace.setChanged();
-			shrinkAdd(player, stack);
+			if (stack.hasCraftingRemainingItem()) {
+				player.addItem(stack.getCraftingRemainingItem());
+			}
+			stack.shrink(1);
 			return InteractionResult.CONSUME_PARTIAL;
 		}
 		return InteractionResult.FAIL;
 	}
 
-	private static void shrinkAdd(Player p, ItemStack i) {
-		if (i.hasCraftingRemainingItem()) {
-			p.addItem(i.getCraftingRemainingItem());
-		}
-		i.shrink(1);
-	}
-
 	@Override
-	public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> comps, @NotNull TooltipFlag pIsAdvanced) {
+	public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> comps, @NotNull TooltipFlag isAdvanced) {
 		if (this.enabled()) {
-			comps.add(Component.translatable("tooltip.sneak_right").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.UNDERLINE));
 			comps.add(
-					Component.literal(String.valueOf(this.fuelTime / 20)).withStyle(ChatFormatting.YELLOW)
-							.append(Component.translatable("tooltip.furnace_fuel_burn_time").withStyle(ChatFormatting.WHITE))
+				Util.tooltip("sneak_right")
+					.withStyle(ChatFormatting.GRAY)
+					.withStyle(ChatFormatting.UNDERLINE)
+			);
+			comps.add(
+				Component.literal(String.valueOf(this.fuelTime / 20))
+					.withStyle(ChatFormatting.YELLOW)
+					.append(
+						Util.tooltip("furnace_fuel_burn_time")
+							.withStyle(ChatFormatting.WHITE)
+					)
 			);
 		}
-		super.appendHoverText(stack, level, comps, pIsAdvanced);
+		super.appendHoverText(stack, level, comps, isAdvanced);
 	}
 
 	@Override
 	public @NotNull InteractionResult useOn(UseOnContext con) {
-		return useFuel(con.getItemInHand(),
-				con.getLevel().getExistingBlockEntity(con.getClickedPos()),
-				con.getPlayer());
+		return useFuel(
+			con.getItemInHand(),
+			con.getLevel().getExistingBlockEntity(con.getClickedPos()),
+			con.getPlayer()
+		);
 	}
 
 	@Override

@@ -1,4 +1,4 @@
-package net.brnbrd.delightful.common.item.knife.compat.ancient_aether;
+package net.brnbrd.delightful.common.item.knife.compat.aether.ancient_aether;
 
 import com.google.common.collect.Multimap;
 import net.brnbrd.delightful.Util;
@@ -10,9 +10,8 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.ItemStack;
 
 public class ValkyrumKnifeItem extends AetherKnifeItem implements ValkyrumReach {
-
 	public ValkyrumKnifeItem(Properties properties) {
-		super("ancient_aether", Util.it("ancient_aether", "valkyrum"), DelightfulTiers.VALKYRUM, properties);
+		super(Util.it("ancient_aether", "valkyrum"), DelightfulTiers.VALKYRUM, properties, "ancient_aether");
 	}
 
 	public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlot slot, ItemStack stack) {

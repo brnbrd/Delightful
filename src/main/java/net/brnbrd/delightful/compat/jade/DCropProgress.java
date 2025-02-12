@@ -1,6 +1,5 @@
 package net.brnbrd.delightful.compat.jade;
 
-import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.block.CantaloupePlantBlock;
 import net.brnbrd.delightful.common.block.SalmonberryBushBlock;
@@ -37,6 +36,6 @@ public enum DCropProgress implements IBlockComponentProvider {
 
 	@Override
 	public ResourceLocation getUid() {
-		return Util.rl(Delightful.MODID, "crop_progress");
+		return Util.delight("crop_progress");
 	}
 }

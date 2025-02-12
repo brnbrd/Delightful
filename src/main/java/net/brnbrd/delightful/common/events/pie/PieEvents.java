@@ -1,11 +1,9 @@
 package net.brnbrd.delightful.common.events.pie;
 
-import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.compat.Mods;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -37,7 +35,7 @@ public class PieEvents {
 			isBerryPieOrMuffin(stack)
 		) {
 			e.getToolTip().add(
-				Component.translatable(Delightful.MODID + ".placeable.desc")
+				Util.tooltip("placeable")
 					.withStyle(ChatFormatting.DARK_GRAY)
 					.withStyle(ChatFormatting.ITALIC)
 			);

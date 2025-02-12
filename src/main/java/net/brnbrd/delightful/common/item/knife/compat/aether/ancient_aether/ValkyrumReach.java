@@ -1,4 +1,4 @@
-package net.brnbrd.delightful.common.item.knife.compat.ancient_aether;
+package net.brnbrd.delightful.common.item.knife.compat.aether.ancient_aether;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;

@@ -1,9 +1,9 @@
-package net.brnbrd.delightful.common.item.knife.compat.mythicbotany;
+package net.brnbrd.delightful.common.item.knife.compat.botania.mythicbotany;
 
-import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.DelightfulTiers;
 import net.brnbrd.delightful.compat.BotaniaCompat;
 import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 import org.jetbrains.annotations.NotNull;
@@ -41,6 +41,6 @@ public class AlfsteelTier implements Tier {
 
 	@Override
 	public @NotNull Ingredient getRepairIngredient() {
-		return DelightfulItems.getIngot("alfsteel");
+		return DelightfulItemTags.getIngot("alfsteel");
 	}
 }

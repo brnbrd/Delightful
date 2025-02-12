@@ -23,13 +23,7 @@
             "item": "minecraft:glass_bottle"
           },
           {
-            "item": "minecraft:honey_bottle"
-          },
-          {
-            "tag": "forge:milk"
-          },
-          {
-            "tag": "forge:matcha"
+            "item": "delightful:matcha_latte"
           },
           {
             "tag": "forge:berries"

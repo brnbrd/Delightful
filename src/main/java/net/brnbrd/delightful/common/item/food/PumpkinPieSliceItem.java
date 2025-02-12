@@ -1,8 +1,10 @@
 package net.brnbrd.delightful.common.item.food;
 
+import vectorwing.farmersdelight.FarmersDelight;
+
 public class PumpkinPieSliceItem extends CompatPieSliceItem {
 	public PumpkinPieSliceItem(Properties prop) {
-		super(prop, null);
+		super(prop, FarmersDelight.MODID);
 	}
 
 	@Override

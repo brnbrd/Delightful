@@ -16,7 +16,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class EnderNectarItem extends DrinkItem {
 	public EnderNectarItem(Properties properties) {
-		super(properties, 0.0F, false, true);
+		super(properties, false, true);
 	}
 
 	@Override

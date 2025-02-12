@@ -8,6 +8,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.NotNull;
+import vectorwing.farmersdelight.FarmersDelight;
 import java.util.Optional;
 import java.util.function.Supplier;
 
@@ -72,42 +73,28 @@ public class Mods {
 	public static final String WB = "wildberries";
 	public static final String YH = "youkaishomecoming";
 
+	// A single mod must be loaded
 	public static boolean loaded(@NotNull String modid) {
-		return (modid.equals(Delightful.MODID)) || ModList.get().isLoaded(modid);
+		return (
+			modid.equals(Delightful.MODID) ||
+			modid.equals(FarmersDelight.MODID) ||
+			ModList.get().isLoaded(modid)
+		);
 	}
 
-	// All must be loaded
-	public static boolean loaded(@NotNull String... modids) {
-		if (modids.length < 1) {
-			return true;
-		} else if (modids.length == 1) {
-			return loaded(modids[0]);
-		} else {
-			for (String mod : modids) {
-				if (!loaded(mod)) {
-					return false;
-				}
+	// Can check for a single mod (strategy ignored) or multiple mods
+	public static boolean loaded(Strategy strategy, @NotNull String... modids) {
+		if (modids.length < 1) return true;
+		return switch (strategy) {
+			case AND -> { // All must be loaded
+				for (String mod : modids) if (!loaded(mod)) yield false;
+				yield true;
 			}
-		}
-		return true;
-	}
-
-	// One must be loaded
-	public static boolean orLoaded(@NotNull String... modids) {
-		return orLoaded(false, modids);
-	}
-
-	public static boolean orLoaded(boolean fallback, @NotNull String... modids) {
-		if (modids.length == 1) {
-			return loaded(modids[0]);
-		} else if (modids.length > 0) {
-			for (String mod : modids) {
-				if (loaded(mod)) {
-					return true;
-				}
+			case OR -> { // Only one must be loaded
+				for (String mod : modids) if (loaded(mod)) yield true;
+				yield false;
 			}
-		}
-		return fallback;
+		};
 	}
 
 	public static Supplier<MobEffect> getGreenTeaEffect() {

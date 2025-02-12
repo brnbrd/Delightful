@@ -1,16 +1,15 @@
 package net.brnbrd.delightful.common.item.knife.compat.deeperdarker;
 
+import net.brnbrd.delightful.common.item.knife.DKnifeItem;
 import net.minecraft.world.item.crafting.RecipeType;
-import org.jetbrains.annotations.Nullable;
 import net.brnbrd.delightful.common.item.DelightfulTiers;
-import net.brnbrd.delightful.common.item.knife.CompatKnifeItem;
 import net.brnbrd.delightful.compat.Mods;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
+import org.jetbrains.annotations.Nullable;
 
-public class ResonariumKnifeItem extends CompatKnifeItem {
-
+public class ResonariumKnifeItem extends DKnifeItem {
 	public ResonariumKnifeItem(Properties properties) {
-		super(Mods.DD, DelightfulItemTags.RESONARIUM_PLATE, DelightfulTiers.RESONARIUM, properties);
+		super(DelightfulItemTags.RESONARIUM_PLATE, DelightfulTiers.RESONARIUM, properties, Mods.DD);
 	}
 
 	@Override

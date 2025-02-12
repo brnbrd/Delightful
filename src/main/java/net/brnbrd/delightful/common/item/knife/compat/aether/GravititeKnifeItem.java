@@ -34,8 +34,12 @@ public class GravititeKnifeItem extends AetherKnifeItem {
 	}
 
 	@Override
-	public @Nullable TagKey<Item> getTag() {
-		return (Mods.loaded(Mods.AER)) ? DelightfulItemTags.INGOTS_GRAVITITE : DelightfulItemTags.ENCHANTED_GRAVITITE;
+	public TagKey<Item> getDependencyTag() {
+		return (
+			Mods.loaded(Mods.AER) ?
+			DelightfulItemTags.INGOTS_GRAVITITE :
+			DelightfulItemTags.ENCHANTED_GRAVITITE
+		);
 	}
 
 	@Override

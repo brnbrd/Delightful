@@ -1,7 +1,7 @@
 # Delightful
 
 <a href="https://www.curseforge.com/minecraft/mc-mods/delightful">
-  <img src="http://cf.way2muchnoise.eu/637529.svg" alt="CurseForge Downloads">
+  <img src="https://cf.way2muchnoise.eu/637529.svg" alt="CurseForge Downloads">
 </a>
 <br>
 <img src="https://i.imgur.com/sC7sSiQ.png" width="50%">

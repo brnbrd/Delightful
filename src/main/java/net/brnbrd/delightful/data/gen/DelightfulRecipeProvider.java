@@ -6,8 +6,7 @@ import net.brnbrd.delightful.common.block.DelightfulBlocks;
 import net.brnbrd.delightful.common.block.DelightfulCabinetBlock;
 import net.brnbrd.delightful.common.crafting.EnabledCondition;
 import net.brnbrd.delightful.common.item.DelightfulItems;
-import net.brnbrd.delightful.common.item.ICompat;
-import net.brnbrd.delightful.common.item.knife.DelightfulKnifeItem;
+import net.brnbrd.delightful.common.item.knife.DKnifeItem;
 import net.brnbrd.delightful.common.item.knife.Knives;
 import net.brnbrd.delightful.compat.Mods;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
@@ -30,6 +29,7 @@ import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.apache.commons.lang3.ArrayUtils;
+import vectorwing.farmersdelight.FarmersDelight;
 import vectorwing.farmersdelight.client.recipebook.CookingPotRecipeBookTab;
 import vectorwing.farmersdelight.common.registry.ModBlocks;
 import vectorwing.farmersdelight.common.registry.ModItems;
@@ -37,7 +37,9 @@ import vectorwing.farmersdelight.common.tag.ForgeTags;
 import vectorwing.farmersdelight.data.builder.CookingPotRecipeBuilder;
 import vectorwing.farmersdelight.data.builder.CuttingBoardRecipeBuilder;
 import vectorwing.farmersdelight.data.recipe.CookingRecipes;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 import java.util.function.Consumer;
 import org.jetbrains.annotations.NotNull;
@@ -56,11 +58,11 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 		// Knives
 		DelightfulItems.ITEMS.getEntries().stream()
 				.map(RegistryObject::get)
-				.filter(item -> item instanceof DelightfulKnifeItem)
-				.map(item -> (DelightfulKnifeItem) item)
-				.filter(knife -> knife.getTag() != null && knife.getRecipeType() == RecipeType.CRAFTING)
+				.filter(item -> item instanceof DKnifeItem)
+				.map(item -> (DKnifeItem) item)
+				.filter(knife -> knife.getDependencyTag() != null && knife.getRecipeType() == RecipeType.CRAFTING)
 				.forEach(k -> knife(k, finished));
-		knifeSmeltAndBlast((DelightfulKnifeItem) Knives.BONE.get(), "bone/knife", Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(Items.BONE_MEAL)), finished);
+		knifeSmeltAndBlast((DKnifeItem) Knives.BONE.get(), "bone/knife", Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(Items.BONE_MEAL)), finished);
 
 		// Smelting
 		foodSmeltingRecipes("cactus_steak", DelightfulItems.CACTUS_FLESH.get(), DelightfulItems.CACTUS_STEAK.get(), 0.35F, finished);
@@ -177,22 +179,18 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 				"cooking/matcha_latte", finished, enabled("matcha_latte"));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.BERRY_MATCHA_LATTE.get(), 1)
 						.requires(Items.GLASS_BOTTLE)
-						.requires(Items.HONEY_BOTTLE)
-						.requires(ForgeTags.MILK)
-						.requires(DelightfulItemTags.MATCHA)
+						.requires(DelightfulItems.MATCHA_LATTE.get())
 						.requires(ForgeTags.BERRIES)
 						.requires(Items.ICE)
-						.unlockedBy("has_matcha", has(DelightfulItemTags.MATCHA)),
-				"food/berry_matcha_latte", finished, enabled("berry_matcha_latte"), tagEmpty(DelightfulItemTags.ICE_CUBES));
+						.unlockedBy("has_matcha_latte", has(DelightfulItems.MATCHA_LATTE.get())),
+				"food/berry_matcha_latte", finished, enabled(DelightfulItems.BERRY_MATCHA_LATTE), tagEmpty(DelightfulItemTags.ICE_CUBES));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.BERRY_MATCHA_LATTE.get(), 1)
 						.requires(Items.GLASS_BOTTLE)
-						.requires(Items.HONEY_BOTTLE)
-						.requires(ForgeTags.MILK)
-						.requires(DelightfulItemTags.MATCHA)
+						.requires(DelightfulItems.MATCHA_LATTE.get())
 						.requires(ForgeTags.BERRIES)
 						.requires(DelightfulItemTags.ICE_CUBES)
-						.unlockedBy("has_matcha", has(DelightfulItemTags.MATCHA)),
-				"food/berry_matcha_latte_neapolitan", finished, enabled("berry_matcha_latte"), not(tagEmpty(DelightfulItemTags.ICE_CUBES)));
+						.unlockedBy("has_matcha_latte", has(DelightfulItems.MATCHA_LATTE.get())),
+				"food/berry_matcha_latte_neapolitan", finished, enabled(DelightfulItems.BERRY_MATCHA_LATTE), not(tagEmpty(DelightfulItemTags.ICE_CUBES)));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.FIELD_SALAD.get(), 1)
 						.requires(Items.BOWL)
 						.requires(Ingredient.of(ForgeTags.SALAD_INGREDIENTS), 2)
@@ -208,7 +206,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 						.requires(DelightfulItemTags.NUT_BUTTER)
 						.requires(DelightfulItemTags.NUT_BUTTER)
 						.unlockedBy("has_nut_butter", has(DelightfulItemTags.NUT_BUTTER)),
-				"food/nut_dough", finished, enabled("nut_dough"));
+				"food/nut_dough", finished, enabled(DelightfulItems.NUT_DOUGH));
 
 		sack(DelightfulItems.ACORN_SACK, DelightfulItems.ACORN.get(), "acorn", finished);
 		sack(DelightfulItems.SALMONBERRY_SACK, DelightfulItems.SALMONBERRIES.get(), "salmonberry", finished);
@@ -697,12 +695,12 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 				.build(finished, ModItems.CHOCOLATE_PIE.getId());
 		CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(DelightfulItems.WILD_SALMONBERRIES.get()), Ingredient.of(ForgeTags.TOOLS_KNIVES), DelightfulItems.SALMONBERRIES.get(), 1)
 				.addResult(Items.ORANGE_DYE, 1)
-				.build(finished, Util.rl(Delightful.MODID, "cutting/wild_salmonberries"));
+				.build(finished, Util.delight("cutting/wild_salmonberries"));
 		CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(Items.SUGAR_CANE),
 						Ingredient.of(ForgeTags.TOOLS_KNIVES),
 						Items.SUGAR, 1)
 				.addResultWithChance(Items.SUGAR, 0.5F, 1)
-				.build(finished, Util.rl(Delightful.MODID, "cutting/sugar_cane"));
+				.build(finished, Util.delight("cutting/sugar_cane"));
 	}
 
 	private InventoryChangeTrigger.TriggerInstance has(ItemLike... items) {
@@ -729,7 +727,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 	}
 
 	private void wrap(SmithingTransformRecipeBuilder builder, String name, Consumer<FinishedRecipe> consumer, ICondition... conds) {
-		ResourceLocation loc = Util.rl(Delightful.MODID, name);
+		ResourceLocation loc = Util.delight(name);
 		ConditionalRecipe.Builder cond = ConditionalRecipe.builder();
 		if (conds.length >= 1) {
 			for (ICondition currentCond : conds) {
@@ -808,8 +806,8 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 				.build(finished, Delightful.MODID, "cabinets/" + path);
 	}
 
-	private void knife(DelightfulKnifeItem knife, Consumer<FinishedRecipe> finished) {
-		TagKey<Item> tag = knife.getTag();
+	private void knife(DKnifeItem knife, Consumer<FinishedRecipe> finished) {
+		TagKey<Item> tag = knife.getDependencyTag();
 		if (tag != null) {
 			String path = Util.name(knife);
 			ICondition[] conds = new ICondition[]{
@@ -818,36 +816,49 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			};
 			String[] conflicts = knife.getConflicts();
 			if (conflicts.length > 0) {
-				conds = ArrayUtils.addAll(conds, Arrays.stream(conflicts).map(conf -> not(modLoaded(conf))).toList().toArray(new ICondition[0]));
+				conds = ArrayUtils.addAll(conds, Arrays.stream(conflicts)
+					.map(conf -> not(modLoaded(conf)))
+					.toList()
+					.toArray(new ICondition[0])
+				);
 			}
-			if (knife instanceof ICompat compat) {
-				conds = ArrayUtils.addAll(conds, Arrays.stream(compat.getModid()).map(this::modLoaded).toList().toArray(new ICondition[0]));
+			String[] knifeMods = knife.getModid();
+			if (knifeMods.length > 0) {
+				List<String> dependencies = new ArrayList<>(Arrays.asList(knifeMods));
+				dependencies.remove(FarmersDelight.MODID);
+				if (!dependencies.isEmpty()) {
+					conds = ArrayUtils.addAll(conds, dependencies.stream()
+						.map(this::modLoaded)
+						.toList()
+						.toArray(new ICondition[0])
+					);
+				}
 			}
 			if (knife.getRecipeType() == RecipeType.CRAFTING) {
 				wrap(ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, knife)
-								.define('m', Ingredient.of(tag))
-								.define('s', knife.getRod())
-								.pattern("m")
-								.pattern("s")
-								.unlockedBy("has_" + tag.location().getPath(), has(tag)),
-						"knives/" + path, finished, conds);
+						.define('m', Ingredient.of(tag))
+						.define('s', knife.getRod())
+						.pattern("m")
+						.pattern("s")
+						.unlockedBy("has_" + tag.location().getPath(), has(tag)),
+					"knives/" + path, finished, conds);
 			}
 		}
 	}
 
-	private void knifeSmeltAndBlast(DelightfulKnifeItem knife, String metal, ResourceLocation nugget, Consumer<FinishedRecipe> finished) {
+	private void knifeSmeltAndBlast(DKnifeItem knife, String metal, ResourceLocation nugget, Consumer<FinishedRecipe> finished) {
 		ConditionalRecipe.builder()
 				.addCondition(and(enabled(Util.name(knife)), itemExists(nugget.getNamespace(), nugget.getPath())))
 				.addRecipe(f -> SimpleCookingRecipeBuilder.smelting(Ingredient.of(knife), RecipeCategory.COMBAT, Objects.requireNonNull(Util.item(nugget)), 0.1F, 200)
 						.unlockedBy("has_" + metal + "_knife", InventoryChangeTrigger.TriggerInstance.hasItems(knife))
-						.save(f, Util.rl(Delightful.MODID, "knives/smelting/" + metal + "_" + nugget.getNamespace())))
+						.save(f, Util.delight("knives/smelting/" + metal + "_" + nugget.getNamespace())))
 				.generateAdvancement()
 				.build(finished, Delightful.MODID, "knives/smelting/" + metal + "_" + nugget.getNamespace());
 		ConditionalRecipe.builder()
 				.addCondition(and(enabled(Util.name(knife)), itemExists(nugget.getNamespace(), nugget.getPath())))
 				.addRecipe(f -> SimpleCookingRecipeBuilder.blasting(Ingredient.of(knife), RecipeCategory.COMBAT, Objects.requireNonNull(Util.item(nugget)), 0.1F, 100)
 						.unlockedBy("has_" + metal + "_knife", InventoryChangeTrigger.TriggerInstance.hasItems(knife))
-						.save(f, Util.rl(Delightful.MODID, "knives/blasting/" + metal + "_" + nugget.getNamespace())))
+						.save(f, Util.delight("knives/blasting/" + metal + "_" + nugget.getNamespace())))
 				.generateAdvancement()
 				.build(finished, Delightful.MODID, "knives/blasting/" + metal + "_" + nugget.getNamespace());
 	}

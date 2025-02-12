@@ -8,6 +8,7 @@ import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.compat.BrewinChewinCompat;
 import net.brnbrd.delightful.compat.CasualnessDelightCompat;
 import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.Strategy;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;
@@ -96,7 +97,7 @@ public class ForgeEvents {
 				SlicedGourdBlock sliced = (SlicedGourdBlock) DelightfulBlocks.SLICED_GLOOMGOURD.get();
 				slice(sliced.defaultBlockState(), sliced.getSliceItem(), world, pos, SoundEvents.BAMBOO_BREAK, e, client);
 			} else if (
-					Mods.loaded(Mods.FU, Mods.FUD) &&
+					Mods.loaded(Strategy.AND, Mods.FU, Mods.FUD) &&
 					Util.name(current.getBlock()).equals("truffle_cake") &&
 					ForgeRegistries.ITEMS.containsKey(Util.rl(Mods.FUD, "truffle_cake_slice"))
 			) {

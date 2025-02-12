@@ -2,11 +2,13 @@ package net.brnbrd.delightful.common.item.knife;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
-import net.brnbrd.delightful.Delightful;
+import java.util.Collections;
+import java.util.List;
+import java.util.Locale;
 import net.brnbrd.delightful.Util;
+import org.codehaus.plexus.util.StringUtils;
+import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.common.item.ICompat;
-import net.brnbrd.delightful.common.item.IConfigured;
-import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -21,55 +23,57 @@ import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.util.Lazy;
-import org.codehaus.plexus.util.StringUtils;
+import vectorwing.farmersdelight.common.item.KnifeItem;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import vectorwing.farmersdelight.common.item.KnifeItem;
-import java.util.Collections;
-import java.util.List;
-import java.util.Locale;
 
-public class DelightfulKnifeItem extends KnifeItem implements IConfigured {
-	private final TagKey<Item> tag;
+public class DKnifeItem extends KnifeItem implements ICompat {
+	@Nullable private final TagKey<Item> tag;
+	@NotNull private final String[] modid;
 
-	public DelightfulKnifeItem(TagKey<Item> tag, Tier tier, Properties properties) {
+	public DKnifeItem(@Nullable TagKey<Item> tag, Tier tier, Properties properties) {
 		super(tier, 0.5F, -2.0F, properties);
 		this.tag = tag;
+		this.modid = Util.EMPTY;
+	}
+
+	public DKnifeItem(@Nullable TagKey<Item> tag, Tier tier, Properties properties, @NotNull String... modid) {
+		super(tier, 0.5F, -2.0F, properties);
+		this.tag = tag;
+		this.modid = modid;
+	}
+
+	public DKnifeItem(Tier tier, Properties properties) {
+		super(tier, 0.5F, -2.0F, properties);
+		this.tag = null;
+		this.modid = Util.EMPTY;
+	}
+
+	@Override
+	public @Nullable TagKey<Item> getDependencyTag() {
+		return this.tag;
+	}
+
+	@Override
+	public String[] getModid() {
+		return this.modid;
+	}
+
+	public List<Component> getTools() {
+		return Collections.emptyList();
+	}
+
+	@Override
+	public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> comps, @NotNull TooltipFlag pIsAdvanced) {
+		super.appendHoverText(stack, level, comps, pIsAdvanced);
+		if (this.enabled() && !this.getTools().isEmpty()) {
+			comps.addAll(this.getTools());
+		}
 	}
 
 	@Override
 	public boolean isValidRepairItem(@NotNull ItemStack pToRepair, @NotNull ItemStack pRepair) {
 		return this.enabled() && super.isValidRepairItem(pToRepair, pRepair);
-	}
-
-	@Override
-	public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> comps, @NotNull TooltipFlag pIsAdvanced) {
-		if (
-				this.enabledText(comps) &&
-						!(this instanceof ICompat) &&
-						this.enabled() &&
-						!this.isTag() &&
-						this.getTag() != null
-		) {
-			comps.add(Component.translatable("tooltip.requires_tag"));
-			comps.add(Component.literal(this.getTag().location().toString()).withStyle(ChatFormatting.UNDERLINE));
-		}
-		super.appendHoverText(stack, level, comps, pIsAdvanced);
-	}
-
-	@Nullable
-	public TagKey<Item> getTag() {
-		return this.tag;
-	}
-
-	// Returns true if there is an entry within the tag
-	public boolean isTag() {
-		return Util.tagPopulated(this.getTag());
-	}
-
-	@Override
-	public boolean enabled() {
-		return IConfigured.super.enabled() && this.isTag();
 	}
 
 	public Ingredient getRod() {
@@ -96,7 +100,7 @@ public class DelightfulKnifeItem extends KnifeItem implements IConfigured {
 		if (this.enabled() && slot == EquipmentSlot.MAINHAND && additional != null) {
 			ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
 			if (!mods.isEmpty()) {
-			builder.putAll(mods);
+				builder.putAll(mods);
 			}
 			builder.putAll(additional.get());
 			return builder.build();
@@ -105,12 +109,11 @@ public class DelightfulKnifeItem extends KnifeItem implements IConfigured {
 	}
 
 	public String getTranslation() {
-		return StringUtils.capitaliseAllWords(this.getDescriptionId().toLowerCase(Locale.ROOT)
-				.replace("item." + Delightful.MODID.toLowerCase(Locale.ROOT) + ".", "").replace("_", " ")
+		return StringUtils.capitaliseAllWords(
+			this.getDescriptionId()
+				.toLowerCase(Locale.ROOT)
+				.replace("item." + Delightful.MODID.toLowerCase(Locale.ROOT) + ".", "")
+				.replace("_", " ")
 		);
-	}
-
-	public List<Component> getTools() {
-		return Collections.emptyList();
 	}
 }

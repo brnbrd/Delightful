@@ -1,7 +1,7 @@
 package net.brnbrd.delightful.common.item.knife.compat.create_sa;
 
 import net.brnbrd.delightful.common.item.DelightfulTiers;
-import net.brnbrd.delightful.common.item.knife.CompatKnifeItem;
+import net.brnbrd.delightful.common.item.knife.DKnifeItem;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
@@ -13,9 +13,9 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class BlazingKnifeItem extends CompatKnifeItem {
+public class BlazingKnifeItem extends DKnifeItem {
 	public BlazingKnifeItem(Properties properties) {
-		super("create_sa", Tags.Items.INGOTS_GOLD, DelightfulTiers.BLAZING, properties);
+		super(Tags.Items.INGOTS_GOLD, DelightfulTiers.BLAZING, properties, "create_sa");
 	}
 
 	// Tool takes no damage in Nether
@@ -35,8 +35,8 @@ public class BlazingKnifeItem extends CompatKnifeItem {
 	@Override
 	public List<Component> getTools() {
 		return List.of(
-				Component.literal("As hot as an authentic blaze!").withStyle(ChatFormatting.DARK_PURPLE),
-				Component.literal("Burns the mob the tool hits").withStyle(ChatFormatting.DARK_PURPLE)
+			Component.literal("As hot as an authentic blaze!").withStyle(ChatFormatting.DARK_PURPLE),
+			Component.literal("Burns the mob the tool hits").withStyle(ChatFormatting.DARK_PURPLE)
 		);
 	}
 }

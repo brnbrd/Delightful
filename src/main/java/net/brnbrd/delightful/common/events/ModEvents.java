@@ -6,11 +6,10 @@ import net.brnbrd.delightful.common.block.DelightfulCauldronInteractions;
 import net.brnbrd.delightful.common.crafting.EnabledCondition;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.IConfigured;
-import net.brnbrd.delightful.common.item.knife.DelightfulKnifeItem;
+import net.brnbrd.delightful.common.item.knife.DKnifeItem;
 import net.brnbrd.delightful.compat.Mods;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.brnbrd.delightful.network.DPacketHandler;
-import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
@@ -31,8 +30,10 @@ import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.forgespi.locating.IModFile;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.RegisterEvent;
 import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.registries.tags.ITagManager;
 import net.minecraftforge.resource.PathPackResources;
 import org.apache.commons.lang3.StringUtils;
 import vectorwing.farmersdelight.common.registry.ModCreativeTabs;
@@ -119,31 +120,33 @@ public class ModEvents {
 
 	@SubscribeEvent
 	public void buildContents(BuildCreativeModeTabContentsEvent event) {
-		var tags = ForgeRegistries.ITEMS.tags();
+		IForgeRegistry<Item> reg = ForgeRegistries.ITEMS;
+		ITagManager<Item> tags = reg.tags();
 		ResourceLocation TOAST_WITH_BLUEBERRIES = Util.rl(Mods.MOD, "toast_with_blueberries");
 		// Delightful Items
 		if (event.getTabKey() == ModCreativeTabs.TAB_FARMERS_DELIGHT.getKey()) {
 			DelightfulItems.ITEMS.getEntries().stream().filter(RegistryObject::isPresent).forEach((item) -> {
 				Item i = item.get();
-				ItemStack inst = i instanceof DelightfulKnifeItem ?
-						((DelightfulKnifeItem) i).getCreativeItem() : new ItemStack(i);
+				ItemStack inst = i instanceof DKnifeItem ? ((DKnifeItem) i).getCreativeItem() : new ItemStack(i);
 				if (
-						(i instanceof IConfigured conf && conf.enabled() && !inst.isEmpty()) ||
-								!(i instanceof IConfigured)) {
+					(i instanceof IConfigured conf && conf.enabled() && !inst.isEmpty()) ||
+					!(i instanceof IConfigured)
+				) {
 					event.accept(inst, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
 				}
 			});
 		} else if (
-				Mods.loaded(Mods.MOD) &&
-				event.getTabKey().location().getNamespace().equals(Mods.MOD) &&
-				tags != null
+			Mods.loaded(Mods.MOD) &&
+			event.getTabKey().location().getNamespace().equals(Mods.MOD) &&
+			tags != null
 		) {
 			if (
-					!Mods.loaded("nutritious_feast") &&
-					ForgeRegistries.ITEMS.containsKey(TOAST_WITH_BLUEBERRIES) &&
-					tags.isKnownTagName(DelightfulItemTags.FRUITS_BLUEBERRIES)
+				!Mods.loaded("nutritious_feast") &&
+				reg.containsKey(TOAST_WITH_BLUEBERRIES) &&
+				tags.isKnownTagName(DelightfulItemTags.FRUITS_BLUEBERRIES)
 			) {
-				event.accept(ForgeRegistries.ITEMS.getValue(TOAST_WITH_BLUEBERRIES));
+				Item toast = reg.getValue(TOAST_WITH_BLUEBERRIES);
+				if (toast != null) event.accept(toast);
 			}
 		}
 	}

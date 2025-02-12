@@ -1,6 +1,5 @@
 package net.brnbrd.delightful.compat.jade;
 
-import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -29,6 +28,6 @@ public enum DMushroomColonyAge implements IBlockComponentProvider {
 
 	@Override
 	public ResourceLocation getUid() {
-		return Util.rl(Delightful.MODID, "mushroom_colony");
+		return Util.delight("mushroom_colony");
 	}
 }

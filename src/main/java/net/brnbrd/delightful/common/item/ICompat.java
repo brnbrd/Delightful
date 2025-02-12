@@ -1,25 +1,24 @@
 package net.brnbrd.delightful.common.item;
 
 import joptsimple.internal.Strings;
+import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.Strategy;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
+import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 public interface ICompat extends IConfigured {
-	default Strategy getStrategy() {
-		return Strategy.OR;
-	}
-
-	String[] getModid();
+	@NotNull String[] getModid(); // Can be empty, but not null
 
 	default boolean isLoaded() {
-		if (this.getModid().length < 1) {
-			return true;
-		}
-		return this.getStrategy() == Strategy.AND ?
-			Mods.loaded(this.getModid()) :
-			Mods.orLoaded(true, this.getModid());
+		String[] dependencies = getModid();
+		return (
+			getModid() == null || // Should not be possible, but worth a check
+			getModid().length < 1 || // Empty modid means just load
+			Mods.loaded(getStrategy(), dependencies)
+		);
 	}
 
 	@Override
@@ -29,13 +28,16 @@ public interface ICompat extends IConfigured {
 
 	@Override
 	default boolean enabledText(List<Component> comps) {
-		if (!this.isLoaded()) {
-			comps.add(Component.translatable("tooltip.requires_modid"));
-			comps.add(Component.literal(Strings.join(this.getModid(), ", ")).withStyle(ChatFormatting.UNDERLINE));
+		boolean configured = IConfigured.super.enabledText(comps);
+		if (!isLoaded() && getModid().length > 0) {
+			comps.add(Util.translation("tooltip", "requires_modid"));
+			comps.add(Component.literal(Strings.join(getModid(), ", ")).withStyle(ChatFormatting.UNDERLINE));
 			return false;
 		}
-		return IConfigured.super.enabledText(comps);
+		return configured && isLoaded();
 	}
 
-	enum Strategy {AND, OR}
+	default Strategy getStrategy() {
+		return Strategy.OR;
+	}
 }

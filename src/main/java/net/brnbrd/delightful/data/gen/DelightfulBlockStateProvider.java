@@ -268,6 +268,6 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
 	}
 
 	public ResourceLocation resourceBlock(String path) {
-		return Util.rl(Delightful.MODID, "block/" + path);
+		return Util.delight("block/" + path);
 	}
 }

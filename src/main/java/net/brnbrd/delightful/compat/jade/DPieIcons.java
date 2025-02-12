@@ -1,6 +1,5 @@
 package net.brnbrd.delightful.compat.jade;
 
-import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.block.DPieBlock;
 import net.minecraft.resources.ResourceLocation;
@@ -28,6 +27,6 @@ public enum DPieIcons implements IBlockComponentProvider {
 
 	@Override
 	public ResourceLocation getUid() {
-		return Util.rl(Delightful.MODID, "pie_icons");
+		return Util.delight("pie_icons");
 	}
 }

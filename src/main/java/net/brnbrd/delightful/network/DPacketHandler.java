@@ -1,6 +1,5 @@
 package net.brnbrd.delightful.network;
 
-import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.compat.BotaniaLCP;
 import net.brnbrd.delightful.compat.Mods;
@@ -17,7 +16,7 @@ import java.util.function.Supplier;
 public class DPacketHandler {
 	private static final String PROTOCOL_VERSION = "1";
 	public static final SimpleChannel INSTANCE = NetworkRegistry.newSimpleChannel(
-			Util.rl(Delightful.MODID, "main"),
+			Util.delight("main"),
 			() -> PROTOCOL_VERSION,
 			PROTOCOL_VERSION::equals,
 			PROTOCOL_VERSION::equals

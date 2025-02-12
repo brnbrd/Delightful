@@ -1,10 +1,8 @@
 package net.brnbrd.delightful.common.item.food;
 
-import net.brnbrd.delightful.common.item.DItem;
-
-public class GoatMeatItem extends DItem {
-	public GoatMeatItem(Properties prop, boolean hasFoodEffectTooltip) {
-		super(prop, hasFoodEffectTooltip);
+public class GoatMeatItem extends DConsumableItem {
+	public GoatMeatItem(Properties prop) {
+		super(prop);
 	}
 
 	@Override

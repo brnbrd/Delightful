@@ -12,9 +12,8 @@ import vectorwing.farmersdelight.common.item.ConsumableItem;
 import java.util.List;
 
 public class DConsumableItem extends ConsumableItem implements IConfigured {
-
-	public DConsumableItem(Item.Properties properties, boolean hasPotionEffectTooltip, boolean hasCustomTooltip) {
-		super(properties, hasPotionEffectTooltip, hasCustomTooltip);
+	public DConsumableItem(Item.Properties properties, boolean hasFoodEffectTooltip, boolean hasCustomTooltip) {
+		super(properties, hasFoodEffectTooltip, hasCustomTooltip);
 	}
 
 	public DConsumableItem(Item.Properties properties) {

@@ -83,22 +83,24 @@ public class BotaniaCompat {
 		return burst;
 	}
 
-	public static void trySpawnBurst(Player player, ItemStack stack, int manaPerDamage, float attackStr, boolean alf) {
+	public static boolean trySpawnBurst(Player player, ItemStack stack, int manaPerDamage, float attackStr, boolean alf) {
 		if (attackStr == 1) {
 			ManaBurstEntity burst = alf ?
-					getAlfBurst(player, stack, manaPerDamage) : getBurst(player, stack, manaPerDamage);
+				getAlfBurst(player, stack, manaPerDamage) : getBurst(player, stack, manaPerDamage);
 			player.level().addFreshEntity(burst);
 			stack.hurtAndBreak(1, player, p -> p.broadcastBreakEvent(InteractionHand.MAIN_HAND));
 			player.level().playSound(
-					null,
-					player.getX(),
-					player.getY(),
-					player.getZ(),
-					BotaniaSounds.terraBlade,
-					SoundSource.PLAYERS,
-					1F,
-					1F
+				null,
+				player.getX(),
+				player.getY(),
+				player.getZ(),
+				BotaniaSounds.terraBlade,
+				SoundSource.PLAYERS,
+				1F,
+				1F
 			);
+			return true;
 		}
+		return false;
 	}
 }

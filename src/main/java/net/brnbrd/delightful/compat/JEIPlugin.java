@@ -5,15 +5,13 @@ import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.forge.ForgeTypes;
 import mezz.jei.api.registration.IRecipeRegistration;
-import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.fluid.DelightfulFluids;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.IConfigured;
 import net.brnbrd.delightful.common.item.food.GreenTeaLeavesItem;
-import net.brnbrd.delightful.common.item.knife.DelightfulKnifeItem;
+import net.brnbrd.delightful.common.item.knife.DKnifeItem;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
-import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -30,7 +28,7 @@ import java.util.List;
 @ParametersAreNonnullByDefault
 @SuppressWarnings("unused")
 public class JEIPlugin implements IModPlugin {
-	private static final ResourceLocation ID = Util.rl(Delightful.MODID, "jei_plugin");
+	private static final ResourceLocation ID = Util.delight("jei_plugin");
 
 	@Override
 	public void registerRecipes(IRecipeRegistration registration) {
@@ -68,63 +66,106 @@ public class JEIPlugin implements IModPlugin {
 		}
 
 		// Hide fluids
-		if (!Mods.loaded(Mods.FR) || Util.tagEmpty(DelightfulItemTags.LAVENDER)) {
+		boolean farmersRespiteLoaded = Mods.loaded(Mods.FR);
+		if (!farmersRespiteLoaded || Util.tagEmpty(DelightfulItemTags.LAVENDER)) {
 			hiddenFluids.add(new FluidStack(DelightfulFluids.LAVENDER_TEA.get(), 1000));
 		}
-		if (!Mods.loaded(Mods.FR) || Util.tagEmpty(DelightfulItemTags.FLOWERS_AZALEA)) {
+		if (!farmersRespiteLoaded || Util.tagEmpty(DelightfulItemTags.FLOWERS_AZALEA)) {
 			hiddenFluids.add(new FluidStack(DelightfulFluids.AZALEA_TEA.get(), 1000));
 		}
 
 		// Add Knife translations
 		DelightfulItems.ITEMS.getEntries().stream()
 				.map(RegistryObject::get)
-				.filter(k -> k instanceof DelightfulKnifeItem dk && dk.enabled())
+				.filter(k -> k instanceof DKnifeItem dk && dk.enabled())
 				.map(ItemStack::new)
-				.forEach(i -> registration.addIngredientInfo(i, VanillaTypes.ITEM_STACK, TextUtils.getTranslation("jei.info.knife")));
+				.forEach(knifeStack -> registration.addIngredientInfo(
+					knifeStack,
+					VanillaTypes.ITEM_STACK,
+					TextUtils.getTranslation("jei.info.knife")
+				));
 
 		// Add other descriptions
 		if (Util.enabled(DelightfulItems.SALMONBERRIES)) {
 			registration.addIngredientInfo(
-					List.of(Util.gs(DelightfulItems.SALMONBERRIES), Util.gs(DelightfulItems.WILD_SALMONBERRIES)),
-					VanillaTypes.ITEM_STACK, Component.translatable(Delightful.MODID + ".salmonberries.desc")
+					List.of(
+						Util.gs(DelightfulItems.SALMONBERRIES),
+						Util.gs(DelightfulItems.WILD_SALMONBERRIES)
+					),
+					VanillaTypes.ITEM_STACK,
+				Util.description("salmonberries")
 			);
 		}
 		if (((GreenTeaLeavesItem) DelightfulItems.GREEN_TEA_LEAF.get()).enabled()) {
-			registration.addIngredientInfo(Util.gs(DelightfulItems.GREEN_TEA_LEAF), VanillaTypes.ITEM_STACK, Component.translatable(Delightful.MODID + ".green_tea_leaf.desc"));
+			registration.addIngredientInfo(
+				Util.gs(DelightfulItems.GREEN_TEA_LEAF),
+				VanillaTypes.ITEM_STACK,
+				Util.description("green_tea_leaf")
+			);
 		}
 		if (Util.enabled(DelightfulItems.ACORN)) {
-			registration.addIngredientInfo(Util.gs(DelightfulItems.ACORN), VanillaTypes.ITEM_STACK, Component.translatable(Delightful.MODID + ".acorn.desc"));
-		}
-		if (Util.enabled(DelightfulItems.MINI_MELON)) {
 			registration.addIngredientInfo(
-					List.of(new ItemStack(Items.MELON_SLICE), Util.gs(DelightfulItems.MINI_MELON)),
-					VanillaTypes.ITEM_STACK, Component.translatable(Delightful.MODID + ".mini_melon.desc"));
+				Util.gs(DelightfulItems.ACORN),
+				VanillaTypes.ITEM_STACK,
+				Util.description("acorn")
+			);
 		}
-		if (Util.enabled(DelightfulItems.CANTALOUPE)) {
+		if (Util.enabled(DelightfulItems.ANIMAL_FAT)) {
 			registration.addIngredientInfo(
-					List.of(Util.gs(DelightfulItems.CANTALOUPE_SLICE), Util.gs(DelightfulItems.CANTALOUPE)),
-					VanillaTypes.ITEM_STACK, Component.translatable(Delightful.MODID + ".cantaloupe.desc").append(" ").append(Component.translatable(Delightful.MODID + ".sliceable.desc")));
+				Util.gs(DelightfulItems.ANIMAL_FAT),
+				VanillaTypes.ITEM_STACK,
+				Util.description("animal_fat")
+			);
+		}
+		if (Util.enabled(DelightfulItems.ANIMAL_OIL_BOTTLE)) {
+			registration.addIngredientInfo(
+				Util.gs(DelightfulItems.ANIMAL_OIL_BOTTLE),
+				VanillaTypes.ITEM_STACK,
+				Util.description("animal_oil_bottle")
+			);
 		}
 		if (Util.enabled(DelightfulItems.CANTALOUPE_SEEDS)) {
 			registration.addIngredientInfo(
-					Util.gs(DelightfulItems.CANTALOUPE_SEEDS),
-					VanillaTypes.ITEM_STACK, Component.translatable(Delightful.MODID + ".cantaloupe_seeds.desc"));
+				Util.gs(DelightfulItems.CANTALOUPE_SEEDS),
+				VanillaTypes.ITEM_STACK,
+				Util.description("cantaloupe_seeds")
+			);
 		}
-		if (Util.enabled(DelightfulItems.ANIMAL_FAT)) {
-			registration.addIngredientInfo(Util.gs(DelightfulItems.ANIMAL_FAT), VanillaTypes.ITEM_STACK, Component.translatable(Delightful.MODID + ".animal_fat.desc"));
+		if (Util.enabled(DelightfulItems.CANTALOUPE)) {
+			registration.addIngredientInfo(
+				Util.gs(DelightfulItems.CANTALOUPE),
+				VanillaTypes.ITEM_STACK,
+				Util.description("cantaloupe")
+					.append(" ")
+					.append(Util.description("sliceable"))
+			);
 		}
-		if (Util.enabled(DelightfulItems.ANIMAL_OIL_BOTTLE)) {
-			registration.addIngredientInfo(Util.gs(DelightfulItems.ANIMAL_OIL_BOTTLE), VanillaTypes.ITEM_STACK, Component.translatable(Delightful.MODID + ".animal_oil_bottle.desc"));
+		if (Util.enabled(DelightfulItems.MINI_MELON)) {
+			registration.addIngredientInfo(
+				Util.gs(DelightfulItems.MINI_MELON),
+				VanillaTypes.ITEM_STACK,
+				Util.description("mini_melon")
+					.append(" ")
+					.append(Util.description("sliceable"))
+			);
 		}
-		registration.addIngredientInfo(new ItemStack(Items.MELON), VanillaTypes.ITEM_STACK, Component.translatable(Delightful.MODID + ".sliceable.desc"));
-		registration.addIngredientInfo(new ItemStack(Items.PUMPKIN), VanillaTypes.ITEM_STACK, Component.translatable(Delightful.MODID + ".sliceable.desc"));
+		registration.addIngredientInfo(
+			new ItemStack(Items.MELON),
+			VanillaTypes.ITEM_STACK,
+			Util.description("sliceable")
+		);
+		registration.addIngredientInfo(
+			new ItemStack(Items.PUMPKIN),
+			VanillaTypes.ITEM_STACK,
+			Util.description("sliceable")
+		);
 		registration.getIngredientManager().removeIngredientsAtRuntime(ForgeTypes.FLUID_STACK, hiddenFluids);
 	}
 
 	private void hide(List<ItemStack> hiddenList, String modid, String item, String... conflicts) {
 		if (
-				Mods.loaded(modid) &&
-				Mods.orLoaded(false, conflicts)
+			Mods.loaded(modid) &&
+			Mods.loaded(Strategy.OR, conflicts)
 		) {
 			Item found = Util.item(modid, item);
 			if (found != null) {

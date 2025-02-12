@@ -13,8 +13,8 @@ import java.util.List;
 public class CompatDrinkItem extends DrinkItem implements ICompat {
 	private final String[] modid;
 
-	public CompatDrinkItem(Item.Properties properties, float heal, boolean hasPotionEffectTooltip, boolean hasCustomTooltip, String... modid) {
-		super(properties, heal, hasPotionEffectTooltip, hasCustomTooltip);
+	public CompatDrinkItem(Item.Properties properties, boolean hasPotionEffectTooltip, boolean hasCustomTooltip, String... modid) {
+		super(properties, hasPotionEffectTooltip, hasCustomTooltip);
 		this.modid = modid;
 	}
 

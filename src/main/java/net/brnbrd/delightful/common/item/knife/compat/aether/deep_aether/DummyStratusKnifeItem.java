@@ -1,4 +1,4 @@
-package net.brnbrd.delightful.common.item.knife.compat.deep_aether;
+package net.brnbrd.delightful.common.item.knife.compat.aether.deep_aether;
 
 import net.brnbrd.delightful.common.item.knife.compat.aether.AetherKnifeItem;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
@@ -9,7 +9,7 @@ import org.jetbrains.annotations.Nullable;
 public class DummyStratusKnifeItem extends AetherKnifeItem {
 
 	public DummyStratusKnifeItem(Properties props, Tier tier) {
-		super("deep_aether", DelightfulItemTags.INGOTS_STRATUS, tier, props);
+		super(DelightfulItemTags.INGOTS_STRATUS, tier, props, "deep_aether");
 	}
 
 	@Override

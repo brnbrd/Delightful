@@ -4,11 +4,13 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_matcha": {
+          "has_matcha_latte": {
             "conditions": {
               "items": [
                 {
-                  "tag": "forge:matcha"
+                  "items": [
+                    "delightful:matcha_latte"
+                  ]
                 }
               ]
             },
@@ -23,7 +25,7 @@
         },
         "requirements": [
           [
-            "has_matcha",
+            "has_matcha_latte",
             "has_the_recipe"
           ]
         ],

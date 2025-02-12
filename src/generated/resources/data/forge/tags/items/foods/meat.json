@@ -1,6 +1,7 @@
 {
   "values": [
     "#forge:foods/meat/raw",
-    "#forge:foods/meat/cooked"
+    "#forge:foods/meat/cooked",
+    "#forge:crab_meat"
   ]
 }

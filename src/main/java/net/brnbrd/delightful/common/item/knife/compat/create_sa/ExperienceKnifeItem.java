@@ -1,7 +1,7 @@
 package net.brnbrd.delightful.common.item.knife.compat.create_sa;
 
 import net.brnbrd.delightful.common.item.DelightfulTiers;
-import net.brnbrd.delightful.common.item.knife.CompatKnifeItem;
+import net.brnbrd.delightful.common.item.knife.DKnifeItem;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
@@ -16,9 +16,23 @@ import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
-public class ExperienceKnifeItem extends CompatKnifeItem {
+public class ExperienceKnifeItem extends DKnifeItem {
 	public ExperienceKnifeItem(Properties properties) {
-		super("create_sa", DelightfulItemTags.HEAP_EXPERIENCE, DelightfulTiers.EXPERIENCE, properties, ChatFormatting.YELLOW);
+		super(DelightfulItemTags.HEAP_EXPERIENCE, DelightfulTiers.EXPERIENCE, properties, "create_sa");
+	}
+
+	@Override
+	public @NotNull Component getName(@NotNull ItemStack stack) {
+		Component name = super.getName(stack);
+		return this.enabled() ? name.copy().withStyle(ChatFormatting.YELLOW) : name;
+	}
+
+	@Override
+	public List<Component> getTools() {
+		return List.of(
+			Component.literal("This tool gradually crumbles;").withStyle(ChatFormatting.DARK_PURPLE),
+			Component.literal("if you are lucky it will spawn xp orbs").withStyle(ChatFormatting.DARK_PURPLE)
+		);
 	}
 
 	// Occasionally spawn experience orbs from breaking blocks
@@ -29,14 +43,6 @@ public class ExperienceKnifeItem extends CompatKnifeItem {
 			ExperienceOrb.award(server, pPos.getCenter(), 1);
 		}
 		return sup;
-	}
-
-	@Override
-	public List<Component> getTools() {
-		return List.of(
-				Component.literal("This tool gradually crumbles;").withStyle(ChatFormatting.DARK_PURPLE),
-				Component.literal("if you are lucky it will spawn xp orbs").withStyle(ChatFormatting.DARK_PURPLE)
-		);
 	}
 
 	@Override

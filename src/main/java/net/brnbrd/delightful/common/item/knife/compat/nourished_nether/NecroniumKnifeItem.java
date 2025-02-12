@@ -1,41 +1,42 @@
 package net.brnbrd.delightful.common.item.knife.compat.nourished_nether;
 
 import net.brnbrd.delightful.Util;
-import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.DelightfulTiers;
-import net.brnbrd.delightful.common.item.knife.CompatKnifeItem;
+import net.brnbrd.delightful.common.item.knife.DKnifeItem;
+import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
-public class NecroniumKnifeItem extends CompatKnifeItem {
-
+public class NecroniumKnifeItem extends DKnifeItem {
 	public NecroniumKnifeItem(Properties properties) {
-		super("nourished_nether", DelightfulItems.ingot("necronium"), DelightfulTiers.NECRONIUM, properties);
+		super(DelightfulItemTags.ingot("necronium"), DelightfulTiers.NECRONIUM, properties, "nourished_nether");
 	}
 
 	@Override
 	public List<Component> getTools() {
-		return List.of(
-				Component.literal("Afterlife").withStyle(ChatFormatting.AQUA)
-		);
+		return List.of(Component.literal("Afterlife").withStyle(ChatFormatting.AQUA));
 	}
 
 	@Override
 	public boolean hurtEnemy(@NotNull ItemStack stack, @NotNull LivingEntity target, @NotNull LivingEntity attacker) {
-		ResourceLocation stasis = Util.rl("nourished_nether", "stasis");
-		if (super.hurtEnemy(stack, target, attacker) && target.getRandom().nextInt(1, 4) == 1) {
-			if (ForgeRegistries.MOB_EFFECTS.containsKey(stasis)) {
-				target.addEffect(new MobEffectInstance(ForgeRegistries.MOB_EFFECTS.getValue(stasis), 40, 0));
-			}
+		boolean supHurt = super.hurtEnemy(stack, target, attacker);
+		ResourceLocation stasisLoc = Util.rl("nourished_nether", "stasis");
+		if (
+			supHurt &&
+			Util.effectExists(stasisLoc) &&
+			target.getRandom().nextInt(0, 3) == 0
+		) {
+			MobEffect stasis = Util.effect(stasisLoc);
+			if (stasis != null) target.addEffect(new MobEffectInstance(stasis, 40, 0));
 			return true;
 		}
-		return false;
+		return supHurt;
 	}
 }

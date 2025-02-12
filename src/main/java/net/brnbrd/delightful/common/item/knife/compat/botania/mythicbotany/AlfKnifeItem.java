@@ -1,10 +1,9 @@
-package net.brnbrd.delightful.common.item.knife.compat.mythicbotany;
+package net.brnbrd.delightful.common.item.knife.compat.botania.mythicbotany;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
-import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.knife.compat.botania.TerraKnifeItem;
-import net.minecraft.ChatFormatting;
+import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -19,8 +18,8 @@ import javax.annotation.Nonnull;
 public class AlfKnifeItem extends TerraKnifeItem {
 	private final Lazy<Multimap<Attribute, AttributeModifier>> defaultModifiers;
 
-	public AlfKnifeItem(Properties properties, ChatFormatting... formatting) {
-		super(properties, DelightfulItems.ingot("alfsteel"), new AlfsteelTier(), formatting);
+	public AlfKnifeItem(Properties properties) {
+		super(properties, DelightfulItemTags.ingot("alfsteel"), new AlfsteelTier());
 		if (this.isLoaded()) {
 			MinecraftForge.EVENT_BUS.addListener(this::onLeftClick);
 		}
@@ -51,7 +50,7 @@ public class AlfKnifeItem extends TerraKnifeItem {
 
 	@Override
 	public boolean isValidRepairItem(@Nonnull ItemStack toRepair, @Nonnull ItemStack repair) {
-		return this.enabled() && repair.is(DelightfulItems.ingot("alfsteel"));
+		return this.enabled() && repair.is(DelightfulItemTags.ingot("alfsteel"));
 	}
 
 	@Override

@@ -8,7 +8,7 @@ import org.jetbrains.annotations.NotNull;
 public class ShakeItem extends DrinkItem {
 
 	public ShakeItem(Properties properties) {
-		super(properties, 0.0F, false, false);
+		super(properties, false, false);
 	}
 
 	@Override

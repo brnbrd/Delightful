@@ -1,4 +1,4 @@
-package net.brnbrd.delightful.common.item.knife.compat.deep_aether;
+package net.brnbrd.delightful.common.item.knife.compat.aether.deep_aether;
 
 import com.aetherteam.aether.item.combat.abilities.weapon.GravititeWeapon;
 import net.minecraft.world.entity.LivingEntity;

@@ -3,7 +3,7 @@ package net.brnbrd.delightful.data.gen;
 import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.item.DelightfulItems;
-import net.brnbrd.delightful.common.item.knife.DelightfulKnifeItem;
+import net.brnbrd.delightful.common.item.knife.DKnifeItem;
 import net.brnbrd.delightful.common.item.knife.Knives;
 import net.minecraft.client.renderer.block.model.BlockModel;
 import net.minecraft.data.PackOutput;
@@ -39,7 +39,7 @@ public class DelightfulItemModelProvider extends ItemModelProvider {
 			ResourceLocation id = entry.getId();
 			if (EMISSIVE.contains(id)) {
 				emissive(id);
-			} else if (entry.get() instanceof DelightfulKnifeItem) {
+			} else if (entry.get() instanceof DKnifeItem) {
 				handheld(id);
 			} else if (FLAT_BLOCKS.contains(id)) {
 				flatBlock(id);
@@ -59,12 +59,12 @@ public class DelightfulItemModelProvider extends ItemModelProvider {
 	}
 
 	public void handheld(ResourceLocation item) {
-		withExistingParent(item.getPath(), "item/handheld").texture("layer0", Util.rl(Delightful.MODID, "item/" + item.getPath()));
+		withExistingParent(item.getPath(), "item/handheld").texture("layer0", Util.delight("item/" + item.getPath()));
 	}
 
 	public void emissive(ResourceLocation item) {
 		withExistingParent(item.getPath(), "item/handheld")
-				.texture("layer0", Util.rl(Delightful.MODID, "item/" + item.getPath()))
+				.texture("layer0", Util.delight("item/" + item.getPath()))
 				.guiLight(BlockModel.GuiLight.FRONT);
 	}
 }

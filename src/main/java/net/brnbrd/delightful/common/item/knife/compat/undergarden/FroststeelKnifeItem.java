@@ -1,9 +1,9 @@
 package net.brnbrd.delightful.common.item.knife.compat.undergarden;
 
-import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.DelightfulTiers;
-import net.brnbrd.delightful.common.item.knife.CompatKnifeItem;
+import net.brnbrd.delightful.common.item.knife.DKnifeItem;
 import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -13,9 +13,9 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import java.util.List;
 
-public class FroststeelKnifeItem extends CompatKnifeItem {
+public class FroststeelKnifeItem extends DKnifeItem {
 	public FroststeelKnifeItem(Properties properties) {
-		super(Mods.UG, DelightfulItems.ingot("froststeel"), DelightfulTiers.FROSTSTEEL, properties);
+		super(DelightfulItemTags.ingot("froststeel"), DelightfulTiers.FROSTSTEEL, properties, Mods.UG);
 		MinecraftForge.EVENT_BUS.addListener(this::onHurt);
 	}
 
@@ -31,9 +31,9 @@ public class FroststeelKnifeItem extends CompatKnifeItem {
 
 	private void onHurt(LivingHurtEvent e) {
 		if (
-				this.enabled() &&
-						e.getSource().getEntity() instanceof Player player &&
-						player.getMainHandItem().is(this)
+			this.enabled() &&
+			e.getSource().getEntity() instanceof Player player &&
+			player.getMainHandItem().is(this)
 		) {
 			e.getEntity().addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 600, 1));
 		}
