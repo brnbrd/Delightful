@@ -6,6 +6,7 @@ import net.brnbrd.delightful.common.block.DelightfulBlocks;
 import net.brnbrd.delightful.common.block.DelightfulCabinetBlock;
 import net.brnbrd.delightful.common.crafting.EnabledCondition;
 import net.brnbrd.delightful.common.item.DelightfulItems;
+import net.brnbrd.delightful.common.item.IConfigured;
 import net.brnbrd.delightful.common.item.knife.DKnifeItem;
 import net.brnbrd.delightful.common.item.knife.Knives;
 import net.brnbrd.delightful.compat.Mods;
@@ -26,6 +27,8 @@ import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.ConditionalRecipe;
 import net.minecraftforge.common.crafting.conditions.ICondition;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
+import net.minecraftforge.common.crafting.conditions.ModLoadedCondition;
+import net.minecraftforge.common.crafting.conditions.NotCondition;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.apache.commons.lang3.ArrayUtils;
@@ -76,7 +79,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 						.requires(DelightfulItemTags.NUT_BUTTER)
 						.requires(DelightfulItemTags.JAMS)
 						.unlockedBy("has_nut_butter", has(DelightfulItems.NUT_BUTTER_BOTTLE.get())),
-				"food/nut_butter_and_jam_sandwich", finished, enabled(DelightfulItems.NUT_BUTTER_AND_JAM_SANDWICH), not(tagEmpty(DelightfulItemTags.NUTS)));
+				"food/nut_butter_and_jam_sandwich", finished, enabled(DelightfulItems.NUT_BUTTER_AND_JAM_SANDWICH), not(tagEmpty(DelightfulItemTags.NUTS)), not(modLoaded(Mods.CT)));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.CHEESEBURGER.get())
 						.requires(ForgeTags.BREAD)
 						.requires(ModItems.BEEF_PATTY.get())
@@ -719,6 +722,14 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 		if (conds.length >= 1) {
 			for (ICondition currentCond : conds) {
 				cond.addCondition(currentCond);
+			}
+		}
+		if (
+			Util.item(Delightful.MODID, name) instanceof IConfigured conf &&
+			conf.getConflicts().length > 0
+		) {
+			for (String conflict : conf.getConflicts()) {
+				cond.addCondition(new NotCondition(new ModLoadedCondition(conflict)));
 			}
 		}
 		cond.addRecipe(recipe[0])

@@ -33,6 +33,7 @@ public class Mods {
 	public static final String CD = "culturaldelights";
 	public static final String CR = "collectorsreap";
 	public static final String CRAB = "crabbersdelight";
+	public static final String CT = "croptopia";
 	public static final String DD = "deeperdarker";
 	public static final String ECO = "ecologics";
 	public static final String EP = "phantasm";
@@ -65,6 +66,7 @@ public class Mods {
 	public static final String SUP = "supplementaries";
 	public static final String TF = "twilightforest";
 	public static final String TFD = "twilightdelight";
+	public static final String TH = "thermal";
 	public static final String UA = "upgrade_aquatic";
 	public static final String UE = "unusualend";
 	public static final String UG = "undergarden";

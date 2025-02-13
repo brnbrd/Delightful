@@ -9,6 +9,6 @@ public class GreenTeaLeavesItem extends DConsumableItem {
 
 	@Override
 	public String[] getConflicts() {
-		return new String[]{Mods.FR, Mods.YH, "croptopia"};
+		return new String[]{Mods.FR, Mods.YH, Mods.CT};
 	}
 }

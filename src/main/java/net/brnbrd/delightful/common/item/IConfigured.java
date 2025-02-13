@@ -16,7 +16,7 @@ public interface IConfigured extends ItemLike {
 		return Util.EMPTY;
 	}
 
-	default boolean hasConflict() {
+	default boolean hasConflict() { // Checks that any defined conflict is loaded
 		return this.getConflicts().length > 0 && Mods.loaded(Strategy.OR, this.getConflicts());
 	}
 

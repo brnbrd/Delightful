@@ -1,11 +1,19 @@
 {
   "values": [
     {
+      "id": "#forge:vegetables/ghost_pepper",
+      "required": false
+    },
+    {
       "id": "#forge:chilipepper",
       "required": false
     },
     {
-      "id": "#forge:vegetables/ghost_pepper",
+      "id": "#forge:chile_peppers",
+      "required": false
+    },
+    {
+      "id": "#forge:crops/chile_pepper",
       "required": false
     },
     {

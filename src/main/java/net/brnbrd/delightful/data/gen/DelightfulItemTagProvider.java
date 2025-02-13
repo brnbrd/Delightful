@@ -164,8 +164,10 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 
 		// Vegetables
 		this.tag(DelightfulItemTags.VEGETABLES_SPICY)
-			.addOptionalTag(Util.rl(Util.LOADER, "chilipepper"))
 			.addOptionalTag(Util.rl(Util.LOADER, "vegetables/ghost_pepper"))
+			.addOptionalTag(Util.rl(Util.LOADER, "chilipepper"))
+			.addOptionalTag(Util.rl(Util.LOADER, "chile_peppers"))
+			.addOptionalTag(Util.rl(Util.LOADER, "crops/chile_pepper"))
 			.addOptionalTag(Util.rl(Mods.CR, "hot_nether_fruit"))
 			.addOptional(Util.rl(Mods.MND, "bullet_pepper"));
 		this.tag(DelightfulItemTags.VEGETABLES_CORN)
@@ -339,8 +341,10 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.SMALL_CACTI)
 			.addOptionalTag(Util.rl(Mods.HAB, "ball_cacti"))
 			.addOptional(Util.rl(Mods.BWG, "mini_cactus"))
+			.addOptional(Util.rl(Mods.BOP, "tiny_cactus"))
 			.addOptional(Util.rl("atmospheric", "barrel_cactus"))
-			.addOptional(Util.rl("biomemakeover", "barrel_cactus"));
+			.addOptional(Util.rl("biomemakeover", "barrel_cactus"))
+			.addOptional(Util.rl("naturesaura", "aura_cactus"));
 		this.tag(DelightfulItemTags.MATCHA).add(DelightfulItems.MATCHA.get());
 		this.tag(Tags.Items.EGGS)
 			.add(Items.TURTLE_EGG)
@@ -416,8 +420,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Util.rl(Mods.BC, "apple_jelly"))
 			.addOptional(Util.rl(Mods.UA, "mulberry_jam_bottle"));
 		this.tag(DelightfulItemTags.PEANUT_BUTTER)
-			.addOptional(Util.rl("thermal", "peanut_butter"))
-			.addOptional(Util.rl("croptopia", "peanut_butter"));
+			.addOptional(Util.rl(Mods.TH, "peanut_butter"))
+			.addOptional(Util.rl(Mods.CT, "peanut_butter"));
 		this.tag(DelightfulItemTags.NUT_BUTTER)
 			.addTag(DelightfulItemTags.PEANUT_BUTTER)
 			.add(DelightfulItems.NUT_BUTTER_BOTTLE.get())
@@ -426,19 +430,23 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.CHEESE)
 			.addOptionalTag(Util.rl(Util.LOADER, "cheeses"))
 			.addOptional(Util.rl(Mods.BC, "flaxen_cheese_wedge"))
+			.addOptional(Util.rl(Mods.CT, "cheese"))
+			.addOptional(Util.rl(Mods.TH, "cheese_wedge"))
+			.addOptional(Util.rl(Mods.CAD, "cheese_wheel_slice"))
 			.addOptional(Util.rl("farmlife", "tribull_cheese_wedge"))
-			.addOptional(Util.rl("croptopia", "cheese"))
-			.addOptional(Util.rl("thermal", "cheese_wedge"))
-			.addOptional(Util.rl(Mods.CAD, "cheese_wheel_slice"));
+			.addOptional(Util.rl("ad_astra", "cheese"));
 		this.tag(ForgeTags.MILK)
 			.addOptional(Util.rl(Mods.AE, "skyroot_milk_bucket"))
 			.addOptional(Util.rl("farmlife", "tribull_milk"))
-			.addOptional(Util.rl("dracovitadelight", "tribull_milk"));
+			.addOptional(Util.rl("dracovitadelight", "tribull_milk"))
+			.addOptional(Util.rl("blue_skies", "ventium_milk_bucket"))
+			.addOptional(Util.rl("forbidden_arcanus", "edelwood_milk_bucket"));
+
 		this.tag(DelightfulItemTags.TEA_LEAVES_GREEN)
 			.add(DelightfulItems.GREEN_TEA_LEAF.get())
 			.addOptional(Util.rl(Mods.FR, "green_tea_leaves"))
-			.addOptional(Util.rl("thermal", "tea"))
-			.addOptional(Util.rl("croptopia", "tea_leaves"));
+			.addOptional(Util.rl(Mods.TH, "tea"))
+			.addOptional(Util.rl(Mods.CT, "tea_leaves"));
 		this.tag(DelightfulItemTags.TEA_LEAVES)
 			.addTag(DelightfulItemTags.TEA_LEAVES_GREEN)
 			.addOptionalTag(Util.rl(Mods.FR, "tea_leaves"));

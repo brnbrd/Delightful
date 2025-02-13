@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-11T13:53:00.6323329	Recipes
+// 1.20.1	2025-02-12T11:45:09.9249546	Recipes
 6c217dd6477efa10f6042809ba959d53036ab5e2 data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 5b82f87851220644287d771121677deac66b3b89 data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
 cf29033c1c919355c261025df529938e6ebc73f8 data/delightful/advancements/recipes/campfire/cactus_steak.json
@@ -47,7 +47,7 @@ d718a28228d94886e877b9425e33b81aa63f3c0a data/delightful/advancements/recipes/fo
 84d5d682a25ea9d62dafcc6d0cc00456dd26f352 data/delightful/advancements/recipes/food/matcha_ice_cream.json
 319c2ba3473abc5aa705be24c035378636180599 data/delightful/advancements/recipes/food/matcha_ice_cream_no_neapolitan.json
 00197740a5e42ffcfcffc168c20a56e1e7e40c62 data/delightful/advancements/recipes/food/matcha_milkshake.json
-7f43cac8e28562eb884ddbad85f217d1c12b3681 data/delightful/advancements/recipes/food/nut_butter_and_jam_sandwich.json
+1d0174f5be8bfa6f204c1332055ca494e5c83c4d data/delightful/advancements/recipes/food/nut_butter_and_jam_sandwich.json
 2185bc7207fc4c559363738f242d4c376fef58cb data/delightful/advancements/recipes/food/nut_dough.json
 72f4002c3c19676b5ae6302e9f4f617c54fecb4f data/delightful/advancements/recipes/food/pumpkin_pie.json
 bbd93befe929807dc31910ab7e5fbebc3a19d257 data/delightful/advancements/recipes/food/pumpkin_pie_from_slices.json
@@ -209,7 +209,7 @@ ecacda72e28188ede9b1efe6573315a506414b08 data/delightful/recipes/food/marshmallo
 24f634405d66ec9a19373dcc357e74961ca9623f data/delightful/recipes/food/matcha_ice_cream.json
 2575107ffff8cf2d100886b6ac6d4fe65ea9250a data/delightful/recipes/food/matcha_ice_cream_no_neapolitan.json
 f91ed3f632217f18a49d52ee71585fc81cd2bdab data/delightful/recipes/food/matcha_milkshake.json
-7bbf9930500b162a93bdbf32316b3f6b4cf9034b data/delightful/recipes/food/nut_butter_and_jam_sandwich.json
+d1efd68e878a48f58f8eace33c045f8848f10b8a data/delightful/recipes/food/nut_butter_and_jam_sandwich.json
 3ea1d1a19ec8f2de8a6d49c2e4a32fe519110026 data/delightful/recipes/food/nut_dough.json
 5cd35a8ce0bbca8518e470607d67f869d7c905c4 data/delightful/recipes/food/pumpkin_pie.json
 90d923e77156948132631f4cf2a6e5a7965de89d data/delightful/recipes/food/pumpkin_pie_from_slices.json

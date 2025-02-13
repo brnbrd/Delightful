@@ -11,6 +11,14 @@
     {
       "id": "dracovitadelight:tribull_milk",
       "required": false
+    },
+    {
+      "id": "blue_skies:ventium_milk_bucket",
+      "required": false
+    },
+    {
+      "id": "forbidden_arcanus:edelwood_milk_bucket",
+      "required": false
     }
   ]
 }

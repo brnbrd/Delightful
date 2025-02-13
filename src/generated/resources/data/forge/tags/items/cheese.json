@@ -9,10 +9,6 @@
       "required": false
     },
     {
-      "id": "farmlife:tribull_cheese_wedge",
-      "required": false
-    },
-    {
       "id": "croptopia:cheese",
       "required": false
     },
@@ -22,6 +18,14 @@
     },
     {
       "id": "casualness_delight:cheese_wheel_slice",
+      "required": false
+    },
+    {
+      "id": "farmlife:tribull_cheese_wedge",
+      "required": false
+    },
+    {
+      "id": "ad_astra:cheese",
       "required": false
     }
   ]
