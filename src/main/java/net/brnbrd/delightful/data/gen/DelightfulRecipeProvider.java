@@ -9,7 +9,7 @@ import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.IConfigured;
 import net.brnbrd.delightful.common.item.knife.DKnifeItem;
 import net.brnbrd.delightful.common.item.knife.Knives;
-import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.data.PackOutput;
@@ -79,7 +79,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 						.requires(DelightfulItemTags.NUT_BUTTER)
 						.requires(DelightfulItemTags.JAMS)
 						.unlockedBy("has_nut_butter", has(DelightfulItems.NUT_BUTTER_BOTTLE.get())),
-				"food/nut_butter_and_jam_sandwich", finished, enabled(DelightfulItems.NUT_BUTTER_AND_JAM_SANDWICH), not(tagEmpty(DelightfulItemTags.NUTS)), not(modLoaded(Mods.CT)));
+				"food/nut_butter_and_jam_sandwich", finished, enabled(DelightfulItems.NUT_BUTTER_AND_JAM_SANDWICH), not(tagEmpty(DelightfulItemTags.NUTS)), not(modLoaded(Modid.CT.get())));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.CHEESEBURGER.get())
 						.requires(ForgeTags.BREAD)
 						.requires(ModItems.BEEF_PATTY.get())
@@ -88,7 +88,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 						.requires(ForgeTags.VEGETABLES_TOMATO)
 						.requires(ForgeTags.VEGETABLES_ONION)
 						.unlockedBy("has_cheese", has(DelightfulItemTags.CHEESE)),
-				"food/cheeseburger", finished, enabled(DelightfulItems.CHEESEBURGER), tagEmpty(DelightfulItemTags.BURGER_BUN), not(tagEmpty(DelightfulItemTags.CHEESE)), not(modLoaded(Mods.VD)));
+				"food/cheeseburger", finished, enabled(DelightfulItems.CHEESEBURGER), tagEmpty(DelightfulItemTags.BURGER_BUN), not(tagEmpty(DelightfulItemTags.CHEESE)), not(modLoaded(Modid.VD.get())));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.CHEESEBURGER.get())
 						.requires(ForgeTags.BREAD)
 						.requires(ModItems.BEEF_PATTY.get())
@@ -106,7 +106,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 						.requires(ForgeTags.VEGETABLES_TOMATO)
 						.requires(ForgeTags.VEGETABLES_ONION)
 						.unlockedBy("has_beef_patty_and_cheese", has(ModItems.BEEF_PATTY.get(), Items.MILK_BUCKET)),
-				"food/cheeseburger_from_bun", finished, enabled("cheeseburger"), not(tagEmpty(DelightfulItemTags.BURGER_BUN)), not(tagEmpty(DelightfulItemTags.CHEESE)), not(modLoaded(Mods.VD)));
+				"food/cheeseburger_from_bun", finished, enabled("cheeseburger"), not(tagEmpty(DelightfulItemTags.BURGER_BUN)), not(tagEmpty(DelightfulItemTags.CHEESE)), not(modLoaded(Modid.VD.get())));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.DELUXE_CHEESEBURGER.get())
 						.requires(ForgeTags.BREAD)
 						.requires(ModItems.BEEF_PATTY.get())
@@ -365,22 +365,22 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 				"cooking/animal_oil_bottle", finished, enabled(DelightfulItems.ANIMAL_OIL_BOTTLE));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
 								DelightfulItems.JAM_JAR.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F, Items.GLASS_BOTTLE)
-						.addIngredient(Ingredient.of(DelightfulItemTags.FRUITS_SWEET), 2)
+						.addIngredient(Ingredient.of(DelightfulItemTags.FRUITS_SWEET), 3)
 						.addIngredient(DelightfulItemTags.SUGAR)
 						.unlockedBy("has_sweet_fruit", has(DelightfulItemTags.FRUITS_SWEET)),
-				"food/cooking/jam_jar", finished, enabled(DelightfulItems.JAM_JAR), not(modLoaded(Mods.BC)), not(modLoaded(Mods.FRD)));
+				"food/cooking/jam_jar", finished, enabled(DelightfulItems.JAM_JAR), not(modLoaded(Modid.BC.get())), not(modLoaded(Modid.FRD.get())));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
 								DelightfulItems.GLOW_JAM_JAR.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F, Items.GLASS_BOTTLE)
-						.addIngredient(Ingredient.of(DelightfulItemTags.FRUITS_GLOW_BERRIES), 2)
+						.addIngredient(Ingredient.of(DelightfulItemTags.FRUITS_GLOW_BERRIES), 3)
 						.addIngredient(DelightfulItemTags.SUGAR)
 						.unlockedBy("has_glow_berries", has(DelightfulItemTags.FRUITS_GLOW_BERRIES)),
-				"food/cooking/glow_jam_jar", finished, enabled(DelightfulItems.GLOW_JAM_JAR), not(modLoaded(Mods.BC)), not(modLoaded(Mods.FRD)));
+				"food/cooking/glow_jam_jar", finished, enabled(DelightfulItems.GLOW_JAM_JAR), not(modLoaded(Modid.BC.get())), not(modLoaded(Modid.FRD.get())));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
 								DelightfulItems.NUT_BUTTER_BOTTLE.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F, Items.GLASS_BOTTLE)
 						.addIngredient(DelightfulItemTags.NUTS)
 						.addIngredient(DelightfulItemTags.SUGAR)
 						.unlockedBy("has_nuts", has(DelightfulItemTags.NUTS)),
-				"food/cooking/nut_butter_bottle", finished, enabled(DelightfulItems.NUT_BUTTER_BOTTLE), not(tagEmpty(DelightfulItemTags.NUTS)), not(modLoaded(Mods.VD)));
+				"food/cooking/nut_butter_bottle", finished, enabled(DelightfulItems.NUT_BUTTER_BOTTLE), not(tagEmpty(DelightfulItemTags.NUTS)), not(modLoaded(Modid.VD.get())));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
 								DelightfulItems.CACTUS_CHILI.get(), 1, CookingRecipes.NORMAL_COOKING, 1.0F, Items.BOWL)
 						.addIngredient(ForgeTags.RAW_PORK)
@@ -480,7 +480,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 						.addIngredient(DelightfulItemTags.NUT_BUTTER)
 						.addIngredient(DelightfulItemTags.NUT_BUTTER)
 						.unlockedBy("has_nut_butter", has(DelightfulItemTags.NUT_BUTTER)),
-				"food/cooking/nut_milk", finished, enabled("nut_milk"), not(modLoaded(Mods.VD)));
+				"food/cooking/nut_milk", finished, enabled("nut_milk"), not(modLoaded(Modid.VD.get())));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
 								Items.HONEY_BOTTLE, 3, CookingRecipes.NORMAL_COOKING, 0.35F)
 						.addIngredient(Items.HONEY_BOTTLE, 2)
@@ -505,7 +505,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 						Ingredient.of(DelightfulItemTags.TEA_LEAVES_GREEN),
 						Ingredient.of(ForgeTags.TOOLS_SHOVELS),
 						Items.GREEN_DYE, 1).addResultWithChance(DelightfulItems.MATCHA.get(), 0.4f),
-				"cutting/green_tea_leaves", finished, enabled("matcha"), not(tagEmpty(DelightfulItemTags.TEA_LEAVES_GREEN)), not(modLoaded(Mods.YH)));
+				"cutting/green_tea_leaves", finished, enabled("matcha"), not(tagEmpty(DelightfulItemTags.TEA_LEAVES_GREEN)), not(modLoaded(Modid.YH.get())));
 		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
 						Ingredient.of(DelightfulItemTags.CLOVER),
 						Ingredient.of(ForgeTags.TOOLS_KNIVES),
@@ -562,7 +562,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 						.define('s', Blocks.SNOW_BLOCK)
 						.define('i', DelightfulItems.SALMONBERRY_ICE_CREAM.get())
 						.unlockedBy("has_salmonberry_ice_cream", has(DelightfulItems.SALMONBERRY_ICE_CREAM.get())),
-				"salmonberry_ice_cream_block", finished, enabled(DelightfulItems.SALMONBERRY_ICE_CREAM_BLOCK), enabled(DelightfulItems.SALMONBERRY_ICE_CREAM), modLoaded(Mods.N));
+				"salmonberry_ice_cream_block", finished, enabled(DelightfulItems.SALMONBERRY_ICE_CREAM_BLOCK), enabled(DelightfulItems.SALMONBERRY_ICE_CREAM), modLoaded(Modid.N.get()));
 		wrap(shaped(RecipeCategory.BUILDING_BLOCKS, DelightfulItems.MATCHA_ICE_CREAM_BLOCK, 8)
 						.pattern("sss")
 						.pattern("sis")
@@ -570,7 +570,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 						.define('s', Blocks.SNOW_BLOCK)
 						.define('i', DelightfulItems.MATCHA_ICE_CREAM.get())
 						.unlockedBy("has_matcha_ice_cream", has(DelightfulItems.MATCHA_ICE_CREAM.get())),
-				"matcha_ice_cream_block", finished, enabled(DelightfulItems.MATCHA_ICE_CREAM_BLOCK), enabled(DelightfulItems.MATCHA_ICE_CREAM), enabled(DelightfulItems.MATCHA), modLoaded(Mods.N));
+				"matcha_ice_cream_block", finished, enabled(DelightfulItems.MATCHA_ICE_CREAM_BLOCK), enabled(DelightfulItems.MATCHA_ICE_CREAM), enabled(DelightfulItems.MATCHA), modLoaded(Modid.N.get()));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(DelightfulItems.SALMONBERRY_GUMMY.get(), 1, 200, 1.0F)
 						.addIngredient(DelightfulItemTags.FRUITS_SALMONBERRIES)
 						.addIngredient(Items.SUGAR)
@@ -728,8 +728,8 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			Util.item(Delightful.MODID, name) instanceof IConfigured conf &&
 			conf.getConflicts().length > 0
 		) {
-			for (String conflict : conf.getConflicts()) {
-				cond.addCondition(new NotCondition(new ModLoadedCondition(conflict)));
+			for (Modid conflict : conf.getConflicts()) {
+				cond.addCondition(new NotCondition(new ModLoadedCondition(conflict.get())));
 			}
 		}
 		cond.addRecipe(recipe[0])
@@ -825,17 +825,17 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 					enabled(path),
 					not(tagEmpty(tag))
 			};
-			String[] conflicts = knife.getConflicts();
+			Modid[] conflicts = knife.getConflicts();
 			if (conflicts.length > 0) {
 				conds = ArrayUtils.addAll(conds, Arrays.stream(conflicts)
-					.map(conf -> not(modLoaded(conf)))
+					.map(conf -> not(modLoaded(conf.get())))
 					.toList()
 					.toArray(new ICondition[0])
 				);
 			}
-			String[] knifeMods = knife.getModid();
+			Modid[] knifeMods = knife.getModid();
 			if (knifeMods.length > 0) {
-				List<String> dependencies = new ArrayList<>(Arrays.asList(knifeMods));
+				List<String> dependencies = new ArrayList<>(Arrays.stream(knifeMods).map(Modid::get).toList());
 				dependencies.remove(FarmersDelight.MODID);
 				if (!dependencies.isEmpty()) {
 					conds = ArrayUtils.addAll(conds, dependencies.stream()

@@ -37,6 +37,9 @@
             "tag": "forge:fruits/sweet"
           },
           {
+            "tag": "forge:fruits/sweet"
+          },
+          {
             "tag": "forge:sugar"
           }
         ],
