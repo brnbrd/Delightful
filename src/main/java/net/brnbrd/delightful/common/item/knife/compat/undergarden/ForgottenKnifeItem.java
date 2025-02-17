@@ -3,7 +3,7 @@ package net.brnbrd.delightful.common.item.knife.compat.undergarden;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.item.DelightfulTiers;
 import net.brnbrd.delightful.common.item.knife.DKnifeItem;
-import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -24,7 +24,7 @@ import java.util.List;
 public class ForgottenKnifeItem extends DKnifeItem {
 
 	public ForgottenKnifeItem(Properties properties) {
-		super(DelightfulItemTags.ingot("forgotten_metal"), DelightfulTiers.FORGOTTEN, properties, Mods.UG);
+		super(DelightfulItemTags.ingot("forgotten_metal"), DelightfulTiers.FORGOTTEN, properties, Modid.UG);
 		MinecraftForge.EVENT_BUS.addListener(this::onHurt);
 		MinecraftForge.EVENT_BUS.addListener(this::onDig);
 	}
@@ -41,8 +41,8 @@ public class ForgottenKnifeItem extends DKnifeItem {
 	}
 
 	@Override
-	public String[] getConflicts() {
-		return new String[]{Mods.UGD};
+	public Modid[] getConflicts() {
+		return new Modid[]{Modid.UGD};
 	}
 
 	@Override
@@ -55,7 +55,7 @@ public class ForgottenKnifeItem extends DKnifeItem {
 			this.enabled() &&
 			e.getSource().getEntity() instanceof Player player &&
 			player.getMainHandItem().is(this) &&
-			ForgeRegistries.ENTITY_TYPES.getKey(e.getEntity().getType()).getNamespace().equals(Mods.UG) &&
+			ForgeRegistries.ENTITY_TYPES.getKey(e.getEntity().getType()).getNamespace().equals(Modid.UG) &&
 			e.getEntity().canChangeDimensions()
 		) {
 			e.setAmount(e.getAmount() * 1.5F);
@@ -69,7 +69,7 @@ public class ForgottenKnifeItem extends DKnifeItem {
 			this.enabled() &&
 			e.getEntity().getMainHandItem().is(this) &&
 			state != null &&
-			Util.nameSpace(state.getBlock()).equals(Mods.UG)
+			Util.nameSpace(state.getBlock()).equals(Modid.UG)
 		) {
 			e.setNewSpeed(e.getOriginalSpeed() * 1.5F);
 		}

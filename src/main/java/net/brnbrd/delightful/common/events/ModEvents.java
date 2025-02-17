@@ -7,7 +7,7 @@ import net.brnbrd.delightful.common.crafting.EnabledCondition;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.IConfigured;
 import net.brnbrd.delightful.common.item.knife.DKnifeItem;
-import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.brnbrd.delightful.network.DPacketHandler;
 import net.minecraft.network.chat.Component;
@@ -104,7 +104,7 @@ public class ModEvents {
 					DelightfulItems.SALMONBERRY_PIPS.get(),
 					DelightfulItems.CANTALOUPE_SEEDS.get()
 			);
-			if (ModList.get().isLoaded(Mods.N)) {
+			if (Modid.N.loaded()) {
 				DelightfulCauldronInteractions.registerCauldronInteractions();
 			}
 		});
@@ -122,7 +122,7 @@ public class ModEvents {
 	public void buildContents(BuildCreativeModeTabContentsEvent event) {
 		IForgeRegistry<Item> reg = ForgeRegistries.ITEMS;
 		ITagManager<Item> tags = reg.tags();
-		ResourceLocation TOAST_WITH_BLUEBERRIES = Util.rl(Mods.MOD, "toast_with_blueberries");
+		ResourceLocation TOAST_WITH_BLUEBERRIES = Util.rl(Modid.MOD, "toast_with_blueberries");
 		// Delightful Items
 		if (event.getTabKey() == ModCreativeTabs.TAB_FARMERS_DELIGHT.getKey()) {
 			DelightfulItems.ITEMS.getEntries().stream().filter(RegistryObject::isPresent).forEach((item) -> {
@@ -136,12 +136,12 @@ public class ModEvents {
 				}
 			});
 		} else if (
-			Mods.loaded(Mods.MOD) &&
-			event.getTabKey().location().getNamespace().equals(Mods.MOD) &&
+			Modid.MOD.loaded() &&
+			event.getTabKey().location().getNamespace().equals(Modid.MOD.get()) &&
 			tags != null
 		) {
 			if (
-				!Mods.loaded("nutritious_feast") &&
+				!Modid.NF.loaded() &&
 				reg.containsKey(TOAST_WITH_BLUEBERRIES) &&
 				tags.isKnownTagName(DelightfulItemTags.FRUITS_BLUEBERRIES)
 			) {

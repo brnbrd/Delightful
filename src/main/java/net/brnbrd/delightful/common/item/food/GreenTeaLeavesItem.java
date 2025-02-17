@@ -1,6 +1,6 @@
 package net.brnbrd.delightful.common.item.food;
 
-import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.Modid;
 
 public class GreenTeaLeavesItem extends DConsumableItem {
 	public GreenTeaLeavesItem(Properties prop) {
@@ -8,7 +8,7 @@ public class GreenTeaLeavesItem extends DConsumableItem {
 	}
 
 	@Override
-	public String[] getConflicts() {
-		return new String[]{Mods.FR, Mods.YH, Mods.CT};
+	public Modid[] getConflicts() {
+		return new Modid[]{Modid.FR, Modid.YH, Modid.CT};
 	}
 }

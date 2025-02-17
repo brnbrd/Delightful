@@ -1,6 +1,6 @@
 package net.brnbrd.delightful.common.item.food;
 
-import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.Modid;
 
 public class MatchaItem extends DConsumableItem {
 	public MatchaItem(Properties prop) {
@@ -8,7 +8,7 @@ public class MatchaItem extends DConsumableItem {
 	}
 
 	@Override
-	public String[] getConflicts() {
-		return new String[]{Mods.YH};
+	public Modid[] getConflicts() {
+		return new Modid[]{Modid.YH};
 	}
 }

@@ -2,6 +2,7 @@ package net.brnbrd.delightful.common.item.knife.compat.allthemodium;
 
 import net.brnbrd.delightful.common.item.DelightfulTiers;
 import net.brnbrd.delightful.common.item.knife.DKnifeItem;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -14,7 +15,7 @@ import java.util.function.Consumer;
 
 public class AllthemodiumKnifeItem extends DKnifeItem {
 	public AllthemodiumKnifeItem(Properties properties) {
-		super(DelightfulItemTags.PLATES_ALLTHEMODIUM, DelightfulTiers.ALLTHEMODIUM, properties, "allthemodium");
+		super(DelightfulItemTags.PLATES_ALLTHEMODIUM, DelightfulTiers.ALLTHEMODIUM, properties, Modid.ATM);
 	}
 
 	@Override

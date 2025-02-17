@@ -1,6 +1,7 @@
 package net.brnbrd.delightful.common.item.food;
 
 import net.brnbrd.delightful.common.item.ICompat;
+import net.brnbrd.delightful.compat.Modid;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -11,15 +12,15 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class CompatDrinkItem extends DrinkItem implements ICompat {
-	private final String[] modid;
+	private final Modid[] modid;
 
-	public CompatDrinkItem(Item.Properties properties, boolean hasPotionEffectTooltip, boolean hasCustomTooltip, String... modid) {
+	public CompatDrinkItem(Item.Properties properties, boolean hasPotionEffectTooltip, boolean hasCustomTooltip, Modid... modid) {
 		super(properties, hasPotionEffectTooltip, hasCustomTooltip);
 		this.modid = modid;
 	}
 
 	@Override
-	public String[] getModid() {
+	public Modid[] getModid() {
 		return modid;
 	}
 

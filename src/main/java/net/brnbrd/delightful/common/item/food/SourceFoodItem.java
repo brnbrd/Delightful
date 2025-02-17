@@ -1,14 +1,14 @@
 package net.brnbrd.delightful.common.item.food;
 
-import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.Modid;
 
 public class SourceFoodItem extends CompatConsumableItem {
 	public SourceFoodItem(Properties properties) {
-		super(properties, true, false, Mods.AN);
+		super(properties, true, false, Modid.AN);
 	}
 
 	@Override
-	public String[] getConflicts() {
-		return new String[]{Mods.AND};
+	public Modid[] getConflicts() {
+		return new Modid[]{Modid.AND};
 	}
 }

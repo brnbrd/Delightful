@@ -1,4 +1,4 @@
-package net.brnbrd.delightful.compat;
+package net.brnbrd.delightful.compat.botania;
 
 import net.brnbrd.delightful.common.item.knife.compat.botania.TerraKnifeItem;
 import net.minecraft.network.FriendlyByteBuf;

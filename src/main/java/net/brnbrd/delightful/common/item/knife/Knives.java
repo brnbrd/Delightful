@@ -44,10 +44,10 @@ import net.brnbrd.delightful.common.item.knife.compat.undergarden.ForgottenKnife
 import net.brnbrd.delightful.common.item.knife.compat.undergarden.FroststeelKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.undergarden.UtheriumKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.unusualend.PearlescentKnifeItem;
-import net.brnbrd.delightful.compat.AetherReduxCompat;
-import net.brnbrd.delightful.compat.BotaniaCompat;
-import net.brnbrd.delightful.compat.DeepAetherCompat;
-import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.aether.AetherReduxCompat;
+import net.brnbrd.delightful.compat.botania.BotaniaCompat;
+import net.brnbrd.delightful.compat.aether.DeepAetherCompat;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
@@ -78,19 +78,19 @@ public class Knives extends DelightfulItems {
 	public static final RegistryObject<Item> NICKEL = registerIngotKnife("nickel");
 	public static final RegistryObject<Item> ZINC = registerIngotKnife("zinc");
 
-	public static final RegistryObject<Item> MYTHRIL = registerIngotKnife("mythril", Mods.SO);
-	public static final RegistryObject<Item> ADAMANTIUM = registerIngotKnife("adamantium", Mods.SO);
-	public static final RegistryObject<Item> ONYX = registerGemKnife("onyx", Mods.SO);
-	public static final RegistryObject<Item> THYRIUM = registerIngotKnife("thyrium", Mods.FUS);
-	public static final RegistryObject<Item> SINISITE = registerIngotKnife("sinisite", Mods.FUS);
+	public static final RegistryObject<Item> MYTHRIL = registerIngotKnife("mythril", Modid.SO);
+	public static final RegistryObject<Item> ADAMANTIUM = registerIngotKnife("adamantium", Modid.SO);
+	public static final RegistryObject<Item> ONYX = registerGemKnife("onyx", Modid.SO);
+	public static final RegistryObject<Item> THYRIUM = registerIngotKnife("thyrium", Modid.FUS);
+	public static final RegistryObject<Item> SINISITE = registerIngotKnife("sinisite", Modid.FUS);
 	public static final RegistryObject<Item> PEARLESCENT = registerItem("pearlescent_knife", () -> new PearlescentKnifeItem(props()));
 	public static final RegistryObject<Item> ALLTHEMODIUM = registerItem("allthemodium_knife", () -> new AllthemodiumKnifeItem(props()));
 	public static final RegistryObject<Item> ELECTRUM = registerItem("electrum_knife", () -> new ElectrumKnifeItem(props()));
 	public static final RegistryObject<Item> ENDERITE = registerItem("enderite_knife", () -> new EnderiteKnifeItem(props()));
 	public static final RegistryObject<Item> DRACO_ARCANUS = registerItem("draco_arcanus_knife", () -> new DracoArcanusKnifeItem(props()));
-	public static final RegistryObject<Item> OSMIUM = registerIngotKnife("osmium", Mods.MEKT);
-	public static final RegistryObject<Item> REFINED_GLOWSTONE = registerIngotKnife("refined_glowstone", Mods.MEKT);
-	public static final RegistryObject<Item> REFINED_OBSIDIAN = registerIngotKnife("refined_obsidian", Mods.MEKT);
+	public static final RegistryObject<Item> OSMIUM = registerIngotKnife("osmium", Modid.MEKT);
+	public static final RegistryObject<Item> REFINED_GLOWSTONE = registerIngotKnife("refined_glowstone", Modid.MEKT);
+	public static final RegistryObject<Item> REFINED_OBSIDIAN = registerIngotKnife("refined_obsidian", Modid.MEKT);
 	public static final RegistryObject<Item> OBSIDIAN_INFUSED_ENDERITE = registerItem("obsidian_infused_enderite_knife", () -> new ObsdianInfusedEnderiteKnifeItem(props()));
 	public static final RegistryObject<Item> BLACK_OPAL = registerItem("black_opal_knife", () -> new BlackOpalKnifeItem(props()));
 	public static final RegistryObject<Item> NETHERITE_OPAL = registerItem("netherite_opal_knife", () -> new NetheriteOpalKnifeItem(props()));
@@ -107,7 +107,7 @@ public class Knives extends DelightfulItems {
 	public static final RegistryObject<Item> BLAZING = registerItem("blazing_knife", () -> new BlazingKnifeItem(props()));
 	public static final RegistryObject<Item> LEAF = registerItem("leaf_knife", () -> new LeafKnifeItem(props()));
 	public static final RegistryObject<Item> KIWANO = registerItem("kiwano_knife", () -> new KiwanoKnifeItem(props()));
-	public static final RegistryObject<Item> CRYSTALLINE = registerKnife("crystalline", DelightfulItemTags.VOID_CRYSTAL_BLOCK, Mods.EP);
+	public static final RegistryObject<Item> CRYSTALLINE = registerKnife("crystalline", DelightfulItemTags.VOID_CRYSTAL_BLOCK, Modid.EP);
 	public static final RegistryObject<Item> SOUL_STEEL = registerItem("soul_steel_knife", () -> new SoulSteelKnifeItem(props()));
 	public static final RegistryObject<Item> ROSE_GOLD = registerItem("rose_gold_knife", () -> new RoseGoldKnifeItem(props()));
 	public static final RegistryObject<Item> GILDED_NETHERITE = registerItem("gilded_netherite_knife", () -> new GildedNetheriteKnifeItem(props()));
@@ -122,69 +122,69 @@ public class Knives extends DelightfulItems {
 	public static final RegistryObject<Item> ZANITE = registerItem("zanite_knife", () -> new ZaniteKnifeItem(props()));
 	public static final RegistryObject<Item> PHOENIX = registerItem("phoenix_knife", () -> new PhoenixKnifeItem(props()));
 	public static final RegistryObject<Item> MANASTEEL = registerItem("manasteel_knife", () -> new ManasteelKnifeItem(
-			props(),
-			DelightfulItemTags.ingot("manasteel"),
-			Mods.loaded(Mods.BTA) ? BotaniaCompat.manasteel().get() : DelightfulTiers.STEEL
+		props(),
+		DelightfulItemTags.ingot("manasteel"),
+		Modid.BTA.loaded() ? BotaniaCompat.manasteel().get() : DelightfulTiers.STEEL
 	));
 	public static final RegistryObject<Item> ELEMENTIUM = registerItem("elementium_knife", () -> new ElementiumKnifeItem(
-			props(),
-			DelightfulItemTags.ingot("elementium"),
-			Mods.loaded(Mods.BTA) ? BotaniaCompat.elementium().get() : DelightfulTiers.STEEL
+		props(),
+		DelightfulItemTags.ingot("elementium"),
+		Modid.BTA.loaded() ? BotaniaCompat.elementium().get() : DelightfulTiers.STEEL
 	));
 	public static final RegistryObject<Item> TERRA = registerItem("terra_knife", () -> new TerraKnifeItem(
 		props(),
 		DelightfulItemTags.ingot("terrasteel"),
-		Mods.loaded(Mods.BTA) ? BotaniaCompat.terrasteel().get() : DelightfulTiers.STEEL
+		Modid.BTA.loaded() ? BotaniaCompat.terrasteel().get() : DelightfulTiers.STEEL
 	));
 	public static final RegistryObject<Item> ALF = registerItem("alf_knife", () -> new AlfKnifeItem(props()));
 	public static final RegistryObject<Item> VERIDIUM = registerItem("veridium_knife",
-		() -> Mods.loaded(Mods.AER) ?
+		() -> Modid.AER.loaded() ?
 			AetherReduxCompat.VERIDIUM.get() :
 			new DummyKnifeItem(
 				DelightfulItemTags.INGOTS_VERIDIUM,
 				Ingredient.of(DelightfulItemTags.SKYROOT_STICK),
-				Mods.AE, Mods.AER
+				Modid.AE, Modid.AER
 			)
 	);
 	public static final RegistryObject<Item> INFUSED_VERIDIUM = registerItem("infused_veridium_knife",
-		() -> Mods.loaded(Mods.AER) ?
+		() -> Modid.AER.loaded() ?
 			AetherReduxCompat.INFUSED_VERIDIUM.get() :
 			new DummyKnifeItem(
 				DelightfulItemTags.INGOTS_VERIDIUM,
 				Ingredient.of(DelightfulItemTags.SKYROOT_STICK),
-				Mods.AE, Mods.AER
+				Modid.AE, Modid.AER
 			)
 	);
 	public static final RegistryObject<Item> SKYJADE = registerItem("skyjade_knife",
-		() -> Mods.loaded("deep_aether") ?
+		() -> Modid.DA.loaded() ?
 			DeepAetherCompat.SKYJADE.get() :
 			new DummyKnifeItem(
 				DelightfulItemTags.GEMS_SKYJADE,
 				Ingredient.of(DelightfulItemTags.SKYROOT_STICK),
-				Mods.AE, "deep_aether"
+				Modid.AE, Modid.DA
 			)
 	);
 	public static final RegistryObject<Item> STRATUS = registerItem("stratus_knife",
-		() -> Mods.loaded("deep_aether") ?
+		() -> Modid.DA.loaded() ?
 			DeepAetherCompat.STRATUS.get() :
 			new DummyStratusKnifeItem(props(), Tiers.IRON)
 	);
 	public static final RegistryObject<Item> VALKYRUM = registerItem("valkyrum_knife", () -> new ValkyrumKnifeItem(props()));
-	public static final RegistryObject<Item> CERTUS_QUARTZ = registerKnife("certus_quartz", DelightfulItemTags.CERTUS_QUARTZ, Mods.AE2);
+	public static final RegistryObject<Item> CERTUS_QUARTZ = registerKnife("certus_quartz", DelightfulItemTags.CERTUS_QUARTZ, Modid.AE2);
 	public static final RegistryObject<Item> FLUIX = registerItem("fluix_knife", () -> new FluixKnifeItem(props()));
 
 	// Registers a knife, requiring modid
-	public static RegistryObject<Item> registerKnife(String name, TagKey<Item> tag, String... modid) {
+	public static RegistryObject<Item> registerKnife(String name, TagKey<Item> tag, Modid... modid) {
 		return registerItem(name + "_knife", () -> new DKnifeItem(tag, DelightfulTiers.get(name), props(), modid));
 	}
 
 	// Registers a knife, requiring non-empty ingot tag
-	public static RegistryObject<Item> registerIngotKnife(String name, String... modid) {
+	public static RegistryObject<Item> registerIngotKnife(String name, Modid... modid) {
 		return registerKnife(name, DelightfulItemTags.ingot(name), modid);
 	}
 
 	// Registers a knife, requiring non-empty gem tag
-	public static RegistryObject<Item> registerGemKnife(String name, String... modid) {
+	public static RegistryObject<Item> registerGemKnife(String name, Modid... modid) {
 		return registerKnife(name, DelightfulItemTags.gem(name), modid);
 	}
 

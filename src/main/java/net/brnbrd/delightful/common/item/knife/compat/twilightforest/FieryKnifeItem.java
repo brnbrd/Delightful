@@ -2,7 +2,7 @@ package net.brnbrd.delightful.common.item.knife.compat.twilightforest;
 
 import net.brnbrd.delightful.common.item.DelightfulTiers;
 import net.brnbrd.delightful.common.item.knife.DKnifeItem;
-import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -17,7 +17,7 @@ import java.util.List;
 
 public class FieryKnifeItem extends DKnifeItem {
 	public FieryKnifeItem(Properties properties) {
-		super(DelightfulItemTags.ingot("fiery"), DelightfulTiers.FIERY, properties, Mods.TF);
+		super(DelightfulItemTags.ingot("fiery"), DelightfulTiers.FIERY, properties, Modid.TF);
 	}
 
 	@Override
@@ -33,8 +33,8 @@ public class FieryKnifeItem extends DKnifeItem {
 	}
 
 	@Override
-	public String[] getConflicts() {
-		return new String[]{Mods.TFD};
+	public Modid[] getConflicts() {
+		return new Modid[]{Modid.TFD};
 	}
 
 	@Override

@@ -1,14 +1,15 @@
 package net.brnbrd.delightful.common.item.food;
 
-import vectorwing.farmersdelight.FarmersDelight;
+import net.brnbrd.delightful.Util;
+import net.brnbrd.delightful.compat.Modid;
 
 public class PumpkinPieSliceItem extends CompatPieSliceItem {
 	public PumpkinPieSliceItem(Properties prop) {
-		super(prop, FarmersDelight.MODID);
+		super(prop, Util.EMPTY);
 	}
 
 	@Override
-	public String[] getConflicts() {
-		return new String[]{"create_central_kitchen"};
+	public Modid[] getConflicts() {
+		return new Modid[]{Modid.CCK};
 	}
 }

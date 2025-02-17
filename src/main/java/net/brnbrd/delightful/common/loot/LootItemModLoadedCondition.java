@@ -24,7 +24,7 @@ public class LootItemModLoadedCondition implements LootItemCondition {
 
 	@Override
 	public boolean test(LootContext lootContext) {
-		return Mods.loaded(this.modid);
+		return Mods.stringLoaded(this.modid);
 	}
 
 	public static class Serializer implements net.minecraft.world.level.storage.loot.Serializer<LootItemModLoadedCondition> {

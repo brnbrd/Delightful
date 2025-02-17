@@ -2,6 +2,7 @@ package net.brnbrd.delightful.common.item.knife.compat.create_sa;
 
 import net.brnbrd.delightful.common.item.DelightfulTiers;
 import net.brnbrd.delightful.common.item.knife.DKnifeItem;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
@@ -18,7 +19,7 @@ import java.util.List;
 
 public class ExperienceKnifeItem extends DKnifeItem {
 	public ExperienceKnifeItem(Properties properties) {
-		super(DelightfulItemTags.HEAP_EXPERIENCE, DelightfulTiers.EXPERIENCE, properties, "create_sa");
+		super(DelightfulItemTags.HEAP_EXPERIENCE, DelightfulTiers.EXPERIENCE, properties, Modid.CSA);
 	}
 
 	@Override

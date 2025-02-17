@@ -1,6 +1,6 @@
 package net.brnbrd.delightful.common.item.food;
 
-import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.Modid;
 
 public class NutButterBottleItem extends DConsumableItem {
 	public NutButterBottleItem(Properties properties) {
@@ -8,7 +8,7 @@ public class NutButterBottleItem extends DConsumableItem {
 	}
 
 	@Override
-	public String[] getConflicts() {
-		return new String[]{Mods.VD};
+	public Modid[] getConflicts() {
+		return new Modid[]{Modid.VD};
 	}
 }

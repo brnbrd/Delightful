@@ -1,7 +1,7 @@
 package net.brnbrd.delightful.common.item;
 
 import net.brnbrd.delightful.Util;
-import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.Tiers;
@@ -66,14 +66,14 @@ public enum DelightfulTiers implements Tier {
 	FROSTSTEEL(2, 575, 7F, 2F, 20, DelightfulItemTags.getIngot("froststeel")),
 	UTHERIUM(3, 1279, 8.5F, 3.5F, 17, DelightfulItemTags.getIngot("utherium")),
 	FORGOTTEN(4, 1876, 8F, 3F, 2, DelightfulItemTags.getIngot("forgotten_metal")),
-	SKYROOT(0, 59, 2F, 0F, 15, Ingredient.of(Util.it(Mods.AE, "skyroot_repairing"))),
-	HOLYSTONE(1, 131, 4F, 1F, 5, Ingredient.of(Util.it(Mods.AE, "holystone_repairing"))),
-	ZANITE(2, 250, 6F, 2F, 14, Ingredient.of(Util.it(Mods.AE, "zanite_repairing"))),
-	GRAVITITE(3, 1561, 8F, 3F, 10, Ingredient.of(Util.it(Mods.AE, "gravitite_repairing"))),
+	SKYROOT(0, 59, 2F, 0F, 15, Ingredient.of(Modid.AE.it("skyroot_repairing"))),
+	HOLYSTONE(1, 131, 4F, 1F, 5, Ingredient.of(Modid.AE.it("holystone_repairing"))),
+	ZANITE(2, 250, 6F, 2F, 14, Ingredient.of(Modid.AE.it("zanite_repairing"))),
+	GRAVITITE(3, 1561, 8F, 3F, 10, Ingredient.of(Modid.AE.it("gravitite_repairing"))),
 	PHOENIX(3, 1561, 8F, 4F, 12, Ingredient.EMPTY),
 	VERIDIUM(2, 750, 2.25F, 1F, 0, Ingredient.of(DelightfulItemTags.INGOTS_VERIDIUM)),
 	INFUSED_VERIDIUM(2, 750, 7F, 1F, 0, Ingredient.of(DelightfulItemTags.INGOTS_VERIDIUM)),
-	VALKYRUM(5, 2031, 9F, 4F, 15, Ingredient.of(Util.it("ancient_aether", "valkyrum_repairing"))),
+	VALKYRUM(5, 2031, 9F, 4F, 15, Ingredient.of(Modid.AAE.it("valkyrum_repairing"))),
 	NETHER_QUARTZ(
 			Tiers.IRON.getLevel(),
 			Tiers.IRON.getUses(),

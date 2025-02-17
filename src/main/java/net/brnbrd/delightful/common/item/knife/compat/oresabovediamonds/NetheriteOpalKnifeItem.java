@@ -2,6 +2,7 @@ package net.brnbrd.delightful.common.item.knife.compat.oresabovediamonds;
 
 import net.brnbrd.delightful.common.item.DelightfulTiers;
 import net.brnbrd.delightful.common.item.knife.DKnifeItem;
+import net.brnbrd.delightful.compat.Modid;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
@@ -12,7 +13,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class NetheriteOpalKnifeItem extends DKnifeItem {
 	public NetheriteOpalKnifeItem(Properties properties) {
-		super(Tags.Items.INGOTS_NETHERITE, DelightfulTiers.NETHERITE_OPAL, properties, "oresabovediamonds");
+		super(Tags.Items.INGOTS_NETHERITE, DelightfulTiers.NETHERITE_OPAL, properties, Modid.OAD);
 	}
 
 	@Override

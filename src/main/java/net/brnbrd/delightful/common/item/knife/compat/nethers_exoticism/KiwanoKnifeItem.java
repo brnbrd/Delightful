@@ -2,6 +2,7 @@ package net.brnbrd.delightful.common.item.knife.compat.nethers_exoticism;
 
 import net.brnbrd.delightful.common.item.DelightfulTiers;
 import net.brnbrd.delightful.common.item.knife.DKnifeItem;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -11,7 +12,7 @@ import java.util.List;
 
 public class KiwanoKnifeItem extends DKnifeItem {
 	public KiwanoKnifeItem(Properties properties) {
-		super(DelightfulItemTags.KIWANO_PEEL, DelightfulTiers.KIWANO, properties, "nethers_exoticism");
+		super(DelightfulItemTags.KIWANO_PEEL, DelightfulTiers.KIWANO, properties, Modid.NE);
 	}
 
 	@Override

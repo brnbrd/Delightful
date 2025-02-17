@@ -1,6 +1,6 @@
 package net.brnbrd.delightful.common.item.food;
 
-import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
@@ -22,7 +22,7 @@ public class VenisonChopsItem extends DConsumableItem {
 	}
 
 	@Override
-	public String[] getConflicts() {
-		return new String[]{Mods.AD, Mods.TFD};
+	public Modid[] getConflicts() {
+		return new Modid[]{Modid.AD, Modid.TFD};
 	}
 }

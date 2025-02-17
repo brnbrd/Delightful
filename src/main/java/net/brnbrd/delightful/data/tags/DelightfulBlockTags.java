@@ -7,7 +7,6 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
 
 public class DelightfulBlockTags {
-
 	// Delightful
 	public static final TagKey<Block> DROPS_STRAW = bind(Delightful.MODID, "drops_straw");
 	public static final TagKey<Block> DROPS_ACORN = bind(Delightful.MODID, "drops_acorn");

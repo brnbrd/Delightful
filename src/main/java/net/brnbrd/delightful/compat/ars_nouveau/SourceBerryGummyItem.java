@@ -2,7 +2,7 @@ package net.brnbrd.delightful.compat.ars_nouveau;
 
 import net.brnbrd.delightful.common.item.ICompat;
 import net.brnbrd.delightful.common.item.food.GummyItem;
-import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.Modid;
 
 public class SourceBerryGummyItem extends GummyItem implements ICompat {
 	public SourceBerryGummyItem(Properties prop) {
@@ -10,8 +10,8 @@ public class SourceBerryGummyItem extends GummyItem implements ICompat {
 	}
 
 	@Override
-	public String[] getModid() {
-		return new String[]{Mods.AN};
+	public Modid[] getModid() {
+		return new Modid[]{Modid.AN};
 	}
 
 	@Override

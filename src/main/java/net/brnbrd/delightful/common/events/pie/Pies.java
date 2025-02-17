@@ -2,7 +2,7 @@ package net.brnbrd.delightful.common.events.pie;
 
 import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
-import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -13,7 +13,7 @@ public class Pies {
 	public static boolean enabled(ItemStack stack) {
 		return (
 			stack.is(DelightfulItemTags.COMPAT_PIES) &&
-			!(stack.is(Items.PUMPKIN_PIE) && Mods.loaded(Mods.CCK)) &&
+			!(stack.is(Items.PUMPKIN_PIE) && Modid.CCK.loaded()) &&
 			Util.enabled(Util.name(stack) + "_slice")
 		);
 	}

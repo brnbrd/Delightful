@@ -1,7 +1,7 @@
 package net.brnbrd.delightful.common.item.knife.compat.aether.aether_redux;
 
 import net.brnbrd.delightful.common.item.knife.compat.aether.AetherKnifeItem;
-import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
@@ -27,7 +27,7 @@ public class VeridiumKnifeItem extends AetherKnifeItem implements VeridiumItem {
 	private final Supplier<? extends Item> uninfused;
 
 	public VeridiumKnifeItem(Tier tier, Properties properties, Supplier<? extends Item> uninfused) {
-		super(DelightfulItemTags.ingot("veridium"), tier, properties, Mods.AER);
+		super(DelightfulItemTags.ingot("veridium"), tier, properties, Modid.AER);
 		this.uninfused = uninfused;
 	}
 
@@ -75,7 +75,7 @@ public class VeridiumKnifeItem extends AetherKnifeItem implements VeridiumItem {
 
 	public static class Uninfused extends AetherKnifeItem {
 		public Uninfused(Tier tier, Properties properties) {
-			super(DelightfulItemTags.ingot("veridium"), tier, properties, Mods.AER);
+			super(DelightfulItemTags.ingot("veridium"), tier, properties, Modid.AER);
 		}
 
 		@Override

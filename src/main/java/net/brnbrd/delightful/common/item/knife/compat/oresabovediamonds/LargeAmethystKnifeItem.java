@@ -2,6 +2,7 @@ package net.brnbrd.delightful.common.item.knife.compat.oresabovediamonds;
 
 import net.brnbrd.delightful.common.item.DelightfulTiers;
 import net.brnbrd.delightful.common.item.knife.DKnifeItem;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -10,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class LargeAmethystKnifeItem extends DKnifeItem {
 	public LargeAmethystKnifeItem(Properties properties) {
-		super(DelightfulItemTags.gem("large_amethyst"), DelightfulTiers.LARGE_AMETHYST, properties, "oresabovediamonds");
+		super(DelightfulItemTags.gem("large_amethyst"), DelightfulTiers.LARGE_AMETHYST, properties, Modid.OAD);
 	}
 
 	@Override

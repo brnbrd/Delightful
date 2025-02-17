@@ -3,7 +3,7 @@ package net.brnbrd.delightful.common.item.knife.compat.twilightforest;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.item.DelightfulTiers;
 import net.brnbrd.delightful.common.item.knife.DKnifeItem;
-import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -15,7 +15,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class SteeleafKnifeItem extends DKnifeItem {
 	public SteeleafKnifeItem(Properties properties) {
-		super(DelightfulItemTags.ingot("steeleaf"), DelightfulTiers.STEELEAF, properties, Mods.TF);
+		super(DelightfulItemTags.ingot("steeleaf"), DelightfulTiers.STEELEAF, properties, Modid.TF);
 	}
 
 	@Override
@@ -25,8 +25,8 @@ public class SteeleafKnifeItem extends DKnifeItem {
 	}
 
 	@Override
-	public String[] getConflicts() {
-		return new String[]{Mods.TFD};
+	public Modid[] getConflicts() {
+		return new Modid[]{Modid.TFD};
 	}
 
 	@Override

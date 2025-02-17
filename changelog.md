@@ -10,6 +10,7 @@
 - Iced Berry Matcha Latte is now crafted using the Matcha Latte as a base
 - Matcha products (but not Matcha itself) now give level 2 of the green tea effect
 - S'mores and Roasted Marshmallow on a Stick now provide Sugar Rush (if [Neapolitan](https://www.curseforge.com/minecraft/mc-mods/neapolitan) is present) or Speed
+- Jams are now crafted with 3 fruit and 1 sugar
 - Some items that previously didn't display effects in their tooltip now do
 - Dandelions now spawn within Mini Melon patches
 

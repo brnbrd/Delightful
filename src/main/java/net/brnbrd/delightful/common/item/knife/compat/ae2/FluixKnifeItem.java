@@ -2,7 +2,7 @@ package net.brnbrd.delightful.common.item.knife.compat.ae2;
 
 import net.brnbrd.delightful.common.item.DelightfulTiers;
 import net.brnbrd.delightful.common.item.knife.DKnifeItem;
-import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
@@ -14,7 +14,7 @@ import java.util.List;
 
 public class FluixKnifeItem extends DKnifeItem {
 	public FluixKnifeItem(Properties properties) {
-		super(DelightfulItemTags.FLUIX_BLOCK, DelightfulTiers.FLUIX, properties, Mods.AE2);
+		super(DelightfulItemTags.FLUIX_BLOCK, DelightfulTiers.FLUIX, properties, Modid.AE2);
 	}
 
 	@Override

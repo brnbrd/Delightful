@@ -3,7 +3,7 @@ package net.brnbrd.delightful.data.gen;
 import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.block.*;
-import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.Modid;
 import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -48,7 +48,7 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
 		this.bigSlicedBlock(DelightfulBlocks.SLICED_PUMPKIN.get(),
 				resourceBlock("pumpkin_inside_rind"), Util.rl("minecraft", "block/pumpkin_side"), Util.rl("minecraft", "block/pumpkin_top"));
 		this.bigSlicedBlock(DelightfulBlocks.SLICED_GLOOMGOURD.get(),
-				resourceBlock("gloomgourd_inside_rind"), Util.rl(Mods.UG, "block/gloomgourd_side"), Util.rl(Mods.UG, "block/gloomgourd_top"));
+				resourceBlock("gloomgourd_inside_rind"), Modid.UG.rl("block/gloomgourd_side"), Modid.UG.rl("block/gloomgourd_top"));
 		this.pieBlock(DelightfulBlocks.SALMONBERRY_PIE);
 		this.pieBlock(DelightfulBlocks.PUMPKIN_PIE);
 		this.pieBlock(DelightfulBlocks.SOURCE_BERRY_PIE);

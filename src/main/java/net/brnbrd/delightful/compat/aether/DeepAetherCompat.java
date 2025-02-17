@@ -1,4 +1,4 @@
-package net.brnbrd.delightful.compat;
+package net.brnbrd.delightful.compat.aether;
 
 import net.brnbrd.delightful.common.item.knife.Knives;
 import net.brnbrd.delightful.common.item.knife.compat.aether.deep_aether.SkyjadeKnifeItem;

@@ -1,8 +1,8 @@
 package net.brnbrd.delightful.network;
 
 import net.brnbrd.delightful.Util;
-import net.brnbrd.delightful.compat.BotaniaLCP;
-import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.botania.BotaniaLCP;
+import net.brnbrd.delightful.compat.Modid;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.network.NetworkEvent;
@@ -24,7 +24,7 @@ public class DPacketHandler {
 
 	public static void init() {
 		// Serverbound
-		if (Mods.loaded(Mods.BTA)) {
+		if (Modid.BTA.loaded()) {
 			INSTANCE.registerMessage(0, BotaniaLCP.class, BotaniaLCP::encode, BotaniaLCP::decode,
 					makeServerBoundHandler(BotaniaLCP::handle));
 		}

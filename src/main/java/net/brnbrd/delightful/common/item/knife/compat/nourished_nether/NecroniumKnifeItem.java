@@ -3,6 +3,7 @@ package net.brnbrd.delightful.common.item.knife.compat.nourished_nether;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.item.DelightfulTiers;
 import net.brnbrd.delightful.common.item.knife.DKnifeItem;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -16,7 +17,7 @@ import java.util.List;
 
 public class NecroniumKnifeItem extends DKnifeItem {
 	public NecroniumKnifeItem(Properties properties) {
-		super(DelightfulItemTags.ingot("necronium"), DelightfulTiers.NECRONIUM, properties, "nourished_nether");
+		super(DelightfulItemTags.ingot("necronium"), DelightfulTiers.NECRONIUM, properties, Modid.NN);
 	}
 
 	@Override

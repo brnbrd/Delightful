@@ -1,7 +1,7 @@
 package net.brnbrd.delightful.common.events.pie;
 
 import net.brnbrd.delightful.Util;
-import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.Modid;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundSource;
@@ -34,10 +34,9 @@ public class PieEvents {
 			Pies.enabled(stack) ||
 			isBerryPieOrMuffin(stack)
 		) {
-			e.getToolTip().add(
-				Util.tooltip("placeable")
-					.withStyle(ChatFormatting.DARK_GRAY)
-					.withStyle(ChatFormatting.ITALIC)
+			e.getToolTip().add(Util.tooltip("placeable")
+				.withStyle(ChatFormatting.DARK_GRAY)
+				.withStyle(ChatFormatting.ITALIC)
 			);
 		}
 	}
@@ -119,11 +118,6 @@ public class PieEvents {
 
 	// Wild Berries compat
 	boolean isBerryPieOrMuffin(ItemStack stack) {
-		return (
-			Mods.loaded(Mods.WB) && (
-				stack.is(Util.it(Mods.WB, "berry_pies")) ||
-				stack.is(Util.it(Mods.WB, "berry_muffins"))
-			)
-		);
+		return Modid.WB.loaded() && (stack.is(Modid.WB.it("berry_pies")) || stack.is(Modid.WB.it("berry_muffins")));
 	}
 }

@@ -3,7 +3,7 @@ package net.brnbrd.delightful.common.item.knife.compat.twilightforest;
 import net.brnbrd.delightful.common.item.DelightfulTiers;
 import net.brnbrd.delightful.common.item.knife.DKnifeItem;
 import net.brnbrd.delightful.common.item.knife.Knives;
-import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -17,13 +17,13 @@ import java.util.List;
 
 public class KnightmetalKnifeItem extends DKnifeItem {
 	public KnightmetalKnifeItem(Properties properties) {
-		super(DelightfulItemTags.ingot("knightmetal"), DelightfulTiers.KNIGHTMETAL, properties, Mods.TF);
+		super(DelightfulItemTags.ingot("knightmetal"), DelightfulTiers.KNIGHTMETAL, properties, Modid.TF);
 		MinecraftForge.EVENT_BUS.addListener(this::onHurt);
 	}
 
 	@Override
-	public String[] getConflicts() {
-		return new String[]{Mods.TFD};
+	public Modid[] getConflicts() {
+		return new Modid[]{Modid.TFD};
 	}
 
 	private void onHurt(LivingHurtEvent e) {
@@ -45,7 +45,7 @@ public class KnightmetalKnifeItem extends DKnifeItem {
 	@Override
 	public List<Component> getTools() {
 		return List.of(
-				Component.translatable("item." + Mods.TF + ".knightmetal_sword.desc").withStyle(ChatFormatting.GRAY)
+				Component.translatable("item." + Modid.TF.get() + ".knightmetal_sword.desc").withStyle(ChatFormatting.GRAY)
 		);
 	}
 }

@@ -2,7 +2,7 @@ package net.brnbrd.delightful.common.item.knife.compat.undergarden;
 
 import net.brnbrd.delightful.common.item.DelightfulTiers;
 import net.brnbrd.delightful.common.item.knife.DKnifeItem;
-import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -15,13 +15,13 @@ import java.util.List;
 
 public class FroststeelKnifeItem extends DKnifeItem {
 	public FroststeelKnifeItem(Properties properties) {
-		super(DelightfulItemTags.ingot("froststeel"), DelightfulTiers.FROSTSTEEL, properties, Mods.UG);
+		super(DelightfulItemTags.ingot("froststeel"), DelightfulTiers.FROSTSTEEL, properties, Modid.UG);
 		MinecraftForge.EVENT_BUS.addListener(this::onHurt);
 	}
 
 	@Override
-	public String[] getConflicts() {
-		return new String[]{Mods.UGD};
+	public Modid[] getConflicts() {
+		return new Modid[]{Modid.UGD};
 	}
 
 	@Override

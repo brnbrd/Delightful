@@ -326,6 +326,14 @@
       "required": false
     },
     {
+      "id": "habitat:pooka",
+      "required": false
+    },
+    {
+      "id": "goated:geep",
+      "required": false
+    },
+    {
       "id": "biomemakeover:glowfish",
       "required": false
     },
@@ -346,10 +354,6 @@
       "required": false
     },
     {
-      "id": "habitat:pooka",
-      "required": false
-    },
-    {
       "id": "aqcaracal:caracal",
       "required": false
     },
@@ -363,10 +367,6 @@
     },
     {
       "id": "farmlife:domestic_tribull",
-      "required": false
-    },
-    {
-      "id": "goated:geep",
       "required": false
     },
     {

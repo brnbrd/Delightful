@@ -4,7 +4,7 @@ import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.block.DelightfulBlocks;
 import net.brnbrd.delightful.compat.BWGCompat;
-import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.data.tags.DelightfulBlockTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -20,7 +20,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class DelightfulBlockTagProvider extends BlockTagsProvider {
-
 	protected DelightfulBlockTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
 		super(output, lookupProvider, Delightful.MODID, existingFileHelper);
 	}
@@ -49,14 +48,14 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 				.add(DelightfulBlocks.CHORUS_PIE.get())
 				.add(DelightfulBlocks.MULBERRY_PIE.get())
 				.add(DelightfulBlocks.BAKLAVA.get())
-				.addOptional(Util.rl(Mods.UG, "gloomgourd"))
-				.addOptional(Util.rl(Mods.UG, "carved_gloomgourd"));
+				.addOptional(Modid.UG.rl("gloomgourd"))
+				.addOptional(Modid.UG.rl("carved_gloomgourd"));
 
 		// Delightful
 		this.tag(DelightfulBlockTags.DROPS_STRAW)
-				.addOptional(Util.rl(Mods.BWG, BWGCompat.prairie_grass))
-				.addOptional(Util.rl(Mods.BWG, BWGCompat.tall_prairie_grass))
-				.addOptional(Util.rl(Mods.BWG, BWGCompat.beach_grass))
+				.addOptional(Modid.BWG.rl(BWGCompat.prairie_grass))
+				.addOptional(Modid.BWG.rl(BWGCompat.tall_prairie_grass))
+				.addOptional(Modid.BWG.rl(BWGCompat.beach_grass))
 				.addOptional(Util.rl("sprout", "sprouts"));
 		this.tag(DelightfulBlockTags.DROPS_ACORN)
 				.add(Blocks.OAK_LEAVES)
@@ -99,12 +98,12 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 				.add(DelightfulBlocks.GREEN_APPLE_CRATE.get())
 				.add(DelightfulBlocks.YUCCA_FRUIT_CRATE.get())
 				.add(DelightfulBlocks.BAOBAB_FRUIT_CRATE.get())
-				.addOptional(Util.rl(Mods.CD, "avocado_crate"))
-				.addOptional(Util.rl(Mods.CD, "cucumber_crate"))
-				.addOptional(Util.rl(Mods.CD, "pickle_crate"))
-				.addOptional(Util.rl(Mods.CD, "corn_cob_crate"))
-				.addOptional(Util.rl(Mods.CD, "eggplant_crate"))
-				.addOptional(Util.rl(Mods.CD, "white_eggplant_crate"))
+				.addOptional(Modid.CD.rl("avocado_crate"))
+				.addOptional(Modid.CD.rl("cucumber_crate"))
+				.addOptional(Modid.CD.rl("pickle_crate"))
+				.addOptional(Modid.CD.rl("corn_cob_crate"))
+				.addOptional(Modid.CD.rl("eggplant_crate"))
+				.addOptional(Modid.CD.rl("white_eggplant_crate"))
 				.addOptional(Util.rl("fruittrees", "citrus_cabinet"))
 				.addOptional(Util.rl("fruittrees", "cherry_cabinet"));
 		this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
@@ -115,12 +114,12 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 				.add(DelightfulBlocks.ACORN_SACK.get())
 				.add(DelightfulBlocks.SALMONBERRY_SACK.get())
 				.add(DelightfulBlocks.BLUEBERRY_SACK.get())
-				.addOptional(Util.rl(Mods.AN, "sourceberry_sack"));
+				.addOptional(Modid.AN.rl("sourceberry_sack"));
 		this.tag(BlockTags.SMALL_FLOWERS)
 				.add(DelightfulBlocks.WILD_SALMONBERRIES.get())
-				.addOptional(Util.rl(Mods.CD, "wild_cucumbers"))
-				.addOptional(Util.rl(Mods.CD, "wild_corn"))
-				.addOptional(Util.rl(Mods.CD, "wild_eggplants"));
+				.addOptional(Modid.CD.rl("wild_cucumbers"))
+				.addOptional(Modid.CD.rl("wild_corn"))
+				.addOptional(Modid.CD.rl("wild_eggplants"));
 		this.tag(BlockTags.CAULDRONS)
 				.add(DelightfulBlocks.SALMONBERRY_MILKSHAKE_CAULDRON.get())
 				.add(DelightfulBlocks.MATCHA_MILKSHAKE_CAULDRON.get());

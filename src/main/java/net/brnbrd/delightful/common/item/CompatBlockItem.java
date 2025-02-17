@@ -1,5 +1,6 @@
 package net.brnbrd.delightful.common.item;
 
+import net.brnbrd.delightful.compat.Modid;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -12,15 +13,15 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class CompatBlockItem extends BlockItem implements ICompat {
-	private final String[] modid;
+	private final Modid[] modid;
 
-	public CompatBlockItem(Block block, Item.Properties props, String... modid) {
+	public CompatBlockItem(Block block, Item.Properties props, Modid... modid) {
 		super(block, props);
 		this.modid = modid;
 	}
 
 	@Override
-	public String[] getModid() {
+	public Modid[] getModid() {
 		return modid;
 	}
 

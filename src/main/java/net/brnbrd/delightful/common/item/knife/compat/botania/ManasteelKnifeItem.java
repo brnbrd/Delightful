@@ -1,8 +1,8 @@
 package net.brnbrd.delightful.common.item.knife.compat.botania;
 
 import net.brnbrd.delightful.common.item.knife.DKnifeItem;
-import net.brnbrd.delightful.compat.BotaniaCompat;
-import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.botania.BotaniaCompat;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.Entity;
@@ -18,7 +18,7 @@ import java.util.function.Consumer;
 
 public class ManasteelKnifeItem extends DKnifeItem {
 	public ManasteelKnifeItem(Properties properties, TagKey<Item> tag, Tier tier) {
-		super(tag, tier, properties, Mods.BTA);
+		super(tag, tier, properties, Modid.BTA);
 	}
 
 	@Override

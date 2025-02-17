@@ -2,7 +2,8 @@ package net.brnbrd.delightful.compat.ars_nouveau;
 
 import net.brnbrd.delightful.common.item.ICompat;
 import net.brnbrd.delightful.common.item.food.ShakeItem;
-import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.Modid;
+import org.jetbrains.annotations.NotNull;
 
 public class SourceBerryShakeItem extends ShakeItem implements ICompat {
 	public SourceBerryShakeItem(Properties properties) {
@@ -10,7 +11,7 @@ public class SourceBerryShakeItem extends ShakeItem implements ICompat {
 	}
 
 	@Override
-	public String[] getModid() {
-		return new  String[]{Mods.AN};
+	public @NotNull Modid[] getModid() {
+		return new Modid[]{Modid.AN};
 	}
 }

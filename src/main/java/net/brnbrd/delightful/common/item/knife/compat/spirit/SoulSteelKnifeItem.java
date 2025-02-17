@@ -2,6 +2,7 @@ package net.brnbrd.delightful.common.item.knife.compat.spirit;
 
 import net.brnbrd.delightful.common.item.DelightfulTiers;
 import net.brnbrd.delightful.common.item.knife.DKnifeItem;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.compat.SpiritCompat;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.ChatFormatting;
@@ -18,7 +19,7 @@ import java.util.List;
 
 public class SoulSteelKnifeItem extends DKnifeItem {
 	public SoulSteelKnifeItem(Properties properties) {
-		super(DelightfulItemTags.SOUL_STEEL_INGOT, DelightfulTiers.SOUL_STEEL, properties, "spirit");
+		super(DelightfulItemTags.SOUL_STEEL_INGOT, DelightfulTiers.SOUL_STEEL, properties, Modid.SP);
 	}
 
 	@Override

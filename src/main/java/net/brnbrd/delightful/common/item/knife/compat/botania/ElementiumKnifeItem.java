@@ -2,7 +2,7 @@ package net.brnbrd.delightful.common.item.knife.compat.botania;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
-import net.brnbrd.delightful.compat.BotaniaCompat;
+import net.brnbrd.delightful.compat.botania.BotaniaCompat;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.EquipmentSlot;

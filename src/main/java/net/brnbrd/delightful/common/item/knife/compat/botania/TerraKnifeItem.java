@@ -1,7 +1,7 @@
 package net.brnbrd.delightful.common.item.knife.compat.botania;
 
 import net.brnbrd.delightful.common.item.knife.compat.botania.mythicbotany.AlfKnifeItem;
-import net.brnbrd.delightful.compat.BotaniaCompat;
+import net.brnbrd.delightful.compat.botania.BotaniaCompat;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.tags.TagKey;

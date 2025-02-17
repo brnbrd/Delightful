@@ -7,15 +7,14 @@ import net.brnbrd.delightful.common.block.SlicedMelonBlock;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.compat.BrewinChewinCompat;
 import net.brnbrd.delightful.compat.CasualnessDelightCompat;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.compat.Mods;
-import net.brnbrd.delightful.compat.Strategy;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.item.ItemStack;
@@ -43,23 +42,20 @@ public class ForgeEvents {
 	void onEatEffectProvider(LivingEntityUseItemEvent.Finish e) {
 		if (e.getResult() != Event.Result.DENY) {
 			if (
-				Mods.loaded(Mods.BG) && // Berry Good loaded
+				Modid.BG.loaded() && // Berry Good loaded
 				Util.itemStackIs(e.getItem(), BrewinChewinCompat.glowMarmalade) // Brewin' & Chewin' item exists
 			) {
 				Util.addEffect(e.getEntity(), MobEffects.GLOWING, 3000, 0);
 			} else if (
-				Mods.loaded(Mods.CAD) &&
+				Modid.CAD.loaded() &&
 				e.getItem().is(DelightfulItemTags.ROTTEN) &&
 				e.getEntity().getRandom().nextBoolean() // 50% chance
 			) {
-				MobEffect rotten = CasualnessDelightCompat.getRotten();
-				if (rotten != null) {
-					int duration = 160;
-					if (e.getItem().is(Util.item(Mods.RL, "rotten_chunk"))) {
-						duration = 1800;
-					}
-					Util.addEffect(e.getEntity(), rotten, duration, 0);
+				int duration = 160;
+				if (e.getItem().is(Util.item(Modid.RL, "rotten_chunk"))) {
+					duration = 1800;
 				}
+				Util.addEffect(e.getEntity(), CasualnessDelightCompat.getRotten(), duration, 0);
 			}
 		}
 	}
@@ -90,19 +86,19 @@ public class ForgeEvents {
 				SlicedGourdBlock sliced = (SlicedGourdBlock) DelightfulBlocks.SLICED_PUMPKIN.get();
 				slice(sliced.defaultBlockState(), sliced.getSliceItem(), world, pos, SoundEvents.BAMBOO_BREAK, e, client);
 			} else if (
-					Mods.loaded(Mods.UGD) &&
+					Modid.UGD.loaded() &&
 					e.getEntity().isCrouching() && // Must be crouching to avoid "carving"
-					Objects.equals(ForgeRegistries.BLOCKS.getKey(current.getBlock()), Util.rl(Mods.UG, "gloomgourd"))
+					Objects.equals(ForgeRegistries.BLOCKS.getKey(current.getBlock()), Modid.UG.rl("gloomgourd"))
 			) {
 				SlicedGourdBlock sliced = (SlicedGourdBlock) DelightfulBlocks.SLICED_GLOOMGOURD.get();
 				slice(sliced.defaultBlockState(), sliced.getSliceItem(), world, pos, SoundEvents.BAMBOO_BREAK, e, client);
 			} else if (
-					Mods.loaded(Strategy.AND, Mods.FU, Mods.FUD) &&
+					Mods.loaded(Modid.FU, Modid.FUD) &&
 					Util.name(current.getBlock()).equals("truffle_cake") &&
-					ForgeRegistries.ITEMS.containsKey(Util.rl(Mods.FUD, "truffle_cake_slice"))
+					Util.itemExists(Modid.FUD, "truffle_cake_slice")
 			) {
 				int currentBites = current.getValue(BlockStateProperties.BITES);
-				ItemStack slice = new ItemStack(Objects.requireNonNull(Util.item(Mods.FUD, "truffle_cake_slice")));
+				ItemStack slice = new ItemStack(Objects.requireNonNull(Util.item(Modid.FUD, "truffle_cake_slice")));
 				if (currentBites >= 3) {
 					world.removeBlock(pos, false);
 					world.gameEvent(e.getEntity(), GameEvent.BLOCK_DESTROY, pos);

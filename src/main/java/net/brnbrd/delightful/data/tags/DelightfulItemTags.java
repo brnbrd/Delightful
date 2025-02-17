@@ -1,13 +1,11 @@
 package net.brnbrd.delightful.data.tags;
 
-import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
-import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.Modid;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Ingredient;
 import org.jetbrains.annotations.NotNull;
-import vectorwing.farmersdelight.FarmersDelight;
 
 public class DelightfulItemTags {
 	// Delightful
@@ -37,8 +35,8 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> FLOWERS_AZALEA = Util.it("minecraft", "flowers/azalea");
 
 	// Farmers Delight
-	public static final TagKey<Item> CABINETS_STONE = Util.it(FarmersDelight.MODID, "cabinets/stone");
-	public static final TagKey<Item> STRAW_PLANTS = Util.it(FarmersDelight.MODID, "straw_plants");
+	public static final TagKey<Item> CABINETS_STONE = Modid.FD.it("cabinets/stone");
+	public static final TagKey<Item> STRAW_PLANTS = Modid.FD.it("straw_plants");
 
 	// Fruits
 	public static final TagKey<Item> FRUITS = forge("fruits");
@@ -166,58 +164,58 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> SNAIL_SHELLS = forge("snail_shells");
 
 	// Forbidden and Arcanus
-	public static final TagKey<Item> DRAGON_SCALE = Util.it("forbidden_arcanus", "dragon_scale");
-	public static final TagKey<Item> DRACO_ARCANUS_STAFF = Util.it("forbidden_arcanus", "draco_arcanus_staff");
+	public static final TagKey<Item> DRAGON_SCALE = Modid.FA.it("dragon_scale");
+	public static final TagKey<Item> DRACO_ARCANUS_STAFF = Modid.FA.it("draco_arcanus_staff");
 
 	// Allthemodium
 	public static final TagKey<Item> PLATES_ALLTHEMODIUM = forge("plates/allthemodium");
 	public static final TagKey<Item> RODS_ALLTHEMODIUM = forge("rods/allthemodium");
 
 	// Deeper and Darker
-	public static final TagKey<Item> REINFORCED_ECHO_SHARD = Util.it("deeperdarker", "reinforced_echo_shard");
-	public static final TagKey<Item> RESONARIUM = Util.it("deeperdarker", "resonarium");
-	public static final TagKey<Item> RESONARIUM_PLATE = Util.it("deeperdarker", "resonarium_plate");
+	public static final TagKey<Item> REINFORCED_ECHO_SHARD = Modid.DD.it("reinforced_echo_shard");
+	public static final TagKey<Item> RESONARIUM = Modid.DD.it("resonarium");
+	public static final TagKey<Item> RESONARIUM_PLATE = Modid.DD.it("resonarium_plate");
 
 	// Create
-	public static final TagKey<Item> UPRIGHT_ON_BELT = Util.it(Mods.C, "upright_on_belt");
-	public static final TagKey<Item> POLISHED_ROSE_QUARTZ = Util.it(Mods.C, "polished_rose_quartz");
+	public static final TagKey<Item> UPRIGHT_ON_BELT = Modid.C.it("upright_on_belt");
+	public static final TagKey<Item> POLISHED_ROSE_QUARTZ = Modid.C.it("polished_rose_quartz");
 
 	// MCreator mods
-	public static final TagKey<Item> HEAP_EXPERIENCE = Util.it("create_sa", "heap_of_experience");
-	public static final TagKey<Item> ZINC_HANDLE = Util.it("create_sa", "zinc_handle");
-	public static final TagKey<Item> SHARP_LEAF = Util.it("seeds", "sharp_leaf");
-	public static final TagKey<Item> KIWANO_PEEL = Util.it("nethers_exoticism", "kiwano_peel");
+	public static final TagKey<Item> HEAP_EXPERIENCE = Modid.CSA.it("heap_of_experience");
+	public static final TagKey<Item> ZINC_HANDLE = Modid.CSA.it("zinc_handle");
+	public static final TagKey<Item> SHARP_LEAF = Modid.SE.it("sharp_leaf");
+	public static final TagKey<Item> KIWANO_PEEL = Modid.NE.it("kiwano_peel");
 
 	// Phantasm
-	public static final TagKey<Item> VOID_CRYSTAL_BLOCK = Util.it(Mods.EP, "void_crystal_block");
-	public static final TagKey<Item> CRYSTAL_SPIKE_TIPS = Util.it(Mods.EP, "crystal_spike_tips");
-	public static final TagKey<Item> XP_BOOSTED = Util.it(Mods.EP, "gets_xp_speed_boost");
+	public static final TagKey<Item> VOID_CRYSTAL_BLOCK = Modid.EP.it("void_crystal_block");
+	public static final TagKey<Item> CRYSTAL_SPIKE_TIPS = Modid.EP.it("crystal_spike_tips");
+	public static final TagKey<Item> XP_BOOSTED = Modid.EP.it("gets_xp_speed_boost");
 
 	// Unusual End
 	public static final TagKey<Item> INGOTS_PEARLESCENT = ingot("pearlescent");
 
 	// AE2
 	public static final TagKey<Item> CERTUS_QUARTZ = gem("certus_quartz");
-	public static final TagKey<Item> FLUIX_BLOCK = Util.it(Mods.AE2, "fluix_block");
+	public static final TagKey<Item> FLUIX_BLOCK = Modid.AE2.it("fluix_block");
 
 	// Spirit
 	public static final TagKey<Item> SOUL_STEEL_INGOT = ingot("soul_steel");
-	public static final TagKey<Item> SOUL_STEEL_MAINHAND = Util.it("spirit", "soul_steel_mainhand");
+	public static final TagKey<Item> SOUL_STEEL_MAINHAND = Modid.SP.it("soul_steel_mainhand");
 
 	// Botania
-	public static final TagKey<Item> LIVINGWOOD_TWIG = Util.it(Mods.BTA, "livingwood_twig");
-	public static final TagKey<Item> DREAMWOOD_TWIG = Util.it(Mods.BTA, "dreamwood_twig");
-	public static final TagKey<Item> MANA_ITEMS = Util.it(Mods.BTA, "mana_using_items");
+	public static final TagKey<Item> LIVINGWOOD_TWIG = Modid.BTA.it("livingwood_twig");
+	public static final TagKey<Item> DREAMWOOD_TWIG = Modid.BTA.it("dreamwood_twig");
+	public static final TagKey<Item> MANA_ITEMS = Modid.BTA.it("mana_using_items");
 
 	// Additional Additions
-	public static final TagKey<Item> ROSE_GOLD_ALLOY = Util.it(Mods.AA, "rose_gold_alloy");
-	public static final TagKey<Item> GOLD_RING = Util.it(Mods.AA, "gold_ring");
+	public static final TagKey<Item> ROSE_GOLD_ALLOY = Modid.AA.it("rose_gold_alloy");
+	public static final TagKey<Item> GOLD_RING = Modid.AA.it("gold_ring");
 
 	// Aether
-	public static final TagKey<Item> HOLYSTONE = Util.it(Mods.AE, "holystone");
-	public static final TagKey<Item> SKYROOT_STICK = Util.it(Mods.AE, "skyroot_stick");
-	public static final TagKey<Item> SKYROOT_TOOL_CRAFTING = Util.it(Mods.AE, "skyroot_tool_crafting");
-	public static final TagKey<Item> ENCHANTED_GRAVITITE = Util.it(Mods.AE, "enchanted_gravitite");
+	public static final TagKey<Item> HOLYSTONE = Modid.AE.it("holystone");
+	public static final TagKey<Item> SKYROOT_STICK = Modid.AE.it("skyroot_stick");
+	public static final TagKey<Item> SKYROOT_TOOL_CRAFTING = Modid.AE.it("skyroot_tool_crafting");
+	public static final TagKey<Item> ENCHANTED_GRAVITITE = Modid.AE.it("enchanted_gravitite");
 
 	// Aether Redux
 	public static final TagKey<Item> INGOTS_GRAVITITE = ingot("gravitite");
@@ -226,14 +224,14 @@ public class DelightfulItemTags {
 	// Deep Aether
 	public static final TagKey<Item> GEMS_SKYJADE = gem("skyjade");
 	public static final TagKey<Item> INGOTS_STRATUS = ingot("stratus");
-	public final static TagKey<Item> STRATUS_UPGRADE = Util.it("deep_aether", "stratus_smithing_template");
+	public final static TagKey<Item> STRATUS_UPGRADE = Modid.DA.it("stratus_smithing_template");
 
 	public static TagKey<Item> forge(@NotNull String name) {
-		return Util.it(Util.LOADER, name);
+		return Modid.LOADER.it(name);
 	}
 
 	public static TagKey<Item> d(@NotNull String name) {
-		return Util.it(Delightful.MODID, name);
+		return Modid.D.it(name);
 	}
 
 	public static TagKey<Item> ingot(@NotNull String name) {

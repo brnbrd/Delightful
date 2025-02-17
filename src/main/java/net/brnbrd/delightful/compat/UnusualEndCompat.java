@@ -10,11 +10,11 @@ public class UnusualEndCompat {
 	public static final String chorus_pie = "chorus_pie";
 
 	public static MobEffect getSwiftStrikes() {
-		return Util.effect(Mods.UE, "swift_strikes", MobEffects.DIG_SPEED);
+		return Util.effect(Modid.UE, "swift_strikes", MobEffects.DIG_SPEED);
 	}
 
 	public static MobEffect getEnderInfection() {
-		return Util.effect(Mods.UE, "ender_infection", MobEffects.CONFUSION);
+		return Util.effect(Modid.UE, "ender_infection", MobEffects.CONFUSION);
 	}
 
 	public static final FoodProperties CHORUS_PIE_SLICE = (new FoodProperties.Builder())

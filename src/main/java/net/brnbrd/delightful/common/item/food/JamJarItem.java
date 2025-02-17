@@ -1,6 +1,6 @@
 package net.brnbrd.delightful.common.item.food;
 
-import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.Modid;
 
 public class JamJarItem extends DConsumableItem {
 	public JamJarItem(Properties properties, boolean hasPotionEffectTooltip, boolean hasCustomTooltip) {
@@ -8,7 +8,7 @@ public class JamJarItem extends DConsumableItem {
 	}
 
 	@Override
-	public String[] getConflicts() {
-		return new String[]{Mods.BC, Mods.FRD};
+	public Modid[] getConflicts() {
+		return new Modid[]{Modid.BC, Modid.FRD};
 	}
 }

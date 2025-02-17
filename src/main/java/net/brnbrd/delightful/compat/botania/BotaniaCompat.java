@@ -1,8 +1,9 @@
-package net.brnbrd.delightful.compat;
+package net.brnbrd.delightful.compat.botania;
 
 import com.google.common.collect.Multimap;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.item.knife.Knives;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.network.DPacketHandler;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
@@ -11,10 +12,9 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Tier;
-import net.minecraftforge.registries.ForgeRegistries;
-import org.jetbrains.annotations.NotNull;
 import vazkii.botania.api.BotaniaAPI;
 import vazkii.botania.api.mana.ManaItemHandler;
 import vazkii.botania.common.entity.ManaBurstEntity;
@@ -22,11 +22,11 @@ import vazkii.botania.common.handler.BotaniaSounds;
 import vazkii.botania.common.handler.PixieHandler;
 import vazkii.botania.common.item.BotaniaItems;
 import vazkii.botania.common.item.equipment.tool.ToolCommons;
-import java.util.Objects;
 import java.util.function.Supplier;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 public class BotaniaCompat {
-
 	public static Supplier<Tier> manasteel() {
 		return () -> BotaniaAPI.instance().getManasteelItemTier();
 	}
@@ -65,11 +65,10 @@ public class BotaniaCompat {
 		burst.setManaLossPerTick(4F);
 		burst.setGravity(0F);
 		burst.setDeltaMovement(burst.getDeltaMovement().scale(motionModifier));
-		if (stack.is(Knives.ALF.get()) && Mods.loaded("mythicbotany")) {
-			burst.setSourceLens(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(Util.rl("mythicbotany", "alfsteel_sword"))).getDefaultInstance().copy());
-		} else {
-			burst.setSourceLens(BotaniaItems.terraSword.getDefaultInstance().copy());
-		}
+		burst.setSourceLens(Util.item(
+			Modid.MB, "alfsteel_sword",
+			BotaniaItems.terraSword
+		).getDefaultInstance().copy());
 		return burst;
 	}
 
@@ -85,8 +84,10 @@ public class BotaniaCompat {
 
 	public static boolean trySpawnBurst(Player player, ItemStack stack, int manaPerDamage, float attackStr, boolean alf) {
 		if (attackStr == 1) {
-			ManaBurstEntity burst = alf ?
-				getAlfBurst(player, stack, manaPerDamage) : getBurst(player, stack, manaPerDamage);
+			ManaBurstEntity burst = (alf ?
+				getAlfBurst(player, stack, manaPerDamage) :
+				getBurst(player, stack, manaPerDamage)
+			);
 			player.level().addFreshEntity(burst);
 			stack.hurtAndBreak(1, player, p -> p.broadcastBreakEvent(InteractionHand.MAIN_HAND));
 			player.level().playSound(

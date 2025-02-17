@@ -2,7 +2,7 @@ package net.brnbrd.delightful.data.gen;
 
 import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
-import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.data.tags.DelightfulEntityTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -22,9 +22,9 @@ public class DelightfulEntityTagProvider extends EntityTypeTagsProvider {
 	protected void addTags(HolderLookup.@NotNull Provider provider) {
 		// Farmer's Delight
 		this.tag(ModTags.HORSE_FEED_TEMPTED)
-				.addOptional(Util.rl(Mods.NA, "zebra"));
+				.addOptional(Modid.NA.rl("zebra"));
 		this.tag(ModTags.HORSE_FEED_USERS)
-				.addOptional(Util.rl(Mods.NA, "zebra"));
+				.addOptional(Modid.NA.rl("zebra"));
 
 		// Delightful
 		this.tag(DelightfulEntityTags.FATTY_ANIMALS)
@@ -61,46 +61,46 @@ public class DelightfulEntityTagProvider extends EntityTypeTagsProvider {
 				.add(EntityType.RABBIT)
 				.add(EntityType.FROG)
 				.add(EntityType.SNIFFER)
-				.addOptional(Util.rl(Mods.Q, "crab"))
-				.addOptional(Util.rl(Mods.Q, "foxhound"))
-				.addOptional(Util.rl(Mods.Q, "shiba"))
-				.addOptional(Util.rl(Mods.N, "chimpanzee"))
-				.addOptional(Util.rl(Mods.BB, "moobloom"))
-				.addOptional(Util.rl(Mods.BB, "grizzly_bear"))
-				.addOptional(Util.rl(Mods.ENV, "deer"))
-				.addOptional(Util.rl(Mods.ENV, "duck"))
-				.addOptional(Util.rl(Mods.ENV, "fennec_fox"))
-				.addOptional(Util.rl(Mods.ENV, "koi"))
-				.addOptional(Util.rl(Mods.ENV, "slabfish"))
-				.addOptional(Util.rl(Mods.ENV, "tapir"))
-				.addOptional(Util.rl(Mods.ENV, "yak"))
+				.addOptional(Modid.Q.rl("crab"))
+				.addOptional(Modid.Q.rl("foxhound"))
+				.addOptional(Modid.Q.rl("shiba"))
+				.addOptional(Modid.N.rl("chimpanzee"))
+				.addOptional(Modid.BB.rl("moobloom"))
+				.addOptional(Modid.BB.rl("grizzly_bear"))
+				.addOptional(Modid.ENV.rl("deer"))
+				.addOptional(Modid.ENV.rl("duck"))
+				.addOptional(Modid.ENV.rl("fennec_fox"))
+				.addOptional(Modid.ENV.rl("koi"))
+				.addOptional(Modid.ENV.rl("slabfish"))
+				.addOptional(Modid.ENV.rl("tapir"))
+				.addOptional(Modid.ENV.rl("yak"))
 				.addOptional(Util.rl("autumnity", "turkey"))
-				.addOptional(Util.rl(Mods.UA, "thrasher"))
-				.addOptional(Util.rl(Mods.UA, "great_thrasher"))
-				.addOptional(Util.rl(Mods.UA, "goose"))
-				.addOptional(Util.rl(Mods.UA, "lionfish"))
-				.addOptional(Util.rl(Mods.UA, "perch"))
-				.addOptional(Util.rl(Mods.UA, "pike"))
-				.addOptional(Util.rl(Mods.CR, "chieftain_crab"))
-				.addOptional(Util.rl(Mods.CR, "platinum_bass"))
-				.addOptional(Util.rl(Mods.NA, "alligator"))
-				.addOptional(Util.rl(Mods.NA, "bass"))
-				.addOptional(Util.rl(Mods.NA, "bear"))
-				.addOptional(Util.rl(Mods.NA, "boar"))
-				.addOptional(Util.rl(Mods.NA, "catfish"))
-				.addOptional(Util.rl(Mods.NA, "deer"))
-				.addOptional(Util.rl(Mods.NA, "duck"))
-				.addOptional(Util.rl(Mods.NA, "elephant"))
-				.addOptional(Util.rl(Mods.NA, "giraffe"))
-				.addOptional(Util.rl(Mods.NA, "hippo"))
-				.addOptional(Util.rl(Mods.NA, "lion"))
-				.addOptional(Util.rl(Mods.NA, "rhino"))
-				.addOptional(Util.rl(Mods.NA, "tortoise"))
-				.addOptional(Util.rl(Mods.NA, "zebra"))
-				.addOptional(Util.rl(Mods.ECO, "penguin"))
-				.addOptional(Util.rl(Mods.ECO, "squirrel"))
-				.addOptional(Util.rl(Mods.ECO, "coconut_crab"))
-				.addOptional(Util.rl(Mods.AN, "starbuncle"))
+				.addOptional(Modid.UA.rl("thrasher"))
+				.addOptional(Modid.UA.rl("great_thrasher"))
+				.addOptional(Modid.UA.rl("goose"))
+				.addOptional(Modid.UA.rl("lionfish"))
+				.addOptional(Modid.UA.rl("perch"))
+				.addOptional(Modid.UA.rl("pike"))
+				.addOptional(Modid.CR.rl("chieftain_crab"))
+				.addOptional(Modid.CR.rl("platinum_bass"))
+				.addOptional(Modid.NA.rl("alligator"))
+				.addOptional(Modid.NA.rl("bass"))
+				.addOptional(Modid.NA.rl("bear"))
+				.addOptional(Modid.NA.rl("boar"))
+				.addOptional(Modid.NA.rl("catfish"))
+				.addOptional(Modid.NA.rl("deer"))
+				.addOptional(Modid.NA.rl("duck"))
+				.addOptional(Modid.NA.rl("elephant"))
+				.addOptional(Modid.NA.rl("giraffe"))
+				.addOptional(Modid.NA.rl("hippo"))
+				.addOptional(Modid.NA.rl("lion"))
+				.addOptional(Modid.NA.rl("rhino"))
+				.addOptional(Modid.NA.rl("tortoise"))
+				.addOptional(Modid.NA.rl("zebra"))
+				.addOptional(Modid.ECO.rl("penguin"))
+				.addOptional(Modid.ECO.rl("squirrel"))
+				.addOptional(Modid.ECO.rl("coconut_crab"))
+				.addOptional(Modid.AN.rl("starbuncle"))
 				.addOptional(Util.rl("fishofthieves", "ancientscale"))
 				.addOptional(Util.rl("fishofthieves", "battlegill"))
 				.addOptional(Util.rl("fishofthieves", "devilfish"))
@@ -128,31 +128,31 @@ public class DelightfulEntityTagProvider extends EntityTypeTagsProvider {
 				.addOptional(Util.rl("goodall", "rhino"))
 				.addOptional(Util.rl("goodall", "river_turtle"))
 				.addOptional(Util.rl("goodall", "tortoise"))
-				.addOptional(Util.rl(Mods.FU, "chilloo"))
-				.addOptional(Util.rl(Mods.FU, "penguin"))
-				.addOptional(Util.rl(Mods.FU, "reindeer"))
-				.addOptional(Util.rl(Mods.SM, "lanternfish"))
-				.addOptional(Util.rl(Mods.SM, "piranha"))
-				.addOptional(Util.rl(Mods.SM, "tortoise"))
+				.addOptional(Modid.FU.rl("chilloo"))
+				.addOptional(Modid.FU.rl("penguin"))
+				.addOptional(Modid.FU.rl("reindeer"))
+				.addOptional(Modid.SM.rl("lanternfish"))
+				.addOptional(Modid.SM.rl("piranha"))
+				.addOptional(Modid.SM.rl("tortoise"))
+				.addOptional(Modid.HAB.rl("pooka"))
+				.addOptional(Modid.GO.rl("geep"))
 				.addOptional(Util.rl("biomemakeover", "glowfish"))
 				.addOptional(Util.rl("biomemakeover", "helmit_crab"))
 				.addOptional(Util.rl("biomemakeover", "toad"))
 				.addOptional(Util.rl("duckling", "duck"))
 				.addOptional(Util.rl("duckling", "quackling"))
-				.addOptional(Util.rl(Mods.HAB, "pooka"))
 				.addOptional(Util.rl("aqcaracal", "caracal"))
 				.addOptional(Util.rl("babyfat", "ranchu"))
 				.addOptional(Util.rl("bettas", "betta_fish"))
 				.addOptional(Util.rl("farmlife", "domestic_tribull"))
-				.addOptional(Util.rl("goated", "geep"))
 				.addOptional(Util.rl("hedgehog", "hedgehog"))
 				.addOptional(Util.rl("rats", "rat"))
 				.addOptional(Util.rl("snowpig", "snow_pig"))
 				.addOptional(Util.rl("sprout", "elephant"))
 				.addOptional(Util.rl("wandering_trapper", "trapper_dog"));
-		this.tag(DelightfulEntityTags.DROPS_ACORN).addOptional(Util.rl(Mods.ECO, "squirrel"));
-		this.tag(DelightfulEntityTags.DROPS_CRAB_LEGS).addOptional(Util.rl(Mods.ECO, "coconut_crab"));
+		this.tag(DelightfulEntityTags.DROPS_ACORN).addOptional(Modid.ECO.rl("squirrel"));
+		this.tag(DelightfulEntityTags.DROPS_CRAB_LEGS).addOptional(Modid.ECO.rl("coconut_crab"));
 		this.tag(DelightfulEntityTags.DROPS_RAW_GOAT).add(EntityType.GOAT);
-		this.tag(DelightfulEntityTags.DROPS_HAM).addOptional(Util.rl(Mods.NA, "boar"));
+		this.tag(DelightfulEntityTags.DROPS_HAM).addOptional(Modid.NA.rl("boar"));
 	}
 }

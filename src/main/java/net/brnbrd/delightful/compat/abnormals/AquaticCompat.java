@@ -1,4 +1,4 @@
-package net.brnbrd.delightful.compat;
+package net.brnbrd.delightful.compat.abnormals;
 
 import net.minecraft.world.food.FoodProperties;
 import vectorwing.farmersdelight.common.FoodValues;

@@ -3,7 +3,7 @@ package net.brnbrd.delightful.common.block;
 import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.item.DelightfulItems;
-import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.compat.UnusualEndCompat;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.core.cauldron.CauldronInteraction;
@@ -14,7 +14,6 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.ModList;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -26,7 +25,6 @@ import java.util.Objects;
 import java.util.function.Supplier;
 
 public class DelightfulBlocks {
-
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Delightful.MODID);
 
 	public static final RegistryObject<Block> QUARTZ_CABINET = registerBlock("quartz_cabinet",
@@ -57,11 +55,11 @@ public class DelightfulBlocks {
 			() -> Blocks.ATTACHED_PUMPKIN_STEM)
 	);
 	public static final RegistryObject<Block> SLICED_GLOOMGOURD = BLOCKS.register("sliced_gloomgourd",
-			Mods.loaded(Mods.UG) ? () -> new SlicedGourdBlock(
-					Block.Properties.copy(Objects.requireNonNull(Util.block(Mods.UG, "gloomgourd"))),
-					() -> Util.item(Util.rl(Mods.UGD, "gloomgourd_slice"), ModItems.PUMPKIN_SLICE),
-					() -> Util.block(Mods.UG, "gloomgourd_stem"),
-					() -> Util.block(Mods.UG, "gloomgourd_stem_attached")
+			Modid.UG.loaded() ? () -> new SlicedGourdBlock(
+					Block.Properties.copy(Objects.requireNonNull(Util.block(Modid.UG, "gloomgourd"))),
+					() -> Util.item(Modid.UGD.rl("gloomgourd_slice"), ModItems.PUMPKIN_SLICE),
+					() -> Util.block(Modid.UG, "gloomgourd_stem"),
+					() -> Util.block(Modid.UG, "gloomgourd_stem_attached")
 			) : () -> new SlicedGourdBlock(
 					Block.Properties.copy(Blocks.PUMPKIN),
 					ModItems.PUMPKIN_SLICE,
@@ -78,17 +76,17 @@ public class DelightfulBlocks {
 	public static final RegistryObject<Block> BAKLAVA = BLOCKS.register("baklava",
 			() -> new BaklavaBlock(Block.Properties.copy(ModBlocks.APPLE_PIE.get()), DelightfulItems.BAKLAVA_SLICE));
 	public static final RegistryObject<Block> SOURCE_BERRY_PIE = BLOCKS.register("source_berry_pie",
-			() -> new DPieBlock(DelightfulItems.SOURCE_BERRY_PIE_SLICE, Util.rl(Mods.AN, "source_berry_pie")));
+			() -> new DPieBlock(DelightfulItems.SOURCE_BERRY_PIE_SLICE, Modid.AN.rl("source_berry_pie")));
 	public static final RegistryObject<Block> CHORUS_PIE = BLOCKS.register(UnusualEndCompat.chorus_pie,
-			() -> new DPieBlock(DelightfulItems.CHORUS_PIE_SLICE, Util.rl(Mods.UE, UnusualEndCompat.chorus_pie)));
+			() -> new DPieBlock(DelightfulItems.CHORUS_PIE_SLICE, Modid.UE.rl(UnusualEndCompat.chorus_pie)));
 	public static final RegistryObject<Block> GLOOMGOURD_PIE = BLOCKS.register("gloomgourd_pie",
-			() -> new DPieBlock(DelightfulItems.GLOOMGOURD_PIE_SLICE, Util.rl(Mods.UG, "gloomgourd_pie")));
+			() -> new DPieBlock(DelightfulItems.GLOOMGOURD_PIE_SLICE, Modid.UG.rl("gloomgourd_pie")));
 	public static final RegistryObject<Block> BLUEBERRY_PIE = BLOCKS.register("blueberry_pie",
-			() -> new DPieBlock(DelightfulItems.BLUEBERRY_PIE_SLICE, Util.rl(Mods.BWG, "blueberry_pie")));
+			() -> new DPieBlock(DelightfulItems.BLUEBERRY_PIE_SLICE, Modid.BWG.rl("blueberry_pie")));
 	public static final RegistryObject<Block> GREEN_APPLE_PIE = BLOCKS.register("green_apple_pie",
-			() -> new DPieBlock(DelightfulItems.GREEN_APPLE_PIE_SLICE, Util.rl(Mods.BWG, "green_apple_pie")));
+			() -> new DPieBlock(DelightfulItems.GREEN_APPLE_PIE_SLICE, Modid.BWG.rl("green_apple_pie")));
 	public static final RegistryObject<Block> MULBERRY_PIE = BLOCKS.register("mulberry_pie",
-			() -> new DPieBlock(DelightfulItems.MULBERRY_PIE_SLICE, Util.rl(Mods.UA, "mulberry_pie")));
+			() -> new DPieBlock(DelightfulItems.MULBERRY_PIE_SLICE, Modid.UA.rl("mulberry_pie")));
 	public static final RegistryObject<Block> ACORN_SACK = BLOCKS.register("acorn_sack",
 			() -> new Block(Block.Properties.copy(Blocks.BROWN_WOOL).strength(.5f).sound(SoundType.WOOL)));
 	public static final RegistryObject<Block> SALMONBERRY_ICE_CREAM_BLOCK = BLOCKS.register("salmonberry_ice_cream_block",
@@ -99,19 +97,19 @@ public class DelightfulBlocks {
 			() -> new Block(Block.Properties.copy(Blocks.SNOW_BLOCK).mapColor(MapColor.COLOR_PURPLE).strength(0.2F).sound(SoundType.SNOW)));
 	public static final RegistryObject<Block> SALMONBERRY_MILKSHAKE_CAULDRON = BLOCKS.register("salmonberry_milkshake_cauldron",
 			() -> new DelightfulMilkshakeCauldronBlock(
-					ModList.get().isLoaded(Mods.N) ?
+					Modid.N.loaded() ?
 							DelightfulCauldronInteractions.SALMONBERRY_MILKSHAKE.map() :
 							CauldronInteraction.newInteractionMap())
 	);
 	public static final RegistryObject<Block> MATCHA_MILKSHAKE_CAULDRON = BLOCKS.register("matcha_milkshake_cauldron",
 			() -> new DelightfulMilkshakeCauldronBlock(
-					ModList.get().isLoaded(Mods.N) ?
+					Modid.N.loaded() ?
 							DelightfulCauldronInteractions.MATCHA_MILKSHAKE.map() :
 							CauldronInteraction.newInteractionMap())
 	);
 	public static final RegistryObject<Block> SOURCE_BERRY_MILKSHAKE_CAULDRON = BLOCKS.register("source_berry_milkshake_cauldron",
 			() -> new DelightfulMilkshakeCauldronBlock(
-					ModList.get().isLoaded(Mods.N) ?
+					Modid.N.loaded() ?
 							DelightfulCauldronInteractions.SOURCE_BERRY_MILKSHAKE.map() :
 							CauldronInteraction.newInteractionMap())
 	);

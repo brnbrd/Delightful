@@ -1,7 +1,7 @@
 package net.brnbrd.delightful.common.item.knife.compat.aether;
 
 import net.brnbrd.delightful.common.item.DelightfulTiers;
-import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.data.tags.DelightfulEntityTags;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.network.protocol.game.ClientboundSetEntityMotionPacket;
@@ -36,7 +36,7 @@ public class GravititeKnifeItem extends AetherKnifeItem {
 	@Override
 	public TagKey<Item> getDependencyTag() {
 		return (
-			Mods.loaded(Mods.AER) ?
+			Modid.AER.loaded() ?
 			DelightfulItemTags.INGOTS_GRAVITITE :
 			DelightfulItemTags.ENCHANTED_GRAVITITE
 		);

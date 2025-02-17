@@ -4,6 +4,7 @@ import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.brnbrd.delightful.common.DelightfulConfig;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.IConfigured;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.compat.Mods;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
@@ -38,16 +39,20 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class Util {
-	public static final String[] EMPTY = new String[0];
+	public static final Modid[] EMPTY = new Modid[]{};
 	public static final String LOADER = "forge";
 	public static final UUID BLOCK_REACH = UUID.fromString("C18598A9-F66A-44E7-9CE1-99B1EE178678");
 	public static final UUID ENTITY_REACH = UUID.fromString("61F992E6-276F-4D2B-88A7-823CB64BA459");
 
-	public static ResourceLocation rl(String modid, String path) {
+	public static ResourceLocation rl(@NotNull String modid, @NotNull String path) {
 		return new ResourceLocation(modid, path);
 	}
 
-	public static ResourceLocation rl(String separated) {
+	public static ResourceLocation rl(@NotNull Modid modid, @NotNull String path) {
+		return rl(modid.get(), path);
+	}
+
+	public static ResourceLocation rl(@NotNull String separated) {
 		return new ResourceLocation(separated);
 	}
 
@@ -66,12 +71,16 @@ public class Util {
 		return rl(Delightful.MODID, path);
 	}
 
-	public static TagKey<Item> it(String modid, String path) {
-		return ItemTags.create(rl(modid, path));
+	public static TagKey<Item> it(String id, String path) {
+		return ItemTags.create(rl(id, path));
 	}
 
-	public static TagKey<EntityType<?>> et(String modid, String path) {
+	public static TagKey<EntityType<?>> et(Modid modid, String path) {
 		return TagKey.create(Registries.ENTITY_TYPE, rl(modid, path));
+	}
+
+	public static TagKey<EntityType<?>> et(String id, String path) {
+		return TagKey.create(Registries.ENTITY_TYPE, rl(id, path));
 	}
 
 	// Returns true if tag is empty or null
@@ -121,7 +130,11 @@ public class Util {
 	}
 
 	public static boolean itemExists(ResourceLocation location) {
-		return Mods.loaded(location.getNamespace()) && ForgeRegistries.ITEMS.containsKey(location);
+		return Mods.stringLoaded(location.getNamespace()) && ForgeRegistries.ITEMS.containsKey(location);
+	}
+
+	public static boolean itemExists(Modid modid, String name) {
+		return itemExists(rl(modid, name));
 	}
 
 	@Nullable
@@ -129,9 +142,19 @@ public class Util {
 		return ForgeRegistries.ITEMS.getValue(rl);
 	}
 
+	@NotNull
+	public static Item item(Modid modid, String path, @NotNull Item backup) {
+		return item(rl(modid, path), backup);
+	}
+
 	@Nullable
-	public static Item item(String modid, String path) {
+	public static Item item(Modid modid, String path) {
 		return item(rl(modid, path));
+	}
+
+	@Nullable
+	public static Item item(String id, String path) {
+		return item(rl(id, path));
 	}
 
 	@NotNull
@@ -166,8 +189,13 @@ public class Util {
 	}
 
 	@Nullable
-	public static Block block(String modid, String path) {
+	public static Block block(Modid modid, String path) {
 		return block(rl(modid, path));
+	}
+
+	@Nullable
+	public static Block block(String id, String path) {
+		return block(rl(id, path));
 	}
 
 	@Nullable
@@ -176,7 +204,16 @@ public class Util {
 	}
 
 	public static boolean effectExists(ResourceLocation effect) {
-		return Mods.loaded(effect.getNamespace()) && ForgeRegistries.MOB_EFFECTS.containsKey(effect);
+		return Mods.stringLoaded(effect.getNamespace()) && ForgeRegistries.MOB_EFFECTS.containsKey(effect);
+	}
+
+	@Nullable
+	private static MobEffect getBackup(@Nullable MobEffect[] backup) {
+		return (
+			(backup != null && backup.length > 0) ?
+			backup[0] :
+			null
+		);
 	}
 
 	@Nullable
@@ -184,21 +221,31 @@ public class Util {
 		return (
 			effectExists(effLocation) ?
 			ForgeRegistries.MOB_EFFECTS.getValue(effLocation) :
-			backup.length > 0 ? backup[0] : null
+			getBackup(backup)
 		);
 	}
 
 	@Nullable
-	public static MobEffect effect(String modid, String name, MobEffect... backup) {
-		return effect(Util.rl(modid, name), backup);
+	public static MobEffect effect(String id, String name, MobEffect... backup) {
+		return effect(Util.rl(id, name), backup);
 	}
 
+	@Nullable
+	public static MobEffect effect(Modid modid, String name, MobEffect... backup) {
+		return (
+			modid.loaded() ?
+			effect(Util.rl(modid, name), backup) :
+			getBackup(backup)
+		);
+	}
+
+	// Will not add if effect is null
 	public static void addEffect(LivingEntity entity, @Nullable MobEffect effect, int duration, int amp) {
 		if (effect != null) entity.addEffect(new MobEffectInstance(effect, duration, amp));
 	}
 
 	public static void addEffect(LivingEntity entity, String modid, String name, int duration, int amp, MobEffect... backup) {
-		MobEffect me = backup.length >= 1 ? effect(modid, name, backup[0]) : effect(modid, name, null);
+		MobEffect me = effect(modid, name, backup);
 		if (me != null) addEffect(entity, me, duration, amp);
 	}
 

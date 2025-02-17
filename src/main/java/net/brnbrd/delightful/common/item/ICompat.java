@@ -2,6 +2,7 @@ package net.brnbrd.delightful.common.item;
 
 import joptsimple.internal.Strings;
 import net.brnbrd.delightful.Util;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.compat.Mods;
 import net.brnbrd.delightful.compat.Strategy;
 import net.minecraft.ChatFormatting;
@@ -10,10 +11,10 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 public interface ICompat extends IConfigured {
-	@NotNull String[] getModid(); // Can be empty, but not null
+	@NotNull Modid[] getModid(); // Can be empty, but not null
 
 	default boolean isLoaded() {
-		String[] dependencies = getModid();
+		Modid[] dependencies = getModid();
 		return (
 			getModid() == null || // Should not be possible, but worth a check
 			getModid().length < 1 || // Empty modid means just load
@@ -31,7 +32,7 @@ public interface ICompat extends IConfigured {
 		boolean configured = IConfigured.super.enabledText(comps);
 		if (!isLoaded() && getModid().length > 0) {
 			comps.add(Util.translation("tooltip", "requires_modid"));
-			comps.add(Component.literal(Strings.join(getModid(), ", ")).withStyle(ChatFormatting.UNDERLINE));
+			comps.add(Component.literal(Strings.join(Mods.names(getModid()), ", ")).withStyle(ChatFormatting.UNDERLINE));
 			return false;
 		}
 		return configured && isLoaded();

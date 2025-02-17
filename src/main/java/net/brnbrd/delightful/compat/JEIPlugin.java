@@ -39,34 +39,34 @@ public class JEIPlugin implements IModPlugin {
 		List<FluidStack> hiddenFluids = new ArrayList<>();
 
 		// Delightful conflicts
-		this.hide(hidden, Mods.VD, "pb_j");
-		this.hide(hidden, Mods.UGD, "gloomgourd_pie_slice");
+		this.hide(hidden, Modid.VD, "pb_j");
+		this.hide(hidden, Modid.UGD, "gloomgourd_pie_slice");
 
 		// FD conflicts
-		this.hide(hidden, Mods.IN, "fried_egg");
-		this.hide(hidden, Mods.NA, "cooked_egg");
-		this.hide(hidden, Mods.AA, "fried_egg");
+		this.hide(hidden, Modid.IN, "fried_egg");
+		this.hide(hidden, Modid.NA, "cooked_egg");
+		this.hide(hidden, Modid.AA, "fried_egg");
 
 		// Crate Delight conflicts
-		this.hide(hidden, "cratedelight", "apple_crate", Mods.FRD);
-		this.hide(hidden, "cratedelight", "egg_crate", Mods.IN);
-		this.hide(hidden, "cratedelight", "sugar_bag", Mods.SUP);
-		this.hide(hidden, "cratedelight", "cod_crate", Mods.CRAB);
-		this.hide(hidden, "cratedelight", "salmon_crate", Mods.CRAB);
-		this.hide(hidden, "cratedelight", "berry_crate", Mods.BG);
-		this.hide(hidden, "cratedelight", "glowberry_crate", Mods.BG);
+		this.hide(hidden, Modid.CRD, "apple_crate", Modid.FRD);
+		this.hide(hidden, Modid.CRD, "egg_crate", Modid.IN);
+		this.hide(hidden, Modid.CRD, "sugar_bag", Modid.SUP);
+		this.hide(hidden, Modid.CRD, "cod_crate", Modid.CRAB);
+		this.hide(hidden, Modid.CRD, "salmon_crate", Modid.CRAB);
+		this.hide(hidden, Modid.CRD, "berry_crate", Modid.BG);
+		this.hide(hidden, Modid.CRD, "glowberry_crate", Modid.BG);
 
 		// Other
-		this.hide(hidden, Mods.AA, "honeyed_apple", Mods.BB);
-		this.hide(hidden, Mods.MOD, "bread_slice", Mods.SAS);
-		this.hide(hidden, Mods.MOD, "toast", Mods.SAS);
+		this.hide(hidden, Modid.AA, "honeyed_apple", Modid.BB);
+		this.hide(hidden, Modid.MOD, "bread_slice", Modid.SAS);
+		this.hide(hidden, Modid.MOD, "toast", Modid.SAS);
 
 		if (!hidden.isEmpty()) {
 			registration.getIngredientManager().removeIngredientsAtRuntime(VanillaTypes.ITEM_STACK, hidden);
 		}
 
 		// Hide fluids
-		boolean farmersRespiteLoaded = Mods.loaded(Mods.FR);
+		boolean farmersRespiteLoaded = Modid.FR.loaded();
 		if (!farmersRespiteLoaded || Util.tagEmpty(DelightfulItemTags.LAVENDER)) {
 			hiddenFluids.add(new FluidStack(DelightfulFluids.LAVENDER_TEA.get(), 1000));
 		}
@@ -162,9 +162,9 @@ public class JEIPlugin implements IModPlugin {
 		registration.getIngredientManager().removeIngredientsAtRuntime(ForgeTypes.FLUID_STACK, hiddenFluids);
 	}
 
-	private void hide(List<ItemStack> hiddenList, String modid, String item, String... conflicts) {
+	private void hide(List<ItemStack> hiddenList, Modid modid, String item, Modid... conflicts) {
 		if (
-			Mods.loaded(modid) &&
+			modid.loaded() &&
 			Mods.loaded(Strategy.OR, conflicts)
 		) {
 			Item found = Util.item(modid, item);

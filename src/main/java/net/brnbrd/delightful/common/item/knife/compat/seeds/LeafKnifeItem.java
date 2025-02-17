@@ -2,6 +2,7 @@ package net.brnbrd.delightful.common.item.knife.compat.seeds;
 
 import net.brnbrd.delightful.common.item.DelightfulTiers;
 import net.brnbrd.delightful.common.item.knife.DKnifeItem;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -11,7 +12,7 @@ import java.util.List;
 
 public class LeafKnifeItem extends DKnifeItem {
 	public LeafKnifeItem(Properties properties) {
-		super(DelightfulItemTags.SHARP_LEAF, DelightfulTiers.LEAF, properties, "seeds");
+		super(DelightfulItemTags.SHARP_LEAF, DelightfulTiers.LEAF, properties, Modid.SE);
 	}
 
 	@Override

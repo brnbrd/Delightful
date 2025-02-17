@@ -1,6 +1,7 @@
 package net.brnbrd.delightful.common.item;
 
 import net.brnbrd.delightful.Util;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.compat.Mods;
 import net.brnbrd.delightful.compat.Strategy;
 import net.minecraft.ChatFormatting;
@@ -12,7 +13,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public interface IConfigured extends ItemLike {
-	default String[] getConflicts() {
+	default Modid[] getConflicts() {
 		return Util.EMPTY;
 	}
 

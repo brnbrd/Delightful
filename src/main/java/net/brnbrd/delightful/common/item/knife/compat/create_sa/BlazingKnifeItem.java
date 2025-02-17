@@ -2,6 +2,7 @@ package net.brnbrd.delightful.common.item.knife.compat.create_sa;
 
 import net.brnbrd.delightful.common.item.DelightfulTiers;
 import net.brnbrd.delightful.common.item.knife.DKnifeItem;
+import net.brnbrd.delightful.compat.Modid;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
@@ -15,7 +16,7 @@ import java.util.function.Consumer;
 
 public class BlazingKnifeItem extends DKnifeItem {
 	public BlazingKnifeItem(Properties properties) {
-		super(Tags.Items.INGOTS_GOLD, DelightfulTiers.BLAZING, properties, "create_sa");
+		super(Tags.Items.INGOTS_GOLD, DelightfulTiers.BLAZING, properties, Modid.CSA);
 	}
 
 	// Tool takes no damage in Nether

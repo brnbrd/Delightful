@@ -1,17 +1,18 @@
 package net.brnbrd.delightful.common.item.food;
 
 import net.brnbrd.delightful.common.item.ICompat;
+import net.brnbrd.delightful.compat.Modid;
 
 public class CompatConsumableItem extends DConsumableItem implements ICompat {
-	private final String[] modid;
+	private final Modid[] modid;
 
-	public CompatConsumableItem(Properties properties, boolean hasPotionEffectTooltip, boolean hasCustomTooltip, String... modid) {
+	public CompatConsumableItem(Properties properties, boolean hasPotionEffectTooltip, boolean hasCustomTooltip, Modid... modid) {
 		super(properties, hasPotionEffectTooltip, hasCustomTooltip);
 		this.modid = modid;
 	}
 
 	@Override
-	public String[] getModid() {
+	public Modid[] getModid() {
 		return modid;
 	}
 }

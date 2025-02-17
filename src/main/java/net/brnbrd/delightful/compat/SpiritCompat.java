@@ -9,7 +9,6 @@ import net.minecraft.world.item.ItemStack;
 import java.util.List;
 
 public class SpiritCompat {
-
 	public static void appendEmpoweredText(ItemStack itemStack, List<Component> list) {
 		ToolUtils.appendEmpoweredText(itemStack, list);
 	}

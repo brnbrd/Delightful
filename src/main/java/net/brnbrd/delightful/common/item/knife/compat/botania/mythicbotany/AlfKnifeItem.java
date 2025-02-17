@@ -3,6 +3,7 @@ package net.brnbrd.delightful.common.item.knife.compat.botania.mythicbotany;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
 import net.brnbrd.delightful.common.item.knife.compat.botania.TerraKnifeItem;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.Attribute;
@@ -39,8 +40,8 @@ public class AlfKnifeItem extends TerraKnifeItem {
 	}
 
 	@Override
-	public String[] getModid() {
-		return new String[]{"mythicbotany"};
+	public Modid[] getModid() {
+		return new Modid[]{Modid.MB};
 	}
 
 	@Override

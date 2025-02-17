@@ -1,6 +1,6 @@
 package net.brnbrd.delightful.common.item.food;
 
-import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.compat.UnusualEndCompat;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -15,7 +15,7 @@ import java.util.List;
 
 public class ChorusMuffinItem extends CompatConsumableItem {
 	public ChorusMuffinItem(Properties properties) {
-		super(properties, true, false, Mods.UE);
+		super(properties, true, false, Modid.UE);
 	}
 
 	@SuppressWarnings("NoTranslation")

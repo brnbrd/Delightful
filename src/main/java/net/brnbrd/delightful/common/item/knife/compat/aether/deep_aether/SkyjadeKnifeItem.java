@@ -2,6 +2,7 @@ package net.brnbrd.delightful.common.item.knife.compat.aether.deep_aether;
 
 import com.google.common.collect.Multimap;
 import net.brnbrd.delightful.common.item.knife.compat.aether.AetherKnifeItem;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.Attribute;
@@ -14,7 +15,7 @@ import teamrazor.deepaether.item.gear.skyjade.SkyjadeWeapon;
 
 public class SkyjadeKnifeItem extends AetherKnifeItem implements SkyjadeWeapon {
 	public SkyjadeKnifeItem(Properties properties) {
-		super(DelightfulItemTags.GEMS_SKYJADE, DATiers.SKYJADE, properties, "deep_aether");
+		super(DelightfulItemTags.GEMS_SKYJADE, DATiers.SKYJADE, properties, Modid.DA);
 	}
 
 	@Override

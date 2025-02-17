@@ -2,6 +2,7 @@ package net.brnbrd.delightful.common.item.knife.compat.lost_aether_content;
 
 import net.brnbrd.delightful.common.item.DelightfulTiers;
 import net.brnbrd.delightful.common.item.knife.compat.aether.AetherKnifeItem;
+import net.brnbrd.delightful.compat.Modid;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
@@ -9,7 +10,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class PhoenixKnifeItem extends AetherKnifeItem {
 	public PhoenixKnifeItem(Properties properties) {
-		super(null, DelightfulTiers.PHOENIX, properties, "lost_aether_content");
+		super(null, DelightfulTiers.PHOENIX, properties, Modid.LAC);
 	}
 
 	@Override

@@ -2,7 +2,7 @@ package net.brnbrd.delightful.common.item.knife.compat.deeperdarker;
 
 import net.brnbrd.delightful.common.item.DelightfulTiers;
 import net.brnbrd.delightful.common.item.knife.DKnifeItem;
-import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -13,7 +13,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class WardenKnifeItem extends DKnifeItem {
 	public WardenKnifeItem(Properties properties) {
-		super(DelightfulItemTags.REINFORCED_ECHO_SHARD, DelightfulTiers.WARDEN, properties, Mods.DD);
+		super(DelightfulItemTags.REINFORCED_ECHO_SHARD, DelightfulTiers.WARDEN, properties, Modid.DD);
 	}
 
 	@Override

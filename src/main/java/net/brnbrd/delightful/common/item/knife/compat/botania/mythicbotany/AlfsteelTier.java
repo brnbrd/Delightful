@@ -1,8 +1,8 @@
 package net.brnbrd.delightful.common.item.knife.compat.botania.mythicbotany;
 
 import net.brnbrd.delightful.common.item.DelightfulTiers;
-import net.brnbrd.delightful.compat.BotaniaCompat;
-import net.brnbrd.delightful.compat.Mods;
+import net.brnbrd.delightful.compat.botania.BotaniaCompat;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -11,7 +11,7 @@ import java.util.function.Supplier;
 
 public class AlfsteelTier implements Tier {
 	private Supplier<Tier> terra() {
-		return Mods.loaded(Mods.BTA) ? BotaniaCompat.terrasteel() : () -> DelightfulTiers.STEEL;
+		return Modid.BTA.loaded() ? BotaniaCompat.terrasteel() : () -> DelightfulTiers.STEEL;
 	}
 
 	@Override

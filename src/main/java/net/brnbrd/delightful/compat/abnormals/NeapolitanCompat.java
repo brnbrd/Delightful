@@ -1,11 +1,12 @@
-package net.brnbrd.delightful.compat;
+package net.brnbrd.delightful.compat.abnormals;
 
 import net.brnbrd.delightful.Util;
+import net.brnbrd.delightful.compat.Modid;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffects;
 
 public class NeapolitanCompat {
 	public static MobEffect getSugarRush() {
-		return Util.effect(Mods.N, "sugar_rush", MobEffects.MOVEMENT_SPEED);
+		return Util.effect(Modid.N, "sugar_rush", MobEffects.MOVEMENT_SPEED);
 	}
 }

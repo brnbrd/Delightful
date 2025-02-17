@@ -6,6 +6,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 import net.brnbrd.delightful.Util;
+import net.brnbrd.delightful.compat.Modid;
 import org.codehaus.plexus.util.StringUtils;
 import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.common.item.ICompat;
@@ -29,7 +30,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class DKnifeItem extends KnifeItem implements ICompat {
 	@Nullable private final TagKey<Item> tag;
-	@NotNull private final String[] modid;
+	@NotNull private final Modid[] modid;
 
 	public DKnifeItem(@Nullable TagKey<Item> tag, Tier tier, Properties properties) {
 		super(tier, 0.5F, -2.0F, properties);
@@ -37,7 +38,7 @@ public class DKnifeItem extends KnifeItem implements ICompat {
 		this.modid = Util.EMPTY;
 	}
 
-	public DKnifeItem(@Nullable TagKey<Item> tag, Tier tier, Properties properties, @NotNull String... modid) {
+	public DKnifeItem(@Nullable TagKey<Item> tag, Tier tier, Properties properties, @NotNull Modid... modid) {
 		super(tier, 0.5F, -2.0F, properties);
 		this.tag = tag;
 		this.modid = modid;
@@ -55,7 +56,7 @@ public class DKnifeItem extends KnifeItem implements ICompat {
 	}
 
 	@Override
-	public String[] getModid() {
+	public Modid[] getModid() {
 		return this.modid;
 	}
 
