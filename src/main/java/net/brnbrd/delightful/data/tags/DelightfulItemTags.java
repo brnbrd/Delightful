@@ -1,6 +1,5 @@
 package net.brnbrd.delightful.data.tags;
 
-import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.compat.Modid;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
@@ -32,7 +31,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> MAKES_DYE_LIGHT_BLUE = d("makes_dye/light_gray");
 
 	// Minecraft
-	public static final TagKey<Item> FLOWERS_AZALEA = Util.it("minecraft", "flowers/azalea");
+	public static final TagKey<Item> FLOWERS_AZALEA = Modid.MC.it("flowers/azalea");
 
 	// Farmers Delight
 	public static final TagKey<Item> CABINETS_STONE = Modid.FD.it("cabinets/stone");

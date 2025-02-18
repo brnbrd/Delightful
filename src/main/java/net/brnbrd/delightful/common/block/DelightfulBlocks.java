@@ -72,7 +72,7 @@ public class DelightfulBlocks {
 	public static final RegistryObject<Block> SALMONBERRY_PIE = BLOCKS.register("salmonberry_pie",
 			() -> new PieBlock(Block.Properties.copy(ModBlocks.APPLE_PIE.get()), DelightfulItems.SALMONBERRY_PIE_SLICE));
 	public static final RegistryObject<Block> PUMPKIN_PIE = BLOCKS.register("pumpkin_pie",
-			() -> new DPieBlock(DelightfulItems.PUMPKIN_PIE_SLICE, Util.rl("minecraft", "pumpkin_pie")));
+			() -> new DPieBlock(DelightfulItems.PUMPKIN_PIE_SLICE, Modid.MC.rl("pumpkin_pie")));
 	public static final RegistryObject<Block> BAKLAVA = BLOCKS.register("baklava",
 			() -> new BaklavaBlock(Block.Properties.copy(ModBlocks.APPLE_PIE.get()), DelightfulItems.BAKLAVA_SLICE));
 	public static final RegistryObject<Block> SOURCE_BERRY_PIE = BLOCKS.register("source_berry_pie",

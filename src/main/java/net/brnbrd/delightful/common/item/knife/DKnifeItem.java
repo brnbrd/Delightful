@@ -113,7 +113,7 @@ public class DKnifeItem extends KnifeItem implements ICompat {
 		return StringUtils.capitaliseAllWords(
 			this.getDescriptionId()
 				.toLowerCase(Locale.ROOT)
-				.replace("item." + Delightful.MODID.toLowerCase(Locale.ROOT) + ".", "")
+				.replace("item." + Delightful.MODID.toLowerCase(Locale.ROOT) + ".", Util.EMPTY_STR)
 				.replace("_", " ")
 		);
 	}

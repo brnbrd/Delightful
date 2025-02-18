@@ -39,7 +39,9 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class Util {
+	public static final String EMPTY_STR = "";
 	public static final Modid[] EMPTY = new Modid[]{};
+	public static final String MC = "minecraft";
 	public static final String LOADER = "forge";
 	public static final UUID BLOCK_REACH = UUID.fromString("C18598A9-F66A-44E7-9CE1-99B1EE178678");
 	public static final UUID ENTITY_REACH = UUID.fromString("61F992E6-276F-4D2B-88A7-823CB64BA459");
@@ -64,7 +66,7 @@ public class Util {
 			IForgeRegistry<Block> reg = ForgeRegistries.BLOCKS;
 			if (reg.containsValue(block)) return reg.getKey(block);
 		}
-		return rl("", "");
+		return rl(EMPTY_STR, EMPTY_STR);
 	}
 
 	public static ResourceLocation delight(String path) {
@@ -133,23 +135,9 @@ public class Util {
 		return Mods.stringLoaded(location.getNamespace()) && ForgeRegistries.ITEMS.containsKey(location);
 	}
 
-	public static boolean itemExists(Modid modid, String name) {
-		return itemExists(rl(modid, name));
-	}
-
 	@Nullable
 	public static Item item(ResourceLocation rl) {
 		return ForgeRegistries.ITEMS.getValue(rl);
-	}
-
-	@NotNull
-	public static Item item(Modid modid, String path, @NotNull Item backup) {
-		return item(rl(modid, path), backup);
-	}
-
-	@Nullable
-	public static Item item(Modid modid, String path) {
-		return item(rl(modid, path));
 	}
 
 	@Nullable

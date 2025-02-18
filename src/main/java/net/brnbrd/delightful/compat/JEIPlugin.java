@@ -162,12 +162,12 @@ public class JEIPlugin implements IModPlugin {
 		registration.getIngredientManager().removeIngredientsAtRuntime(ForgeTypes.FLUID_STACK, hiddenFluids);
 	}
 
-	private void hide(List<ItemStack> hiddenList, Modid modid, String item, Modid... conflicts) {
+	private void hide(List<ItemStack> hiddenList, Modid modid, String name, Modid... conflicts) {
 		if (
 			modid.loaded() &&
 			Mods.loaded(Strategy.OR, conflicts)
 		) {
-			Item found = Util.item(modid, item);
+			Item found = modid.item(name);
 			if (found != null) {
 				hiddenList.add(new ItemStack(found));
 			}

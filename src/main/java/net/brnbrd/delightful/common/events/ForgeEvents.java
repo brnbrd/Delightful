@@ -17,6 +17,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.npc.VillagerTrades;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.trading.MerchantOffer;
@@ -52,7 +53,7 @@ public class ForgeEvents {
 				e.getEntity().getRandom().nextBoolean() // 50% chance
 			) {
 				int duration = 160;
-				if (e.getItem().is(Util.item(Modid.RL, "rotten_chunk"))) {
+				if (e.getItem().is(Modid.RL.item("rotten_chunk"))) {
 					duration = 1800;
 				}
 				Util.addEffect(e.getEntity(), CasualnessDelightCompat.getRotten(), duration, 0);
@@ -86,31 +87,34 @@ public class ForgeEvents {
 				SlicedGourdBlock sliced = (SlicedGourdBlock) DelightfulBlocks.SLICED_PUMPKIN.get();
 				slice(sliced.defaultBlockState(), sliced.getSliceItem(), world, pos, SoundEvents.BAMBOO_BREAK, e, client);
 			} else if (
-					Modid.UGD.loaded() &&
-					e.getEntity().isCrouching() && // Must be crouching to avoid "carving"
-					Objects.equals(ForgeRegistries.BLOCKS.getKey(current.getBlock()), Modid.UG.rl("gloomgourd"))
+				Modid.UGD.loaded() &&
+				e.getEntity().isCrouching() && // Must be crouching to avoid "carving"
+				Objects.equals(ForgeRegistries.BLOCKS.getKey(current.getBlock()), Modid.UG.rl("gloomgourd"))
 			) {
 				SlicedGourdBlock sliced = (SlicedGourdBlock) DelightfulBlocks.SLICED_GLOOMGOURD.get();
 				slice(sliced.defaultBlockState(), sliced.getSliceItem(), world, pos, SoundEvents.BAMBOO_BREAK, e, client);
 			} else if (
-					Mods.loaded(Modid.FU, Modid.FUD) &&
-					Util.name(current.getBlock()).equals("truffle_cake") &&
-					Util.itemExists(Modid.FUD, "truffle_cake_slice")
+				Mods.loaded(Modid.FU, Modid.FUD) &&
+				Util.name(current.getBlock()).equals("truffle_cake") &&
+				Modid.FUD.itemExists("truffle_cake_slice")
 			) {
-				int currentBites = current.getValue(BlockStateProperties.BITES);
-				ItemStack slice = new ItemStack(Objects.requireNonNull(Util.item(Modid.FUD, "truffle_cake_slice")));
-				if (currentBites >= 3) {
-					world.removeBlock(pos, false);
-					world.gameEvent(e.getEntity(), GameEvent.BLOCK_DESTROY, pos);
-					Util.dropOrGive(slice, world, pos, e.getEntity());
-					world.playSound(null, pos, SoundEvents.WOOL_PLACE, SoundSource.PLAYERS, 0.8F, 0.8F);
-					e.getEntity().getItemInHand(e.getHand()).hurtAndBreak(1, e.getEntity(), onBroken -> {
-					});
-					e.setCancellationResult(InteractionResult.sidedSuccess(client));
-					e.setCanceled(true);
-					return;
+				Item sliceItem = Modid.FUD.item("truffle_cake_slice");
+				if (sliceItem != null) {
+					int currentBites = current.getValue(BlockStateProperties.BITES);
+					ItemStack slice = sliceItem.getDefaultInstance();
+					if (currentBites >= 3) {
+						world.removeBlock(pos, false);
+						world.gameEvent(e.getEntity(), GameEvent.BLOCK_DESTROY, pos);
+						Util.dropOrGive(slice, world, pos, e.getEntity());
+						world.playSound(null, pos, SoundEvents.WOOL_PLACE, SoundSource.PLAYERS, 0.8F, 0.8F);
+						e.getEntity().getItemInHand(e.getHand()).hurtAndBreak(1, e.getEntity(), onBroken -> {
+						});
+						e.setCancellationResult(InteractionResult.sidedSuccess(client));
+						e.setCanceled(true);
+						return;
+					}
+					slice(current.setValue(BlockStateProperties.BITES, currentBites + 1), slice, world, pos, SoundEvents.WOOL_PLACE, e, client);
 				}
-				slice(current.setValue(BlockStateProperties.BITES, currentBites + 1), slice, world, pos, SoundEvents.WOOL_PLACE, e, client);
 			}
 		}
 	}

@@ -6,11 +6,14 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
-import org.jetbrains.annotations.NotNull;
+import net.minecraftforge.registries.ForgeRegistries;
 import vectorwing.farmersdelight.FarmersDelight;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 public enum Modid {
 	LOADER(Util.LOADER),
+	MC(Util.MC),
 	FD(FarmersDelight.MODID),
 	D(Delightful.MODID),
 	AA("additionaladditions"),
@@ -110,5 +113,23 @@ public enum Modid {
 
 	public TagKey<Item> it(String tag) {
 		return ItemTags.create(this.rl(tag));
+	}
+
+	@Nullable
+	public Item item(@NotNull String name) {
+		return ForgeRegistries.ITEMS.getValue(this.rl(name));
+	}
+
+	@NotNull
+ 	public Item item(String name, @NotNull Item backup) {
+		if (this.itemExists(name)) {
+			Item returnItem = ForgeRegistries.ITEMS.getValue(this.rl(name));
+			if (returnItem != null) return returnItem;
+		}
+		return backup;
+	}
+
+	public boolean itemExists(@NotNull String name) {
+		return this.loaded() && ForgeRegistries.ITEMS.containsKey(this.rl(name));
 	}
 }

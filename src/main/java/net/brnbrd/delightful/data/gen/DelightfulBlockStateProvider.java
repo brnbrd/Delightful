@@ -27,7 +27,6 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
 		super(output, Delightful.MODID, exFileHelper);
 	}
 
-
 	@Override
 	protected void registerStatesAndModels() {
 		this.wildCropBlock(DelightfulBlocks.WILD_SALMONBERRIES.get());
@@ -38,15 +37,15 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
 		this.miniBlock((MiniBlock) DelightfulBlocks.CANTALOUPE.get(),
 				resourceBlock("cantaloupe_side_small"), resourceBlock("cantaloupe_top"));
 		this.miniBlock((MiniBlock) DelightfulBlocks.MINI_MELON.get(),
-				Util.rl("minecraft", "block/melon_side"), Util.rl("minecraft", "block/melon_top"));
+				Modid.MC.rl("block/melon_side"), Modid.MC.rl("block/melon_top"));
 		this.slicedMiniMelonBlock((SlicedMiniMelonBlock) DelightfulBlocks.SLICED_MINI_MELON.get(),
-				"melon", Util.rl("minecraft", "block/melon_side"), Util.rl("minecraft", "block/melon_top"));
+				"melon", Modid.MC.rl("block/melon_side"), Modid.MC.rl("block/melon_top"));
 		this.slicedMiniMelonBlock((SlicedMiniMelonBlock) DelightfulBlocks.SLICED_CANTALOUPE.get(),
 				"cantaloupe", resourceBlock("cantaloupe_side_small"), resourceBlock("cantaloupe_top"));
 		this.bigSlicedBlock(DelightfulBlocks.SLICED_MELON.get(),
-				resourceBlock("melon_inside_rind"), Util.rl("minecraft", "block/melon_side"), Util.rl("minecraft", "block/melon_top"));
+				resourceBlock("melon_inside_rind"), Modid.MC.rl("block/melon_side"), Modid.MC.rl("block/melon_top"));
 		this.bigSlicedBlock(DelightfulBlocks.SLICED_PUMPKIN.get(),
-				resourceBlock("pumpkin_inside_rind"), Util.rl("minecraft", "block/pumpkin_side"), Util.rl("minecraft", "block/pumpkin_top"));
+				resourceBlock("pumpkin_inside_rind"), Modid.MC.rl("block/pumpkin_side"), Modid.MC.rl("block/pumpkin_top"));
 		this.bigSlicedBlock(DelightfulBlocks.SLICED_GLOOMGOURD.get(),
 				resourceBlock("gloomgourd_inside_rind"), Modid.UG.rl("block/gloomgourd_side"), Modid.UG.rl("block/gloomgourd_top"));
 		this.pieBlock(DelightfulBlocks.SALMONBERRY_PIE);
@@ -131,9 +130,9 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
 
 	public void cabinet(Block block) {
 		String path = Util.name(block);
-		String type = path.replace("_cabinet", "").trim();
+		String type = path.replace("_cabinet", Util.EMPTY_STR).trim();
 		this.horizontalBlock(block, state -> {
-			String suffix = state.getValue(CabinetBlock.OPEN) ? "_open" : "";
+			String suffix = state.getValue(CabinetBlock.OPEN) ? "_open" : Util.EMPTY_STR;
 			return models().orientableWithBottom(path + suffix,
 					resourceBlock(type + "_cabinet_side"),
 					resourceBlock(type + "_cabinet_front" + suffix),
@@ -247,7 +246,7 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
 		getVariantBuilder(block.get()).forAllStates(state -> {
 					int bites = state.getValue(PieBlock.BITES);
 					String name = Util.name(block);
-					String suffix = bites > 0 ? "_slice" + bites : "";
+					String suffix = bites > 0 ? "_slice" + bites : Util.EMPTY_STR;
 					var mod = models()
 							.withExistingParent("block/" + name + suffix, Util.rl(FarmersDelight.MODID, "pie" + suffix))
 							.texture("top", resourceBlock(name + "_top"))

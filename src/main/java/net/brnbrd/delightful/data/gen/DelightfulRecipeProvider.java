@@ -724,10 +724,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 				cond.addCondition(currentCond);
 			}
 		}
-		if (
-			Util.item(Delightful.MODID, name) instanceof IConfigured conf &&
-			conf.getConflicts().length > 0
-		) {
+		if (Modid.D.item(name) instanceof IConfigured conf) {
 			for (Modid conflict : conf.getConflicts()) {
 				cond.addCondition(new NotCondition(new ModLoadedCondition(conflict.get())));
 			}

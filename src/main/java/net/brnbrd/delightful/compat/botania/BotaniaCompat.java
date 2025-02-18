@@ -1,8 +1,6 @@
 package net.brnbrd.delightful.compat.botania;
 
 import com.google.common.collect.Multimap;
-import net.brnbrd.delightful.Util;
-import net.brnbrd.delightful.common.item.knife.Knives;
 import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.network.DPacketHandler;
 import net.minecraft.sounds.SoundSource;
@@ -12,7 +10,6 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Tier;
 import vazkii.botania.api.BotaniaAPI;
@@ -24,7 +21,6 @@ import vazkii.botania.common.item.BotaniaItems;
 import vazkii.botania.common.item.equipment.tool.ToolCommons;
 import java.util.function.Supplier;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 public class BotaniaCompat {
 	public static Supplier<Tier> manasteel() {
@@ -65,8 +61,8 @@ public class BotaniaCompat {
 		burst.setManaLossPerTick(4F);
 		burst.setGravity(0F);
 		burst.setDeltaMovement(burst.getDeltaMovement().scale(motionModifier));
-		burst.setSourceLens(Util.item(
-			Modid.MB, "alfsteel_sword",
+		burst.setSourceLens(Modid.MB.item(
+			"alfsteel_sword",
 			BotaniaItems.terraSword
 		).getDefaultInstance().copy());
 		return burst;
