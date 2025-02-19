@@ -7,6 +7,7 @@ import net.brnbrd.delightful.common.item.IConfigured;
 import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.compat.Mods;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
@@ -15,11 +16,11 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.Containers;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -33,6 +34,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.tags.ITagManager;
+import java.util.Objects;
 import java.util.UUID;
 import java.util.function.Supplier;
 import org.jetbrains.annotations.NotNull;
@@ -133,6 +135,10 @@ public class Util {
 
 	public static boolean itemExists(ResourceLocation location) {
 		return Mods.stringLoaded(location.getNamespace()) && ForgeRegistries.ITEMS.containsKey(location);
+	}
+
+	public static boolean blockExists(ResourceLocation location) {
+		return Mods.stringLoaded(location.getNamespace()) && ForgeRegistries.BLOCKS.containsKey(location);
 	}
 
 	@Nullable
@@ -237,8 +243,9 @@ public class Util {
 		if (me != null) addEffect(entity, me, duration, amp);
 	}
 
-	public static ItemStack gs(RegistryObject<Item> r, int... count) { // Only considers first vararg entry
-		return new ItemStack(r.get(), count.length > 0 ? count[0] : 1);
+	public static ItemStack gs(@Nullable Supplier<@Nullable Item> r, int... count) { // Only considers first vararg entry
+		if (r == null || r.get() == null) return ItemStack.EMPTY;
+		return new ItemStack(Objects.requireNonNull(r.get()), count.length > 0 ? count[0] : 1);
 	}
 
 	public static String nameSpace(ItemLike itemLike) {
@@ -271,12 +278,34 @@ public class Util {
 		return enchanted;
 	}
 
-	public static void dropOrGive(ItemStack stack, Level world, BlockPos drop, Player give) {
+	public static void drop(Level level, ItemStack stack, BlockPos pos, Direction dir) {
+		RandomSource random = level.getRandom();
+		ItemEntity dropItem = new ItemEntity(
+			level,
+			pos.getX() + 0.5D + dir.getStepX() * 0.65D,
+			pos.getY() + 0.1D,
+			pos.getZ() + 0.5D + dir.getStepZ() * 0.65D,
+			stack
+		);
+		dropItem.setDeltaMovement(
+			0.05D * dir.getStepX() + random.nextDouble() * 0.02D,
+			0.05D,
+			0.05D * dir.getStepZ() + random.nextDouble() * 0.02D
+		);
+		level.addFreshEntity(dropItem);
+	}
+
+	public static void dropOrGive(ItemStack stack, Level level, BlockPos pos, Direction direction, Player give) {
+		if (stack == null || stack == ItemStack.EMPTY || stack.getCount() < 1) return;
 		if (DelightfulConfig.GIVE_SLICED_DIRECTLY.get()) {
 			ItemHandlerHelper.giveItemToPlayer(give, stack, 0);
 		} else {
-			Containers.dropItemStack(world, drop.getX(), drop.getY() + 0.25F, drop.getZ(), stack);
+			drop(level, stack, pos, direction);
 		}
+	}
+
+	public static void dropOrGive(ItemStack stack, Level level, BlockPos pos, Player give) {
+		dropOrGive(stack, level, pos, give.getDirection().getOpposite(), give);
 	}
 
 	public static boolean hasTagString(ItemStack stack, String key, String value) {

@@ -15,13 +15,12 @@ import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
-import org.jetbrains.annotations.NotNull;
 import vectorwing.farmersdelight.common.block.FeastBlock;
 import java.util.Collections;
 import java.util.List;
+import org.jetbrains.annotations.NotNull;
 
 public class DelightfulBlockLoot extends BlockLootSubProvider {
-
 	private final static List<ResourceLocation> NO_GEN = List.of(
 			DelightfulBlocks.WILD_SALMONBERRIES.getId()
 	);
@@ -121,20 +120,7 @@ public class DelightfulBlockLoot extends BlockLootSubProvider {
 					return applyExplosionDecay(b, loot);
 				}
 		);
-		this.add(DelightfulBlocks.SLICED_GLOOMGOURD.get(), (b) -> {
-					LootTable.Builder loot = LootTable.lootTable();
-					int maxbites = ((SlicedGourdBlock) DelightfulBlocks.SLICED_GLOOMGOURD.get()).getMaxBites();
-					for (int i = 1; i <= maxbites; i++) {
-						final float left = (float) i;
-						loot = loot.withPool(LootPool.lootPool()
-								.when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(b)
-										.setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(SlicedGourdBlock.BITES, i)))
-								.add(LootItem.lootTableItem(((SlicedGourdBlock) b).getSliceItem().getItem()))
-								.apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, ((float) maxbites) - left + 1.0F))));
-					}
-					return applyExplosionDecay(b, loot);
-				}
-		);
+		this.empty(DelightfulBlocks.SLICED_GLOOMGOURD);
 
 		// Salmonberry Bush drops Pips and optional Berry
 		this.add(DelightfulBlocks.SALMONBERRY_BUSH.get(), (b) -> {

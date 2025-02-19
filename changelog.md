@@ -13,6 +13,7 @@
 - Jams are now crafted with 3 fruit and 1 sugar
 - Some items that previously didn't display effects in their tooltip now do
 - Dandelions now spawn within Mini Melon patches
+- Sliced Gloomgourds are now created from Carved Gloomgourds and can no longer provide slice items
 
 ### Translations
 - Updated some translation keys to format `x.delightful.name` from `delightful.x.name`

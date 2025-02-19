@@ -2,6 +2,7 @@ package net.brnbrd.delightful.common.block;
 
 import net.brnbrd.delightful.Util;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -20,22 +21,34 @@ import org.jetbrains.annotations.NotNull;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
 
 public class MiniMelonBlock extends MiniBlock implements BonemealableBlock {
+	public MiniMelonBlock(Properties properties) {
+		super(properties);
+	}
 
-	public MiniMelonBlock(Properties pProperties) {
-		super(pProperties);
+	public void grow(Level level, BlockPos pos) {
+		BlockState newState = Blocks.MELON.defaultBlockState();
+		level.setBlock(pos, newState, 2);
+		ForgeHooks.onCropsGrowPost(level, pos, newState);
 	}
 
 	@SuppressWarnings("deprecation")
 	@Override
-	public void randomTick(@NotNull BlockState pState, ServerLevel pLevel, @NotNull BlockPos pPos, @NotNull RandomSource pRandom) {
-		if (!pLevel.isAreaLoaded(pPos, 1))
-			return; // Forge: prevent loading unloaded chunks when checking neighbor's light
-		if (pLevel.getRawBrightness(pPos, 0) >= 5 &&
-				pLevel.getBlockState(pPos.below()).is(Blocks.DIRT) &&
-				ForgeHooks.onCropsGrowPre(pLevel, pPos, pState, pRandom.nextInt(10) == 0)) {
-			pLevel.setBlock(pPos, Blocks.MELON.withPropertiesOf(pState), 2);
-			ForgeHooks.onCropsGrowPost(pLevel, pPos, pState);
+	public void randomTick(@NotNull BlockState state, ServerLevel level, @NotNull BlockPos pos, @NotNull RandomSource random) {
+		if (!level.isAreaLoaded(pos, 1)) return; // Forge: prevent loading unloaded chunks when checking neighbor's light
+		if (
+			level.getRawBrightness(pos, 0) >= 5 &&
+			level.getBlockState(pos.below()).is(Blocks.DIRT) &&
+			ForgeHooks.onCropsGrowPre(level, pos, state, random.nextInt(10) == 0)
+		) {
+			grow(level, pos);
 		}
+	}
+
+	@SuppressWarnings("deprecation")
+	@Override
+	public void performBonemeal(ServerLevel level, @NotNull RandomSource random, @NotNull BlockPos pos, @NotNull BlockState state) {
+		if (!level.isAreaLoaded(pos, 1)) return; // Forge: prevent loading unloaded chunks when checking neighbor's light
+		if (ForgeHooks.onCropsGrowPre(level, pos, state, true)) grow(level, pos);
 	}
 
 	@Override
@@ -50,27 +63,23 @@ public class MiniMelonBlock extends MiniBlock implements BonemealableBlock {
 
 	@SuppressWarnings("deprecation")
 	@Override
-	public void performBonemeal(ServerLevel level, @NotNull RandomSource random, @NotNull BlockPos pos, @NotNull BlockState state) {
-		if (!level.isAreaLoaded(pos, 1))
-			return; // Forge: prevent loading unloaded chunks when checking neighbor's light
-		if (ForgeHooks.onCropsGrowPre(level, pos, state, true)) {
-			level.setBlock(pos, Blocks.MELON.withPropertiesOf(state), 2);
-			ForgeHooks.onCropsGrowPost(level, pos, state);
-		}
-	}
-
-	@SuppressWarnings("deprecation")
-	@Override
-	public @NotNull InteractionResult use(@NotNull BlockState pState, @NotNull Level world, @NotNull BlockPos pPos, Player pPlayer, @NotNull InteractionHand pHand, @NotNull BlockHitResult pHit) {
-		if (pPlayer.getItemInHand(pHand).is(ForgeTags.TOOLS_KNIVES)) {
-			if (!world.isClientSide()) {
+	public @NotNull InteractionResult use(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult hit) {
+		if (player.getItemInHand(hand).is(ForgeTags.TOOLS_KNIVES)) {
+			if (!level.isClientSide()) {
 				SlicedMiniMelonBlock sliced = (SlicedMiniMelonBlock) DelightfulBlocks.SLICED_MINI_MELON.get();
-				world.setBlock(pPos, sliced.defaultBlockState(), 2);
-				Util.dropOrGive(sliced.getSliceItem(), world, pPos, pPlayer);
-				world.playSound(null, pPos, SoundEvents.WOOD_HIT, SoundSource.PLAYERS, 0.8F, 0.8F);
-				pPlayer.getItemInHand(pHand).hurtAndBreak(1, pPlayer, onBroken -> onBroken.broadcastBreakEvent(pHand));
+				level.setBlock(pos, sliced.defaultBlockState(), 2);
+				Direction direction = hit.getDirection();
+				Util.dropOrGive(
+					sliced.getSliceItem(),
+					level,
+					pos,
+					direction.getAxis() == Direction.Axis.Y ? player.getDirection().getOpposite() : direction,
+					player
+				);
+				level.playSound(null, pos, SoundEvents.PUMPKIN_CARVE, SoundSource.BLOCKS, 1F, 1F);
+				player.getItemInHand(hand).hurtAndBreak(1, player, onBroken -> onBroken.broadcastBreakEvent(hand));
 			}
-			return InteractionResult.sidedSuccess(world.isClientSide());
+			return InteractionResult.sidedSuccess(level.isClientSide());
 		}
 		return InteractionResult.FAIL;
 	}

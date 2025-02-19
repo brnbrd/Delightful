@@ -3,6 +3,7 @@ package net.brnbrd.delightful.common.block;
 import com.mojang.datafixers.util.Pair;
 import net.brnbrd.delightful.Util;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
@@ -15,10 +16,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.AttachedStemBlock;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.StemBlock;
-import net.minecraft.world.level.block.StemGrownBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
@@ -27,23 +25,19 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import org.jetbrains.annotations.NotNull;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
 import java.util.function.Supplier;
+import org.jetbrains.annotations.NotNull;
 
-public class SlicedGourdBlock extends StemGrownBlock implements ISliceable {
+public class SlicedGourdBlock extends Block implements ISliceable {
 	public static final Integer MAX_BITES = 3;
 	public static final IntegerProperty BITES = IntegerProperty.create("bites", 1, MAX_BITES);
 	private final Supplier<Item> sliceItem;
-	private final Supplier<? extends Block> stemBlock;
-	private final Supplier<? extends Block> attachedStemBlock;
 
-	public SlicedGourdBlock(Properties properties, Supplier<Item> sliceItem, Supplier<? extends Block> stemBlock, Supplier<? extends Block> attachedStemBlock) {
+	public SlicedGourdBlock(Properties properties, Supplier<Item> sliceItem) {
 		super(properties);
 		this.registerDefaultState(this.stateDefinition.any().setValue(BITES, 1));
 		this.sliceItem = sliceItem;
-		this.stemBlock = stemBlock;
-		this.attachedStemBlock = attachedStemBlock;
 	}
 
 	@Override
@@ -77,17 +71,7 @@ public class SlicedGourdBlock extends StemGrownBlock implements ISliceable {
 
 	@Override
 	public ItemStack getSliceItem() {
-		return new ItemStack(this.sliceItem.get());
-	}
-
-	@Override
-	public @NotNull StemBlock getStem() {
-		return (StemBlock) this.stemBlock.get();
-	}
-
-	@Override
-	public @NotNull AttachedStemBlock getAttachedStem() {
-		return (AttachedStemBlock) this.attachedStemBlock.get();
+		return Util.gs(this.sliceItem, 1);
 	}
 
 	@Override
@@ -99,7 +83,7 @@ public class SlicedGourdBlock extends StemGrownBlock implements ISliceable {
 	public @NotNull InteractionResult use(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult hit) {
 		ItemStack heldStack = player.getItemInHand(hand);
 		if (heldStack.is(ForgeTags.TOOLS_KNIVES)) {
-			return this.cutSlice(level, pos, state, player, hand);
+			return this.cutSlice(level, pos, state, player, hand, hit);
 		}
 		return this.consumeBite(level, pos, state, player);
 	}
@@ -126,12 +110,12 @@ public class SlicedGourdBlock extends StemGrownBlock implements ISliceable {
 			} else if (bites < this.getMaxBites()) {
 				level.setBlock(pos, state.setValue(BITES, bites + 1), 3);
 			}
-			level.playSound(null, pos, SoundEvents.GENERIC_EAT, SoundSource.PLAYERS, 0.8F, 0.8F);
+			level.playSound(null, playerIn.blockPosition().above(), SoundEvents.GENERIC_EAT, SoundSource.PLAYERS, 1F, 1F);
 		}
 		return InteractionResult.sidedSuccess(level.isClientSide());
 	}
 
-	protected InteractionResult cutSlice(Level level, BlockPos pos, BlockState state, Player player, InteractionHand hand) {
+	protected InteractionResult cutSlice(Level level, BlockPos pos, BlockState state, Player player, InteractionHand hand, BlockHitResult hit) {
 		if (!level.isClientSide()) {
 			int bites = state.getValue(BITES);
 			if (bites == this.getMaxBites()) {
@@ -139,8 +123,15 @@ public class SlicedGourdBlock extends StemGrownBlock implements ISliceable {
 			} else if (bites < this.getMaxBites()) {
 				level.setBlock(pos, state.setValue(BITES, bites + 1), 3);
 			}
-			Util.dropOrGive(this.getSliceItem(), level, pos, player);
-			level.playSound(null, pos, SoundEvents.WOOD_HIT, SoundSource.PLAYERS, 0.8F, 0.8F);
+			Direction direction = hit.getDirection();
+			Util.dropOrGive(
+				this.getSliceItem(),
+				level,
+				pos,
+				direction.getAxis() == Direction.Axis.Y ? player.getDirection().getOpposite() : direction,
+				player
+			);
+			level.playSound(null, pos, SoundEvents.PUMPKIN_CARVE, SoundSource.BLOCKS, 1F, 1F);
 			player.getItemInHand(hand).hurtAndBreak(1, player, onBroken -> onBroken.broadcastBreakEvent(hand));
 		}
 		return InteractionResult.sidedSuccess(level.isClientSide());

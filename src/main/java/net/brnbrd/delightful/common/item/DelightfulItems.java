@@ -6,6 +6,7 @@ import net.brnbrd.delightful.common.item.food.*;
 import net.brnbrd.delightful.compat.*;
 import net.brnbrd.delightful.compat.abnormals.AquaticCompat;
 import net.brnbrd.delightful.compat.ars_nouveau.*;
+import net.brnbrd.delightful.compat.undergarden.UndergardenCompat;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;

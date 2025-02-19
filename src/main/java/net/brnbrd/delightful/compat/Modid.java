@@ -6,6 +6,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.ForgeRegistries;
 import vectorwing.farmersdelight.FarmersDelight;
 import org.jetbrains.annotations.NotNull;
@@ -53,7 +54,6 @@ public enum Modid {
 	FRD("fruitsdelight"),
 	FRIGHT("frightsdelight"),
 	FU("frozenup"),
-	FUD("frozen_delight"),
 	FUS("fusion"),
 	GO("goated"),
 	HAB("habitat"),
@@ -131,5 +131,23 @@ public enum Modid {
 
 	public boolean itemExists(@NotNull String name) {
 		return this.loaded() && ForgeRegistries.ITEMS.containsKey(this.rl(name));
+	}
+
+	@Nullable
+	public Block block(@NotNull String name) {
+		return ForgeRegistries.BLOCKS.getValue(this.rl(name));
+	}
+
+	@NotNull
+	public Block block(String name, @NotNull Block backup) {
+		if (this.blockExists(name)) {
+			Block returnBlock = ForgeRegistries.BLOCKS.getValue(this.rl(name));
+			if (returnBlock != null) return returnBlock;
+		}
+		return backup;
+	}
+
+	public boolean blockExists(@NotNull String name) {
+		return this.loaded() && ForgeRegistries.BLOCKS.containsKey(this.rl(name));
 	}
 }
