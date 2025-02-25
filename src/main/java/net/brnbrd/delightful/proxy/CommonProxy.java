@@ -4,7 +4,7 @@ import net.brnbrd.delightful.common.block.DelightfulBlocks;
 import net.brnbrd.delightful.common.events.ForgeEvents;
 import net.brnbrd.delightful.common.events.KnifeEvents;
 import net.brnbrd.delightful.common.events.ModEvents;
-import net.brnbrd.delightful.common.events.pie.PieEvents;
+import net.brnbrd.delightful.common.events.PieEvents;
 import net.brnbrd.delightful.common.fluid.DelightfulFluids;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.knife.Knives;

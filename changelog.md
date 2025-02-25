@@ -1,7 +1,7 @@
-# Changelog
+## Version History
 
 
-# 3.7.1
+## 3.7.1
 
 ### Updates
 - Placeable Mulberry Pie, added Mulberry Pie Slice (for [Upgrade Aquatic](https://www.curseforge.com/minecraft/mc-mods/upgrade-aquatic)) (closes [#107](https://github.com/brnbrd/Delightful/issues/107))
@@ -19,7 +19,7 @@
 - Updated some translation keys to format `x.delightful.name` from `delightful.x.name`
 
 
-# 3.7
+## 3.7
 
 ### Updates
 - Added `Delightful Overhauls` built-in resource pack (16x) by championhestu
@@ -48,7 +48,7 @@
 - Updated zh_cn (merged [#110](https://github.com/brnbrd/Delightful/pull/110))
 
 
-# 3.6.2
+## 3.6.2
 
 ### Updates
 - Added Baklava and Baklava Slice
@@ -70,7 +70,7 @@
 - Fix milk recipe from nuts using Copper Cup
 
 
-# 3.6.1
+## 3.6.1
 
 ### Updates
 - Added Source Berry Milkshake/Ice Cream/Blocks (for [Ars Nouveau](https://www.curseforge.com/minecraft/mc-mods/ars-nouveau))
@@ -92,7 +92,7 @@
 - Optimized file size of some assets
 
 
-# 3.6
+## 3.6
 
 ### Updates
 - Adjust Tea recipes for latest Farmer's Respite
@@ -103,13 +103,13 @@
 - Added Dog Food crafting recipe from Animal Fat
 
 
-# 3.5.9
+## 3.5.9
 
 ### Fixes
 - Veridium Knife refactor for latest Aether: Redux (thanks Zepalesque)
 
 
-# 3.5.8
+## 3.5.8
 
 ### Fixes
 - Removed Farmer's Respite recipe support to be revisited shortly
@@ -117,7 +117,7 @@
 - Fix Chevon not disabling in some contexts
 
 
-# 3.5.7
+## 3.5.7
 
 ### Updates
 - Added Cactus Chili
@@ -134,7 +134,7 @@
 - Stuffed Pumpkin recipe fixes for Autumnity
 
 
-# 3.5.6
+## 3.5.6
 
 ### Updates
 - More tags
@@ -144,7 +144,7 @@
 - Optimized all textures
 
 
-# 3.5.5
+## 3.5.5
 
 ### Updates
 - Added Roasted Acorn and Acorn Dough
@@ -156,7 +156,7 @@
 - Disabled Pumpkin Pie placement/slice in presence of Create: Central Kitchen
 
 
-# 3.5.4
+## 3.5.4
 
 ### Updates
 - More clover recipe compat (specifically Buzzier Bees)
@@ -167,7 +167,7 @@
 - Removed some old, uncraftable knives
 
 
-# 3.5.3
+## 3.5.3
 
 ### Updates
 - Added Mendosteen Crate (for [Ars Nouveau](https://www.curseforge.com/minecraft/mc-mods/ars-nouveau))
@@ -187,7 +187,7 @@
 - Immersive Engineering garden cloche compat fixes, and support for Cantaloupes
 
 
-# 3.5.2
+## 3.5.2
 
 ### Updates
 - Added Valkyrum Knife (for [Ancient Aether](https://www.curseforge.com/minecraft/mc-mods/ancient-aether))
@@ -198,7 +198,7 @@
 - Blazing Knife and Experience Knife now have their correct properties
 
 
-# 3.5.1
+## 3.5.1
 
 ### Updates
 - Slightly adjusted Resistance potion effect length for some Cantaloupe foods
@@ -211,7 +211,7 @@
   - zh_cn (thanks, Junnaturefox!)
 
 
-# 3.5 - The Cantaloupe Update
+## 3.5 - The Cantaloupe Update
 
 ### Updates
 - Added Nether Quartz Knife (for [Applied Energistics 2](https://www.curseforge.com/minecraft/mc-mods/applied-energistics-2))

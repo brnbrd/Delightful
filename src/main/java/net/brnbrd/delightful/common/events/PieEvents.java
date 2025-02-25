@@ -1,7 +1,9 @@
-package net.brnbrd.delightful.common.events.pie;
+package net.brnbrd.delightful.common.events;
 
+import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.compat.Modid;
+import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundSource;
@@ -9,6 +11,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.SoundType;
@@ -24,6 +27,14 @@ import vectorwing.farmersdelight.common.block.PieBlock;
 import vectorwing.farmersdelight.common.registry.ModBlocks;
 
 public class PieEvents {
+	// Checks if pie slice is enabled in config
+	public static boolean enabled(ItemStack stack) {
+		return (
+			stack.is(DelightfulItemTags.COMPAT_PIES) &&
+			!(stack.is(Items.PUMPKIN_PIE) && Modid.CCK.loaded()) &&
+			Util.enabled(Util.name(stack) + "_slice")
+		);
+	}
 
 	// Adds "Placeable" tooltip to compat pies
 	@SubscribeEvent(priority = EventPriority.NORMAL)
@@ -31,8 +42,7 @@ public class PieEvents {
 		ItemStack stack = e.getItemStack();
 		if (
 			(stack.getItem() instanceof BlockItem b && b.getBlock() instanceof PieBlock) ||
-			Pies.enabled(stack) ||
-			isBerryPieOrMuffin(stack)
+			enabled(stack)
 		) {
 			e.getToolTip().add(Util.tooltip("placeable")
 				.withStyle(ChatFormatting.DARK_GRAY)
@@ -44,7 +54,7 @@ public class PieEvents {
 	// Cancels pies' vanilla right-click eating
 	@SubscribeEvent(priority = EventPriority.HIGHEST)
 	void onCancelDefault(PlayerInteractEvent.RightClickItem e) {
-		if (Pies.enabled(e.getItemStack())) {
+		if (enabled(e.getItemStack())) {
 			e.setCancellationResult(InteractionResult.FAIL);
 			e.setCanceled(true);
 		}
@@ -53,26 +63,26 @@ public class PieEvents {
 	// Right click placing a pie Block using Item
 	@SubscribeEvent
 	void onPieOverhaul(PlayerInteractEvent.RightClickBlock e) {
+		BlockState clicked = e.getLevel().getBlockState(e.getHitVec().getBlockPos());
 		if (
-			Pies.enabled(e.getItemStack()) &&
-			!e.getLevel().getBlockState(e.getHitVec().getBlockPos()).is(ModBlocks.CUTTING_BOARD.get()) &&
-			!e.isCanceled()
+			enabled(e.getItemStack()) &&
+			!(clicked.getBlock() instanceof PieBlock) &&
+			!clicked.is(ModBlocks.CUTTING_BOARD.get()) &&
+			!e.isCanceled() &&
+			Util.block(Delightful.MODID, Util.name(e.getItemStack())) instanceof PieBlock pie
 		) {
-			PieBlock pie = Pies.get(e.getItemStack());
-			if (pie != null) {
-				InteractionResult place = placePie(pie, new BlockPlaceContext(
-					e.getEntity(),
-					e.getHand(),
-					e.getItemStack(),
-					e.getHitVec()
-				));
-				if (place.consumesAction()) {
-					e.setUseItem(Event.Result.DENY);
-					e.setUseBlock(Event.Result.DENY);
-				}
-				e.setCancellationResult(place);
-				e.setCanceled(place.consumesAction());
+			InteractionResult place = placePie(pie, new BlockPlaceContext(
+				e.getEntity(),
+				e.getHand(),
+				e.getItemStack(),
+				e.getHitVec()
+			));
+			if (place.consumesAction()) {
+				e.setUseItem(Event.Result.DENY);
+				e.setUseBlock(Event.Result.DENY);
 			}
+			e.setCancellationResult(place);
+			e.setCanceled(place.consumesAction());
 		}
 	}
 
@@ -83,7 +93,12 @@ public class PieEvents {
 		if (context.canPlace()) {
 			Player player = context.getPlayer();
 			BlockState pieState = pie.getStateForPlacement(context);
-			if (pieState != null && canPlace(context, pieState) && level.setBlock(pos, pieState, 11)) {
+			if (
+				player != null &&
+				pieState != null &&
+				canPlace(context, pieState) &&
+				level.setBlock(pos, pieState, 11)
+			) {
 				BlockState placedState = level.getBlockState(pos);
 				if (placedState.is(pieState.getBlock())) {
 					placedState.getBlock().setPlacedBy(level, pos, placedState, player, context.getItemInHand());
@@ -91,16 +106,14 @@ public class PieEvents {
 				level.gameEvent(GameEvent.BLOCK_PLACE, pos, GameEvent.Context.of(player, pieState));
 				SoundType soundtype = placedState.getSoundType(level, pos, player);
 				level.playSound(
-						player,
-						pos,
-						placedState.getSoundType(level, pos, player).getPlaceSound(),
-						SoundSource.BLOCKS,
-						(soundtype.getVolume() + 1.0F) / 2.0F,
-						soundtype.getPitch() * 0.8F
+					player,
+					pos,
+					placedState.getSoundType(level, pos, player).getPlaceSound(),
+					SoundSource.BLOCKS,
+					(soundtype.getVolume() + 1.0F) / 2.0F,
+					soundtype.getPitch() * 0.8F
 				);
-				if (player != null && !player.getAbilities().instabuild) {
-					context.getItemInHand().shrink(1);
-				}
+				if (!player.getAbilities().instabuild) context.getItemInHand().shrink(1);
 				return InteractionResult.sidedSuccess(level.isClientSide());
 			}
 		}
@@ -114,10 +127,5 @@ public class PieEvents {
 			pState.canSurvive(pContext.getLevel(), pContext.getClickedPos()) &&
 			pContext.getLevel().isUnobstructed(pState, pContext.getClickedPos(), collisioncontext)
 		);
-	}
-
-	// Wild Berries compat
-	boolean isBerryPieOrMuffin(ItemStack stack) {
-		return Modid.WB.loaded() && (stack.is(Modid.WB.it("berry_pies")) || stack.is(Modid.WB.it("berry_muffins")));
 	}
 }
