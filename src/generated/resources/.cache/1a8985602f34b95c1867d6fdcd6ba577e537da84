@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-26T08:15:33.0687624	delightful
+// 1.20.1	2025-02-27T14:58:11.5843656	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -52,7 +52,7 @@ d74ce8344a88381660e30e19cdffd508a6ac6951 data/farmersdelight/tags/items/cabinets
 46f279b6acd03b06ea14e9f62be7d48e200c002c data/farmersdelight/tags/items/wild_crops.json
 a1edebb3bd4f7f3d7e73d53c915b2fe3203614aa data/forbidden_arcanus/tags/items/draco_arcanus_staff.json
 67b8f22c3fbfa7142b71a6a27d583be2b01e8ceb data/forbidden_arcanus/tags/items/dragon_scale.json
-d4f84d466ab0cf5a843a32a4baff0e229839b055 data/forge/tags/items/berries.json
+d093a3e7110377da8125859a4dc2463c3e055dd1 data/forge/tags/items/berries.json
 3285c8bc271430d8e3ff4305841c7668dc903792 data/forge/tags/items/bones.json
 dabd817095489e486c3fcd0ab4704640d2da84ca data/forge/tags/items/bread.json
 2c61aada43234d73614242ee70d69d914508cfe1 data/forge/tags/items/bread/corn.json
@@ -98,7 +98,6 @@ b33dde3cf95c3f821d49bc84b8c46f9fd65289e8 data/forge/tags/items/fruits/apple.json
 731ca67ac60192e9e45681303589c863b7d3ef83 data/forge/tags/items/fruits/banana.json
 81dca03b7282b921e7f7a58f53ebda8eda0659d6 data/forge/tags/items/fruits/baobab.json
 ad700a43700050836a829c9ef4c67681e84e2c98 data/forge/tags/items/fruits/blackberries.json
-2408f9d746579229969873fab982ea26b42fb5f2 data/forge/tags/items/fruits/blackcurrant.json
 c7a691ffe24451ec78aff862b1fdcd8c9ba1aaca data/forge/tags/items/fruits/blueberries.json
 500da256ddab8941af6469fb64c82901ba84ed36 data/forge/tags/items/fruits/cantaloupe.json
 9bcf5fe752a8696fcf9a26d104cc322516eb757c data/forge/tags/items/fruits/cherry.json
@@ -106,6 +105,7 @@ b4cc0642cc95aece33ec9cce364d245dd186c647 data/forge/tags/items/fruits/chorus.jso
 62e9c8730d0b31633b727885e3b75ef2e0045f11 data/forge/tags/items/fruits/citron.json
 27bbb53009399d8813b2c8ec68377008f24c6cca data/forge/tags/items/fruits/citrus.json
 68b400068240309ea4d977ecc9c4a3ba21963a4b data/forge/tags/items/fruits/cranberries.json
+1d316ae5e09d50d69755eab0ccbdcf1386cb132c data/forge/tags/items/fruits/currant.json
 4dbf3ccd17d6fe96e0ccd0b4fd1d7f5e3538174b data/forge/tags/items/fruits/elderberry.json
 4b16e77476f7de4fbe59d75ed2845c0a18e714af data/forge/tags/items/fruits/gearo_berry.json
 33221392eaadbbebce9b701da69e2f20fd46c490 data/forge/tags/items/fruits/glow_berries.json
@@ -128,7 +128,7 @@ d3ac5caff21a72e9cde16be715f916d249db85ef data/forge/tags/items/fruits/sourceberr
 ef58bcce9f0d3d6e68fdc0afe94d732282c43dba data/forge/tags/items/fruits/torchberries.json
 4fbda205b7c5ed3a2d9763485710d97ba308840f data/forge/tags/items/fruits/whitecurrant.json
 d6c74500b2d44fbad3f18f4213772b35ce41a9ca data/forge/tags/items/fruits/wild_berries.json
-05e9da8fe44d0151011fcd2efa4d150918554b8c data/forge/tags/items/fruits/yucca.json
+7ff4bcf08332c0309b032013cbc516a5953e0176 data/forge/tags/items/fruits/yucca.json
 3b38cdc0e94694bbb035f70966c704394748acd4 data/forge/tags/items/gems/rose_quartz.json
 78cac37f0ee6dd6b721fa29f42197a86e08ca5ed data/forge/tags/items/gems/skyjade.json
 b3d5bd87cc20e4f6a39f331a575350af129f3bc7 data/forge/tags/items/gems/zanite.json

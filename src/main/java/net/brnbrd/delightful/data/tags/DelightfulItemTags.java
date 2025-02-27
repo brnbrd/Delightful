@@ -53,7 +53,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> FRUITS_ELDERBERRY = forge("fruits/elderberry");
 	public static final TagKey<Item> FRUITS_GEARO_BERRY = forge("fruits/gearo_berry");
 	public static final TagKey<Item> FRUITS_REDCURRANT = forge("fruits/redcurrant");
-	public static final TagKey<Item> FRUITS_BLACKCURRANT = forge("fruits/blackcurrant");
+	public static final TagKey<Item> FRUITS_CURRANT = forge("fruits/currant");
 	public static final TagKey<Item> FRUITS_WHITECURRANT = forge("fruits/whitecurrant");
 	public static final TagKey<Item> FRUITS_BLUEBERRIES = forge("fruits/blueberries");
 	public static final TagKey<Item> FRUITS_RASPBERRIES = forge("fruits/raspberries");

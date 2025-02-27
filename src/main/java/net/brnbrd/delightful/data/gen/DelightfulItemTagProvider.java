@@ -191,24 +191,25 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.FRUITS_SALMONBERRIES).add(DelightfulItems.SALMONBERRIES.get());
 		this.tag(DelightfulItemTags.FRUITS_KIWI).addOptional(Util.rl("hedgehog", "kiwi"));
 		this.tag(DelightfulItemTags.FRUITS_GREEN_APPLE).addOptional(Modid.BWG.rl(BWGCompat.green_apple));
+		this.tag(DelightfulItemTags.FRUITS_BLUEBERRIES)
+			.addOptional(Modid.BWG.rl("blueberries"))
+			.addOptional(Modid.WB.rl("blueberries"))
+			.addOptional(Modid.NF.rl("blueberries"));
 		this.tag(DelightfulItemTags.FRUITS_YUCCA)
-			.addOptional(Modid.BWG.rl(BWGCompat.yucca))
-			.addOptionalTag(Util.rl("atmospheric", "yucca_fruit"));
+			.addOptional(Modid.AT.rl(AtmosphericCompat.yucca))
+			.addOptional(Modid.BWG.rl(BWGCompat.yucca));
+		this.tag(DelightfulItemTags.FRUITS_CURRANT)
+			.addOptionalTag(Modid.LOADER.rl("fruits/blackcurrant"))
+			.addOptional(Modid.AT.rl(AtmosphericCompat.currant))
+			.addOptional(Modid.RC.rl("blackcurrant"));
+		this.tag(DelightfulItemTags.FRUITS_REDCURRANT).addOptional(Modid.RC.rl("redcurrant"));
+		this.tag(DelightfulItemTags.FRUITS_WHITECURRANT).addOptional(Modid.RC.rl("whitecurrant"));
 		this.tag(DelightfulItemTags.FRUITS_BAOBAB).addOptional(Modid.BWG.rl(BWGCompat.baobab));
 		this.tag(DelightfulItemTags.FRUITS_PRICKLY_PEAR).addOptional(Modid.ECO.rl("prickly_pear"));
 		this.tag(DelightfulItemTags.FRUITS_TORCHBERRIES).addOptional(Modid.TF.rl("torchberries"));
 		this.tag(DelightfulItemTags.FRUITS_SOURCEBERRY).addOptional(Modid.AN.rl("sourceberry_bush"));
 		this.tag(DelightfulItemTags.FRUITS_ELDERBERRY).addOptional(Modid.RC.rl("elderberry"));
-		this.tag(DelightfulItemTags.FRUITS_BLACKCURRANT)
-			.addOptional(Modid.RC.rl("blackcurrant"))
-			.addOptionalTag(Util.rl("atmospheric", "currant"));
-		this.tag(DelightfulItemTags.FRUITS_REDCURRANT).addOptional(Modid.RC.rl("redcurrant"));
-		this.tag(DelightfulItemTags.FRUITS_WHITECURRANT).addOptional(Modid.RC.rl("whitecurrant"));
 		this.tag(DelightfulItemTags.FRUITS_GEARO_BERRY).addOptional(Modid.VD.rl("gearo_berry"));
-		this.tag(DelightfulItemTags.FRUITS_BLUEBERRIES)
-			.addOptional(Modid.BWG.rl("blueberries"))
-			.addOptional(Modid.WB.rl("blueberries"))
-			.addOptional(Modid.NF.rl("blueberries"));
 		this.tag(DelightfulItemTags.FRUITS_RASPBERRIES).addOptional(Modid.WB.rl("raspberry"));
 		this.tag(DelightfulItemTags.FRUITS_BLACKBERRIES).addOptional(Modid.WB.rl("blackberry"));
 		this.tag(DelightfulItemTags.FRUITS_CRANBERRIES).addOptional(Modid.WB.rl("cranberries"));
@@ -239,7 +240,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_TORCHBERRIES)
 			.addTag(DelightfulItemTags.FRUITS_SOURCEBERRY)
 			.addTag(DelightfulItemTags.FRUITS_ELDERBERRY)
-			.addTag(DelightfulItemTags.FRUITS_BLACKCURRANT)
+			.addTag(DelightfulItemTags.FRUITS_CURRANT)
 			.addTag(DelightfulItemTags.FRUITS_REDCURRANT)
 			.addTag(DelightfulItemTags.FRUITS_WHITECURRANT)
 			.addTag(DelightfulItemTags.FRUITS_BLUEBERRIES)
@@ -344,7 +345,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptionalTag(Modid.HAB.rl("ball_cacti"))
 			.addOptional(Modid.BWG.rl("mini_cactus"))
 			.addOptional(Modid.BOP.rl("tiny_cactus"))
-			.addOptional(Util.rl("atmospheric", "barrel_cactus"))
+			.addOptional(Util.rl(Modid.AT, "barrel_cactus"))
 			.addOptional(Util.rl("biomemakeover", "barrel_cactus"))
 			.addOptional(Util.rl("naturesaura", "aura_cactus"));
 		this.tag(DelightfulItemTags.MATCHA).add(DelightfulItems.MATCHA.get());

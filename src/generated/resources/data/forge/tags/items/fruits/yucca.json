@@ -1,11 +1,11 @@
 {
   "values": [
     {
-      "id": "biomeswevegone:yucca_fruit",
+      "id": "atmospheric:yucca_fruit",
       "required": false
     },
     {
-      "id": "#atmospheric:yucca_fruit",
+      "id": "biomeswevegone:yucca_fruit",
       "required": false
     }
   ]
