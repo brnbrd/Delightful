@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-27T14:58:11.5843656	delightful
+// 1.20.1	2025-02-27T15:11:42.7622406	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -105,7 +105,7 @@ b4cc0642cc95aece33ec9cce364d245dd186c647 data/forge/tags/items/fruits/chorus.jso
 62e9c8730d0b31633b727885e3b75ef2e0045f11 data/forge/tags/items/fruits/citron.json
 27bbb53009399d8813b2c8ec68377008f24c6cca data/forge/tags/items/fruits/citrus.json
 68b400068240309ea4d977ecc9c4a3ba21963a4b data/forge/tags/items/fruits/cranberries.json
-1d316ae5e09d50d69755eab0ccbdcf1386cb132c data/forge/tags/items/fruits/currant.json
+855a27eb34fde1bd7c54c6b2d6eaeb1d511c43a8 data/forge/tags/items/fruits/currant.json
 4dbf3ccd17d6fe96e0ccd0b4fd1d7f5e3538174b data/forge/tags/items/fruits/elderberry.json
 4b16e77476f7de4fbe59d75ed2845c0a18e714af data/forge/tags/items/fruits/gearo_berry.json
 33221392eaadbbebce9b701da69e2f20fd46c490 data/forge/tags/items/fruits/glow_berries.json

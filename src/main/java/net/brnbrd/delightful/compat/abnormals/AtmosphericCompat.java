@@ -9,7 +9,6 @@ import net.minecraft.world.food.FoodProperties;
 
 public class AtmosphericCompat {
 	public static final String yucca = "yucca_fruit";
-	public static final String currant = "currant";
 	public static final String passion_fruit_tart = "passion_fruit_tart";
 
 	public static MobEffect getSpitting() {

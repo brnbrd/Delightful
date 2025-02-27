@@ -5,10 +5,6 @@
       "required": false
     },
     {
-      "id": "atmospheric:currant",
-      "required": false
-    },
-    {
       "id": "rootsclassic:blackcurrant",
       "required": false
     }

@@ -93,6 +93,7 @@ public enum Modid {
 	UGD("undergardendelight"),
 	VD("vintagedelight"),
 	WB("wildberries"),
+	WS("windswept"),
 	YH("youkaishomecoming");
 
 	@NotNull private final String id;
