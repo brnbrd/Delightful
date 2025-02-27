@@ -120,12 +120,11 @@ public class PieEvents {
 		return InteractionResult.FAIL;
 	}
 
-	private boolean canPlace(BlockPlaceContext pContext, BlockState pState) {
-		Player player = pContext.getPlayer();
-		CollisionContext collisioncontext = player == null ? CollisionContext.empty() : CollisionContext.of(player);
+	private boolean canPlace(BlockPlaceContext context, BlockState state) {
 		return (
-			pState.canSurvive(pContext.getLevel(), pContext.getClickedPos()) &&
-			pContext.getLevel().isUnobstructed(pState, pContext.getClickedPos(), collisioncontext)
-		);
+			state.canSurvive(context.getLevel(), context.getClickedPos()) &&
+			context.getLevel().isUnobstructed(state, context.getClickedPos(),
+			context.getPlayer() == null ? CollisionContext.empty() : CollisionContext.of(context.getPlayer())
+		));
 	}
 }

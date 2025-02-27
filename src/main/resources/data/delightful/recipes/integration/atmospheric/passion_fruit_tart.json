@@ -1,0 +1,43 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "atmospheric:passion_fruit_tart"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "passion_fruit_tart_slice"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "#": {
+            "tag": "forge:grain/wheat"
+          },
+          "a": {
+            "tag": "forge:fruits/passion_fruit"
+          },
+          "O": {
+            "item": "farmersdelight:pie_crust"
+          },
+          "x": {
+            "tag": "forge:sugar"
+          }
+        },
+        "pattern": [
+          "###",
+          "aaa",
+          "xOx"
+        ],
+        "result": {
+          "count": 1,
+          "item": "atmospheric:passion_fruit_tart"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "delightful:item/passion_fruit_tart_slice"
+  }
+}

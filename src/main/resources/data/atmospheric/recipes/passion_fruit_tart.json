@@ -1,0 +1,40 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "atmospheric:passion_fruit_tart"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "delightful:enabled",
+            "value": "passion_fruit_tart_slice"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "###",
+          "#X#",
+          "###"
+        ],
+        "key": {
+          "#": {
+            "tag": "forge:fruits/passion_fruit"
+          },
+          "X": {
+            "tag": "forge:eggs"
+          }
+        },
+        "result": {
+          "count": 8,
+          "item": "atmospheric:passion_fruit_tart"
+        }
+      }
+    }
+  ]
+}

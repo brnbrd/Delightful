@@ -5,7 +5,8 @@
 
 ### Updates
 - Placeable Mulberry Pie, added Mulberry Pie Slice (for [Upgrade Aquatic](https://www.curseforge.com/minecraft/mc-mods/upgrade-aquatic)) (closes [#107](https://github.com/brnbrd/Delightful/issues/107))
-  - Retexture of Mulberry Pie in `Delightful Overhauls` built-in resource pack
+- Placeable Passion Fruit Tart, added Passion Fruit Tart Slice (for [Atmospheric](https://www.curseforge.com/minecraft/mc-mods/atmospheric))
+  - Retexture of Mulberry Pie and Passion Fruit Tart available in `Delightful Overhauls` built-in resource pack
 - Baklava Slice now gives 30 seconds of Haste
 - Iced Berry Matcha Latte is now crafted using the Matcha Latte as a base
 - Matcha products (but not Matcha itself) now give level 2 of the green tea effect

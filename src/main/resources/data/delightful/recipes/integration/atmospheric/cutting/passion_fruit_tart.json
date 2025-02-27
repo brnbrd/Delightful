@@ -1,0 +1,34 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "atmospheric:passion_fruit_tart"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "passion_fruit_tart_slice"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "atmospheric:passion_fruit_tart"
+          }
+        ],
+        "result": [
+          {
+            "count": 4,
+            "item": "delightful:passion_fruit_tart_slice"
+          }
+        ],
+        "tool": {
+          "tag": "forge:tools/knives"
+        }
+      }
+    }
+  ]
+}

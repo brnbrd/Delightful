@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-13T16:49:32.1946003	Item Models: delightful
+// 1.20.1	2025-02-26T08:15:33.0655056	Item Models: delightful
 f9af973b19b45f34017d8db4e6e54de90668031e assets/delightful/models/item/acorn.json
 9b4daf24b0d8e447735c5836d7ab76a3df1b3c1d assets/delightful/models/item/acorn_sack.json
 5d9531a6795e7d2281f99609672d866743329211 assets/delightful/models/item/adamantium_knife.json
@@ -107,6 +107,7 @@ f0fa3adff07c0b4805fcac17318e3dbe799382c6 assets/delightful/models/item/nut_butte
 08cffa18d5d86b71d461ab2d7976b9dd7d3e6c81 assets/delightful/models/item/obsidian_infused_enderite_knife.json
 bfb194f14b8c0cf29440783fe036d0b71c25bdd8 assets/delightful/models/item/onyx_knife.json
 acc7cb022e4ad04c083832f7703edf99376165f2 assets/delightful/models/item/osmium_knife.json
+80514e46262db2f7ee9f5c29408fa96da3846f0c assets/delightful/models/item/passion_fruit_tart_slice.json
 d33a65c4b62c426d6a6b52db8a67cc4988e04615 assets/delightful/models/item/pearlescent_knife.json
 3e4183f89dfed26f2ecfaf24b0d1e93443b94250 assets/delightful/models/item/phoenix_knife.json
 3711520c40b1c14a1096463050b5316bb9505845 assets/delightful/models/item/prickly_pear_juice.json

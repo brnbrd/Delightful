@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.Map;
 
 public class DelightfulConfig {
-
 	public static final DelightfulConfig CONFIG;
 	public static final ForgeConfigSpec SPEC;
 	private static final ImmutableList<String> DEFAULT_DISABLED = ImmutableList.of(
@@ -19,6 +18,16 @@ public class DelightfulConfig {
 			Util.name(Knives.EMERALD),
 			Util.name(Knives.LAPIS_LAZULI),
 			Util.name(Knives.NETHER_QUARTZ)
+	);
+	private static final ImmutableList<String> BAKED_GOODS = ImmutableList.of(
+		Util.name(DelightfulItems.PUMPKIN_PIE_SLICE),
+		Util.name(DelightfulItems.BLUEBERRY_PIE_SLICE),
+		Util.name(DelightfulItems.GREEN_APPLE_PIE_SLICE),
+		Util.name(DelightfulItems.GLOOMGOURD_PIE_SLICE),
+		Util.name(DelightfulItems.SOURCE_BERRY_PIE_SLICE),
+		Util.name(DelightfulItems.CHORUS_PIE_SLICE),
+		Util.name(DelightfulItems.MULBERRY_PIE_SLICE),
+		Util.name(DelightfulItems.PASSION_FRUIT_TART_SLICE)
 	);
 	public static ForgeConfigSpec.BooleanValue CRAFT_NUT_MILK;
 	public static ForgeConfigSpec.BooleanValue COOK_CLOVER_HONEY;
@@ -45,14 +54,14 @@ public class DelightfulConfig {
 				.filter(path -> path.contains("_knife"))
 				.forEach(knife -> put(builder, stuff, knife, !DEFAULT_DISABLED.contains(knife)));
 		builder.pop();
-		builder.push("Pie Overhauls");
+		builder.push("Baked Good Overhauls");
 		items.stream()
-				.filter(path -> path.contains("_pie_slice"))
+				.filter(BAKED_GOODS::contains)
 				.forEach(knife -> put(builder, stuff, knife, !DEFAULT_DISABLED.contains(knife)));
 		builder.pop();
 		builder.push("Registry & Recipes");
 		items.stream()
-				.filter(path -> !path.contains("_knife") && !path.contains("_pie_slice"))
+				.filter(path -> !path.contains("_knife") && !BAKED_GOODS.contains(path))
 				.forEach(not -> put(builder, stuff, not, !DEFAULT_DISABLED.contains(not)));
 		CRAFT_NUT_MILK = builder
 				.comment("Allow cooking milk from nuts")

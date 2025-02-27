@@ -5,6 +5,7 @@ import net.brnbrd.delightful.common.block.DelightfulBlocks;
 import net.brnbrd.delightful.common.item.food.*;
 import net.brnbrd.delightful.compat.*;
 import net.brnbrd.delightful.compat.abnormals.AquaticCompat;
+import net.brnbrd.delightful.compat.abnormals.AtmosphericCompat;
 import net.brnbrd.delightful.compat.ars_nouveau.*;
 import net.brnbrd.delightful.compat.undergarden.UndergardenCompat;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
@@ -86,6 +87,8 @@ public class DelightfulItems {
 			BWGCompat.GREEN_APPLE_PIE_SLICE.get(), Modid.BWG);
 	public static final RegistryObject<Item> MULBERRY_PIE_SLICE = registerCompatPieSlice(AquaticCompat.mulberry_pie,
 			AquaticCompat.MULBERRY_PIE_SLICE, Modid.UA);
+	public static final RegistryObject<Item> PASSION_FRUIT_TART_SLICE = registerCompatPieSlice(AtmosphericCompat.passion_fruit_tart,
+			AtmosphericCompat.PASSION_FRUIT_TART_SLICE, Modid.AT);
 	public static final RegistryObject<Item> CHORUS_PIE_SLICE = registerCompatPieSlice(UnusualEndCompat.chorus_pie,
 			UnusualEndCompat.CHORUS_PIE_SLICE, Modid.UE);
 	public static final RegistryObject<Item> CHORUS_MUFFIN = registerItem("chorus_muffin",

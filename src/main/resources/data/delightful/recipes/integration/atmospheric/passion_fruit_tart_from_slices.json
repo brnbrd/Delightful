@@ -1,0 +1,37 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "atmospheric:passion_fruit_tart"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "passion_fruit_tart_slice"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "delightful:passion_fruit_tart_slice"
+          },
+          {
+            "item": "delightful:passion_fruit_tart_slice"
+          },
+          {
+            "item": "delightful:passion_fruit_tart_slice"
+          },
+          {
+            "item": "delightful:passion_fruit_tart_slice"
+          }
+        ],
+        "result": {
+          "item": "atmospheric:passion_fruit_tart"
+        }
+      }
+    }
+  ]
+}

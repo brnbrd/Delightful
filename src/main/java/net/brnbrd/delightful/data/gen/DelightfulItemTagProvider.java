@@ -9,6 +9,7 @@ import net.brnbrd.delightful.compat.abnormals.AquaticCompat;
 import net.brnbrd.delightful.compat.BWGCompat;
 import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.compat.UnusualEndCompat;
+import net.brnbrd.delightful.compat.abnormals.AtmosphericCompat;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -63,7 +64,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.BWG.rl(BWGCompat.blueberry_pie))
 			.addOptional(Modid.BWG.rl(BWGCompat.green_apple_pie))
 			.addOptional(Modid.UE.rl(UnusualEndCompat.chorus_pie))
-			.addOptional(Modid.UA.rl(AquaticCompat.mulberry_pie));
+			.addOptional(Modid.UA.rl(AquaticCompat.mulberry_pie))
+			.addOptional(Modid.AT.rl(AtmosphericCompat.passion_fruit_tart));
 		this.tag(DelightfulItemTags.FIRE_KNIVES)
 			.add(Knives.FIERY.get())
 			.add(Knives.KIWANO.get())

@@ -26,6 +26,7 @@ public enum Modid {
 	AN("ars_nouveau"),
 	AND("arsdelight"),
 	AS("appleskin"),
+	AT("atmospheric"),
 	ATM("allthemodium"),
 	BB("buzzier_bees"),
 	BC("brewinandchewin"),

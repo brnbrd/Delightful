@@ -24,6 +24,10 @@
     {
       "id": "upgrade_aquatic:mulberry_pie",
       "required": false
+    },
+    {
+      "id": "atmospheric:passion_fruit_tart",
+      "required": false
     }
   ]
 }
