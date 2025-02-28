@@ -1,6 +1,13 @@
 ## Version History
 
 
+# 3.7.3
+
+
+### Updates
+- Cantaloupe Bread now requires 1 Sugar
+
+
 ## 3.7.1
 
 ### Updates

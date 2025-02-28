@@ -38,6 +38,10 @@
         {
           "type": "delightful:enabled",
           "value": "cantaloupe_bread"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "cantaloupe"
         }
       ]
     }

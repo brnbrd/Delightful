@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-17T13:44:49.6757448	Recipes
+// 1.20.1	2025-02-28T15:41:12.453865	Recipes
 6c217dd6477efa10f6042809ba959d53036ab5e2 data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 5b82f87851220644287d771121677deac66b3b89 data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
 cf29033c1c919355c261025df529938e6ebc73f8 data/delightful/advancements/recipes/campfire/cactus_steak.json
@@ -16,7 +16,7 @@ b10b99a2dc63cc5bc06a866c8ab9674940ce670b data/delightful/advancements/recipes/co
 257ea1e2e74e09558aedc813d170ad988b891360 data/delightful/advancements/recipes/food/baklava_no_citrus.json
 1156eb3a3344129b11c91a969258b7e6e52b954f data/delightful/advancements/recipes/food/berry_matcha_latte.json
 9810f616a02b557cca325892b1114cee921986e6 data/delightful/advancements/recipes/food/berry_matcha_latte_neapolitan.json
-d34719ea27ae8f748388cca48229a8895e2fbc5c data/delightful/advancements/recipes/food/cantaloupe_bread.json
+e58765a2d5aadea5b53e812f896c4b1fa44b2624 data/delightful/advancements/recipes/food/cantaloupe_bread.json
 3b2fe4c29d931f212efb1f83046268375650cb52 data/delightful/advancements/recipes/food/cheeseburger.json
 293caa313f47dd8bd93c204a55f9445f9f33414a data/delightful/advancements/recipes/food/cheeseburger_from_bun.json
 af1df7f4359b743aadd99eb5706ef3044fa6dea8 data/delightful/advancements/recipes/food/cheeseburger_from_milk.json
@@ -178,7 +178,7 @@ c392f819e504096074fde3f3514818b122c6bc4b data/delightful/recipes/food/baklava.js
 a8c22495e5b39bbd0e55281fa2cfcd5e8a5c2fc7 data/delightful/recipes/food/baklava_no_citrus.json
 3d6b745d3f2cca71eacd8ca962e742ac0cc2febc data/delightful/recipes/food/berry_matcha_latte.json
 a9d23e806d07cfd7e4a2361545ee2010addde744 data/delightful/recipes/food/berry_matcha_latte_neapolitan.json
-2c3b88e198418a8d3606432bca276ab2225c953f data/delightful/recipes/food/cantaloupe_bread.json
+128d05034984f40c00e874ac550c84a2539e339e data/delightful/recipes/food/cantaloupe_bread.json
 af3129356f249ced73739accf5141965142dfce8 data/delightful/recipes/food/cheeseburger.json
 0f541c24483fd710f63f7b44865fb72683164c68 data/delightful/recipes/food/cheeseburger_from_bun.json
 3806a9c427efa067ed6426c92591234d9291b514 data/delightful/recipes/food/cheeseburger_from_milk.json

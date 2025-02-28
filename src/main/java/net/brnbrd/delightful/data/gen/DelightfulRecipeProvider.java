@@ -345,8 +345,9 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.CANTALOUPE_BREAD.get(), 1)
 						.requires(ForgeTags.DOUGH)
 						.requires(DelightfulItemTags.FRUITS_CANTALOUPE)
+						.requires(DelightfulItemTags.SUGAR)
 						.unlockedBy("has_cantaloupe_slice", has(DelightfulItemTags.FRUITS_CANTALOUPE)),
-				"food/cantaloupe_bread", finished, enabled(DelightfulItems.CANTALOUPE_BREAD));
+				"food/cantaloupe_bread", finished, enabled(DelightfulItems.CANTALOUPE_BREAD), enabled(DelightfulItems.CANTALOUPE));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
 								DelightfulItems.ENDER_NECTAR.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F, Items.HONEY_BOTTLE)
 						.addIngredient(ForgeTags.MILK)

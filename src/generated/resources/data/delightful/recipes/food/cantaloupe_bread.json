@@ -6,6 +6,10 @@
         {
           "type": "delightful:enabled",
           "value": "cantaloupe_bread"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "cantaloupe"
         }
       ],
       "recipe": {
@@ -17,6 +21,9 @@
           },
           {
             "tag": "forge:fruits/cantaloupe"
+          },
+          {
+            "tag": "forge:sugar"
           }
         ],
         "result": {
