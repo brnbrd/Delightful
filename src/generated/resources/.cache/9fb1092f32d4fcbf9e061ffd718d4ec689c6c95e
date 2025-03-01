@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-28T15:41:12.453865	Recipes
+// 1.20.1	2025-02-28T18:31:35.3351678	Recipes
 6c217dd6477efa10f6042809ba959d53036ab5e2 data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 5b82f87851220644287d771121677deac66b3b89 data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
 cf29033c1c919355c261025df529938e6ebc73f8 data/delightful/advancements/recipes/campfire/cactus_steak.json
@@ -101,7 +101,7 @@ cb5651b1dc86cc5f3533bb902d623e1fc0af69ac data/delightful/advancements/recipes/kn
 0d94c24b9f859cdf19ff9151abfa793dbe34569c data/delightful/advancements/recipes/knives/osmium_knife.json
 80fc60ee5d308aabd0d18059cad379a4596e2ed9 data/delightful/advancements/recipes/knives/refined_glowstone_knife.json
 74b84dc1afed5fcb639a0b153cc001e7d84c3e8c data/delightful/advancements/recipes/knives/refined_obsidian_knife.json
-8ae515030b8ceed7182a3868516e16c27e27b70a data/delightful/advancements/recipes/knives/silver_knife.json
+e27a5517da6de7072361f64f1de720ec9ee98a79 data/delightful/advancements/recipes/knives/silver_knife.json
 a9412a0ea0572d1dfd0eb3fd5d9146cba05b72ce data/delightful/advancements/recipes/knives/sinisite_knife.json
 b87a96353eebbf1d0e96f1f6277dc63e75d1e60a data/delightful/advancements/recipes/knives/skyjade_knife.json
 05bc8653632e97e042254d962b14bc801989d9b7 data/delightful/advancements/recipes/knives/skyroot_knife.json
@@ -263,7 +263,7 @@ e4503d55e555c4beb5f497c56f3b8dd5bbaf2d22 data/delightful/recipes/knives/necroniu
 5d9084477afb1edc65deac35bd1f3d04a8d06b0f data/delightful/recipes/knives/osmium_knife.json
 aff88166efc3461fafa223dd55ca764ee133e181 data/delightful/recipes/knives/refined_glowstone_knife.json
 8da6bf8d37ab1e92fd4ebac30b2c3078d22b144d data/delightful/recipes/knives/refined_obsidian_knife.json
-40807cfd7b2407696ab9d9ec7d8729a3febfc06e data/delightful/recipes/knives/silver_knife.json
+1442e6c78201107048c88335162503932dc0a71d data/delightful/recipes/knives/silver_knife.json
 97c4118759a48a60616f392429ad177d49e608a4 data/delightful/recipes/knives/sinisite_knife.json
 35ad9b20999f5d78aec333cd47451e07eb5dfe0c data/delightful/recipes/knives/skyjade_knife.json
 dafd824aa54b4eee38cb4a6a1b7d7938608f70c7 data/delightful/recipes/knives/skyroot_knife.json

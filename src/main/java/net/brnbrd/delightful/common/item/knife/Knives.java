@@ -4,6 +4,7 @@ import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.DelightfulTiers;
 import net.brnbrd.delightful.common.item.knife.compat.DummyKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.ElectrumKnifeItem;
+import net.brnbrd.delightful.common.item.knife.compat.SilverKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.additionaladditions.GildedNetheriteKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.additionaladditions.RoseGoldKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.ae2.FluixKnifeItem;
@@ -68,7 +69,6 @@ public class Knives extends DelightfulItems {
 
 	public static final RegistryObject<Item> TIN = registerIngotKnife("tin");
 	public static final RegistryObject<Item> STEEL = registerIngotKnife("steel");
-	public static final RegistryObject<Item> SILVER = registerIngotKnife("silver");
 	public static final RegistryObject<Item> ALUMINUM = registerIngotKnife("aluminum");
 	public static final RegistryObject<Item> BRASS = registerIngotKnife("brass");
 	public static final RegistryObject<Item> BRONZE = registerIngotKnife("bronze");
@@ -85,6 +85,7 @@ public class Knives extends DelightfulItems {
 	public static final RegistryObject<Item> SINISITE = registerIngotKnife("sinisite", Modid.FUS);
 	public static final RegistryObject<Item> PEARLESCENT = registerItem("pearlescent_knife", () -> new PearlescentKnifeItem(props()));
 	public static final RegistryObject<Item> ALLTHEMODIUM = registerItem("allthemodium_knife", () -> new AllthemodiumKnifeItem(props()));
+	public static final RegistryObject<Item> SILVER = registerItem("silver_knife", () -> new SilverKnifeItem(props()));
 	public static final RegistryObject<Item> ELECTRUM = registerItem("electrum_knife", () -> new ElectrumKnifeItem(props()));
 	public static final RegistryObject<Item> ENDERITE = registerItem("enderite_knife", () -> new EnderiteKnifeItem(props()));
 	public static final RegistryObject<Item> DRACO_ARCANUS = registerItem("draco_arcanus_knife", () -> new DracoArcanusKnifeItem(props()));
