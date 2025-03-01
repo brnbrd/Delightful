@@ -1,11 +1,15 @@
 ## Version History
 
 
-# 3.7.3
-
+# 3.7.2
 
 ### Updates
 - Cantaloupe Bread now requires 1 Sugar
+- Added recycling recipes for some knives
+
+### Fixes
+- Fixed some instances of missing tooltip information
+- Silver Knife will be disabled in presence of [Abnormals Delight](https://www.curseforge.com/minecraft/mc-mods/abnormals-delight)
 
 
 ## 3.7.1
