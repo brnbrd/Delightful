@@ -139,6 +139,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> ICE_CUBES = forge("ice_cubes");
 	public static final TagKey<Item> TORTILLA = forge("tortilla");
 	public static final TagKey<Item> SYRUP = forge("syrup");
+	public static final TagKey<Item> SYRUP_BOTTLE = forge("syrup/syrup_bottle");
 	public static final TagKey<Item> LAVENDER = forge("lavender");
 	public static final TagKey<Item> ROSEY = forge("rosey");
 	public static final TagKey<Item> CLOVER = forge("clover");

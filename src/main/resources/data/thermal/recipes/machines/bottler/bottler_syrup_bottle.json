@@ -1,0 +1,78 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "thermal:machine_bottler"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "thermal_expansion"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "autumnity:syrup_bottle"
+        }
+      ],
+      "recipe": {
+        "type": "thermal:bottler",
+        "ingredients": [
+          {
+            "item": "minecraft:glass_bottle"
+          },
+          {
+            "fluid": "thermal:syrup",
+            "amount": 250
+          }
+        ],
+        "result": [
+          {
+            "item": "autumnity:syrup_bottle"
+          }
+        ]
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "thermal:machine_bottler"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "thermal:syrup_bottle"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "thermal_expansion"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:item_exists",
+            "item": "autumnity:syrup_bottle"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "thermal:bottler",
+        "ingredients": [
+          {
+            "item": "minecraft:glass_bottle"
+          },
+          {
+            "fluid": "thermal:syrup",
+            "amount": 250
+          }
+        ],
+        "result": [
+          {
+            "item": "thermal:syrup_bottle"
+          }
+        ]
+      }
+    }
+  ]
+}

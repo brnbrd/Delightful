@@ -1,11 +1,8 @@
 {
   "values": [
+    "#forge:syrup/syrup_bottle",
     {
-      "id": "#supplementaries:pancake_syrup",
-      "required": false
-    },
-    {
-      "id": "autumnity:syrup_bottle",
+      "id": "thermal:syrup_bucket",
       "required": false
     }
   ]

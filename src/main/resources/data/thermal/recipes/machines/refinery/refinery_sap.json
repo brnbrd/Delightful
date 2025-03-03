@@ -1,0 +1,78 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "thermal:machine_refinery"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "thermal_expansion"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "autumnity"
+        }
+      ],
+      "recipe": {
+        "type": "thermal:refinery",
+        "ingredient": {
+          "fluid": "thermal:sap",
+          "amount": 1000
+        },
+        "result": [
+          {
+            "fluid": "thermal:syrup",
+            "amount": 500
+          },
+          {
+            "fluid": "minecraft:water",
+            "amount": 500
+          }
+        ],
+        "energy": 4000,
+        "experience": 0.2
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "thermal:machine_refinery"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "thermal_expansion"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:mod_loaded",
+            "modid": "autumnity"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "thermal:refinery",
+        "ingredient": {
+          "fluid": "thermal:sap",
+          "amount": 1000
+        },
+        "result": [
+          {
+            "fluid": "thermal:syrup",
+            "amount": 250
+          },
+          {
+            "fluid": "minecraft:water",
+            "amount": 750
+          }
+        ],
+        "energy": 4000,
+        "experience": 0.2
+      }
+    }
+  ]
+}

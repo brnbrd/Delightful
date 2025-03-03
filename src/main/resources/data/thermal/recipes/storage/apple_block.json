@@ -5,21 +5,7 @@
       "conditions": [
         {
           "type": "forge:item_exists",
-          "item": "cratedelight:apple_crate"
-        },
-        {
-          "type": "forge:not",
-          "value": {
-            "type": "forge:item_exists",
-            "item": "fruitsdelight:apple_crate"
-          }
-        },
-        {
-          "type": "forge:not",
-          "value": {
-            "type": "forge:item_exists",
-            "item": "thermal:apple_block"
-          }
+          "item": "thermal:apple_block"
         },
         {
           "type": "forge:or",
@@ -54,7 +40,7 @@
           }
         },
         "result": {
-          "item": "cratedelight:apple_crate"
+          "item": "thermal:apple_block"
         }
       }
     }

@@ -74,7 +74,7 @@ public class DelightfulEntityTagProvider extends EntityTypeTagsProvider {
 				.addOptional(Modid.ENV.rl("slabfish"))
 				.addOptional(Modid.ENV.rl("tapir"))
 				.addOptional(Modid.ENV.rl("yak"))
-				.addOptional(Util.rl("autumnity", "turkey"))
+				.addOptional(Modid.AUT.rl("turkey"))
 				.addOptional(Modid.UA.rl("thrasher"))
 				.addOptional(Modid.UA.rl("great_thrasher"))
 				.addOptional(Modid.UA.rl("goose"))

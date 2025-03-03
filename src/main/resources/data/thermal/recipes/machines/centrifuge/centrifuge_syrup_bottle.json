@@ -1,0 +1,40 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "thermal:machine_centrifuge"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "thermal_expansion"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:syrup/syrup_bottle"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "thermal:centrifuge",
+        "ingredient": {
+          "tag": "forge:syrup/syrup_bottle"
+        },
+        "result": [
+          {
+            "item": "minecraft:glass_bottle"
+          },
+          {
+            "fluid": "thermal:syrup",
+            "amount": 250
+          }
+        ],
+        "energy": 400
+      }
+    }
+  ]
+}

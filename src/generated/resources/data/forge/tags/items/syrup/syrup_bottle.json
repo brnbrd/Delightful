@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "autumnity:syrup_bottle",
+      "required": false
+    },
+    {
+      "id": "thermal:syrup_bottle",
+      "required": false
+    }
+  ]
+}

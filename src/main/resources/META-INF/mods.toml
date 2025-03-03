@@ -443,3 +443,10 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
     versionRange="[13,)"
     ordering="AFTER"
     side="BOTH"
+
+[[dependencies.delightful]]
+    modId="thermal"
+    mandatory=false
+    versionRange="[11,)"
+    ordering="AFTER"
+    side="BOTH"

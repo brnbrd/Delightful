@@ -22,7 +22,7 @@
             "item": "farmersdelight:pumpkin_slice"
           },
           {
-            "tag": "forge:syrup"
+            "tag": "forge:syrup/syrup_bottle"
           }
         ],
         "result": {

@@ -1,0 +1,37 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "thermal:machine_centrifuge"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "thermal_expansion"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "autumnity:sap_bottle"
+        }
+      ],
+      "recipe": {
+        "type": "thermal:centrifuge",
+        "ingredient": {
+          "item": "autumnity:sap_bottle"
+        },
+        "result": [
+          {
+            "item": "minecraft:glass_bottle"
+          },
+          {
+            "fluid": "thermal:sap",
+            "amount": 250
+          }
+        ],
+        "energy": 400
+      }
+    }
+  ]
+}

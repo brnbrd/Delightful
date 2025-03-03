@@ -1,0 +1,38 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "thermal:device_tree_extractor"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "autumnity:red_maple_sapling"
+        }
+      ],
+      "recipe": {
+        "type": "thermal:tree_extractor",
+        "trunk": {
+          "Name": "autumnity:maple_log"
+        },
+        "leaves": {
+          "Name": "autumnity:red_maple_leaves",
+          "Properties": {
+            "persistent": "false"
+          }
+        },
+        "sapling": "autumnity:red_maple_sapling",
+        "min_height": 4,
+        "max_height": 8,
+        "min_leaves": 16,
+        "max_leaves": 24,
+        "result": {
+          "fluid": "thermal:sap",
+          "amount": 40
+        }
+      }
+    }
+  ]
+}

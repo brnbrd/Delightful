@@ -46,6 +46,9 @@ public class JEIPlugin implements IModPlugin {
 		this.hide(hidden, Modid.IN, "fried_egg");
 		this.hide(hidden, Modid.NA, "cooked_egg");
 		this.hide(hidden, Modid.AA, "fried_egg");
+		this.hide(hidden, Modid.TH, "beetroot_block");
+		this.hide(hidden, Modid.TH, "carrot_block");
+		this.hide(hidden, Modid.TH, "potato_block");
 
 		// Crate Delight conflicts
 		this.hide(hidden, Modid.CRD, "apple_crate", Modid.FRD);
@@ -57,6 +60,7 @@ public class JEIPlugin implements IModPlugin {
 		this.hide(hidden, Modid.CRD, "glowberry_crate", Modid.BG);
 
 		// Other
+		this.hide(hidden, Modid.TH, "syrup_bottle", Modid.AUT);
 		this.hide(hidden, Modid.AA, "honeyed_apple", Modid.BB);
 		this.hide(hidden, Modid.MOD, "bread_slice", Modid.SAS);
 		this.hide(hidden, Modid.MOD, "toast", Modid.SAS);

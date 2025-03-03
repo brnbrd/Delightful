@@ -28,6 +28,7 @@ public enum Modid {
 	AS("appleskin"),
 	AT("atmospheric"),
 	ATM("allthemodium"),
+	AUT("autumnity"),
 	BB("buzzier_bees"),
 	BC("brewinandchewin"),
 	BG("berry_good"),

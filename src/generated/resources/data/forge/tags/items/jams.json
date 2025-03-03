@@ -33,6 +33,10 @@
     {
       "id": "upgrade_aquatic:mulberry_jam_bottle",
       "required": false
+    },
+    {
+      "id": "thermal:jelly",
+      "required": false
     }
   ]
 }

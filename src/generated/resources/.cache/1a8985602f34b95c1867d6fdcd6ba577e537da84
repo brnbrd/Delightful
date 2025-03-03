@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-28T18:31:35.3306722	delightful
+// 1.20.1	2025-03-03T07:55:00.4617468	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -141,7 +141,7 @@ dc9122bbc29f63ef88ae687ac23a961648297ae0 data/forge/tags/items/ingots/pearlescen
 df21ab79976e7373593d2fce09cfbf66c595e447 data/forge/tags/items/ingots/steel.json
 a2c1b0bb89891c01a65518d797b2be4020720a63 data/forge/tags/items/ingots/stratus.json
 d554ed3f6b8762427d8c40a172c78361952260ed data/forge/tags/items/ingots/veridium.json
-89c20de55a139324a709ee494c4dcc56fc7d7db4 data/forge/tags/items/jams.json
+db3cbdf954efec68d9d751ad3133d72d03caef13 data/forge/tags/items/jams.json
 52d821c48dd4653008d93009d83156469191b18c data/forge/tags/items/lavender.json
 5160d3e42adb69a7a3e121df7fe653817a5d6b1b data/forge/tags/items/matcha.json
 f2c2fa99846dd38fbcf4460d40f560d57c700ac5 data/forge/tags/items/milk.json
@@ -174,7 +174,8 @@ a09b42ac27e237ab7a07cef195745960d786fca5 data/forge/tags/items/seeds.json
 e323e7d458810ad726aabebee6a2bde8add5c858 data/forge/tags/items/small_cacti.json
 d8955b9e7314b64916053e7f89b6953462952a71 data/forge/tags/items/snail_shells.json
 e801bdef0719e27dd7decd88269ada7c5740348e data/forge/tags/items/sugar.json
-242e1de4d62fda525230fddaa5f8297751621c94 data/forge/tags/items/syrup.json
+5120406cd632defdaaf5d84491da9772a9320b05 data/forge/tags/items/syrup.json
+83bc7dac37c5f7ede65102bfee0be8025148f571 data/forge/tags/items/syrup/syrup_bottle.json
 2fba44995a5f721459f4b86e00d530e1544fb501 data/forge/tags/items/tea_leaves.json
 b4088db8c78220bdadc8c24288bd4da0fe773e25 data/forge/tags/items/tea_leaves/green.json
 0a68206211041878596233231d86a5306dc61f5d data/forge/tags/items/tools/knives.json
@@ -208,6 +209,7 @@ e8907bb6383992d824e326f554fcbab430f7e5ce data/sereneseasons/tags/items/summer_cr
 5ca5c9750568ae0343de46dc7bae0316ddffd566 data/spirit/tags/items/soul_steel_mainhand.json
 e54da94bf4f898c46d066037e37ff29b1e55e4e7 data/sullysmod/tags/items/tortoise_food.json
 b7d8c488cbe67f7a200238eafa40780d405dd0de data/supplementaries/tags/items/cookies.json
+25b1e88cf102d90fb37521bc8b898ff69bdcc12a data/supplementaries/tags/items/pancake_syrup.json
 7c3909099c341f706262b4b4f435f526fb1dd27a data/undergarden/tags/items/cloggrum_items.json
 22b57d1edd6bf7fe04627e0b2bba1a01f62a9a11 data/undergarden/tags/items/forgotten_upgrade_smithing_template.json
 4892cca57979307b755da1e942f5ad115fe6e9d6 data/undergarden/tags/items/froststeel_items.json
