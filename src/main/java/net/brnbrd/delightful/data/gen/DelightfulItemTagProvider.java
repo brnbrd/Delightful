@@ -22,12 +22,12 @@ import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 import vectorwing.farmersdelight.common.registry.ModItems;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
 import vectorwing.farmersdelight.common.tag.ModTags;
 import java.util.concurrent.CompletableFuture;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 public class DelightfulItemTagProvider extends ItemTagsProvider {
 	public DelightfulItemTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> provider, CompletableFuture<TagLookup<Block>> blockTagProvider, @Nullable ExistingFileHelper existingFileHelper) {
@@ -38,23 +38,21 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 	protected void addTags(HolderLookup.@NotNull Provider provider) {
 		// Minecraft
 		this.tag(ItemTags.SMALL_FLOWERS)
-			.addTag(DelightfulItemTags.FLOWERS_AZALEA);
-		this.tag(DelightfulItemTags.FLOWERS_AZALEA)
-			.addOptional(Modid.ECO.rl("azalea_flower"))
-			.addOptional(Util.rl("twigs", "azalea_flowers"));
+			.addTag(DelightfulItemTags.FLOWERS_AZALEA)
+			.add(DelightfulItems.WILD_SALMONBERRIES.get());
 		this.tag(ItemTags.FOX_FOOD)
 			.addTag(ForgeTags.BERRIES);
-		this.tag(ItemTags.SMALL_FLOWERS)
-			.add(DelightfulItems.WILD_SALMONBERRIES.get());
-		this.tag(ItemTags.PIGLIN_LOVED).add(Knives.REFINED_GLOWSTONE.get());
-		this.tag(ForgeTags.TOOLS_KNIVES)
-			.addTag(ModTags.KNIVES)
-			.addOptional(Util.rl("occultism", "butcher_knife"));
+
+		// Knives
 		var build = tag(ModTags.KNIVES);
 		DelightfulItems.ITEMS.getEntries().stream()
 			.map(RegistryObject::get)
 			.filter(item -> item instanceof DKnifeItem)
 			.forEach(build::add);
+		this.tag(ForgeTags.TOOLS_KNIVES)
+			.addTag(ModTags.KNIVES)
+			.addOptional(Util.rl("occultism", "butcher_knife"));
+		this.tag(ItemTags.PIGLIN_LOVED).add(Knives.REFINED_GLOWSTONE.get());
 
 		// Delightful
 		this.tag(DelightfulItemTags.COMPAT_PIES)
@@ -269,8 +267,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptionalTag(DelightfulItemTags.FRUITS_ORANGE.location())
 			.addOptionalTag(DelightfulItemTags.FRUITS_LEMON.location())
 			.addOptionalTag(DelightfulItemTags.FRUITS_LIME.location())
-			.addOptionalTag(DelightfulItemTags.FRUITS_GRAPEFRUIT.location())
-			.addOptionalTag(DelightfulItemTags.FRUITS_POMELO.location());
+			.addOptionalTag(Modid.LOADER.rl("fruits/grapefruit"))
+			.addOptionalTag(Modid.LOADER.rl("fruits/pomelo"));
 		this.tag(DelightfulItemTags.FRUITS_SWEET).replace(false)
 			.addTag(DelightfulItemTags.FRUITS_APPLE)
 			.addTag(DelightfulItemTags.FRUITS_MELON)
@@ -292,12 +290,12 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_JABUTICABA)
 			.addTag(DelightfulItemTags.FRUITS_KIWANO)
 			.addTag(DelightfulItemTags.FRUITS_BAOBAB)
+			.addOptionalTag(DelightfulItemTags.FRUITS_POMEGRANATE.location())
+			.addOptionalTag(DelightfulItemTags.FRUITS_DRAGON_FRUIT.location())
 			.addOptionalTag(DelightfulItemTags.FRUITS_ORANGE.location())
 			.addOptionalTag(DelightfulItemTags.FRUITS_MANDARIN.location())
-			.addOptionalTag(DelightfulItemTags.FRUITS_PASSION_FRUIT.location())
-			.addOptionalTag(DelightfulItemTags.FRUITS_DRAGON_FRUIT.location())
 			.addOptionalTag(DelightfulItemTags.FRUITS_PLUM.location())
-			.addOptionalTag(DelightfulItemTags.FRUITS_POMEGRANATE.location())
+			.addOptionalTag(Modid.LOADER.rl("fruits/passion_fruit"))
 			.addOptionalTag(Modid.LOADER.rl("fruits/redlove"))
 			.addOptional(Modid.FRD.rl("hamimelon_slice"));
 
@@ -320,6 +318,9 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Util.rl("finsandtails", "white_bull_crab_claw"));
 
 		// Forge
+		this.tag(DelightfulItemTags.FLOWERS_AZALEA)
+			.addOptional(Modid.ECO.rl("azalea_flower"))
+			.addOptional(Util.rl("twigs", "azalea_flowers"));
 		this.tag(DelightfulItemTags.LAVENDER)
 			.addOptionalTag(Modid.LOADER.rl("flowers/lavender"))
 			.addOptional(Modid.BOP.rl("lavender"))

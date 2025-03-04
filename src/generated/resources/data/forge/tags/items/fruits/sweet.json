@@ -21,6 +21,14 @@
     "#forge:fruits/kiwano",
     "#forge:fruits/baobab",
     {
+      "id": "#forge:fruits/pomegranate",
+      "required": false
+    },
+    {
+      "id": "#forge:fruits/dragon_fruit",
+      "required": false
+    },
+    {
       "id": "#forge:fruits/orange",
       "required": false
     },
@@ -29,19 +37,11 @@
       "required": false
     },
     {
-      "id": "#forge:fruits/passion_fruit",
-      "required": false
-    },
-    {
-      "id": "#forge:fruits/dragon_fruit",
-      "required": false
-    },
-    {
       "id": "#forge:fruits/plum",
       "required": false
     },
     {
-      "id": "#forge:fruits/pomegranate",
+      "id": "#forge:fruits/passion_fruit",
       "required": false
     },
     {

@@ -39,8 +39,13 @@ public class DelightfulItemTags {
 
 	// Fruits
 	public static final TagKey<Item> FRUITS = forge("fruits");
+	public static final TagKey<Item> FRUITS_CITRUS = forge("fruits/citrus");
+	public static final TagKey<Item> FRUITS_LIME = forge("fruits/lime");
+	public static final TagKey<Item> FRUITS_LEMON = forge("fruits/lemon");
+	public static final TagKey<Item> FRUITS_POMEGRANATE = forge("fruits/pomegranate");
 	public static final TagKey<Item> FRUITS_APPLE = forge("fruits/apple");
 	public static final TagKey<Item> FRUITS_KIWI = forge("fruits/kiwi");
+	public static final TagKey<Item> FRUITS_DRAGON_FRUIT = forge("fruits/dragon_fruit");
 	public static final TagKey<Item> FRUITS_MELON = forge("fruits/melon");
 	public static final TagKey<Item> FRUITS_CANTALOUPE = forge("fruits/cantaloupe");
 	public static final TagKey<Item> FRUITS_CHORUS = forge("fruits/chorus");
@@ -66,14 +71,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> FRUITS_BANANA = forge("fruits/banana");
 	public static final TagKey<Item> FRUITS_ORANGE = forge("fruits/orange");
 	public static final TagKey<Item> FRUITS_MANDARIN = forge("fruits/mandarin");
-	public static final TagKey<Item> FRUITS_PASSION_FRUIT = forge("fruits/passion_fruit");
-	public static final TagKey<Item> FRUITS_DRAGON_FRUIT = forge("fruits/dragon_fruit");
 	public static final TagKey<Item> FRUITS_PLUM = forge("fruits/plum");
-	public static final TagKey<Item> FRUITS_POMEGRANATE = forge("fruits/pomegranate");
-	public static final TagKey<Item> FRUITS_LEMON = forge("fruits/lemon");
-	public static final TagKey<Item> FRUITS_LIME = forge("fruits/lime");
-	public static final TagKey<Item> FRUITS_GRAPEFRUIT = forge("fruits/grapefruit");
-	public static final TagKey<Item> FRUITS_POMELO = forge("fruits/pomelo");
 	public static final TagKey<Item> FRUITS_CHERRY = forge("fruits/cherry");
 	public static final TagKey<Item> FRUITS_CITRON = forge("fruits/citron");
 	public static final TagKey<Item> FRUITS_PITAYA = forge("fruits/pitaya");
@@ -82,7 +80,6 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> FRUITS_KIWANO = forge("fruits/kiwano");
 	public static final TagKey<Item> FRUITS_SWEET = forge("fruits/sweet");
 	public static final TagKey<Item> FRUITS_PRICKLY_PEAR = forge("fruits/prickly_pear");
-	public static final TagKey<Item> FRUITS_CITRUS = forge("fruits/citrus");
 
 	// Vegetables
 	public static final TagKey<Item> VEGETABLES_SPICY = forge("vegetables/spicy");
