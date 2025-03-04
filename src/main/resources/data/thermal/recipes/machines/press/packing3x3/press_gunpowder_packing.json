@@ -1,0 +1,101 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "thermal:machine_press"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "thermal:gunpowder_block"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "thermal_expansion"
+        },
+        {
+          "type": "forge:or",
+          "values": [
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:mod_loaded",
+                "modid": "quark"
+              }
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "quark:flag",
+                "flag": "gunpowder_sack"
+              }
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "thermal:press",
+        "ingredients": [
+          {
+            "item": "minecraft:gunpowder",
+            "count": 9
+          },
+          {
+            "item": "thermal:press_packing_3x3_die"
+          }
+        ],
+        "result": [
+          {
+            "item": "thermal:gunpowder_block"
+          }
+        ],
+        "energy": 400
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "thermal:machine_press"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "thermal_expansion"
+        },
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "forge:item_exists",
+              "item": "quark:gunpowder_sack"
+            },
+            {
+              "type": "quark:flag",
+              "flag": "gunpowder_sack"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "thermal:press",
+        "ingredients": [
+          {
+            "item": "minecraft:gunpowder",
+            "count": 9
+          },
+          {
+            "item": "thermal:press_packing_3x3_die"
+          }
+        ],
+        "result": [
+          {
+            "item": "quark:gunpowder_sack"
+          }
+        ],
+        "energy": 400
+      }
+    }
+  ]
+}

@@ -7,6 +7,7 @@
 - Cantaloupe Bread now requires 1 Sugar
 - Added Sap and Syrup compatibility for [Autumnity](https://www.curseforge.com/minecraft/mc-mods/autumnity) and [Thermal](https://www.curseforge.com/minecraft/mc-mods/thermal-foundation)
 - Added recycling recipes for some knives
+- Added recipe to use Thermal's Compost to craft Organic Compost
 
 ### Fixes
 - Fixed some instances of missing tooltip information

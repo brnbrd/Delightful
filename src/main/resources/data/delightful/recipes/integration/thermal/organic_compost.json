@@ -1,0 +1,41 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "thermal:compost"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "thermal:device_composter"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "minecraft:dirt"
+          },
+          {
+            "item": "farmersdelight:straw"
+          },
+          {
+            "item": "thermal:compost"
+          },
+          {
+            "item": "thermal:compost"
+          },
+          {
+            "item": "thermal:compost"
+          }
+        ],
+        "result": {
+          "item": "farmersdelight:organic_compost",
+          "count": 1
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "thermal:charcoal_block"
+        },
+        {
+          "type": "forge:or",
+          "values": [
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:mod_loaded",
+                "modid": "quark"
+              }
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "quark:flag",
+                "flag": "charcoal_block"
+              }
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "thermal:charcoal_block"
+          }
+        ],
+        "result": {
+          "count": 9,
+          "item": "minecraft:charcoal"
+        }
+      }
+    }
+  ]
+}
