@@ -135,19 +135,19 @@ public class DelightfulBlocks {
 	public static final RegistryObject<Block> BLUEBERRY_SACK = BLOCKS.register("blueberry_sack",
 		() -> new Block(Block.Properties.copy(Blocks.BLUE_WOOL).strength(.5f).sound(SoundType.WOOL)));
 	public static final RegistryObject<Block> MENDOSTEEN_CRATE = BLOCKS.register("mendosteen_crate",
-		() -> new Block(Block.Properties.copy(Blocks.OAK_PLANKS).mapColor(MapColor.COLOR_LIGHT_GREEN).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+		() -> new Block(Block.Properties.copy(Blocks.OAK_PLANKS).mapColor(MapColor.COLOR_LIGHT_GREEN).strength(2F, 3F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> BASTION_FRUIT_CRATE = BLOCKS.register("bastion_fruit_crate",
-		() -> new Block(Block.Properties.copy(Blocks.OAK_PLANKS).mapColor(MapColor.COLOR_PURPLE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+		() -> new Block(Block.Properties.copy(Blocks.OAK_PLANKS).mapColor(MapColor.COLOR_PURPLE).strength(2F, 3F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> FROSTAYA_CRATE = BLOCKS.register("frostaya_crate",
-		() -> new Block(Block.Properties.copy(Blocks.OAK_PLANKS).mapColor(MapColor.COLOR_LIGHT_BLUE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+		() -> new Block(Block.Properties.copy(Blocks.OAK_PLANKS).mapColor(MapColor.COLOR_LIGHT_BLUE).strength(2F, 3F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> BOMBEGRANATE_CRATE = BLOCKS.register("bombegranate_crate",
-		() -> new Block(Block.Properties.copy(Blocks.OAK_PLANKS).mapColor(MapColor.COLOR_RED).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+		() -> new Block(Block.Properties.copy(Blocks.OAK_PLANKS).mapColor(MapColor.COLOR_RED).strength(2F, 3F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> GREEN_APPLE_CRATE = BLOCKS.register("green_apple_crate",
-		() -> new Block(Block.Properties.copy(Blocks.OAK_PLANKS).mapColor(MapColor.COLOR_LIGHT_GREEN).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+		() -> new Block(Block.Properties.copy(Blocks.OAK_PLANKS).mapColor(MapColor.COLOR_LIGHT_GREEN).strength(2F, 3F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> YUCCA_FRUIT_CRATE = BLOCKS.register("yucca_fruit_crate",
-		() -> new Block(Block.Properties.copy(Blocks.OAK_PLANKS).mapColor(MapColor.COLOR_LIGHT_GREEN).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+		() -> new Block(Block.Properties.copy(Blocks.OAK_PLANKS).mapColor(MapColor.COLOR_LIGHT_GREEN).strength(2F, 3F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> BAOBAB_FRUIT_CRATE = BLOCKS.register("baobab_fruit_crate",
-		() -> new Block(Block.Properties.copy(Blocks.OAK_PLANKS).mapColor(MapColor.COLOR_YELLOW).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+		() -> new Block(Block.Properties.copy(Blocks.OAK_PLANKS).mapColor(MapColor.COLOR_YELLOW).strength(2F, 3F).sound(SoundType.WOOD)));
 
 	public static RegistryObject<Block> registerBlock(String name, Supplier<Block> block) {
 		return BLOCKS.register(name, block);

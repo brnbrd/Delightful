@@ -46,7 +46,7 @@ public enum DelightfulTiers implements Tier {
 	ONYX(Tiers.NETHERITE.getLevel(), 3280, 10F, 5F, 15, DelightfulItemTags.getIngot("onyx")),
 	THYRIUM(Tiers.DIAMOND.getLevel(), 2000, 22F, 6F, 28, DelightfulItemTags.getIngot("thyrium")),
 	SINISITE(5, 4100, 18F, 8F, 11, DelightfulItemTags.getIngot("sinisite")),
-	PEARLESCENT(3, 1024, 8.0F, 3.0F, 16, Ingredient.of(DelightfulItemTags.INGOTS_PEARLESCENT)),
+	PEARLESCENT(3, 1024, 8F, 3F, 16, Ingredient.of(DelightfulItemTags.INGOTS_PEARLESCENT)),
 	ALLTHEMODIUM(5, 15000, 10, 11F, 85, Ingredient.of(DelightfulItemTags.PLATES_ALLTHEMODIUM)),
 	WARDEN(4, 2464, 11F, 7F, 21, Ingredient.of(DelightfulItemTags.REINFORCED_ECHO_SHARD)),
 	RESONARIUM(3, 1193, 8, 3, 15, Ingredient.of(DelightfulItemTags.RESONARIUM)),

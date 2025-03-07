@@ -101,7 +101,7 @@ public class SalmonberryBushBlock extends BushBlock implements BonemealableBlock
 			return InteractionResult.PASS;
 		} else if (state.getValue(AGE) > 2) {
 			popResource(level, pos, Util.gs(DelightfulItems.SALMONBERRIES, (flag ? 2 + level.random.nextInt(2) : 1)));
-			level.playSound(null, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
+			level.playSound(null, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1F, 0.8F + level.random.nextFloat() * 0.4F);
 			BlockState blockstate = state.setValue(AGE, 1);
 			level.setBlock(pos, blockstate, 2);
 			level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(player, blockstate));

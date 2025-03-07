@@ -9,13 +9,13 @@ import vectorwing.farmersdelight.common.registry.ModEffects;
 
 public class Nutrition {
 	public static final FoodProperties CHEESEBURGER = (new FoodProperties.Builder())
-			.nutrition(13).saturationMod(0.8F)
-			.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 600, 0), 1F)
-			.effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 600, 0), 1F).build();
+			.nutrition(12).saturationMod(0.8F)
+			.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 1200, 0), 1F)
+			.effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 400, 0), 1F).build();
 	public static final FoodProperties DELUXE_CHEESEBURGER = (new FoodProperties.Builder())
-			.nutrition(16).saturationMod(1F)
+			.nutrition(13).saturationMod(1F)
 			.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 4800, 0), 1F)
-			.effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 1200, 0), 1F).build();
+			.effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 600, 0), 1F).build();
 	public static final FoodProperties ROCK_CANDY = (new FoodProperties.Builder())
 			.nutrition(4).saturationMod(0.2F)
 			.fast()
@@ -28,7 +28,7 @@ public class Nutrition {
 	public static final FoodProperties SMORE = (new FoodProperties.Builder())
 			.nutrition(9).saturationMod(0.2F)
 			.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3600, 0), 1F)
-			.effect(() -> new MobEffectInstance(NeapolitanCompat.getSugarRush(), 600, 1), 1.0F).build();
+			.effect(() -> new MobEffectInstance(NeapolitanCompat.getSugarRush(), 600, 1), 1F).build();
 	public static final FoodProperties CRAB_RANGOON = (new FoodProperties.Builder())
 			.nutrition(9).saturationMod(0.4F).build();
 	public static final FoodProperties CHUNKWICH = (new FoodProperties.Builder())

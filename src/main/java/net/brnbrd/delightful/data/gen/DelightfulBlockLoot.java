@@ -74,7 +74,7 @@ public class DelightfulBlockLoot extends BlockLootSubProvider {
 								.when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(b)
 										.setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(SlicedMiniMelonBlock.BITES, i)))
 								.add(LootItem.lootTableItem(((SlicedMiniMelonBlock) b).getSliceItem().getItem()))
-								.apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, ((float) maxbites) - left + 1.0F))));
+								.apply(SetItemCountFunction.setCount(UniformGenerator.between(1F, ((float) maxbites) - left + 1F))));
 					}
 					return applyExplosionDecay(b, loot);
 				}
@@ -88,7 +88,7 @@ public class DelightfulBlockLoot extends BlockLootSubProvider {
 								.when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(b)
 										.setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(SlicedMiniMelonBlock.BITES, i)))
 								.add(LootItem.lootTableItem(((SlicedMiniMelonBlock) b).getSliceItem().getItem()))
-								.apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, ((float) maxbites) - left + 1.0F))));
+								.apply(SetItemCountFunction.setCount(UniformGenerator.between(1F, ((float) maxbites) - left + 1F))));
 					}
 					return applyExplosionDecay(b, loot);
 				}
@@ -102,7 +102,7 @@ public class DelightfulBlockLoot extends BlockLootSubProvider {
 								.when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(b)
 										.setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(SlicedMelonBlock.BITES, i)))
 								.add(LootItem.lootTableItem(((SlicedMelonBlock) b).getSliceItem().getItem()))
-								.apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, ((float) maxbites) - left + 1.0F))));
+								.apply(SetItemCountFunction.setCount(UniformGenerator.between(1F, ((float) maxbites) - left + 1F))));
 					}
 					return applyExplosionDecay(b, loot);
 				}
@@ -116,7 +116,7 @@ public class DelightfulBlockLoot extends BlockLootSubProvider {
 								.when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(b)
 										.setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(SlicedGourdBlock.BITES, i)))
 								.add(LootItem.lootTableItem(((SlicedGourdBlock) b).getSliceItem().getItem()))
-								.apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, ((float) maxbites) - left + 1.0F))));
+								.apply(SetItemCountFunction.setCount(UniformGenerator.between(1F, ((float) maxbites) - left + 1F))));
 					}
 					return applyExplosionDecay(b, loot);
 				}
@@ -131,7 +131,7 @@ public class DelightfulBlockLoot extends BlockLootSubProvider {
 								.when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(b)
 										.setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(SalmonberryBushBlock.AGE, i)))
 								.add(LootItem.lootTableItem(DelightfulItems.SALMONBERRIES.get()))
-								.apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, (float) i - 1))));
+								.apply(SetItemCountFunction.setCount(UniformGenerator.between(1F, (float) i - 1))));
 					}
 					return applyExplosionDecay(b, loot);
 				}

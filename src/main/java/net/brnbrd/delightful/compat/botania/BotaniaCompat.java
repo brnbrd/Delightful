@@ -74,7 +74,7 @@ public class BotaniaCompat {
 		burst.setMana(manaPerDamage);
 		burst.setStartingMana(manaPerDamage);
 		burst.setMinManaLoss(20);
-		burst.setManaLossPerTick(2.0F);
+		burst.setManaLossPerTick(2F);
 		return burst;
 	}
 

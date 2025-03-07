@@ -19,6 +19,6 @@ public class BWGCompat {
 		.nutrition(3)
 		.saturationMod(0.3F)
 		.fast()
-		.effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 600, 0, false, true), 1.0F)
+		.effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 600, 0, false, true), 1F)
 		.build();
 }

@@ -33,19 +33,19 @@ public class DKnifeItem extends KnifeItem implements ICompat {
 	@NotNull private final Modid[] modid;
 
 	public DKnifeItem(@Nullable TagKey<Item> tag, Tier tier, Properties properties) {
-		super(tier, 0.5F, -2.0F, properties);
+		super(tier, 0.5F, -2F, properties);
 		this.tag = tag;
 		this.modid = Util.EMPTY;
 	}
 
 	public DKnifeItem(@Nullable TagKey<Item> tag, Tier tier, Properties properties, @NotNull Modid... modid) {
-		super(tier, 0.5F, -2.0F, properties);
+		super(tier, 0.5F, -2F, properties);
 		this.tag = tag;
 		this.modid = modid;
 	}
 
 	public DKnifeItem(Tier tier, Properties properties) {
-		super(tier, 0.5F, -2.0F, properties);
+		super(tier, 0.5F, -2F, properties);
 		this.tag = null;
 		this.modid = Util.EMPTY;
 	}

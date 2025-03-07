@@ -70,6 +70,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> FRUITS_BAOBAB = forge("fruits/baobab");
 	public static final TagKey<Item> FRUITS_BANANA = forge("fruits/banana");
 	public static final TagKey<Item> FRUITS_ORANGE = forge("fruits/orange");
+	public static final TagKey<Item> FRUITS_BLOOD_ORANGE = forge("fruits/blood_orange");
 	public static final TagKey<Item> FRUITS_MANDARIN = forge("fruits/mandarin");
 	public static final TagKey<Item> FRUITS_PLUM = forge("fruits/plum");
 	public static final TagKey<Item> FRUITS_CHERRY = forge("fruits/cherry");

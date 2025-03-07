@@ -13,7 +13,8 @@ public class UndergardenCompat {
 		return Util.effect(Modid.UG, "virulent_resistance", MobEffects.FIRE_RESISTANCE);
 	}
 
-	public static final Supplier<FoodProperties> GLOOMGOURD_PIE_SLICE = () ->
-			(new FoodProperties.Builder()).nutrition(3).saturationMod(0.3F).fast()
-			.effect(() -> new MobEffectInstance(getVirulentResistance(), 600, 0), 1.0F).build();
+	public static final Supplier<FoodProperties> GLOOMGOURD_PIE_SLICE = () -> new FoodProperties.Builder()
+		.nutrition(3).saturationMod(0.3F)
+		.fast()
+		.effect(() -> new MobEffectInstance(getVirulentResistance(), 600, 0), 1F).build();
 }

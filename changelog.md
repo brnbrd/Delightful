@@ -12,6 +12,7 @@
 ### Fixes
 - Fixed some instances of missing tooltip information
 - Silver Knife will be disabled in presence of [Abnormals Delight](https://www.curseforge.com/minecraft/mc-mods/abnormals-delight)
+- Removed some false error logs (closes [#114](https://github.com/brnbrd/Delightful/issues/114))
 
 
 ## 3.7.1

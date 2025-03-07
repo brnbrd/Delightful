@@ -4,7 +4,7 @@
     {
       "conditions": [
         {
-          "item": "atmospheric:aloe_leaves",
+          "item": "atmospheric:blood_orange",
           "type": "forge:item_exists"
         }
       ],
@@ -12,11 +12,11 @@
         "type": "minecraft:crafting_shapeless",
         "ingredients": [
           {
-            "item": "atmospheric:aloe_leaves"
+            "item": "atmospheric:blood_orange"
           }
         ],
         "result": {
-          "item": "minecraft:lime_dye",
+          "item": "minecraft:red_dye",
           "count": 1
         }
       }

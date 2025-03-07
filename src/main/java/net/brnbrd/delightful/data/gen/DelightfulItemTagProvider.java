@@ -217,6 +217,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.FRUITS_BANANA).addOptional(Modid.N.rl("banana"));
 		this.tag(DelightfulItemTags.FRUITS_CHERRY).addOptional(Modid.FA.rl("cherry_peach"));
 		this.tag(DelightfulItemTags.FRUITS_PLUM).addOptional(Modid.ENV.rl("plum"));
+		this.tag(DelightfulItemTags.FRUITS_BLOOD_ORANGE).addOptional(Modid.AT.rl("blood_orange"));
 		this.tag(DelightfulItemTags.FRUITS).replace(false)
 			.addTag(ForgeTags.BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_SWEET)
@@ -263,10 +264,11 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.DA.rl("goldenleaf_berries"));
 		this.tag(DelightfulItemTags.FRUITS_CITRUS).replace(false)
 			.addTag(DelightfulItemTags.FRUITS_CITRON)
+			.addTag(DelightfulItemTags.FRUITS_BLOOD_ORANGE)
 			.addOptionalTag(DelightfulItemTags.FRUITS_MANDARIN.location())
 			.addOptionalTag(DelightfulItemTags.FRUITS_ORANGE.location())
-			.addOptionalTag(DelightfulItemTags.FRUITS_LEMON.location())
 			.addOptionalTag(DelightfulItemTags.FRUITS_LIME.location())
+			.addOptionalTag(Modid.LOADER.rl("fruits/lemon"))
 			.addOptionalTag(Modid.LOADER.rl("fruits/grapefruit"))
 			.addOptionalTag(Modid.LOADER.rl("fruits/pomelo"));
 		this.tag(DelightfulItemTags.FRUITS_SWEET).replace(false)
@@ -290,6 +292,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_JABUTICABA)
 			.addTag(DelightfulItemTags.FRUITS_KIWANO)
 			.addTag(DelightfulItemTags.FRUITS_BAOBAB)
+			.addTag(DelightfulItemTags.FRUITS_BLOOD_ORANGE)
 			.addOptionalTag(DelightfulItemTags.FRUITS_POMEGRANATE.location())
 			.addOptionalTag(DelightfulItemTags.FRUITS_DRAGON_FRUIT.location())
 			.addOptionalTag(DelightfulItemTags.FRUITS_ORANGE.location())

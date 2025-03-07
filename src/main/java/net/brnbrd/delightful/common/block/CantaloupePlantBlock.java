@@ -122,7 +122,7 @@ public class CantaloupePlantBlock extends BushBlock implements BonemealableBlock
 			return InteractionResult.PASS;
 		} else if (flag) {
 			popResource(pLevel, pPos, Util.gs(DelightfulItems.CANTALOUPE));
-			pLevel.playSound(null, pPos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + pLevel.random.nextFloat() * 0.4F);
+			pLevel.playSound(null, pPos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1F, 0.8F + pLevel.random.nextFloat() * 0.4F);
 			BlockState blockstate = state.setValue(AGE, 0);
 			pLevel.setBlock(pPos, blockstate, 2);
 			pLevel.gameEvent(GameEvent.BLOCK_CHANGE, pPos, GameEvent.Context.of(pPlayer, blockstate));

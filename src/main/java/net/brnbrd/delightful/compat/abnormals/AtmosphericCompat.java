@@ -19,6 +19,6 @@ public class AtmosphericCompat {
 		.nutrition(3)
 		.saturationMod(0.3F)
 		.fast()
-		.effect(() -> new MobEffectInstance(getSpitting(), 160, 0, false, false), 1.0F)
+		.effect(() -> new MobEffectInstance(getSpitting(), 160, 0, false, false), 1F)
 		.build();
 }

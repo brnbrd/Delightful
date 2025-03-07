@@ -19,8 +19,8 @@ public class UnusualEndCompat {
 
 	public static final FoodProperties CHORUS_PIE_SLICE = (new FoodProperties.Builder())
 			.nutrition(3).saturationMod(0.3F).fast()
-			.effect(() -> new MobEffectInstance(getSwiftStrikes(), 300, 1), 1.0F).build();
+			.effect(() -> new MobEffectInstance(getSwiftStrikes(), 300, 1), 1F).build();
 	public static final FoodProperties CHORUS_MUFFIN = (new FoodProperties.Builder())
 			.nutrition(8).saturationMod(0.6F)
-			.effect(() -> new MobEffectInstance(getSwiftStrikes(), 400, 0), 1.0F).build();
+			.effect(() -> new MobEffectInstance(getSwiftStrikes(), 400, 0), 1F).build();
 }

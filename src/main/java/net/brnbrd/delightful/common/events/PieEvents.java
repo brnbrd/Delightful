@@ -110,7 +110,7 @@ public class PieEvents {
 					pos,
 					placedState.getSoundType(level, pos, player).getPlaceSound(),
 					SoundSource.BLOCKS,
-					(soundtype.getVolume() + 1.0F) / 2.0F,
+					(soundtype.getVolume() + 1F) / 2F,
 					soundtype.getPitch() * 0.8F
 				);
 				if (!player.getAbilities().instabuild) context.getItemInHand().shrink(1);

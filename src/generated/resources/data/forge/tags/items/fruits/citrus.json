@@ -1,6 +1,7 @@
 {
   "values": [
     "#forge:fruits/citron",
+    "#forge:fruits/blood_orange",
     {
       "id": "#forge:fruits/mandarin",
       "required": false
@@ -10,11 +11,11 @@
       "required": false
     },
     {
-      "id": "#forge:fruits/lemon",
+      "id": "#forge:fruits/lime",
       "required": false
     },
     {
-      "id": "#forge:fruits/lime",
+      "id": "#forge:fruits/lemon",
       "required": false
     },
     {

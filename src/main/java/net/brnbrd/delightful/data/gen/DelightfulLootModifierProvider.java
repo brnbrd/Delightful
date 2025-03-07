@@ -52,7 +52,7 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 		add("acorn_from_squirrel", new AddItemLootModifier(
 				new LootItemCondition[]{
 						LootItemEnabledCondition.enabled(DelightfulItems.ACORN.getId().getPath()),
-						LootItemRandomChanceWithLootingCondition.randomChanceAndLootingBoost(0.4F, 2.0F).build(),
+						LootItemRandomChanceWithLootingCondition.randomChanceAndLootingBoost(0.4F, 2F).build(),
 						LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS, EntityPredicate.Builder.entity().of(DelightfulEntityTags.DROPS_ACORN)).build()
 				},
 				DelightfulItems.ACORN.get(), 1, 1, true
@@ -60,7 +60,7 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 		add("acorn_from_drops", new AddItemLootModifier(
 				new LootItemCondition[]{
 						LootItemEnabledCondition.enabled(DelightfulItems.ACORN.getId().getPath()),
-						LootItemRandomChanceWithLootingCondition.randomChanceAndLootingBoost(0.4F, 2.0F).build(),
+						LootItemRandomChanceWithLootingCondition.randomChanceAndLootingBoost(0.4F, 2F).build(),
 						LootItemBlockIsTagCondition.isTag(DelightfulBlockTags.ADD_ACORN)
 				},
 				DelightfulItems.ACORN.get(), 1, 1, true
@@ -68,7 +68,7 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 		add("animal_fat", new AddItemLootModifier(
 				new LootItemCondition[]{
 						LootItemEnabledCondition.enabled(DelightfulItems.ANIMAL_FAT.getId().getPath()),
-						LootItemRandomChanceWithLootingCondition.randomChanceAndLootingBoost(0.6F, 2.0F).build(),
+						LootItemRandomChanceWithLootingCondition.randomChanceAndLootingBoost(0.6F, 2F).build(),
 						LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.KILLER_PLAYER,
 								EntityPredicate.Builder.entity().equipment(
 										EntityEquipmentPredicate.Builder.equipment().mainhand(ItemPredicate.Builder.item().of(DelightfulItemTags.TOOLS_SCAVENGING).build()).build()).build()).build(),
@@ -79,7 +79,7 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 		add("raw_goat", new AddItemLootModifier(
 				new LootItemCondition[]{
 						LootItemEnabledCondition.enabled(DelightfulItems.RAW_GOAT.getId().getPath()),
-						LootItemRandomChanceWithLootingCondition.randomChanceAndLootingBoost(1.0F, 2.0F).build(),
+						LootItemRandomChanceWithLootingCondition.randomChanceAndLootingBoost(1F, 2F).build(),
 						LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS, EntityPredicate.Builder.entity().flags(EntityFlagsPredicate.Builder.flags().setOnFire(false).build())).build(),
 						LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS, EntityPredicate.Builder.entity().of(DelightfulEntityTags.DROPS_RAW_GOAT)).build()
 				},
@@ -88,7 +88,7 @@ public class DelightfulLootModifierProvider extends GlobalLootModifierProvider {
 		add("cooked_goat", new AddItemLootModifier(
 				new LootItemCondition[]{
 						LootItemEnabledCondition.enabled(DelightfulItems.COOKED_GOAT.getId().getPath()),
-						LootItemRandomChanceWithLootingCondition.randomChanceAndLootingBoost(1.0F, 2.0F).build(),
+						LootItemRandomChanceWithLootingCondition.randomChanceAndLootingBoost(1F, 2F).build(),
 						LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS, EntityPredicate.Builder.entity().flags(EntityFlagsPredicate.Builder.flags().setOnFire(true).build())).build(),
 						LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS, EntityPredicate.Builder.entity().of(DelightfulEntityTags.DROPS_RAW_GOAT)).build()
 				},

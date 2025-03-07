@@ -22,7 +22,7 @@ public class GravititeKnifeItem extends AetherKnifeItem {
 
 	@Override
 	public boolean hurtEnemy(@NotNull ItemStack stack, @NotNull LivingEntity target, @NotNull LivingEntity attacker) {
-		if (!(attacker instanceof Player player) || player.getAttackStrengthScale(1.0F) == 1.0F) {
+		if (!(attacker instanceof Player player) || player.getAttackStrengthScale(1F) == 1F) {
 			if (!target.getType().is(DelightfulEntityTags.UNLAUNCHABLE) && (target.onGround() || target.isInFluidType())) {
 				target.push(0.0, 1.0, 0.0);
 				if (target instanceof ServerPlayer serverPlayer) {

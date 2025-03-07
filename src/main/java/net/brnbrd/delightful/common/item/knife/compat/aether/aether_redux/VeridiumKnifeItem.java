@@ -52,7 +52,7 @@ public class VeridiumKnifeItem extends AetherKnifeItem implements VeridiumItem {
 		// Call the vanilla method do do things like tool damaging
 		boolean bool = super.mineBlock(stack, level, state, pos, user);
 		if (!user.level().isClientSide()) {
-			boolean instaBreak = state.getDestroySpeed(level, pos) <= 0.0F;
+			boolean instaBreak = state.getDestroySpeed(level, pos) <= 0F;
 			// Avoid decreasing infusion on insta-break blocks
 			if (!instaBreak) {
 				int amount = stack.isCorrectToolForDrops(state) ? 1 : 2;
