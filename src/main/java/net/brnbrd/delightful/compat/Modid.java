@@ -41,7 +41,6 @@ public enum Modid {
 	CD("culturaldelights"),
 	CR("collectorsreap"),
 	CRAB("crabbersdelight"),
-	CRD("cratedelight"),
 	CSA("create_sa"),
 	CT("croptopia"),
 	DA("deep_aether"),

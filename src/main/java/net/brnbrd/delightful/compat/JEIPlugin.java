@@ -55,15 +55,6 @@ public class JEIPlugin implements IModPlugin {
 		this.hide(hidden, Modid.TH, "carrot_block");
 		this.hide(hidden, Modid.TH, "potato_block");
 
-		// Crate Delight conflicts
-		this.hide(hidden, Modid.CRD, "apple_crate", Modid.FRD);
-		this.hide(hidden, Modid.CRD, "egg_crate", Modid.IN);
-		this.hide(hidden, Modid.CRD, "sugar_bag", Modid.SUP);
-		this.hide(hidden, Modid.CRD, "cod_crate", Modid.CRAB);
-		this.hide(hidden, Modid.CRD, "salmon_crate", Modid.CRAB);
-		this.hide(hidden, Modid.CRD, "berry_crate", Modid.BG);
-		this.hide(hidden, Modid.CRD, "glowberry_crate", Modid.BG);
-
 		// Other
 		this.hide(hidden, Modid.TH, "syrup_bottle", Modid.AUT);
 		this.hide(hidden, Modid.AA, "honeyed_apple", Modid.BB);
