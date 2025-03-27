@@ -1,0 +1,42 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "ars_nouveau:magebloom"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "ars_nouveau:magebloom_fiber"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "ars_nouveau:magebloom"
+          }
+        ],
+        "result": [
+          {
+            "item": "ars_nouveau:magebloom_fiber",
+            "count": 3
+          },
+          {
+            "count": 1,
+            "chance": 0.25,
+            "item": "ars_nouveau:magebloom_fiber"
+          },
+          {
+            "item": "minecraft:purple_dye"
+          }
+        ],
+        "tool": {
+          "tag": "forge:tools/knives"
+        }
+      }
+    }
+  ]
+}

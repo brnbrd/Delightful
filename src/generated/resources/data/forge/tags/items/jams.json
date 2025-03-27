@@ -31,6 +31,26 @@
       "required": false
     },
     {
+      "id": "arsdelight:source_berry_jam",
+      "required": false
+    },
+    {
+      "id": "arsdelight:activated_mendosteen_jam",
+      "required": false
+    },
+    {
+      "id": "arsdelight:activated_bastion_jam",
+      "required": false
+    },
+    {
+      "id": "arsdelight:neutralized_frostaya_jam",
+      "required": false
+    },
+    {
+      "id": "arsdelight:neutralized_bombegrante_jam",
+      "required": false
+    },
+    {
       "id": "upgrade_aquatic:mulberry_jam_bottle",
       "required": false
     },

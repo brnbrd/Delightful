@@ -8,7 +8,6 @@ import org.jetbrains.annotations.NotNull;
 
 public class DelightfulItemTags {
 	// Delightful
-	public static final TagKey<Item> COMPAT_PIES = d("compat_pies");
 	public static final TagKey<Item> FIRE_KNIVES = d("fire_knives");
 	public static final TagKey<Item> RAW_VENISON_COMPAT = d("raw_venison_compat");
 	public static final TagKey<Item> RAW_VENISON_CHOP_COMPAT = d("raw_venison_chop_compat");
@@ -41,7 +40,6 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> FRUITS = forge("fruits");
 	public static final TagKey<Item> FRUITS_CITRUS = forge("fruits/citrus");
 	public static final TagKey<Item> FRUITS_LIME = forge("fruits/lime");
-	public static final TagKey<Item> FRUITS_LEMON = forge("fruits/lemon");
 	public static final TagKey<Item> FRUITS_POMEGRANATE = forge("fruits/pomegranate");
 	public static final TagKey<Item> FRUITS_APPLE = forge("fruits/apple");
 	public static final TagKey<Item> FRUITS_KIWI = forge("fruits/kiwi");

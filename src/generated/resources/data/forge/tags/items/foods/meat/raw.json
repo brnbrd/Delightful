@@ -22,6 +22,26 @@
       "required": false
     },
     {
+      "id": "naturalist:bushmeat",
+      "required": false
+    },
+    {
+      "id": "arsdelight:wilden_meat",
+      "required": false
+    },
+    {
+      "id": "arsdelight:wilden_meat_slice",
+      "required": false
+    },
+    {
+      "id": "arsdelight:chimera_meat",
+      "required": false
+    },
+    {
+      "id": "arsdelight:chimera_meat_slice",
+      "required": false
+    },
+    {
       "id": "casualness_delight:raw_donkey_meat",
       "required": false
     },

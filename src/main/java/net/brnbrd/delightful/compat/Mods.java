@@ -1,6 +1,7 @@
 package net.brnbrd.delightful.compat;
 
 import net.brnbrd.delightful.Delightful;
+import net.brnbrd.delightful.Util;
 import net.minecraftforge.fml.ModList;
 import vectorwing.farmersdelight.FarmersDelight;
 import java.util.Arrays;
@@ -15,6 +16,7 @@ public class Mods {
 		return (
 			stringId.equals(Delightful.MODID) ||
 			stringId.equals(FarmersDelight.MODID) ||
+			stringId.equals(Util.MC) ||
 			ModList.get().isLoaded(stringId)
 		);
 	}

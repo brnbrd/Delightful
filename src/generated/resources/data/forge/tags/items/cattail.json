@@ -1,11 +1,11 @@
 {
   "values": [
     {
-      "id": "sprout:cattail",
+      "id": "biomesoplenty:cattail",
       "required": false
     },
     {
-      "id": "biomesoplenty:cattail",
+      "id": "sprout:cattail",
       "required": false
     },
     {

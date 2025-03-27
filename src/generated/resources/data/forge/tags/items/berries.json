@@ -68,6 +68,10 @@
     {
       "id": "deep_aether:goldenleaf_berries",
       "required": false
+    },
+    {
+      "id": "exquisito:midnight_berries",
+      "required": false
     }
   ]
 }

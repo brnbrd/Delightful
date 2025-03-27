@@ -177,7 +177,7 @@ public class DelightfulBlockLoot extends BlockLootSubProvider {
 				::iterator;
 	}
 
-	public void empty(RegistryObject<Block> block) {
+	public void empty(RegistryObject<? extends Block> block) {
 		this.add(block.get(), LootTable.lootTable());
 	}
 }

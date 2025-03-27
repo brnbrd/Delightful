@@ -88,23 +88,28 @@ public class DelightfulBlocks {
 		() -> new Block(Block.Properties.copy(Blocks.ORANGE_WOOL).strength(.5f).sound(SoundType.WOOL)));
 	public static final RegistryObject<Block> SALMONBERRY_PIE = BLOCKS.register("salmonberry_pie",
 		() -> new PieBlock(Block.Properties.copy(ModBlocks.APPLE_PIE.get()), DelightfulItems.SALMONBERRY_PIE_SLICE));
-	public static final RegistryObject<Block> PUMPKIN_PIE = BLOCKS.register("pumpkin_pie",
-		() -> new DPieBlock(DelightfulItems.PUMPKIN_PIE_SLICE, Modid.MC.rl("pumpkin_pie")));
+	public static final RegistryObject<PumpkinPieBlock> PUMPKIN_PIE = BLOCKS.register("pumpkin_pie",
+		() -> new PumpkinPieBlock(DelightfulItems.PUMPKIN_PIE_SLICE));
 	public static final RegistryObject<Block> BAKLAVA = BLOCKS.register("baklava",
 		() -> new BaklavaBlock(Block.Properties.copy(ModBlocks.APPLE_PIE.get()), DelightfulItems.BAKLAVA_SLICE));
-	public static final RegistryObject<Block> SOURCE_BERRY_PIE = BLOCKS.register("source_berry_pie",
-		() -> new DPieBlock(DelightfulItems.SOURCE_BERRY_PIE_SLICE, Modid.AN.rl("source_berry_pie")));
-	public static final RegistryObject<Block> CHORUS_PIE = BLOCKS.register(UnusualEndCompat.chorus_pie,
+	public static final RegistryObject<DPieBlock> SOURCE_BERRY_PIE = BLOCKS.register("source_berry_pie",
+		() -> new DPieBlock(
+			Modid.AND.loaded() ?
+			() -> Modid.AND.item("source_berry_pie_slice") :
+			DelightfulItems.SOURCE_BERRY_PIE_SLICE,
+			Modid.AN.rl("source_berry_pie")
+		));
+	public static final RegistryObject<DPieBlock> CHORUS_PIE = BLOCKS.register(UnusualEndCompat.chorus_pie,
 		() -> new DPieBlock(DelightfulItems.CHORUS_PIE_SLICE, Modid.UE.rl(UnusualEndCompat.chorus_pie)));
-	public static final RegistryObject<Block> GLOOMGOURD_PIE = BLOCKS.register("gloomgourd_pie",
+	public static final RegistryObject<DPieBlock> GLOOMGOURD_PIE = BLOCKS.register("gloomgourd_pie",
 		() -> new DPieBlock(DelightfulItems.GLOOMGOURD_PIE_SLICE, Modid.UG.rl("gloomgourd_pie")));
-	public static final RegistryObject<Block> BLUEBERRY_PIE = BLOCKS.register("blueberry_pie",
+	public static final RegistryObject<DPieBlock> BLUEBERRY_PIE = BLOCKS.register("blueberry_pie",
 		() -> new DPieBlock(DelightfulItems.BLUEBERRY_PIE_SLICE, Modid.BWG.rl("blueberry_pie")));
-	public static final RegistryObject<Block> GREEN_APPLE_PIE = BLOCKS.register("green_apple_pie",
+	public static final RegistryObject<DPieBlock> GREEN_APPLE_PIE = BLOCKS.register("green_apple_pie",
 		() -> new DPieBlock(DelightfulItems.GREEN_APPLE_PIE_SLICE, Modid.BWG.rl("green_apple_pie")));
-	public static final RegistryObject<Block> MULBERRY_PIE = BLOCKS.register("mulberry_pie",
+	public static final RegistryObject<DPieBlock> MULBERRY_PIE = BLOCKS.register("mulberry_pie",
 		() -> new DPieBlock(DelightfulItems.MULBERRY_PIE_SLICE, Modid.UA.rl("mulberry_pie")));
-	public static final RegistryObject<Block> PASSION_FRUIT_TART = BLOCKS.register("passion_fruit_tart",
+	public static final RegistryObject<DPieBlock> PASSION_FRUIT_TART = BLOCKS.register("passion_fruit_tart",
 		() -> new DPieBlock(DelightfulItems.PASSION_FRUIT_TART_SLICE, Modid.AT.rl("passion_fruit_tart")));
 	public static final RegistryObject<Block> ACORN_SACK = BLOCKS.register("acorn_sack",
 		() -> new Block(Block.Properties.copy(Blocks.BROWN_WOOL).strength(.5f).sound(SoundType.WOOL)));

@@ -19,10 +19,10 @@ import net.minecraft.world.item.Items;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.registries.RegistryObject;
 import vectorwing.farmersdelight.common.utility.TextUtils;
-import org.jetbrains.annotations.NotNull;
-import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.ArrayList;
 import java.util.List;
+import javax.annotation.ParametersAreNonnullByDefault;
+import org.jetbrains.annotations.NotNull;
 
 @JeiPlugin
 @ParametersAreNonnullByDefault
@@ -33,9 +33,14 @@ public class JEIPlugin implements IModPlugin {
 	@Override
 	public void registerRecipes(IRecipeRegistration registration) {
 		// Hide all disabled items from JEI
-		List<ItemStack> hidden = new ArrayList<>(DelightfulItems.ITEMS.getEntries().stream()
-				.filter(i -> (i.get() instanceof IConfigured c) ? !c.enabled() : !Util.enabled(i)) // Keep items not enabled
-				.map(Util::gs).toList());
+		List<ItemStack> hidden = new ArrayList<>(
+			DelightfulItems.ITEMS.getEntries()
+				.stream()
+				.filter(i -> { // Keep disabled items (to add to hidden list)
+					return !(i.get() instanceof IConfigured c ? c.enabled() : Util.enabled(i));
+				})
+				.map(Util::gs)
+				.toList());
 		List<FluidStack> hiddenFluids = new ArrayList<>();
 
 		// Delightful conflicts

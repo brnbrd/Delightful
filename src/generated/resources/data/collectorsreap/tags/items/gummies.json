@@ -3,6 +3,22 @@
     "delightful:salmonberry_gummy",
     "delightful:matcha_gummy",
     "delightful:cantaloupe_gummy",
-    "delightful:source_berry_gummy"
+    "delightful:source_berry_gummy",
+    {
+      "id": "exquisito:chorus_gummy",
+      "required": false
+    },
+    {
+      "id": "exquisito:warzipan_gummy",
+      "required": false
+    },
+    {
+      "id": "exquisito:ether_bulb_gummy",
+      "required": false
+    },
+    {
+      "id": "exquisito:nightshade_berry_gummy",
+      "required": false
+    }
   ]
 }

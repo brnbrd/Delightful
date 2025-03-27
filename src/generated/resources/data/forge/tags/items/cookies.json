@@ -5,6 +5,10 @@
     "farmersdelight:sweet_berry_cookie",
     "delightful:source_berry_cookie",
     {
+      "id": "arsdelight:source_berry_cookie",
+      "required": false
+    },
+    {
       "id": "farmersrespite:green_tea_cookie",
       "required": false
     },
@@ -77,11 +81,19 @@
       "required": false
     },
     {
-      "id": "ends_delight:chorus_cookie",
+      "id": "exquisito:ether_bulb_cookie",
+      "required": false
+    },
+    {
+      "id": "exquisito:nightshade_berry_cookie",
       "required": false
     },
     {
       "id": "exquisito:chorus_cookie",
+      "required": false
+    },
+    {
+      "id": "ends_delight:chorus_cookie",
       "required": false
     },
     {

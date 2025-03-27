@@ -94,9 +94,9 @@ public class DelightfulItems {
 	public static final RegistryObject<Item> CHORUS_MUFFIN = registerItem("chorus_muffin",
 			() -> new ChorusMuffinItem((new Item.Properties()).food(UnusualEndCompat.CHORUS_MUFFIN)));
 	public static final RegistryObject<Item> SOURCE_BERRY_PIE_SLICE = registerItem("source_berry_pie_slice",
-			() -> new SourceFoodItem((new Item.Properties()).food(ArsNouveauCompat.SOURCE_BERRY_PIE_SLICE)));
+			() -> new SourceBerryPieSliceItem((new Item.Properties()).food(ArsNouveauCompat.SOURCE_BERRY_PIE_SLICE)));
 	public static final RegistryObject<Item> SOURCE_BERRY_COOKIE = registerItem("source_berry_cookie",
-			() -> new SourceFoodItem((new Item.Properties()).food(ArsNouveauCompat.SOURCE_BERRY_COOKIE)));
+			() -> new SourceBerryCookieItem((new Item.Properties()).food(ArsNouveauCompat.SOURCE_BERRY_COOKIE)));
 	public static final RegistryObject<Item> BAKLAVA = registerItem("baklava",
 			() -> new BlockItem(DelightfulBlocks.BAKLAVA.get(), ModItems.basicItem()));
 	public static final RegistryObject<Item> BAKLAVA_SLICE = registerItem("baklava_slice",

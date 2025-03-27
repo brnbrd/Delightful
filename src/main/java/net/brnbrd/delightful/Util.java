@@ -268,6 +268,16 @@ public class Util {
 		return name(stack.getItem());
 	}
 
+	// modid:item
+	public static String id(ItemLike item) {
+		return rl(item).toString();
+	}
+
+	// modid:item
+	public static String id(Modid modid, String name) {
+		return modid.rl(name).toString();
+	}
+
 	public static Ingredient ing(Supplier<? extends ItemLike> i) {
 		return Ingredient.of(i.get());
 	}
@@ -328,7 +338,7 @@ public class Util {
 		return (item instanceof IConfigured conf) ? conf.enabled() : configEnabled(item);
 	}
 
-	public static boolean enabled(RegistryObject<Item> item) {
+	public static boolean enabled(Supplier<Item> item) {
 		return enabled(item.get());
 	}
 

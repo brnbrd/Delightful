@@ -1,9 +1,15 @@
 package net.brnbrd.delightful.common.events;
 
+import com.google.common.collect.ImmutableMap;
 import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
+import net.brnbrd.delightful.common.block.DPieBlock;
+import net.brnbrd.delightful.common.block.DelightfulBlocks;
+import net.brnbrd.delightful.compat.BWGCompat;
 import net.brnbrd.delightful.compat.Modid;
-import net.brnbrd.delightful.data.tags.DelightfulItemTags;
+import net.brnbrd.delightful.compat.UnusualEndCompat;
+import net.brnbrd.delightful.compat.abnormals.AquaticCompat;
+import net.brnbrd.delightful.compat.abnormals.AtmosphericCompat;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundSource;
@@ -25,16 +31,21 @@ import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import vectorwing.farmersdelight.common.block.PieBlock;
 import vectorwing.farmersdelight.common.registry.ModBlocks;
+import java.util.Map;
+import java.util.function.Supplier;
 
 public class PieEvents {
-	// Checks if pie slice is enabled in config
-	public static boolean enabled(ItemStack stack) {
-		return (
-			stack.is(DelightfulItemTags.COMPAT_PIES) &&
-			!(stack.is(Items.PUMPKIN_PIE) && Modid.CCK.loaded()) &&
-			Util.enabled(Util.name(stack) + "_slice")
-		);
-	}
+	public static final Map<String, Supplier<? extends DPieBlock>> PIE_BLOCKS =
+		ImmutableMap.<String, Supplier<? extends DPieBlock>>builder()
+			.put(Util.id(Items.PUMPKIN_PIE), DelightfulBlocks.PUMPKIN_PIE)
+			.put(Util.id(Modid.AN, "source_berry_pie"), DelightfulBlocks.SOURCE_BERRY_PIE)
+			.put(Util.id(Modid.UG, "gloomgourd_pie"), DelightfulBlocks.GLOOMGOURD_PIE)
+			.put(Util.id(Modid.BWG, BWGCompat.blueberry_pie), DelightfulBlocks.BLUEBERRY_PIE)
+			.put(Util.id(Modid.BWG, BWGCompat.green_apple_pie), DelightfulBlocks.GREEN_APPLE_PIE)
+			.put(Util.id(Modid.UE, UnusualEndCompat.chorus_pie), DelightfulBlocks.CHORUS_PIE)
+			.put(Util.id(Modid.UA, AquaticCompat.mulberry_pie), DelightfulBlocks.MULBERRY_PIE)
+			.put(Util.id(Modid.AT, AtmosphericCompat.passion_fruit_tart), DelightfulBlocks.PASSION_FRUIT_TART)
+			.build();
 
 	// Adds "Placeable" tooltip to compat pies
 	@SubscribeEvent(priority = EventPriority.NORMAL)
@@ -84,6 +95,16 @@ public class PieEvents {
 			e.setCancellationResult(place);
 			e.setCanceled(place.consumesAction());
 		}
+	}
+
+	// Checks if pie slice is enabled in config
+	public static boolean enabled(ItemStack stack) {
+		String id = Util.id(stack.getItem());
+		if (PIE_BLOCKS.containsKey(id)) {
+			DPieBlock pie = PIE_BLOCKS.get(id).get();
+			if (pie != null) return pie.enabled();
+		}
+		return false;
 	}
 
 	// Places pie Block in world using Item

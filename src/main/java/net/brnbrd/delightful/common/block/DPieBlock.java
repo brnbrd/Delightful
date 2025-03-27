@@ -1,6 +1,8 @@
 package net.brnbrd.delightful.common.block;
 
+import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
+import net.brnbrd.delightful.compat.Mods;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Player;
@@ -21,6 +23,14 @@ public class DPieBlock extends PieBlock {
 	public DPieBlock(Supplier<Item> pieSlice, ResourceLocation pie) {
 		super(Block.Properties.copy(ModBlocks.APPLE_PIE.get()), pieSlice);
 		this.pie = pie;
+	}
+
+	public boolean enabled() {
+		String modid = Util.nameSpace(pieSlice.get());
+		if (modid.equals(Delightful.MODID)) {
+			return Util.enabled(pieSlice);
+		}
+		return Mods.stringLoaded(modid);
 	}
 
 	@Override

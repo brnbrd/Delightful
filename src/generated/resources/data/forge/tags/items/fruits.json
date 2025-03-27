@@ -29,6 +29,10 @@
     {
       "id": "phantasm:oblifruit",
       "required": false
+    },
+    {
+      "id": "ars_elemental:flashpine_pod",
+      "required": false
     }
   ]
 }

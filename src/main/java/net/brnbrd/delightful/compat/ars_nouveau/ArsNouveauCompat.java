@@ -14,7 +14,7 @@ public class ArsNouveauCompat {
 
 	public static final FoodProperties SOURCE_BERRY_PIE_SLICE = (new FoodProperties.Builder())
 			.nutrition(3).saturationMod(0.3F).fast()
-			.effect(() -> new MobEffectInstance(getManaRegen(), 200, 1), 1F).build();
+			.effect(() -> new MobEffectInstance(getManaRegen(), 300, 1), 1F).build();
 
 	public static final FoodProperties SOURCE_BERRY_COOKIE = (new FoodProperties.Builder())
 			.nutrition(2).saturationMod(0.1F).fast()

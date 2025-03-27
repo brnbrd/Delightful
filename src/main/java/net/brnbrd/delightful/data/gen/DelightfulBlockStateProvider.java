@@ -243,7 +243,7 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
 	}
 
 	// Adapted from: https://github.com/vectorwing/FarmersDelight/blob/1.19/src/main/java/vectorwing/farmersdelight/data/BlockStates.java
-	public void pieBlock(RegistryObject<Block> block) {
+	public void pieBlock(RegistryObject<? extends Block> block) {
 		getVariantBuilder(block.get()).forAllStates(state -> {
 					int bites = state.getValue(PieBlock.BITES);
 					String name = Util.name(block);

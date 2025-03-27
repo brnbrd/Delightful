@@ -5,13 +5,16 @@
 
 ### Updates
 - Cantaloupe Bread now requires 1 Sugar
-- Added Sap and Syrup compatibility for [Autumnity](https://www.curseforge.com/minecraft/mc-mods/autumnity) and [Thermal](https://www.curseforge.com/minecraft/mc-mods/thermal-foundation)
 - Added recycling recipes for some knives
+- Added Sap and Syrup compatibility for [Autumnity](https://www.curseforge.com/minecraft/mc-mods/autumnity) and [Thermal](https://www.curseforge.com/minecraft/mc-mods/thermal-foundation)
 - Added recipe to use Thermal's Compost to craft Organic Compost
+- Increased length of Mana Regeneration from Source Berry Pie Slice from 10 to 15 seconds
+- Added cutting recipe for Mageblooms (from [Ars Nouveau](https://www.curseforge.com/minecraft/mc-mods/ars-nouveau))
 
 ### Fixes
 - Fixed some instances of missing tooltip information
 - Silver Knife will be disabled in presence of [Abnormals Delight](https://www.curseforge.com/minecraft/mc-mods/abnormals-delight)
+- Fixed placeability of Source Berry Pie in some cases
 - Removed some false error logs (closes [#114](https://github.com/brnbrd/Delightful/issues/114))
 
 

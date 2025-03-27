@@ -83,7 +83,7 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
 [[dependencies.delightful]]
     modId="ars_nouveau"
     mandatory=false
-    versionRange="[4.12,)"
+    versionRange="[4.12.6,)"
     ordering="AFTER"
     side="BOTH"
 
