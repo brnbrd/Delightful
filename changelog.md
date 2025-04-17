@@ -5,6 +5,7 @@
 
 ### Updates
 - Cantaloupe Bread now requires 1 Sugar
+- Nut Butter Bottle is now cooked from 3 nuts and 1 Sugar
 - Added recycling recipes for some knives
 - Added Sap and Syrup compatibility for [Autumnity](https://www.curseforge.com/minecraft/mc-mods/autumnity) and [Thermal](https://www.curseforge.com/minecraft/mc-mods/thermal-foundation)
 - Added recipe to use Thermal's Compost to craft Organic Compost
