@@ -9,6 +9,8 @@ import org.jetbrains.annotations.NotNull;
 public class DelightfulItemTags {
 	// Delightful
 	public static final TagKey<Item> FIRE_KNIVES = d("fire_knives");
+	public static final TagKey<Item> MARSHMALLOW_STICK = d("marshmallow_stick");
+	public static final TagKey<Item> COOKED_MARSHMALLOW_STICK = d("cooked_marshmallow_stick");
 	public static final TagKey<Item> RAW_VENISON_COMPAT = d("raw_venison_compat");
 	public static final TagKey<Item> RAW_VENISON_CHOP_COMPAT = d("raw_venison_chop_compat");
 	public static final TagKey<Item> COOKED_VENISON_COMPAT = d("cooked_venison_compat");
@@ -35,6 +37,7 @@ public class DelightfulItemTags {
 	// Farmers Delight
 	public static final TagKey<Item> CABINETS_STONE = Modid.FD.it("cabinets/stone");
 	public static final TagKey<Item> STRAW_PLANTS = Modid.FD.it("straw_plants");
+	public static final TagKey<Item> BARKS = Modid.FD.it("barks");
 
 	// Fruits
 	public static final TagKey<Item> FRUITS = forge("fruits");
@@ -44,6 +47,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> FRUITS_APPLE = forge("fruits/apple");
 	public static final TagKey<Item> FRUITS_KIWI = forge("fruits/kiwi");
 	public static final TagKey<Item> FRUITS_DRAGON_FRUIT = forge("fruits/dragon_fruit");
+	public static final TagKey<Item> FRUITS_PASSION_FRUIT = forge("fruits/passion_fruit");
 	public static final TagKey<Item> FRUITS_MELON = forge("fruits/melon");
 	public static final TagKey<Item> FRUITS_CANTALOUPE = forge("fruits/cantaloupe");
 	public static final TagKey<Item> FRUITS_CHORUS = forge("fruits/chorus");
@@ -77,8 +81,9 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> FRUITS_RAMBUTAN = forge("fruits/rambutan");
 	public static final TagKey<Item> FRUITS_JABUTICABA = forge("fruits/jabuticaba");
 	public static final TagKey<Item> FRUITS_KIWANO = forge("fruits/kiwano");
-	public static final TagKey<Item> FRUITS_SWEET = forge("fruits/sweet");
 	public static final TagKey<Item> FRUITS_PRICKLY_PEAR = forge("fruits/prickly_pear");
+	public static final TagKey<Item> FRUITS_SWEET = forge("fruits/sweet");
+	public static final TagKey<Item> FRUITS_SQUEEZABLE = forge("fruits/squeezable");
 
 	// Vegetables
 	public static final TagKey<Item> VEGETABLES_SPICY = forge("vegetables/spicy");
@@ -88,11 +93,15 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> CUCUMBER = forge("cucumber");
 
 	// Forge
+	public static final TagKey<Item> TOOLS_WRENCH = forge("tools/wrench");
+	public static final TagKey<Item> WRENCHES = forge("wrenches");
+	public static final TagKey<Item> WATER = forge("water");
+	public static final TagKey<Item> CHEESE = forge("cheese");
+	public static final TagKey<Item> CHOCOLATE = forge("chocolate");
+	public static final TagKey<Item> SALT = forge("salt");
 	public static final TagKey<Item> HOT_SPICE = forge("hot_spice");
 	public static final TagKey<Item> PUMPKINS = forge("pumpkins");
 	public static final TagKey<Item> PUMPKINS_CARVED = forge("pumpkins/carved");
-	public static final TagKey<Item> CHOCOLATE = forge("chocolate");
-	public static final TagKey<Item> CHEESE = forge("cheese");
 	public static final TagKey<Item> RAW_CRAB = forge("raw_crab");
 	public static final TagKey<Item> COOKED_CRAB = forge("cooked_crab");
 	public static final TagKey<Item> CRAB_MEAT = forge("crab_meat");
@@ -105,7 +114,6 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> NUTS_ACORN = forge("nuts/acorn");
 	public static final TagKey<Item> COOKED_NUTS = forge("cooked_nuts");
 	public static final TagKey<Item> SUGAR = forge("sugar");
-	public static final TagKey<Item> WATER = forge("water");
 	public static final TagKey<Item> TEA_LEAVES = forge("tea_leaves");
 	public static final TagKey<Item> TEA_LEAVES_GREEN = forge("tea_leaves/green");
 	public static final TagKey<Item> JAMS = forge("jams");
@@ -140,7 +148,8 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> ROSEY = forge("rosey");
 	public static final TagKey<Item> CLOVER = forge("clover");
 	public static final TagKey<Item> CACTI = forge("cacti");
-	public static final TagKey<Item> SMALL_CACTI = forge("small_cacti");
+	public static final TagKey<Item> CACTI_LARGE = forge("cacti/large");
+	public static final TagKey<Item> CACTI_SMALL = forge("cacti/small");
 	public static final TagKey<Item> MATCHA = forge("matcha");
 	public static final TagKey<Item> GEMS_ROSE_QUARTZ = forge("gems/rose_quartz");
 	public static final TagKey<Item> GEMS_ZANITE = forge("gems/zanite");
@@ -149,6 +158,12 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> SEEDS_SALMONBERRY = forge("seeds/salmonberry");
 	public static final TagKey<Item> SEEDS_CANTALOUPE = forge("seeds/cantaloupe");
 	public static final TagKey<Item> BONES = forge("bones");
+	public static final TagKey<Item> DUSTS_WOOD = forge("dusts/wood");
+	public static final TagKey<Item> DUSTS_ENDER_PEARL = forge("dusts/ender_pearl");
+	public static final TagKey<Item> FLOUR = forge("flour");
+	public static final TagKey<Item> DUSTS_FLOUR = forge("dusts/flour");
+	public static final TagKey<Item> DUSTS_FLOUR_WHEAT = forge("dusts/flour/wheat");
+	public static final TagKey<Item> DUSTS_FLOUR_NUT = forge("dusts/flour/nut");
 	public static final TagKey<Item> DOUGH_CORN = forge("dough/corn");
 	public static final TagKey<Item> DOUGH_NUT = forge("dough/nut");
 	public static final TagKey<Item> BREAD_CORN = forge("bread/corn");

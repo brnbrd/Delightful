@@ -1,0 +1,39 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "hearthandharvest"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:bowl"
+        },
+        "cookingtime": 200,
+        "experience": 1.0,
+        "ingredients": [
+          {
+            "tag": "forge:pasta/raw_pasta"
+          },
+          {
+            "tag": "forge:salt"
+          },
+          {
+            "tag": "forge:milk"
+          },
+          {
+            "tag": "forge:cheese"
+          }
+        ],
+        "recipe_book_tab": "meals",
+        "result": {
+          "item": "hearthandharvest:macaroni_and_cheese"
+        }
+      }
+    }
+  ]
+}

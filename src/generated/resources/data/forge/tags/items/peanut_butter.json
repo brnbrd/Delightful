@@ -1,6 +1,10 @@
 {
   "values": [
     {
+      "id": "hearthandharvest:peanut_butter",
+      "required": false
+    },
+    {
       "id": "thermal:peanut_butter",
       "required": false
     },

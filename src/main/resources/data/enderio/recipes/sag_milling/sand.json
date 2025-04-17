@@ -1,0 +1,73 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "enderio:sag_mill"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "ae2:silicon"
+        }
+      ],
+      "recipe": {
+        "type": "enderio:sag_milling",
+        "energy": 2400,
+        "input": {
+          "tag": "forge:sand"
+        },
+        "outputs": [
+          {
+            "chance": 0.5,
+            "item": {
+              "count": 1,
+              "item": "ae2:silicon"
+            },
+            "optional": false
+          }
+        ]
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "enderio:sag_mill"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:item_exists",
+            "item": "ae2:silicon"
+          }
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:silicon"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "enderio:sag_milling",
+        "energy": 2400,
+        "input": {
+          "tag": "forge:sand"
+        },
+        "outputs": [
+          {
+            "chance": 0.5,
+            "item": {
+              "count": 1,
+              "tag": "forge:silicon"
+            },
+            "optional": false
+          }
+        ]
+      }
+    }
+  ]
+}

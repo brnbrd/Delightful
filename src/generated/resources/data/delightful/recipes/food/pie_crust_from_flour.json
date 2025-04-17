@@ -1,0 +1,35 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:flour"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "key": {
+          "f": {
+            "tag": "forge:flour"
+          },
+          "m": {
+            "tag": "forge:milk"
+          }
+        },
+        "pattern": [
+          "fmf"
+        ],
+        "result": {
+          "item": "farmersdelight:pie_crust"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

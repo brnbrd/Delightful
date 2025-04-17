@@ -1,0 +1,35 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "forestry:squeezer"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "farmersrespite"
+        }
+      ],
+      "recipe": {
+        "type": "forestry:squeezer",
+        "chance": 0.1,
+        "output": {
+          "Amount": 200,
+          "FluidName": "farmersrespite:melon_juice"
+        },
+        "remnant": {
+          "Count": 1,
+          "id": "forestry:mulch"
+        },
+        "resources": [
+          {
+            "item": "minecraft:melon_slice"
+          }
+        ],
+        "time": 10
+      }
+    }
+  ]
+}

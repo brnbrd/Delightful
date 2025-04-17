@@ -11,6 +11,10 @@
       "required": false
     },
     {
+      "id": "#hearthandharvest:jelly",
+      "required": false
+    },
+    {
       "id": "#wildberries:berry_jams",
       "required": false
     },

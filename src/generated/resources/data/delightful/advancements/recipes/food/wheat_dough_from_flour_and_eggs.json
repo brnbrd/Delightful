@@ -1,0 +1,48 @@
+{
+  "advancements": [
+    {
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "criteria": {
+          "has_the_recipe": {
+            "conditions": {
+              "recipe": "delightful:food/wheat_dough_from_flour_and_eggs"
+            },
+            "trigger": "minecraft:recipe_unlocked"
+          },
+          "has_wheat_flour": {
+            "conditions": {
+              "items": [
+                {
+                  "tag": "forge:dusts/flour/wheat"
+                }
+              ]
+            },
+            "trigger": "minecraft:inventory_changed"
+          }
+        },
+        "requirements": [
+          [
+            "has_wheat_flour",
+            "has_the_recipe"
+          ]
+        ],
+        "rewards": {
+          "recipes": [
+            "delightful:food/wheat_dough_from_flour_and_eggs"
+          ]
+        },
+        "sends_telemetry_event": false
+      },
+      "conditions": [
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:dusts/flour/wheat"
+          }
+        }
+      ]
+    }
+  ]
+}

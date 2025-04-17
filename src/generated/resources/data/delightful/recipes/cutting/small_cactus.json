@@ -11,7 +11,7 @@
           "type": "forge:not",
           "value": {
             "type": "forge:tag_empty",
-            "tag": "forge:small_cacti"
+            "tag": "forge:cacti/small"
           }
         }
       ],
@@ -19,7 +19,7 @@
         "type": "farmersdelight:cutting",
         "ingredients": [
           {
-            "tag": "forge:small_cacti"
+            "tag": "forge:cacti/small"
           }
         ],
         "result": [

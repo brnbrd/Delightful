@@ -1,5 +1,9 @@
 {
   "values": [
-    "delightful:raw_goat"
+    "delightful:raw_goat",
+    {
+      "id": "extra_compat:chevon_chop",
+      "required": false
+    }
   ]
 }

@@ -1,0 +1,38 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "forestry:squeezer"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:nuts/walnut"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "forestry:squeezer",
+        "chance": 0.05,
+        "output": {
+          "Amount": 180,
+          "FluidName": "forestry:seed_oil"
+        },
+        "remnant": {
+          "Count": 1,
+          "id": "forestry:mulch"
+        },
+        "resources": [
+          {
+            "tag": "forge:nuts/walnut"
+          }
+        ],
+        "time": 60
+      }
+    }
+  ]
+}

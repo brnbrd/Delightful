@@ -1,0 +1,39 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "nut_dough"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:dusts/flour/nut"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "tag": "forge:eggs"
+          },
+          {
+            "tag": "forge:sugar"
+          },
+          {
+            "tag": "forge:dusts/flour/nut"
+          }
+        ],
+        "result": {
+          "count": 2,
+          "item": "delightful:nut_dough"
+        }
+      }
+    }
+  ]
+}

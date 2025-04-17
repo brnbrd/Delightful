@@ -30,6 +30,10 @@
       "required": false
     },
     {
+      "id": "#forge:fruits/passion_fruit",
+      "required": false
+    },
+    {
       "id": "#forge:fruits/orange",
       "required": false
     },
@@ -39,10 +43,6 @@
     },
     {
       "id": "#forge:fruits/plum",
-      "required": false
-    },
-    {
-      "id": "#forge:fruits/passion_fruit",
       "required": false
     },
     {

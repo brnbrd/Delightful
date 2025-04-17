@@ -40,7 +40,7 @@ public class Nutrition {
 			.nutrition(5).saturationMod(0.3F)
 			.effect(() -> new MobEffectInstance(MobEffects.GLOWING, 900, 0), 1F).build();
 	public static final FoodProperties NUT_BUTTER_BOTTLE = (new FoodProperties.Builder())
-			.nutrition(5).saturationMod(0.3F).build();
+			.nutrition(5).saturationMod(0.55F).build();
 	public static final FoodProperties NUT_BUTTER_AND_JAM_SANDWICH = (new FoodProperties.Builder())
 			.nutrition(11).saturationMod(0.65F)
 			.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3600, 0), 1F).build();

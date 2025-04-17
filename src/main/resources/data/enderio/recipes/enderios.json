@@ -1,0 +1,42 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "enderio:enderios"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "minecraft:bowl"
+          },
+          {
+            "tag": "forge:milk"
+          },
+          {
+            "tag": "forge:grain/wheat"
+          },
+          [
+            {
+              "tag": "forge:berries"
+            },
+            {
+              "tag": "forge:fruits/banana"
+            }
+          ],
+          {
+            "tag": "forge:dusts/ender_pearl"
+          }
+        ],
+        "result": {
+          "item": "enderio:enderios"
+        }
+      }
+    }
+  ]
+}

@@ -5,6 +5,14 @@
       "required": false
     },
     {
+      "id": "#forge:fruits/peanut",
+      "required": false
+    },
+    {
+      "id": "hearthandharvest:peanut",
+      "required": false
+    },
+    {
       "id": "sprout:peanut",
       "required": false
     }

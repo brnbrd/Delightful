@@ -4,17 +4,12 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_beef_patty_and_cheese": {
+          "has_beef_patty": {
             "conditions": {
               "items": [
                 {
                   "items": [
                     "farmersdelight:beef_patty"
-                  ]
-                },
-                {
-                  "items": [
-                    "minecraft:milk_bucket"
                   ]
                 }
               ]
@@ -30,7 +25,7 @@
         },
         "requirements": [
           [
-            "has_beef_patty_and_cheese",
+            "has_beef_patty",
             "has_the_recipe"
           ]
         ],

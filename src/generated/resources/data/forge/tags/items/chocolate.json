@@ -19,6 +19,10 @@
     {
       "id": "create:bar_of_chocolate",
       "required": false
+    },
+    {
+      "id": "hearthandharvest:chocolate_bar",
+      "required": false
     }
   ]
 }

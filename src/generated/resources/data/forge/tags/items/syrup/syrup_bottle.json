@@ -5,6 +5,10 @@
       "required": false
     },
     {
+      "id": "hearthandharvest:syrup_bottle",
+      "required": false
+    },
+    {
       "id": "thermal:syrup_bottle",
       "required": false
     }

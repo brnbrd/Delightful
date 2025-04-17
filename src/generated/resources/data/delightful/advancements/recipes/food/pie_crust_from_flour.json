@@ -1,0 +1,48 @@
+{
+  "advancements": [
+    {
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "criteria": {
+          "has_flour": {
+            "conditions": {
+              "items": [
+                {
+                  "tag": "forge:flour"
+                }
+              ]
+            },
+            "trigger": "minecraft:inventory_changed"
+          },
+          "has_the_recipe": {
+            "conditions": {
+              "recipe": "delightful:food/pie_crust_from_flour"
+            },
+            "trigger": "minecraft:recipe_unlocked"
+          }
+        },
+        "requirements": [
+          [
+            "has_flour",
+            "has_the_recipe"
+          ]
+        ],
+        "rewards": {
+          "recipes": [
+            "delightful:food/pie_crust_from_flour"
+          ]
+        },
+        "sends_telemetry_event": false
+      },
+      "conditions": [
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:flour"
+          }
+        }
+      ]
+    }
+  ]
+}

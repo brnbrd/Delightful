@@ -1,5 +1,9 @@
 {
   "values": [
-    "minecraft:water_bucket"
+    "minecraft:water_bucket",
+    {
+      "id": "miners_delight:water_cup",
+      "required": false
+    }
   ]
 }

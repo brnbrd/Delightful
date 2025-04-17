@@ -55,11 +55,18 @@ public class JEIPlugin implements IModPlugin {
 		this.hide(hidden, Modid.TH, "carrot_block");
 		this.hide(hidden, Modid.TH, "potato_block");
 
+		// Neapolitan conflicts
+		this.hide(hidden, Modid.HH, "chocolate_bar", Modid.N);
+
 		// Other
 		this.hide(hidden, Modid.TH, "syrup_bottle", Modid.AUT);
-		this.hide(hidden, Modid.AA, "honeyed_apple", Modid.BB);
+		this.hide(hidden, Modid.AE2, "ender_dust", Modid.TH);
+		this.hide(hidden, Modid.EIO, "powdered_ender_pearl", Modid.TH);
+		this.hide(hidden, Modid.EIO, "cake_base");
+		this.hide(hidden, Modid.EIO, "silicon", Modid.AE2);
 		this.hide(hidden, Modid.MOD, "bread_slice", Modid.SAS);
 		this.hide(hidden, Modid.MOD, "toast", Modid.SAS);
+		this.hide(hidden, Modid.AA, "honeyed_apple", Modid.BB);
 
 		if (!hidden.isEmpty()) {
 			registration.getIngredientManager().removeIngredientsAtRuntime(VanillaTypes.ITEM_STACK, hidden);

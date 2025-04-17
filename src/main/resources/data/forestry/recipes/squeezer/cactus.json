@@ -1,0 +1,38 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "forestry:squeezer"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:cacti"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "forestry:squeezer",
+        "chance": 0.0,
+        "output": {
+          "Amount": 500,
+          "FluidName": "minecraft:water"
+        },
+        "remnant": {
+          "Count": 0,
+          "id": "minecraft:air"
+        },
+        "resources": [
+          {
+            "tag": "forge:cacti"
+          }
+        ],
+        "time": 10
+      }
+    }
+  ]
+}

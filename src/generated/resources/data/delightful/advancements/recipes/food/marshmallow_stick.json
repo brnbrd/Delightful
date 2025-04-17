@@ -43,6 +43,13 @@
           "type": "forge:not",
           "value": {
             "type": "forge:mod_loaded",
+            "modid": "hearthandharvest"
+          }
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:mod_loaded",
             "modid": "create_confectionery"
           }
         }

@@ -1,0 +1,43 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:dusts/flour/wheat"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          [
+            {
+              "tag": "forge:water"
+            },
+            {
+              "count": 1,
+              "type": "forge:nbt",
+              "item": "minecraft:potion",
+              "nbt": "{Potion:\"minecraft:water\"}"
+            }
+          ],
+          {
+            "tag": "forge:dusts/flour/wheat"
+          },
+          {
+            "tag": "forge:dusts/flour/wheat"
+          }
+        ],
+        "result": {
+          "count": 3,
+          "item": "farmersdelight:wheat_dough"
+        }
+      }
+    }
+  ]
+}

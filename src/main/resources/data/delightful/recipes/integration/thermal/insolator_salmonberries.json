@@ -1,0 +1,29 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "thermal:machine_insolator"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "thermal_expansion"
+        }
+      ],
+      "recipe": {
+        "type": "thermal:insolator",
+        "ingredient": {
+          "item": "delightful:salmonberries"
+        },
+        "result": [
+          {
+            "item": "delightful:salmonberries",
+            "chance": 2.5
+          }
+        ]
+      }
+    }
+  ]
+}

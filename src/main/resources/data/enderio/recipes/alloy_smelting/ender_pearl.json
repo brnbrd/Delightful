@@ -1,0 +1,36 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "enderio:alloy_smelter"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:dusts/ender_pearl"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "enderio:alloy_smelting",
+        "energy": 2000,
+        "experience": 0.3,
+        "inputs": [
+          {
+            "count": 1,
+            "ingredient": {
+              "tag": "forge:dusts/ender_pearl"
+            }
+          }
+        ],
+        "result": {
+          "item": "minecraft:ender_pearl"
+        }
+      }
+    }
+  ]
+}

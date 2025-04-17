@@ -1,0 +1,38 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "forestry:squeezer"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:fruits/citrus"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "forestry:squeezer",
+        "chance": 0.1,
+        "output": {
+          "Amount": 400,
+          "FluidName": "forestry:juice"
+        },
+        "remnant": {
+          "Count": 1,
+          "id": "forestry:mulch"
+        },
+        "resources": [
+          {
+            "tag": "forge:fruits/citrus"
+          }
+        ],
+        "time": 10
+      }
+    }
+  ]
+}

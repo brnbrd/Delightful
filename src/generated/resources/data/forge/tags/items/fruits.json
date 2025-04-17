@@ -23,11 +23,15 @@
       "required": false
     },
     {
-      "id": "undergarden:droopvine_item",
+      "id": "endergetic:bolloom_fruit",
       "required": false
     },
     {
       "id": "phantasm:oblifruit",
+      "required": false
+    },
+    {
+      "id": "undergarden:droopvine_item",
       "required": false
     },
     {

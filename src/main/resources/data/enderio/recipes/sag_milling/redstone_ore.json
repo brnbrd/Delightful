@@ -1,0 +1,112 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "enderio:sag_mill"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "ae2:silicon"
+        }
+      ],
+      "recipe": {
+        "type": "enderio:sag_milling",
+        "energy": 2400,
+        "input": {
+          "tag": "forge:ores/redstone"
+        },
+        "outputs": [
+          {
+            "chance": 1.0,
+            "item": {
+              "count": 8,
+              "item": "minecraft:redstone"
+            },
+            "optional": false
+          },
+          {
+            "chance": 0.2,
+            "item": {
+              "item": "minecraft:redstone"
+            },
+            "optional": false
+          },
+          {
+            "chance": 0.8,
+            "item": {
+              "item": "ae2:silicon"
+            },
+            "optional": false
+          },
+          {
+            "chance": 0.15,
+            "item": {
+              "item": "minecraft:cobblestone"
+            },
+            "optional": false
+          }
+        ]
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "enderio:sag_mill"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:item_exists",
+            "item": "ae2:silicon"
+          }
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "enderio:silicon"
+        }
+      ],
+      "recipe": {
+        "type": "enderio:sag_milling",
+        "energy": 2400,
+        "input": {
+          "tag": "forge:ores/redstone"
+        },
+        "outputs": [
+          {
+            "chance": 1.0,
+            "item": {
+              "count": 8,
+              "item": "minecraft:redstone"
+            },
+            "optional": false
+          },
+          {
+            "chance": 0.2,
+            "item": {
+              "item": "minecraft:redstone"
+            },
+            "optional": false
+          },
+          {
+            "chance": 0.8,
+            "item": {
+              "item": "enderio:silicon"
+            },
+            "optional": false
+          },
+          {
+            "chance": 0.15,
+            "item": {
+              "item": "minecraft:cobblestone"
+            },
+            "optional": false
+          }
+        ]
+      }
+    }
+  ]
+}

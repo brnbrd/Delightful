@@ -1,0 +1,74 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "ae2:inscriber"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:ender_pearls"
+          }
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "thermal:ender_pearl_dust"
+        }
+      ],
+      "recipe": {
+        "type": "ae2:inscriber",
+        "ingredients": {
+          "middle": {
+            "tag": "forge:ender_pearls"
+          }
+        },
+        "mode": "inscribe",
+        "result": {
+          "item": "thermal:ender_pearl_dust"
+        }
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "ae2:inscriber"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:ender_pearls"
+          }
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:item_exists",
+            "item": "thermal:ender_pearl_dust"
+          }
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "ae2:ender_dust"
+        }
+      ],
+      "recipe": {
+        "type": "ae2:inscriber",
+        "ingredients": {
+          "middle": {
+            "tag": "forge:ender_pearls"
+          }
+        },
+        "mode": "inscribe",
+        "result": {
+          "item": "ae2:ender_dust"
+        }
+      }
+    }
+  ]
+}

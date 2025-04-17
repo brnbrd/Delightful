@@ -1,0 +1,86 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "enderio:sag_mill"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:ender_pearls"
+          }
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "thermal:ender_pearl_dust"
+        }
+      ],
+      "recipe": {
+        "type": "enderio:sag_milling",
+        "bonus": "none",
+        "energy": 2400,
+        "input": {
+          "tag": "forge:ender_pearls"
+        },
+        "outputs": [
+          {
+            "chance": 1.0,
+            "item": {
+              "count": 1,
+              "item": "thermal:ender_pearl_dust"
+            },
+            "optional": false
+          }
+        ]
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "enderio:sag_mill"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:ender_pearls"
+          }
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "enderio:powdered_ender_pearl"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:item_exists",
+            "item": "thermal:ender_pearl_dust"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "enderio:sag_milling",
+        "bonus": "none",
+        "energy": 2400,
+        "input": {
+          "tag": "forge:ender_pearls"
+        },
+        "outputs": [
+          {
+            "chance": 1.0,
+            "item": {
+              "count": 1,
+              "item": "enderio:powdered_ender_pearl"
+            },
+            "optional": false
+          }
+        ]
+      }
+    }
+  ]
+}

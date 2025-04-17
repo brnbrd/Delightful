@@ -33,6 +33,10 @@
       "required": false
     },
     {
+      "id": "hearthandharvest:peanut_butter_cookie",
+      "required": false
+    },
+    {
       "id": "fruitsdelight:persimmon_cookie",
       "required": false
     },

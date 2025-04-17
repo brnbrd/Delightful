@@ -8,9 +8,7 @@
             "conditions": {
               "items": [
                 {
-                  "items": [
-                    "delightful:marshmallow_stick"
-                  ]
+                  "tag": "delightful:marshmallow_stick"
                 }
               ]
             },
@@ -40,6 +38,13 @@
         {
           "type": "delightful:enabled",
           "value": "cooked_marshmallow_stick"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:mod_loaded",
+            "modid": "hearthandharvest"
+          }
         }
       ]
     }

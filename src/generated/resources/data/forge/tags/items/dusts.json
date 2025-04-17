@@ -1,0 +1,27 @@
+{
+  "values": [
+    "#forge:dusts/flour",
+    "#forge:dusts/ender_pearl",
+    "#forge:dusts/wood",
+    {
+      "id": "deeperdarker:soul_dust",
+      "required": false
+    },
+    {
+      "id": "redstone_arsenal:flux_dust",
+      "required": false
+    },
+    {
+      "id": "#forge:dusts/prismalium",
+      "required": false
+    },
+    {
+      "id": "#forge:dusts/melodium",
+      "required": false
+    },
+    {
+      "id": "#forge:dusts/stellarium",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "cactus_flesh"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "biomeswevegone:flowering_barrel_cactus"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "biomeswevegone:flowering_barrel_cactus"
+          }
+        ],
+        "tool": {
+          "tag": "forge:tools/knives"
+        },
+        "result": [
+          {
+            "count": 2,
+            "item": "delightful:cactus_flesh"
+          },
+          {
+            "item": "minecraft:pink_dye"
+          }
+        ]
+      }
+    }
+  ]
+}

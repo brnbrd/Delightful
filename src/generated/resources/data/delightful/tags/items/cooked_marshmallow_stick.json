@@ -1,0 +1,9 @@
+{
+  "values": [
+    "delightful:cooked_marshmallow_stick",
+    {
+      "id": "hearthandharvest:roasted_marshmallow_stick",
+      "required": false
+    }
+  ]
+}

@@ -139,34 +139,36 @@ public class DelightfulItems {
 	public static final RegistryObject<Item> DELUXE_CHEESEBURGER = registerConsumable("deluxe_cheeseburger", Nutrition.DELUXE_CHEESEBURGER, null, true, false);
 	public static final RegistryObject<Item> CHUNKWICH = registerCompatFood("chunkwich", Nutrition.CHUNKWICH, true, Modid.RL);
 	public static final RegistryObject<Item> ROCK_CANDY = registerItem("rock_candy",
-			() -> new RockCandyItem((new Item.Properties()).food(Nutrition.ROCK_CANDY).craftRemainder(Items.STICK)));
-	public static final RegistryObject<Item> MARSHMALLOW_STICK = registerConsumable("marshmallow_stick", Nutrition.MARSHMALLOW_STICK, Items.STICK, false, false);
-	public static final RegistryObject<Item> COOKED_MARSHMALLOW_STICK = registerConsumable("cooked_marshmallow_stick", Nutrition.COOKED_MARSHMALLOW_STICK, Items.STICK, true, false);
+		() -> new RockCandyItem((new Item.Properties()).food(Nutrition.ROCK_CANDY).craftRemainder(Items.STICK)));
+	public static final RegistryObject<Item> MARSHMALLOW_STICK = registerItem("marshmallow_stick",
+		() -> new MarshmallowStickItem((new Item.Properties()).food(Nutrition.MARSHMALLOW_STICK), false));
+	public static final RegistryObject<Item> COOKED_MARSHMALLOW_STICK = registerItem("cooked_marshmallow_stick",
+		() -> new MarshmallowStickItem((new Item.Properties()).food(Nutrition.COOKED_MARSHMALLOW_STICK).craftRemainder(Items.STICK), true));
 	public static final RegistryObject<Item> SMORE = registerConsumable("smore", Nutrition.SMORE, null, true, false);
 	public static final RegistryObject<Item> CRAB_RANGOON = registerItem("crab_rangoon",
-			() -> new CrabRangoonItem(new Item.Properties().food(Nutrition.CRAB_RANGOON)));
+		() -> new CrabRangoonItem(new Item.Properties().food(Nutrition.CRAB_RANGOON)));
 	public static final RegistryObject<Item> HONEY_GLAZED_WALNUT = registerItem("honey_glazed_walnut",
-			() -> new HoneyGlazedWalnutItem(new Item.Properties().food(Nutrition.HONEY_GLAZED_WALNUT)));
+		() -> new HoneyGlazedWalnutItem(new Item.Properties().food(Nutrition.HONEY_GLAZED_WALNUT)));
 	public static final RegistryObject<Item> VENISON_CHOPS = registerItem("venison_chops",
-			() -> new VenisonChopsItem(new Item.Properties().food(Nutrition.VENISON_CHOPS)));
+		() -> new VenisonChopsItem(new Item.Properties().food(Nutrition.VENISON_CHOPS)));
 	public static final RegistryObject<Item> COOKED_VENISON_CHOPS = registerItem("cooked_venison_chops",
-			() -> new VenisonChopsItem(new Item.Properties().food(Nutrition.COOKED_VENISON_CHOPS)));
+		() -> new VenisonChopsItem(new Item.Properties().food(Nutrition.COOKED_VENISON_CHOPS)));
 	public static final RegistryObject<Item> RAW_GOAT = registerItem("raw_goat",
-			() -> new GoatMeatItem(new Item.Properties().food(Nutrition.RAW_GOAT)));
+		() -> new GoatMeatItem(new Item.Properties().food(Nutrition.RAW_GOAT)));
 	public static final RegistryObject<Item> COOKED_GOAT = registerItem("cooked_goat",
-			() -> new GoatMeatItem(new Item.Properties().food(Nutrition.COOKED_GOAT)));
+		() -> new GoatMeatItem(new Item.Properties().food(Nutrition.COOKED_GOAT)));
 	public static final RegistryObject<Item> MINI_MELON = registerItem("mini_melon", () ->
-			new BlockItem(DelightfulBlocks.MINI_MELON.get(), ModItems.basicItem()));
+		new BlockItem(DelightfulBlocks.MINI_MELON.get(), ModItems.basicItem()));
 	public static final RegistryObject<Item> CANTALOUPE = registerItem("cantaloupe", () ->
-			new BlockItem(DelightfulBlocks.CANTALOUPE.get(), ModItems.basicItem()));
+		new BlockItem(DelightfulBlocks.CANTALOUPE.get(), ModItems.basicItem()));
 	public static final RegistryObject<Item> CANTALOUPE_SEEDS = registerItem("cantaloupe_seeds",
-			() -> new ItemNameBlockItem(DelightfulBlocks.CANTALOUPE_PLANT.get(), ModItems.basicItem()));
+		() -> new ItemNameBlockItem(DelightfulBlocks.CANTALOUPE_PLANT.get(), ModItems.basicItem()));
 	public static final RegistryObject<Item> CANTALOUPE_SLICE = registerFood("cantaloupe_slice", Nutrition.CANTALOUPE_SLICE);
 	public static final RegistryObject<Item> CANTALOUPE_BREAD = registerConsumable("cantaloupe_bread", Nutrition.CANTALOUPE_BREAD, null, true, false);
 	public static final RegistryObject<Item> WRAPPED_CANTALOUPE = registerConsumable("wrapped_cantaloupe", Nutrition.WRAPPED_CANTALOUPE, null, true, false);
 	public static final RegistryObject<Item> CANTALOUPE_POPSICLE = registerConsumable("cantaloupe_popsicle", Nutrition.CANTALOUPE_POPSICLE, Items.STICK, true, false);
 	public static final RegistryObject<Item> STUFFED_CANTALOUPE_BLOCK = registerItem("stuffed_cantaloupe_block",
-			() -> new BlockItem(DelightfulBlocks.STUFFED_CANTALOUPE_BLOCK.get(), ModItems.basicItem().stacksTo(1)));
+		() -> new BlockItem(DelightfulBlocks.STUFFED_CANTALOUPE_BLOCK.get(), ModItems.basicItem().stacksTo(1)));
 	public static final RegistryObject<Item> STUFFED_CANTALOUPE = registerConsumable("stuffed_cantaloupe", Nutrition.STUFFED_CANTALOUPE, Items.BOWL, true, false);
 
 	// Gummies
