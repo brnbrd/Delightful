@@ -4,11 +4,11 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_sugar": {
+          "has_marshmallow": {
             "conditions": {
               "items": [
                 {
-                  "tag": "forge:sugar"
+                  "tag": "forge:marshmallow"
                 }
               ]
             },
@@ -16,20 +16,20 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:food/marshmallow_stick"
+              "recipe": "delightful:food/marshmallow_stick_from_marshmallow"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
         },
         "requirements": [
           [
-            "has_sugar",
+            "has_marshmallow",
             "has_the_recipe"
           ]
         ],
         "rewards": {
           "recipes": [
-            "delightful:food/marshmallow_stick"
+            "delightful:food/marshmallow_stick_from_marshmallow"
           ]
         },
         "sends_telemetry_event": false
@@ -42,15 +42,15 @@
         {
           "type": "forge:not",
           "value": {
-            "type": "forge:mod_loaded",
-            "modid": "hearthandharvest"
+            "type": "forge:tag_empty",
+            "tag": "forge:marshmallow"
           }
         },
         {
           "type": "forge:not",
           "value": {
             "type": "forge:mod_loaded",
-            "modid": "create_confectionery"
+            "modid": "hearthandharvest"
           }
         }
       ]

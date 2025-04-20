@@ -1,0 +1,8 @@
+{
+  "values": [
+    {
+      "id": "create_confectionery:marshmallow",
+      "required": false
+    }
+  ]
+}

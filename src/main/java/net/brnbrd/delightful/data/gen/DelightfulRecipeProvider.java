@@ -143,12 +143,11 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 						.requires(ForgeTags.VEGETABLES_ONION)
 						.unlockedBy("has_bacon", has(ModItems.COOKED_BACON.get())),
 				"food/deluxe_cheeseburger_from_bun", finished, enabled("deluxe_cheeseburger"), not(tagEmpty(DelightfulItemTags.BURGER_BUN)), not(tagEmpty(DelightfulItemTags.CHEESE)));
-		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.MARSHMALLOW_STICK.get(), 2)
-						.requires(DelightfulItemTags.SUGAR)
-						.requires(DelightfulItemTags.WATER)
-						.requires(Ingredient.of(Tags.Items.RODS_WOODEN), 2)
-						.unlockedBy("has_sugar", has(DelightfulItemTags.SUGAR)),
-				"food/marshmallow_stick", finished, enabled(DelightfulItems.MARSHMALLOW_STICK), not(modLoaded(Modid.HH.get())), not(modLoaded("create_confectionery")));
+		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.MARSHMALLOW_STICK.get())
+				.requires(DelightfulItemTags.MARSHMALLOW)
+				.requires(Tags.Items.RODS_WOODEN)
+				.unlockedBy("has_marshmallow", has(DelightfulItemTags.MARSHMALLOW)),
+			"food/marshmallow_stick_from_marshmallow", finished, enabled(DelightfulItems.MARSHMALLOW_STICK), not(tagEmpty(DelightfulItemTags.MARSHMALLOW)), not(modLoaded(Modid.HH.get())));
 		wrap(SimpleCookingRecipeBuilder.campfireCooking(
 				Ingredient.of(DelightfulItemTags.MARSHMALLOW_STICK),
 				RecipeCategory.FOOD,

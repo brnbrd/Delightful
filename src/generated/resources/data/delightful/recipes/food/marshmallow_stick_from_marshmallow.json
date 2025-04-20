@@ -8,28 +8,32 @@
           "value": "marshmallow_stick"
         },
         {
-          "type": "forge:mod_loaded",
-          "modid": "create_confectionery"
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:marshmallow"
+          }
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:mod_loaded",
+            "modid": "hearthandharvest"
+          }
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shapeless",
+        "category": "misc",
         "ingredients": [
           {
-            "item": "create_confectionery:marshmallow"
-          },
-          {
-            "item": "create_confectionery:marshmallow"
-          },
-          {
-            "tag": "forge:rods/wooden"
+            "tag": "forge:marshmallow"
           },
           {
             "tag": "forge:rods/wooden"
           }
         ],
         "result": {
-          "count": 2,
           "item": "delightful:marshmallow_stick"
         }
       }

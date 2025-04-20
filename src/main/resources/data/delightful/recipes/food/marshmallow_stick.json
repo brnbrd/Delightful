@@ -8,17 +8,14 @@
           "value": "marshmallow_stick"
         },
         {
-          "type": "forge:not",
-          "value": {
-            "type": "forge:mod_loaded",
-            "modid": "hearthandharvest"
-          }
+          "type": "forge:tag_empty",
+          "tag": "forge:marshmallow"
         },
         {
           "type": "forge:not",
           "value": {
             "type": "forge:mod_loaded",
-            "modid": "create_confectionery"
+            "modid": "hearthandharvest"
           }
         }
       ],
@@ -30,8 +27,19 @@
             "tag": "forge:sugar"
           },
           {
-            "tag": "forge:water"
+            "tag": "forge:sugar"
           },
+          [
+            {
+              "tag": "forge:water"
+            },
+            {
+              "count": 1,
+              "type": "forge:nbt",
+              "item": "minecraft:potion",
+              "nbt": "{Potion:\"minecraft:water\"}"
+            }
+          ],
           {
             "tag": "forge:rods/wooden"
           },

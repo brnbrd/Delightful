@@ -6,13 +6,16 @@
 ### Updates
 - Cantaloupe Bread now requires 1 Sugar
 - Nut Butter Bottle is now cooked from 3 nuts and 1 Sugar
+- 2 Marshmallow on a Stick are now crafted from 2 Sugar, 1 water, and 2 Sticks
 - Added recycling recipes for some knives
 - Added Sap and Syrup compatibility for [Autumnity](https://www.curseforge.com/minecraft/mc-mods/autumnity) and [Thermal](https://www.curseforge.com/minecraft/mc-mods/thermal-foundation)
+- Added more support to `can_be_salted` tag from [The Salt](https://www.curseforge.com/minecraft/mc-mods/salt)
 - Added recipe to use Thermal's Compost to craft Organic Compost
 - Increased length of Mana Regeneration from Source Berry Pie Slice from 10 to 15 seconds
 - Added cutting recipe for Mageblooms (from [Ars Nouveau](https://www.curseforge.com/minecraft/mc-mods/ars-nouveau))
 
 ### Fixes
+- Fixed Rock Candy and Marshmallow on a Stick items not using handheld viewmodel
 - Fixed some instances of missing tooltip information
 - Silver Knife will be disabled in presence of [Abnormals Delight](https://www.curseforge.com/minecraft/mc-mods/abnormals-delight)
 - Fixed placeability of Source Berry Pie in some cases

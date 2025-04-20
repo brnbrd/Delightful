@@ -1,4 +1,4 @@
-// 1.20.1	2025-04-17T09:15:54.3492934	delightful
+// 1.20.1	2025-04-20T08:29:26.9758243	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -92,10 +92,11 @@ fad94b920198ac7c369dd53491539642e16d54d0 data/forge/tags/items/crab_meat.json
 c464a45fa61577982bb9df35b5cac169eb26e7f3 data/forge/tags/items/dough.json
 7640d02b3c85e174322059097d96b529ba37ac78 data/forge/tags/items/dough/corn.json
 99b0d5003d08c1f6c9d41d27b464d4a911dde6f1 data/forge/tags/items/dough/nut.json
-6b56ed178291ecdc66d87275815e1a64be6b5e37 data/forge/tags/items/dusts.json
+cc868c400853f2ff41a6e82ab19e41b911b8fc48 data/forge/tags/items/dusts.json
 1ef3f227733e63c3d14eb69aece003a24674073d data/forge/tags/items/dusts/ender_pearl.json
 10023cdacbd2ad9204299a1dc18bb059d5740574 data/forge/tags/items/dusts/flour.json
 4fcfb0c069358677bf799ce4eda6b1da9d448ab0 data/forge/tags/items/dusts/flour/wheat.json
+b6bb70cfce883138ed29291913e23bf7e8edb6da data/forge/tags/items/dusts/salt.json
 0174d87adbcee332f9afcf23f383c6cb376e2966 data/forge/tags/items/dusts/wood.json
 b4c8d4816b358b269c3373caeaf9fb54fd68d233 data/forge/tags/items/eggs.json
 1941d8504a5ebb376af1643b1d982523f383ca3d data/forge/tags/items/feathers.json
@@ -155,6 +156,7 @@ a2c1b0bb89891c01a65518d797b2be4020720a63 data/forge/tags/items/ingots/stratus.js
 d554ed3f6b8762427d8c40a172c78361952260ed data/forge/tags/items/ingots/veridium.json
 dbe4fa9939d1bc6a7054e7a069973b54f2d12ab7 data/forge/tags/items/jams.json
 52d821c48dd4653008d93009d83156469191b18c data/forge/tags/items/lavender.json
+92e1871435d3246a5a0a5dce0c305a6f337ac544 data/forge/tags/items/marshmallow.json
 5160d3e42adb69a7a3e121df7fe653817a5d6b1b data/forge/tags/items/matcha.json
 f2c2fa99846dd38fbcf4460d40f560d57c700ac5 data/forge/tags/items/milk.json
 29b80168f81ef905a4b9c199bf761364e6ac3e33 data/forge/tags/items/nuts.json
@@ -180,7 +182,7 @@ c28b2966b7751691456f3c7ae84cb77f31a4f245 data/forge/tags/items/raw_venison.json
 eede30f09088aaf8a642eb4ea1ebc60e3b69e020 data/forge/tags/items/ropes.json
 07d72463f24c491eee78f8f830934ecfe70da89b data/forge/tags/items/rosey.json
 0d7690c4ede992c93d728b1587f6e8452f47c199 data/forge/tags/items/salad_ingredients.json
-b6bb70cfce883138ed29291913e23bf7e8edb6da data/forge/tags/items/salt.json
+848b08c97c587fbcfb7a9888e8c5ec73d0195075 data/forge/tags/items/salt.json
 a09b42ac27e237ab7a07cef195745960d786fca5 data/forge/tags/items/seeds.json
 9b41a77626703e8e0afcfac6855ec3e6bc967180 data/forge/tags/items/seeds/cantaloupe.json
 812e02df7738d094a037a44204b8edcb5b13f600 data/forge/tags/items/seeds/salmonberry.json
@@ -220,6 +222,7 @@ a95df2279e05baa5f0608937c6c66f68c44ebf2d data/nethersdelight/tags/items/meal_ite
 bd03c94c3be4df3a7a6a198d6d729fad9fb4311f data/phantasm/tags/items/crystal_spike_tips.json
 61d64c77058e1625c2e3b99ed4a928eea28f624e data/phantasm/tags/items/gets_xp_speed_boost.json
 a8f06d7dc1646ce181a8dc82c1d2a179064212a9 data/phantasm/tags/items/void_crystal_block.json
+ce5356ffa5674f138371ca2ce13e6514fff90967 data/salt/tags/items/can_be_salted.json
 6ee15734ac9331c3a1b186bd12a7cfc07d71273b data/seeds/tags/items/sharp_leaf.json
 e8907bb6383992d824e326f554fcbab430f7e5ce data/sereneseasons/tags/items/summer_crops.json
 5ca5c9750568ae0343de46dc7bae0316ddffd566 data/spirit/tags/items/soul_steel_mainhand.json
