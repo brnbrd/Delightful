@@ -84,6 +84,7 @@ public enum Modid {
 	RC("rootsclassic"),
 	RF("respiteful"),
 	RL("rottenleather"),
+	S("salt"),
 	SAS("some_assembly_required"),
 	SE("seeds"),
 	SM("sullysmod"),

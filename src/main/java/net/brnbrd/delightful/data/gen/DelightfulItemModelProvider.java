@@ -18,16 +18,21 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.List;
 
 public class DelightfulItemModelProvider extends ItemModelProvider {
+	private static final List<ResourceLocation> HANDHELD = List.of(
+		DelightfulItems.MARSHMALLOW_STICK.getId(),
+		DelightfulItems.COOKED_MARSHMALLOW_STICK.getId(),
+		DelightfulItems.ROCK_CANDY.getId()
+	);
 	private static final List<ResourceLocation> FLAT_BLOCKS = List.of(
-			DelightfulItems.WILD_SALMONBERRIES.getId(),
-			DelightfulItems.STUFFED_CANTALOUPE_BLOCK.getId()
+		DelightfulItems.WILD_SALMONBERRIES.getId(),
+		DelightfulItems.STUFFED_CANTALOUPE_BLOCK.getId()
 	);
 	private static final List<ResourceLocation> ITEM_BLOCKS = List.of(
-			DelightfulItems.SALMONBERRY_PIE.getId(),
-			DelightfulItems.BAKLAVA.getId()
+		DelightfulItems.SALMONBERRY_PIE.getId(),
+		DelightfulItems.BAKLAVA.getId()
 	);
 	private static final List<ResourceLocation> EMISSIVE = List.of(
-			Knives.FIERY.getId()
+		Knives.FIERY.getId()
 	);
 	public DelightfulItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
 		super(output, Delightful.MODID, existingFileHelper);
@@ -39,13 +44,18 @@ public class DelightfulItemModelProvider extends ItemModelProvider {
 			ResourceLocation id = entry.getId();
 			if (EMISSIVE.contains(id)) {
 				emissive(id);
-			} else if (entry.get() instanceof DKnifeItem) {
+			} else if (
+				HANDHELD.contains(id) ||
+				entry.get() instanceof DKnifeItem
+			) {
 				handheld(id);
 			} else if (FLAT_BLOCKS.contains(id)) {
 				flatBlock(id);
-			} else if (entry.get() instanceof BlockItem &&
-					!(entry.get() instanceof ItemNameBlockItem) &&
-					!ITEM_BLOCKS.contains(id)) {
+			} else if (
+				entry.get() instanceof BlockItem &&
+				!(entry.get() instanceof ItemNameBlockItem) &&
+				!ITEM_BLOCKS.contains(id)
+			) {
 				withExistingParent(id.getPath(), Util.rl(this.modid, "block/" + id.getPath()));
 			} else {
 				basicItem(id);
@@ -55,7 +65,7 @@ public class DelightfulItemModelProvider extends ItemModelProvider {
 
 	public void flatBlock(ResourceLocation id) {
 		getBuilder(id.toString()).parent(new ModelFile.UncheckedModelFile("item/generated"))
-				.texture("layer0", new ResourceLocation(id.getNamespace(), "block/" + id.getPath()));
+			.texture("layer0", new ResourceLocation(id.getNamespace(), "block/" + id.getPath()));
 	}
 
 	public void handheld(ResourceLocation item) {
@@ -64,7 +74,7 @@ public class DelightfulItemModelProvider extends ItemModelProvider {
 
 	public void emissive(ResourceLocation item) {
 		withExistingParent(item.getPath(), "item/handheld")
-				.texture("layer0", Util.delight("item/" + item.getPath()))
-				.guiLight(BlockModel.GuiLight.FRONT);
+			.texture("layer0", Util.delight("item/" + item.getPath()))
+			.guiLight(BlockModel.GuiLight.FRONT);
 	}
 }
