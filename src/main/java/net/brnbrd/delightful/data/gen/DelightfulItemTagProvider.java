@@ -331,8 +331,6 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.WATER)
 			.add(Items.WATER_BUCKET)
 			.addOptional(Modid.MD.rl("water_cup"));
-		this.tag(DelightfulItemTags.SALT)
-			.addOptional(Modid.HH.rl("salt"));
 		this.tag(DelightfulItemTags.FLOWERS_AZALEA)
 			.addOptional(Modid.ECO.rl("azalea_flower"))
 			.addOptional(Util.rl("twigs", "azalea_flowers"));
@@ -385,6 +383,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.AA.rl("fried_egg"))
 			.addOptional(Modid.IN.rl("fried_egg"))
 			.addOptional(Modid.NA.rl("cooked_egg"));
+		this.tag(DelightfulItemTags.DUSTS_SALT).addOptional(Modid.HH.rl("salt"));
+		this.tag(DelightfulItemTags.SALT).addTag(DelightfulItemTags.DUSTS_SALT);
 		this.tag(DelightfulItemTags.DUSTS_FLOUR_WHEAT).addOptional(Modid.EIO.rl("flour"));
 		this.tag(DelightfulItemTags.DUSTS_FLOUR)
 			.addTag(DelightfulItemTags.DUSTS_FLOUR_WHEAT)
@@ -396,6 +396,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.AE2.rl("ender_dust"));
 		this.tag(DelightfulItemTags.DUSTS_WOOD).addOptional(Modid.FOR.rl("wood_pulp"));
 		this.tag(Tags.Items.DUSTS)
+			.addTag(DelightfulItemTags.DUSTS_SALT)
 			.addTag(DelightfulItemTags.DUSTS_FLOUR)
 			.addTag(DelightfulItemTags.DUSTS_ENDER_PEARL)
 			.addTag(DelightfulItemTags.DUSTS_WOOD)
@@ -714,6 +715,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.SNAIL_SHELLS)
 			.addOptional(Modid.NA.rl("snail_shell"))
 			.addOptional(Modid.AUT.rl("snail_shell_piece"));
+		this.tag(DelightfulItemTags.MARSHMALLOW)
+			.addOptional(Util.rl("create_confectionery", "marshmallow"));
 
 		// Collector's Reap
 		this.tag(Modid.CR.it("gummies"))
@@ -735,6 +738,23 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(Modid.MND.it("curry_meats"))
 			.addTag(DelightfulItemTags.RAW_VENISON)
 			.addTag(DelightfulItemTags.RAW_GOAT);
+
+		// Salt
+		this.tag(Modid.S.it("can_be_salted"))
+			.addTag(DelightfulItemTags.COOKED_CRAB)
+			.addTag(DelightfulItemTags.COOKED_GOAT)
+			.addTag(DelightfulItemTags.COOKED_NUTS)
+			.add(DelightfulItems.COCONUT_CURRY.get())
+			.add(DelightfulItems.VENISON_STEW.get())
+			.add(DelightfulItems.VENISON_STEW_CUP.get())
+			.add(DelightfulItems.CACTUS_SOUP.get())
+			.add(DelightfulItems.CACTUS_SOUP_CUP.get())
+			.add(DelightfulItems.CACTUS_CHILI.get())
+			.add(DelightfulItems.CACTUS_STEAK.get())
+			.add(DelightfulItems.CHUNKWICH.get())
+			.add(DelightfulItems.CRAB_RANGOON.get())
+			.add(DelightfulItems.CHUNKWICH.get())
+			.add(DelightfulItems.STUFFED_CANTALOUPE.get());
 
 		// Ecologics
 		this.addSelf(Modid.ECO.it("cooked_prickly_pear"));

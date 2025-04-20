@@ -1,8 +1,5 @@
 {
   "values": [
-    {
-      "id": "hearthandharvest:salt",
-      "required": false
-    }
+    "#forge:dusts/salt"
   ]
 }

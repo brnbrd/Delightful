@@ -98,7 +98,6 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> WATER = forge("water");
 	public static final TagKey<Item> CHEESE = forge("cheese");
 	public static final TagKey<Item> CHOCOLATE = forge("chocolate");
-	public static final TagKey<Item> SALT = forge("salt");
 	public static final TagKey<Item> HOT_SPICE = forge("hot_spice");
 	public static final TagKey<Item> PUMPKINS = forge("pumpkins");
 	public static final TagKey<Item> PUMPKINS_CARVED = forge("pumpkins/carved");
@@ -158,6 +157,8 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> SEEDS_SALMONBERRY = forge("seeds/salmonberry");
 	public static final TagKey<Item> SEEDS_CANTALOUPE = forge("seeds/cantaloupe");
 	public static final TagKey<Item> BONES = forge("bones");
+	public static final TagKey<Item> SALT = forge("salt");
+	public static final TagKey<Item> DUSTS_SALT = forge("dusts/salt");
 	public static final TagKey<Item> DUSTS_WOOD = forge("dusts/wood");
 	public static final TagKey<Item> DUSTS_ENDER_PEARL = forge("dusts/ender_pearl");
 	public static final TagKey<Item> FLOUR = forge("flour");
@@ -173,6 +174,11 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> ROPES = forge("ropes");
 	public static final TagKey<Item> FEATHERS = forge("feathers");
 	public static final TagKey<Item> SNAIL_SHELLS = forge("snail_shells");
+	public static final TagKey<Item> MARSHMALLOW = forge("marshmallow");
+
+	// Create
+	public static final TagKey<Item> UPRIGHT_ON_BELT = Modid.C.it("upright_on_belt");
+	public static final TagKey<Item> POLISHED_ROSE_QUARTZ = Modid.C.it("polished_rose_quartz");
 
 	// Forbidden and Arcanus
 	public static final TagKey<Item> DRAGON_SCALE = Modid.FA.it("dragon_scale");
@@ -186,10 +192,6 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> REINFORCED_ECHO_SHARD = Modid.DD.it("reinforced_echo_shard");
 	public static final TagKey<Item> RESONARIUM = Modid.DD.it("resonarium");
 	public static final TagKey<Item> RESONARIUM_PLATE = Modid.DD.it("resonarium_plate");
-
-	// Create
-	public static final TagKey<Item> UPRIGHT_ON_BELT = Modid.C.it("upright_on_belt");
-	public static final TagKey<Item> POLISHED_ROSE_QUARTZ = Modid.C.it("polished_rose_quartz");
 
 	// MCreator mods
 	public static final TagKey<Item> HEAP_EXPERIENCE = Modid.CSA.it("heap_of_experience");
