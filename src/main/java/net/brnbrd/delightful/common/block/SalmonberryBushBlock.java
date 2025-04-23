@@ -59,17 +59,11 @@ public class SalmonberryBushBlock extends BushBlock implements BonemealableBlock
 		}
 	}
 
-	/**
-	 * @return whether this block needs random ticking.
-	 */
 	@Override
 	public boolean isRandomlyTicking(@NotNull BlockState state) {
 		return !this.isMaxAge(state);
 	}
 
-	/**
-	 * Performs a random tick on a block.
-	 */
 	@SuppressWarnings("deprecation")
 	@Override
 	public void randomTick(BlockState pState, @NotNull ServerLevel pLevel, @NotNull BlockPos pPos, @NotNull RandomSource pRandom) {
@@ -96,11 +90,11 @@ public class SalmonberryBushBlock extends BushBlock implements BonemealableBlock
 	@SuppressWarnings("deprecation")
 	@Override
 	public @NotNull InteractionResult use(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, @NotNull Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult hit) {
-		boolean flag = this.isMaxAge(state);
-		if (!flag && player.getItemInHand(hand).is(Items.BONE_MEAL)) {
+		boolean maxAge = this.isMaxAge(state);
+		if (!maxAge && player.getItemInHand(hand).is(Items.BONE_MEAL)) {
 			return InteractionResult.PASS;
 		} else if (state.getValue(AGE) > 2) {
-			popResource(level, pos, Util.gs(DelightfulItems.SALMONBERRIES, (flag ? 2 + level.random.nextInt(2) : 1)));
+			popResource(level, pos, Util.gs(DelightfulItems.SALMONBERRIES, (maxAge ? 2 + level.random.nextInt(2) : 1)));
 			level.playSound(null, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1F, 0.8F + level.random.nextFloat() * 0.4F);
 			BlockState blockstate = state.setValue(AGE, 1);
 			level.setBlock(pos, blockstate, 2);

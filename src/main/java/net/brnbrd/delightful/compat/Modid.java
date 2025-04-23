@@ -99,6 +99,7 @@ public enum Modid {
 	UG("undergarden"),
 	UGD("undergardendelight"),
 	VD("vintagedelight"),
+	VGND("vegandelight"),
 	WB("wildberries"),
 	WS("windswept"),
 	YH("youkaishomecoming");

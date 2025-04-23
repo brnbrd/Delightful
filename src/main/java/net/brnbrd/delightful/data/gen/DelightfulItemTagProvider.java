@@ -383,7 +383,9 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.AA.rl("fried_egg"))
 			.addOptional(Modid.IN.rl("fried_egg"))
 			.addOptional(Modid.NA.rl("cooked_egg"));
-		this.tag(DelightfulItemTags.DUSTS_SALT).addOptional(Modid.HH.rl("salt"));
+		this.tag(DelightfulItemTags.DUSTS_SALT)
+			.addOptional(Modid.HH.rl("salt"))
+			.addOptional(Modid.VGND.rl("salt"));
 		this.tag(DelightfulItemTags.SALT).addTag(DelightfulItemTags.DUSTS_SALT);
 		this.tag(DelightfulItemTags.DUSTS_FLOUR_WHEAT).addOptional(Modid.EIO.rl("flour"));
 		this.tag(DelightfulItemTags.DUSTS_FLOUR)
