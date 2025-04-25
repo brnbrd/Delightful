@@ -1,4 +1,4 @@
-// 1.20.1	2025-04-23T00:58:40.5035101	Item Models: delightful
+// 1.20.1	2025-04-24T22:18:56.5902199	Item Models: delightful
 f9af973b19b45f34017d8db4e6e54de90668031e assets/delightful/models/item/acorn.json
 9b4daf24b0d8e447735c5836d7ab76a3df1b3c1d assets/delightful/models/item/acorn_sack.json
 5d9531a6795e7d2281f99609672d866743329211 assets/delightful/models/item/adamantium_knife.json
@@ -66,6 +66,7 @@ d0a8f38624984112f38755ccf0b85efde7f364d3 assets/delightful/models/item/froststee
 44a1171f79c935895aeaf83fb9ec52a8da4c0f7d assets/delightful/models/item/gilded_netherite_knife.json
 208b01f7f081ad2c39a4d99f686c694ff9b7e138 assets/delightful/models/item/gilded_quartz_knife.json
 92a41a128576ce2c297a17862d1e346af08b8ec3 assets/delightful/models/item/gloomgourd_pie_slice.json
+347f2eea25144d3e7290ad8418e897304fce0388 assets/delightful/models/item/glow_jam_cookie.json
 cdb09baacee69659f26ab9cd98a4a0c52e8cf7f7 assets/delightful/models/item/glow_jam_jar.json
 bba722fd23f7768cdc3ea818a0d0a2d618b7913a assets/delightful/models/item/gravitite_knife.json
 9adf811731731c0168da9629c3eb8c22fad8cd83 assets/delightful/models/item/green_apple_crate.json

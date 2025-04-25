@@ -1,0 +1,17 @@
+{
+  "values": [
+    "delightful:glow_jam_jar",
+    {
+      "id": "#forge:jams/glow_berries",
+      "required": false
+    },
+    {
+      "id": "#forge:jams/glow_berry",
+      "required": false
+    },
+    {
+      "id": "brewinandchewin:glow_berry_marmalade",
+      "required": false
+    }
+  ]
+}

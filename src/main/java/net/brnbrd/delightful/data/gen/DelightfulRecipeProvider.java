@@ -167,6 +167,11 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 						.requires(ModItems.HONEY_COOKIE.get())
 						.unlockedBy("has_cooked_marshmallow_stick", has(DelightfulItemTags.COOKED_MARSHMALLOW_STICK)),
 				"food/smore", finished, enabled(DelightfulItems.SMORE), tagEmpty(DelightfulItemTags.CHOCOLATE));
+		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.GLOW_JAM_COOKIE.get(), 8)
+				.requires(DelightfulItemTags.JAMS_GLOW)
+				.requires(Ingredient.of(ForgeTags.GRAIN_WHEAT), 2)
+				.unlockedBy("has_glow_jam", has(DelightfulItemTags.JAMS_GLOW)),
+			"food/glow_jam_cookie", finished, enabled(DelightfulItems.GLOW_JAM_COOKIE));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.SMORE.get())
 						.requires(ModItems.HONEY_COOKIE.get())
 						.requires(DelightfulItemTags.CHOCOLATE)

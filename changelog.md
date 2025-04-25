@@ -4,6 +4,7 @@
 # 3.7.2
 
 ### Updates
+- Added Glow Jam Cookie
 - Cantaloupe Bread now requires 1 Sugar
 - Nut Butter Bottle is now cooked from 3 nuts and 1 Sugar
 - 2 Marshmallow on a Stick are now crafted from 2 Sugar, 1 water, and 2 Sticks
@@ -12,6 +13,7 @@
 - Added more support to `can_be_salted` tag from [The Salt](https://www.curseforge.com/minecraft/mc-mods/salt)
 - Added recipe to use Thermal's Compost to craft Organic Compost
 - Increased length of Mana Regeneration from Source Berry Pie Slice from 10 to 15 seconds
+- Increased length of Glowing from Glow Jam Jar from 45 to 60 seconds
 - Added cutting recipe for Mageblooms (from [Ars Nouveau](https://www.curseforge.com/minecraft/mc-mods/ars-nouveau))
 
 ### Fixes

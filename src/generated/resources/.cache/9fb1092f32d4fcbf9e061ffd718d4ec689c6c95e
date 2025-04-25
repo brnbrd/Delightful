@@ -1,4 +1,4 @@
-// 1.20.1	2025-04-23T00:58:40.5087308	Recipes
+// 1.20.1	2025-04-24T22:18:56.5971466	Recipes
 6c217dd6477efa10f6042809ba959d53036ab5e2 data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 5b82f87851220644287d771121677deac66b3b89 data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
 cf29033c1c919355c261025df529938e6ebc73f8 data/delightful/advancements/recipes/campfire/cactus_steak.json
@@ -42,6 +42,7 @@ fa81f81acd56cbff1741ba952e94ed1ad90a31f4 data/delightful/advancements/recipes/fo
 40aa1720793f8640778ef2c602a247282564a6bf data/delightful/advancements/recipes/food/deluxe_cheeseburger_from_bun.json
 d718a28228d94886e877b9425e33b81aa63f3c0a data/delightful/advancements/recipes/food/deluxe_cheeseburger_from_milk.json
 6a585016183d9d7da3ac58132a263d56a8bed37f data/delightful/advancements/recipes/food/field_salad.json
+2a9f82357ff82729893cdb3db4d8199287f2f641 data/delightful/advancements/recipes/food/glow_jam_cookie.json
 288e58dac40b665103a04733aa264f361c92d651 data/delightful/advancements/recipes/food/honey_glazed_walnut.json
 92fc0b1300252e1731091e538216fb990009eae0 data/delightful/advancements/recipes/food/marshmallow_stick_from_marshmallow.json
 84d5d682a25ea9d62dafcc6d0cc00456dd26f352 data/delightful/advancements/recipes/food/matcha_ice_cream.json
@@ -207,6 +208,7 @@ edc0bc9b6659e49b19b96be96487dc53ee228b76 data/delightful/recipes/food/cooking/si
 c8ad450326702e6db53e78b8f98d9ba4bd492d96 data/delightful/recipes/food/deluxe_cheeseburger_from_bun.json
 f1750cca1ba7ae28213ef203ef5031d86f26c267 data/delightful/recipes/food/deluxe_cheeseburger_from_milk.json
 5d2047611a76cc4c4c40f68b3d4139a4a904860e data/delightful/recipes/food/field_salad.json
+fb0b67132bae982b9c75720f2a14d45afccee39e data/delightful/recipes/food/glow_jam_cookie.json
 8c8deccb2ed5f53b4f428baa3fd4206b3a405756 data/delightful/recipes/food/honey_glazed_walnut.json
 44a35316e8dc75cdda80313e1da6e44c50e155b5 data/delightful/recipes/food/marshmallow_stick_from_marshmallow.json
 24f634405d66ec9a19373dcc357e74961ca9623f data/delightful/recipes/food/matcha_ice_cream.json

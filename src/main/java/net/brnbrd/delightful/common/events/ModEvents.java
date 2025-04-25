@@ -66,6 +66,7 @@ public class ModEvents {
 			ComposterBlock.COMPOSTABLES.put(DelightfulItems.GREEN_APPLE_PIE_SLICE.get(), 0.85F);
 			ComposterBlock.COMPOSTABLES.put(DelightfulItems.SOURCE_BERRY_PIE_SLICE.get(), 0.85F);
 			ComposterBlock.COMPOSTABLES.put(DelightfulItems.SOURCE_BERRY_COOKIE.get(), 0.85F);
+			ComposterBlock.COMPOSTABLES.put(DelightfulItems.GLOW_JAM_COOKIE.get(), 0.85F);
 			ComposterBlock.COMPOSTABLES.put(DelightfulItems.GREEN_TEA_LEAF.get(), 0.3F);
 			ComposterBlock.COMPOSTABLES.put(DelightfulItems.MATCHA.get(), 0.6F);
 			ComposterBlock.COMPOSTABLES.put(DelightfulItems.CHOPPED_CLOVER.get(), 0.5F);

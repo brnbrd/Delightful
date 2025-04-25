@@ -454,7 +454,13 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.add(DelightfulItems.ROASTED_ACORN.get())
 			.addOptional(Modid.VD.rl("roasted_peanut"));
 		this.tag(DelightfulItemTags.INGOTS_STEEL).addOptional(Util.rl("simplysteel", "steel_ingot"));
+		this.tag(DelightfulItemTags.JAMS_GLOW)
+			.add(DelightfulItems.GLOW_JAM_JAR.get())
+			.addOptionalTag(Modid.LOADER.rl("jams/glow_berries"))
+			.addOptionalTag(Modid.LOADER.rl("jams/glow_berry"))
+			.addOptional(Modid.BC.rl("glow_berry_marmalade"));
 		this.tag(DelightfulItemTags.JAMS)
+			.addTag(DelightfulItemTags.JAMS_GLOW)
 			.add(DelightfulItems.JAM_JAR.get())
 			.add(DelightfulItems.GLOW_JAM_JAR.get())
 			.addOptionalTag(Modid.LOADER.rl("jam"))
@@ -463,7 +469,6 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptionalTag(Modid.WB.rl("berry_jams"))
 			.addOptionalTag(Modid.VD.rl("sweet_jam_bottles"))
 			.addOptional(Modid.BC.rl("sweet_berry_jam"))
-			.addOptional(Modid.BC.rl("glow_berry_marmalade"))
 			.addOptional(Modid.BC.rl("apple_jelly"))
 			.addOptional(Modid.AND.rl("source_berry_jam"))
 			.addOptional(Modid.AND.rl("activated_mendosteen_jam"))
@@ -682,6 +687,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.add(ModItems.HONEY_COOKIE.get())
 			.add(ModItems.SWEET_BERRY_COOKIE.get())
 			.add(DelightfulItems.SOURCE_BERRY_COOKIE.get())
+			.add(DelightfulItems.GLOW_JAM_COOKIE.get())
 			.addOptional(Modid.AND.rl("source_berry_cookie"))
 			.addOptional(Modid.FR.rl("green_tea_cookie"))
 			.addOptional(Modid.AD.rl("mulberry_cookie"))

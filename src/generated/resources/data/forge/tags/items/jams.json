@@ -1,5 +1,6 @@
 {
   "values": [
+    "#forge:jams/glow",
     "delightful:jam_jar",
     "delightful:glow_jam_jar",
     {
@@ -24,10 +25,6 @@
     },
     {
       "id": "brewinandchewin:sweet_berry_jam",
-      "required": false
-    },
-    {
-      "id": "brewinandchewin:glow_berry_marmalade",
       "required": false
     },
     {

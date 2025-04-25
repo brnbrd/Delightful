@@ -1,0 +1,32 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "glow_jam_cookie"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "tag": "forge:jams/glow"
+          },
+          {
+            "tag": "forge:grain/wheat"
+          },
+          {
+            "tag": "forge:grain/wheat"
+          }
+        ],
+        "result": {
+          "count": 8,
+          "item": "delightful:glow_jam_cookie"
+        }
+      }
+    }
+  ]
+}

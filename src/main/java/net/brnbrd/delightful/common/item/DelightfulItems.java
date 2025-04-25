@@ -97,6 +97,8 @@ public class DelightfulItems {
 			() -> new SourceBerryPieSliceItem((new Item.Properties()).food(ArsNouveauCompat.SOURCE_BERRY_PIE_SLICE)));
 	public static final RegistryObject<Item> SOURCE_BERRY_COOKIE = registerItem("source_berry_cookie",
 			() -> new SourceBerryCookieItem((new Item.Properties()).food(ArsNouveauCompat.SOURCE_BERRY_COOKIE)));
+	public static final RegistryObject<Item> GLOW_JAM_COOKIE = registerItem("glow_jam_cookie",
+			() -> new ConsumableItem((new Item.Properties()).food(Nutrition.GLOW_JAM_COOKIE), true, false));
 	public static final RegistryObject<Item> BAKLAVA = registerItem("baklava",
 			() -> new BlockItem(DelightfulBlocks.BAKLAVA.get(), ModItems.basicItem()));
 	public static final RegistryObject<Item> BAKLAVA_SLICE = registerItem("baklava_slice",

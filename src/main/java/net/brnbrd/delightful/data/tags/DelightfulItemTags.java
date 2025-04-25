@@ -116,6 +116,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> TEA_LEAVES = forge("tea_leaves");
 	public static final TagKey<Item> TEA_LEAVES_GREEN = forge("tea_leaves/green");
 	public static final TagKey<Item> JAMS = forge("jams");
+	public static final TagKey<Item> JAMS_GLOW = forge("jams/glow");
 	public static final TagKey<Item> PEANUT_BUTTER = forge("peanut_butter");
 	public static final TagKey<Item> NUT_BUTTER = forge("nut_butter");
 	public static final TagKey<Item> RAW_RABBIT = forge("raw_rabbit");
