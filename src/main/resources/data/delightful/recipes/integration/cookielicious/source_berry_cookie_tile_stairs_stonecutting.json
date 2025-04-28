@@ -1,0 +1,33 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "source_berry_cookie_tile_stairs"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "source_berry_cookie_tiles"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "cookielicious"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "ars_nouveau"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "count": 1,
+        "ingredient": {
+          "item": "delightful:source_berry_cookie_tiles"
+        },
+        "result": "delightful:source_berry_cookie_tile_stairs"
+      }
+    }
+  ]
+}

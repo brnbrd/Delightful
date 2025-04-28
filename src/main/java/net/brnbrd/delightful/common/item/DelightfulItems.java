@@ -50,6 +50,23 @@ public class DelightfulItems {
 	public static final RegistryObject<Item> BAOBAB_FRUIT_CRATE = registerItem("baobab_fruit_crate", () ->
 			new CompatBlockItem(DelightfulBlocks.BAOBAB_FRUIT_CRATE.get(), (new Item.Properties()), Modid.BWG));
 
+	public static final RegistryObject<Item> GLOW_JAM_COOKIE_TILES = registerItem("glow_jam_cookie_tiles", () ->
+			new CompatBlockItem(DelightfulBlocks.GLOW_JAM_COOKIE_TILES.get(), (new Item.Properties()), Modid.COOK));
+	public static final RegistryObject<Item> GLOW_JAM_COOKIE_TILE_STAIRS = registerItem("glow_jam_cookie_tile_stairs", () ->
+			new CompatBlockItem(DelightfulBlocks.GLOW_JAM_COOKIE_TILE_STAIRS.get(), (new Item.Properties()), Modid.COOK));
+	public static final RegistryObject<Item> GLOW_JAM_COOKIE_TILE_SLAB = registerItem("glow_jam_cookie_tile_slab", () ->
+			new CompatBlockItem(DelightfulBlocks.GLOW_JAM_COOKIE_TILE_SLAB.get(), (new Item.Properties()), Modid.COOK));
+	public static final RegistryObject<Item> GLOW_JAM_COOKIE_TILE_WALL = registerItem("glow_jam_cookie_tile_wall", () ->
+			new CompatBlockItem(DelightfulBlocks.GLOW_JAM_COOKIE_TILE_WALL.get(), (new Item.Properties()), Modid.COOK));
+	public static final RegistryObject<Item> SOURCE_BERRY_COOKIE_TILES = registerItem("source_berry_cookie_tiles", () ->
+			new CompatBlockItem(DelightfulBlocks.SOURCE_BERRY_COOKIE_TILES.get(), (new Item.Properties()), Modid.COOK, Modid.AN));
+	public static final RegistryObject<Item> SOURCE_BERRY_COOKIE_TILE_STAIRS = registerItem("source_berry_cookie_tile_stairs", () ->
+			new CompatBlockItem(DelightfulBlocks.SOURCE_BERRY_COOKIE_TILE_STAIRS.get(), (new Item.Properties()), Modid.COOK, Modid.AN));
+	public static final RegistryObject<Item> SOURCE_BERRY_COOKIE_TILE_SLAB = registerItem("source_berry_cookie_tile_slab", () ->
+			new CompatBlockItem(DelightfulBlocks.SOURCE_BERRY_COOKIE_TILE_SLAB.get(), (new Item.Properties()), Modid.COOK, Modid.AN));
+	public static final RegistryObject<Item> SOURCE_BERRY_COOKIE_TILE_WALL = registerItem("source_berry_cookie_tile_wall", () ->
+			new CompatBlockItem(DelightfulBlocks.SOURCE_BERRY_COOKIE_TILE_WALL.get(), (new Item.Properties()), Modid.COOK, Modid.AN));
+
 	public static final RegistryObject<Item> MATCHA_ICE_CREAM_BLOCK = registerItem("matcha_ice_cream_block", () ->
 			new CompatBlockItem(DelightfulBlocks.MATCHA_ICE_CREAM_BLOCK.get(), (new Item.Properties()), Modid.N));
 	public static final RegistryObject<Item> SALMONBERRY_ICE_CREAM_BLOCK = registerItem("salmonberry_ice_cream_block", () ->

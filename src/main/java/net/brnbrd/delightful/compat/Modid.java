@@ -39,6 +39,7 @@ public enum Modid {
 	CCK("create_central_kitchen"),
 	CAD("casualness_delight"),
 	CD("culturaldelights"),
+	COOK("cookielicious"),
 	CR("collectorsreap"),
 	CRAB("crabbersdelight"),
 	CSA("create_sa"),

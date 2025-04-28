@@ -604,6 +604,84 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 						.define('i', DelightfulItems.MATCHA_ICE_CREAM.get())
 						.unlockedBy("has_matcha_ice_cream", has(DelightfulItems.MATCHA_ICE_CREAM.get())),
 				"matcha_ice_cream_block", finished, enabled(DelightfulItems.MATCHA_ICE_CREAM_BLOCK), enabled(DelightfulItems.MATCHA_ICE_CREAM), enabled(DelightfulItems.MATCHA), modLoaded(Modid.N.get()));
+		wrap(shaped(RecipeCategory.BUILDING_BLOCKS, DelightfulItems.GLOW_JAM_COOKIE_TILES, 4)
+				.pattern("cc")
+				.pattern("cc")
+				.define('c', DelightfulItems.GLOW_JAM_COOKIE.get())
+				.unlockedBy("has_glow_jam_cookie", has(DelightfulItems.GLOW_JAM_COOKIE.get())),
+			"integration/cookielicious/glow_jam_cookie_tiles", finished,
+			enabled(DelightfulItems.GLOW_JAM_COOKIE_TILES),
+			enabled(DelightfulItems.GLOW_JAM_COOKIE),
+			modLoaded(Modid.COOK.get()));
+		wrap(shaped(RecipeCategory.BUILDING_BLOCKS, DelightfulItems.GLOW_JAM_COOKIE_TILE_SLAB, 6)
+				.pattern("ttt")
+				.define('t', DelightfulItems.GLOW_JAM_COOKIE_TILES.get())
+				.unlockedBy("has_glow_jam_cookie_tiles", has(DelightfulItems.GLOW_JAM_COOKIE_TILES.get())),
+			"integration/cookielicious/glow_jam_cookie_tile_slab", finished,
+			enabled(DelightfulItems.GLOW_JAM_COOKIE_TILE_SLAB),
+			enabled(DelightfulItems.GLOW_JAM_COOKIE_TILES),
+			enabled(DelightfulItems.GLOW_JAM_COOKIE),
+			modLoaded(Modid.COOK.get()));
+		wrap(shaped(RecipeCategory.BUILDING_BLOCKS, DelightfulItems.GLOW_JAM_COOKIE_TILE_STAIRS, 4)
+				.pattern("t  ")
+				.pattern("tt ")
+				.pattern("ttt")
+				.define('t', DelightfulItems.GLOW_JAM_COOKIE_TILES.get())
+				.unlockedBy("has_glow_jam_cookie_tiles", has(DelightfulItems.GLOW_JAM_COOKIE_TILES.get())),
+			"integration/cookielicious/glow_jam_cookie_tile_stairs", finished,
+			enabled(DelightfulItems.GLOW_JAM_COOKIE_TILE_STAIRS),
+			enabled(DelightfulItems.GLOW_JAM_COOKIE_TILES),
+			enabled(DelightfulItems.GLOW_JAM_COOKIE),
+			modLoaded(Modid.COOK.get()));
+		wrap(shaped(RecipeCategory.BUILDING_BLOCKS, DelightfulItems.GLOW_JAM_COOKIE_TILE_WALL, 6)
+				.pattern("ttt")
+				.pattern("ttt")
+				.define('t', DelightfulItems.GLOW_JAM_COOKIE_TILES.get())
+				.unlockedBy("has_glow_jam_cookie_tiles", has(DelightfulItems.GLOW_JAM_COOKIE_TILES.get())),
+			"integration/cookielicious/glow_jam_cookie_tile_wall", finished,
+			enabled(DelightfulItems.GLOW_JAM_COOKIE_TILE_WALL),
+			enabled(DelightfulItems.GLOW_JAM_COOKIE_TILES),
+			enabled(DelightfulItems.GLOW_JAM_COOKIE),
+			modLoaded(Modid.COOK.get()));
+		wrap(shaped(RecipeCategory.BUILDING_BLOCKS, DelightfulItems.SOURCE_BERRY_COOKIE_TILES, 4)
+				.pattern("cc")
+				.pattern("cc")
+				.define('c', DelightfulItemTags.COOKIES_SOURCE_BERRY)
+				.unlockedBy("has_source_berry_cookie", has(DelightfulItemTags.COOKIES_SOURCE_BERRY)),
+			"integration/cookielicious/source_berry_cookie_tiles", finished,
+			enabled(DelightfulItems.SOURCE_BERRY_COOKIE_TILES),
+			modLoaded(Modid.COOK.get()),
+			modLoaded(Modid.AN.get()));
+		wrap(shaped(RecipeCategory.BUILDING_BLOCKS, DelightfulItems.SOURCE_BERRY_COOKIE_TILE_SLAB, 6)
+				.pattern("ttt")
+				.define('t', DelightfulItems.SOURCE_BERRY_COOKIE_TILES.get())
+				.unlockedBy("has_source_berry_cookie_tiles", has(DelightfulItems.SOURCE_BERRY_COOKIE_TILES.get())),
+			"integration/cookielicious/source_berry_cookie_tile_slab", finished,
+			enabled(DelightfulItems.SOURCE_BERRY_COOKIE_TILE_SLAB),
+			enabled(DelightfulItems.SOURCE_BERRY_COOKIE_TILES),
+			modLoaded(Modid.COOK.get()),
+			modLoaded(Modid.AN.get()));
+		wrap(shaped(RecipeCategory.BUILDING_BLOCKS, DelightfulItems.SOURCE_BERRY_COOKIE_TILE_STAIRS, 4)
+				.pattern("t  ")
+				.pattern("tt ")
+				.pattern("ttt")
+				.define('t', DelightfulItems.SOURCE_BERRY_COOKIE_TILES.get())
+				.unlockedBy("has_source_berry_cookie_tiles", has(DelightfulItems.SOURCE_BERRY_COOKIE_TILES.get())),
+			"integration/cookielicious/source_berry_cookie_tile_stairs", finished,
+			enabled(DelightfulItems.SOURCE_BERRY_COOKIE_TILE_STAIRS),
+			enabled(DelightfulItems.SOURCE_BERRY_COOKIE_TILES),
+			modLoaded(Modid.COOK.get()),
+			modLoaded(Modid.AN.get()));
+		wrap(shaped(RecipeCategory.BUILDING_BLOCKS, DelightfulItems.SOURCE_BERRY_COOKIE_TILE_WALL, 6)
+				.pattern("ttt")
+				.pattern("ttt")
+				.define('t', DelightfulItems.SOURCE_BERRY_COOKIE_TILES.get())
+				.unlockedBy("has_source_berry_cookie_tiles", has(DelightfulItems.SOURCE_BERRY_COOKIE_TILES.get())),
+			"integration/cookielicious/source_berry_cookie_tile_wall", finished,
+			enabled(DelightfulItems.SOURCE_BERRY_COOKIE_TILE_WALL),
+			enabled(DelightfulItems.SOURCE_BERRY_COOKIE_TILES),
+			modLoaded(Modid.COOK.get()),
+			modLoaded(Modid.AN.get()));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(DelightfulItems.SALMONBERRY_GUMMY.get(), 1, 200, 1F)
 						.addIngredient(DelightfulItemTags.FRUITS_SALMONBERRIES)
 						.addIngredient(Items.SUGAR)

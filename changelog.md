@@ -5,6 +5,8 @@
 
 ### Updates
 - Added Glow Jam Cookie
+- Added Glow Jam Cookie Tile block set (for [Cookielicious](https://www.curseforge.com/minecraft/mc-mods/cookielicious))
+- Added Source Berry Cookie Tile block set (for [Cookielicious](https://www.curseforge.com/minecraft/mc-mods/cookielicious) and [Ars Nouveau](https://www.curseforge.com/minecraft/mc-mods/ars-nouveau))
 - Cantaloupe Bread now requires 1 Sugar
 - Nut Butter Bottle is now cooked from 3 nuts and 1 Sugar
 - 2 Marshmallow on a Stick are now crafted from 2 Sugar, 1 water, and 2 Sticks

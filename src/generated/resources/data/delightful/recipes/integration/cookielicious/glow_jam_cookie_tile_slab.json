@@ -1,0 +1,42 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "glow_jam_cookie_tile_slab"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "glow_jam_cookie_tiles"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "glow_jam_cookie"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "cookielicious"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "t": {
+            "item": "delightful:glow_jam_cookie_tiles"
+          }
+        },
+        "pattern": [
+          "ttt"
+        ],
+        "result": {
+          "count": 6,
+          "item": "delightful:glow_jam_cookie_tile_slab"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

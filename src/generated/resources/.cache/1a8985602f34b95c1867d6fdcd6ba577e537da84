@@ -1,4 +1,4 @@
-// 1.20.1	2025-04-24T22:18:56.5941435	delightful
+// 1.20.1	2025-04-28T08:29:18.655449	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -10,7 +10,7 @@ a60ec42053ef8dd4bb252bc03dea45003dbd8f12 data/aether/tags/items/holystone.json
 e8ef8f8eef92496a83b1e7d33919a11e16cfbf70 data/aether_redux/tags/items/infused_veridium_items.json
 6fcc510eb227815a2bbaa4c6005c372f75eaf029 data/aether_redux/tags/items/veridium_advancement_infusable.json
 e7d157a15ec173a498e93edde6b67f3558f0c698 data/ancient_aether/tags/items/valkyrum.json
-952b5cc1eafb5a0cefdb11312183ae6916f62b2a data/ars_nouveau/tags/items/magic_food.json
+1566df1da02f01528050256334b98d06ecef0815 data/ars_nouveau/tags/items/magic_food.json
 459ce97cdbc0fe7825ed7b320441d23013d6ab4c data/botania/tags/items/dreamwood_twig.json
 252e55d4f597c2456076ab8efb95e65cbae9a337 data/botania/tags/items/livingwood_twig.json
 cc3ce1c9ecfdd40d917db77aeff124be1dd856b4 data/botania/tags/items/mana_using_items.json
@@ -79,7 +79,8 @@ f22b4c1e330acdb87d41463fa1bbe431b513d330 data/forge/tags/items/cooked_fishes.jso
 d0b63fd9fa268a9c720c2a89a19e5eacf59a05a1 data/forge/tags/items/cooked_nuts.json
 9f77948b8bcc8ff9ce8d4f192f7156c733795ab7 data/forge/tags/items/cooked_rabbit.json
 522cf04b2689c42171edbe4fe3fa6e3fa9651b1f data/forge/tags/items/cooked_venison.json
-ce03fc99b470c11d88014a14cf38cd2388ab17f8 data/forge/tags/items/cookies.json
+529c1a57158ac37cdcbe5b98f15e4d8e14abd6c8 data/forge/tags/items/cookies.json
+b909ff8d1fa9d605fe5c66fa82057da1bcfbc4cc data/forge/tags/items/cookies/source_berry.json
 7c0edbb702d3fbe9e1c68f07804da13ef22fe6ea data/forge/tags/items/crab_claw.json
 a588e76ea799ddafa0f942b8750ac4644597b2bd data/forge/tags/items/crab_claw/cooked.json
 fad94b920198ac7c369dd53491539642e16d54d0 data/forge/tags/items/crab_meat.json
@@ -213,8 +214,11 @@ e7a49e3763378f3280936775b47b91ea4a9b1c5f data/lolenderite/tags/items/enderite_up
 0ea4f203dcbc5c8ed15973a08aa22975702cb9a1 data/minecraft/tags/items/flowers/azalea.json
 baf6ba0ee848c77356d8dcb20db8b78f5de1a72e data/minecraft/tags/items/fox_food.json
 7a5c9e6e4cea9e6eb6c39631ca0a4a686876331d data/minecraft/tags/items/piglin_loved.json
+6650e90744a669ba97f26352f5edb05740ef68e9 data/minecraft/tags/items/slabs.json
 5976aafe31fc50b3d28a25f087d42346c6fddfb9 data/minecraft/tags/items/small_flowers.json
+ccf8a58ba350ded67f8a3689f5b1419c159e2cef data/minecraft/tags/items/stairs.json
 3e65a1f943cae7927da2f45388efe248474e5397 data/minecraft/tags/items/tools.json
+f3d389bd6892248142900ae5f52fe8a51dae2311 data/minecraft/tags/items/walls.json
 37e63d30efc470b358d681dc34fc1f94d50bb480 data/mynethersdelight/tags/items/curry_meats.json
 8ee247d64fc75db3c10d19eb161dafacf741251c data/neapolitan/tags/items/ice_cream.json
 a95df2279e05baa5f0608937c6c66f68c44ebf2d data/nethersdelight/tags/items/meal_item.json

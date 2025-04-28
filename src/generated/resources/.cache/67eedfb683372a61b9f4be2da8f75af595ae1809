@@ -1,4 +1,4 @@
-// 1.20.1	2025-04-24T22:18:56.5902199	Item Models: delightful
+// 1.20.1	2025-04-28T08:29:18.6479126	Item Models: delightful
 f9af973b19b45f34017d8db4e6e54de90668031e assets/delightful/models/item/acorn.json
 9b4daf24b0d8e447735c5836d7ab76a3df1b3c1d assets/delightful/models/item/acorn_sack.json
 5d9531a6795e7d2281f99609672d866743329211 assets/delightful/models/item/adamantium_knife.json
@@ -67,6 +67,10 @@ d0a8f38624984112f38755ccf0b85efde7f364d3 assets/delightful/models/item/froststee
 208b01f7f081ad2c39a4d99f686c694ff9b7e138 assets/delightful/models/item/gilded_quartz_knife.json
 92a41a128576ce2c297a17862d1e346af08b8ec3 assets/delightful/models/item/gloomgourd_pie_slice.json
 347f2eea25144d3e7290ad8418e897304fce0388 assets/delightful/models/item/glow_jam_cookie.json
+1ba4dd0c9b8fbe6988e29d9f8787ea6766ec7fd7 assets/delightful/models/item/glow_jam_cookie_tiles.json
+96b3980340212a47e0e107c99f70a25a6f7c1b0f assets/delightful/models/item/glow_jam_cookie_tile_slab.json
+ea7e70eeb587d3bf2ab411f1907d478ca581c5bf assets/delightful/models/item/glow_jam_cookie_tile_stairs.json
+2d1573b8a00d75316354b42767c6e40cc4bf2144 assets/delightful/models/item/glow_jam_cookie_tile_wall.json
 cdb09baacee69659f26ab9cd98a4a0c52e8cf7f7 assets/delightful/models/item/glow_jam_jar.json
 bba722fd23f7768cdc3ea818a0d0a2d618b7913a assets/delightful/models/item/gravitite_knife.json
 9adf811731731c0168da9629c3eb8c22fad8cd83 assets/delightful/models/item/green_apple_crate.json
@@ -138,6 +142,10 @@ b6e896ce2901df212efd4788515bfe188736b568 assets/delightful/models/item/skyjade_k
 9ebe6608541b10993820aa5e687f060023f515b9 assets/delightful/models/item/smore.json
 eef048602f4ed10f74334ae435e3eefbac4465ee assets/delightful/models/item/soul_steel_knife.json
 32f7cf010b745564b9b359b65b981e02a5860885 assets/delightful/models/item/source_berry_cookie.json
+ba2a3cfff32df062fc545e4a4669d355b19deba6 assets/delightful/models/item/source_berry_cookie_tiles.json
+1bfa7da47526a711c746dda8bd6a34d745a1f92f assets/delightful/models/item/source_berry_cookie_tile_slab.json
+1a35fa84a4e306c05afb15f67ffeca8d3bb22d7e assets/delightful/models/item/source_berry_cookie_tile_stairs.json
+bca8dd489d1cb11972a3c9219d22a2280df835ad assets/delightful/models/item/source_berry_cookie_tile_wall.json
 b0870cefaaacc6337004905f436bad03ac4ec519 assets/delightful/models/item/source_berry_gummy.json
 665c70a11c44b4d9b3e67484d1b7d19b72adfcd3 assets/delightful/models/item/source_berry_ice_cream.json
 25dbd6834b51f3f762a22b1908ae4388eb7ac167 assets/delightful/models/item/source_berry_ice_cream_block.json

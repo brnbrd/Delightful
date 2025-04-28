@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "delightful:block/source_berry_cookie_tiles"
+  }
+}

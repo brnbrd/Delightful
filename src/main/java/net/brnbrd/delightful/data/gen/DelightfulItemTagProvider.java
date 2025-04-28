@@ -40,6 +40,15 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.add(DelightfulItems.WILD_SALMONBERRIES.get());
 		this.tag(ItemTags.FOX_FOOD)
 			.addTag(ForgeTags.BERRIES);
+		this.tag(ItemTags.STAIRS)
+			.add(DelightfulItems.GLOW_JAM_COOKIE_TILE_STAIRS.get())
+			.add(DelightfulItems.SOURCE_BERRY_COOKIE_TILE_STAIRS.get());
+		this.tag(ItemTags.SLABS)
+			.add(DelightfulItems.GLOW_JAM_COOKIE_TILE_SLAB.get())
+			.add(DelightfulItems.SOURCE_BERRY_COOKIE_TILE_SLAB.get());
+		this.tag(ItemTags.WALLS)
+			.add(DelightfulItems.GLOW_JAM_COOKIE_TILE_WALL.get())
+			.add(DelightfulItems.SOURCE_BERRY_COOKIE_TILE_WALL.get());
 
 		// Farmer's Delight
 		this.tag(DelightfulItemTags.STRAW_PLANTS)
@@ -682,13 +691,15 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.SYRUP)
 			.addTag(DelightfulItemTags.SYRUP_BOTTLE)
 			.addOptional(Modid.TH.rl("syrup_bucket"));
+		this.tag(DelightfulItemTags.COOKIES_SOURCE_BERRY)
+			.add(DelightfulItems.SOURCE_BERRY_COOKIE.get())
+			.addOptional(Modid.AND.rl("source_berry_cookie"));
 		this.tag(DelightfulItemTags.COOKIES)
+			.addTag(DelightfulItemTags.COOKIES_SOURCE_BERRY)
 			.add(Items.COOKIE)
 			.add(ModItems.HONEY_COOKIE.get())
 			.add(ModItems.SWEET_BERRY_COOKIE.get())
-			.add(DelightfulItems.SOURCE_BERRY_COOKIE.get())
 			.add(DelightfulItems.GLOW_JAM_COOKIE.get())
-			.addOptional(Modid.AND.rl("source_berry_cookie"))
 			.addOptional(Modid.FR.rl("green_tea_cookie"))
 			.addOptional(Modid.AD.rl("mulberry_cookie"))
 			.addOptional(Modid.AD.rl("maple_cookie"))
@@ -903,8 +914,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 
 		// Ars Nouveau
 		this.tag(Modid.AN.it("magic_food"))
+			.addTag(DelightfulItemTags.COOKIES_SOURCE_BERRY)
 			.add(DelightfulItems.SOURCE_BERRY_PIE_SLICE.get())
-			.add(DelightfulItems.SOURCE_BERRY_COOKIE.get())
 			.add(DelightfulItems.SOURCE_BERRY_GUMMY.get())
 			.add(DelightfulItems.SOURCE_BERRY_ICE_CREAM.get())
 			.add(DelightfulItems.SOURCE_BERRY_MILKSHAKE.get());

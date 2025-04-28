@@ -29,8 +29,6 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 		// Farmer's Delight
 		this.tag(ModTags.WILD_CROPS)
 				.add(DelightfulBlocks.WILD_SALMONBERRIES.get());
-
-		// Mineable
 		this.tag(ForgeTags.MINEABLE_WITH_KNIFE)
 				.add(DelightfulBlocks.SLICED_PUMPKIN.get())
 				.add(DelightfulBlocks.SLICED_MELON.get())
@@ -115,7 +113,24 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 				.add(DelightfulBlocks.ACORN_SACK.get())
 				.add(DelightfulBlocks.SALMONBERRY_SACK.get())
 				.add(DelightfulBlocks.BLUEBERRY_SACK.get())
+				.add(DelightfulBlocks.GLOW_JAM_COOKIE_TILES.get())
+				.add(DelightfulBlocks.GLOW_JAM_COOKIE_TILE_STAIRS.get())
+				.add(DelightfulBlocks.GLOW_JAM_COOKIE_TILE_SLAB.get())
+				.add(DelightfulBlocks.GLOW_JAM_COOKIE_TILE_WALL.get())
+				.add(DelightfulBlocks.SOURCE_BERRY_COOKIE_TILES.get())
+				.add(DelightfulBlocks.SOURCE_BERRY_COOKIE_TILE_STAIRS.get())
+				.add(DelightfulBlocks.SOURCE_BERRY_COOKIE_TILE_SLAB.get())
+				.add(DelightfulBlocks.SOURCE_BERRY_COOKIE_TILE_WALL.get())
 				.addOptional(Modid.AN.rl("sourceberry_sack"));
+		this.tag(BlockTags.STAIRS)
+				.add(DelightfulBlocks.GLOW_JAM_COOKIE_TILE_STAIRS.get())
+				.add(DelightfulBlocks.SOURCE_BERRY_COOKIE_TILE_STAIRS.get());
+		this.tag(BlockTags.SLABS)
+				.add(DelightfulBlocks.GLOW_JAM_COOKIE_TILE_SLAB.get())
+				.add(DelightfulBlocks.SOURCE_BERRY_COOKIE_TILE_SLAB.get());
+		this.tag(BlockTags.WALLS)
+				.add(DelightfulBlocks.GLOW_JAM_COOKIE_TILE_WALL.get())
+				.add(DelightfulBlocks.SOURCE_BERRY_COOKIE_TILE_WALL.get());
 		this.tag(BlockTags.SMALL_FLOWERS)
 				.add(DelightfulBlocks.WILD_SALMONBERRIES.get())
 				.addOptional(Modid.CD.rl("wild_cucumbers"))

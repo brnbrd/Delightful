@@ -1,0 +1,42 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "source_berry_cookie_tile_slab"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "source_berry_cookie_tiles"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "cookielicious"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "ars_nouveau"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "t": {
+            "item": "delightful:source_berry_cookie_tiles"
+          }
+        },
+        "pattern": [
+          "ttt"
+        ],
+        "result": {
+          "count": 6,
+          "item": "delightful:source_berry_cookie_tile_slab"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

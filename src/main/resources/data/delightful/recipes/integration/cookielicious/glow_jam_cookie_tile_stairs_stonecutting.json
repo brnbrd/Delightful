@@ -1,0 +1,33 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "glow_jam_cookie_tile_stairs"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "glow_jam_cookie_tiles"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "glow_jam_cookie"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "cookielicious"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "count": 1,
+        "ingredient": {
+          "item": "delightful:glow_jam_cookie_tiles"
+        },
+        "result": "delightful:glow_jam_cookie_tile_stairs"
+      }
+    }
+  ]
+}

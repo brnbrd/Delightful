@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "delightful:block/source_berry_cookie_tiles"
+  }
+}

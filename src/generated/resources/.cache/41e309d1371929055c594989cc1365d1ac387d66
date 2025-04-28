@@ -1,4 +1,4 @@
-// 1.20.1	2025-04-24T22:18:56.6001489	Tags for minecraft:block mod id delightful
+// 1.20.1	2025-04-28T08:29:18.6610189	Tags for minecraft:block mod id delightful
 2469f55332d27164e5aade020a5d1f0d44c68df5 data/delightful/tags/blocks/add_acorn.json
 bbd8407927efc4c85da90a5569654ea62dd49d70 data/delightful/tags/blocks/cantaloupe_spawns.json
 ba6ef28da1fcd146a5a73f41f83db71fb06d65f0 data/delightful/tags/blocks/drops_acorn.json
@@ -9,9 +9,12 @@ a4e8097fff07f9a74259d6b5dd583f3437ff28a2 data/delightful/tags/blocks/drops_green
 c1b2a217bb3fcb7e1d67f5bc45409796720bd171 data/forge/tags/blocks/sand.json
 c7cbd868b80f2a96c1442a45ac361caee67e6839 data/minecraft/tags/blocks/cauldrons.json
 fef841082f0d645fbb3356a2d1f1083b700b0357 data/minecraft/tags/blocks/mineable/axe.json
-15a81cf818fe8de5312419610dce2f6b33776b7c data/minecraft/tags/blocks/mineable/hoe.json
+730974ec2410f38962e7268c36a358efb820a4cc data/minecraft/tags/blocks/mineable/hoe.json
 56652c93f5e1505b2c4875c8d14635f2a2c72350 data/minecraft/tags/blocks/mineable/pickaxe.json
 631ba79d80459337b3933cc2f0ec7af095ceb533 data/minecraft/tags/blocks/mineable/shovel.json
+6650e90744a669ba97f26352f5edb05740ef68e9 data/minecraft/tags/blocks/slabs.json
 ed2c2757f59849017bb6717aa71e58742f546890 data/minecraft/tags/blocks/small_flowers.json
+ccf8a58ba350ded67f8a3689f5b1419c159e2cef data/minecraft/tags/blocks/stairs.json
 3f82c0fba13b9614af9c1f7982c09688859a6669 data/minecraft/tags/blocks/sword_efficient.json
+f3d389bd6892248142900ae5f52fe8a51dae2311 data/minecraft/tags/blocks/walls.json
 70f4933801abb0d395b9a5b4f114e870c9402935 data/sereneseasons/tags/blocks/summer_crops.json

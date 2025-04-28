@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "delightful:block/glow_jam_cookie_tiles"
+  }
+}

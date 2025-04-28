@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "delightful:block/glow_jam_cookie_tiles"
+  }
+}

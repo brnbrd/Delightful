@@ -11,6 +11,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
+import net.minecraft.world.level.block.WallBlock;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -52,11 +53,15 @@ public class DelightfulItemModelProvider extends ItemModelProvider {
 			} else if (FLAT_BLOCKS.contains(id)) {
 				flatBlock(id);
 			} else if (
-				entry.get() instanceof BlockItem &&
+				entry.get() instanceof BlockItem b &&
 				!(entry.get() instanceof ItemNameBlockItem) &&
 				!ITEM_BLOCKS.contains(id)
 			) {
-				withExistingParent(id.getPath(), Util.rl(this.modid, "block/" + id.getPath()));
+				if (b.getBlock() instanceof WallBlock) {
+					wallInventory(id.getPath(), Util.rl(id.getNamespace(), "block/" + id.getPath().replace("_wall", "s")));
+				} else {
+					withExistingParent(id.getPath(), Util.rl(this.modid, "block/" + id.getPath()));
+				}
 			} else {
 				basicItem(id);
 			}

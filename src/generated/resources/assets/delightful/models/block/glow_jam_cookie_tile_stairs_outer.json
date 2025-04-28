@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "delightful:block/glow_jam_cookie_tiles",
+    "side": "delightful:block/glow_jam_cookie_tiles",
+    "top": "delightful:block/glow_jam_cookie_tiles"
+  }
+}

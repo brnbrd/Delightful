@@ -1,14 +1,10 @@
 {
   "values": [
+    "#forge:cookies/source_berry",
     "minecraft:cookie",
     "farmersdelight:honey_cookie",
     "farmersdelight:sweet_berry_cookie",
-    "delightful:source_berry_cookie",
     "delightful:glow_jam_cookie",
-    {
-      "id": "arsdelight:source_berry_cookie",
-      "required": false
-    },
     {
       "id": "farmersrespite:green_tea_cookie",
       "required": false

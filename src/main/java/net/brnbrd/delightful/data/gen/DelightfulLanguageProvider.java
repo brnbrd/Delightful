@@ -139,6 +139,14 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		addBlock(DelightfulBlocks.GREEN_APPLE_CRATE, "Green Apple Crate");
 		addBlock(DelightfulBlocks.YUCCA_FRUIT_CRATE, "Yucca Fruit Crate");
 		addBlock(DelightfulBlocks.BAOBAB_FRUIT_CRATE, "Baobab Fruit Crate");
+		addBlock(DelightfulBlocks.GLOW_JAM_COOKIE_TILES, "Glow Jam Cookie Tiles");
+		addBlock(DelightfulBlocks.GLOW_JAM_COOKIE_TILE_STAIRS, "Glow Jam Cookie Tile Stairs");
+		addBlock(DelightfulBlocks.GLOW_JAM_COOKIE_TILE_SLAB, "Glow Jam Cookie Tile Slab");
+		addBlock(DelightfulBlocks.GLOW_JAM_COOKIE_TILE_WALL, "Glow Jam Cookie Tile Wall");
+		addBlock(DelightfulBlocks.SOURCE_BERRY_COOKIE_TILES, "Source Berry Cookie Tiles");
+		addBlock(DelightfulBlocks.SOURCE_BERRY_COOKIE_TILE_STAIRS, "Source Berry Cookie Tile Stairs");
+		addBlock(DelightfulBlocks.SOURCE_BERRY_COOKIE_TILE_SLAB, "Source Berry Cookie Tile Slab");
+		addBlock(DelightfulBlocks.SOURCE_BERRY_COOKIE_TILE_WALL, "Source Berry Cookie Tile Wall");
 	}
 
 	private void addOther() {

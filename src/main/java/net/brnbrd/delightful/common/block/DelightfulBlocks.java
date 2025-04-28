@@ -9,9 +9,7 @@ import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.core.cauldron.CauldronInteraction;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
@@ -85,7 +83,7 @@ public class DelightfulBlocks {
 		() -> new SlicedGourdBlock(Block.Properties.copy(Blocks.PUMPKIN), ModItems.PUMPKIN_SLICE)
 	);
 	public static final RegistryObject<Block> SALMONBERRY_SACK = BLOCKS.register("salmonberry_sack",
-		() -> new Block(Block.Properties.copy(Blocks.ORANGE_WOOL).strength(.5f).sound(SoundType.WOOL)));
+		() -> new Block(SACK(MapColor.COLOR_ORANGE)));
 	public static final RegistryObject<Block> SALMONBERRY_PIE = BLOCKS.register("salmonberry_pie",
 		() -> new PieBlock(Block.Properties.copy(ModBlocks.APPLE_PIE.get()), DelightfulItems.SALMONBERRY_PIE_SLICE));
 	public static final RegistryObject<PumpkinPieBlock> PUMPKIN_PIE = BLOCKS.register("pumpkin_pie",
@@ -112,7 +110,7 @@ public class DelightfulBlocks {
 	public static final RegistryObject<DPieBlock> PASSION_FRUIT_TART = BLOCKS.register("passion_fruit_tart",
 		() -> new DPieBlock(DelightfulItems.PASSION_FRUIT_TART_SLICE, Modid.AT.rl("passion_fruit_tart")));
 	public static final RegistryObject<Block> ACORN_SACK = BLOCKS.register("acorn_sack",
-		() -> new Block(Block.Properties.copy(Blocks.BROWN_WOOL).strength(.5f).sound(SoundType.WOOL)));
+		() -> new Block(SACK(MapColor.COLOR_BROWN)));
 	public static final RegistryObject<Block> SALMONBERRY_ICE_CREAM_BLOCK = BLOCKS.register("salmonberry_ice_cream_block",
 		() -> new Block(Block.Properties.copy(Blocks.SNOW_BLOCK).mapColor(MapColor.COLOR_ORANGE).strength(0.2F).sound(SoundType.SNOW)));
 	public static final RegistryObject<Block> MATCHA_ICE_CREAM_BLOCK = BLOCKS.register("matcha_ice_cream_block",
@@ -138,21 +136,43 @@ public class DelightfulBlocks {
 			CauldronInteraction.newInteractionMap())
 	);
 	public static final RegistryObject<Block> BLUEBERRY_SACK = BLOCKS.register("blueberry_sack",
-		() -> new Block(Block.Properties.copy(Blocks.BLUE_WOOL).strength(.5f).sound(SoundType.WOOL)));
+		() -> new Block(SACK(MapColor.TERRACOTTA_BLUE)));
 	public static final RegistryObject<Block> MENDOSTEEN_CRATE = BLOCKS.register("mendosteen_crate",
-		() -> new Block(Block.Properties.copy(Blocks.OAK_PLANKS).mapColor(MapColor.COLOR_LIGHT_GREEN).strength(2F, 3F).sound(SoundType.WOOD)));
+		() -> new Block(CRATE(MapColor.COLOR_LIGHT_GREEN)));
 	public static final RegistryObject<Block> BASTION_FRUIT_CRATE = BLOCKS.register("bastion_fruit_crate",
-		() -> new Block(Block.Properties.copy(Blocks.OAK_PLANKS).mapColor(MapColor.COLOR_PURPLE).strength(2F, 3F).sound(SoundType.WOOD)));
+		() -> new Block(CRATE(MapColor.COLOR_PURPLE)));
 	public static final RegistryObject<Block> FROSTAYA_CRATE = BLOCKS.register("frostaya_crate",
-		() -> new Block(Block.Properties.copy(Blocks.OAK_PLANKS).mapColor(MapColor.COLOR_LIGHT_BLUE).strength(2F, 3F).sound(SoundType.WOOD)));
+		() -> new Block(CRATE(MapColor.COLOR_LIGHT_BLUE)));
 	public static final RegistryObject<Block> BOMBEGRANATE_CRATE = BLOCKS.register("bombegranate_crate",
-		() -> new Block(Block.Properties.copy(Blocks.OAK_PLANKS).mapColor(MapColor.COLOR_RED).strength(2F, 3F).sound(SoundType.WOOD)));
+		() -> new Block(CRATE(MapColor.COLOR_RED)));
 	public static final RegistryObject<Block> GREEN_APPLE_CRATE = BLOCKS.register("green_apple_crate",
-		() -> new Block(Block.Properties.copy(Blocks.OAK_PLANKS).mapColor(MapColor.COLOR_LIGHT_GREEN).strength(2F, 3F).sound(SoundType.WOOD)));
+		() -> new Block(CRATE(MapColor.COLOR_LIGHT_GREEN)));
 	public static final RegistryObject<Block> YUCCA_FRUIT_CRATE = BLOCKS.register("yucca_fruit_crate",
-		() -> new Block(Block.Properties.copy(Blocks.OAK_PLANKS).mapColor(MapColor.COLOR_LIGHT_GREEN).strength(2F, 3F).sound(SoundType.WOOD)));
+		() -> new Block(CRATE(MapColor.COLOR_LIGHT_GREEN)));
 	public static final RegistryObject<Block> BAOBAB_FRUIT_CRATE = BLOCKS.register("baobab_fruit_crate",
-		() -> new Block(Block.Properties.copy(Blocks.OAK_PLANKS).mapColor(MapColor.COLOR_YELLOW).strength(2F, 3F).sound(SoundType.WOOD)));
+		() -> new Block(CRATE(MapColor.COLOR_YELLOW)));
+	public static final RegistryObject<Block> GLOW_JAM_COOKIE_TILES = BLOCKS.register("glow_jam_cookie_tiles",
+		() -> new Block(COOKIE(MapColor.COLOR_YELLOW)));
+	public static final RegistryObject<StairBlock> GLOW_JAM_COOKIE_TILE_STAIRS = BLOCKS.register("glow_jam_cookie_tile_stairs",
+		() -> new StairBlock(
+			GLOW_JAM_COOKIE_TILES.get()::defaultBlockState,
+			COOKIE(MapColor.COLOR_YELLOW)
+		));
+	public static final RegistryObject<SlabBlock> GLOW_JAM_COOKIE_TILE_SLAB = BLOCKS.register("glow_jam_cookie_tile_slab",
+		() -> new SlabBlock(COOKIE(MapColor.COLOR_YELLOW)));
+	public static final RegistryObject<WallBlock> GLOW_JAM_COOKIE_TILE_WALL = BLOCKS.register("glow_jam_cookie_tile_wall",
+		() -> new WallBlock(COOKIE(MapColor.COLOR_YELLOW)));
+	public static final RegistryObject<Block> SOURCE_BERRY_COOKIE_TILES = BLOCKS.register("source_berry_cookie_tiles",
+		() -> new Block(COOKIE(MapColor.COLOR_PURPLE)));
+	public static final RegistryObject<StairBlock> SOURCE_BERRY_COOKIE_TILE_STAIRS = BLOCKS.register("source_berry_cookie_tile_stairs",
+		() -> new StairBlock(
+			SOURCE_BERRY_COOKIE_TILES.get()::defaultBlockState,
+			COOKIE(MapColor.COLOR_PURPLE)
+		));
+	public static final RegistryObject<SlabBlock> SOURCE_BERRY_COOKIE_TILE_SLAB = BLOCKS.register("source_berry_cookie_tile_slab",
+		() -> new SlabBlock(COOKIE(MapColor.COLOR_PURPLE)));
+	public static final RegistryObject<WallBlock> SOURCE_BERRY_COOKIE_TILE_WALL = BLOCKS.register("source_berry_cookie_tile_wall",
+		() -> new WallBlock(COOKIE(MapColor.COLOR_PURPLE)));
 
 	public static RegistryObject<Block> registerBlock(String name, Supplier<Block> block) {
 		return BLOCKS.register(name, block);
@@ -160,5 +180,28 @@ public class DelightfulBlocks {
 
 	public static void create(IEventBus bus) {
 		BLOCKS.register(bus);
+	}
+
+	private static BlockBehaviour.Properties CRATE(MapColor color) {
+		return Block.Properties
+			.copy(Blocks.OAK_PLANKS)
+			.strength(2F, 3F)
+			.sound(SoundType.WOOD)
+			.mapColor(color);
+	}
+
+	private static BlockBehaviour.Properties SACK(MapColor color) {
+		return Block.Properties
+			.copy(Blocks.WHITE_WOOL)
+			.strength(0.5F)
+			.sound(SoundType.WOOL)
+			.mapColor(color);
+	}
+
+	private static BlockBehaviour.Properties COOKIE(MapColor color) {
+		return Block.Properties.of()
+			.strength(2.0F, 3.0F)
+			.sound(SoundType.WOOD)
+			.mapColor(color);
 	}
 }

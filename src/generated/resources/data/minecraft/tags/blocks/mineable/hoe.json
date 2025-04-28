@@ -3,6 +3,14 @@
     "delightful:acorn_sack",
     "delightful:salmonberry_sack",
     "delightful:blueberry_sack",
+    "delightful:glow_jam_cookie_tiles",
+    "delightful:glow_jam_cookie_tile_stairs",
+    "delightful:glow_jam_cookie_tile_slab",
+    "delightful:glow_jam_cookie_tile_wall",
+    "delightful:source_berry_cookie_tiles",
+    "delightful:source_berry_cookie_tile_stairs",
+    "delightful:source_berry_cookie_tile_slab",
+    "delightful:source_berry_cookie_tile_wall",
     {
       "id": "ars_nouveau:sourceberry_sack",
       "required": false

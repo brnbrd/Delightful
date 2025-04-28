@@ -35,19 +35,19 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
 		this.sackBlock(DelightfulBlocks.SALMONBERRY_SACK.get(), "salmonberry");
 		this.sackBlock(DelightfulBlocks.ACORN_SACK.get(), "acorn");
 		this.miniBlock((MiniBlock) DelightfulBlocks.CANTALOUPE.get(),
-				resourceBlock("cantaloupe_side_small"), resourceBlock("cantaloupe_top"));
+				this.resourceBlock("cantaloupe_side_small"), this.resourceBlock("cantaloupe_top"));
 		this.miniBlock((MiniBlock) DelightfulBlocks.MINI_MELON.get(),
 				Modid.MC.rl("block/melon_side"), Modid.MC.rl("block/melon_top"));
 		this.slicedMiniMelonBlock((SlicedMiniMelonBlock) DelightfulBlocks.SLICED_MINI_MELON.get(),
 				"melon", Modid.MC.rl("block/melon_side"), Modid.MC.rl("block/melon_top"));
 		this.slicedMiniMelonBlock((SlicedMiniMelonBlock) DelightfulBlocks.SLICED_CANTALOUPE.get(),
-				"cantaloupe", resourceBlock("cantaloupe_side_small"), resourceBlock("cantaloupe_top"));
+				"cantaloupe", this.resourceBlock("cantaloupe_side_small"), this.resourceBlock("cantaloupe_top"));
 		this.bigSlicedBlock(DelightfulBlocks.SLICED_MELON.get(),
-				resourceBlock("melon_inside_rind"), Modid.MC.rl("block/melon_side"), Modid.MC.rl("block/melon_top"));
+				this.resourceBlock("melon_inside_rind"), Modid.MC.rl("block/melon_side"), Modid.MC.rl("block/melon_top"));
 		this.bigSlicedBlock(DelightfulBlocks.SLICED_PUMPKIN.get(),
-				resourceBlock("pumpkin_inside_rind"), Modid.MC.rl("block/pumpkin_side"), Modid.MC.rl("block/pumpkin_top"));
+				this.resourceBlock("pumpkin_inside_rind"), Modid.MC.rl("block/pumpkin_side"), Modid.MC.rl("block/pumpkin_top"));
 		this.bigSlicedBlock(DelightfulBlocks.SLICED_GLOOMGOURD.get(),
-				resourceBlock("gloomgourd_inside_rind"), Modid.UG.rl("block/gloomgourd_side"), Modid.UG.rl("block/gloomgourd_top"));
+				this.resourceBlock("gloomgourd_inside_rind"), Modid.UG.rl("block/gloomgourd_side"), Modid.UG.rl("block/gloomgourd_top"));
 		this.pieBlock(DelightfulBlocks.SALMONBERRY_PIE);
 		this.pieBlock(DelightfulBlocks.PUMPKIN_PIE);
 		this.pieBlock(DelightfulBlocks.SOURCE_BERRY_PIE);
@@ -71,6 +71,20 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
 		this.crateBlock(DelightfulBlocks.YUCCA_FRUIT_CRATE.get(), "yucca_fruit", false);
 		this.crateBlock(DelightfulBlocks.BAOBAB_FRUIT_CRATE.get(), "baobab_fruit", false);
 		this.feastBlock(DelightfulBlocks.STUFFED_CANTALOUPE_BLOCK.get());
+		this.simpleBlock(DelightfulBlocks.GLOW_JAM_COOKIE_TILES.get());
+		this.stairsBlock(DelightfulBlocks.GLOW_JAM_COOKIE_TILE_STAIRS.get(),
+			this.resourceBlock("glow_jam_cookie_tiles"));
+		this.slabBlock(DelightfulBlocks.GLOW_JAM_COOKIE_TILE_SLAB.get(),
+			this.resourceBlock("glow_jam_cookie_tiles"), this.resourceBlock("glow_jam_cookie_tiles"));
+		this.wallBlock(DelightfulBlocks.GLOW_JAM_COOKIE_TILE_WALL.get(),
+			this.resourceBlock("glow_jam_cookie_tiles"));
+		this.simpleBlock(DelightfulBlocks.SOURCE_BERRY_COOKIE_TILES.get());
+		this.stairsBlock(DelightfulBlocks.SOURCE_BERRY_COOKIE_TILE_STAIRS.get(),
+			this.resourceBlock("source_berry_cookie_tiles"));
+		this.slabBlock(DelightfulBlocks.SOURCE_BERRY_COOKIE_TILE_SLAB.get(),
+			this.resourceBlock("source_berry_cookie_tiles"), this.resourceBlock("source_berry_cookie_tiles"));
+		this.wallBlock(DelightfulBlocks.SOURCE_BERRY_COOKIE_TILE_WALL.get(),
+			this.resourceBlock("source_berry_cookie_tiles"));
 	}
 
 	// Adapted from: https://github.com/vectorwing/FarmersDelight/blob/1.19/src/main/java/vectorwing/farmersdelight/data/BlockStates.java

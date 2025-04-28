@@ -148,6 +148,14 @@ public class DelightfulBlockLoot extends BlockLootSubProvider {
 		this.dropSelf(DelightfulBlocks.GREEN_APPLE_CRATE.get());
 		this.dropSelf(DelightfulBlocks.YUCCA_FRUIT_CRATE.get());
 		this.dropSelf(DelightfulBlocks.BAOBAB_FRUIT_CRATE.get());
+		this.dropSelf(DelightfulBlocks.GLOW_JAM_COOKIE_TILES.get());
+		this.dropSelf(DelightfulBlocks.GLOW_JAM_COOKIE_TILE_STAIRS.get());
+		this.dropSelf(DelightfulBlocks.GLOW_JAM_COOKIE_TILE_SLAB.get());
+		this.dropSelf(DelightfulBlocks.GLOW_JAM_COOKIE_TILE_WALL.get());
+		this.dropSelf(DelightfulBlocks.SOURCE_BERRY_COOKIE_TILES.get());
+		this.dropSelf(DelightfulBlocks.SOURCE_BERRY_COOKIE_TILE_STAIRS.get());
+		this.dropSelf(DelightfulBlocks.SOURCE_BERRY_COOKIE_TILE_SLAB.get());
+		this.dropSelf(DelightfulBlocks.SOURCE_BERRY_COOKIE_TILE_WALL.get());
 
 		// Ice Cream Blocks
 		this.dropSelf(DelightfulBlocks.SALMONBERRY_ICE_CREAM_BLOCK.get());

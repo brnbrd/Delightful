@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "delightful:block/source_berry_cookie_tile_slab"
+    },
+    "type=double": {
+      "model": "delightful:block/source_berry_cookie_tiles"
+    },
+    "type=top": {
+      "model": "delightful:block/source_berry_cookie_tile_slab_top"
+    }
+  }
+}
