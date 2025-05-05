@@ -10,6 +10,7 @@
 - Cantaloupe Bread now requires 1 Sugar
 - Nut Butter Bottle is now cooked from 3 nuts and 1 Sugar
 - 2 Marshmallow on a Stick are now crafted from 2 Sugar, 1 water, and 2 Sticks
+- Added models for some items when placed on Coasters from [Brewin' and Chewin'](https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin)
 - Added recycling recipes for some knives
 - Added Sap and Syrup compatibility for [Autumnity](https://www.curseforge.com/minecraft/mc-mods/autumnity) and [Thermal](https://www.curseforge.com/minecraft/mc-mods/thermal-foundation)
 - Added more support to `can_be_salted` tag from [The Salt](https://www.curseforge.com/minecraft/mc-mods/salt)

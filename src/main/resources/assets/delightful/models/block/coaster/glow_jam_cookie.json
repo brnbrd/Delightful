@@ -1,0 +1,6 @@
+{
+  "parent": "brewinandchewin:block/coaster_cookie",
+  "textures": {
+    "cookie": "delightful:block/coaster/glow_jam_cookie"
+  }
+}
