@@ -49,7 +49,7 @@ public class VeridiumKnifeItem extends AetherKnifeItem implements VeridiumItem {
 
 	@Override
 	public boolean mineBlock(@NotNull ItemStack stack, @NotNull Level level, @NotNull BlockState state, @NotNull BlockPos pos, @NotNull LivingEntity user) {
-		// Call the vanilla method do do things like tool damaging
+		// Call the vanilla method to do things like tool damaging
 		boolean bool = super.mineBlock(stack, level, state, pos, user);
 		if (!user.level().isClientSide()) {
 			boolean instaBreak = state.getDestroySpeed(level, pos) <= 0F;
