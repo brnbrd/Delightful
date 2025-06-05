@@ -6,6 +6,7 @@ import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -38,18 +39,17 @@ public class VeridiumKnifeItem extends AetherKnifeItem implements VeridiumItem {
 
 	@Override
 	public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> tooltips, @NotNull TooltipFlag advanced) {
-		tooltips.add(Component.translatable(
-				"tooltip.aether_redux.infusion_charge",
-				stack.getTag() == null ? 0 : stack.getTag().getByte(VeridiumItem.NBT_KEY)
-			).withStyle(ChatFormatting.GRAY)
-		);
-		tooltips.add(TooltipUtils.TOOLTIP_SHIFT_FOR_INFO.apply(Component.translatable("gui.aether_redux.infusion_info")));
+		MutableComponent infusion = Component.translatable("tooltip.aether_redux.infusion_charge", stack.getTag() == null ? 0 : stack.getTag().getByte(VeridiumItem.NBT_KEY)).withStyle(ChatFormatting.GRAY);
+		
+		tooltips.add(infusion);
+		Component info = TooltipUtils.shiftForInfo(HOVER_TOOLTIP);
+		tooltips.add(info);
 		super.appendHoverText(stack, level, tooltips, advanced);
 	}
 
 	@Override
 	public boolean mineBlock(@NotNull ItemStack stack, @NotNull Level level, @NotNull BlockState state, @NotNull BlockPos pos, @NotNull LivingEntity user) {
-		// Call the vanilla method do do things like tool damaging
+		// Call the vanilla method to do things like tool damaging
 		boolean bool = super.mineBlock(stack, level, state, pos, user);
 		if (!user.level().isClientSide()) {
 			boolean instaBreak = state.getDestroySpeed(level, pos) <= 0F;
@@ -80,7 +80,7 @@ public class VeridiumKnifeItem extends AetherKnifeItem implements VeridiumItem {
 
 		@Override
 		public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> tooltips, @NotNull TooltipFlag advanced) {
-			Component info = TooltipUtils.TOOLTIP_SHIFT_FOR_INFO.apply(Component.translatable("gui.aether_redux.infusion_info"));
+			Component info = TooltipUtils.shiftForInfo(HOVER_TOOLTIP);
 			tooltips.add(info);
 			super.appendHoverText(stack, level, tooltips, advanced);
 		}
