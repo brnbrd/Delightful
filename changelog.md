@@ -24,6 +24,7 @@
 - Fixed some instances of missing tooltip information
 - Silver Knife will be disabled in presence of [Abnormals Delight](https://www.curseforge.com/minecraft/mc-mods/abnormals-delight)
 - Fixed placeability of Source Berry Pie in some cases
+- Fixed crash with [The Aether: Redux](https://www.curseforge.com/minecraft/mc-mods/aether-redux) (thanks Zepalesque)
 - Removed recipe conflict resolution for Crate Delight
 - Removed some false error logs (closes [#114](https://github.com/brnbrd/Delightful/issues/114))
 

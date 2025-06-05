@@ -18,11 +18,11 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.zepalesque.redux.item.tools.VeridiumItem;
 import net.zepalesque.redux.item.util.TooltipUtils;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 public class VeridiumKnifeItem extends AetherKnifeItem implements VeridiumItem {
 	private final Supplier<? extends Item> uninfused;
@@ -40,7 +40,6 @@ public class VeridiumKnifeItem extends AetherKnifeItem implements VeridiumItem {
 	@Override
 	public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> tooltips, @NotNull TooltipFlag advanced) {
 		MutableComponent infusion = Component.translatable("tooltip.aether_redux.infusion_charge", stack.getTag() == null ? 0 : stack.getTag().getByte(VeridiumItem.NBT_KEY)).withStyle(ChatFormatting.GRAY);
-		
 		tooltips.add(infusion);
 		Component info = TooltipUtils.shiftForInfo(HOVER_TOOLTIP);
 		tooltips.add(info);
