@@ -51,14 +51,15 @@
     "3.6.1": "https://github.com/brnbrd/Delightful/blob/1.20.1/changelog.md",
     "3.6.2": "https://github.com/brnbrd/Delightful/blob/1.20.1/changelog.md",
     "3.7": "https://github.com/brnbrd/Delightful/blob/1.20.1/changelog.md",
-    "3.7.1": "https://github.com/brnbrd/Delightful/blob/1.20.1/changelog.md"
+    "3.7.1": "https://github.com/brnbrd/Delightful/blob/1.20.1/changelog.md",
+    "3.7.2": "https://github.com/brnbrd/Delightful/blob/1.20.1/changelog.md"
   },
   "promos": {
     "1.18.2-latest": "2.0",
     "1.18.2-recommended": "2.0",
     "1.19-latest": "3.4",
     "1.19-recommended": "3.4",
-    "1.20.1-latest": "3.7.1",
-    "1.20.1-recommended": "3.7.1"
+    "1.20.1-latest": "3.7.2",
+    "1.20.1-recommended": "3.7.2"
   }
 }
