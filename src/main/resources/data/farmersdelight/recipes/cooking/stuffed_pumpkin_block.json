@@ -1,85 +1,32 @@
 {
-  "type": "forge:conditional",
-  "recipes": [
+  "type": "farmersdelight:cooking",
+  "container": {
+    "item": "minecraft:pumpkin"
+  },
+  "cookingtime": 400,
+  "experience": 2.0,
+  "ingredients": [
     {
-      "conditions": [
-        {
-          "type": "forge:tag_empty",
-          "tag": "forge:bread/corn"
-        }
-      ],
-      "recipe": {
-        "type": "farmersdelight:cooking",
-        "container": {
-          "item": "minecraft:pumpkin"
-        },
-        "cookingtime": 400,
-        "experience": 2.0,
-        "ingredients": [
-          {
-            "tag": "forge:grain/rice"
-          },
-          {
-            "tag": "forge:vegetables"
-          },
-          {
-            "tag": "forge:vegetables/onion"
-          },
-          {
-            "item": "minecraft:brown_mushroom"
-          },
-          {
-            "tag": "forge:vegetables/potato"
-          },
-          {
-            "tag": "forge:berries"
-          }
-        ],
-        "recipe_book_tab": "meals",
-        "result": {
-          "item": "farmersdelight:stuffed_pumpkin_block"
-        }
-      }
+      "tag": "forge:grain/rice"
     },
     {
-      "conditions": [
-        {
-          "type": "forge:not",
-          "value": {
-            "type": "forge:tag_empty",
-            "tag": "forge:bread/corn"
-          }
-        }
-      ],
-      "recipe": {
-        "type": "farmersdelight:cooking",
-        "container": {
-          "item": "minecraft:pumpkin"
-        },
-        "cookingtime": 400,
-        "experience": 2.0,
-        "ingredients": [
-          {
-            "tag": "forge:bread/corn"
-          },
-          {
-            "tag": "forge:vegetables"
-          },
-          {
-            "tag": "forge:vegetables/onion"
-          },
-          {
-            "item": "minecraft:brown_mushroom"
-          },
-          {
-            "tag": "forge:berries"
-          }
-        ],
-        "recipe_book_tab": "meals",
-        "result": {
-          "item": "farmersdelight:stuffed_pumpkin_block"
-        }
-      }
+      "tag": "forge:vegetables"
+    },
+    {
+      "tag": "forge:vegetables/onion"
+    },
+    {
+      "item": "minecraft:brown_mushroom"
+    },
+    {
+      "tag": "forge:vegetables/potato"
+    },
+    {
+      "tag": "forge:berries"
     }
-  ]
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "farmersdelight:stuffed_pumpkin_block"
+  }
 }

@@ -103,6 +103,7 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 				.addOptional(Modid.CD.rl("corn_cob_crate"))
 				.addOptional(Modid.CD.rl("eggplant_crate"))
 				.addOptional(Modid.CD.rl("white_eggplant_crate"))
+				.addOptional(Modid.MND.rl("powdery_cabinet"))
 				.addOptional(Util.rl("fruittrees", "citrus_cabinet"))
 				.addOptional(Util.rl("fruittrees", "cherry_cabinet"));
 		this.tag(BlockTags.MINEABLE_WITH_SHOVEL)

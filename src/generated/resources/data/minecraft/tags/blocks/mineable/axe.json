@@ -40,6 +40,10 @@
       "required": false
     },
     {
+      "id": "mynethersdelight:powdery_cabinet",
+      "required": false
+    },
+    {
       "id": "fruittrees:citrus_cabinet",
       "required": false
     },

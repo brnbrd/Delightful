@@ -35,7 +35,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> FLOWERS_AZALEA = Modid.MC.it("flowers/azalea");
 
 	// Farmers Delight
-	public static final TagKey<Item> CABINETS_STONE = Modid.FD.it("cabinets/stone");
+	public static final TagKey<Item> STONE_CABINETS = Modid.FD.it("cabinets/stone");
 	public static final TagKey<Item> STRAW_PLANTS = Modid.FD.it("straw_plants");
 	public static final TagKey<Item> BARKS = Modid.FD.it("barks");
 

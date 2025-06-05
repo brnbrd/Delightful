@@ -1,6 +1,9 @@
 {
   "values": [
-    "farmersdelight:mangrove_cabinet",
+    {
+      "id": "arsdelight:archwood_cabinet",
+      "required": false
+    },
     {
       "id": "windswept:holly_cabinet",
       "required": false

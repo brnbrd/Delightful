@@ -127,16 +127,15 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 
 		// Farmer's Delight
 		this.tag(ModTags.WOODEN_CABINETS)
-			.add(ModItems.MANGROVE_CABINET.get())
+			.addOptional(Modid.AND.rl("archwood_cabinet"))
 			.addOptional(Modid.WS.rl("holly_cabinet"))
 			.addOptional(Modid.WS.rl("chestnut_cabinet"))
 			.addOptional(Util.rl("fruittrees", "citrus_cabinet"))
 			.addOptional(Util.rl("fruittrees", "cherry_cabinet"));
-		this.tag(ModTags.CABINETS)
-			.addTag(DelightfulItemTags.CABINETS_STONE);
-		this.tag(DelightfulItemTags.CABINETS_STONE)
+		this.tag(DelightfulItemTags.STONE_CABINETS)
 			.add(DelightfulItems.BASALT_CABINET.get())
 			.add(DelightfulItems.QUARTZ_CABINET.get());
+		this.tag(ModTags.CABINETS).addTag(DelightfulItemTags.STONE_CABINETS);
 		this.tag(ModTags.WILD_CROPS_ITEM).add(DelightfulItems.WILD_SALMONBERRIES.get());
 
 		// Tomato
@@ -411,6 +410,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.DUSTS_FLOUR)
 			.addTag(DelightfulItemTags.DUSTS_ENDER_PEARL)
 			.addTag(DelightfulItemTags.DUSTS_WOOD)
+			.addOptional(Modid.AND.rl("wilden_horn_powder"))
+			.addOptional(Modid.AND.rl("wilden_spike_powder"))
 			.addOptional(Modid.DD.rl("soul_dust"))
 			.addOptional(Modid.RA.rl("flux_dust"))
 			.addOptionalTag(Modid.LOADER.rl("dusts/prismalium"))

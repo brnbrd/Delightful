@@ -5,6 +5,14 @@
     "#forge:dusts/ender_pearl",
     "#forge:dusts/wood",
     {
+      "id": "arsdelight:wilden_horn_powder",
+      "required": false
+    },
+    {
+      "id": "arsdelight:wilden_spike_powder",
+      "required": false
+    },
+    {
       "id": "deeperdarker:soul_dust",
       "required": false
     },
