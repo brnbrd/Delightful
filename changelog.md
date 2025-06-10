@@ -5,6 +5,8 @@
 
 ### Updates
 - Update dependencies (Farmer's Delight 1.2.8)
+- Changed ingredient in grass cutting recipe from `straw_plants` tag to Grass
+- Added recipes for cutting several modded grasses into Straw
 
 ### Fixes
 - Source Berry Ice Cream and Milkshake will be disabled in presence of [Cosmopolitan](https://www.curseforge.com/minecraft/mc-mods/cosmopolitan)

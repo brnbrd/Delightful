@@ -1,0 +1,18 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "farmersdelight:sandy_shrub"
+    }
+  ],
+  "result": [
+    {
+      "chance": 0.15,
+      "count": 1,
+      "item": "farmersdelight:straw"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  }
+}
