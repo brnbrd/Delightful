@@ -1,6 +1,15 @@
 ## Version History
 
 
+# 3.7.3
+
+### Updates
+- Update dependencies (Farmer's Delight 1.2.8)
+
+### Fixes
+- Source Berry Ice Cream and Milkshake will be disabled in presence of [Cosmopolitan](https://www.curseforge.com/minecraft/mc-mods/cosmopolitan)
+
+
 # 3.7.2
 
 ### Updates

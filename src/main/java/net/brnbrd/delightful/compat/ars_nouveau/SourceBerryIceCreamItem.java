@@ -13,4 +13,9 @@ public class SourceBerryIceCreamItem extends IceCreamItem implements ICompat {
 	public Modid[] getModid() {
 		return new Modid[]{Modid.AN};
 	}
+
+	@Override
+	public Modid[] getConflicts() {
+		return new Modid[]{Modid.COS};
+	}
 }

@@ -14,4 +14,9 @@ public class SourceBerryShakeItem extends ShakeItem implements ICompat {
 	public @NotNull Modid[] getModid() {
 		return new Modid[]{Modid.AN};
 	}
+
+	@Override
+	public Modid[] getConflicts() {
+		return new Modid[]{Modid.COS};
+	}
 }

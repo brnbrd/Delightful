@@ -14,4 +14,9 @@ public class SourceBerryIceCreamBlockItem extends CompatBlockItem {
 	public Strategy getStrategy() {
 		return Strategy.AND;
 	}
+
+	@Override
+	public Modid[] getConflicts() {
+		return new Modid[]{Modid.COS};
+	}
 }

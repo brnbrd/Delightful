@@ -2,12 +2,17 @@
   "type": "farmersdelight:cutting",
   "ingredients": [
     {
-      "tag": "farmersdelight:straw_plants"
+      "item": "minecraft:grass"
     }
   ],
   "result": [
     {
+      "count": 1,
+      "item": "minecraft:wheat_seeds"
+    },
+    {
       "chance": 0.2,
+      "count": 1,
       "item": "farmersdelight:straw"
     }
   ],

@@ -40,6 +40,7 @@ public enum Modid {
 	CAD("casualness_delight"),
 	CD("culturaldelights"),
 	COOK("cookielicious"),
+	COS("cosmopolitan"),
 	CR("collectorsreap"),
 	CRAB("crabbersdelight"),
 	CSA("create_sa"),

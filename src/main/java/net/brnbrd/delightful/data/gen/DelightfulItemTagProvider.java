@@ -919,7 +919,9 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.add(DelightfulItems.SOURCE_BERRY_PIE_SLICE.get())
 			.add(DelightfulItems.SOURCE_BERRY_GUMMY.get())
 			.add(DelightfulItems.SOURCE_BERRY_ICE_CREAM.get())
-			.add(DelightfulItems.SOURCE_BERRY_MILKSHAKE.get());
+			.add(DelightfulItems.SOURCE_BERRY_MILKSHAKE.get())
+			.addOptional(Util.rl(Modid.COS, "source_berry_ice_cream"))
+			.addOptional(Util.rl(Modid.COS, "source_berry_milkshake"));
 
 		// Sully's Mod
 		this.tag(Modid.SM.it("tortoise_food"))

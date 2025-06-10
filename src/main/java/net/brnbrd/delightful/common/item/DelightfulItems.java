@@ -72,11 +72,14 @@ public class DelightfulItems {
 	public static final RegistryObject<Item> SALMONBERRY_ICE_CREAM_BLOCK = registerItem("salmonberry_ice_cream_block", () ->
 			new CompatBlockItem(DelightfulBlocks.SALMONBERRY_ICE_CREAM_BLOCK.get(), (new Item.Properties()), Modid.N));
 	public static final RegistryObject<Item> SOURCE_BERRY_ICE_CREAM_BLOCK = registerItem("source_berry_ice_cream_block", () ->
-			new SourceBerryIceCreamBlockItem(DelightfulBlocks.SOURCE_BERRY_ICE_CREAM_BLOCK.get(),  (new Item.Properties())));
+			new SourceBerryIceCreamBlockItem(DelightfulBlocks.SOURCE_BERRY_ICE_CREAM_BLOCK.get(), (new Item.Properties())));
 
-	public static final RegistryObject<Item> MATCHA_ICE_CREAM = registerItem("matcha_ice_cream", () -> new IceCreamItem((new Item.Properties()).food(Nutrition.MATCHA_ICE_CREAM)));
-	public static final RegistryObject<Item> SALMONBERRY_ICE_CREAM = registerItem("salmonberry_ice_cream", () -> new IceCreamItem((new Item.Properties()).food(Nutrition.SALMONBERRY_ICE_CREAM)));
-	public static final RegistryObject<Item> SOURCE_BERRY_ICE_CREAM = registerItem("source_berry_ice_cream", () -> new SourceBerryIceCreamItem((new Item.Properties()).food(ArsNouveauCompat.SOURCE_BERRY_ICE_CREAM)));
+	public static final RegistryObject<Item> MATCHA_ICE_CREAM = registerItem("matcha_ice_cream",
+			() -> new IceCreamItem((new Item.Properties()).food(Nutrition.MATCHA_ICE_CREAM)));
+	public static final RegistryObject<Item> SALMONBERRY_ICE_CREAM = registerItem("salmonberry_ice_cream",
+			() -> new IceCreamItem((new Item.Properties()).food(Nutrition.SALMONBERRY_ICE_CREAM)));
+	public static final RegistryObject<Item> SOURCE_BERRY_ICE_CREAM = registerItem("source_berry_ice_cream",
+			() -> new SourceBerryIceCreamItem((new Item.Properties()).food(ArsNouveauCompat.SOURCE_BERRY_ICE_CREAM)));
 	public static final RegistryObject<Item> MATCHA_MILKSHAKE = registerItem("matcha_milkshake",
 			() -> new ShakeItem(new Item.Properties().food(Nutrition.MATCHA_MILKSHAKE)));
 	public static final RegistryObject<Item> SALMONBERRY_MILKSHAKE = registerItem("salmonberry_milkshake",

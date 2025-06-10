@@ -1,4 +1,4 @@
-// 1.20.1	2025-06-05T12:27:52.1628565	delightful
+// 1.20.1	2025-06-10T09:32:17.5343694	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -10,7 +10,7 @@ a60ec42053ef8dd4bb252bc03dea45003dbd8f12 data/aether/tags/items/holystone.json
 e8ef8f8eef92496a83b1e7d33919a11e16cfbf70 data/aether_redux/tags/items/infused_veridium_items.json
 6fcc510eb227815a2bbaa4c6005c372f75eaf029 data/aether_redux/tags/items/veridium_advancement_infusable.json
 e7d157a15ec173a498e93edde6b67f3558f0c698 data/ancient_aether/tags/items/valkyrum.json
-1566df1da02f01528050256334b98d06ecef0815 data/ars_nouveau/tags/items/magic_food.json
+0c154859477c9164f9fdfda38bb9d98eb968b097 data/ars_nouveau/tags/items/magic_food.json
 459ce97cdbc0fe7825ed7b320441d23013d6ab4c data/botania/tags/items/dreamwood_twig.json
 252e55d4f597c2456076ab8efb95e65cbae9a337 data/botania/tags/items/livingwood_twig.json
 cc3ce1c9ecfdd40d917db77aeff124be1dd856b4 data/botania/tags/items/mana_using_items.json
