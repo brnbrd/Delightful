@@ -9,6 +9,7 @@
 - Added recipes for cutting several modded grasses into Straw
 
 ### Fixes
+- Fixed Jade crop growth tooltip formatting
 - Source Berry Ice Cream and Milkshake will be disabled in presence of [Cosmopolitan](https://www.curseforge.com/minecraft/mc-mods/cosmopolitan)
 
 
