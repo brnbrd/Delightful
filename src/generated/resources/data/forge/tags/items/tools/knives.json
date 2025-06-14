@@ -1,9 +1,5 @@
 {
   "values": [
-    "#farmersdelight:tools/knives",
-    {
-      "id": "occultism:butcher_knife",
-      "required": false
-    }
+    "#farmersdelight:tools/knives"
   ]
 }

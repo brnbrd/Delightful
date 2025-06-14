@@ -65,9 +65,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.map(RegistryObject::get)
 			.filter(item -> item instanceof DKnifeItem)
 			.forEach(build::add);
-		this.tag(ForgeTags.TOOLS_KNIVES)
-			.addTag(ModTags.KNIVES)
-			.addOptional(Util.rl("occultism", "butcher_knife"));
+		this.tag(ForgeTags.TOOLS_KNIVES).addTag(ModTags.KNIVES);
 		this.tag(ItemTags.PIGLIN_LOVED).add(Knives.REFINED_GLOWSTONE.get());
 
 		// Delightful
