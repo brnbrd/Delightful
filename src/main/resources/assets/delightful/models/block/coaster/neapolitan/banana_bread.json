@@ -1,0 +1,24 @@
+{
+	"credit": "Made with Blockbench, by Championhestu.",
+	"ambientocclusion": false,
+	"texture_size": [18, 18],
+	"textures": {
+		"0": "delightful:block/coaster/neapolitan/banana_bread",
+		"particle": "delightful:block/coaster/neapolitan/banana_bread"
+	},
+	"elements": [
+		{
+			"from": [4, 0, 5],
+			"to": [12, 4, 12],
+			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 6]},
+			"faces": {
+				"north": {"uv": [0, 7.11111, 7.11111, 10.66667], "texture": "#0"},
+				"east": {"uv": [0.88889, 2.66667, 7.11111, 6.22222], "texture": "#0"},
+				"south": {"uv": [0, 7.11111, 7.11111, 10.66667], "texture": "#0"},
+				"west": {"uv": [0.88889, 2.66667, 7.11111, 6.22222], "texture": "#0"},
+				"up": {"uv": [8, 0, 15.11111, 6.22222], "texture": "#0"},
+				"down": {"uv": [8, 7.11111, 15.11111, 13.33333], "texture": "#0"}
+			}
+		}
+	]
+}
