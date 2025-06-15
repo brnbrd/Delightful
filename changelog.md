@@ -4,11 +4,12 @@
 # 3.7.3
 
 ### Updates
-- Changed ingredient in grass cutting recipe from `#straw_plants` to Grass
-- Added recipes for cutting several modded grasses into Straw
 - Added models for some [Neapolitan](https://www.curseforge.com/minecraft/mc-mods/neapolitan) items on [Brewin' and Chewin'](https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin) Coasters
 - Added models for some [Abnormals Delight](https://www.curseforge.com/minecraft/mc-mods/abnormals-delight) items on [Brewin' and Chewin'](https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin) Coasters
 - Added models for some [Undergarden Delight](https://www.curseforge.com/minecraft/mc-mods/undergarden-delight) items on [Brewin' and Chewin'](https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin) Coasters
+- Changed ingredient in grass cutting recipe from `#straw_plants` to Grass
+- Added recipes for cutting several modded grasses into Straw
+- Added Clover from [Regions Unexplored](https://www.curseforge.com/minecraft/mc-mods/regions-unexplored) to `#forge:clover`, allowing it to be cut into Chopped Clover
 - Update dependencies (Farmer's Delight 1.2.8)
 
 ### Fixes

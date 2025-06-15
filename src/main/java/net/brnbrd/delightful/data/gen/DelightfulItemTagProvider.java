@@ -352,7 +352,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.BOP.rl("clover"))
 			.addOptional(Modid.BWG.rl("clover_patch"))
 			.addOptional(Modid.TF.rl("clover_patch"))
-			.addOptional(Modid.BB.rl("four_leaf_clover"));
+			.addOptional(Modid.BB.rl("four_leaf_clover"))
+			.addOptional(Util.rl("regions_unexplored", "clover"));
 		this.tag(DelightfulItemTags.CACTI_LARGE)
 			.add(Items.CACTUS)
 			.addOptional(Modid.BWG.rl("barrel_cactus"))
