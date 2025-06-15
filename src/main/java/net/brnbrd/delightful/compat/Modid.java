@@ -6,6 +6,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.ForgeRegistries;
 import vectorwing.farmersdelight.FarmersDelight;
@@ -130,6 +131,14 @@ public enum Modid {
 	@Nullable
 	public Item item(@NotNull String name) {
 		return ForgeRegistries.ITEMS.getValue(this.rl(name));
+	}
+
+	public ItemStack itemStack(@NotNull String name) {
+		if (this.loaded()) {
+			Item i = this.item(name);
+			if (i != null) return new ItemStack(i);
+		}
+		return ItemStack.EMPTY;
 	}
 
 	@NotNull
