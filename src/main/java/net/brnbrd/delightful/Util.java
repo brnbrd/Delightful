@@ -306,7 +306,7 @@ public class Util {
 	}
 
 	public static void dropOrGive(ItemStack stack, Level level, BlockPos pos, Direction direction, Player give) {
-		if (stack == null || stack == ItemStack.EMPTY || stack.getCount() < 1) return;
+		if (stack == null || stack.isEmpty() || stack.getCount() < 1) return;
 		if (DelightfulConfig.GIVE_SLICED_DIRECTLY.get()) {
 			ItemHandlerHelper.giveItemToPlayer(give, stack, 0);
 		} else {

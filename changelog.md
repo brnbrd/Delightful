@@ -14,6 +14,7 @@
 ### Fixes
 - Fixed Jade crop growth tooltip formatting
 - Source Berry Ice Cream and Milkshake will be disabled in presence of [Cosmopolitan](https://www.curseforge.com/minecraft/mc-mods/cosmopolitan)
+- Sliced Gloomgourds can once again provide Gloomgourd Slices from [Undergarden Delight](https://www.curseforge.com/minecraft/mc-mods/undergarden-delight)
 
 
 # 3.7.2

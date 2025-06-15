@@ -42,7 +42,8 @@ public class SlicedGourdBlock extends Block implements ISliceable {
 
 	@Override
 	public ItemStack getCloneItemStack(BlockState state, HitResult target, BlockGetter level, BlockPos pos, Player player) {
-		return this.getSliceItem();
+		ItemStack item = this.getSliceItem();
+		return item != null ? item : ItemStack.EMPTY;
 	}
 
 	public VoxelShape byBite(BlockState state) {

@@ -12,11 +12,15 @@ import net.minecraft.world.phys.HitResult;
 
 public class SlicedGloomgourdBlock extends SlicedGourdBlock {
 	public SlicedGloomgourdBlock(Properties properties) {
-		super(properties, () -> null);
+		super(properties, () -> Modid.UGD.loaded() ? Modid.UGD.item("gloomgourd_slice") : Items.AIR);
 	}
 
 	@Override
 	public ItemStack getCloneItemStack(BlockState state, HitResult target, BlockGetter level, BlockPos pos, Player player) {
-		return new ItemStack(Modid.UG.item("gloomgourd", Items.PUMPKIN));
+		if (!Modid.UGD.loaded() && Modid.UG.loaded()) {
+			return Modid.UG.itemStack("gloomgourd");
+		} else {
+			return super.getCloneItemStack(state, target, level, pos, player);
+		}
 	}
 }
