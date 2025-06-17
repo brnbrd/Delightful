@@ -5,6 +5,14 @@
       "conditions": [
         {
           "type": "forge:false"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "autumnity:pumpkin_bread"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "this_item:does_not_exist"
         }
       ],
       "recipe": {

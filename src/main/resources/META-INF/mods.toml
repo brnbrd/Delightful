@@ -174,7 +174,7 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
 [[dependencies.delightful]]
     modId="autumnity"
     mandatory=false
-    versionRange="[5,)"
+    versionRange="[5.0.2,)"
     ordering="AFTER"
     side="BOTH"
 

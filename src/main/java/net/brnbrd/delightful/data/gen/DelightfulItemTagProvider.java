@@ -433,13 +433,14 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.add(Items.BLAZE_POWDER)
 			.addTag(DelightfulItemTags.VEGETABLES_SPICY)
 			.addOptionalTag(Modid.MND.rl("hot_spice"));
-		this.tag(DelightfulItemTags.PUMPKINS_CARVED)
+		this.tag(DelightfulItemTags.PUMPKINS_PUMPKIN_BLOCKS)
+			.add(Items.PUMPKIN)
 			.add(Items.CARVED_PUMPKIN)
+			.addOptional(Modid.AUT.rl("large_pumpkin_slice"))
 			.addOptional(Modid.AUT.rl("carved_large_pumpkin_slice"));
 		this.tag(DelightfulItemTags.PUMPKINS)
-			.addTag(DelightfulItemTags.PUMPKINS_CARVED)
-			.add(Items.PUMPKIN)
-			.addOptional(Modid.AUT.rl("large_pumpkin_slice"));
+			.addTag(DelightfulItemTags.PUMPKINS_PUMPKIN_BLOCKS)
+			.add(ModItems.PUMPKIN_SLICE.get());
 		this.tag(DelightfulItemTags.COCONUT).addOptional(Modid.ECO.rl("coconut_slice"));
 		this.tag(DelightfulItemTags.NUTS_WALNUT)
 			.addOptionalTag(Modid.LOADER.rl("walnut"))

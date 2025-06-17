@@ -10,6 +10,7 @@
 - Changed ingredient in grass cutting recipe from `#straw_plants` to Grass
 - Added recipes for cutting several modded grasses into Straw
 - Added Clover from [Regions Unexplored](https://www.curseforge.com/minecraft/mc-mods/regions-unexplored) to `#forge:clover`, allowing it to be cut into Chopped Clover
+- Pumpkin blocks are now tagged under the item tag `#forge:pumpkins/pumpkin_blocks`
 - Update dependencies (Farmer's Delight 1.2.8)
 
 ### Fixes

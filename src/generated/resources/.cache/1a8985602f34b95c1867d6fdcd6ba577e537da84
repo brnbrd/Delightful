@@ -1,4 +1,4 @@
-// 1.20.1	2025-06-14T19:30:13.7865853	delightful
+// 1.20.1	2025-06-17T09:50:41.3082257	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -168,8 +168,8 @@ f8d72d5bda08bf6a699df2a788f9a2f7e2db73ba data/forge/tags/items/nuts/peanut.json
 590133215d0e3db746c20780adf419bb44a64295 data/forge/tags/items/nut_butter.json
 73625a13040054a157ad409cbc941fbe17d0325b data/forge/tags/items/peanut_butter.json
 f3360d7b7b77be9642d47141cd4d5a20ad8c8e4f data/forge/tags/items/protein_patty.json
-632939cde2b1a39ffe6d4160704411e42b1ae7e3 data/forge/tags/items/pumpkins.json
-8413d81c3df233a81ef7916245d1ddbcd4c720c6 data/forge/tags/items/pumpkins/carved.json
+fecd0addad0c8d2c1b829d5350c240452b0e3807 data/forge/tags/items/pumpkins.json
+431a726f847e40b3e6866e9677d0202cc5855e6a data/forge/tags/items/pumpkins/pumpkin_blocks.json
 18e01eda65d3e6c12efb395ba42802b672fd8fdd data/forge/tags/items/raw_crab.json
 65540c326746380f0b29818f3507d94d7902ab98 data/forge/tags/items/raw_duck.json
 bb236522f522944eb76d1bbb77565bcffcf784d5 data/forge/tags/items/raw_fishes.json

@@ -100,7 +100,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> CHOCOLATE = forge("chocolate");
 	public static final TagKey<Item> HOT_SPICE = forge("hot_spice");
 	public static final TagKey<Item> PUMPKINS = forge("pumpkins");
-	public static final TagKey<Item> PUMPKINS_CARVED = forge("pumpkins/carved");
+	public static final TagKey<Item> PUMPKINS_PUMPKIN_BLOCKS = forge("pumpkins/pumpkin_blocks");
 	public static final TagKey<Item> RAW_CRAB = forge("raw_crab");
 	public static final TagKey<Item> COOKED_CRAB = forge("cooked_crab");
 	public static final TagKey<Item> CRAB_MEAT = forge("crab_meat");

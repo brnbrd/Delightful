@@ -1,10 +1,6 @@
 {
   "values": [
-    "#forge:pumpkins/carved",
-    "minecraft:pumpkin",
-    {
-      "id": "autumnity:large_pumpkin_slice",
-      "required": false
-    }
+    "#forge:pumpkins/pumpkin_blocks",
+    "farmersdelight:pumpkin_slice"
   ]
 }

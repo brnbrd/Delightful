@@ -28,14 +28,9 @@
           {
             "tag": "forge:vegetables"
           },
-          [
-            {
-              "tag": "forge:pumpkins"
-            },
-            {
-              "item": "farmersdelight:pumpkin_slice"
-            }
-          ]
+          {
+            "item": "farmersdelight:pumpkin_slice"
+          }
         ],
         "recipe_book_tab": "meals",
         "result": {

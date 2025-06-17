@@ -13,7 +13,7 @@
         "category": "misc",
         "ingredients": [
           {
-            "tag": "forge:pumpkins"
+            "item": "farmersdelight:pumpkin_slice"
           },
           {
             "tag": "forge:sugar"
