@@ -1,0 +1,80 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "mynethersdelight:tear_popsicle"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:ice_cubes"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "key": {
+          "#": {
+            "item": "minecraft:ghast_tear"
+          },
+          "s": {
+            "tag": "forge:rods/wooden"
+          },
+          "i": {
+            "tag": "forge:ice_cubes"
+          }
+        },
+        "pattern": [
+          " ii",
+          "i#i",
+          "si "
+        ],
+        "result": {
+          "item": "mynethersdelight:tear_popsicle"
+        },
+        "show_notification": true
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "mynethersdelight:tear_popsicle"
+        },
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:ice_cubes"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "key": {
+          "#": {
+            "item": "minecraft:ghast_tear"
+          },
+          "s": {
+            "tag": "forge:rods/wooden"
+          },
+          "i": {
+            "item": "minecraft:ice"
+          }
+        },
+        "pattern": [
+          " ii",
+          "i#i",
+          "si "
+        ],
+        "result": {
+          "item": "mynethersdelight:tear_popsicle"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}
