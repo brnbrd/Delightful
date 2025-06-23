@@ -759,6 +759,12 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.RAW_VENISON)
 			.addTag(DelightfulItemTags.RAW_GOAT);
 
+		// Cosmopolitan
+		this.tag(Modid.COS.it("tracer_sources"))
+			.add(DelightfulItems.GLOW_JAM_JAR.get())
+			.add(DelightfulItems.GLOW_JAM_COOKIE.get())
+			.addOptional(Modid.BG.rl("glowgurt"));
+
 		// Salt
 		this.tag(Modid.S.it("can_be_salted"))
 			.addTag(DelightfulItemTags.COOKED_CRAB)
@@ -795,11 +801,6 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.addSelf(DelightfulItemTags.RESONARIUM);
 		this.addSelf(DelightfulItemTags.RESONARIUM_PLATE);
 
-		// Create
-		this.addSelf(DelightfulItemTags.POLISHED_ROSE_QUARTZ);
-		this.addSelf(DelightfulItemTags.ZINC_HANDLE);
-		this.addSelf(DelightfulItemTags.HEAP_EXPERIENCE);
-
 		// Seeds
 		this.addSelf(DelightfulItemTags.SHARP_LEAF);
 
@@ -812,7 +813,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.FRUITS_KIWANO).addOptional(Modid.NE.rl("kiwano"));
 
 		// Create
-		this.tag(DelightfulItemTags.UPRIGHT_ON_BELT)
+		this.addSelf(DelightfulItemTags.POLISHED_ROSE_QUARTZ);
+		this.tag(Modid.C.it("upright_on_belt"))
 			.addTag(DelightfulItemTags.JAMS)
 			.add(DelightfulItems.NUT_BUTTER_BOTTLE.get())
 			.add(DelightfulItems.PRICKLY_PEAR_JUICE.get())
@@ -831,6 +833,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.FR.rl("dandelion_tea"))
 			.addOptional(Modid.FR.rl("purulent_tea"))
 			.addOptional(Modid.FR.rl("gamblers_tea"));
+		this.addSelf(DelightfulItemTags.ZINC_HANDLE);
+		this.addSelf(DelightfulItemTags.HEAP_EXPERIENCE);
 
 		// Serene Seasons
 		this.tag(Util.it("sereneseasons", "summer_crops"))

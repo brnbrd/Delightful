@@ -1,7 +1,5 @@
 package net.brnbrd.delightful.common.item.food;
 
-import net.brnbrd.delightful.compat.CosmopolitanCompat;
-import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.compat.TeaCompat;
 import net.brnbrd.delightful.compat.abnormals.NeapolitanCompat;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -173,11 +171,7 @@ public class Nutrition {
 		.effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 600, 0), 1F).build();
 	public static final FoodProperties GLOW_JAM_COOKIE = (new FoodProperties.Builder())
 		.nutrition(2).saturationMod(0.1F).fast()
-		.effect(() -> new MobEffectInstance(
-			CosmopolitanCompat.getTracer(),
-			300,
-			0
-		), 1F).build();
+		.effect(() -> new MobEffectInstance(MobEffects.GLOWING, 300, 0), 1F).build();
 	public static final FoodProperties BAKLAVA_SLICE = (new FoodProperties.Builder())
 		.nutrition(5).saturationMod(0.4F)
 		.fast()

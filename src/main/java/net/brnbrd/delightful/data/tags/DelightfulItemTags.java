@@ -178,11 +178,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> SNAIL_SHELLS = forge("snail_shells");
 	public static final TagKey<Item> MARSHMALLOW = forge("marshmallow");
 
-	// Cosmopolitan
-	public static final TagKey<Item> TRACER_SOURCES = Modid.COS.it("tracer_sources");
-
 	// Create
-	public static final TagKey<Item> UPRIGHT_ON_BELT = Modid.C.it("upright_on_belt");
 	public static final TagKey<Item> POLISHED_ROSE_QUARTZ = Modid.C.it("polished_rose_quartz");
 
 	// Forbidden and Arcanus
