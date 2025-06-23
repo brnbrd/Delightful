@@ -5,6 +5,7 @@ import net.brnbrd.delightful.Util;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
@@ -170,5 +171,14 @@ public enum Modid {
 
 	public boolean blockExists(@NotNull String name) {
 		return this.loaded() && ForgeRegistries.BLOCKS.containsKey(this.rl(name));
+	}
+
+	@Nullable
+	public MobEffect effect(@NotNull String name) {
+		return Util.effect(this.rl(name));
+	}
+
+	public MobEffect effect(@NotNull String name, MobEffect backup) {
+		return Util.effect(this.rl(name), backup);
 	}
 }

@@ -5,7 +5,6 @@ import net.brnbrd.delightful.common.block.DelightfulBlocks;
 import net.brnbrd.delightful.common.block.ISliceable;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.compat.BrewinChewinCompat;
-import net.brnbrd.delightful.compat.CasualnessDelightCompat;
 import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.core.BlockPos;
@@ -52,7 +51,7 @@ public class ForgeEvents {
 				if (e.getItem().is(Modid.RL.item("rotten_chunk"))) {
 					duration = 1800;
 				}
-				Util.addEffect(e.getEntity(), CasualnessDelightCompat.getRotten(), duration, 0);
+				Util.addEffect(e.getEntity(), Modid.CAD.effect("rotten"), duration, 0);
 			}
 		}
 	}
