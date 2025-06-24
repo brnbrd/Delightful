@@ -4,6 +4,14 @@
     {
       "conditions": [
         {
+          "modid": "create",
+          "type": "forge:mod_loaded"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "this_item:does_not_exist"
+        },
+        {
           "type": "forge:false"
         }
       ],

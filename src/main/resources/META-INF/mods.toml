@@ -104,21 +104,21 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
 [[dependencies.delightful]]
     modId="ars_nouveau"
     mandatory=false
-    versionRange="[4.12.6,)"
+    versionRange="[4.12.7,)"
     ordering="AFTER"
     side="BOTH"
 
 [[dependencies.delightful]]
     modId="arsdelight"
     mandatory=false
-    versionRange="[1.1.2,)"
+    versionRange="[1.1.6,)"
     ordering="AFTER"
     side="BOTH"
 
 [[dependencies.delightful]]
     modId="create"
     mandatory=false
-    versionRange="[0.5.1,)"
+    versionRange="[6.0.6,)"
     ordering="AFTER"
     side="BOTH"
 
@@ -496,6 +496,6 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
 [[dependencies.delightful]]
     modId="ae2"
     mandatory=false
-    versionRange="[15.3.4,)"
+    versionRange="[15.4.5,)"
     ordering="AFTER"
     side="BOTH"
