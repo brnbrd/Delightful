@@ -4,7 +4,6 @@ import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.block.DelightfulBlocks;
 import net.brnbrd.delightful.common.block.ISliceable;
 import net.brnbrd.delightful.common.item.DelightfulItems;
-import net.brnbrd.delightful.compat.BrewinChewinCompat;
 import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.core.BlockPos;
@@ -12,7 +11,6 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -38,11 +36,6 @@ public class ForgeEvents {
 	void onEatEffectProvider(LivingEntityUseItemEvent.Finish e) {
 		if (e.getResult() != Event.Result.DENY) {
 			if (
-				Modid.BG.loaded() && // Berry Good loaded
-				Util.itemStackIs(e.getItem(), BrewinChewinCompat.glowMarmalade) // Brewin' & Chewin' item exists
-			) {
-				Util.addEffect(e.getEntity(), MobEffects.GLOWING, 3000, 0);
-			} else if (
 				Modid.CAD.loaded() &&
 				e.getItem().is(DelightfulItemTags.ROTTEN) &&
 				e.getEntity().getRandom().nextBoolean() // 50% chance

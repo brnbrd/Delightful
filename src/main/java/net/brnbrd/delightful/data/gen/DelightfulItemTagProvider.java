@@ -6,6 +6,7 @@ import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.knife.DKnifeItem;
 import net.brnbrd.delightful.common.item.knife.Knives;
 import net.brnbrd.delightful.compat.BWGCompat;
+import net.brnbrd.delightful.compat.BrewinChewinCompat;
 import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.compat.abnormals.AtmosphericCompat;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
@@ -468,7 +469,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.add(DelightfulItems.GLOW_JAM_JAR.get())
 			.addOptionalTag(Modid.LOADER.rl("jams/glow_berries"))
 			.addOptionalTag(Modid.LOADER.rl("jams/glow_berry"))
-			.addOptional(Modid.BC.rl("glow_berry_marmalade"));
+			.addOptional(BrewinChewinCompat.glowMarmalade);
 		this.tag(DelightfulItemTags.JAMS)
 			.addTag(DelightfulItemTags.JAMS_GLOW)
 			.add(DelightfulItems.JAM_JAR.get())
