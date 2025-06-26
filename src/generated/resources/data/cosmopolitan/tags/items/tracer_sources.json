@@ -1,7 +1,5 @@
 {
   "values": [
-    "delightful:glow_jam_jar",
-    "delightful:glow_jam_cookie",
     {
       "id": "berry_good:glowgurt",
       "required": false

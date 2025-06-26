@@ -762,8 +762,6 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 
 		// Cosmopolitan
 		this.tag(Modid.COS.it("tracer_sources"))
-			.add(DelightfulItems.GLOW_JAM_JAR.get())
-			.add(DelightfulItems.GLOW_JAM_COOKIE.get())
 			.addOptional(Modid.BG.rl("glowgurt"));
 
 		// Salt

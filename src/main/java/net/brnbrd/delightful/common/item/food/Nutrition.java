@@ -1,5 +1,6 @@
 package net.brnbrd.delightful.common.item.food;
 
+import net.brnbrd.delightful.compat.CosmopolitanCompat;
 import net.brnbrd.delightful.compat.TeaCompat;
 import net.brnbrd.delightful.compat.abnormals.NeapolitanCompat;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -38,7 +39,7 @@ public class Nutrition {
 		.nutrition(5).saturationMod(0.3F).build();
 	public static final FoodProperties GLOW_JAM_JAR = (new FoodProperties.Builder())
 		.nutrition(5).saturationMod(0.3F)
-		.effect(() -> new MobEffectInstance(MobEffects.GLOWING, 1200, 0), 1F).build();
+		.effect(() -> new MobEffectInstance(CosmopolitanCompat.getTracer().get(), 1200, 0), 1F).build();
 	public static final FoodProperties NUT_BUTTER_BOTTLE = (new FoodProperties.Builder())
 		.nutrition(5).saturationMod(0.55F).build();
 	public static final FoodProperties NUT_BUTTER_AND_JAM_SANDWICH = (new FoodProperties.Builder())
@@ -171,7 +172,7 @@ public class Nutrition {
 		.effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 600, 0), 1F).build();
 	public static final FoodProperties GLOW_JAM_COOKIE = (new FoodProperties.Builder())
 		.nutrition(2).saturationMod(0.1F).fast()
-		.effect(() -> new MobEffectInstance(MobEffects.GLOWING, 300, 0), 1F).build();
+		.effect(() -> new MobEffectInstance(CosmopolitanCompat.getTracer().get(), 300, 0), 1F).build();
 	public static final FoodProperties BAKLAVA_SLICE = (new FoodProperties.Builder())
 		.nutrition(5).saturationMod(0.4F)
 		.fast()
