@@ -1,0 +1,6 @@
+{
+  "parent": "brewinandchewin:block/coaster_cookie",
+  "textures": {
+    "cookie": "delightful:block/coaster/farmersrespite/green_tea_cookie"
+  }
+}

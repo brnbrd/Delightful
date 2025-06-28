@@ -16,6 +16,7 @@
 - Sliced Gloomgourds can once again provide Gloomgourd Slices from [Undergarden Delight](https://www.curseforge.com/minecraft/mc-mods/undergarden-delight)
 
 ### Coaster models for [Brewin' and Chewin'](https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin):
+- Added some models for [Farmer's Respite](https://www.curseforge.com/minecraft/mc-mods/farmers-respite)
 - Added some models for [Neapolitan](https://www.curseforge.com/minecraft/mc-mods/neapolitan)
 - Added some models for [Atmospheric](https://www.curseforge.com/minecraft/mc-mods/atmospheric)
 - Added some models for [Autumnity](https://www.curseforge.com/minecraft/mc-mods/autumnity)

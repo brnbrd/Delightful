@@ -1,0 +1,23 @@
+{
+	"credit": "Made with Blockbench, by Championhestu.",
+	"ambientocclusion": false,
+	"textures": {
+		"0": "delightful:block/coaster/farmersrespite/nether_wart_sourdough",
+		"particle": "delightful:block/coaster/farmersrespite/nether_wart_sourdough"
+	},
+	"elements": [
+		{
+			"from": [5, 0, 5],
+			"to": [11, 4, 11],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 0, 7]},
+			"faces": {
+				"north": {"uv": [0, 7, 6, 11], "texture": "#0"},
+				"east": {"uv": [7, 7, 13, 11], "texture": "#0"},
+				"south": {"uv": [0, 7, 6, 11], "texture": "#0"},
+				"west": {"uv": [7, 7, 13, 11], "texture": "#0"},
+				"up": {"uv": [0, 0, 6, 6], "texture": "#0"},
+				"down": {"uv": [7, 0, 13, 6], "texture": "#0"}
+			}
+		}
+	]
+}
