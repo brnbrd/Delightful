@@ -1,0 +1,7 @@
+{
+  "parent": "brewinandchewin:block/coaster_jam_jar",
+  "textures": {
+    "particle": "delightful:block/coaster/upgrade_aquatic/mulberry_jam_bottle",
+    "jam": "delightful:block/coaster/upgrade_aquatic/mulberry_jam_bottle"
+  }
+}
