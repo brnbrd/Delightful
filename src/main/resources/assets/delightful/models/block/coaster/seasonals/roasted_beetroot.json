@@ -1,0 +1,6 @@
+{
+  "parent": "brewinandchewin:block/coaster_beetroot",
+  "textures": {
+    "potato": "delightful:block/coaster/seasonals/roasted_beetroot"
+  }
+}
