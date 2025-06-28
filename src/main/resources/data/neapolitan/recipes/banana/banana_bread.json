@@ -19,7 +19,7 @@
             "item": "neapolitan:banana"
           },
           {
-            "tag": "forge:sugar"
+            "item": "minecraft:sugar"
           }
         ],
         "result": {

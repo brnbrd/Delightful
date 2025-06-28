@@ -19,7 +19,7 @@
             "item": "minecraft:milk_bucket"
           },
           "B": {
-            "tag": "forge:sugar"
+            "item": "minecraft:sugar"
           },
           "C": {
             "tag": "forge:grain/wheat"

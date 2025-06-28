@@ -25,7 +25,7 @@
             "item": "farmersdelight:pie_crust"
           },
           "x": {
-            "tag": "forge:sugar"
+            "item": "minecraft:sugar"
           }
         },
         "pattern": [

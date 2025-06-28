@@ -28,10 +28,10 @@
         "experience": 2.0,
         "ingredients": [
           {
-            "tag": "forge:rosey"
+            "tag": "delightful:rosey"
           },
           {
-            "tag": "forge:sugar"
+            "item": "minecraft:sugar"
           },
           {
             "tag": "forge:fruits/lemon"
@@ -76,10 +76,10 @@
         "experience": 2.0,
         "ingredients": [
           {
-            "tag": "forge:rosey"
+            "tag": "delightful:rosey"
           },
           {
-            "tag": "forge:sugar"
+            "item": "minecraft:sugar"
           },
           {
             "tag": "forge:fruits/citrus"
@@ -121,10 +121,10 @@
         "experience": 2.0,
         "ingredients": [
           {
-            "tag": "forge:rosey"
+            "tag": "delightful:rosey"
           },
           {
-            "tag": "forge:sugar"
+            "item": "minecraft:sugar"
           },
           {
             "tag": "forge:fruits/melon"

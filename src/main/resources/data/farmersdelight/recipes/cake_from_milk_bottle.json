@@ -9,7 +9,7 @@
       "tag": "forge:milk"
     },
     "s": {
-      "tag": "forge:sugar"
+      "item": "minecraft:sugar"
     },
     "d": {
       "tag": "forge:dough"

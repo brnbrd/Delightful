@@ -29,7 +29,7 @@
             "tag": "forge:nuts"
           },
           "s": {
-            "tag": "forge:sugar"
+            "item": "minecraft:sugar"
           }
         },
         "pattern": [

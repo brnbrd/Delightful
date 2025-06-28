@@ -30,7 +30,7 @@
             "tag": "forge:gems/rose_quartz"
           },
           {
-            "tag": "forge:sugar"
+            "item": "minecraft:sugar"
           }
         ],
         "result": {

@@ -9,8 +9,8 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.ItemLike;
-import org.jetbrains.annotations.Nullable;
 import java.util.List;
+import org.jetbrains.annotations.Nullable;
 
 public interface IConfigured extends ItemLike {
 	default Modid[] getConflicts() {

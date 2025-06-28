@@ -40,7 +40,7 @@
             "tag": "forge:fruits/glow_berries"
           },
           {
-            "tag": "forge:sugar"
+            "item": "minecraft:sugar"
           }
         ],
         "result": {

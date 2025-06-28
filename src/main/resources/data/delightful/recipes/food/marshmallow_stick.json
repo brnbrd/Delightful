@@ -24,10 +24,10 @@
         "category": "misc",
         "ingredients": [
           {
-            "tag": "forge:sugar"
+            "item": "minecraft:sugar"
           },
           {
-            "tag": "forge:sugar"
+            "item": "minecraft:sugar"
           },
           [
             {

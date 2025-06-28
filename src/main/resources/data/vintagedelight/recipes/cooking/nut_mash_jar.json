@@ -32,7 +32,7 @@
             "tag": "forge:cooked_nuts"
           },
           {
-            "tag": "forge:sugar"
+            "item": "minecraft:sugar"
           }
         ],
         "result": {

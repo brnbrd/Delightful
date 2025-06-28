@@ -84,6 +84,10 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.add(Items.ROTTEN_FLESH)
 			.addOptional(Modid.RL.rl("rotten_chunk"))
 			.addOptional(Modid.UG.rl("rotten_blisterberry"));
+		this.tag(DelightfulItemTags.ROSEY)
+			.addOptional(Modid.BWG.rl("rose"))
+			.addOptional(Modid.FR.rl("rose_hips"))
+			.addOptional(Util.rl("sunflowerdelight", "rosebud"));
 		this.tag(DelightfulItemTags.MAKES_DYE_RED)
 			.addOptionalTag(Modid.BWG.rl("dye/makes_red_dye"))
 			.addOptional(Modid.HAB.rl("red_anthurium"))
@@ -345,10 +349,6 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptionalTag(Modid.LOADER.rl("flowers/lavender"))
 			.addOptional(Modid.BOP.rl("lavender"))
 			.addOptional(Modid.BOP.rl("tall_lavender"));
-		this.tag(DelightfulItemTags.ROSEY)
-			.addOptional(Modid.BWG.rl("rose"))
-			.addOptional(Modid.FR.rl("rose_hips"))
-			.addOptional(Util.rl("sunflowerdelight", "rosebud"));
 		this.tag(DelightfulItemTags.CLOVER)
 			.addOptional(Modid.BOP.rl("clover"))
 			.addOptional(Modid.BWG.rl("clover_patch"))
@@ -427,9 +427,6 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Util.rl("hauntedharvest", "cornbread"));
 		this.tag(ForgeTags.BREAD).addTag(DelightfulItemTags.BREAD_CORN);
 		this.tag(DelightfulItemTags.BURGER_BUN).addOptional(Modid.SAS.rl("burger_bun"));
-		this.tag(DelightfulItemTags.BREAD_OR_BUN)
-			.addTag(ForgeTags.BREAD)
-			.addTag(DelightfulItemTags.BURGER_BUN);
 		this.tag(DelightfulItemTags.HOT_SPICE)
 			.add(Items.BLAZE_POWDER)
 			.addTag(DelightfulItemTags.VEGETABLES_SPICY)
@@ -496,7 +493,6 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.PEANUT_BUTTER)
 			.add(DelightfulItems.NUT_BUTTER_BOTTLE.get())
 			.addOptional(Modid.VD.rl("nut_mash_bottle"));
-		this.tag(DelightfulItemTags.SUGAR).add(Items.SUGAR);
 		this.tag(DelightfulItemTags.CHEESE)
 			.addOptionalTag(Modid.LOADER.rl("cheeses"))
 			.addOptionalTag(Modid.HH.rl("cheese_slices"))

@@ -16,6 +16,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> COOKED_VENISON_COMPAT = d("cooked_venison_compat");
 	public static final TagKey<Item> COOKED_VENISON_CHOP_COMPAT = d("cooked_venison_chop_compat");
 	public static final TagKey<Item> ROTTEN = d("rotten");
+	public static final TagKey<Item> ROSEY = d("rosey");
 	public static final TagKey<Item> MAKES_DYE_RED = d("makes_dye/red");
 	public static final TagKey<Item> MAKES_DYE_YELLOW = d("makes_dye/yellow");
 	public static final TagKey<Item> MAKES_DYE_WHITE = d("makes_dye/white");
@@ -112,7 +113,6 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> NUTS_PEANUT = forge("nuts/peanut");
 	public static final TagKey<Item> NUTS_ACORN = forge("nuts/acorn");
 	public static final TagKey<Item> COOKED_NUTS = forge("cooked_nuts");
-	public static final TagKey<Item> SUGAR = forge("sugar");
 	public static final TagKey<Item> TEA_LEAVES = forge("tea_leaves");
 	public static final TagKey<Item> TEA_LEAVES_GREEN = forge("tea_leaves/green");
 	public static final TagKey<Item> JAMS = forge("jams");
@@ -145,7 +145,6 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> SYRUP = forge("syrup");
 	public static final TagKey<Item> SYRUP_BOTTLE = forge("syrup/syrup_bottle");
 	public static final TagKey<Item> LAVENDER = forge("lavender");
-	public static final TagKey<Item> ROSEY = forge("rosey");
 	public static final TagKey<Item> CLOVER = forge("clover");
 	public static final TagKey<Item> CACTI = forge("cacti");
 	public static final TagKey<Item> CACTI_LARGE = forge("cacti/large");
@@ -170,7 +169,6 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> DOUGH_NUT = forge("dough/nut");
 	public static final TagKey<Item> BREAD_CORN = forge("bread/corn");
 	public static final TagKey<Item> BURGER_BUN = forge("burger_bun");
-	public static final TagKey<Item> BREAD_OR_BUN = forge("bread_or_bun");
 	public static final TagKey<Item> COOKIES = forge("cookies");
 	public static final TagKey<Item> COOKIES_SOURCE_BERRY = forge("cookies/source_berry");
 	public static final TagKey<Item> ROPES = forge("ropes");

@@ -26,7 +26,7 @@
             "tag": "forge:milk"
           },
           {
-            "tag": "forge:sugar"
+            "item": "minecraft:sugar"
           },
           {
             "tag": "delightful:cooked_marshmallow_stick"

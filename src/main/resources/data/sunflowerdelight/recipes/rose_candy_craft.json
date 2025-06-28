@@ -17,10 +17,10 @@
         "category": "misc",
         "ingredients": [
           {
-            "tag": "forge:rosey"
+            "tag": "delightful:rosey"
           },
           {
-            "tag": "forge:sugar"
+            "item": "minecraft:sugar"
           },
           {
             "item": "minecraft:honey_bottle"

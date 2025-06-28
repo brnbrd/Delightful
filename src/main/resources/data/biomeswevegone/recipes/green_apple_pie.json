@@ -25,7 +25,7 @@
             "tag": "forge:fruits/green_apple"
           },
           "x": {
-            "tag": "forge:sugar"
+            "item": "minecraft:sugar"
           }
         },
         "pattern": [
@@ -59,7 +59,7 @@
             "tag": "forge:fruits/green_apple"
           },
           {
-            "tag": "forge:sugar"
+            "item": "minecraft:sugar"
           },
           {
             "tag": "forge:eggs"

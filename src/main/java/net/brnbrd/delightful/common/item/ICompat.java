@@ -7,8 +7,8 @@ import net.brnbrd.delightful.compat.Mods;
 import net.brnbrd.delightful.compat.Strategy;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import org.jetbrains.annotations.NotNull;
 import java.util.List;
+import org.jetbrains.annotations.NotNull;
 
 public interface ICompat extends IConfigured {
 	@NotNull Modid[] getModid(); // Can be empty, but not null

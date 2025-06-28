@@ -15,7 +15,7 @@
             "tag": "forge:grain/wheat"
           },
           {
-            "tag": "forge:sugar"
+            "item": "minecraft:sugar"
           },
           {
             "tag": "forge:fruits"

@@ -24,7 +24,7 @@
             "tag": "forge:eggs"
           },
           "x": {
-            "tag": "forge:sugar"
+            "item": "minecraft:sugar"
           }
         },
         "pattern": [

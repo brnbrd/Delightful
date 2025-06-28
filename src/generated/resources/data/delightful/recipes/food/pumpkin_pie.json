@@ -25,7 +25,7 @@
             "item": "farmersdelight:pumpkin_slice"
           },
           "s": {
-            "tag": "forge:sugar"
+            "item": "minecraft:sugar"
           }
         },
         "pattern": [

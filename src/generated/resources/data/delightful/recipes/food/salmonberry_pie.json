@@ -22,7 +22,7 @@
             "tag": "forge:fruits/salmonberries"
           },
           "x": {
-            "tag": "forge:sugar"
+            "item": "minecraft:sugar"
           }
         },
         "pattern": [

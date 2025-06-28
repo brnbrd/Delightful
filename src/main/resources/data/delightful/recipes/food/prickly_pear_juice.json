@@ -25,7 +25,7 @@
             "tag": "ecologics:cooked_prickly_pear"
           },
           {
-            "tag": "forge:sugar"
+            "item": "minecraft:sugar"
           },
           {
             "tag": "ecologics:cooked_prickly_pear"

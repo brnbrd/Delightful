@@ -22,7 +22,7 @@
             "tag": "forge:fruits/strawberries"
           },
           {
-            "tag": "forge:sugar"
+            "item": "minecraft:sugar"
           }
         ],
         "result": {

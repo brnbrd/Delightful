@@ -50,7 +50,7 @@
             "tag": "forge:ice_cubes"
           },
           {
-            "tag": "forge:sugar"
+            "item": "minecraft:sugar"
           }
         ],
         "result": {
@@ -104,7 +104,7 @@
             "item": "minecraft:ice"
           },
           {
-            "tag": "forge:sugar"
+            "item": "minecraft:sugar"
           }
         ],
         "result": {

@@ -31,7 +31,7 @@
             }
           ],
           {
-            "tag": "forge:sugar"
+            "item": "minecraft:sugar"
           },
           {
             "tag": "forge:dusts/flour/nut"

@@ -162,7 +162,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 						.requires(ModItems.HONEY_COOKIE.get())
 						.requires(Items.COCOA_BEANS)
 						.requires(ForgeTags.MILK)
-						.requires(DelightfulItemTags.SUGAR)
+						.requires(Items.SUGAR)
 						.requires(DelightfulItemTags.COOKED_MARSHMALLOW_STICK)
 						.requires(ModItems.HONEY_COOKIE.get())
 						.unlockedBy("has_cooked_marshmallow_stick", has(DelightfulItemTags.COOKED_MARSHMALLOW_STICK)),
@@ -222,7 +222,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			"food/nut_dough", finished, enabled(DelightfulItems.NUT_DOUGH));
 	wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.NUT_DOUGH.get(), 2)
 				.requires(Tags.Items.EGGS)
-				.requires(DelightfulItemTags.SUGAR)
+				.requires(Items.SUGAR)
 				.requires(DelightfulItemTags.DUSTS_FLOUR_NUT)
 				.unlockedBy("has_nut_flour", has(DelightfulItemTags.DUSTS_FLOUR_NUT)),
 			"food/nut_dough_from_flour_and_eggs", finished, enabled(DelightfulItems.NUT_DOUGH), not(tagEmpty(DelightfulItemTags.DUSTS_FLOUR_NUT)));
@@ -233,7 +233,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 						.requires(DelightfulItemTags.FRUITS_SALMONBERRIES)
 						.requires(ForgeTags.MILK)
 						.requires(DelightfulItemTags.ICE_CUBES)
-						.requires(DelightfulItemTags.SUGAR)
+						.requires(Items.SUGAR)
 						.unlockedBy("has_ice_cubes", has(DelightfulItemTags.ICE_CUBES)),
 				"food/salmonberry_ice_cream", finished, enabled("salmonberry_ice_cream"), not(tagEmpty(DelightfulItemTags.ICE_CUBES)));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.SALMONBERRY_ICE_CREAM.get(), 1)
@@ -241,7 +241,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 						.requires(DelightfulItemTags.FRUITS_SALMONBERRIES)
 						.requires(ForgeTags.MILK)
 						.requires(Items.ICE)
-						.requires(DelightfulItemTags.SUGAR)
+						.requires(Items.SUGAR)
 						.unlockedBy("has_ice", has(Items.ICE)),
 				"food/salmonberry_ice_cream_no_neapolitan", finished, enabled("salmonberry_ice_cream"), tagEmpty(DelightfulItemTags.ICE_CUBES));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.SALMONBERRY_MILKSHAKE.get(), 3)
@@ -255,7 +255,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 						.requires(DelightfulItemTags.MATCHA)
 						.requires(ForgeTags.MILK)
 						.requires(DelightfulItemTags.ICE_CUBES)
-						.requires(DelightfulItemTags.SUGAR)
+						.requires(Items.SUGAR)
 						.unlockedBy("has_ice_cubes", has(DelightfulItemTags.ICE_CUBES)),
 				"food/matcha_ice_cream", finished, enabled(DelightfulItems.MATCHA_ICE_CREAM), not(tagEmpty(DelightfulItemTags.ICE_CUBES)));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.MATCHA_ICE_CREAM.get(), 1)
@@ -263,7 +263,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 						.requires(DelightfulItemTags.MATCHA)
 						.requires(ForgeTags.MILK)
 						.requires(Items.ICE)
-						.requires(DelightfulItemTags.SUGAR)
+						.requires(Items.SUGAR)
 						.unlockedBy("has_ice", has(Items.ICE)),
 				"food/matcha_ice_cream_no_neapolitan", finished, enabled(DelightfulItems.MATCHA_ICE_CREAM), tagEmpty(DelightfulItemTags.ICE_CUBES));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.MATCHA_MILKSHAKE.get(), 3)
@@ -290,7 +290,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 						.define('h', Items.HONEY_BOTTLE)
 						.define('n', DelightfulItemTags.NUTS)
 						.define('d', ForgeTags.DOUGH)
-						.define('s', DelightfulItemTags.SUGAR)
+						.define('s', Items.SUGAR)
 						.define('g', DelightfulItemTags.HOT_SPICE)
 						.unlockedBy("has_nuts", has(DelightfulItemTags.NUTS)),
 				"food/baklava_no_citrus", finished, enabled(DelightfulItems.BAKLAVA), tagEmpty(DelightfulItemTags.FRUITS_CITRUS));
@@ -304,7 +304,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 						.pattern("xOx")
 						.define('#', ForgeTags.GRAIN_WHEAT)
 						.define('a', DelightfulItemTags.FRUITS_SALMONBERRIES)
-						.define('x', DelightfulItemTags.SUGAR)
+						.define('x', Items.SUGAR)
 						.define('O', ModItems.PIE_CRUST.get())
 						.unlockedBy("has_pie_crust", has(ModItems.PIE_CRUST.get())),
 				"food/salmonberry_pie", finished, enabled(DelightfulItems.SALMONBERRY_PIE));
@@ -318,7 +318,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 						.pattern("scs")
 						.define('p', ModItems.PUMPKIN_SLICE.get())
 						.define('e', Tags.Items.EGGS)
-						.define('s', DelightfulItemTags.SUGAR)
+						.define('s', Items.SUGAR)
 						.define('c', ModItems.PIE_CRUST.get())
 						.unlockedBy("has_pie_crust", has(ModItems.PIE_CRUST.get())),
 				"food/pumpkin_pie", finished, not(modLoaded("create_central_kitchen")));
@@ -360,7 +360,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.CANTALOUPE_BREAD.get(), 1)
 						.requires(ForgeTags.DOUGH)
 						.requires(DelightfulItemTags.FRUITS_CANTALOUPE)
-						.requires(DelightfulItemTags.SUGAR)
+						.requires(Items.SUGAR)
 						.unlockedBy("has_cantaloupe_slice", has(DelightfulItemTags.FRUITS_CANTALOUPE)),
 				"food/cantaloupe_bread", finished, enabled(DelightfulItems.CANTALOUPE_BREAD), enabled(DelightfulItems.CANTALOUPE));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
@@ -371,7 +371,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 				"food/cooking/ender_nectar", finished, enabled(DelightfulItems.ENDER_NECTAR));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(DelightfulItems.ROCK_CANDY.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F, Items.STICK)
 						.addIngredient(Ingredient.of(DelightfulItemTags.GEMS_ROSE_QUARTZ), 2)
-						.addIngredient(DelightfulItemTags.SUGAR)
+						.addIngredient(Items.SUGAR)
 						.unlockedBy("has_rose_quartz", has(DelightfulItemTags.GEMS_ROSE_QUARTZ)),
 				"food/cooking/rock_candy", finished, enabled(DelightfulItems.ROCK_CANDY), not(tagEmpty(DelightfulItemTags.GEMS_ROSE_QUARTZ)));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
@@ -382,13 +382,13 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
 								DelightfulItems.JAM_JAR.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F, Items.GLASS_BOTTLE)
 						.addIngredient(Ingredient.of(DelightfulItemTags.FRUITS_SWEET), 3)
-						.addIngredient(DelightfulItemTags.SUGAR)
+						.addIngredient(Items.SUGAR)
 						.unlockedBy("has_sweet_fruit", has(DelightfulItemTags.FRUITS_SWEET)),
 				"food/cooking/jam_jar", finished, enabled(DelightfulItems.JAM_JAR), not(modLoaded(Modid.BC.get())), not(modLoaded(Modid.FRD.get())));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
 								DelightfulItems.GLOW_JAM_JAR.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F, Items.GLASS_BOTTLE)
 						.addIngredient(Ingredient.of(DelightfulItemTags.FRUITS_GLOW_BERRIES), 3)
-						.addIngredient(DelightfulItemTags.SUGAR)
+						.addIngredient(Items.SUGAR)
 						.unlockedBy("has_glow_berries", has(DelightfulItemTags.FRUITS_GLOW_BERRIES)),
 				"food/cooking/glow_jam_jar", finished, enabled(DelightfulItems.GLOW_JAM_JAR), not(modLoaded(Modid.BC.get())), not(modLoaded(Modid.FRD.get())));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
@@ -399,7 +399,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 				Items.GLASS_BOTTLE
 			)
 				.addIngredient(Ingredient.of(DelightfulItemTags.NUTS), 3)
-				.addIngredient(DelightfulItemTags.SUGAR)
+				.addIngredient(Items.SUGAR)
 				.unlockedBy("has_nuts", has(DelightfulItemTags.NUTS)),
 				"food/cooking/nut_butter_bottle", finished, enabled(DelightfulItems.NUT_BUTTER_BOTTLE), not(tagEmpty(DelightfulItemTags.NUTS)), not(modLoaded(Modid.VD.get())));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
@@ -790,7 +790,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 						.pattern("xOx")
 						.define('c', DelightfulItemTags.CHOCOLATE)
 						.define('m', ForgeTags.MILK)
-						.define('x', DelightfulItemTags.SUGAR)
+						.define('x', Items.SUGAR)
 						.define('O', ModItems.PIE_CRUST.get())
 						.unlockedBy("has_pie_crust", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.PIE_CRUST.get()))
 						.save(f))
@@ -801,7 +801,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 						.pattern("xOx")
 						.define('c', Items.COCOA_BEANS)
 						.define('m', ForgeTags.MILK)
-						.define('x', DelightfulItemTags.SUGAR)
+						.define('x', Items.SUGAR)
 						.define('O', ModItems.PIE_CRUST.get())
 						.unlockedBy("has_pie_crust", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.PIE_CRUST.get()))
 						.save(f))

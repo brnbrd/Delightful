@@ -32,7 +32,7 @@
             "item": "ars_nouveau:magebloom"
           },
           "x": {
-            "tag": "forge:sugar"
+            "item": "minecraft:sugar"
           }
         },
         "pattern": [
@@ -70,7 +70,7 @@
             "tag": "forge:eggs"
           },
           {
-            "tag": "forge:sugar"
+            "item": "minecraft:sugar"
           },
           {
             "item": "ars_nouveau:magebloom"

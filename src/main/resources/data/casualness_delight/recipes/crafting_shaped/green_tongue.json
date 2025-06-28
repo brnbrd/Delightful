@@ -23,7 +23,7 @@
             "item": "minecraft:slime_ball"
           },
           "g": {
-            "tag": "forge:sugar"
+            "item": "minecraft:sugar"
           },
           "i": {
             "tag": "forge:ice_cubes"
@@ -62,7 +62,7 @@
             "item": "minecraft:slime_ball"
           },
           "g": {
-            "tag": "forge:sugar"
+            "item": "minecraft:sugar"
           },
           "i": {
             "item": "minecraft:ice"
