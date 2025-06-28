@@ -227,6 +227,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.FRUITS_CHERRY).addOptional(Modid.FA.rl("cherry_peach"));
 		this.tag(DelightfulItemTags.FRUITS_PLUM).addOptional(Modid.ENV.rl("plum"));
 		this.tag(DelightfulItemTags.FRUITS_BLOOD_ORANGE).addOptional(Modid.AT.rl("blood_orange"));
+		this.tag(DelightfulItemTags.FRUITS_DRAGON_FRUIT).addOptionalTag(Modid.LOADER.rl("fruits/pitaya"));
 		this.tag(DelightfulItemTags.FRUITS).replace(false)
 			.addTag(ForgeTags.BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_SWEET)
@@ -306,8 +307,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_KIWANO)
 			.addTag(DelightfulItemTags.FRUITS_BAOBAB)
 			.addTag(DelightfulItemTags.FRUITS_BLOOD_ORANGE)
+			.addTag(DelightfulItemTags.FRUITS_DRAGON_FRUIT)
 			.addOptionalTag(DelightfulItemTags.FRUITS_POMEGRANATE.location())
-			.addOptionalTag(DelightfulItemTags.FRUITS_DRAGON_FRUIT.location())
 			.addOptionalTag(DelightfulItemTags.FRUITS_PASSION_FRUIT.location())
 			.addOptionalTag(DelightfulItemTags.FRUITS_ORANGE.location())
 			.addOptionalTag(DelightfulItemTags.FRUITS_MANDARIN.location())

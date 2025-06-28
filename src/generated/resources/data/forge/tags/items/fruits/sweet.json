@@ -21,12 +21,9 @@
     "#forge:fruits/kiwano",
     "#forge:fruits/baobab",
     "#forge:fruits/blood_orange",
+    "#forge:fruits/dragon_fruit",
     {
       "id": "#forge:fruits/pomegranate",
-      "required": false
-    },
-    {
-      "id": "#forge:fruits/dragon_fruit",
       "required": false
     },
     {

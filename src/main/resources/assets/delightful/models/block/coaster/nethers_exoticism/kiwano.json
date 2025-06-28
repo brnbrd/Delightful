@@ -1,0 +1,36 @@
+{
+	"credit": "Made with Blockbench, by Championhestu.",
+	"ambientocclusion": false,
+	"textures": {
+		"0": "delightful:block/coaster/nethers_exoticism/kiwano",
+		"particle": "delightful:block/coaster/nethers_exoticism/kiwano"
+	},
+	"elements": [
+		{
+			"from": [5, 0, 6],
+			"to": [11, 4, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 6]},
+			"faces": {
+				"north": {"uv": [1, 6, 7, 10], "texture": "#0"},
+				"east": {"uv": [8, 6, 12, 10], "texture": "#0"},
+				"south": {"uv": [1, 6, 7, 10], "texture": "#0"},
+				"west": {"uv": [8, 6, 12, 10], "texture": "#0"},
+				"up": {"uv": [1, 1, 7, 5], "texture": "#0"},
+				"down": {"uv": [8, 1, 14, 5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [11, 0, 8],
+			"to": [14, 3, 8],
+			"rotation": {"angle": 0, "axis": "y", "origin": [11, 0, 7]},
+			"faces": {
+				"north": {"uv": [4, 11, 1, 14], "texture": "#0"},
+				"east": {"uv": [0, 0, 0, 0], "texture": "#0"},
+				"south": {"uv": [1, 11, 4, 14], "texture": "#0"},
+				"west": {"uv": [0, 0, 0, 0], "texture": "#0"},
+				"up": {"uv": [0, 0, 0, 0], "texture": "#0"},
+				"down": {"uv": [0, 0, 0, 0], "texture": "#0"}
+			}
+		}
+	]
+}
