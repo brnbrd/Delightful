@@ -20,6 +20,7 @@
 - Added some models for [Neapolitan](https://www.curseforge.com/minecraft/mc-mods/neapolitan)
 - Added some models for [Atmospheric](https://www.curseforge.com/minecraft/mc-mods/atmospheric)
 - Added some models for [Autumnity](https://www.curseforge.com/minecraft/mc-mods/autumnity)
+- Added some models for [Environmental](https://www.curseforge.com/minecraft/mc-mods/environmental)
 - Added some models for [Upgrade Aquatic](https://www.curseforge.com/minecraft/mc-mods/upgrade-aquatic)
 - Added some models for [Ars Nouveau](https://www.curseforge.com/minecraft/mc-mods/ars-nouveau)
 - Added some models for [My Nether's Delight](https://www.curseforge.com/minecraft/mc-mods/my-nethers-delight)

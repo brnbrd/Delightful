@@ -200,6 +200,13 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
     side="BOTH"
 
 [[dependencies.delightful]]
+    modId="environmental"
+    mandatory=false
+    versionRange="[4.0.1,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.delightful]]
     modId="upgrade_aquatic"
     mandatory=false
     versionRange="[6.0.1,)"
