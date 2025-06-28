@@ -26,6 +26,7 @@
 - Added some models for [My Nether's Delight](https://www.curseforge.com/minecraft/mc-mods/my-nethers-delight)
 - Added some models for [Cultural Delights](https://www.curseforge.com/minecraft/mc-mods/cultural-delights)
 - Added some models for [Abnormals Delight](https://www.curseforge.com/minecraft/mc-mods/abnormals-delight)
+- Added some models for [Miner's Delight +](https://www.curseforge.com/minecraft/mc-mods/miners-delight-plus)
 - Added some models for [Undergarden Delight](https://www.curseforge.com/minecraft/mc-mods/undergarden-delight)
 - Added some models for [Nether's Exoticism](https://www.curseforge.com/minecraft/mc-mods/nethers-exoticism)
 
