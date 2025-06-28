@@ -4,11 +4,6 @@
 # 3.7.3
 
 ### Updates
-- Added models for some [Neapolitan](https://www.curseforge.com/minecraft/mc-mods/neapolitan) items on [Brewin' and Chewin'](https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin) Coasters
-- Added models for some [My Nether's Delight](https://www.curseforge.com/minecraft/mc-mods/my-nethers-delight) items on [Brewin' and Chewin'](https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin) Coasters
-- Added models for some [Abnormals Delight](https://www.curseforge.com/minecraft/mc-mods/abnormals-delight) items on [Brewin' and Chewin'](https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin) Coasters
-- Added models for some [Undergarden Delight](https://www.curseforge.com/minecraft/mc-mods/undergarden-delight) items on [Brewin' and Chewin'](https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin) Coasters
-- Glow Jam Jar and Cookie will now provide the `Tracer` effect in presence of [Cosmopolitan](https://www.curseforge.com/minecraft/mc-mods/cosmopolitan)
 - Changed ingredient in grass cutting recipe from `#straw_plants` to Grass
 - Added recipes for cutting several modded grasses into Straw
 - Added Clover from [Regions Unexplored](https://www.curseforge.com/minecraft/mc-mods/regions-unexplored) to `#forge:clover`, allowing it to be cut into Chopped Clover
@@ -20,6 +15,13 @@
 - Source Berry Ice Cream and Milkshake will be disabled in presence of [Cosmopolitan](https://www.curseforge.com/minecraft/mc-mods/cosmopolitan)
 - Sliced Gloomgourds can once again provide Gloomgourd Slices from [Undergarden Delight](https://www.curseforge.com/minecraft/mc-mods/undergarden-delight)
 
+### Coaster item models for [Brewin' and Chewin'](https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin):
+- Added some models for [Neapolitan](https://www.curseforge.com/minecraft/mc-mods/neapolitan)
+- Added some models for [Atmospheric](https://www.curseforge.com/minecraft/mc-mods/atmospheric)
+- Added some models for [Ars Nouveau](https://www.curseforge.com/minecraft/mc-mods/ars-nouveau)
+- Added some models for [My Nether's Delight](https://www.curseforge.com/minecraft/mc-mods/my-nethers-delight)
+- Added some models for [Abnormals Delight](https://www.curseforge.com/minecraft/mc-mods/abnormals-delight)
+- Added some models for [Undergarden Delight](https://www.curseforge.com/minecraft/mc-mods/undergarden-delight)
 
 # 3.7.2
 
