@@ -1,0 +1,23 @@
+{
+	"credit": "Made with Blockbench, by Championhestu.",
+	"ambientocclusion": false,
+	"textures": {
+		"0": "delightful:block/coaster/autumnity/pumpkin_bread",
+		"particle": "delightful:block/coaster/autumnity/pumpkin_bread"
+	},
+	"elements": [
+		{
+			"from": [4, 0, 6],
+			"to": [12, 4, 11],
+			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 6]},
+			"faces": {
+				"north": {"uv": [7, 6, 15, 10], "texture": "#0"},
+				"east": {"uv": [1, 6, 6, 10], "texture": "#0"},
+				"south": {"uv": [7, 6, 15, 10], "texture": "#0"},
+				"west": {"uv": [1, 6, 6, 10], "texture": "#0"},
+				"up": {"uv": [7, 0, 15, 5], "texture": "#0"},
+				"down": {"uv": [7, 11, 15, 16], "texture": "#0"}
+			}
+		}
+	]
+}

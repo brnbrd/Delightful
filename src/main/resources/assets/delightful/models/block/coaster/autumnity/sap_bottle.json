@@ -1,0 +1,7 @@
+{
+  "parent": "brewinandchewin:block/coaster_honey_bottle",
+  "textures": {
+    "particle": "delightful:block/coaster/autumnity/sap_bottle",
+    "jar": "delightful:block/coaster/autumnity/sap_bottle"
+  }
+}
