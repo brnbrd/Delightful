@@ -125,14 +125,14 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
 [[dependencies.delightful]]
     modId="create"
     mandatory=false
-    versionRange="[6.0.6,)"
+    versionRange="[5,)"
     ordering="AFTER"
     side="BOTH"
 
 [[dependencies.delightful]]
     modId="create_central_kitchen"
     mandatory=false
-    versionRange="[1.3,)"
+    versionRange="[1,)"
     ordering="AFTER"
     side="BOTH"
 
