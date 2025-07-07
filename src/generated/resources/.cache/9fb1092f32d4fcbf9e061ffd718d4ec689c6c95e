@@ -1,4 +1,4 @@
-// 1.20.1	2025-06-28T14:20:02.6963692	Recipes
+// 1.20.1	2025-07-07T09:44:56.7353908	Recipes
 6c217dd6477efa10f6042809ba959d53036ab5e2 data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 5b82f87851220644287d771121677deac66b3b89 data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
 cf29033c1c919355c261025df529938e6ebc73f8 data/delightful/advancements/recipes/campfire/cactus_steak.json
@@ -31,7 +31,7 @@ cf9ff57919e70462a9f5a1edec659fa1f7025750 data/delightful/advancements/recipes/fo
 c1927c8e5f3a6cfa92965c4f8fc8a1bdc35da413 data/delightful/advancements/recipes/food/cooking/glow_jam_jar.json
 cfadb9d22a35102abc3a4967b8c767ca4303ee3c data/delightful/advancements/recipes/food/cooking/jam_jar.json
 f3f5c3372c4259ba5983cfb6588ebe582ab13c46 data/delightful/advancements/recipes/food/cooking/nut_butter_bottle.json
-d4a4766917f2da309bcee9e3b02e4456e487f17e data/delightful/advancements/recipes/food/cooking/nut_milk.json
+d12842bdbdaf45117224bec17157b12b54ef4071 data/delightful/advancements/recipes/food/cooking/nut_milk.json
 f8b64cbc40cbbe4360b7223029d1758da01949bd data/delightful/advancements/recipes/food/cooking/rock_candy.json
 808d57e73e80475c16702d38d56da6a1d9b17803 data/delightful/advancements/recipes/food/cooking/sinigang.json
 55de7ec53933bc4a9dc9c23c0eb64c8cb34a005e data/delightful/advancements/recipes/food/cooking/sinigang_no_ginger_citrus.json
@@ -205,7 +205,7 @@ b65cc57bafa4bd64bfe59e5f14d5eaeefc944363 data/delightful/recipes/food/cooking/en
 c44d30fb1d062eae1e0157c1c22572e872aa6d87 data/delightful/recipes/food/cooking/glow_jam_jar.json
 6fb3c99f658a5a76eaa159124d76adebbc7542da data/delightful/recipes/food/cooking/jam_jar.json
 5a14d7a0a253bbdc6bbbc855e5da4618ddc927c7 data/delightful/recipes/food/cooking/nut_butter_bottle.json
-b57570b06b306e19aa181b259554f8790d74116f data/delightful/recipes/food/cooking/nut_milk.json
+808e79ab8fd80438b12b2b38f2dfa47203b62d48 data/delightful/recipes/food/cooking/nut_milk.json
 b01a485c2bd108f4bac1c689a8ce4f284a966a75 data/delightful/recipes/food/cooking/rock_candy.json
 5669fe676a9d22dc3017285592c75da51782f723 data/delightful/recipes/food/cooking/sinigang.json
 edc0bc9b6659e49b19b96be96487dc53ee228b76 data/delightful/recipes/food/cooking/sinigang_no_ginger_citrus.json

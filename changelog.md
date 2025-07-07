@@ -1,6 +1,15 @@
 ## Version History
 
 
+# 3.7.4
+
+### Fixes
+- Removed conflicting nut milk cooking recipes
+
+### Coaster models for [Brewin' and Chewin'](https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin):
+- Fixed Mixed Berry Muffin and Chocolate Pumpkin Muffin using swapped models
+
+
 # 3.7.3
 
 ### Updates
@@ -31,6 +40,7 @@
 - Added some models for [Seasonals](https://www.curseforge.com/minecraft/mc-mods/seasonals)
 - Added some models for [Ecologics](https://www.curseforge.com/minecraft/mc-mods/ecologics)
 - Added some models for [Nether's Exoticism](https://www.curseforge.com/minecraft/mc-mods/nethers-exoticism)
+
 
 # 3.7.2
 

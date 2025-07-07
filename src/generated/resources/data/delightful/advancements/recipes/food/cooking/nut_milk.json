@@ -38,13 +38,6 @@
         {
           "type": "delightful:enabled",
           "value": "nut_milk"
-        },
-        {
-          "type": "forge:not",
-          "value": {
-            "type": "forge:mod_loaded",
-            "modid": "vintagedelight"
-          }
         }
       ]
     }
