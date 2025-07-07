@@ -274,7 +274,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.AE.rl("blue_berry"))
 			.addOptional(Modid.AER.rl("zanberry"))
 			.addOptional(Modid.DA.rl("goldenleaf_berries"))
-			.addOptional(Util.rl("exquisito", "midnight_berries"));
+			.addOptional(Modid.EXQ.rl("midnight_berries"));
 
 		this.tag(DelightfulItemTags.FRUITS_CITRUS).replace(false)
 			.addTag(DelightfulItemTags.FRUITS_CITRON)
@@ -718,9 +718,9 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.FRIGHT.rl("cookie_ghast_tear"))
 			.addOptional(Modid.FRIGHT.rl("cookie_soul_berry"))
 			.addOptional(Modid.FRIGHT.rl("cookie_wither_berry"))
-			.addOptional(Util.rl("exquisito", "ether_bulb_cookie"))
-			.addOptional(Util.rl("exquisito", "nightshade_berry_cookie"))
-			.addOptional(Util.rl("exquisito", "chorus_cookie"))
+			.addOptional(Modid.EXQ.rl("ether_bulb_cookie"))
+			.addOptional(Modid.EXQ.rl("nightshade_berry_cookie"))
+			.addOptional(Modid.EXQ.rl("chorus_cookie"))
 			.addOptional(Util.rl("ends_delight", "chorus_cookie"))
 			.addOptional(Util.rl("sunflowerdelight", "shortbread_cookie"))
 			.addOptional(Util.rl("vampiresdelight", "orchid_cookie"))
@@ -742,10 +742,10 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.add(DelightfulItems.MATCHA_GUMMY.get())
 			.add(DelightfulItems.CANTALOUPE_GUMMY.get())
 			.add(DelightfulItems.SOURCE_BERRY_GUMMY.get())
-			.addOptional(Util.rl("exquisito", "chorus_gummy"))
-			.addOptional(Util.rl("exquisito", "warzipan_gummy"))
-			.addOptional(Util.rl("exquisito", "ether_bulb_gummy"))
-			.addOptional(Util.rl("exquisito", "nightshade_berry_gummy"));
+			.addOptional(Modid.EXQ.rl("chorus_gummy"))
+			.addOptional(Modid.EXQ.rl("ether_bulb_gummy"))
+			.addOptional(Modid.EXQ.rl("nightshade_berry_gummy"))
+			.addOptional(Modid.EXQ.rl("warzipan_gummy"));
 
 		// Nether's Delight
 		this.tag(Modid.ND.it("meal_item"))

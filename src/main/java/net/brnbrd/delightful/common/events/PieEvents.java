@@ -31,20 +31,20 @@ import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import vectorwing.farmersdelight.common.block.PieBlock;
 import vectorwing.farmersdelight.common.registry.ModBlocks;
-import java.util.Map;
 import java.util.function.Supplier;
+import org.jetbrains.annotations.NotNull;
 
 public class PieEvents {
-	public static final Map<String, Supplier<? extends DPieBlock>> PIE_BLOCKS =
+	@NotNull private static final ImmutableMap<String, Supplier<? extends DPieBlock>> PIE_BLOCKS =
 		ImmutableMap.<String, Supplier<? extends DPieBlock>>builder()
 			.put(Util.id(Items.PUMPKIN_PIE), DelightfulBlocks.PUMPKIN_PIE)
-			.put(Util.id(Modid.AN, "source_berry_pie"), DelightfulBlocks.SOURCE_BERRY_PIE)
-			.put(Util.id(Modid.UG, "gloomgourd_pie"), DelightfulBlocks.GLOOMGOURD_PIE)
-			.put(Util.id(Modid.BWG, BWGCompat.blueberry_pie), DelightfulBlocks.BLUEBERRY_PIE)
-			.put(Util.id(Modid.BWG, BWGCompat.green_apple_pie), DelightfulBlocks.GREEN_APPLE_PIE)
-			.put(Util.id(Modid.UE, UnusualEndCompat.chorus_pie), DelightfulBlocks.CHORUS_PIE)
-			.put(Util.id(Modid.UA, AquaticCompat.mulberry_pie), DelightfulBlocks.MULBERRY_PIE)
-			.put(Util.id(Modid.AT, AtmosphericCompat.passion_fruit_tart), DelightfulBlocks.PASSION_FRUIT_TART)
+			.put(Modid.AN.id("source_berry_pie"), DelightfulBlocks.SOURCE_BERRY_PIE)
+			.put(Modid.UG.id("gloomgourd_pie"), DelightfulBlocks.GLOOMGOURD_PIE)
+			.put(Modid.BWG.id(BWGCompat.blueberry_pie), DelightfulBlocks.BLUEBERRY_PIE)
+			.put(Modid.BWG.id(BWGCompat.green_apple_pie), DelightfulBlocks.GREEN_APPLE_PIE)
+			.put(Modid.UE.id(UnusualEndCompat.chorus_pie), DelightfulBlocks.CHORUS_PIE)
+			.put(Modid.UA.id(AquaticCompat.mulberry_pie), DelightfulBlocks.MULBERRY_PIE)
+			.put(Modid.AT.id(AtmosphericCompat.passion_fruit_tart), DelightfulBlocks.PASSION_FRUIT_TART)
 			.build();
 
 	// Adds "Placeable" tooltip to compat pies
@@ -116,7 +116,6 @@ public class PieEvents {
 			BlockState pieState = pie.getStateForPlacement(context);
 			if (
 				player != null &&
-				pieState != null &&
 				canPlace(context, pieState) &&
 				level.setBlock(pos, pieState, 11)
 			) {

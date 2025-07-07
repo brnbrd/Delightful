@@ -24,6 +24,42 @@
     {
       "id": "undergarden:carved_gloomgourd",
       "required": false
+    },
+    {
+      "id": "seasonals:pumpkin_cake",
+      "required": false
+    },
+    {
+      "id": "seasonals:sweet_berry_cake",
+      "required": false
+    },
+    {
+      "id": "seasonals:beetroot_cake",
+      "required": false
+    },
+    {
+      "id": "peculiars:aloe_cake",
+      "required": false
+    },
+    {
+      "id": "peculiars:yucca_cake",
+      "required": false
+    },
+    {
+      "id": "peculiars:passion_fruit_cake",
+      "required": false
+    },
+    {
+      "id": "exquisito:chorus_cake",
+      "required": false
+    },
+    {
+      "id": "exquisito:ether_bulb_cake",
+      "required": false
+    },
+    {
+      "id": "exquisito:nightshade_berry_cake",
+      "required": false
     }
   ]
 }

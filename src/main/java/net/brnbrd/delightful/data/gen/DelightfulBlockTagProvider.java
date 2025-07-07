@@ -28,47 +28,55 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 	protected void addTags(HolderLookup.@NotNull Provider provider) {
 		// Farmer's Delight
 		this.tag(ModTags.WILD_CROPS)
-				.add(DelightfulBlocks.WILD_SALMONBERRIES.get());
+			.add(DelightfulBlocks.WILD_SALMONBERRIES.get());
 		this.tag(ForgeTags.MINEABLE_WITH_KNIFE)
-				.add(DelightfulBlocks.SLICED_PUMPKIN.get())
-				.add(DelightfulBlocks.SLICED_MELON.get())
-				.add(DelightfulBlocks.MINI_MELON.get())
-				.add(DelightfulBlocks.SLICED_MINI_MELON.get())
-				.add(DelightfulBlocks.CANTALOUPE.get())
-				.add(DelightfulBlocks.SLICED_CANTALOUPE.get())
-				.add(DelightfulBlocks.SLICED_GLOOMGOURD.get())
-				.add(DelightfulBlocks.SALMONBERRY_PIE.get())
-				.add(DelightfulBlocks.PUMPKIN_PIE.get())
-				.add(DelightfulBlocks.BLUEBERRY_PIE.get())
-				.add(DelightfulBlocks.GREEN_APPLE_PIE.get())
-				.add(DelightfulBlocks.SOURCE_BERRY_PIE.get())
-				.add(DelightfulBlocks.GLOOMGOURD_PIE.get())
-				.add(DelightfulBlocks.CHORUS_PIE.get())
-				.add(DelightfulBlocks.MULBERRY_PIE.get())
-				.add(DelightfulBlocks.PASSION_FRUIT_TART.get())
-				.add(DelightfulBlocks.BAKLAVA.get())
-				.addOptional(Modid.UG.rl("gloomgourd"))
-				.addOptional(Modid.UG.rl("carved_gloomgourd"));
+			.add(DelightfulBlocks.SLICED_PUMPKIN.get())
+			.add(DelightfulBlocks.SLICED_MELON.get())
+			.add(DelightfulBlocks.MINI_MELON.get())
+			.add(DelightfulBlocks.SLICED_MINI_MELON.get())
+			.add(DelightfulBlocks.CANTALOUPE.get())
+			.add(DelightfulBlocks.SLICED_CANTALOUPE.get())
+			.add(DelightfulBlocks.SLICED_GLOOMGOURD.get())
+			.add(DelightfulBlocks.SALMONBERRY_PIE.get())
+			.add(DelightfulBlocks.PUMPKIN_PIE.get())
+			.add(DelightfulBlocks.BLUEBERRY_PIE.get())
+			.add(DelightfulBlocks.GREEN_APPLE_PIE.get())
+			.add(DelightfulBlocks.SOURCE_BERRY_PIE.get())
+			.add(DelightfulBlocks.GLOOMGOURD_PIE.get())
+			.add(DelightfulBlocks.CHORUS_PIE.get())
+			.add(DelightfulBlocks.MULBERRY_PIE.get())
+			.add(DelightfulBlocks.PASSION_FRUIT_TART.get())
+			.add(DelightfulBlocks.BAKLAVA.get())
+			.addOptional(Modid.UG.rl("gloomgourd"))
+			.addOptional(Modid.UG.rl("carved_gloomgourd"))
+			.addOptional(Modid.SEAS.rl("pumpkin_cake"))
+			.addOptional(Modid.SEAS.rl("sweet_berry_cake"))
+			.addOptional(Modid.SEAS.rl("beetroot_cake"))
+			.addOptional(Modid.PEC.rl("aloe_cake"))
+			.addOptional(Modid.PEC.rl("yucca_cake"))
+			.addOptional(Modid.PEC.rl("passion_fruit_cake"))
+			.addOptional(Modid.EXQ.rl("chorus_cake"))
+			.addOptional(Modid.EXQ.rl("ether_bulb_cake"))
+			.addOptional(Modid.EXQ.rl("nightshade_berry_cake"));
 
 		// Delightful
 		this.tag(DelightfulBlockTags.DROPS_STRAW)
-				.addOptional(Modid.BWG.rl(BWGCompat.prairie_grass))
-				.addOptional(Modid.BWG.rl(BWGCompat.tall_prairie_grass))
-				.addOptional(Modid.BWG.rl(BWGCompat.beach_grass))
-				.addOptional(Util.rl("sprout", "sprouts"));
+			.addOptional(Modid.BWG.rl(BWGCompat.prairie_grass))
+			.addOptional(Modid.BWG.rl(BWGCompat.tall_prairie_grass))
+			.addOptional(Modid.BWG.rl(BWGCompat.beach_grass))
+			.addOptional(Util.rl("sprout", "sprouts"));
 		this.tag(DelightfulBlockTags.DROPS_ACORN)
-				.add(Blocks.OAK_LEAVES)
-				.add(Blocks.DARK_OAK_LEAVES);
+			.add(Blocks.OAK_LEAVES)
+			.add(Blocks.DARK_OAK_LEAVES);
 		this.tag(DelightfulBlockTags.ADD_ACORN)
-				.addOptional(Util.rl("natural_decoration", "oak_acorn"));
+			.addOptional(Util.rl("natural_decoration", "oak_acorn"));
 		this.tag(DelightfulBlockTags.DROPS_GREEN_TEA_LEAF)
-				.addTag(BlockTags.LEAVES);
+			.addTag(BlockTags.LEAVES);
 		this.tag(DelightfulBlockTags.CANTALOUPE_SPAWNS)
-				.addTag(Tags.Blocks.SAND);
+			.addTag(Tags.Blocks.SAND);
 
 		// Forge
-		this.tag(Tags.Blocks.SAND)
-				.addTag(BlockTags.SAND);
+		this.tag(Tags.Blocks.SAND).addTag(BlockTags.SAND);
 
 		// Minecraft
 		this.tag(BlockTags.SWORD_EFFICIENT)

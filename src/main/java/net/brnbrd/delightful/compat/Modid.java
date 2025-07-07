@@ -57,6 +57,7 @@ public enum Modid {
 	EN("enlightened_end"),
 	ENV("environmental"),
 	EXC("extra_compat"),
+	EXQ("exquisito"),
 	FA("forbidden_arcanus"),
 	FOR("forestry"),
 	FR("farmersrespite"),
@@ -83,6 +84,7 @@ public enum Modid {
 	NN("nourished_nether"),
 	OAD("oresabovediamonds"),
 	OG("oreganized"),
+	PEC("peculiars"),
 	Q("quark"),
 	RA("redstone_arsenal"),
 	RC("rootsclassic"),
@@ -91,6 +93,7 @@ public enum Modid {
 	S("salt"),
 	SAS("some_assembly_required"),
 	SE("seeds"),
+	SEAS("seasonals"),
 	SM("sullysmod"),
 	SO("simpleores"),
 	SP("spirit"),
@@ -123,6 +126,11 @@ public enum Modid {
 
 	public ResourceLocation rl(String path) {
 		return Util.rl(this, path);
+	}
+
+	// modid:item
+	public String id(String itemName) {
+		return rl(itemName).toString();
 	}
 
 	public TagKey<Item> it(String tag) {

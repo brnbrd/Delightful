@@ -273,11 +273,6 @@ public class Util {
 		return rl(item).toString();
 	}
 
-	// modid:item
-	public static String id(Modid modid, String name) {
-		return modid.rl(name).toString();
-	}
-
 	public static Ingredient ing(Supplier<? extends ItemLike> i) {
 		return Ingredient.of(i.get());
 	}
