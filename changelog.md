@@ -3,8 +3,11 @@
 
 # 3.7.4
 
+### Updates
+- Milk from `#forge:nuts` recipe now uses a Kettle in presence of [Farmer's Respite](https://www.curseforge.com/minecraft/mc-mods/farmers-respite)
+
 ### Fixes
-- Removed conflicting nut milk cooking recipes
+- Removed conflicting nut Milk cooking recipes
 
 ### Coaster models for [Brewin' and Chewin'](https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin):
 - Fixed Mixed Berry Muffin and Chocolate Pumpkin Muffin using swapped models

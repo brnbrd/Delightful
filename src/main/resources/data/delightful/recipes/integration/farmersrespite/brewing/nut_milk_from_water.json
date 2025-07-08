@@ -8,29 +8,29 @@
           "value": "nut_milk"
         },
         {
-          "type": "forge:not",
-          "value": {
-            "type": "forge:mod_loaded",
-            "modid": "farmersrespite"
-          }
+          "type": "forge:mod_loaded",
+          "modid": "farmersrespite"
         }
       ],
       "recipe": {
-        "type": "farmersdelight:cooking",
-        "container": {
-          "type": "forge:nbt",
-          "item": "minecraft:potion",
-          "nbt": "{Potion:\"minecraft:water\"}"
+        "type": "farmersrespite:brewing",
+        "base": {
+          "count": 1000,
+          "fluid": "minecraft:water"
         },
-        "cookingtime": 200,
+        "cookingtime": 2400,
         "experience": 0.35,
         "ingredients": [
+          {
+            "tag": "forge:nut_butter"
+          },
           {
             "tag": "forge:nut_butter"
           }
         ],
         "result": {
-          "item": "farmersdelight:milk_bottle"
+          "count": 1000,
+          "fluid": "minecraft:milk"
         }
       }
     }
