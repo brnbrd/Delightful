@@ -1,0 +1,31 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "nut_milk"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "type": "forge:nbt",
+          "item": "minecraft:potion",
+          "nbt": "{Potion:\"minecraft:water\"}"
+        },
+        "cookingtime": 200,
+        "experience": 0.35,
+        "ingredients": [
+          {
+            "tag": "forge:nut_butter"
+          }
+        ],
+        "result": {
+          "item": "farmersdelight:milk_bottle"
+        }
+      }
+    }
+  ]
+}

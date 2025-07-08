@@ -52,6 +52,26 @@
       "required": false
     },
     {
+      "id": "nethers_exoticism:jaboticaba_juice_bottle",
+      "required": false
+    },
+    {
+      "id": "nethers_exoticism:jaboticaba_juice_fire_resistance",
+      "required": false
+    },
+    {
+      "id": "nethers_exoticism:jaboticaba_juice_night_vision",
+      "required": false
+    },
+    {
+      "id": "nethers_exoticism:jaboticaba_juice_saturation",
+      "required": false
+    },
+    {
+      "id": "nethers_exoticism:jaboticaba_juice_wither_cure",
+      "required": false
+    },
+    {
       "id": "upgrade_aquatic:mulberry_jam_bottle",
       "required": false
     },

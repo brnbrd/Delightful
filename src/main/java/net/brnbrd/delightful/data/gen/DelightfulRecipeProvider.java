@@ -189,7 +189,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 						.addIngredient(Ingredient.of(ForgeTags.MILK))
 						.addIngredient(Ingredient.of(DelightfulItemTags.MATCHA))
 						.unlockedBy("has_matcha", has(DelightfulItemTags.MATCHA)),
-				"cooking/matcha_latte", finished, enabled("matcha_latte"));
+				"food/matcha_latte", finished, enabled("matcha_latte"));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.BERRY_MATCHA_LATTE.get(), 1)
 						.requires(Items.GLASS_BOTTLE)
 						.requires(DelightfulItems.MATCHA_LATTE.get())

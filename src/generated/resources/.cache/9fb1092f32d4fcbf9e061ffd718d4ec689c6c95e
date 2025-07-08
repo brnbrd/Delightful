@@ -1,4 +1,4 @@
-// 1.20.1	2025-07-07T09:44:56.7353908	Recipes
+// 1.20.1	2025-07-08T09:28:53.5931416	Recipes
 6c217dd6477efa10f6042809ba959d53036ab5e2 data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 5b82f87851220644287d771121677deac66b3b89 data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
 cf29033c1c919355c261025df529938e6ebc73f8 data/delightful/advancements/recipes/campfire/cactus_steak.json
@@ -10,7 +10,6 @@ e8cd6bf9f381f516794ff5684e7183c52f3f5415 data/delightful/advancements/recipes/ca
 3778a6e1475779a19a3c0b04bc62763773bad94e data/delightful/advancements/recipes/cantaloupe_seeds.json
 280656e795db0c70c4cabbcc16b786fe134aade7 data/delightful/advancements/recipes/cantaloupe_slice.json
 ff94c8097c97eeb15909fa193291ff1088a7cd05 data/delightful/advancements/recipes/cooking/animal_oil_bottle.json
-b10b99a2dc63cc5bc06a866c8ab9674940ce670b data/delightful/advancements/recipes/cooking/matcha_latte.json
 433c97392260b9ac2cf22ab367c21d5910155e9b data/delightful/advancements/recipes/food/baklava.json
 453084de51d9505ade996777b17e09bcb260828a data/delightful/advancements/recipes/food/baklava_from_slices.json
 257ea1e2e74e09558aedc813d170ad988b891360 data/delightful/advancements/recipes/food/baklava_no_citrus.json
@@ -47,6 +46,7 @@ d718a28228d94886e877b9425e33b81aa63f3c0a data/delightful/advancements/recipes/fo
 92fc0b1300252e1731091e538216fb990009eae0 data/delightful/advancements/recipes/food/marshmallow_stick_from_marshmallow.json
 84d5d682a25ea9d62dafcc6d0cc00456dd26f352 data/delightful/advancements/recipes/food/matcha_ice_cream.json
 319c2ba3473abc5aa705be24c035378636180599 data/delightful/advancements/recipes/food/matcha_ice_cream_no_neapolitan.json
+a55afd89fc20c41ecf78d788e2cc78fd53b16d43 data/delightful/advancements/recipes/food/matcha_latte.json
 00197740a5e42ffcfcffc168c20a56e1e7e40c62 data/delightful/advancements/recipes/food/matcha_milkshake.json
 1d0174f5be8bfa6f204c1332055ca494e5c83c4d data/delightful/advancements/recipes/food/nut_butter_and_jam_sandwich.json
 2185bc7207fc4c559363738f242d4c376fef58cb data/delightful/advancements/recipes/food/nut_dough.json
@@ -156,7 +156,6 @@ be67bcf5f2d2f280599d38b686b7e27b65492dce data/delightful/advancements/recipes/sm
 4ec6056e9ad24f7243ac486e7bada7834dbd1efb data/delightful/recipes/cantaloupe_seeds.json
 14da98cd0a18d17e8c2521f256950ff1cc78e259 data/delightful/recipes/cantaloupe_slice.json
 0ad070142d2c20cf6a500f88ba545b22206aabb8 data/delightful/recipes/cooking/animal_oil_bottle.json
-1b81cd56f336fdc01a31a5ca08a5ddfa8ae84e29 data/delightful/recipes/cooking/matcha_latte.json
 c92680cce5f1a7851ea35a25a9251e6401222767 data/delightful/recipes/cutting/baklava.json
 0d5d2333e9578ece744fac84ca2681fba2fcbef3 data/delightful/recipes/cutting/cactus.json
 b1a086de89bbe413ddbc8ec067d97b06ab2e03b9 data/delightful/recipes/cutting/cactus_steak.json
@@ -221,6 +220,7 @@ fb0b67132bae982b9c75720f2a14d45afccee39e data/delightful/recipes/food/glow_jam_c
 44a35316e8dc75cdda80313e1da6e44c50e155b5 data/delightful/recipes/food/marshmallow_stick_from_marshmallow.json
 c6ef9dfb30b6e4a86fee425e3b2701803e8a61b4 data/delightful/recipes/food/matcha_ice_cream.json
 20adecd162e16062e058d56c22e5912fd925d904 data/delightful/recipes/food/matcha_ice_cream_no_neapolitan.json
+1b81cd56f336fdc01a31a5ca08a5ddfa8ae84e29 data/delightful/recipes/food/matcha_latte.json
 f91ed3f632217f18a49d52ee71585fc81cd2bdab data/delightful/recipes/food/matcha_milkshake.json
 d1efd68e878a48f58f8eace33c045f8848f10b8a data/delightful/recipes/food/nut_butter_and_jam_sandwich.json
 3ea1d1a19ec8f2de8a6d49c2e4a32fe519110026 data/delightful/recipes/food/nut_dough.json

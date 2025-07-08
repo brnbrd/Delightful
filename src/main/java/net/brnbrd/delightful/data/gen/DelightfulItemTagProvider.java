@@ -484,6 +484,11 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.AND.rl("activated_bastion_jam"))
 			.addOptional(Modid.AND.rl("neutralized_frostaya_jam"))
 			.addOptional(Modid.AND.rl("neutralized_bombegrante_jam")) // Intentionally misspelled
+			.addOptional(Modid.NE.rl("jaboticaba_juice_bottle"))
+			.addOptional(Modid.NE.rl("jaboticaba_juice_fire_resistance"))
+			.addOptional(Modid.NE.rl("jaboticaba_juice_night_vision"))
+			.addOptional(Modid.NE.rl("jaboticaba_juice_saturation"))
+			.addOptional(Modid.NE.rl("jaboticaba_juice_wither_cure"))
 			.addOptional(Modid.UA.rl("mulberry_jam_bottle"))
 			.addOptional(Modid.TH.rl("jelly"));
 		this.tag(DelightfulItemTags.PEANUT_BUTTER)

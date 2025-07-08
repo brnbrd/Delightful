@@ -16,7 +16,7 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:cooking/matcha_latte"
+              "recipe": "delightful:food/matcha_latte"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
@@ -29,7 +29,7 @@
         ],
         "rewards": {
           "recipes": [
-            "delightful:cooking/matcha_latte"
+            "delightful:food/matcha_latte"
           ]
         },
         "sends_telemetry_event": true
