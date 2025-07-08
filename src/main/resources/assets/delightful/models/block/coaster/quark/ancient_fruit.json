@@ -1,0 +1,49 @@
+{
+	"credit": "Made with Blockbench, by Championhestu.",
+	"ambientocclusion": false,
+	"textures": {
+		"1": "delightful:block/coaster/quark/ancient_fruit",
+		"particle": "delightful:block/coaster/quark/ancient_fruit"
+	},
+	"elements": [
+		{
+			"from": [6.5, 4, 6.5],
+			"to": [9.5, 7, 9.5],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 6, 6.5]},
+			"faces": {
+				"north": {"uv": [4, 3, 1, 0], "rotation": 180, "texture": "#1"},
+				"east": {"uv": [16, 3, 13, 0], "rotation": 270, "texture": "#1"},
+				"south": {"uv": [1, 0, 4, 3], "texture": "#1"},
+				"west": {"uv": [13, 0, 16, 3], "rotation": 90, "texture": "#1"},
+				"up": {"uv": [5, 0, 8, 3], "rotation": 180, "texture": "#1"},
+				"down": {"uv": [9, 0, 12, 3], "texture": "#1"}
+			}
+		},
+		{
+			"from": [6, 0, 6],
+			"to": [10, 4, 10],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 3, 6]},
+			"faces": {
+				"north": {"uv": [1, 8, 5, 4], "rotation": 180, "texture": "#1"},
+				"east": {"uv": [15, 9, 11, 13], "rotation": 270, "texture": "#1"},
+				"south": {"uv": [1, 4, 5, 8], "texture": "#1"},
+				"west": {"uv": [11, 9, 15, 13], "rotation": 90, "texture": "#1"},
+				"up": {"uv": [6, 4, 10, 8], "rotation": 180, "texture": "#1"},
+				"down": {"uv": [11, 4, 15, 8], "texture": "#1"}
+			}
+		},
+		{
+			"from": [6.5, 7, 8],
+			"to": [9.5, 9, 8],
+			"rotation": {"angle": 0, "axis": "x", "origin": [9, 10, 8]},
+			"faces": {
+				"north": {"uv": [1, 11, 4, 9], "rotation": 180, "texture": "#1"},
+				"east": {"uv": [0, 0, 0, 0], "rotation": 270, "texture": "#1"},
+				"south": {"uv": [1, 9, 4, 11], "texture": "#1"},
+				"west": {"uv": [0, 0, 0, 0], "rotation": 90, "texture": "#1"},
+				"up": {"uv": [0, 0, 0, 0], "rotation": 180, "texture": "#1"},
+				"down": {"uv": [0, 0, 0, 0], "texture": "#1"}
+			}
+		}
+	]
+}
