@@ -11,6 +11,7 @@
 
 ### Coaster models for [Brewin' and Chewin'](https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin):
 - Added some models for [Quark](https://www.curseforge.com/minecraft/mc-mods/quark)
+- Added some models for [Oh The Biomes We've Gone](https://www.curseforge.com/minecraft/mc-mods/oh-the-biomes-weve-gone)
 - Added some models for [Peculiars](https://www.curseforge.com/minecraft/mc-mods/peculiars)
 - Fixed Mixed Berry Muffin and Chocolate Pumpkin Muffin using swapped models
 

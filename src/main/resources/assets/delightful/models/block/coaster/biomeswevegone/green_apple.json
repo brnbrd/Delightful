@@ -1,0 +1,6 @@
+{
+  "parent": "brewinandchewin:block/coaster_apple",
+  "textures": {
+    "apple": "delightful:block/coaster/biomeswevegone/green_apple"
+  }
+}

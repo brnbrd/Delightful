@@ -1,0 +1,7 @@
+{
+  "parent": "brewinandchewin:block/coaster_onion",
+  "textures": {
+    "particle": "delightful:block/coaster/biomeswevegone/oddion_bulb",
+    "onion": "delightful:block/coaster/biomeswevegone/oddion_bulb"
+  }
+}
