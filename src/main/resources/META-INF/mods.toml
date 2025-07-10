@@ -510,6 +510,6 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
 [[dependencies.delightful]]
     modId="ae2"
     mandatory=false
-    versionRange="[15.4.5,)"
+    versionRange="[15,)"
     ordering="AFTER"
     side="BOTH"
