@@ -17,20 +17,6 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> COOKED_VENISON_CHOP_COMPAT = d("cooked_venison_chop_compat");
 	public static final TagKey<Item> ROTTEN = d("rotten");
 	public static final TagKey<Item> ROSEY = d("rosey");
-	public static final TagKey<Item> MAKES_DYE_RED = d("makes_dye/red");
-	public static final TagKey<Item> MAKES_DYE_YELLOW = d("makes_dye/yellow");
-	public static final TagKey<Item> MAKES_DYE_WHITE = d("makes_dye/white");
-	public static final TagKey<Item> MAKES_DYE_BLUE = d("makes_dye/blue");
-	public static final TagKey<Item> MAKES_DYE_BLACK = d("makes_dye/black");
-	public static final TagKey<Item> MAKES_DYE_ORANGE = d("makes_dye/orange");
-	public static final TagKey<Item> MAKES_DYE_PURPLE = d("makes_dye/purple");
-	public static final TagKey<Item> MAKES_DYE_MAGENTA = d("makes_dye/purple");
-	public static final TagKey<Item> MAKES_DYE_PINK = d("makes_dye/pink");
-	public static final TagKey<Item> MAKES_DYE_GREEN = d("makes_dye/green");
-	public static final TagKey<Item> MAKES_DYE_LIME = d("makes_dye/lime");
-	public static final TagKey<Item> MAKES_DYE_CYAN = d("makes_dye/cyan");
-	public static final TagKey<Item> MAKES_DYE_LIGHT_GRAY = d("makes_dye/light_gray");
-	public static final TagKey<Item> MAKES_DYE_LIGHT_BLUE = d("makes_dye/light_gray");
 
 	// Minecraft
 	public static final TagKey<Item> FLOWERS_AZALEA = Modid.MC.it("flowers/azalea");
@@ -104,7 +90,8 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> PUMPKINS_PUMPKIN_BLOCKS = forge("pumpkins/pumpkin_blocks");
 	public static final TagKey<Item> RAW_CRAB = forge("raw_crab");
 	public static final TagKey<Item> COOKED_CRAB = forge("cooked_crab");
-	public static final TagKey<Item> CRAB_MEAT = forge("crab_meat");
+	public static final TagKey<Item> COOKED_CRAB_MEAT = forge("cooked_crab_meat");
+	public static final TagKey<Item> RAW_CRAB_MEAT = forge("raw_crab_meat");
 	public static final TagKey<Item> CRAB_CLAW = forge("crab_claw");
 	public static final TagKey<Item> CRAB_CLAW_COOKED = forge("crab_claw/cooked");
 	public static final TagKey<Item> COCONUT = forge("coconut");

@@ -486,16 +486,16 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 								DelightfulItems.CRAB_RANGOON.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
 						.addIngredient(ForgeTags.DOUGH)
 						.addIngredient(DelightfulItemTags.CHEESE)
-						.addIngredient(DelightfulItemTags.CRAB_MEAT)
-						.unlockedBy("has_cooked_crab", has(DelightfulItemTags.CRAB_MEAT)),
-				"food/cooking/crab_rangoon", finished, enabled("crab_rangoon"), not(tagEmpty(DelightfulItemTags.CRAB_MEAT)), not(tagEmpty(DelightfulItemTags.CHEESE)));
+						.addIngredient(DelightfulItemTags.COOKED_CRAB_MEAT)
+						.unlockedBy("has_cooked_crab", has(DelightfulItemTags.COOKED_CRAB_MEAT)),
+				"food/cooking/crab_rangoon", finished, enabled("crab_rangoon"), not(tagEmpty(DelightfulItemTags.COOKED_CRAB_MEAT)), not(tagEmpty(DelightfulItemTags.CHEESE)));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
 								DelightfulItems.CRAB_RANGOON.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
 						.addIngredient(ForgeTags.DOUGH)
 						.addIngredient(ForgeTags.MILK)
-						.addIngredient(DelightfulItemTags.CRAB_MEAT)
-						.unlockedBy("has_cooked_crab", has(DelightfulItemTags.CRAB_MEAT)),
-				"food/cooking/crab_rangoon_from_milk", finished, enabled("crab_rangoon"), not(tagEmpty(DelightfulItemTags.CRAB_MEAT)), tagEmpty(DelightfulItemTags.CHEESE));
+						.addIngredient(DelightfulItemTags.COOKED_CRAB_MEAT)
+						.unlockedBy("has_cooked_crab", has(DelightfulItemTags.COOKED_CRAB_MEAT)),
+				"food/cooking/crab_rangoon_from_milk", finished, enabled("crab_rangoon"), not(tagEmpty(DelightfulItemTags.COOKED_CRAB_MEAT)), tagEmpty(DelightfulItemTags.CHEESE));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
 								Items.HONEY_BOTTLE, 3, CookingRecipes.NORMAL_COOKING, 0.35F)
 						.addIngredient(Items.HONEY_BOTTLE, 2)
@@ -578,6 +578,11 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 						Ingredient.of(ForgeTags.TOOLS_KNIVES),
 						DelightfulItems.COOKED_VENISON_CHOPS.get(), 2),
 				"cutting/cooked_venison", finished, enabled(DelightfulItems.COOKED_VENISON_CHOPS), not(tagEmpty(DelightfulItemTags.COOKED_VENISON_COMPAT)), tagEmpty(DelightfulItemTags.COOKED_VENISON_CHOP_COMPAT));
+		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
+				Ingredient.of(DelightfulItems.CACTUS_STEAK.get()),
+				Ingredient.of(ForgeTags.TOOLS_KNIVES),
+				Items.GREEN_DYE, 1),
+			"cutting/cactus_steak", finished, enabled(DelightfulItems.CACTUS_STEAK));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.MELON_SLICE, 2)
 						.requires(DelightfulItems.MINI_MELON.get())
 						.unlockedBy("has_mini_melon", has(DelightfulItems.MINI_MELON.get())),
@@ -697,83 +702,6 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 						.addIngredient(Items.KELP)
 						.unlockedBy("has_cantaloupe", has(DelightfulItemTags.FRUITS_CANTALOUPE)),
 				"gummy/cantaloupe", finished, enabled(DelightfulItems.CANTALOUPE), enabled(DelightfulItems.CANTALOUPE_GUMMY));
-
-		// Dye Cutting
-		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
-						Ingredient.of(DelightfulItemTags.MAKES_DYE_RED),
-						Ingredient.of(ForgeTags.TOOLS_KNIVES),
-						Items.RED_DYE, 2),
-				"cutting/makes_dye/red", finished, not(tagEmpty(DelightfulItemTags.MAKES_DYE_RED)));
-		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
-						Ingredient.of(DelightfulItemTags.MAKES_DYE_YELLOW),
-						Ingredient.of(ForgeTags.TOOLS_KNIVES),
-						Items.YELLOW_DYE, 2),
-				"cutting/makes_dye/yellow", finished, not(tagEmpty(DelightfulItemTags.MAKES_DYE_YELLOW)));
-		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
-						Ingredient.of(DelightfulItemTags.MAKES_DYE_PURPLE),
-						Ingredient.of(ForgeTags.TOOLS_KNIVES),
-						Items.PURPLE_DYE, 2),
-				"cutting/makes_dye/purple", finished, not(tagEmpty(DelightfulItemTags.MAKES_DYE_PURPLE)));
-		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
-						Ingredient.of(DelightfulItemTags.MAKES_DYE_MAGENTA),
-						Ingredient.of(ForgeTags.TOOLS_KNIVES),
-						Items.MAGENTA_DYE, 2),
-				"cutting/makes_dye/magenta", finished, not(tagEmpty(DelightfulItemTags.MAKES_DYE_MAGENTA)));
-		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
-						Ingredient.of(DelightfulItemTags.MAKES_DYE_WHITE),
-						Ingredient.of(ForgeTags.TOOLS_KNIVES),
-						Items.WHITE_DYE, 2),
-				"cutting/makes_dye/white", finished, not(tagEmpty(DelightfulItemTags.MAKES_DYE_WHITE)));
-		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
-						Ingredient.of(DelightfulItemTags.MAKES_DYE_BLUE),
-						Ingredient.of(ForgeTags.TOOLS_KNIVES),
-						Items.BLUE_DYE, 2),
-				"cutting/makes_dye/blue", finished, not(tagEmpty(DelightfulItemTags.MAKES_DYE_BLUE)));
-		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
-						Ingredient.of(DelightfulItemTags.MAKES_DYE_BLACK),
-						Ingredient.of(ForgeTags.TOOLS_KNIVES),
-						Items.BLACK_DYE, 2),
-				"cutting/makes_dye/black", finished, not(tagEmpty(DelightfulItemTags.MAKES_DYE_BLACK)));
-		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
-						Ingredient.of(DelightfulItemTags.MAKES_DYE_ORANGE),
-						Ingredient.of(ForgeTags.TOOLS_KNIVES),
-						Items.ORANGE_DYE, 2),
-				"cutting/makes_dye/orange", finished, not(tagEmpty(DelightfulItemTags.MAKES_DYE_ORANGE)));
-		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
-						Ingredient.of(DelightfulItemTags.MAKES_DYE_PINK),
-						Ingredient.of(ForgeTags.TOOLS_KNIVES),
-						Items.PINK_DYE, 2),
-				"cutting/makes_dye/pink", finished, not(tagEmpty(DelightfulItemTags.MAKES_DYE_PINK)));
-		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
-						Ingredient.of(DelightfulItemTags.MAKES_DYE_GREEN),
-						Ingredient.of(ForgeTags.TOOLS_KNIVES),
-						Items.GREEN_DYE, 2),
-				"cutting/makes_dye/green", finished, not(tagEmpty(DelightfulItemTags.MAKES_DYE_GREEN)));
-		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
-						Ingredient.of(DelightfulItemTags.MAKES_DYE_LIME),
-						Ingredient.of(ForgeTags.TOOLS_KNIVES),
-						Items.LIME_DYE, 2),
-				"cutting/makes_dye/lime", finished, not(tagEmpty(DelightfulItemTags.MAKES_DYE_LIME)));
-		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
-						Ingredient.of(DelightfulItemTags.MAKES_DYE_CYAN),
-						Ingredient.of(ForgeTags.TOOLS_KNIVES),
-						Items.CYAN_DYE, 2),
-				"cutting/makes_dye/cyan", finished, not(tagEmpty(DelightfulItemTags.MAKES_DYE_CYAN)));
-		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
-						Ingredient.of(DelightfulItemTags.MAKES_DYE_LIGHT_GRAY),
-						Ingredient.of(ForgeTags.TOOLS_KNIVES),
-						Items.LIGHT_GRAY_DYE, 2),
-				"cutting/makes_dye/light_gray", finished, not(tagEmpty(DelightfulItemTags.MAKES_DYE_LIGHT_GRAY)));
-		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
-						Ingredient.of(DelightfulItemTags.MAKES_DYE_LIGHT_BLUE),
-						Ingredient.of(ForgeTags.TOOLS_KNIVES),
-						Items.LIGHT_BLUE_DYE, 2),
-				"cutting/makes_dye/light_blue", finished, not(tagEmpty(DelightfulItemTags.MAKES_DYE_LIGHT_BLUE)));
-		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
-						Ingredient.of(DelightfulItems.CACTUS_STEAK.get()),
-						Ingredient.of(ForgeTags.TOOLS_KNIVES),
-						Items.GREEN_DYE, 1),
-				"cutting/cactus_steak", finished, enabled(DelightfulItems.CACTUS_STEAK));
 
 		// Unwrappables
 		ConditionalRecipe.builder()

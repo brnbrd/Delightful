@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "crabbersdelight:crab_legs",
+      "required": false
+    },
+    {
+      "id": "ecologics:crab_meat",
+      "required": false
+    },
+    {
+      "id": "quark:cooked_crab_leg",
+      "required": false
+    }
+  ]
+}

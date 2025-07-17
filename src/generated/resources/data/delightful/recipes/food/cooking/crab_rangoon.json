@@ -11,7 +11,7 @@
           "type": "forge:not",
           "value": {
             "type": "forge:tag_empty",
-            "tag": "forge:crab_meat"
+            "tag": "forge:cooked_crab_meat"
           }
         },
         {
@@ -34,7 +34,7 @@
             "tag": "forge:cheese"
           },
           {
-            "tag": "forge:crab_meat"
+            "tag": "forge:cooked_crab_meat"
           }
         ],
         "result": {

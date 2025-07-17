@@ -1,4 +1,4 @@
-// 1.20.1	2025-07-08T11:53:11.7823087	Recipes
+// 1.20.1	2025-07-17T16:05:45.5915895	Recipes
 6c217dd6477efa10f6042809ba959d53036ab5e2 data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 5b82f87851220644287d771121677deac66b3b89 data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
 cf29033c1c919355c261025df529938e6ebc73f8 data/delightful/advancements/recipes/campfire/cactus_steak.json
@@ -24,8 +24,8 @@ e51c38ec5883ee73b1cb560ca42a185d377e540c data/delightful/advancements/recipes/fo
 37e4151af68684633f28890fc9f790ca3f1e227a data/delightful/advancements/recipes/food/cooking/cactus_soup.json
 9b4fc327bff031551336ad56553bfa158395f445 data/delightful/advancements/recipes/food/cooking/coconut_curry.json
 cf9ff57919e70462a9f5a1edec659fa1f7025750 data/delightful/advancements/recipes/food/cooking/coconut_curry_no_ginger.json
-296f9be70bda9a6a1736b2fcc8781cebbf6e1142 data/delightful/advancements/recipes/food/cooking/crab_rangoon.json
-9d60ac27ffcaee4ef197b33ba0809f093007e305 data/delightful/advancements/recipes/food/cooking/crab_rangoon_from_milk.json
+ab099320773d9a2c236ea999b691980e99089bfd data/delightful/advancements/recipes/food/cooking/crab_rangoon.json
+bdfe0a29e07d6518a96cef4c0f595d7be671f907 data/delightful/advancements/recipes/food/cooking/crab_rangoon_from_milk.json
 1499e66b8288740c89cefe418256eb7b0838e2ba data/delightful/advancements/recipes/food/cooking/ender_nectar.json
 c1927c8e5f3a6cfa92965c4f8fc8a1bdc35da413 data/delightful/advancements/recipes/food/cooking/glow_jam_jar.json
 cfadb9d22a35102abc3a4967b8c767ca4303ee3c data/delightful/advancements/recipes/food/cooking/jam_jar.json
@@ -162,20 +162,6 @@ e1775adbe96cf44d4fcf39ad8a1088bb4220cd62 data/delightful/recipes/cutting/cantalo
 6d83188833f8de6e476dff434874899ad77869fc data/delightful/recipes/cutting/clover.json
 3101fc62589432292872d0ff450c1d7c39c02cda data/delightful/recipes/cutting/cooked_venison.json
 0d1501a802294f211d78d43f092ba855aebd2884 data/delightful/recipes/cutting/green_tea_leaves.json
-f28887a77c87c0772500739bec64f2a10d0e5686 data/delightful/recipes/cutting/makes_dye/black.json
-c25b5b877eeb8b3d2becc1a258431e78be8cf4be data/delightful/recipes/cutting/makes_dye/blue.json
-f4de45690de5c390ce3394b0367979c219d848c9 data/delightful/recipes/cutting/makes_dye/cyan.json
-a5809397b7800a1262c098d127861f999123fdd6 data/delightful/recipes/cutting/makes_dye/green.json
-d4b8b4f56a39cb3cb4d2311a8dd3f43b2d0f5ce0 data/delightful/recipes/cutting/makes_dye/light_blue.json
-58907a572a5f4091321f257a3c9953ca14cedfac data/delightful/recipes/cutting/makes_dye/light_gray.json
-4d58be90c22d89e47a2f430497ee29af03f344f9 data/delightful/recipes/cutting/makes_dye/lime.json
-709fc60c7350652c3b5e70bc4995e721b001fa0a data/delightful/recipes/cutting/makes_dye/magenta.json
-1e650aed1ad7a798795f4b792e86d2fbabb1829f data/delightful/recipes/cutting/makes_dye/orange.json
-c20b4a9ed89cad7a6e421bddf7aa31362784ad25 data/delightful/recipes/cutting/makes_dye/pink.json
-e6ca19c0b22ff461eb58cd4328081b7565eab70d data/delightful/recipes/cutting/makes_dye/purple.json
-1754315d89d59d82e2870ec3b78490c0c3a9637a data/delightful/recipes/cutting/makes_dye/red.json
-03b9473769dbc7bc453d83eaa3b67f0112cdad6c data/delightful/recipes/cutting/makes_dye/white.json
-00de56e2d1cfd807c2c9f2e5180623f9b028ff1a data/delightful/recipes/cutting/makes_dye/yellow.json
 ea2e4b62b24148c28ef0dfb2395cc778edfcf3f2 data/delightful/recipes/cutting/mini_melon.json
 94844bad124bf4c999bd39f9e661e44611b2db92 data/delightful/recipes/cutting/pumpkin_pie.json
 832d880fed642035591f4f852fe5b567d88d99e9 data/delightful/recipes/cutting/raw_venison.json
@@ -197,8 +183,8 @@ f8660930570b15a8aae293ed0a3dd9212cbf0811 data/delightful/recipes/food/cooking/ca
 9e13e7d4964d1d98f1fc9766999265cc544ec745 data/delightful/recipes/food/cooking/cactus_soup.json
 daba62a3504783d89d6fe972f0ad14307775220c data/delightful/recipes/food/cooking/coconut_curry.json
 866ab4e55b3a47b487f7e4662d96b3aec17c385e data/delightful/recipes/food/cooking/coconut_curry_no_ginger.json
-49022ee58f367a5a877f416d57b1ba5061ff1fba data/delightful/recipes/food/cooking/crab_rangoon.json
-27c99a5c883cbd86ad0ced9cca2d2686ab99dc36 data/delightful/recipes/food/cooking/crab_rangoon_from_milk.json
+af00d59b26c468a67d1535055243622d61743edc data/delightful/recipes/food/cooking/crab_rangoon.json
+4c3fa938e1be549abd8b7ca688cc480b917e5d9c data/delightful/recipes/food/cooking/crab_rangoon_from_milk.json
 b65cc57bafa4bd64bfe59e5f14d5eaeefc944363 data/delightful/recipes/food/cooking/ender_nectar.json
 c44d30fb1d062eae1e0157c1c22572e872aa6d87 data/delightful/recipes/food/cooking/glow_jam_jar.json
 6fb3c99f658a5a76eaa159124d76adebbc7542da data/delightful/recipes/food/cooking/jam_jar.json

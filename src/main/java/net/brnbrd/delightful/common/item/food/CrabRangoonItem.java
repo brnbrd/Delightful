@@ -12,6 +12,6 @@ public class CrabRangoonItem extends DConsumableItem {
 
 	@Override
 	public @Nullable TagKey<Item> getDependencyTag() {
-		return DelightfulItemTags.CRAB_MEAT;
+		return DelightfulItemTags.COOKED_CRAB_MEAT;
 	}
 }

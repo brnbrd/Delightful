@@ -88,45 +88,6 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.BWG.rl("rose"))
 			.addOptional(Modid.FR.rl("rose_hips"))
 			.addOptional(Util.rl("sunflowerdelight", "rosebud"));
-		this.tag(DelightfulItemTags.MAKES_DYE_RED)
-			.addOptionalTag(Modid.BWG.rl("dye/makes_red_dye"))
-			.addOptional(Modid.HAB.rl("red_anthurium"))
-			.addOptional(Modid.HAB.rl("dreadbud"))
-			.addOptional(Modid.HAB.rl("rafflesia"))
-			.addOptional(Modid.UG.rl("blood_mushroom"))
-			.addOptional(Util.rl("snowyspirit", "ginger_flower"));
-		this.tag(DelightfulItemTags.MAKES_DYE_YELLOW)
-			.addOptionalTag(Modid.BWG.rl("dye/makes_yellow_dye"))
-			.addOptional(Modid.HAB.rl("yellow_anthurium"));
-		this.tag(DelightfulItemTags.MAKES_DYE_PURPLE)
-			.addOptionalTag(Modid.BWG.rl("dye/makes_purple_dye"))
-			.addOptional(Modid.HAB.rl("purple_anthurium"));
-		this.tag(DelightfulItemTags.MAKES_DYE_MAGENTA)
-			.addOptionalTag(Modid.BWG.rl("dye/makes_magenta_dye"))
-			.addOptional(Modid.HAB.rl("purple_anthurium"));
-		this.tag(DelightfulItemTags.MAKES_DYE_WHITE)
-			.addOptionalTag(Modid.BWG.rl("dye/makes_white_dye"))
-			.addOptional(Modid.HAB.rl("white_anthurium"))
-			.addOptional(Modid.UG.rl("veil_mushroom"));
-		this.tag(DelightfulItemTags.MAKES_DYE_BLUE)
-			.addOptionalTag(Modid.BWG.rl("dye/makes_blue_dye"))
-			.addOptional(Modid.UG.rl("indigo_mushroom"));
-		this.tag(DelightfulItemTags.MAKES_DYE_LIGHT_BLUE)
-			.addOptional(Modid.UG.rl("miserabell"));
-		this.tag(DelightfulItemTags.MAKES_DYE_BLACK)
-			.addOptionalTag(Modid.BWG.rl("dye/makes_black_dye"))
-			.addOptional(Modid.UG.rl("ink_mushroom"));
-		this.tag(DelightfulItemTags.MAKES_DYE_ORANGE)
-			.addOptionalTag(Modid.BWG.rl("dye/makes_orange_dye"));
-		this.tag(DelightfulItemTags.MAKES_DYE_PINK)
-			.addOptionalTag(Modid.BWG.rl("dye/makes_pink_dye"));
-		this.tag(DelightfulItemTags.MAKES_DYE_CYAN)
-			.addOptionalTag(Modid.BWG.rl("dye/makes_cyan_dye"));
-		this.tag(DelightfulItemTags.MAKES_DYE_GREEN)
-			.addOptionalTag(Modid.BWG.rl("dye/makes_green_dye"));
-		//this.tag(DelightfulItemTags.MAKES_DYE_LIME);
-		this.tag(DelightfulItemTags.MAKES_DYE_LIGHT_GRAY)
-			.addOptional(Modid.HAB.rl("edelweiss"));
 
 		// Farmer's Delight
 		this.tag(ModTags.WOODEN_CABINETS)
@@ -324,8 +285,13 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptionalTag(Util.rl("finsandtails", "spindly_gem_crabs"));
 		this.tag(DelightfulItemTags.COOKED_CRAB) // Whole Crab
 			.addOptional(Modid.CRAB.rl("cooked_crab"));
-		this.tag(DelightfulItemTags.CRAB_MEAT)
-			.addOptional(Modid.ECO.rl("crab_meat"));
+		// Cooked Crab Meat or Legs
+		this.tag(DelightfulItemTags.RAW_CRAB_MEAT)
+			.addOptional(Modid.Q.rl("crab_leg"));
+		this.tag(DelightfulItemTags.COOKED_CRAB_MEAT)
+			.addOptional(Modid.CRAB.rl("crab_legs"))
+			.addOptional(Modid.ECO.rl("crab_meat"))
+			.addOptional(Modid.Q.rl("cooked_crab_leg"));
 		this.tag(DelightfulItemTags.CRAB_CLAW_COOKED)
 			.addOptional(Modid.CR.rl("chieftain_claw"))
 			.addOptional(Util.rl("finsandtails", "cooked_bull_crab_claw"));
@@ -645,7 +611,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.FOODS_MEAT)
 			.addTag(DelightfulItemTags.FOODS_MEAT_RAW)
 			.addTag(DelightfulItemTags.FOODS_MEAT_COOKED)
-			.addTag(DelightfulItemTags.CRAB_MEAT);
+			.addTag(DelightfulItemTags.COOKED_CRAB_MEAT);
 		this.tag(DelightfulItemTags.PROTEIN_PATTY)
 			.add(ModItems.BEEF_PATTY.get())
 			.addOptional(Modid.MD.rl("vegan_patty"));
