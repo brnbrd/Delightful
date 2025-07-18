@@ -48,7 +48,6 @@ public class JEIPlugin implements IModPlugin {
 		this.hide(hidden, Modid.UGD, "gloomgourd_pie_slice");
 
 		// FD conflicts
-		this.hide(hidden, Modid.IN, "fried_egg");
 		this.hide(hidden, Modid.NA, "cooked_egg");
 		this.hide(hidden, Modid.AA, "fried_egg");
 		this.hide(hidden, Modid.TH, "beetroot_block");

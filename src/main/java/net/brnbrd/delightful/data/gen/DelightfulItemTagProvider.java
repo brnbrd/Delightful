@@ -735,6 +735,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 
 		// Salt
 		this.tag(Modid.S.it("can_be_salted"))
+			.addTag(ForgeTags.COOKED_EGGS)
 			.addTag(DelightfulItemTags.COOKED_CRAB)
 			.addTag(DelightfulItemTags.COOKED_GOAT)
 			.addTag(DelightfulItemTags.COOKED_NUTS)
@@ -749,6 +750,9 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.add(DelightfulItems.CRAB_RANGOON.get())
 			.add(DelightfulItems.CHUNKWICH.get())
 			.add(DelightfulItems.STUFFED_CANTALOUPE.get());
+
+		// Origins
+		this.tag(Util.it("origins", "meat")).addTag(ForgeTags.COOKED_EGGS);
 
 		// Ecologics
 		this.addSelf(Modid.ECO.it("cooked_prickly_pear"));

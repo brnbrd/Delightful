@@ -5,6 +5,7 @@
 
 ### Updates
 - Milk from `#forge:nuts` recipe now uses a Kettle in presence of [Farmer's Respite](https://www.curseforge.com/minecraft/mc-mods/farmers-respite)
+- Updated Fried Egg recipes to be consistent with [Abnormals Delight](https://www.curseforge.com/minecraft/mc-mods/abnormals-delight)
 
 ### Fixes
 - Removed conflicting nut Milk cooking recipes

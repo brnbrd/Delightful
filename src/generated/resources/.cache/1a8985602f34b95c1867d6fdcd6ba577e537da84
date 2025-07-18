@@ -1,4 +1,4 @@
-// 1.20.1	2025-07-17T16:08:41.170282	delightful
+// 1.20.1	2025-07-17T19:13:23.086805	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -215,10 +215,11 @@ f3d389bd6892248142900ae5f52fe8a51dae2311 data/minecraft/tags/items/walls.json
 a95df2279e05baa5f0608937c6c66f68c44ebf2d data/nethersdelight/tags/items/meal_item.json
 39eb11aaa538dbe439118c3d75817b4407cf07a0 data/nethers_exoticism/tags/items/kiwano_peel.json
 03f129936289d77fd6e02c93156c4b31152fbbf8 data/nourished_nether/tags/items/necronium_tools.json
+574444815450e2b51c646e6dabeb27c090152713 data/origins/tags/items/meat.json
 bd03c94c3be4df3a7a6a198d6d729fad9fb4311f data/phantasm/tags/items/crystal_spike_tips.json
 61d64c77058e1625c2e3b99ed4a928eea28f624e data/phantasm/tags/items/gets_xp_speed_boost.json
 a8f06d7dc1646ce181a8dc82c1d2a179064212a9 data/phantasm/tags/items/void_crystal_block.json
-ce5356ffa5674f138371ca2ce13e6514fff90967 data/salt/tags/items/can_be_salted.json
+9e74ac78b0f24b91f473524fd579e5a419f6d57d data/salt/tags/items/can_be_salted.json
 6ee15734ac9331c3a1b186bd12a7cfc07d71273b data/seeds/tags/items/sharp_leaf.json
 e8907bb6383992d824e326f554fcbab430f7e5ce data/sereneseasons/tags/items/summer_crops.json
 5ca5c9750568ae0343de46dc7bae0316ddffd566 data/spirit/tags/items/soul_steel_mainhand.json
