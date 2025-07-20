@@ -1,0 +1,30 @@
+  {
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "biomeswevegone:yellow_sakura_petals"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "biomeswevegone:yellow_sakura_petals"
+          }
+        ],
+        "result": [
+          {
+            "count": 2,
+            "item": "minecraft:yellow_dye"
+          }
+        ],
+        "tool": {
+          "tag": "forge:tools/knives"
+        }
+      }
+    }
+  ]
+}
