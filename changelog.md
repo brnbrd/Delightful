@@ -17,6 +17,9 @@
 - Added some models for [Peculiars](https://www.curseforge.com/minecraft/mc-mods/peculiars)
 - Fixed Mixed Berry Muffin and Chocolate Pumpkin Muffin using swapped models
 
+### Translations
+- Added hu_hu (merged [#130](https://github.com/brnbrd/Delightful/pull/130))
+
 
 # 3.7.3
 
