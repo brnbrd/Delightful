@@ -19,6 +19,7 @@
 
 ### Translations
 - Added hu_hu (merged [#130](https://github.com/brnbrd/Delightful/pull/130))
+- Updated ru_ru (merged [#125](https://github.com/brnbrd/Delightful/pull/125))
 
 
 # 3.7.3
