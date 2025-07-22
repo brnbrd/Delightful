@@ -22,6 +22,7 @@ import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 import vectorwing.farmersdelight.common.registry.ModItems;
+import vectorwing.farmersdelight.common.tag.CompatibilityTags;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
 import vectorwing.farmersdelight.common.tag.ModTags;
 import java.util.concurrent.CompletableFuture;
@@ -52,6 +53,30 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.add(DelightfulItems.SOURCE_BERRY_COOKIE_TILE_WALL.get());
 
 		// Farmer's Delight
+		this.tag(ModTags.MEALS)
+			.add(DelightfulItems.CACTUS_CHILI.get())
+			.add(DelightfulItems.CACTUS_SOUP.get())
+			.add(DelightfulItems.VENISON_STEW.get())
+			.add(DelightfulItems.SINIGANG.get())
+			.add(DelightfulItems.COCONUT_CURRY.get())
+			.add(DelightfulItems.FIELD_SALAD.get())
+			.add(DelightfulItems.STUFFED_CANTALOUPE.get());
+		this.tag(ModTags.DRINKS)
+			.add(DelightfulItems.PRICKLY_PEAR_JUICE.get())
+			.add(DelightfulItems.ENDER_NECTAR.get())
+			.add(DelightfulItems.MATCHA_LATTE.get())
+			.add(DelightfulItems.BERRY_MATCHA_LATTE.get())
+			.add(DelightfulItems.AZALEA_TEA.get())
+			.add(DelightfulItems.LAVENDER_TEA.get())
+			.addOptional(Modid.FR.rl("green_tea"))
+			.addOptional(Modid.FR.rl("yellow_tea"))
+			.addOptional(Modid.FR.rl("black_tea"))
+			.addOptional(Modid.FR.rl("rose_hip_tea"))
+			.addOptional(Modid.FR.rl("dandelion_tea"))
+			.addOptional(Modid.FR.rl("purulent_tea"))
+			.addOptional(Modid.FR.rl("gamblers_tea"));
+		this.tag(ModTags.FEASTS)
+			.add(DelightfulItems.STUFFED_CANTALOUPE_BLOCK.get());
 		this.tag(DelightfulItemTags.STRAW_PLANTS)
 			.add(Items.GRASS)
 			.add(Items.TALL_GRASS)
@@ -696,7 +721,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Util.rl("ends_delight", "chorus_cookie"))
 			.addOptional(Util.rl("sunflowerdelight", "shortbread_cookie"))
 			.addOptional(Util.rl("vampiresdelight", "orchid_cookie"))
-			.addOptional(Util.rl("snowyspirit", "gingerbread_cookie"));
+			.addOptional(Util.rl("snowyspirit", "gingerbread_cookie"))
+			.addOptional(Util.rl("ramadandelight", "date_stuffed_cookie"));
 		this.tag(DelightfulItemTags.ROPES)
 			.add(ModItems.ROPE.get())
 			.addOptionalTag(Modid.SUP.rl("ropes"))
@@ -786,30 +812,17 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 
 		// Create
 		this.addSelf(DelightfulItemTags.POLISHED_ROSE_QUARTZ);
-		this.tag(Modid.C.it("upright_on_belt"))
+		this.tag(CompatibilityTags.CREATE_UPRIGHT_ON_BELT)
 			.addTag(DelightfulItemTags.JAMS)
 			.add(DelightfulItems.NUT_BUTTER_BOTTLE.get())
-			.add(DelightfulItems.PRICKLY_PEAR_JUICE.get())
-			.add(DelightfulItems.ENDER_NECTAR.get())
-			.add(DelightfulItems.AZALEA_TEA.get())
-			.add(DelightfulItems.LAVENDER_TEA.get())
-			.add(DelightfulItems.MATCHA_LATTE.get())
-			.add(DelightfulItems.BERRY_MATCHA_LATTE.get())
 			.add(DelightfulItems.ANIMAL_OIL_BOTTLE.get())
 			.add(DelightfulItems.SALMONBERRY_PIE.get())
-			.add(DelightfulItems.BAKLAVA.get())
-			.addOptional(Modid.FR.rl("green_tea"))
-			.addOptional(Modid.FR.rl("yellow_tea"))
-			.addOptional(Modid.FR.rl("black_tea"))
-			.addOptional(Modid.FR.rl("rose_hip_tea"))
-			.addOptional(Modid.FR.rl("dandelion_tea"))
-			.addOptional(Modid.FR.rl("purulent_tea"))
-			.addOptional(Modid.FR.rl("gamblers_tea"));
+			.add(DelightfulItems.BAKLAVA.get());
 		this.addSelf(DelightfulItemTags.ZINC_HANDLE);
 		this.addSelf(DelightfulItemTags.HEAP_EXPERIENCE);
 
 		// Serene Seasons
-		this.tag(Util.it("sereneseasons", "summer_crops"))
+		this.tag(CompatibilityTags.SERENE_SEASONS_SUMMER_CROPS)
 			.addTag(DelightfulItemTags.SEEDS_SALMONBERRY)
 			.addTag(DelightfulItemTags.SEEDS_CANTALOUPE);
 

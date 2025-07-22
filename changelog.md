@@ -1,6 +1,14 @@
 ## Version History
 
 
+# 3.7.5
+
+### Updates
+- Added all bowl foods to `#meals`
+- Added all drinkables to `#drinks`
+- Added `Stuffed Cantaloupe` to `#feasts`
+
+
 # 3.7.4
 
 ### Updates

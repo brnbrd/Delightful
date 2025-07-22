@@ -2,42 +2,8 @@
   "values": [
     "#forge:jams",
     "delightful:nut_butter_bottle",
-    "delightful:prickly_pear_juice",
-    "delightful:ender_nectar",
-    "delightful:azalea_tea",
-    "delightful:lavender_tea",
-    "delightful:matcha_latte",
-    "delightful:berry_matcha_latte",
     "delightful:animal_oil_bottle",
     "delightful:salmonberry_pie",
-    "delightful:baklava",
-    {
-      "id": "farmersrespite:green_tea",
-      "required": false
-    },
-    {
-      "id": "farmersrespite:yellow_tea",
-      "required": false
-    },
-    {
-      "id": "farmersrespite:black_tea",
-      "required": false
-    },
-    {
-      "id": "farmersrespite:rose_hip_tea",
-      "required": false
-    },
-    {
-      "id": "farmersrespite:dandelion_tea",
-      "required": false
-    },
-    {
-      "id": "farmersrespite:purulent_tea",
-      "required": false
-    },
-    {
-      "id": "farmersrespite:gamblers_tea",
-      "required": false
-    }
+    "delightful:baklava"
   ]
 }

@@ -1,4 +1,4 @@
-// 1.20.1	2025-07-17T19:13:23.086805	delightful
+// 1.20.1	2025-07-22T11:51:34.4911858	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -17,7 +17,7 @@ cc3ce1c9ecfdd40d917db77aeff124be1dd856b4 data/botania/tags/items/mana_using_item
 9720eaa25059db4d31e67bec3e13db181891785c data/collectorsreap/tags/items/gummies.json
 eb347da20a32d366a80660d57d24de89df517142 data/cosmopolitan/tags/items/tracer_sources.json
 ed89bd00684e45c4198269c0053267c257e784c6 data/create/tags/items/polished_rose_quartz.json
-e7ff0fc4a95b9898768a82c2b8b1d8d240535204 data/create/tags/items/upright_on_belt.json
+8f0f906f08ae5621a9c038a3ba201f8f11879a10 data/create/tags/items/upright_on_belt.json
 3ec615c3b0619071ee2425164230a78256598991 data/create_sa/tags/items/heap_of_experience.json
 93e27377ca1c64c862cd4f76810c65106f132cea data/create_sa/tags/items/zinc_handle.json
 b306cd52d0a89b88fd149766a3ccc1f9d27d4e5f data/deeperdarker/tags/items/reinforced_echo_shard.json
@@ -40,6 +40,9 @@ f2edde09d8cbec9661b025fd8d29aa93cb711371 data/farmersdelight/tags/items/cabbage_
 64a54c43e2fc2293d7ba623845ea037bf7b593b8 data/farmersdelight/tags/items/cabinets.json
 56652c93f5e1505b2c4875c8d14635f2a2c72350 data/farmersdelight/tags/items/cabinets/stone.json
 c756828a18d3aefa49fcda7b8d2fafa44a6ac0e3 data/farmersdelight/tags/items/cabinets/wooden.json
+dde872bcee18cd5b837a80cb4af784b9f546b345 data/farmersdelight/tags/items/drinks.json
+079e0e0155f3a70ae2fa16bb5b79c676f3ad3301 data/farmersdelight/tags/items/feasts.json
+ae26d2f7725b91d3f31ae4445df3ae7c741d7f40 data/farmersdelight/tags/items/meals.json
 6f93ecf481fdd6945e4e869a3242e5d8351c55d9 data/farmersdelight/tags/items/straw_plants.json
 e30bd9148472cd3bab0669e057c619ac320ca1d1 data/farmersdelight/tags/items/tools/knives.json
 46f279b6acd03b06ea14e9f62be7d48e200c002c data/farmersdelight/tags/items/wild_crops.json
@@ -70,7 +73,7 @@ f22b4c1e330acdb87d41463fa1bbe431b513d330 data/forge/tags/items/cooked_fishes.jso
 d0b63fd9fa268a9c720c2a89a19e5eacf59a05a1 data/forge/tags/items/cooked_nuts.json
 9f77948b8bcc8ff9ce8d4f192f7156c733795ab7 data/forge/tags/items/cooked_rabbit.json
 522cf04b2689c42171edbe4fe3fa6e3fa9651b1f data/forge/tags/items/cooked_venison.json
-529c1a57158ac37cdcbe5b98f15e4d8e14abd6c8 data/forge/tags/items/cookies.json
+a180e224ec8d5888eb678f10b562169ee803c577 data/forge/tags/items/cookies.json
 b909ff8d1fa9d605fe5c66fa82057da1bcfbc4cc data/forge/tags/items/cookies/source_berry.json
 7c0edbb702d3fbe9e1c68f07804da13ef22fe6ea data/forge/tags/items/crab_claw.json
 a588e76ea799ddafa0f942b8750ac4644597b2bd data/forge/tags/items/crab_claw/cooked.json

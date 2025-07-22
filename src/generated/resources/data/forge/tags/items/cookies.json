@@ -108,6 +108,10 @@
     {
       "id": "snowyspirit:gingerbread_cookie",
       "required": false
+    },
+    {
+      "id": "ramadandelight:date_stuffed_cookie",
+      "required": false
     }
   ]
 }
