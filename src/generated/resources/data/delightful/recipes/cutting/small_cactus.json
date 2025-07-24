@@ -25,6 +25,10 @@
         "result": [
           {
             "item": "delightful:cactus_flesh"
+          },
+          {
+            "chance": 0.33,
+            "item": "minecraft:green_dye"
           }
         ],
         "tool": {

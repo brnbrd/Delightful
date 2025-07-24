@@ -556,12 +556,14 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
 						Ingredient.of(Items.CACTUS),
 						Ingredient.of(ForgeTags.TOOLS_KNIVES),
-						DelightfulItems.CACTUS_FLESH.get(), 2),
+						DelightfulItems.CACTUS_FLESH.get(), 2)
+				.addResultWithChance(Items.GREEN_DYE, 0.5F),
 				"cutting/cactus", finished, enabled(DelightfulItems.CACTUS_FLESH));
 		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
 						Ingredient.of(DelightfulItemTags.CACTI_SMALL),
 						Ingredient.of(ForgeTags.TOOLS_KNIVES),
-						DelightfulItems.CACTUS_FLESH.get(), 1),
+						DelightfulItems.CACTUS_FLESH.get(), 1)
+				.addResultWithChance(Items.GREEN_DYE, 0.33F),
 				"cutting/small_cactus", finished, enabled(DelightfulItems.CACTUS_FLESH), not(tagEmpty(DelightfulItemTags.CACTI_SMALL)));
 		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
 						Ingredient.of(DelightfulItems.MINI_MELON.get()),

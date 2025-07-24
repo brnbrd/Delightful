@@ -1,4 +1,4 @@
-// 1.20.1	2025-07-22T11:51:34.4926043	Recipes
+// 1.20.1	2025-07-23T21:07:30.1800322	Recipes
 6c217dd6477efa10f6042809ba959d53036ab5e2 data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 5b82f87851220644287d771121677deac66b3b89 data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
 cf29033c1c919355c261025df529938e6ebc73f8 data/delightful/advancements/recipes/campfire/cactus_steak.json
@@ -156,7 +156,7 @@ be67bcf5f2d2f280599d38b686b7e27b65492dce data/delightful/advancements/recipes/sm
 14da98cd0a18d17e8c2521f256950ff1cc78e259 data/delightful/recipes/cantaloupe_slice.json
 0ad070142d2c20cf6a500f88ba545b22206aabb8 data/delightful/recipes/cooking/animal_oil_bottle.json
 c92680cce5f1a7851ea35a25a9251e6401222767 data/delightful/recipes/cutting/baklava.json
-0d5d2333e9578ece744fac84ca2681fba2fcbef3 data/delightful/recipes/cutting/cactus.json
+9f1ca1475dd92960bd71cf2bcbd3f6f19350fb8c data/delightful/recipes/cutting/cactus.json
 b1a086de89bbe413ddbc8ec067d97b06ab2e03b9 data/delightful/recipes/cutting/cactus_steak.json
 e1775adbe96cf44d4fcf39ad8a1088bb4220cd62 data/delightful/recipes/cutting/cantaloupe.json
 6d83188833f8de6e476dff434874899ad77869fc data/delightful/recipes/cutting/clover.json
@@ -166,7 +166,7 @@ ea2e4b62b24148c28ef0dfb2395cc778edfcf3f2 data/delightful/recipes/cutting/mini_me
 94844bad124bf4c999bd39f9e661e44611b2db92 data/delightful/recipes/cutting/pumpkin_pie.json
 832d880fed642035591f4f852fe5b567d88d99e9 data/delightful/recipes/cutting/raw_venison.json
 66c0e664acd6c60912d049d9269ea0d5dddf2e64 data/delightful/recipes/cutting/salmonberry_pie.json
-74d5f13849153a01a11caae58fca8a8ed660af8c data/delightful/recipes/cutting/small_cactus.json
+662b4b4b6fe43fba17ac28004e6db3cb071677f8 data/delightful/recipes/cutting/small_cactus.json
 8f93cb7f47ffb3a6b38c14fc5ad15d08f00fdeeb data/delightful/recipes/cutting/sugar_cane.json
 cc53eb45016965c4191782787b7e54aa46f3bb02 data/delightful/recipes/cutting/wild_salmonberries.json
 c392f819e504096074fde3f3514818b122c6bc4b data/delightful/recipes/food/baklava.json

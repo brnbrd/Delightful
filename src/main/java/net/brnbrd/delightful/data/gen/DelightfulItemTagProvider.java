@@ -84,6 +84,17 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.UA.rl("beachgrass"))
 			.addOptional(Modid.UA.rl("tall_beachgrass"));
 		this.tag(DelightfulItemTags.BARKS).add(ModItems.TREE_BARK.get());
+		this.tag(ModTags.WOODEN_CABINETS)
+			.addOptional(Modid.AND.rl("archwood_cabinet"))
+			.addOptional(Modid.WS.rl("holly_cabinet"))
+			.addOptional(Modid.WS.rl("chestnut_cabinet"))
+			.addOptional(Util.rl("fruittrees", "citrus_cabinet"))
+			.addOptional(Util.rl("fruittrees", "cherry_cabinet"));
+		this.tag(DelightfulItemTags.STONE_CABINETS)
+			.add(DelightfulItems.BASALT_CABINET.get())
+			.add(DelightfulItems.QUARTZ_CABINET.get());
+		this.tag(ModTags.CABINETS).addTag(DelightfulItemTags.STONE_CABINETS);
+		this.tag(ModTags.WILD_CROPS_ITEM).add(DelightfulItems.WILD_SALMONBERRIES.get());
 
 		// Knives
 		var build = tag(ModTags.KNIVES);
@@ -113,19 +124,6 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.BWG.rl("rose"))
 			.addOptional(Modid.FR.rl("rose_hips"))
 			.addOptional(Util.rl("sunflowerdelight", "rosebud"));
-
-		// Farmer's Delight
-		this.tag(ModTags.WOODEN_CABINETS)
-			.addOptional(Modid.AND.rl("archwood_cabinet"))
-			.addOptional(Modid.WS.rl("holly_cabinet"))
-			.addOptional(Modid.WS.rl("chestnut_cabinet"))
-			.addOptional(Util.rl("fruittrees", "citrus_cabinet"))
-			.addOptional(Util.rl("fruittrees", "cherry_cabinet"));
-		this.tag(DelightfulItemTags.STONE_CABINETS)
-			.add(DelightfulItems.BASALT_CABINET.get())
-			.add(DelightfulItems.QUARTZ_CABINET.get());
-		this.tag(ModTags.CABINETS).addTag(DelightfulItemTags.STONE_CABINETS);
-		this.tag(ModTags.WILD_CROPS_ITEM).add(DelightfulItems.WILD_SALMONBERRIES.get());
 
 		// Tomato
 		this.tag(ForgeTags.CROPS_TOMATO).addOptional(Modid.SAS.rl("tomato_slices"));
@@ -332,6 +330,14 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.TOOLS_WRENCH).addOptional(Modid.FOR.rl("wrench"));
 		this.tag(ItemTags.TOOLS).addTag(DelightfulItemTags.TOOLS_WRENCH);
 		this.tag(DelightfulItemTags.WRENCHES).addTag(DelightfulItemTags.TOOLS_WRENCH);
+		this.tag(DelightfulItemTags.JUICES_MELON)
+			.add(ModItems.MELON_JUICE.get())
+			.addOptional(Modid.FR.rl("strong_melon_juice"));
+		this.tag(DelightfulItemTags.JUICES_PRICKLY_PEAR).add(DelightfulItems.PRICKLY_PEAR_JUICE.get());
+		this.tag(DelightfulItemTags.JUICES)
+			.addTag(DelightfulItemTags.JUICES_MELON)
+			.addTag(DelightfulItemTags.JUICES_PRICKLY_PEAR)
+			.addOptional(Modid.AD.rl("pickerelweed_juice"));
 		this.tag(DelightfulItemTags.WATER)
 			.add(Items.WATER_BUCKET)
 			.addOptional(Modid.MD.rl("water_cup"));
@@ -354,6 +360,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.BWG.rl("flowering_barrel_cactus"))
 			.addOptional(Modid.BWG.rl("prickly_pear_cactus"))
 			.addOptional(Modid.BWG.rl("golden_spined_cactus"))
+			.addOptional(Modid.HAB.rl("ball_cactus_block"))
 			.addOptional(Util.rl("biomemakeover", "saguaro_cactus"));
 		this.tag(DelightfulItemTags.CACTI_SMALL)
 			.addOptionalTag(Modid.HAB.rl("ball_cacti"))
@@ -814,6 +821,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.addSelf(DelightfulItemTags.POLISHED_ROSE_QUARTZ);
 		this.tag(CompatibilityTags.CREATE_UPRIGHT_ON_BELT)
 			.addTag(DelightfulItemTags.JAMS)
+			.addTag(DelightfulItemTags.JUICES)
 			.add(DelightfulItems.NUT_BUTTER_BOTTLE.get())
 			.add(DelightfulItems.ANIMAL_OIL_BOTTLE.get())
 			.add(DelightfulItems.SALMONBERRY_PIE.get())

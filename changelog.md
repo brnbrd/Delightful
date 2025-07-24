@@ -6,7 +6,8 @@
 ### Updates
 - Added all bowl foods to `#meals`
 - Added all drinkables to `#drinks`
-- Added `Stuffed Cantaloupe` to `#feasts`
+- Added Stuffed Cantaloupe to `#feasts`
+- Recipes for cutting `#forge:cacti` into Cactus Flesh will now also have a chance to provide Green Dye
 
 
 # 3.7.4
@@ -74,7 +75,7 @@
 - Added models for some items when placed on Coasters from [Brewin' and Chewin'](https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin)
 - Added recycling recipes for some knives
 - Added Sap and Syrup compatibility for [Autumnity](https://www.curseforge.com/minecraft/mc-mods/autumnity) and [Thermal](https://www.curseforge.com/minecraft/mc-mods/thermal-foundation)
-- Added more support to `can_be_salted` tag from [The Salt](https://www.curseforge.com/minecraft/mc-mods/salt)
+- Added more support to `#salt:can_be_salted` tag from [The Salt](https://www.curseforge.com/minecraft/mc-mods/salt)
 - Added recipe to use Thermal's Compost to craft Organic Compost
 - Increased length of Mana Regeneration from Source Berry Pie Slice from 10 to 15 seconds
 - Increased length of Glowing from Glow Jam Jar from 45 to 60 seconds
@@ -121,18 +122,18 @@
   - Recommended with Delightful Overhauls resource pack enabled
 - Cantaloupes and Mini Melons now produce 4 slices (from 6)
 - Can scavenge slices from breaking Cantaloupes and Mini Melons with a knife
-- Can scavenge Ham from Naturalist's Boars (and any entity tagged `delightful:drops_ham`)
-- Removed support for `forge:tools/scavenging` tag
+- Can scavenge Ham from Naturalist's Boars (and any entity tagged `#delightful:drops_ham`)
+- Removed support for `#forge:tools/scavenging` tag
 - Added recipe for cutting Ecologics' Coconut Husk into Straw
 - Slightly increased nutrition and saturation of Slice of Baklava
 - Slice of Gloomgourd Pie now gives 30 seconds of Virulent Resistance (from 8)
 
 ### Fixes
 - Fixed Acorns not dropping from Oak Leaves blocks (closes [#111](https://github.com/brnbrd/Delightful/issues/111))
-- Allow tea Cooking Pot recipes to accept Water Buckets, or any item tagged `forge:water` (closes [#108](https://github.com/brnbrd/Delightful/issues/108))
+- Allow tea Cooking Pot recipes to accept Water Buckets, or any item tagged `#forge:water` (closes [#108](https://github.com/brnbrd/Delightful/issues/108))
 - Stews must be cooked in a Cooking Pot
 - Fixed Ecologics cooking recipe container issues
-- Fixed typo in `quark:parrot_egg_gray` in `forge:eggs` tag (merged [#109](https://github.com/brnbrd/Delightful/pull/109))
+- Fixed typo in `#quark:parrot_egg_gray` in `#forge:eggs` tag (merged [#109](https://github.com/brnbrd/Delightful/pull/109))
 
 ### Translations
 - Updated zh_cn (merged [#110](https://github.com/brnbrd/Delightful/pull/110))

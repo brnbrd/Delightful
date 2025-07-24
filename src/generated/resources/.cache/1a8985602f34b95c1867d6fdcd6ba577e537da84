@@ -1,4 +1,4 @@
-// 1.20.1	2025-07-22T11:51:34.4911858	delightful
+// 1.20.1	2025-07-24T15:28:31.3023453	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -17,7 +17,7 @@ cc3ce1c9ecfdd40d917db77aeff124be1dd856b4 data/botania/tags/items/mana_using_item
 9720eaa25059db4d31e67bec3e13db181891785c data/collectorsreap/tags/items/gummies.json
 eb347da20a32d366a80660d57d24de89df517142 data/cosmopolitan/tags/items/tracer_sources.json
 ed89bd00684e45c4198269c0053267c257e784c6 data/create/tags/items/polished_rose_quartz.json
-8f0f906f08ae5621a9c038a3ba201f8f11879a10 data/create/tags/items/upright_on_belt.json
+746019649a10b8ecd2220e4b69b76fc069cb3865 data/create/tags/items/upright_on_belt.json
 3ec615c3b0619071ee2425164230a78256598991 data/create_sa/tags/items/heap_of_experience.json
 93e27377ca1c64c862cd4f76810c65106f132cea data/create_sa/tags/items/zinc_handle.json
 b306cd52d0a89b88fd149766a3ccc1f9d27d4e5f data/deeperdarker/tags/items/reinforced_echo_shard.json
@@ -54,7 +54,7 @@ dabd817095489e486c3fcd0ab4704640d2da84ca data/forge/tags/items/bread.json
 2c61aada43234d73614242ee70d69d914508cfe1 data/forge/tags/items/bread/corn.json
 cbd47de368751306e7d7f0cfb8054fc816b1695d data/forge/tags/items/burger_bun.json
 e0bed00048e8a625914ba1af64357c9f44d13421 data/forge/tags/items/cacti.json
-b3a1215309d33f0ba6588df6a6d9d1a9c00fc4ea data/forge/tags/items/cacti/large.json
+025f638468ffff7c04db220b23ce3ca3bdef7cc2 data/forge/tags/items/cacti/large.json
 e323e7d458810ad726aabebee6a2bde8add5c858 data/forge/tags/items/cacti/small.json
 be6d5de873996c5da60b65ae5b85bf54909b7d36 data/forge/tags/items/cattail.json
 4cf12f115d6ec3abcd77d01d9fbbf3293a10afae data/forge/tags/items/cheese.json
@@ -151,6 +151,9 @@ a2c1b0bb89891c01a65518d797b2be4020720a63 data/forge/tags/items/ingots/stratus.js
 d554ed3f6b8762427d8c40a172c78361952260ed data/forge/tags/items/ingots/veridium.json
 167f3c09f3bea43f921a842030b9b02b4e89bd67 data/forge/tags/items/jams.json
 93c48293b9ca80f78879ce37a6dd9be0c45d5fe3 data/forge/tags/items/jams/glow.json
+cfa4a0ac2b545a6a04649863cb45b6e8951e4d09 data/forge/tags/items/juices.json
+2e32ebd0459136597a1e6db82576dd3a7741ce53 data/forge/tags/items/juices/melon.json
+115bfc292415ed6bd666e9987fe2d57bd17e32bf data/forge/tags/items/juices/prickly_pear.json
 52d821c48dd4653008d93009d83156469191b18c data/forge/tags/items/lavender.json
 92e1871435d3246a5a0a5dce0c305a6f337ac544 data/forge/tags/items/marshmallow.json
 5160d3e42adb69a7a3e121df7fe653817a5d6b1b data/forge/tags/items/matcha.json

@@ -1,0 +1,10 @@
+{
+  "values": [
+    "#forge:juices/melon",
+    "#forge:juices/prickly_pear",
+    {
+      "id": "abnormals_delight:pickerelweed_juice",
+      "required": false
+    }
+  ]
+}

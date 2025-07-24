@@ -19,15 +19,19 @@
             "item": "habitat:ball_cactus_block"
           }
         ],
-        "result": [
-          {
-            "item": "delightful:cactus_flesh",
-            "count": 2
-          }
-        ],
         "tool": {
           "tag": "forge:tools/knives"
-        }
+        },
+        "result": [
+          {
+            "count": 2,
+            "item": "delightful:cactus_flesh"
+          },
+          {
+            "chance": 0.5,
+            "item": "minecraft:green_dye"
+          }
+        ]
       }
     }
   ]

@@ -29,6 +29,10 @@
           },
           {
             "item": "minecraft:pink_dye"
+          },
+          {
+            "chance": 0.5,
+            "item": "minecraft:green_dye"
           }
         ]
       }

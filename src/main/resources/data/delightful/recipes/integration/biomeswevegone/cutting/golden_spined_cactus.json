@@ -26,6 +26,10 @@
           {
             "count": 2,
             "item": "delightful:cactus_flesh"
+          },
+          {
+            "chance": 0.5,
+            "item": "minecraft:green_dye"
           }
         ]
       }

@@ -82,6 +82,9 @@ public class DelightfulItemTags {
 	// Forge
 	public static final TagKey<Item> TOOLS_WRENCH = forge("tools/wrench");
 	public static final TagKey<Item> WRENCHES = forge("wrenches");
+	public static final TagKey<Item> JUICES = forge("juices");
+	public static final TagKey<Item> JUICES_MELON = forge("juices/melon");
+	public static final TagKey<Item> JUICES_PRICKLY_PEAR = forge("juices/prickly_pear");
 	public static final TagKey<Item> WATER = forge("water");
 	public static final TagKey<Item> CHEESE = forge("cheese");
 	public static final TagKey<Item> CHOCOLATE = forge("chocolate");
