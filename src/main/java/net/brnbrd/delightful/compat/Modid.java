@@ -182,11 +182,7 @@ public enum Modid {
 	}
 
 	@Nullable
-	public MobEffect effect(@NotNull String name) {
-		return Util.effect(this.rl(name));
-	}
-
-	public MobEffect effect(@NotNull String name, MobEffect backup) {
+	public MobEffect effect(@NotNull String name, MobEffect... backup) {
 		return Util.effect(this.rl(name), backup);
 	}
 }

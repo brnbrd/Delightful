@@ -8,6 +8,10 @@
           "value": "cantaloupe_gummy"
         },
         {
+          "type": "delightful:enabled",
+          "value": "cantaloupe"
+        },
+        {
           "type": "forge:mod_loaded",
           "modid": "create"
         }

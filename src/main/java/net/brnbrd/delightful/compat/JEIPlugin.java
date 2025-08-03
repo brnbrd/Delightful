@@ -44,6 +44,8 @@ public class JEIPlugin implements IModPlugin {
 		List<FluidStack> hiddenFluids = new ArrayList<>();
 
 		// Delightful conflicts
+		this.hide(hidden, Modid.HH, "smore");
+		this.hide(hidden, Modid.HH, "peanut_butter_and_jelly_sandwich");
 		this.hide(hidden, Modid.VD, "pb_j");
 		this.hide(hidden, Modid.UGD, "gloomgourd_pie_slice");
 
@@ -58,6 +60,9 @@ public class JEIPlugin implements IModPlugin {
 		this.hide(hidden, Modid.HH, "chocolate_bar", Modid.N);
 
 		// Other
+		this.hide(hidden, Modid.HH, "salt", Modid.S);
+		this.hide(hidden, Modid.HH, "salt_bag", Modid.S);
+		this.hide(hidden, Modid.HH, "mashed_potatoes", Modid.COS);
 		this.hide(hidden, Modid.TH, "syrup_bottle", Modid.AUT);
 		this.hide(hidden, Modid.AE2, "ender_dust", Modid.TH);
 		this.hide(hidden, Modid.EIO, "powdered_ender_pearl", Modid.TH);
@@ -130,14 +135,14 @@ public class JEIPlugin implements IModPlugin {
 				Util.description("animal_oil_bottle")
 			);
 		}
-		if (Util.enabled(DelightfulItems.CANTALOUPE_SEEDS)) {
-			registration.addIngredientInfo(
-				Util.gs(DelightfulItems.CANTALOUPE_SEEDS),
-				VanillaTypes.ITEM_STACK,
-				Util.description("cantaloupe_seeds")
-			);
-		}
 		if (Util.enabled(DelightfulItems.CANTALOUPE)) {
+			if (Util.enabled(DelightfulItems.CANTALOUPE_SEEDS)) {
+				registration.addIngredientInfo(
+					Util.gs(DelightfulItems.CANTALOUPE_SEEDS),
+					VanillaTypes.ITEM_STACK,
+					Util.description("cantaloupe_seeds")
+				);
+			}
 			registration.addIngredientInfo(
 				Util.gs(DelightfulItems.CANTALOUPE),
 				VanillaTypes.ITEM_STACK,

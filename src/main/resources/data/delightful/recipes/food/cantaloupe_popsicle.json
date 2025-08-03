@@ -8,6 +8,10 @@
           "value": "cantaloupe_popsicle"
         },
         {
+          "type": "delightful:enabled",
+          "value": "cantaloupe"
+        },
+        {
           "type": "forge:not",
           "value": {
             "type": "forge:tag_empty",

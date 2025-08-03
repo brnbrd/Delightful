@@ -27,8 +27,8 @@ public class Nutrition {
 		.nutrition(2).saturationMod(0.4F)
 		.effect(() -> new MobEffectInstance(NeapolitanCompat.getSugarRush(), 120, 0), 1F).build();
 	public static final FoodProperties SMORE = (new FoodProperties.Builder())
-		.nutrition(9).saturationMod(0.2F)
-		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3600, 0), 1F)
+		.nutrition(8).saturationMod(0.2F)
+		.effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 3600, 0), 1F)
 		.effect(() -> new MobEffectInstance(NeapolitanCompat.getSugarRush(), 600, 1), 1F).build();
 	public static final FoodProperties CRAB_RANGOON = (new FoodProperties.Builder())
 		.nutrition(9).saturationMod(0.4F).build();
@@ -185,5 +185,5 @@ public class Nutrition {
 		.effect(() -> new MobEffectInstance(TeaCompat.getGreenTeaEffect().get(), 400, 1), 1F).build();
 	public static final FoodProperties CANTALOUPE_GUMMY = (new FoodProperties.Builder())
 		.nutrition(2).saturationMod(0F).alwaysEat()
-		.effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 300, 1), 1F).build();
+		.effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 300, 2), 1F).build();
 }

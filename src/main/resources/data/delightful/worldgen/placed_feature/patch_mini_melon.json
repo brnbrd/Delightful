@@ -1,6 +1,10 @@
 {
-  "feature": "delightful:patch_mini_melons",
+  "feature": "delightful:patch_mini_melon",
   "placement": [
+    {
+      "type": "delightful:enabled",
+      "item": "mini_melon"
+    },
     {
       "type": "minecraft:rarity_filter",
       "chance": 65

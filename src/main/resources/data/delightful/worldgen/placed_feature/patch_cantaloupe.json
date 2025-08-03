@@ -1,6 +1,10 @@
 {
-  "feature": "delightful:patch_cantaloupes",
+  "feature": "delightful:patch_cantaloupe",
   "placement": [
+    {
+      "type": "delightful:enabled",
+      "item": "cantaloupe"
+    },
     {
       "type": "minecraft:rarity_filter",
       "chance": 25

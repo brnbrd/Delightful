@@ -38,6 +38,10 @@
         {
           "type": "delightful:enabled",
           "value": "wrapped_cantaloupe"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "cantaloupe"
         }
       ]
     }

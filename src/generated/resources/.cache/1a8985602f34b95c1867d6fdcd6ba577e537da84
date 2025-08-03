@@ -1,4 +1,4 @@
-// 1.20.1	2025-07-24T15:28:31.3023453	delightful
+// 1.20.1	2025-08-02T17:48:30.2410317	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -70,7 +70,7 @@ f22b4c1e330acdb87d41463fa1bbe431b513d330 data/forge/tags/items/cooked_fishes.jso
 689b0562d8e01e19142c7bbffa5c17d727f2ca5c data/forge/tags/items/cooked_fishes/squid.json
 48e602c6f4f273972ce8f4a41af2bf1a7c1e42b5 data/forge/tags/items/cooked_fishes/tuna.json
 7180106aeb3e9ecd597a14700f05f7dd965e4fa2 data/forge/tags/items/cooked_goat.json
-d0b63fd9fa268a9c720c2a89a19e5eacf59a05a1 data/forge/tags/items/cooked_nuts.json
+926c55920d1084393aacbd1e66f779db7b98e778 data/forge/tags/items/cooked_nuts.json
 9f77948b8bcc8ff9ce8d4f192f7156c733795ab7 data/forge/tags/items/cooked_rabbit.json
 522cf04b2689c42171edbe4fe3fa6e3fa9651b1f data/forge/tags/items/cooked_venison.json
 a180e224ec8d5888eb678f10b562169ee803c577 data/forge/tags/items/cookies.json
@@ -104,9 +104,9 @@ b33dde3cf95c3f821d49bc84b8c46f9fd65289e8 data/forge/tags/items/fruits/apple.json
 81dca03b7282b921e7f7a58f53ebda8eda0659d6 data/forge/tags/items/fruits/baobab.json
 ad700a43700050836a829c9ef4c67681e84e2c98 data/forge/tags/items/fruits/blackberries.json
 1d44833608b10b814b0a3b85a30b11cb7c10bffb data/forge/tags/items/fruits/blood_orange.json
-c7a691ffe24451ec78aff862b1fdcd8c9ba1aaca data/forge/tags/items/fruits/blueberries.json
+e49c738292aa60163f920bc5ba00608d3fee2a6c data/forge/tags/items/fruits/blueberries.json
 500da256ddab8941af6469fb64c82901ba84ed36 data/forge/tags/items/fruits/cantaloupe.json
-9bcf5fe752a8696fcf9a26d104cc322516eb757c data/forge/tags/items/fruits/cherry.json
+f9e030571099ea5cb5ee1649927804fab3f28aaa data/forge/tags/items/fruits/cherry.json
 b4cc0642cc95aece33ec9cce364d245dd186c647 data/forge/tags/items/fruits/chorus.json
 62e9c8730d0b31633b727885e3b75ef2e0045f11 data/forge/tags/items/fruits/citron.json
 85a02a9772079f31b94513e5348212d7edf9fd12 data/forge/tags/items/fruits/citrus.json
@@ -125,7 +125,7 @@ ecd07182d854186646578b06f6cc2d851705fa09 data/forge/tags/items/fruits/pitaya.jso
 73599768203ecfdc4a62e1f601d04fd8106cd032 data/forge/tags/items/fruits/plum.json
 e63f4c3f380a4420a369bd6f1f2ccae1eda87135 data/forge/tags/items/fruits/prickly_pear.json
 5b793c76a86d92f166ef19a5a7db7bcdc4a792ac data/forge/tags/items/fruits/rambutan.json
-620340e40e0da0dcd09fcb19e6ab19593fe33ba9 data/forge/tags/items/fruits/raspberries.json
+975af6f485998832d437e3b359a270ab8db5792f data/forge/tags/items/fruits/raspberries.json
 75b6d4bff6ae38d1df48840f08808d6e941459a0 data/forge/tags/items/fruits/redcurrant.json
 bd88975064f14f57a6a7a33a5a2816ef2766c00f data/forge/tags/items/fruits/salmonberries.json
 d3ac5caff21a72e9cde16be715f916d249db85ef data/forge/tags/items/fruits/sourceberry.json
@@ -151,7 +151,7 @@ a2c1b0bb89891c01a65518d797b2be4020720a63 data/forge/tags/items/ingots/stratus.js
 d554ed3f6b8762427d8c40a172c78361952260ed data/forge/tags/items/ingots/veridium.json
 167f3c09f3bea43f921a842030b9b02b4e89bd67 data/forge/tags/items/jams.json
 93c48293b9ca80f78879ce37a6dd9be0c45d5fe3 data/forge/tags/items/jams/glow.json
-cfa4a0ac2b545a6a04649863cb45b6e8951e4d09 data/forge/tags/items/juices.json
+a0aa221f17d38ec004ae19595ea3d4a8d05ee673 data/forge/tags/items/juices.json
 2e32ebd0459136597a1e6db82576dd3a7741ce53 data/forge/tags/items/juices/melon.json
 115bfc292415ed6bd666e9987fe2d57bd17e32bf data/forge/tags/items/juices/prickly_pear.json
 52d821c48dd4653008d93009d83156469191b18c data/forge/tags/items/lavender.json

@@ -6,6 +6,10 @@
         {
           "type": "delightful:enabled",
           "value": "stuffed_cantaloupe"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "cantaloupe"
         }
       ],
       "recipe": {

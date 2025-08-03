@@ -3,6 +3,10 @@
     {
       "type": "forge:mod_loaded",
       "modid": "immersiveengineering"
+    },
+    {
+      "type": "delightful:enabled",
+      "value": "cantaloupe"
     }
   ],
   "type": "immersiveengineering:cloche",
