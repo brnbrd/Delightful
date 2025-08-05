@@ -1,0 +1,39 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "brewinandchewin"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "hearthandharvest:unripe_cheddar_cheese_wheel"
+        }
+      ],
+      "recipe": {
+        "type": "brewinandchewin:fermenting",
+        "category": "meals",
+        "experience": 1.0,
+        "fermentingtime": 9600,
+        "ingredients": [
+          {
+            "item": "farmersdelight:milk_bottle"
+          },
+          {
+            "item": "farmersdelight:milk_bottle"
+          },
+          {
+            "tag": "forge:salt"
+          }
+        ],
+        "result": {
+          "count": 1,
+          "item": "hearthandharvest:unripe_cheddar_cheese_wheel"
+        },
+        "temperature": 5
+      }
+    }
+  ]
+}
