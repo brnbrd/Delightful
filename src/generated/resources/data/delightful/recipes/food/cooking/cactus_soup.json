@@ -24,13 +24,13 @@
             "item": "delightful:cactus_flesh"
           },
           {
+            "tag": "forge:grain/rice"
+          },
+          {
             "tag": "forge:vegetables/tomato"
           },
           {
-            "tag": "forge:hot_spice"
-          },
-          {
-            "tag": "forge:grain/rice"
+            "tag": "forge:vegetables/onion"
           }
         ],
         "recipe_book_tab": "meals",

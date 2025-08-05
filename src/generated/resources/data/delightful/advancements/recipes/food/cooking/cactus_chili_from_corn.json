@@ -18,7 +18,7 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:food/cooking/cactus_chili"
+              "recipe": "delightful:food/cooking/cactus_chili_from_corn"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
@@ -31,7 +31,7 @@
         ],
         "rewards": {
           "recipes": [
-            "delightful:food/cooking/cactus_chili"
+            "delightful:food/cooking/cactus_chili_from_corn"
           ]
         },
         "sends_telemetry_event": true
@@ -46,8 +46,11 @@
           "value": "cactus_flesh"
         },
         {
-          "type": "forge:tag_empty",
-          "tag": "forge:vegetables/corn"
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:vegetables/corn"
+          }
         }
       ]
     }

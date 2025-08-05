@@ -1,4 +1,4 @@
-// 1.20.1	2025-08-05T09:10:10.9204972	Recipes
+// 1.20.1	2025-08-05T09:41:28.565999	Recipes
 6c217dd6477efa10f6042809ba959d53036ab5e2 data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 5b82f87851220644287d771121677deac66b3b89 data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
 cf29033c1c919355c261025df529938e6ebc73f8 data/delightful/advancements/recipes/campfire/cactus_steak.json
@@ -20,7 +20,8 @@ e58765a2d5aadea5b53e812f896c4b1fa44b2624 data/delightful/advancements/recipes/fo
 e0ae08f0af73fa8de2118dfc4f30f622301f4d6e data/delightful/advancements/recipes/food/cheeseburger_from_bun.json
 8a6d47c5c3748f81a9ebb66b5e5c56f227314971 data/delightful/advancements/recipes/food/cheeseburger_from_milk.json
 bfc0d77bcc4eecd1200965aff77bc74e065d1cbe data/delightful/advancements/recipes/food/clover_honey.json
-e51c38ec5883ee73b1cb560ca42a185d377e540c data/delightful/advancements/recipes/food/cooking/cactus_chili.json
+10759e72d9d41ad013e17003e532d676c42e6875 data/delightful/advancements/recipes/food/cooking/cactus_chili.json
+7040fc6a7aeb3a480a125ac0cd1b0fab95109af9 data/delightful/advancements/recipes/food/cooking/cactus_chili_from_corn.json
 37e4151af68684633f28890fc9f790ca3f1e227a data/delightful/advancements/recipes/food/cooking/cactus_soup.json
 9b4fc327bff031551336ad56553bfa158395f445 data/delightful/advancements/recipes/food/cooking/coconut_curry.json
 cf9ff57919e70462a9f5a1edec659fa1f7025750 data/delightful/advancements/recipes/food/cooking/coconut_curry_no_ginger.json
@@ -180,8 +181,9 @@ af3129356f249ced73739accf5141965142dfce8 data/delightful/recipes/food/cheeseburg
 0f541c24483fd710f63f7b44865fb72683164c68 data/delightful/recipes/food/cheeseburger_from_bun.json
 3806a9c427efa067ed6426c92591234d9291b514 data/delightful/recipes/food/cheeseburger_from_milk.json
 1fc12510ae08945e7bc7e650bcfedc9512e5025d data/delightful/recipes/food/clover_honey.json
-f8660930570b15a8aae293ed0a3dd9212cbf0811 data/delightful/recipes/food/cooking/cactus_chili.json
-9e13e7d4964d1d98f1fc9766999265cc544ec745 data/delightful/recipes/food/cooking/cactus_soup.json
+4a37d69ddc570f7e233e5a4679f3ee73e55ad24e data/delightful/recipes/food/cooking/cactus_chili.json
+f56ca1c6f2d2d4e70e048d42064275e9bf5ebb73 data/delightful/recipes/food/cooking/cactus_chili_from_corn.json
+37dc33f159df78ac1d83924843df39014c06bf11 data/delightful/recipes/food/cooking/cactus_soup.json
 daba62a3504783d89d6fe972f0ad14307775220c data/delightful/recipes/food/cooking/coconut_curry.json
 866ab4e55b3a47b487f7e4662d96b3aec17c385e data/delightful/recipes/food/cooking/coconut_curry_no_ginger.json
 af00d59b26c468a67d1535055243622d61743edc data/delightful/recipes/food/cooking/crab_rangoon.json

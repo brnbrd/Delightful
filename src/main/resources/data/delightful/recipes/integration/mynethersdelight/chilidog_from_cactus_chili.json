@@ -1,0 +1,35 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "mynethersdelight:chilidog"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "mynethersdelight:hotdog"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "delightful:cactus_chili"
+          },
+          {
+            "item": "mynethersdelight:hotdog"
+          },
+          {
+            "item": "mynethersdelight:hotdog"
+          }
+        ],
+        "result": {
+          "count": 2,
+          "item": "mynethersdelight:chilidog"
+        }
+      }
+    }
+  ]
+}

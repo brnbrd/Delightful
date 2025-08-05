@@ -1,0 +1,42 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "farmersrespite:blazing_chili"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "cookingtime": 200,
+        "experience": 0.35,
+        "ingredients": [
+          {
+            "tag": "forge:raw_beef"
+          },
+          {
+            "item": "farmersrespite:coffee_beans"
+          },
+          {
+            "tag": "forge:hot_spice"
+          },
+          {
+            "tag": "forge:hot_spice"
+          },
+          {
+            "item": "minecraft:nether_wart"
+          },
+          {
+            "item": "minecraft:nether_wart"
+          }
+        ],
+        "recipe_book_tab": "meals",
+        "result": {
+          "item": "farmersrespite:blazing_chili"
+        }
+      }
+    }
+  ]
+}

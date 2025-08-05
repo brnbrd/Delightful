@@ -10,11 +10,12 @@
 - Nut Butter Bottle now requires 1 Kelp
 - Nut Butter Bottle now requires 1 `#forge:salt` if the tag is not empty
 - Field Salad can be crafted from any `#forge:cooked_nuts` instead of only Roasted Acorn
-- Recipes for cutting `#forge:cacti` into Cactus Flesh will now also have a chance to provide Green Dye
+- Recipes for cutting `#forge:cacti` into Cactus Chunk will now also have a chance to provide Green Dye
 - Cantaloupe Gummy now provides Resistance III for 0:15
 
 ### Fixes
 - Features will now not generate in the world if their respective item is disabled (closes [#118](https://github.com/brnbrd/Delightful/issues/118))
+- Cactus Chili and Cactus Soup recipes are no longer swapped (closes [#131](https://github.com/brnbrd/Delightful/issues/131))
 
 
 # 3.7.4
