@@ -1,6 +1,10 @@
 {
   "values": [
     {
+      "id": "hearthandharvest:raspberry",
+      "required": false
+    },
+    {
       "id": "wildberries:raspberry",
       "required": false
     }

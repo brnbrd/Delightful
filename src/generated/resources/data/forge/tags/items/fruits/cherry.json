@@ -1,6 +1,10 @@
 {
   "values": [
     {
+      "id": "hearthandharvest:cherry",
+      "required": false
+    },
+    {
       "id": "forbidden_arcanus:cherry_peach",
       "required": false
     }

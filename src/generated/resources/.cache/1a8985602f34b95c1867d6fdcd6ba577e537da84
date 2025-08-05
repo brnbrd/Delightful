@@ -1,4 +1,4 @@
-// 1.20.1	2025-08-02T17:48:30.2410317	delightful
+// 1.20.1	2025-08-05T09:10:10.918394	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -34,7 +34,6 @@ c635f7a0507d48b606bd3d26bfe43ade5cfe05ee data/delightful/tags/items/fire_knives.
 6c2f8fbf4dd74017f049b2ef88a10e285aae2c0c data/delightful/tags/items/raw_venison_compat.json
 07d72463f24c491eee78f8f830934ecfe70da89b data/delightful/tags/items/rosey.json
 8a40f7dd6d54c3af598722c99d0c864729ea8dd8 data/delightful/tags/items/rotten.json
-c0cf341570512d0061c8b1d58e603b18fa4678bd data/ecologics/tags/items/cooked_prickly_pear.json
 24a3a46496486a8baeb7bd4c1e81c51f14776a15 data/farmersdelight/tags/items/barks.json
 f2edde09d8cbec9661b025fd8d29aa93cb711371 data/farmersdelight/tags/items/cabbage_roll_ingredients.json
 64a54c43e2fc2293d7ba623845ea037bf7b593b8 data/farmersdelight/tags/items/cabinets.json
@@ -170,7 +169,7 @@ fecd0addad0c8d2c1b829d5350c240452b0e3807 data/forge/tags/items/pumpkins.json
 18e01eda65d3e6c12efb395ba42802b672fd8fdd data/forge/tags/items/raw_crab.json
 e4bfec188fb63173110be9c4748fef5945689603 data/forge/tags/items/raw_crab_meat.json
 65540c326746380f0b29818f3507d94d7902ab98 data/forge/tags/items/raw_duck.json
-bb236522f522944eb76d1bbb77565bcffcf784d5 data/forge/tags/items/raw_fishes.json
+48d8b0b644602d16af1ab53dd4bb6f3013c5ffcc data/forge/tags/items/raw_fishes.json
 7a3289909b879db8b0b7b764c7a4735a44546b3c data/forge/tags/items/raw_fishes/koi.json
 78fa002cb40688a9cc4c76ad69a916fe313aab70 data/forge/tags/items/raw_fishes/squid.json
 55dbce77fc249043b9a18cb523af6f0054890d73 data/forge/tags/items/raw_fishes/squid/tentacles.json
@@ -204,7 +203,7 @@ d4b722b6539284574216b56beb80d04c489be469 data/forge/tags/items/vegetables/onion.
 f69cba6ba3aa1776744116504c58f6461bf74154 data/forge/tags/items/vegetables/potato.json
 18af89743c17cd57873b2fc2736e7ed7730b2354 data/forge/tags/items/vegetables/spicy.json
 c2db5d26691738fe688f5a1084802d99f51f14d8 data/forge/tags/items/vegetables/tomato.json
-9fc259cb303408eb7295d7e2847bcb0261103145 data/forge/tags/items/water.json
+fca3cce73994daa672a8dc1d4e816a0e32d534b3 data/forge/tags/items/water.json
 3e65a1f943cae7927da2f45388efe248474e5397 data/forge/tags/items/wrenches.json
 e7a49e3763378f3280936775b47b91ea4a9b1c5f data/lolenderite/tags/items/enderite_upgrade_smithing_template.json
 2207c783edec132da40cf51fc673387de559ecdb data/lost_aether_content/tags/items/phoenix_tools.json
@@ -221,7 +220,6 @@ f3d389bd6892248142900ae5f52fe8a51dae2311 data/minecraft/tags/items/walls.json
 a95df2279e05baa5f0608937c6c66f68c44ebf2d data/nethersdelight/tags/items/meal_item.json
 39eb11aaa538dbe439118c3d75817b4407cf07a0 data/nethers_exoticism/tags/items/kiwano_peel.json
 03f129936289d77fd6e02c93156c4b31152fbbf8 data/nourished_nether/tags/items/necronium_tools.json
-574444815450e2b51c646e6dabeb27c090152713 data/origins/tags/items/meat.json
 bd03c94c3be4df3a7a6a198d6d729fad9fb4311f data/phantasm/tags/items/crystal_spike_tips.json
 61d64c77058e1625c2e3b99ed4a928eea28f624e data/phantasm/tags/items/gets_xp_speed_boost.json
 a8f06d7dc1646ce181a8dc82c1d2a179064212a9 data/phantasm/tags/items/void_crystal_block.json

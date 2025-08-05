@@ -56,12 +56,17 @@ public class JEIPlugin implements IModPlugin {
 		this.hide(hidden, Modid.TH, "carrot_block");
 		this.hide(hidden, Modid.TH, "potato_block");
 
-		// Neapolitan conflicts
+		// Abnormals conflicts
 		this.hide(hidden, Modid.HH, "chocolate_bar", Modid.N);
+		this.hide(hidden, Modid.HH, "egg_crate", Modid.IN);
+		this.hide(hidden, Modid.HH, "turtle_egg_crate", Modid.IN);
+		this.hide(hidden, Modid.HH, "sweet_berry_crate", Modid.BG);
+		this.hide(hidden, Modid.HH, "glow_berry_crate", Modid.BG);
 
 		// Other
 		this.hide(hidden, Modid.HH, "salt", Modid.S);
 		this.hide(hidden, Modid.HH, "salt_bag", Modid.S);
+		this.hide(hidden, Modid.HH, "sugar_bag", Modid.SUP);
 		this.hide(hidden, Modid.HH, "mashed_potatoes", Modid.COS);
 		this.hide(hidden, Modid.TH, "syrup_bottle", Modid.AUT);
 		this.hide(hidden, Modid.AE2, "ender_dust", Modid.TH);

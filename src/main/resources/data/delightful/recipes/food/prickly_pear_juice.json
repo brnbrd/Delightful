@@ -8,30 +8,27 @@
           "value": "prickly_pear_juice"
         },
         {
-          "type": "forge:not",
-          "value": {
-            "type": "forge:tag_empty",
-            "tag": "ecologics:cooked_prickly_pear"
-          }
+          "type": "forge:item_exists",
+          "item": "ecologics:cooked_prickly_pear"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shapeless",
         "ingredients": [
           {
-            "tag": "ecologics:cooked_prickly_pear"
+            "item": "ecologics:cooked_prickly_pear"
           },
           {
-            "tag": "ecologics:cooked_prickly_pear"
+            "item": "ecologics:cooked_prickly_pear"
           },
           {
             "item": "minecraft:sugar"
           },
           {
-            "tag": "ecologics:cooked_prickly_pear"
+            "item": "ecologics:cooked_prickly_pear"
           },
           {
-            "tag": "ecologics:cooked_prickly_pear"
+            "item": "ecologics:cooked_prickly_pear"
           },
           {
             "item": "minecraft:glass_bottle"

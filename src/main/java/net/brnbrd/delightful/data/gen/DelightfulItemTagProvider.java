@@ -186,6 +186,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.AT.rl(AtmosphericCompat.yucca))
 			.addOptional(Modid.BWG.rl(BWGCompat.yucca));
 		this.tag(DelightfulItemTags.FRUITS_BLUEBERRIES)
+			.addOptional(Modid.HH.rl("blueberries"))
 			.addOptional(Modid.BWG.rl("blueberries"))
 			.addOptional(Modid.WB.rl("blueberries"))
 			.addOptional(Modid.NF.rl("blueberries"));
@@ -200,7 +201,9 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.FRUITS_SOURCEBERRY).addOptional(Modid.AN.rl("sourceberry_bush"));
 		this.tag(DelightfulItemTags.FRUITS_ELDERBERRY).addOptional(Modid.RC.rl("elderberry"));
 		this.tag(DelightfulItemTags.FRUITS_GEARO_BERRY).addOptional(Modid.VD.rl("gearo_berry"));
-		this.tag(DelightfulItemTags.FRUITS_RASPBERRIES).addOptional(Modid.WB.rl("raspberry"));
+		this.tag(DelightfulItemTags.FRUITS_RASPBERRIES)
+			.addOptional(Modid.HH.rl("raspberry"))
+			.addOptional(Modid.WB.rl("raspberry"));
 		this.tag(DelightfulItemTags.FRUITS_BLACKBERRIES).addOptional(Modid.WB.rl("blackberry"));
 		this.tag(DelightfulItemTags.FRUITS_CRANBERRIES).addOptional(Modid.WB.rl("cranberries"));
 		this.tag(DelightfulItemTags.FRUITS_WILD_BERRIES).addOptional(Modid.WS.rl("wild_berries"));
@@ -208,7 +211,9 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 				.addOptional(Modid.N.rl("strawberries"))
 				.addOptional(Modid.N.rl("white_strawberries"));
 		this.tag(DelightfulItemTags.FRUITS_BANANA).addOptional(Modid.N.rl("banana"));
-		this.tag(DelightfulItemTags.FRUITS_CHERRY).addOptional(Modid.FA.rl("cherry_peach"));
+		this.tag(DelightfulItemTags.FRUITS_CHERRY)
+			.addOptional(Modid.HH.rl("cherry"))
+			.addOptional(Modid.FA.rl("cherry_peach"));
 		this.tag(DelightfulItemTags.FRUITS_PLUM).addOptional(Modid.ENV.rl("plum"));
 		this.tag(DelightfulItemTags.FRUITS_BLOOD_ORANGE).addOptional(Modid.AT.rl("blood_orange"));
 		this.tag(DelightfulItemTags.FRUITS_DRAGON_FRUIT).addOptionalTag(Modid.LOADER.rl("fruits/pitaya"));
@@ -337,9 +342,14 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.JUICES)
 			.addTag(DelightfulItemTags.JUICES_MELON)
 			.addTag(DelightfulItemTags.JUICES_PRICKLY_PEAR)
+			.addOptional(Modid.HH.rl("blueberry_juice"))
+			.addOptional(Modid.HH.rl("cherry_juice"))
+			.addOptional(Modid.HH.rl("raspberry_juice"))
+			.addOptional(Modid.HH.rl("red_grape_juice"))
+			.addOptional(Modid.HH.rl("green_grape_juice"))
 			.addOptional(Modid.AD.rl("pickerelweed_juice"));
 		this.tag(DelightfulItemTags.WATER)
-			.add(Items.WATER_BUCKET)
+			.addTag(ForgeTags.BUCKETS_WATER)
 			.addOptional(Modid.MD.rl("water_cup"));
 		this.tag(DelightfulItemTags.FLOWERS_AZALEA)
 			.addOptional(Modid.ECO.rl("azalea_flower"))
@@ -460,6 +470,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Util.rl("alexscaves", "pine_nuts"));
 		this.tag(DelightfulItemTags.COOKED_NUTS)
 			.add(DelightfulItems.ROASTED_ACORN.get())
+			.addOptional(Modid.HH.rl("roasted_peanuts"))
 			.addOptional(Modid.VD.rl("roasted_peanut"));
 		this.tag(DelightfulItemTags.INGOTS_STEEL).addOptional(Util.rl("simplysteel", "steel_ingot"));
 		this.tag(DelightfulItemTags.JAMS_GLOW)
@@ -550,6 +561,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.RAW_FISHES_KOI)
 			.addTag(DelightfulItemTags.RAW_FISHES_TUNA)
 			.addTag(DelightfulItemTags.RAW_FISHES_SQUID)
+			.addOptionalTag(Modid.SF.rl("starts_minigame"))
 			.addOptional(Modid.UG.rl("raw_gwibling"))
 			.addOptional(Util.rl("biomemakeover", "glowfish"))
 			.addOptional(Modid.DA.rl("raw_aerglow_fish"))
@@ -783,12 +795,6 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.add(DelightfulItems.CRAB_RANGOON.get())
 			.add(DelightfulItems.CHUNKWICH.get())
 			.add(DelightfulItems.STUFFED_CANTALOUPE.get());
-
-		// Origins
-		this.tag(Util.it("origins", "meat")).addTag(ForgeTags.COOKED_EGGS);
-
-		// Ecologics
-		this.addSelf(Modid.ECO.it("cooked_prickly_pear"));
 
 		// Supplementaries
 		this.tag(Modid.SUP.it("cookies"))

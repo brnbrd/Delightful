@@ -1,6 +1,6 @@
 {
   "values": [
-    "minecraft:water_bucket",
+    "#forge:buckets/water",
     {
       "id": "miners_delight:water_cup",
       "required": false

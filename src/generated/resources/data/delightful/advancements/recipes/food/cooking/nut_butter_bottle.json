@@ -47,6 +47,10 @@
           }
         },
         {
+          "type": "forge:tag_empty",
+          "tag": "forge:salt"
+        },
+        {
           "type": "forge:not",
           "value": {
             "type": "forge:mod_loaded",

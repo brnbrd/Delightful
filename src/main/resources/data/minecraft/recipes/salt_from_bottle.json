@@ -1,0 +1,38 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "hearthandharvest:salt"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:mod_loaded",
+            "modid": "salt"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "cookingtime": 100,
+        "experience": 0.35,
+        "ingredients": [
+          {
+            "count": 1,
+            "type": "forge:nbt",
+            "item": "minecraft:potion",
+            "nbt": "{Potion:\"minecraft:water\"}"
+          }
+        ],
+        "recipe_book_tab": "misc",
+        "result": {
+          "count": 2,
+          "item": "hearthandharvest:salt"
+        }
+      }
+    }
+  ]
+}

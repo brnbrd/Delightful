@@ -170,6 +170,18 @@
       "required": false
     },
     {
+      "id": "naturalist:snake",
+      "required": false
+    },
+    {
+      "id": "naturalist:rattlesnake",
+      "required": false
+    },
+    {
+      "id": "naturalist:coral_snake",
+      "required": false
+    },
+    {
       "id": "naturalist:tortoise",
       "required": false
     },

@@ -94,6 +94,7 @@ public enum Modid {
 	SAS("some_assembly_required"),
 	SE("seeds"),
 	SEAS("seasonals"),
+	SF("stardew_fishing"),
 	SM("sullysmod"),
 	SO("simpleores"),
 	SP("spirit"),

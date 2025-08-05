@@ -3,6 +3,26 @@
     "#forge:juices/melon",
     "#forge:juices/prickly_pear",
     {
+      "id": "hearthandharvest:blueberry_juice",
+      "required": false
+    },
+    {
+      "id": "hearthandharvest:cherry_juice",
+      "required": false
+    },
+    {
+      "id": "hearthandharvest:raspberry_juice",
+      "required": false
+    },
+    {
+      "id": "hearthandharvest:red_grape_juice",
+      "required": false
+    },
+    {
+      "id": "hearthandharvest:green_grape_juice",
+      "required": false
+    },
+    {
       "id": "abnormals_delight:pickerelweed_juice",
       "required": false
     }

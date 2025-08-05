@@ -1,0 +1,36 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "hearthandharvest:unripe_cheddar_cheese_wheel"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "cookingtime": 400,
+        "experience": 2.0,
+        "ingredients": [
+          {
+            "item": "farmersdelight:milk_bottle"
+          },
+          {
+            "item": "farmersdelight:milk_bottle"
+          },
+          {
+            "tag": "forge:salt"
+          },
+          {
+            "tag": "forge:salt"
+          }
+        ],
+        "recipe_book_tab": "meals",
+        "result": {
+          "item": "hearthandharvest:unripe_cheddar_cheese_wheel"
+        }
+      }
+    }
+  ]
+}

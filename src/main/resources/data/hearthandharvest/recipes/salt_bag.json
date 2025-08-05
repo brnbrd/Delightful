@@ -1,0 +1,42 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "hearthandharvest:salt"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "hearthandharvest:salt_bag"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:mod_loaded",
+            "modid": "salt"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "hearthandharvest:salt"
+          }
+        },
+        "pattern": [
+          "###",
+          "###",
+          "###"
+        ],
+        "result": {
+          "item": "hearthandharvest:salt_bag"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

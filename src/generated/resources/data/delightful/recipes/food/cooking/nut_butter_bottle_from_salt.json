@@ -1,0 +1,65 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "nut_butter_bottle"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:nuts"
+          }
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:salt"
+          }
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:mod_loaded",
+            "modid": "vintagedelight"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:glass_bottle"
+        },
+        "cookingtime": 200,
+        "experience": 0.35,
+        "ingredients": [
+          {
+            "tag": "forge:nuts"
+          },
+          {
+            "tag": "forge:nuts"
+          },
+          {
+            "tag": "forge:nuts"
+          },
+          {
+            "item": "minecraft:kelp"
+          },
+          {
+            "tag": "forge:salt"
+          },
+          {
+            "item": "minecraft:sugar"
+          }
+        ],
+        "result": {
+          "item": "delightful:nut_butter_bottle"
+        }
+      }
+    }
+  ]
+}

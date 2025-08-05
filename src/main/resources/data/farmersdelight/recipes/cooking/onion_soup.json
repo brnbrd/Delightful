@@ -1,0 +1,36 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "hearthandharvest:onion_soup"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:bowl"
+        },
+        "cookingtime": 200,
+        "experience": 1.0,
+        "ingredients": [
+          {
+            "tag": "forge:cheese"
+          },
+          {
+            "tag": "forge:milk"
+          },
+          {
+            "tag": "forge:vegetables/onion"
+          }
+        ],
+        "recipe_book_tab": "meals",
+        "result": {
+          "item": "hearthandharvest:onion_soup"
+        }
+      }
+    }
+  ]
+}

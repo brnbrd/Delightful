@@ -10,22 +10,65 @@
         {
           "type": "supplementaries:flag",
           "flag": "pancake"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:item_exists",
+            "item": "hearthandharvest:batter"
+          }
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shapeless",
         "ingredients": [
           {
-            "item": "minecraft:sugar"
+            "tag": "forge:dough"
           },
           {
             "tag": "forge:milk"
           },
           {
-            "tag": "forge:dough"
+            "tag": "forge:eggs"
+          },
+          {
+            "item": "minecraft:sugar"
+          }
+        ],
+        "result": {
+          "item": "supplementaries:pancake",
+          "count": 3
+        }
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "supplementaries:pancake"
+        },
+        {
+          "type": "supplementaries:flag",
+          "flag": "pancake"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "hearthandharvest:batter"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "cookingtime": 200,
+        "experience": 1.0,
+        "ingredients": [
+          {
+            "item": "hearthandharvest:batter"
           },
           {
             "tag": "forge:eggs"
+          },
+          {
+            "item": "minecraft:sugar"
           }
         ],
         "result": {

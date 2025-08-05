@@ -4,6 +4,10 @@
     "#forge:raw_fishes/tuna",
     "#forge:raw_fishes/squid",
     {
+      "id": "#stardew_fishing:starts_minigame",
+      "required": false
+    },
+    {
       "id": "undergarden:raw_gwibling",
       "required": false
     },

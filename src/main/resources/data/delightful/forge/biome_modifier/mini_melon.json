@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
-  "biomes": "#delightful:mini_melon_spawns",
-  "features": "delightful:patch_mini_melons",
+  "biomes": "#delightful:has_spawn/mini_melon",
+  "features": "delightful:patch_mini_melon",
   "step": "vegetal_decoration"
 }

@@ -1,0 +1,38 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "hearthandharvest:egg_crate"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:mod_loaded",
+            "modid": "incubation"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "minecraft:egg"
+          }
+        },
+        "pattern": [
+          "###",
+          "###",
+          "###"
+        ],
+        "result": {
+          "item": "hearthandharvest:egg_crate"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

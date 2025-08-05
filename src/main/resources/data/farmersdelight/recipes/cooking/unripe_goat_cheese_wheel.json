@@ -1,0 +1,40 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "hearthandharvest:unripe_goat_cheese_wheel"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "hearthandharvest:goat_milk_bottle"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "cookingtime": 400,
+        "experience": 2.0,
+        "ingredients": [
+          {
+            "item": "hearthandharvest:goat_milk_bottle"
+          },
+          {
+            "item": "hearthandharvest:goat_milk_bottle"
+          },
+          {
+            "tag": "forge:salt"
+          },
+          {
+            "tag": "forge:salt"
+          }
+        ],
+        "recipe_book_tab": "meals",
+        "result": {
+          "item": "hearthandharvest:unripe_goat_cheese_wheel"
+        }
+      }
+    }
+  ]
+}

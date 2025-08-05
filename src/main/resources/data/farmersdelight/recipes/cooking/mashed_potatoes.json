@@ -1,0 +1,49 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "hearthandharvest:mashed_potatoes"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:item_exists",
+            "item": "cosmopolitan:mashed_potato"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:bowl"
+        },
+        "cookingtime": 200,
+        "experience": 1.0,
+        "ingredients": [
+          {
+            "tag": "forge:vegetables/potato"
+          },
+          {
+            "tag": "forge:vegetables/potato"
+          },
+          {
+            "tag": "forge:milk"
+          },
+          {
+            "tag": "forge:salt"
+          },
+          {
+            "tag": "forge:salt"
+          }
+        ],
+        "recipe_book_tab": "meals",
+        "result": {
+          "item": "hearthandharvest:mashed_potatoes"
+        }
+      }
+    }
+  ]
+}

@@ -1,6 +1,10 @@
 {
   "values": [
     {
+      "id": "hearthandharvest:blueberries",
+      "required": false
+    },
+    {
       "id": "biomeswevegone:blueberries",
       "required": false
     },
