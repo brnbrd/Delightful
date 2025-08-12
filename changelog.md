@@ -22,6 +22,9 @@
 - Features will now not generate in the world if their respective item is disabled (closes [#118](https://github.com/brnbrd/Delightful/issues/118))
 - Cactus Chili and Cactus Soup recipes are no longer swapped (closes [#131](https://github.com/brnbrd/Delightful/issues/131))
 
+### Coaster models for [Brewin' and Chewin'](https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin)
+- Fixed Bouddha's Hand model clipping with Coaster
+
 
 # 3.7.4
 
@@ -33,7 +36,7 @@
 ### Fixes
 - Removed conflicting nut Milk cooking recipes
 
-### Coaster models for [Brewin' and Chewin'](https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin):
+### Coaster models for [Brewin' and Chewin'](https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin)
 - Added some models for [Quark](https://www.curseforge.com/minecraft/mc-mods/quark)
 - Added some models for [Oh The Biomes We've Gone](https://www.curseforge.com/minecraft/mc-mods/oh-the-biomes-weve-gone)
 - Added some models for [Peculiars](https://www.curseforge.com/minecraft/mc-mods/peculiars)
@@ -58,7 +61,7 @@
 - Source Berry Ice Cream and Milkshake will be disabled in presence of [Cosmopolitan](https://www.curseforge.com/minecraft/mc-mods/cosmopolitan)
 - Sliced Gloomgourds can once again provide Gloomgourd Slices from [Undergarden Delight](https://www.curseforge.com/minecraft/mc-mods/undergarden-delight)
 
-### Coaster models for [Brewin' and Chewin'](https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin):
+### Coaster models for [Brewin' and Chewin'](https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin)
 - Added some models for [Farmer's Respite](https://www.curseforge.com/minecraft/mc-mods/farmers-respite)
 - Added some models for [Neapolitan](https://www.curseforge.com/minecraft/mc-mods/neapolitan)
 - Added some models for [Atmospheric](https://www.curseforge.com/minecraft/mc-mods/atmospheric)
