@@ -149,12 +149,12 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 				.unlockedBy("has_marshmallow", has(DelightfulItemTags.MARSHMALLOW)),
 			"food/marshmallow_stick_from_marshmallow", finished, enabled(DelightfulItems.MARSHMALLOW_STICK), not(tagEmpty(DelightfulItemTags.MARSHMALLOW)), not(modLoaded(Modid.HH.get())));
 		wrap(SimpleCookingRecipeBuilder.campfireCooking(
-				Ingredient.of(DelightfulItemTags.MARSHMALLOW_STICK),
+				Ingredient.of(DelightfulItems.MARSHMALLOW_STICK.get()),
 				RecipeCategory.FOOD,
 				DelightfulItems.COOKED_MARSHMALLOW_STICK.get(),
 				0.5F,
 				600
-			).unlockedBy("has_marshmallow_stick", has(DelightfulItemTags.MARSHMALLOW_STICK)),
+			).unlockedBy("has_marshmallow_stick", has(DelightfulItems.MARSHMALLOW_STICK.get())),
 			"campfire/marshmallow_stick", finished,
 			enabled(DelightfulItems.COOKED_MARSHMALLOW_STICK), not(modLoaded(Modid.HH.get())));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.SMORE.get())
@@ -418,32 +418,32 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
 				DelightfulItems.CACTUS_CHILI.get(), 1, CookingRecipes.NORMAL_COOKING, 1F, Items.BOWL)
 			.addIngredient(ForgeTags.RAW_PORK)
-			.addIngredient(DelightfulItems.CACTUS_FLESH.get())
+			.addIngredient(DelightfulItemTags.VEGETABLES_CACTUS)
 			.addIngredient(ModItems.TOMATO_SAUCE.get())
 			.addIngredient(DelightfulItemTags.HOT_SPICE)
 			.addIngredient(DelightfulItemTags.VEGETABLES_CORN)
-			.unlockedBy("has_cactus_chunk", has(DelightfulItems.CACTUS_FLESH.get()))
+			.unlockedBy("has_cactus", has(DelightfulItemTags.VEGETABLES_CACTUS))
 			.setRecipeBookTab(CookingPotRecipeBookTab.MEALS),
-			"food/cooking/cactus_chili_from_corn", finished, enabled(DelightfulItems.CACTUS_CHILI), enabled(DelightfulItems.CACTUS_FLESH), not(tagEmpty(DelightfulItemTags.VEGETABLES_CORN)));
+			"food/cooking/cactus_chili_from_corn", finished, enabled(DelightfulItems.CACTUS_CHILI), not(tagEmpty(DelightfulItemTags.VEGETABLES_CORN)));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
 				DelightfulItems.CACTUS_CHILI.get(), 1, CookingRecipes.NORMAL_COOKING, 1F, Items.BOWL)
 			.addIngredient(ForgeTags.RAW_PORK)
-			.addIngredient(DelightfulItems.CACTUS_FLESH.get())
+			.addIngredient(DelightfulItemTags.VEGETABLES_CACTUS)
 			.addIngredient(ModItems.TOMATO_SAUCE.get())
 			.addIngredient(DelightfulItemTags.HOT_SPICE)
 			.addIngredient(ForgeTags.VEGETABLES)
-			.unlockedBy("has_cactus_chunk", has(DelightfulItems.CACTUS_FLESH.get()))
+			.unlockedBy("has_cactus", has(DelightfulItemTags.VEGETABLES_CACTUS))
 			.setRecipeBookTab(CookingPotRecipeBookTab.MEALS),
-			"food/cooking/cactus_chili", finished, enabled(DelightfulItems.CACTUS_CHILI), enabled(DelightfulItems.CACTUS_FLESH), tagEmpty(DelightfulItemTags.VEGETABLES_CORN));
+			"food/cooking/cactus_chili", finished, enabled(DelightfulItems.CACTUS_CHILI), tagEmpty(DelightfulItemTags.VEGETABLES_CORN));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
 				DelightfulItems.CACTUS_SOUP.get(), 1, CookingRecipes.NORMAL_COOKING, 1F, Items.BOWL)
-			.addIngredient(DelightfulItems.CACTUS_FLESH.get())
+			.addIngredient(DelightfulItemTags.VEGETABLES_CACTUS)
 			.addIngredient(ForgeTags.GRAIN_RICE)
 			.addIngredient(ForgeTags.VEGETABLES_TOMATO)
 			.addIngredient(ForgeTags.VEGETABLES_ONION)
-			.unlockedBy("has_cactus_chunk", has(DelightfulItems.CACTUS_FLESH.get()))
+			.unlockedBy("has_cactus_chunk", has(DelightfulItemTags.VEGETABLES_CACTUS))
 			.setRecipeBookTab(CookingPotRecipeBookTab.MEALS),
-			"food/cooking/cactus_soup", finished, enabled(DelightfulItems.CACTUS_SOUP), enabled(DelightfulItems.CACTUS_FLESH));
+			"food/cooking/cactus_soup", finished, enabled(DelightfulItems.CACTUS_SOUP));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
 								DelightfulItems.VENISON_STEW.get(), 1, CookingRecipes.NORMAL_COOKING, 1F, Items.BOWL)
 						.addIngredient(DelightfulItemTags.RAW_VENISON)

@@ -1,0 +1,14 @@
+{
+  "values": [
+    "#forge:juices/orange",
+    "#forge:juices/lemon",
+    {
+      "id": "#forge:juices/citrus_juice",
+      "required": false
+    },
+    {
+      "id": "#forge:juices/lime",
+      "required": false
+    }
+  ]
+}

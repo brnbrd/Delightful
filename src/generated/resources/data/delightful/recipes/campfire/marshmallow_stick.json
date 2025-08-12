@@ -21,7 +21,7 @@
         "cookingtime": 600,
         "experience": 0.5,
         "ingredient": {
-          "tag": "delightful:marshmallow_stick"
+          "item": "delightful:marshmallow_stick"
         },
         "result": "delightful:cooked_marshmallow_stick"
       }

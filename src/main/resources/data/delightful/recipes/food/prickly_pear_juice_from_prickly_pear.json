@@ -1,0 +1,53 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "prickly_pear_juice"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:fruits/prickly_pear"
+          }
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:item_exists",
+            "item": "ecologics:cooked_prickly_pear"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "tag": "forge:fruits/prickly_pear"
+          },
+          {
+            "tag": "forge:fruits/prickly_pear"
+          },
+          {
+            "item": "minecraft:sugar"
+          },
+          {
+            "tag": "forge:fruits/prickly_pear"
+          },
+          {
+            "tag": "forge:fruits/prickly_pear"
+          },
+          {
+            "item": "minecraft:glass_bottle"
+          }
+        ],
+        "result": {
+          "item": "delightful:prickly_pear_juice"
+        }
+      }
+    }
+  ]
+}

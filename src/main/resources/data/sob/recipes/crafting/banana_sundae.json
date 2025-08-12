@@ -1,0 +1,50 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "sob:banana_sundae"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "neapolitan"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "environmental"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "tag": "forge:fruits/banana"
+          },
+          {
+            "item": "neapolitan:vanilla_ice_cream"
+          },
+          {
+            "tag": "forge:chocolate"
+          },
+          {
+            "tag": "forge:cooked_nuts"
+          },
+          {
+            "tag": "forge:cooked_nuts"
+          },
+          {
+            "tag": "forge:fruits/cherry"
+          },
+          {
+            "item": "minecraft:bowl"
+          }
+        ],
+        "result": {
+          "item": "sob:banana_sundae"
+        }
+      }
+    }
+  ]
+}

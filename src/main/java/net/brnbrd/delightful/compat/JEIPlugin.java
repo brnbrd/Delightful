@@ -44,9 +44,10 @@ public class JEIPlugin implements IModPlugin {
 		List<FluidStack> hiddenFluids = new ArrayList<>();
 
 		// Delightful conflicts
-		this.hide(hidden, Modid.HH, "smore");
-		this.hide(hidden, Modid.HH, "peanut_butter_and_jelly_sandwich");
+		this.hide(hidden, Modid.SOB, "pbnj");
 		this.hide(hidden, Modid.VD, "pb_j");
+		this.hide(hidden, Modid.HH, "peanut_butter_and_jelly_sandwich");
+		this.hide(hidden, Modid.HH, "smore");
 		this.hide(hidden, Modid.UGD, "gloomgourd_pie_slice");
 
 		// FD conflicts
@@ -64,6 +65,7 @@ public class JEIPlugin implements IModPlugin {
 		this.hide(hidden, Modid.HH, "glow_berry_crate", Modid.BG);
 
 		// Other
+		this.hideAnd(hidden, Modid.CTD, "tequila", Modid.SOB, Modid.AT);
 		this.hide(hidden, Modid.HH, "salt", Modid.S);
 		this.hide(hidden, Modid.HH, "salt_bag", Modid.S);
 		this.hide(hidden, Modid.HH, "sugar_bag", Modid.SUP);
@@ -88,6 +90,9 @@ public class JEIPlugin implements IModPlugin {
 		}
 		if (!farmersRespiteLoaded || Util.tagEmpty(DelightfulItemTags.FLOWERS_AZALEA)) {
 			hiddenFluids.add(new FluidStack(DelightfulFluids.AZALEA_TEA.get(), 1000));
+		}
+		if (Util.tagEmpty(DelightfulItemTags.FRUITS_PRICKLY_PEAR)) {
+			hiddenFluids.add(new FluidStack(DelightfulFluids.PRICKLY_PEAR_JUICE.get(), 1000));
 		}
 
 		// Add Knife translations
@@ -182,6 +187,18 @@ public class JEIPlugin implements IModPlugin {
 		if (
 			modid.loaded() &&
 			Mods.loaded(Strategy.OR, conflicts)
+		) {
+			Item found = modid.item(name);
+			if (found != null) {
+				hiddenList.add(new ItemStack(found));
+			}
+		}
+	}
+
+	private void hideAnd(List<ItemStack> hiddenList, Modid modid, String name, Modid... conflicts) {
+		if (
+			modid.loaded() &&
+			Mods.loaded(Strategy.AND, conflicts)
 		) {
 			Item found = modid.item(name);
 			if (found != null) {

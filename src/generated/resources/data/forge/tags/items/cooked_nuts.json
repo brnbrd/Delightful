@@ -2,6 +2,10 @@
   "values": [
     "delightful:roasted_acorn",
     {
+      "id": "sob:roasted_peanuts",
+      "required": false
+    },
+    {
       "id": "hearthandharvest:roasted_peanuts",
       "required": false
     },

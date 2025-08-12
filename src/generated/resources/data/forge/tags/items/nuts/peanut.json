@@ -9,6 +9,10 @@
       "required": false
     },
     {
+      "id": "#forge:crops/peanut",
+      "required": false
+    },
+    {
       "id": "hearthandharvest:peanut",
       "required": false
     },

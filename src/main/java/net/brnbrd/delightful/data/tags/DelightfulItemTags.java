@@ -72,12 +72,16 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> FRUITS_SWEET = forge("fruits/sweet");
 	public static final TagKey<Item> FRUITS_SQUEEZABLE = forge("fruits/squeezable");
 
+	// Crops
+	public static final TagKey<Item> CROPS_CACTUS = forge("crops/cactus");
+
 	// Vegetables
+	public static final TagKey<Item> VEGETABLES_CACTUS = forge("vegetables/cactus");
+	public static final TagKey<Item> VEGETABLES_CACTUS_PADDLE = forge("vegetables/cactus_paddle");
 	public static final TagKey<Item> VEGETABLES_SPICY = forge("vegetables/spicy");
 	public static final TagKey<Item> VEGETABLES_CORN = forge("vegetables/corn");
 	public static final TagKey<Item> VEGETABLES_GINGER = forge("vegetables/ginger");
 	public static final TagKey<Item> VEGETABLES_CUCUMBER = forge("vegetables/cucumber");
-	public static final TagKey<Item> CUCUMBER = forge("cucumber");
 
 	// Forge
 	public static final TagKey<Item> TOOLS_WRENCH = forge("tools/wrench");
@@ -85,6 +89,9 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> JUICES = forge("juices");
 	public static final TagKey<Item> JUICES_MELON = forge("juices/melon");
 	public static final TagKey<Item> JUICES_PRICKLY_PEAR = forge("juices/prickly_pear");
+	public static final TagKey<Item> JUICES_CITRUS = forge("juices/citrus");
+	public static final TagKey<Item> JUICES_ORANGE = forge("juices/orange");
+	public static final TagKey<Item> JUICES_LEMON = forge("juices/lemon");
 	public static final TagKey<Item> WATER = forge("water");
 	public static final TagKey<Item> CHEESE = forge("cheese");
 	public static final TagKey<Item> CHOCOLATE = forge("chocolate");
@@ -165,6 +172,8 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> FEATHERS = forge("feathers");
 	public static final TagKey<Item> SNAIL_SHELLS = forge("snail_shells");
 	public static final TagKey<Item> MARSHMALLOW = forge("marshmallow");
+	public static final TagKey<Item> DRINKS = forge("drinks");
+	public static final TagKey<Item> DRINKS_TEQUILA = forge("drinks/tequila");
 
 	// Create
 	public static final TagKey<Item> POLISHED_ROSE_QUARTZ = Modid.C.it("polished_rose_quartz");

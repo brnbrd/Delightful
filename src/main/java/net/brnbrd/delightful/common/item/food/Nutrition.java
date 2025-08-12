@@ -1,10 +1,12 @@
 package net.brnbrd.delightful.common.item.food;
 
 import net.brnbrd.delightful.compat.CosmopolitanCompat;
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.compat.TeaCompat;
 import net.brnbrd.delightful.compat.abnormals.NeapolitanCompat;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.food.FoodProperties;
 import vectorwing.farmersdelight.common.registry.ModEffects;
 
@@ -22,14 +24,17 @@ public class Nutrition {
 		.fast()
 		.effect(() -> new MobEffectInstance(NeapolitanCompat.getSugarRush(), 200, 0), 1F).build();
 	public static final FoodProperties MARSHMALLOW_STICK = (new FoodProperties.Builder())
-		.nutrition(1).saturationMod(0.3F).build();
+		.nutrition(3).saturationMod(0.35F)
+		.effect(() -> new MobEffectInstance(NeapolitanCompat.getSugarRush(), 200, 0), 1F).build();
 	public static final FoodProperties COOKED_MARSHMALLOW_STICK = (new FoodProperties.Builder())
-		.nutrition(2).saturationMod(0.4F)
-		.effect(() -> new MobEffectInstance(NeapolitanCompat.getSugarRush(), 120, 0), 1F).build();
+		.nutrition(5).saturationMod(0.35F)
+		.effect(() -> new MobEffectInstance(NeapolitanCompat.getSugarRush(), 300, 0), 1F)
+		.effect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, 300, 0), 1F).build();
 	public static final FoodProperties SMORE = (new FoodProperties.Builder())
-		.nutrition(8).saturationMod(0.2F)
+		.nutrition(8).saturationMod(0.4F)
 		.effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 3600, 0), 1F)
-		.effect(() -> new MobEffectInstance(NeapolitanCompat.getSugarRush(), 600, 1), 1F).build();
+		.effect(() -> new MobEffectInstance(NeapolitanCompat.getSugarRush(), 600, 1), 1F)
+		.effect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 0), 1F).build();
 	public static final FoodProperties CRAB_RANGOON = (new FoodProperties.Builder())
 		.nutrition(9).saturationMod(0.4F).build();
 	public static final FoodProperties CHUNKWICH = (new FoodProperties.Builder())
@@ -44,7 +49,9 @@ public class Nutrition {
 		.nutrition(5).saturationMod(0.55F).build();
 	public static final FoodProperties NUT_BUTTER_AND_JAM_SANDWICH = (new FoodProperties.Builder())
 		.nutrition(11).saturationMod(0.65F)
-		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3600, 0), 1F).build();
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3600, 0), 1F)
+		.effect(() -> new MobEffectInstance(Modid.SOB.effect("toughness", MobEffects.DAMAGE_RESISTANCE), 1800, 0), 1F)
+		.build();
 	public static final FoodProperties HONEY_GLAZED_WALNUT = (new FoodProperties.Builder())
 		.nutrition(6).saturationMod(1F).build();
 	public static final FoodProperties ACORN = (new FoodProperties.Builder())

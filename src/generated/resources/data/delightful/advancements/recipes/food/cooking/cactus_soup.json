@@ -8,9 +8,7 @@
             "conditions": {
               "items": [
                 {
-                  "items": [
-                    "delightful:cactus_flesh"
-                  ]
+                  "tag": "forge:vegetables/cactus"
                 }
               ]
             },
@@ -40,10 +38,6 @@
         {
           "type": "delightful:enabled",
           "value": "cactus_soup"
-        },
-        {
-          "type": "delightful:enabled",
-          "value": "cactus_flesh"
         }
       ]
     }

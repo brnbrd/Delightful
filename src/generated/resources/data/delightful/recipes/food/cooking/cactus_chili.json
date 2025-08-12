@@ -8,10 +8,6 @@
           "value": "cactus_chili"
         },
         {
-          "type": "delightful:enabled",
-          "value": "cactus_flesh"
-        },
-        {
           "type": "forge:tag_empty",
           "tag": "forge:vegetables/corn"
         }
@@ -28,7 +24,7 @@
             "tag": "forge:raw_pork"
           },
           {
-            "item": "delightful:cactus_flesh"
+            "tag": "forge:vegetables/cactus"
           },
           {
             "item": "farmersdelight:tomato_sauce"

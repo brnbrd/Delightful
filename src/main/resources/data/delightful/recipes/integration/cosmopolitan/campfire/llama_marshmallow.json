@@ -1,0 +1,23 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "cosmopolitan:llama_marshmallow"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:campfire_cooking",
+        "category": "food",
+        "cookingtime": 600,
+        "experience": 0.5,
+        "ingredient": {
+          "item": "cosmopolitan:llama_marshmallow"
+        },
+        "result": "delightful:cooked_marshmallow_stick"
+      }
+    }
+  ]
+}

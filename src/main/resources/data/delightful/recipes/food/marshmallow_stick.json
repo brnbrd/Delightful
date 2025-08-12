@@ -17,36 +17,97 @@
             "type": "forge:mod_loaded",
             "modid": "hearthandharvest"
           }
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "neapolitan:dried_vanilla_pods"
         }
       ],
       "recipe": {
-        "type": "minecraft:crafting_shapeless",
-        "category": "misc",
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:stick"
+        },
+        "cookingtime": 200,
+        "experience": 1.0,
         "ingredients": [
-          {
-            "item": "minecraft:sugar"
-          },
-          {
-            "item": "minecraft:sugar"
-          },
           [
             {
-              "tag": "forge:water"
+              "item": "delightful:animal_fat"
             },
             {
-              "count": 1,
-              "type": "forge:nbt",
-              "item": "minecraft:potion",
-              "nbt": "{Potion:\"minecraft:water\"}"
+              "tag": "forge:slimeballs"
             }
           ],
           {
-            "tag": "forge:rods/wooden"
+            "item": "minecraft:sugar"
           },
           {
-            "tag": "forge:rods/wooden"
+            "tag": "forge:eggs"
+          },
+          {
+            "item": "neapolitan:dried_vanilla_pods"
           }
         ],
+        "recipe_book_tab": "misc",
+        "result": {
+          "count": 2,
+          "item": "delightful:marshmallow_stick"
+        }
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "marshmallow_stick"
+        },
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:marshmallow"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:mod_loaded",
+            "modid": "hearthandharvest"
+          }
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:item_exists",
+            "item": "neapolitan:dried_vanilla_pods"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:stick"
+        },
+        "cookingtime": 200,
+        "experience": 1.0,
+        "ingredients": [
+          [
+            {
+              "item": "delightful:animal_fat"
+            },
+            {
+              "tag": "forge:slimeballs"
+            }
+          ],
+          {
+            "item": "minecraft:sugar"
+          },
+          {
+            "item": "minecraft:sugar"
+          },
+          {
+            "tag": "forge:eggs"
+          }
+        ],
+        "recipe_book_tab": "misc",
         "result": {
           "count": 2,
           "item": "delightful:marshmallow_stick"

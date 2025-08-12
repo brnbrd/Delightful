@@ -6,10 +6,6 @@
         {
           "type": "delightful:enabled",
           "value": "cactus_soup"
-        },
-        {
-          "type": "delightful:enabled",
-          "value": "cactus_flesh"
         }
       ],
       "recipe": {
@@ -21,7 +17,7 @@
         "experience": 1.0,
         "ingredients": [
           {
-            "item": "delightful:cactus_flesh"
+            "tag": "forge:vegetables/cactus"
           },
           {
             "tag": "forge:grain/rice"

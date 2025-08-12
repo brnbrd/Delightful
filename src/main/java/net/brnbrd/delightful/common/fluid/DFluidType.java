@@ -8,10 +8,10 @@ import net.minecraftforge.common.SoundActions;
 import net.minecraftforge.fluids.FluidType;
 import java.util.function.Consumer;
 
-public class TeaFluidType extends FluidType {
+public class DFluidType extends FluidType {
 	private final int tint;
 
-	public TeaFluidType(int tint) {
+	public DFluidType(int tint) {
 		super(FluidType.Properties.create()
 				.sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL)
 				.sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY)

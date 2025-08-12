@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "brewincompatdelight:tequila",
+      "required": false
+    },
+    {
+      "id": "sob:tequila",
+      "required": false
+    }
+  ]
+}

@@ -10,6 +10,10 @@
         {
           "type": "forge:item_exists",
           "item": "biomeswevegone:blueberry_pie"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "biomeswevegone:blueberries"
         }
       ],
       "recipe": {
@@ -22,7 +26,7 @@
             "item": "farmersdelight:pie_crust"
           },
           "a": {
-            "tag": "forge:fruits/blueberries"
+            "item": "biomeswevegone:blueberries"
           },
           "x": {
             "item": "minecraft:sugar"
@@ -50,13 +54,17 @@
         {
           "type": "forge:item_exists",
           "item": "biomeswevegone:blueberry_pie"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "biomeswevegone:blueberries"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shapeless",
         "ingredients": [
           {
-            "tag": "forge:fruits/blueberries"
+            "item": "biomeswevegone:blueberries"
           },
           {
             "item": "minecraft:sugar"

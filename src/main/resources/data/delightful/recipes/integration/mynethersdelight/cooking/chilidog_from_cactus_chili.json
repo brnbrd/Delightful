@@ -27,7 +27,7 @@
             "tag": "forge:raw_pork"
           },
           {
-            "item": "delightful:cactus_flesh"
+            "tag": "forge:vegetables/cactus"
           }
         ],
         "recipe_book_tab": "meals",

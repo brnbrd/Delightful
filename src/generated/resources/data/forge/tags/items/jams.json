@@ -12,6 +12,10 @@
       "required": false
     },
     {
+      "id": "#sob:ingredients/preserves",
+      "required": false
+    },
+    {
       "id": "#hearthandharvest:jelly",
       "required": false
     },

@@ -4,13 +4,11 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_cactus_chunk": {
+          "has_cactus": {
             "conditions": {
               "items": [
                 {
-                  "items": [
-                    "delightful:cactus_flesh"
-                  ]
+                  "tag": "forge:vegetables/cactus"
                 }
               ]
             },
@@ -25,7 +23,7 @@
         },
         "requirements": [
           [
-            "has_cactus_chunk",
+            "has_cactus",
             "has_the_recipe"
           ]
         ],
@@ -40,10 +38,6 @@
         {
           "type": "delightful:enabled",
           "value": "cactus_chili"
-        },
-        {
-          "type": "delightful:enabled",
-          "value": "cactus_flesh"
         },
         {
           "type": "forge:not",

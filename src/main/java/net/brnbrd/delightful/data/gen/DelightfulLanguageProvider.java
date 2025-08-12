@@ -33,7 +33,6 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		addItem(DelightfulItems.COOKED_MARSHMALLOW_STICK, "Roasted Marshmallow on a Stick");
 		addItem(DelightfulItems.SMORE, "S'more");
 		addItem(DelightfulItems.CRAB_RANGOON, "Crab Rangoon");
-		addItem(DelightfulItems.PRICKLY_PEAR_JUICE, "Prickly Pear Juice");
 		addItem(DelightfulItems.CHUNKWICH, "Chunkwich");
 		addItem(DelightfulItems.JAM_JAR, "Jam Jar");
 		addItem(DelightfulItems.GLOW_JAM_JAR, "Glow Jam Jar");
@@ -155,6 +154,8 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		add("fluid_type." + Delightful.MODID + ".azalea_tea_type", "Azalea Tea");
 		addItem(DelightfulItems.LAVENDER_TEA, "Lavender Tea");
 		add("fluid_type." + Delightful.MODID + ".lavender_tea_type", "Lavender Tea");
+		addItem(DelightfulItems.PRICKLY_PEAR_JUICE, "Prickly Pear Juice");
+		add("fluid_type." + Delightful.MODID + ".prickly_pear_juice_type", "Prickly Pear Juice");
 
 		// Other
 		add("delightful.overhauls", "Overhauls");

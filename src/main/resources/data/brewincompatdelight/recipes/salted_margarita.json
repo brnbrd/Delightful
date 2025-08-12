@@ -1,0 +1,59 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "brewinandchewin"
+        },
+        {
+          "type": "forge:item_exists",
+          "item":"brewincompatdelight:salted_margarita"
+        },
+        {
+          "type":"forge:not",
+          "value":{
+            "type":"forge:tag_empty",
+            "tag":"forge:drinks/tequila"
+          }
+        },
+        {
+          "type":"forge:not",
+          "value":{
+            "type":"forge:tag_empty",
+            "tag":"forge:fruits/lime"
+          }
+        },
+        {
+          "type":"forge:not",
+          "value":{
+            "type":"forge:tag_empty",
+            "tag":"forge:salt"
+          }
+        }
+      ],
+      "recipe": {
+        "type":"minecraft:crafting_shapeless",
+        "ingredients":[
+          {
+            "tag":"forge:fruits/lime"
+          },
+          {
+            "tag":"forge:drinks/tequila"
+          },
+          {
+            "tag":"forge:fruits/lime"
+          },
+          {
+            "tag":"forge:salt"
+          }
+        ],
+        "result":{
+          "item":"brewincompatdelight:salted_margarita",
+          "count": 1
+        }
+      }
+    }
+  ]
+}
