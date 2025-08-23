@@ -94,6 +94,10 @@
       "required": false
     },
     {
+      "id": "seeddelight:rose_cookie",
+      "required": false
+    },
+    {
       "id": "ends_delight:chorus_cookie",
       "required": false
     },

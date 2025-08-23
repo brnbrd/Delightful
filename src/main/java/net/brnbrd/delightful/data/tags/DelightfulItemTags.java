@@ -16,6 +16,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> COOKED_VENISON_COMPAT = d("cooked_venison_compat");
 	public static final TagKey<Item> COOKED_VENISON_CHOP_COMPAT = d("cooked_venison_chop_compat");
 	public static final TagKey<Item> ROTTEN = d("rotten");
+	public static final TagKey<Item> GIVES_SPITE = d("gives_spite");
 	public static final TagKey<Item> ROSEY = d("rosey");
 
 	// Minecraft
@@ -77,7 +78,7 @@ public class DelightfulItemTags {
 
 	// Vegetables
 	public static final TagKey<Item> VEGETABLES_CACTUS = forge("vegetables/cactus");
-	public static final TagKey<Item> VEGETABLES_CACTUS_PADDLE = forge("vegetables/cactus_paddle");
+	public static final TagKey<Item> VEGETABLES_CLOVER = forge("vegetables/clover");
 	public static final TagKey<Item> VEGETABLES_SPICY = forge("vegetables/spicy");
 	public static final TagKey<Item> VEGETABLES_CORN = forge("vegetables/corn");
 	public static final TagKey<Item> VEGETABLES_GINGER = forge("vegetables/ginger");

@@ -389,6 +389,13 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
     side="BOTH"
 
 [[dependencies.delightful]]
+	modId="seeddelight"
+	mandatory=false
+	versionRange="[1.20.1-0.1,)"
+	ordering="AFTER"
+	side="BOTH"
+
+[[dependencies.delightful]]
     modId="moredelight"
     mandatory=false
     versionRange="[0,)"

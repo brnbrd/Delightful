@@ -5,14 +5,18 @@ import net.brnbrd.delightful.common.block.DelightfulBlocks;
 import net.brnbrd.delightful.common.block.ISliceable;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.compat.Modid;
+import net.brnbrd.delightful.compat.SOBCompat;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.trading.MerchantOffer;
@@ -35,16 +39,27 @@ public class ForgeEvents {
 	@SubscribeEvent
 	void onEatEffectProvider(LivingEntityUseItemEvent.Finish e) {
 		if (e.getResult() != Event.Result.DENY) {
+			final ItemStack stack = e.getItem();
+			final LivingEntity entity = e.getEntity();
 			if (
 				Modid.CAD.loaded() &&
-				e.getItem().is(DelightfulItemTags.ROTTEN) &&
-				e.getEntity().getRandom().nextBoolean() // 50% chance
+				stack.is(DelightfulItemTags.ROTTEN) &&
+				entity.getRandom().nextBoolean() // 50% chance
 			) {
 				int duration = 160;
-				if (e.getItem().is(Modid.RL.item("rotten_chunk"))) {
+				if (stack.is(Modid.RL.item("rotten_chunk"))) {
 					duration = 1800;
 				}
-				Util.addEffect(e.getEntity(), Modid.CAD.effect("rotten"), duration, 0);
+				Util.addEffect(entity, Modid.CAD.effect("rotten"), duration, 0);
+			} else if (
+				Modid.SOB.loaded() &&
+				stack.is(DelightfulItemTags.GIVES_SPITE)
+			) {
+				int duration = 200;
+				if (stack.is(Modid.ECO.item("cooked_prickly_pear"))) {
+					duration = 400;
+				}
+				Util.addEffect(entity, SOBCompat.getSpite().get(), duration, 0);
 			}
 		}
 	}

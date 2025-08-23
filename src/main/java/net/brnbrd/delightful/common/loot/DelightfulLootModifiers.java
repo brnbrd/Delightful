@@ -13,6 +13,7 @@ public class DelightfulLootModifiers {
 
 	public static final RegistryObject<Codec<AddItemLootModifier>> ADD_ITEM = GLM.register("add_item", () -> AddItemLootModifier.CODEC);
 	public static final RegistryObject<Codec<SmeltLootModifier>> SMELT = GLM.register("smelt", () -> SmeltLootModifier.CODEC);
+	public static final RegistryObject<Codec<ReplaceLootModifier>> REPLACE = GLM.register("replace", ReplaceLootModifier.CODEC);
 
 	public static void create(IEventBus bus) {
 		GLM.register(bus);

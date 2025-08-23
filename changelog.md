@@ -14,6 +14,7 @@
 - Prickly Pear Juice can now be crafted from any `#forge:fruits/prickly_pear` (if Ecologics is not present)
   - Can also be brewed in a Kettle in presence of [Farmer's Respite](https://www.curseforge.com/minecraft/mc-mods/farmers-respite)
 - Field Salad can be crafted from any `#forge:cooked_nuts` instead of only Roasted Acorn
+- Acorn can now be acquired by cutting Oak Sapling or Dark Oak Sapling with a Knife
 - Recipes for cutting `#forge:cacti` into Cactus Chunk will now also have a chance to provide Green Dye
 - Nut Butter and Jelly Sandwich now provides Toughness I in presence of [Smidgeon o' Bliss REMASTERED](https://www.curseforge.com/minecraft/mc-mods/smidgeon-o-bliss-remastered)
 - Cantaloupe Gummy now provides Resistance III for 0:15

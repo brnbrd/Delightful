@@ -76,6 +76,14 @@
       "required": false
     },
     {
+      "id": "seeddelight:cherry_jam_jar",
+      "required": false
+    },
+    {
+      "id": "seeddelight:rosehip_jam_jar",
+      "required": false
+    },
+    {
       "id": "upgrade_aquatic:mulberry_jam_bottle",
       "required": false
     },

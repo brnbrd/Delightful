@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "ecologics:prickly_pear",
+      "required": false
+    },
+    {
+      "id": "ecologics:cooked_prickly_pear",
+      "required": false
+    }
+  ]
+}

@@ -1,12 +1,11 @@
 package net.brnbrd.delightful.common.item.food;
 
 import net.brnbrd.delightful.compat.CosmopolitanCompat;
-import net.brnbrd.delightful.compat.Modid;
+import net.brnbrd.delightful.compat.SOBCompat;
 import net.brnbrd.delightful.compat.TeaCompat;
 import net.brnbrd.delightful.compat.abnormals.NeapolitanCompat;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.Mob;
 import net.minecraft.world.food.FoodProperties;
 import vectorwing.farmersdelight.common.registry.ModEffects;
 
@@ -50,7 +49,7 @@ public class Nutrition {
 	public static final FoodProperties NUT_BUTTER_AND_JAM_SANDWICH = (new FoodProperties.Builder())
 		.nutrition(11).saturationMod(0.65F)
 		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3600, 0), 1F)
-		.effect(() -> new MobEffectInstance(Modid.SOB.effect("toughness", MobEffects.DAMAGE_RESISTANCE), 1800, 0), 1F)
+		.effect(() -> new MobEffectInstance(SOBCompat.getToughness().get(), 1800, 0), 1F)
 		.build();
 	public static final FoodProperties HONEY_GLAZED_WALNUT = (new FoodProperties.Builder())
 		.nutrition(6).saturationMod(1F).build();
@@ -141,7 +140,8 @@ public class Nutrition {
 		.nutrition(4).saturationMod(0.1F).alwaysEat()
 		.effect(() -> new MobEffectInstance(MobEffects.BLINDNESS, 60, 0), 1F).build();
 	public static final FoodProperties PRICKLY_PEAR_JUICE = (new FoodProperties.Builder())
-		.effect(() -> new MobEffectInstance(MobEffects.SATURATION, 300, 0), 1F).build();
+		.effect(() -> new MobEffectInstance(MobEffects.SATURATION, 600, 0), 1F)
+		.effect(() -> new MobEffectInstance(SOBCompat.getSpite().get(), 600, 0), 1F).build();
 	public static final FoodProperties LAVENDER_TEA = (new FoodProperties.Builder()).alwaysEat()
 		.effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 600, 0), 1F)
 		.effect(() -> new MobEffectInstance(TeaCompat.getCaffeinated().get(), 3000, 0), 1F).build();

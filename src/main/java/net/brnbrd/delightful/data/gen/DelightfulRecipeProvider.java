@@ -71,7 +71,6 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 		foodSmeltingRecipes("cactus_steak", DelightfulItems.CACTUS_FLESH.get(), DelightfulItems.CACTUS_STEAK.get(), 0.35F, finished);
 		foodSmeltingRecipes("cooked_venison_chops", DelightfulItems.VENISON_CHOPS.get(), DelightfulItems.COOKED_VENISON_CHOPS.get(), 0.35F, finished);
 		foodSmeltingRecipes("cooked_goat", DelightfulItems.RAW_GOAT.get(), DelightfulItems.COOKED_GOAT.get(), 0.35F, finished);
-		foodSmeltingRecipes("roasted_acorn", DelightfulItems.ACORN.get(), DelightfulItems.ROASTED_ACORN.get(), 0.35F, finished);
 
 		// Foods
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.NUT_BUTTER_AND_JAM_SANDWICH.get())
@@ -553,9 +552,21 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 						.unlockedBy("has_fat", has(DelightfulItems.ANIMAL_FAT.get())),
 				"candle_from_animal_fat", finished, enabled(DelightfulItems.ANIMAL_FAT));
 		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
+					Ingredient.of(Items.OAK_SAPLING),
+					Ingredient.of(ForgeTags.TOOLS_AXES),
+					Items.STICK, 1)
+				.addResultWithChance(DelightfulItems.ACORN.get(), 0.2F, 1),
+				"cutting/oak_sapling", finished, enabled(DelightfulItems.ACORN));
+		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
+					Ingredient.of(Items.DARK_OAK_SAPLING),
+					Ingredient.of(ForgeTags.TOOLS_AXES),
+					Items.STICK, 1)
+				.addResultWithChance(DelightfulItems.ACORN.get(), 0.2F, 1),
+				"cutting/dark_oak_sapling", finished, enabled(DelightfulItems.ACORN));
+		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
 						Ingredient.of(DelightfulItemTags.TEA_LEAVES_GREEN),
 						Ingredient.of(ForgeTags.TOOLS_SHOVELS),
-						Items.GREEN_DYE, 1).addResultWithChance(DelightfulItems.MATCHA.get(), 0.4f),
+						Items.GREEN_DYE, 1).addResultWithChance(DelightfulItems.MATCHA.get(), 0.4F),
 				"cutting/green_tea_leaves", finished, enabled("matcha"), not(tagEmpty(DelightfulItemTags.TEA_LEAVES_GREEN)), not(modLoaded(Modid.YH.get())));
 		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
 						Ingredient.of(DelightfulItemTags.CLOVER),
@@ -577,18 +588,6 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 						Ingredient.of(ForgeTags.TOOLS_KNIVES),
 						DelightfulItems.PUMPKIN_PIE_SLICE.get(), 4),
 				"cutting/pumpkin_pie", finished, enabled("pumpkin_pie_slice"));
-		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
-						Ingredient.of(Items.CACTUS),
-						Ingredient.of(ForgeTags.TOOLS_KNIVES),
-						DelightfulItems.CACTUS_FLESH.get(), 2)
-				.addResultWithChance(Items.GREEN_DYE, 0.5F),
-				"cutting/cactus", finished, enabled(DelightfulItems.CACTUS_FLESH));
-		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
-						Ingredient.of(DelightfulItemTags.CACTI_SMALL),
-						Ingredient.of(ForgeTags.TOOLS_KNIVES),
-						DelightfulItems.CACTUS_FLESH.get(), 1)
-				.addResultWithChance(Items.GREEN_DYE, 0.33F),
-				"cutting/small_cactus", finished, enabled(DelightfulItems.CACTUS_FLESH), not(tagEmpty(DelightfulItemTags.CACTI_SMALL)));
 		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
 						Ingredient.of(DelightfulItems.MINI_MELON.get()),
 						Ingredient.of(ForgeTags.TOOLS_KNIVES),
@@ -762,11 +761,17 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			).addResult(Items.ORANGE_DYE, 1)
 				.build(finished, Util.delight("cutting/wild_salmonberries"));
 		CuttingBoardRecipeBuilder.cuttingRecipe(
+				Ingredient.of(Items.DEAD_BUSH),
+				Ingredient.of(ForgeTags.TOOLS_AXES),
+				Items.STICK, 1)
+			.addResultWithChance(Items.STICK, 0.5F, 1)
+			.build(finished, Util.delight("cutting/dead_bush"));
+		CuttingBoardRecipeBuilder.cuttingRecipe(
 				Ingredient.of(Items.SUGAR_CANE),
 				Ingredient.of(ForgeTags.TOOLS_KNIVES),
-				Items.SUGAR, 1
-			).addResultWithChance(Items.SUGAR, 0.5F, 1)
-				.build(finished, Util.delight("cutting/sugar_cane"));
+				Items.SUGAR, 1)
+			.addResultWithChance(Items.SUGAR, 0.5F, 1)
+			.build(finished, Util.delight("cutting/sugar_cane"));
 	}
 
 	private InventoryChangeTrigger.TriggerInstance has(ItemLike... items) {

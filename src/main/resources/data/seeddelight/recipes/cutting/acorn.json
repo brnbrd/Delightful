@@ -1,0 +1,27 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:false"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "this_item:does_not_exist"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "this_item:does_not_exist"
+          }
+        ],
+        "result": {
+          "item": "this_item:does_not_exist"
+        }
+      }
+    }
+  ]
+}

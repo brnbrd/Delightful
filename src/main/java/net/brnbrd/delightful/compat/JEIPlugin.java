@@ -47,6 +47,8 @@ public class JEIPlugin implements IModPlugin {
 		this.hide(hidden, Modid.SOB, "pbnj");
 		this.hide(hidden, Modid.VD, "pb_j");
 		this.hide(hidden, Modid.HH, "peanut_butter_and_jelly_sandwich");
+		this.hide(hidden, Modid.SEED, "acorn");
+		this.hide(hidden, Modid.SEED, "acorn_bag");
 		this.hide(hidden, Modid.HH, "smore");
 		this.hide(hidden, Modid.UGD, "gloomgourd_pie_slice");
 
@@ -78,6 +80,7 @@ public class JEIPlugin implements IModPlugin {
 		this.hide(hidden, Modid.MOD, "bread_slice", Modid.SAS);
 		this.hide(hidden, Modid.MOD, "toast", Modid.SAS);
 		this.hide(hidden, Modid.AA, "honeyed_apple", Modid.BB);
+		this.hide(hidden, Modid.SOB, "prickly_pear", Modid.ECO);
 
 		if (!hidden.isEmpty()) {
 			registration.getIngredientManager().removeIngredientsAtRuntime(VanillaTypes.ITEM_STACK, hidden);

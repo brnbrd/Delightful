@@ -1,0 +1,36 @@
+{
+  "parent": "farmersdelight:main/get_fd_seed",
+  "criteria": {
+    "get_prickly_pear": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:fruits/prickly_pear"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.sob.get_prickly_pear.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "sob:prickly_pear"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.sob.get_prickly_pear"
+    }
+  },
+  "requirements": [
+    [
+      "get_prickly_pear"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

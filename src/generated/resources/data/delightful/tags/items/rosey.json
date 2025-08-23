@@ -1,11 +1,16 @@
 {
   "values": [
+    "minecraft:rose_bush",
     {
       "id": "biomeswevegone:rose",
       "required": false
     },
     {
       "id": "farmersrespite:rose_hips",
+      "required": false
+    },
+    {
+      "id": "seeddelight:rosehip",
       "required": false
     },
     {

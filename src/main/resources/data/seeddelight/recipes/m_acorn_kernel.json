@@ -1,0 +1,32 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "seeddelight:acorn_kernel"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:nuts/acorn"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "tag": "forge:nuts/acorn"
+          }
+        ],
+        "result": {
+          "item": "seeddelight:acorn_kernel",
+          "count": 2
+        }
+      }
+    }
+  ]
+}

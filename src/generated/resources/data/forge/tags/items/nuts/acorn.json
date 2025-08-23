@@ -1,5 +1,9 @@
 {
   "values": [
-    "delightful:acorn"
+    "delightful:acorn",
+    {
+      "id": "seeddelight:acorn",
+      "required": false
+    }
   ]
 }

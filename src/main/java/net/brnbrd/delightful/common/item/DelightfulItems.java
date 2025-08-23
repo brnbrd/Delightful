@@ -1,6 +1,7 @@
 package net.brnbrd.delightful.common.item;
 
 import net.brnbrd.delightful.Delightful;
+import net.brnbrd.delightful.common.block.AcornSackItem;
 import net.brnbrd.delightful.common.block.DelightfulBlocks;
 import net.brnbrd.delightful.common.item.food.*;
 import net.brnbrd.delightful.compat.*;
@@ -32,7 +33,7 @@ public class DelightfulItems {
 	public static final RegistryObject<Item> SALMONBERRY_SACK = registerItem("salmonberry_sack", () ->
 			new BlockItem(DelightfulBlocks.SALMONBERRY_SACK.get(), ModItems.basicItem()));
 	public static final RegistryObject<Item> ACORN_SACK = registerItem("acorn_sack", () ->
-			new BlockItem(DelightfulBlocks.ACORN_SACK.get(), ModItems.basicItem()));
+			new AcornSackItem(DelightfulBlocks.ACORN_SACK.get(), ModItems.basicItem()));
 	public static final RegistryObject<Item> MENDOSTEEN_CRATE = registerItem("mendosteen_crate", () ->
 			new ArsCrateBlockItem(DelightfulBlocks.MENDOSTEEN_CRATE.get(), (new Item.Properties())));
 	public static final RegistryObject<Item> BASTION_FRUIT_CRATE = registerItem("bastion_fruit_crate", () ->
@@ -126,7 +127,8 @@ public class DelightfulItems {
 	public static final RegistryObject<Item> ANIMAL_FAT = registerFood("animal_fat", Nutrition.ANIMAL_FAT);
 	public static final RegistryObject<Item> ANIMAL_OIL_BOTTLE = registerItem("animal_oil_bottle",
 			() -> new FurnaceFuelItem((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE), 3200));
-	public static final RegistryObject<Item> ACORN = registerFood("acorn", Nutrition.ACORN);
+	public static final RegistryObject<Item> ACORN = registerItem("acorn", () ->
+		new AcornItem((new Item.Properties()).food(Nutrition.ACORN)));
 	public static final RegistryObject<Item> ROASTED_ACORN = registerFood("roasted_acorn", Nutrition.ROASTED_ACORN);
 	public static final RegistryObject<Item> NUT_DOUGH = registerFood("nut_dough", Nutrition.NUT_DOUGH);
 	public static final RegistryObject<Item> CHOPPED_CLOVER = registerItem("chopped_clover", () -> new ChoppedCloverItem((new Item.Properties()).food(Nutrition.CHOPPED_CLOVER)));

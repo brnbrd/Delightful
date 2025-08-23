@@ -1,4 +1,4 @@
-// 1.20.1	2025-08-12T13:51:50.0034052	delightful
+// 1.20.1	2025-08-23T09:55:46.9698226	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -28,10 +28,11 @@ ed18beedb5068fe9f48327153c678096971fcd24 data/deep_aether/tags/items/stratus_smi
 6c44caac9f1c6b7419020d539d40046963a51ad9 data/delightful/tags/items/cooked_venison_chop_compat.json
 ae718511234f1a47f26d2f294e4d17f33374a95d data/delightful/tags/items/cooked_venison_compat.json
 c635f7a0507d48b606bd3d26bfe43ade5cfe05ee data/delightful/tags/items/fire_knives.json
+d53bd21229e9bf9cd03b3c3dea2ebbb08dfede36 data/delightful/tags/items/gives_spite.json
 25157ad740de48c4baa7d586db2ff57f50fe0a05 data/delightful/tags/items/quartz_knife.json
 2ff5cfe0c5823c3c18040d2127a488836e4c4908 data/delightful/tags/items/raw_venison_chop_compat.json
 6c2f8fbf4dd74017f049b2ef88a10e285aae2c0c data/delightful/tags/items/raw_venison_compat.json
-07d72463f24c491eee78f8f830934ecfe70da89b data/delightful/tags/items/rosey.json
+1098f79f7d5890595c1c77d5df2bd0687db5cef2 data/delightful/tags/items/rosey.json
 8a40f7dd6d54c3af598722c99d0c864729ea8dd8 data/delightful/tags/items/rotten.json
 24a3a46496486a8baeb7bd4c1e81c51f14776a15 data/farmersdelight/tags/items/barks.json
 f2edde09d8cbec9661b025fd8d29aa93cb711371 data/farmersdelight/tags/items/cabbage_roll_ingredients.json
@@ -71,12 +72,12 @@ f22b4c1e330acdb87d41463fa1bbe431b513d330 data/forge/tags/items/cooked_fishes.jso
 13b1975d883f9de99c0564f8d5c5c66ceea4a549 data/forge/tags/items/cooked_nuts.json
 9f77948b8bcc8ff9ce8d4f192f7156c733795ab7 data/forge/tags/items/cooked_rabbit.json
 522cf04b2689c42171edbe4fe3fa6e3fa9651b1f data/forge/tags/items/cooked_venison.json
-a180e224ec8d5888eb678f10b562169ee803c577 data/forge/tags/items/cookies.json
+c3d0bc9cccc6cf03262190b726ec249e22456e4c data/forge/tags/items/cookies.json
 b909ff8d1fa9d605fe5c66fa82057da1bcfbc4cc data/forge/tags/items/cookies/source_berry.json
 7c0edbb702d3fbe9e1c68f07804da13ef22fe6ea data/forge/tags/items/crab_claw.json
 a588e76ea799ddafa0f942b8750ac4644597b2bd data/forge/tags/items/crab_claw/cooked.json
 47601864018459751713524fc5e5c0c3c651ed12 data/forge/tags/items/crops/beetroot.json
-6068648180c1cad627a69fb4c731b70bce91d592 data/forge/tags/items/crops/cactus.json
+80b821857dd4ea54ffaed1e82f4d6be7ae255ae6 data/forge/tags/items/crops/cactus.json
 7fd2905a9ed109c49d8ee3936d91b75a867ed9d8 data/forge/tags/items/crops/carrot.json
 54f845121811566f1cb772aeee891ee97db33fe8 data/forge/tags/items/crops/onion.json
 0557dbca02703cad94baef258edf5bdd43dda2ef data/forge/tags/items/crops/potato.json
@@ -149,7 +150,7 @@ dc9122bbc29f63ef88ae687ac23a961648297ae0 data/forge/tags/items/ingots/pearlescen
 df21ab79976e7373593d2fce09cfbf66c595e447 data/forge/tags/items/ingots/steel.json
 a2c1b0bb89891c01a65518d797b2be4020720a63 data/forge/tags/items/ingots/stratus.json
 d554ed3f6b8762427d8c40a172c78361952260ed data/forge/tags/items/ingots/veridium.json
-b36892df6c4992b92902e55114dfbe4236b564ae data/forge/tags/items/jams.json
+b5b2965a43681a822b1a651ff2d83872e5edefca data/forge/tags/items/jams.json
 93c48293b9ca80f78879ce37a6dd9be0c45d5fe3 data/forge/tags/items/jams/glow.json
 eeff8f08f0ba805e3e7095967533bcdcb6162a98 data/forge/tags/items/juices.json
 adf750ed79a8b688e05695c39be24ab12de3ae41 data/forge/tags/items/juices/citrus.json
@@ -162,7 +163,7 @@ adf750ed79a8b688e05695c39be24ab12de3ae41 data/forge/tags/items/juices/citrus.jso
 5160d3e42adb69a7a3e121df7fe653817a5d6b1b data/forge/tags/items/matcha.json
 f2c2fa99846dd38fbcf4460d40f560d57c700ac5 data/forge/tags/items/milk.json
 29b80168f81ef905a4b9c199bf761364e6ac3e33 data/forge/tags/items/nuts.json
-6af11aa5504f33d9e620a7cb9b7bc797476c0a7f data/forge/tags/items/nuts/acorn.json
+dfda01b15a86b801b6878b60cf06ffcfaef92fe5 data/forge/tags/items/nuts/acorn.json
 b03de3a7a899e79f07eb00c920a4140fa958b2da data/forge/tags/items/nuts/peanut.json
 43ff3b1d9b96e92650d782eb6631a869680f8078 data/forge/tags/items/nuts/walnut.json
 590133215d0e3db746c20780adf419bb44a64295 data/forge/tags/items/nut_butter.json
@@ -183,7 +184,6 @@ b674043d5d31d5fb35d4b0eb555cd87fb7205aa6 data/forge/tags/items/raw_goat.json
 d5df2003d6210b443fc989b821eee01651146c3b data/forge/tags/items/raw_squid.json
 c28b2966b7751691456f3c7ae84cb77f31a4f245 data/forge/tags/items/raw_venison.json
 eede30f09088aaf8a642eb4ea1ebc60e3b69e020 data/forge/tags/items/ropes.json
-0d7690c4ede992c93d728b1587f6e8452f47c199 data/forge/tags/items/salad_ingredients.json
 848b08c97c587fbcfb7a9888e8c5ec73d0195075 data/forge/tags/items/salt.json
 a09b42ac27e237ab7a07cef195745960d786fca5 data/forge/tags/items/seeds.json
 9b41a77626703e8e0afcfac6855ec3e6bc967180 data/forge/tags/items/seeds/cantaloupe.json
@@ -198,10 +198,11 @@ b4088db8c78220bdadc8c24288bd4da0fe773e25 data/forge/tags/items/tea_leaves/green.
 b1d4ce3e56c5776870a8fdd487526210fd93ecbd data/forge/tags/items/tools/knives.json
 78df9c1afac893dbe4ecae6bc0328b820eaba60b data/forge/tags/items/tools/wrench.json
 3f42128b4b110e2faf9c39acc4ea8cec58684613 data/forge/tags/items/tortilla.json
+9a334e24c21bb643b651ff6e85829779acb002af data/forge/tags/items/vegetables.json
 936439a647c8924be20c949f5eb78b18ea59d4f2 data/forge/tags/items/vegetables/beetroot.json
-fea836ee2d9fd00847a341d1cad78014f3f2ff0a data/forge/tags/items/vegetables/cactus.json
-45cb03f434ab8a2efc2e5dc31822f42acda1a683 data/forge/tags/items/vegetables/cactus_paddle.json
+2b96173e6f02a22577b93f8bb4d0a5e6e61f5c93 data/forge/tags/items/vegetables/cactus.json
 365d7371545c107ac447872456eb0dc916f026eb data/forge/tags/items/vegetables/carrot.json
+794c8af44b54ddaf0e6d8d9d41f034a046539c0c data/forge/tags/items/vegetables/clover.json
 38b096a4fc6f8ae962fa6607c6c02242da0ce2a5 data/forge/tags/items/vegetables/corn.json
 29578b65c050e12022c001ad035c1e6a5a23833a data/forge/tags/items/vegetables/cucumber.json
 ce0cca03b997a0f5c8225b24a328f87ad007c76a data/forge/tags/items/vegetables/ginger.json
@@ -233,7 +234,7 @@ a8f06d7dc1646ce181a8dc82c1d2a179064212a9 data/phantasm/tags/items/void_crystal_b
 6ee15734ac9331c3a1b186bd12a7cfc07d71273b data/seeds/tags/items/sharp_leaf.json
 e8907bb6383992d824e326f554fcbab430f7e5ce data/sereneseasons/tags/items/summer_crops.json
 5ca5c9750568ae0343de46dc7bae0316ddffd566 data/spirit/tags/items/soul_steel_mainhand.json
-e54da94bf4f898c46d066037e37ff29b1e55e4e7 data/sullysmod/tags/items/tortoise_food.json
+3872e9d1a164df1e283e40bcdc1aa9327ebfecab data/sullysmod/tags/items/tortoise_food.json
 b7d8c488cbe67f7a200238eafa40780d405dd0de data/supplementaries/tags/items/cookies.json
 25b1e88cf102d90fb37521bc8b898ff69bdcc12a data/supplementaries/tags/items/pancake_syrup.json
 7c3909099c341f706262b4b4f435f526fb1dd27a data/undergarden/tags/items/cloggrum_items.json

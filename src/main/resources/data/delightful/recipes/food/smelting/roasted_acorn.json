@@ -6,15 +6,22 @@
         {
           "type": "delightful:enabled",
           "value": "roasted_acorn"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:nuts/acorn"
+          }
         }
       ],
       "recipe": {
-        "type": "minecraft:campfire_cooking",
+        "type": "minecraft:smelting",
         "category": "food",
-        "cookingtime": 600,
+        "cookingtime": 200,
         "experience": 0.35,
         "ingredient": {
-          "item": "delightful:acorn"
+          "tag": "forge:nuts/acorn"
         },
         "result": "delightful:roasted_acorn"
       }

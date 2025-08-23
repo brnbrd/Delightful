@@ -1,0 +1,33 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "acorn"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "minecraft:dark_oak_sapling"
+          }
+        ],
+        "result": [
+          {
+            "item": "minecraft:stick"
+          },
+          {
+            "chance": 0.2,
+            "item": "delightful:acorn"
+          }
+        ],
+        "tool": {
+          "tag": "forge:tools/axes"
+        }
+      }
+    }
+  ]
+}

@@ -12,11 +12,23 @@
           "item": "ecologics:coconut_slice"
         },
         {
-          "type": "forge:not",
-          "value": {
-            "type": "forge:tag_empty",
-            "tag": "forge:crab_meat"
-          }
+          "type": "forge:or",
+          "values": [
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:raw_crab_meat"
+              }
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:cooked_crab_meat"
+              }
+            }
+          ]
         }
       ],
       "recipe": {
@@ -27,9 +39,14 @@
         "cookingtime": 200,
         "experience": 0.35,
         "ingredients": [
-          {
-            "tag": "forge:crab_meat"
-          },
+          [
+            {
+              "tag": "forge:raw_crab_meat"
+            },
+            {
+              "tag": "forge:cooked_crab_meat"
+            }
+          ],
           {
             "tag": "forge:grain/rice"
           },

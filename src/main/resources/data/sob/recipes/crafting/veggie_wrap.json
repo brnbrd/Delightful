@@ -1,0 +1,72 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "sob:veggie_wrap"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:tortilla"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "tag": "forge:tortilla"
+          },
+          {
+            "tag": "forge:vegetables/cactus"
+          },
+          {
+            "tag": "forge:vegetables"
+          },
+          {
+            "tag": "forge:vegetables"
+          }
+        ],
+        "result": {
+          "item": "sob:veggie_wrap"
+        }
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "sob:veggie_wrap"
+        },
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:tortilla"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "tag": "forge:bread"
+          },
+          {
+            "tag": "forge:vegetables/cactus"
+          },
+          {
+            "tag": "forge:vegetables"
+          },
+          {
+            "tag": "forge:vegetables"
+          }
+        ],
+        "result": {
+          "item": "sob:veggie_wrap"
+        }
+      }
+    }
+  ]
+}

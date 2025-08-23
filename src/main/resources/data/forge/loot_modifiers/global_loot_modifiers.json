@@ -14,6 +14,7 @@
     "delightful:compat/scavenging_acorn",
     "delightful:compat/scavenging_ham",
     "delightful:compat/scavenging_smoked_ham",
-    "delightful:compat/straw"
+    "delightful:compat/straw",
+    "delightful:compat/nopal_crop"
   ]
 }

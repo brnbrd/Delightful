@@ -1,0 +1,43 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "sob:prickly_melomel"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "brewinandchewin"
+        }
+      ],
+      "recipe": {
+        "type": "brewinandchewin:fermenting",
+        "basefluid": {
+          "count": 1000,
+          "fluid": "brewinandchewin:mead"
+        },
+        "experience": 1.0,
+        "fermentingtime": 9600,
+        "ingredients": [
+          {
+            "tag": "forge:fruits/prickly_pear"
+          },
+          {
+            "tag": "forge:fruits"
+          },
+          {
+            "tag": "delightful:rosey"
+          }
+        ],
+        "recipe_book_tab": "drinks",
+        "result": {
+          "count": 1000,
+          "fluid": "sob:prickly_melomel"
+        },
+        "temperature": 3
+      }
+    }
+  ]
+}
