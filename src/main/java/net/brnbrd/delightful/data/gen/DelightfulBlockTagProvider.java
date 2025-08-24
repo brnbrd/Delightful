@@ -50,6 +50,27 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 			.addTag(Tags.Blocks.SAND);
 
 		// Forge
+		this.tag(DelightfulBlockTags.STORAGE_BLOCKS_SALMONBERRIES).add(DelightfulBlocks.SALMONBERRY_SACK.get());
+		this.tag(DelightfulBlockTags.STORAGE_BLOCKS_ACORN).add(DelightfulBlocks.ACORN_SACK.get());
+		this.tag(DelightfulBlockTags.STORAGE_BLOCKS_BLUEBERRIES).add(DelightfulBlocks.BLUEBERRY_SACK.get());
+		this.tag(DelightfulBlockTags.STORAGE_BLOCKS_MENDOSTEEN).add(DelightfulBlocks.MENDOSTEEN_CRATE.get());
+		this.tag(DelightfulBlockTags.STORAGE_BLOCKS_BASTION_FRUIT).add(DelightfulBlocks.BASTION_FRUIT_CRATE.get());
+		this.tag(DelightfulBlockTags.STORAGE_BLOCKS_FROSTAYA).add(DelightfulBlocks.FROSTAYA_CRATE.get());
+		this.tag(DelightfulBlockTags.STORAGE_BLOCKS_BOMBEGRANATE).add(DelightfulBlocks.BOMBEGRANATE_CRATE.get());
+		this.tag(DelightfulBlockTags.STORAGE_BLOCKS_GREEN_APPLE).add(DelightfulBlocks.GREEN_APPLE_CRATE.get());
+		this.tag(DelightfulBlockTags.STORAGE_BLOCKS_YUCCA_FRUIT).add(DelightfulBlocks.YUCCA_FRUIT_CRATE.get());
+		this.tag(DelightfulBlockTags.STORAGE_BLOCKS_BAOBAB_FRUIT).add(DelightfulBlocks.BAOBAB_FRUIT_CRATE.get());
+		this.tag(Tags.Blocks.STORAGE_BLOCKS)
+			.addTag(DelightfulBlockTags.STORAGE_BLOCKS_SALMONBERRIES)
+			.addTag(DelightfulBlockTags.STORAGE_BLOCKS_ACORN)
+			.addTag(DelightfulBlockTags.STORAGE_BLOCKS_BLUEBERRIES)
+			.addTag(DelightfulBlockTags.STORAGE_BLOCKS_MENDOSTEEN)
+			.addTag(DelightfulBlockTags.STORAGE_BLOCKS_BASTION_FRUIT)
+			.addTag(DelightfulBlockTags.STORAGE_BLOCKS_FROSTAYA)
+			.addTag(DelightfulBlockTags.STORAGE_BLOCKS_BOMBEGRANATE)
+			.addTag(DelightfulBlockTags.STORAGE_BLOCKS_GREEN_APPLE)
+			.addTag(DelightfulBlockTags.STORAGE_BLOCKS_YUCCA_FRUIT)
+			.addTag(DelightfulBlockTags.STORAGE_BLOCKS_BAOBAB_FRUIT);
 		this.tag(Tags.Blocks.SAND).addTag(BlockTags.SAND);
 		this.tag(ForgeTags.MINEABLE_WITH_KNIFE)
 			.add(DelightfulBlocks.SLICED_PUMPKIN.get())

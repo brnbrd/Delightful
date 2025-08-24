@@ -1,0 +1,14 @@
+{
+  "values": [
+    "#forge:storage_blocks/salmonberries",
+    "#forge:storage_blocks/acorn",
+    "#forge:storage_blocks/blueberries",
+    "#forge:storage_blocks/mendosteen",
+    "#forge:storage_blocks/bastion_fruit",
+    "#forge:storage_blocks/frostaya",
+    "#forge:storage_blocks/bombegranate",
+    "#forge:storage_blocks/green_apple",
+    "#forge:storage_blocks/yucca_fruit",
+    "#forge:storage_blocks/baobab_fruit"
+  ]
+}

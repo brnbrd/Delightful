@@ -348,6 +348,27 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Util.rl("finsandtails", "white_bull_crab_claw"));
 
 		// Forge
+		this.tag(DelightfulItemTags.STORAGE_BLOCKS_SALMONBERRIES).add(DelightfulItems.SALMONBERRY_SACK.get());
+		this.tag(DelightfulItemTags.STORAGE_BLOCKS_ACORN).add(DelightfulItems.ACORN_SACK.get());
+		this.tag(DelightfulItemTags.STORAGE_BLOCKS_BLUEBERRIES).add(DelightfulItems.BLUEBERRY_SACK.get());
+		this.tag(DelightfulItemTags.STORAGE_BLOCKS_MENDOSTEEN).add(DelightfulItems.MENDOSTEEN_CRATE.get());
+		this.tag(DelightfulItemTags.STORAGE_BLOCKS_BASTION_FRUIT).add(DelightfulItems.BASTION_FRUIT_CRATE.get());
+		this.tag(DelightfulItemTags.STORAGE_BLOCKS_FROSTAYA).add(DelightfulItems.FROSTAYA_CRATE.get());
+		this.tag(DelightfulItemTags.STORAGE_BLOCKS_BOMBEGRANATE).add(DelightfulItems.BOMBEGRANATE_CRATE.get());
+		this.tag(DelightfulItemTags.STORAGE_BLOCKS_GREEN_APPLE).add(DelightfulItems.GREEN_APPLE_CRATE.get());
+		this.tag(DelightfulItemTags.STORAGE_BLOCKS_YUCCA_FRUIT).add(DelightfulItems.YUCCA_FRUIT_CRATE.get());
+		this.tag(DelightfulItemTags.STORAGE_BLOCKS_BAOBAB_FRUIT).add(DelightfulItems.BAOBAB_FRUIT_CRATE.get());
+		this.tag(Tags.Items.STORAGE_BLOCKS)
+			.addTag(DelightfulItemTags.STORAGE_BLOCKS_SALMONBERRIES)
+			.addTag(DelightfulItemTags.STORAGE_BLOCKS_ACORN)
+			.addTag(DelightfulItemTags.STORAGE_BLOCKS_BLUEBERRIES)
+			.addTag(DelightfulItemTags.STORAGE_BLOCKS_MENDOSTEEN)
+			.addTag(DelightfulItemTags.STORAGE_BLOCKS_BASTION_FRUIT)
+			.addTag(DelightfulItemTags.STORAGE_BLOCKS_FROSTAYA)
+			.addTag(DelightfulItemTags.STORAGE_BLOCKS_BOMBEGRANATE)
+			.addTag(DelightfulItemTags.STORAGE_BLOCKS_GREEN_APPLE)
+			.addTag(DelightfulItemTags.STORAGE_BLOCKS_YUCCA_FRUIT)
+			.addTag(DelightfulItemTags.STORAGE_BLOCKS_BAOBAB_FRUIT);
 		this.tag(Tags.Items.TOOLS_FISHING_RODS).addOptional(Modid.RA.rl("flux_fishing_rod"));
 		this.tag(DelightfulItemTags.TOOLS_WRENCH).addOptional(Modid.FOR.rl("wrench"));
 		this.tag(ItemTags.TOOLS).addTag(DelightfulItemTags.TOOLS_WRENCH);

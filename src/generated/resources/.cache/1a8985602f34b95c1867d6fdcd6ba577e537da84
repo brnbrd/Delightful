@@ -1,4 +1,4 @@
-// 1.20.1	2025-08-23T20:04:37.9539423	delightful
+// 1.20.1	2025-08-24T00:32:35.5030553	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -189,6 +189,17 @@ a09b42ac27e237ab7a07cef195745960d786fca5 data/forge/tags/items/seeds.json
 9b41a77626703e8e0afcfac6855ec3e6bc967180 data/forge/tags/items/seeds/cantaloupe.json
 812e02df7738d094a037a44204b8edcb5b13f600 data/forge/tags/items/seeds/salmonberry.json
 d8955b9e7314b64916053e7f89b6953462952a71 data/forge/tags/items/snail_shells.json
+f3c475876bdea4656160c539e05a56492588f0e6 data/forge/tags/items/storage_blocks.json
+5622fa023fc69d358deaa55a6724a1a7f4f8c0ef data/forge/tags/items/storage_blocks/acorn.json
+c12396b42b25790496cb84a519e65e0cf43cc013 data/forge/tags/items/storage_blocks/baobab_fruit.json
+9244dc8eedee0e6712e6d9f904c38613dbee9941 data/forge/tags/items/storage_blocks/bastion_fruit.json
+5d23b80bfbfb8b547b28b4939b2038f74242b545 data/forge/tags/items/storage_blocks/blueberries.json
+c9a53caf25ec5334f26dc138c5ac5a33b1b51e19 data/forge/tags/items/storage_blocks/bombegranate.json
+0523da32132c6c5fc7e4e97d41fee164310aab2e data/forge/tags/items/storage_blocks/frostaya.json
+ac858dd81b235514728341501eca0c15abc5d52f data/forge/tags/items/storage_blocks/green_apple.json
+4d6246a4c357f74db59508a66a7d8eb618ca997a data/forge/tags/items/storage_blocks/mendosteen.json
+910a2f723b246f6301b45d099d22354ad0c850c3 data/forge/tags/items/storage_blocks/salmonberries.json
+1fba4a9f3d99bf10665e6ce2385f4c8b5eb51921 data/forge/tags/items/storage_blocks/yucca_fruit.json
 30f21ef97c6cf8efce09fce76cfb776d9373fa10 data/forge/tags/items/string.json
 5120406cd632defdaaf5d84491da9772a9320b05 data/forge/tags/items/syrup.json
 11cebbb2867afbbe83f8429ec43fa35a4e029095 data/forge/tags/items/syrup/syrup_bottle.json

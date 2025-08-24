@@ -2,6 +2,7 @@ package net.brnbrd.delightful.data.tags;
 
 import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
+import net.brnbrd.delightful.compat.Modid;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
@@ -14,7 +15,23 @@ public class DelightfulBlockTags {
 	public static final TagKey<Block> DROPS_GREEN_TEA_LEAF = bind(Delightful.MODID, "drops_green_tea_leaf");
 	public static final TagKey<Block> CANTALOUPE_SPAWNS = bind(Delightful.MODID, "cantaloupe_spawns");
 
+	// Forge
+	public static final TagKey<Block> STORAGE_BLOCKS_SALMONBERRIES = forge("storage_blocks/salmonberries");
+	public static final TagKey<Block> STORAGE_BLOCKS_ACORN = forge("storage_blocks/acorn");
+	public static final TagKey<Block> STORAGE_BLOCKS_BLUEBERRIES = forge("storage_blocks/blueberries");
+	public static final TagKey<Block> STORAGE_BLOCKS_MENDOSTEEN = forge("storage_blocks/mendosteen");
+	public static final TagKey<Block> STORAGE_BLOCKS_BASTION_FRUIT = forge("storage_blocks/bastion_fruit");
+	public static final TagKey<Block> STORAGE_BLOCKS_FROSTAYA = forge("storage_blocks/frostaya");
+	public static final TagKey<Block> STORAGE_BLOCKS_BOMBEGRANATE = forge("storage_blocks/bombegranate");
+	public static final TagKey<Block> STORAGE_BLOCKS_GREEN_APPLE = forge("storage_blocks/green_apple");
+	public static final TagKey<Block> STORAGE_BLOCKS_YUCCA_FRUIT = forge("storage_blocks/yucca_fruit");
+	public static final TagKey<Block> STORAGE_BLOCKS_BAOBAB_FRUIT = forge("storage_blocks/baobab_fruit");
+
 	private static TagKey<Block> bind(String modid, String name) {
 		return BlockTags.create(Util.rl(modid, name));
+	}
+
+	private static TagKey<Block> forge(String name) {
+		return BlockTags.create(Modid.LOADER.rl(name));
 	}
 }

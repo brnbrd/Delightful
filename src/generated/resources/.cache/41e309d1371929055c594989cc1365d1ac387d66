@@ -1,4 +1,4 @@
-// 1.20.1	2025-08-23T20:04:37.958101	Tags for minecraft:block mod id delightful
+// 1.20.1	2025-08-24T00:32:35.5074095	Tags for minecraft:block mod id delightful
 2469f55332d27164e5aade020a5d1f0d44c68df5 data/delightful/tags/blocks/add_acorn.json
 bbd8407927efc4c85da90a5569654ea62dd49d70 data/delightful/tags/blocks/cantaloupe_spawns.json
 ba6ef28da1fcd146a5a73f41f83db71fb06d65f0 data/delightful/tags/blocks/drops_acorn.json
@@ -8,6 +8,17 @@ a4e8097fff07f9a74259d6b5dd583f3437ff28a2 data/delightful/tags/blocks/drops_green
 46f279b6acd03b06ea14e9f62be7d48e200c002c data/farmersdelight/tags/blocks/wild_crops.json
 14bc6c6d08e4735bf92144781dbd03c518d79ec1 data/forge/tags/blocks/mineable/knife.json
 c1b2a217bb3fcb7e1d67f5bc45409796720bd171 data/forge/tags/blocks/sand.json
+f3c475876bdea4656160c539e05a56492588f0e6 data/forge/tags/blocks/storage_blocks.json
+5622fa023fc69d358deaa55a6724a1a7f4f8c0ef data/forge/tags/blocks/storage_blocks/acorn.json
+c12396b42b25790496cb84a519e65e0cf43cc013 data/forge/tags/blocks/storage_blocks/baobab_fruit.json
+9244dc8eedee0e6712e6d9f904c38613dbee9941 data/forge/tags/blocks/storage_blocks/bastion_fruit.json
+5d23b80bfbfb8b547b28b4939b2038f74242b545 data/forge/tags/blocks/storage_blocks/blueberries.json
+c9a53caf25ec5334f26dc138c5ac5a33b1b51e19 data/forge/tags/blocks/storage_blocks/bombegranate.json
+0523da32132c6c5fc7e4e97d41fee164310aab2e data/forge/tags/blocks/storage_blocks/frostaya.json
+ac858dd81b235514728341501eca0c15abc5d52f data/forge/tags/blocks/storage_blocks/green_apple.json
+4d6246a4c357f74db59508a66a7d8eb618ca997a data/forge/tags/blocks/storage_blocks/mendosteen.json
+910a2f723b246f6301b45d099d22354ad0c850c3 data/forge/tags/blocks/storage_blocks/salmonberries.json
+1fba4a9f3d99bf10665e6ce2385f4c8b5eb51921 data/forge/tags/blocks/storage_blocks/yucca_fruit.json
 c7cbd868b80f2a96c1442a45ac361caee67e6839 data/minecraft/tags/blocks/cauldrons.json
 7076aa6d8c569d949c9e526982a7619cda3286fc data/minecraft/tags/blocks/mineable/axe.json
 730974ec2410f38962e7268c36a358efb820a4cc data/minecraft/tags/blocks/mineable/hoe.json

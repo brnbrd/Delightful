@@ -85,6 +85,16 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> VEGETABLES_CUCUMBER = forge("vegetables/cucumber");
 
 	// Forge
+	public static final TagKey<Item> STORAGE_BLOCKS_SALMONBERRIES = forge("storage_blocks/salmonberries");
+	public static final TagKey<Item> STORAGE_BLOCKS_ACORN = forge("storage_blocks/acorn");
+	public static final TagKey<Item> STORAGE_BLOCKS_BLUEBERRIES = forge("storage_blocks/blueberries");
+	public static final TagKey<Item> STORAGE_BLOCKS_MENDOSTEEN = forge("storage_blocks/mendosteen");
+	public static final TagKey<Item> STORAGE_BLOCKS_BASTION_FRUIT = forge("storage_blocks/bastion_fruit");
+	public static final TagKey<Item> STORAGE_BLOCKS_FROSTAYA = forge("storage_blocks/frostaya");
+	public static final TagKey<Item> STORAGE_BLOCKS_BOMBEGRANATE = forge("storage_blocks/bombegranate");
+	public static final TagKey<Item> STORAGE_BLOCKS_GREEN_APPLE = forge("storage_blocks/green_apple");
+	public static final TagKey<Item> STORAGE_BLOCKS_YUCCA_FRUIT = forge("storage_blocks/yucca_fruit");
+	public static final TagKey<Item> STORAGE_BLOCKS_BAOBAB_FRUIT = forge("storage_blocks/baobab_fruit");
 	public static final TagKey<Item> TOOLS_WRENCH = forge("tools/wrench");
 	public static final TagKey<Item> WRENCHES = forge("wrenches");
 	public static final TagKey<Item> JUICES = forge("juices");
