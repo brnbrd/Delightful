@@ -120,9 +120,10 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.GIVES_SPITE)
 			.addOptional(Modid.ECO.rl("prickly_pear"))
 			.addOptional(Modid.ECO.rl("cooked_prickly_pear"));
-		this.tag(DelightfulItemTags.ROSEY)
+		this.tag(DelightfulItemTags.ROSE)
 			.add(Items.ROSE_BUSH)
 			.addOptional(Modid.BWG.rl("rose"))
+			.addOptional(Modid.BWG.rl("osiria_rose"))
 			.addOptional(Modid.FR.rl("rose_hips"))
 			.addOptional(Modid.SEED.rl("rosehip"))
 			.addOptional(Util.rl("sunflowerdelight", "rosebud"));
@@ -130,9 +131,10 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		// Cactus
 		this.tag(DelightfulItemTags.CROPS_CACTUS)
 			.add(DelightfulItems.CACTUS_FLESH.get())
-			.addOptionalTag(Modid.LOADER.rl("crops/cactus_paddle"))
+			.addOptionalTag(Modid.LOADER.rl("crops/cactus_paddle"));
+		this.tag(DelightfulItemTags.VEGETABLES_CACTUS)
+			.addTag(DelightfulItemTags.CROPS_CACTUS)
 			.addOptionalTag(Modid.LOADER.rl("vegetables/cactus_paddle"));
-		this.tag(DelightfulItemTags.VEGETABLES_CACTUS).addTag(DelightfulItemTags.CROPS_CACTUS);
 		// Tomato
 		this.tag(ForgeTags.CROPS_TOMATO).addOptional(Modid.SAS.rl("tomato_slices"));
 		this.tag(ForgeTags.VEGETABLES_TOMATO).addTag(ForgeTags.CROPS_TOMATO);
@@ -768,7 +770,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.EXQ.rl("nightshade_berry_cookie"))
 			.addOptional(Modid.EXQ.rl("chorus_cookie"))
 			.addOptional(Modid.SEED.rl("rose_cookie"))
-			.addOptional(Util.rl("ends_delight", "chorus_cookie"))
+			.addOptional(Modid.END.rl("chorus_cookie"))
 			.addOptional(Util.rl("sunflowerdelight", "shortbread_cookie"))
 			.addOptional(Util.rl("vampiresdelight", "orchid_cookie"))
 			.addOptional(Util.rl("snowyspirit", "gingerbread_cookie"))

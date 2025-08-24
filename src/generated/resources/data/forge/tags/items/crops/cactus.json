@@ -4,10 +4,6 @@
     {
       "id": "#forge:crops/cactus_paddle",
       "required": false
-    },
-    {
-      "id": "#forge:vegetables/cactus_paddle",
-      "required": false
     }
   ]
 }

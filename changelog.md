@@ -7,16 +7,18 @@
 - Added all bowl foods to `#meals`
 - Added all drinkables to `#drinks`
 - Added Stuffed Cantaloupe to `#feasts`
-- Nut Butter Bottle now requires 1 Kelp
-- Nut Butter Bottle now requires 1 `#forge:salt` if the tag is not empty
+- Renamed `Nut Butter Bottle` to `Nut Butter` in English translations
+- Nut Butter now requires 1 Kelp
+- Nut Butter now requires 1 `#forge:salt` if the tag is not empty
 - Marshmallow on a Stick is now made in the Cooking Pot, requiring Animal Fat or a Slimeball, Sugar, and Dried Vanilla Pods (if [Neapolitan](https://www.curseforge.com/minecraft/mc-mods/neapolitan) is present)
 - All Marshmallow items now provide Slow Falling I
 - Prickly Pear Juice can now be crafted from any `#forge:fruits/prickly_pear` (if Ecologics is not present)
   - Can also be brewed in a Kettle in presence of [Farmer's Respite](https://www.curseforge.com/minecraft/mc-mods/farmers-respite)
 - Field Salad can be crafted from any `#forge:cooked_nuts` instead of only Roasted Acorn
-- Acorn can now be acquired by cutting Oak Sapling or Dark Oak Sapling with a Knife
+- Acorn can now be acquired by cutting Oak Sapling or Dark Oak Sapling with an Axe
 - Recipes for cutting `#forge:cacti` into Cactus Chunk will now also have a chance to provide Green Dye
 - Nut Butter and Jelly Sandwich now provides Toughness I in presence of [Smidgeon o' Bliss REMASTERED](https://www.curseforge.com/minecraft/mc-mods/smidgeon-o-bliss-remastered)
+- Field Salad now provides Regeneration I for 0:10
 - Cantaloupe Gummy now provides Resistance III for 0:15
 
 ### Fixes

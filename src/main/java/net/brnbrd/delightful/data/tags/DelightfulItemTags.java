@@ -17,7 +17,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> COOKED_VENISON_CHOP_COMPAT = d("cooked_venison_chop_compat");
 	public static final TagKey<Item> ROTTEN = d("rotten");
 	public static final TagKey<Item> GIVES_SPITE = d("gives_spite");
-	public static final TagKey<Item> ROSEY = d("rosey");
+	public static final TagKey<Item> ROSE = d("rose");
 
 	// Minecraft
 	public static final TagKey<Item> FLOWERS_AZALEA = Modid.MC.it("flowers/azalea");

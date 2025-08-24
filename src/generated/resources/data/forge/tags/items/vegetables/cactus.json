@@ -1,5 +1,9 @@
 {
   "values": [
-    "#forge:crops/cactus"
+    "#forge:crops/cactus",
+    {
+      "id": "#forge:vegetables/cactus_paddle",
+      "required": false
+    }
   ]
 }

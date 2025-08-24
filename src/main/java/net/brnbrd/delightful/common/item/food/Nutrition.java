@@ -95,9 +95,9 @@ public class Nutrition {
 		.nutrition(6).saturationMod(0.75F)
 		.effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 1800, 0), 1F).build();
 	public static final FoodProperties FIELD_SALAD = (new FoodProperties.Builder())
-		.nutrition(10).saturationMod(0.55F)
-		.effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 100, 0), 1F)
-		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 600, 0), 1F).build();
+		.nutrition(10).saturationMod(0.6F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 600, 0), 1F)
+		.effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 200, 0), 1F).build();
 	public static final FoodProperties VENISON_CHOPS = (new FoodProperties.Builder())
 		.nutrition(1).saturationMod(0.3F)
 		.meat()

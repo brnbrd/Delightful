@@ -28,7 +28,7 @@
         "experience": 2.0,
         "ingredients": [
           {
-            "tag": "delightful:rosey"
+            "tag": "delightful:rose"
           },
           {
             "item": "minecraft:sugar"
@@ -76,7 +76,7 @@
         "experience": 2.0,
         "ingredients": [
           {
-            "tag": "delightful:rosey"
+            "tag": "delightful:rose"
           },
           {
             "item": "minecraft:sugar"
@@ -121,7 +121,7 @@
         "experience": 2.0,
         "ingredients": [
           {
-            "tag": "delightful:rosey"
+            "tag": "delightful:rose"
           },
           {
             "item": "minecraft:sugar"

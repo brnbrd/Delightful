@@ -6,6 +6,10 @@
       "required": false
     },
     {
+      "id": "biomeswevegone:osiria_rose",
+      "required": false
+    },
+    {
       "id": "farmersrespite:rose_hips",
       "required": false
     },

@@ -1,0 +1,35 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "oreganized:grooved_ice"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "neapolitan:ice_cubes"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "oreganized:grooved_ice"
+          }
+        ],
+        "tool": {
+          "type": "farmersdelight:tool_action",
+          "action": "pickaxe_dig"
+        },
+        "result": [
+          {
+            "item": "neapolitan:ice_cubes",
+            "count": 4
+          }
+        ]
+      }
+    }
+  ]
+}

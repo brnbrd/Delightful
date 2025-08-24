@@ -4,29 +4,26 @@
     {
       "conditions": [
         {
-          "type": "forge:not",
-          "value": {
-            "type": "forge:tag_empty",
-            "tag": "biomeswevegone:dye/makes_pink"
-          }
+          "type": "forge:item_exists",
+          "item": "biomeswevegone:pink_allium"
         }
       ],
       "recipe": {
         "type": "farmersdelight:cutting",
         "ingredients": [
           {
-            "tag": "biomeswevegone:dye/makes_pink"
+            "item": "biomeswevegone:pink_allium"
           }
         ],
+        "tool": {
+          "tag": "forge:tools/knives"
+        },
         "result": [
           {
             "count": 2,
             "item": "minecraft:pink_dye"
           }
-        ],
-        "tool": {
-          "tag": "forge:tools/knives"
-        }
+        ]
       }
     }
   ]
