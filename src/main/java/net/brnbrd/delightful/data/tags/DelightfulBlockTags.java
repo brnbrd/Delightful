@@ -6,6 +6,7 @@ import net.brnbrd.delightful.compat.Modid;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
+import org.jetbrains.annotations.NotNull;
 
 public class DelightfulBlockTags {
 	// Delightful
@@ -27,11 +28,11 @@ public class DelightfulBlockTags {
 	public static final TagKey<Block> STORAGE_BLOCKS_YUCCA_FRUIT = forge("storage_blocks/yucca_fruit");
 	public static final TagKey<Block> STORAGE_BLOCKS_BAOBAB_FRUIT = forge("storage_blocks/baobab_fruit");
 
-	private static TagKey<Block> bind(String modid, String name) {
+	private static TagKey<Block> bind(@NotNull String modid, @NotNull String name) {
 		return BlockTags.create(Util.rl(modid, name));
 	}
 
-	private static TagKey<Block> forge(String name) {
-		return BlockTags.create(Modid.LOADER.rl(name));
+	private static TagKey<Block> forge(@NotNull String name) {
+		return bind(Modid.LOADER.get(), name);
 	}
 }

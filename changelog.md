@@ -11,9 +11,10 @@
 - Renamed `Nut Butter Bottle` to `Nut Butter` in English translations
 - Nut Butter now requires 1 Kelp
 - Nut Butter now requires 1 `#forge:salt` if the tag is not empty
+- Updated texture for Nut Butter
 - Marshmallow on a Stick is now made in the Cooking Pot, requiring Animal Fat or a Slimeball, Sugar, and Dried Vanilla Pods (if [Neapolitan](https://www.curseforge.com/minecraft/mc-mods/neapolitan) is present)
 - All Marshmallow items now provide Slow Falling I
-- Prickly Pear Juice can now be crafted from any `#forge:fruits/prickly_pear` (if Ecologics is not present)
+- Prickly Pear Juice can now be crafted from any `#forge:fruits/prickly_pear`
   - Can also be brewed in a Kettle in presence of [Farmer's Respite](https://www.curseforge.com/minecraft/mc-mods/farmers-respite)
 - Field Salad can be crafted from any `#forge:cooked_nuts` instead of only Roasted Acorn
 - Acorn can now be acquired by cutting Oak Sapling or Dark Oak Sapling with an Axe
@@ -27,6 +28,7 @@
 - Cactus Chili and Cactus Soup recipes are no longer swapped (closes [#131](https://github.com/brnbrd/Delightful/issues/131))
 
 ### Coaster models for [Brewin' and Chewin'](https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin)
+- Updated model for Nut Butter
 - Fixed Bouddha's Hand model clipping with Coaster
 
 
