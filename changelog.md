@@ -9,6 +9,7 @@
 - Added Stuffed Cantaloupe to `#feasts`
 - Added all storage blocks to `#forge:storage_blocks`
 - Renamed `Nut Butter Bottle` to `Nut Butter` in English translations
+- Nut Butter now provides 6 nutrition
 - Nut Butter now requires 1 Kelp
 - Nut Butter now requires 1 `#forge:salt` if the tag is not empty
 - Updated texture for Nut Butter
