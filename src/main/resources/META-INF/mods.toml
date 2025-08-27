@@ -134,7 +134,7 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
 [[dependencies.delightful]]
     modId="create"
     mandatory=false
-    versionRange="[5,)"
+    versionRange="[0.5,)"
     ordering="AFTER"
     side="BOTH"
 
@@ -550,6 +550,13 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
     versionRange="[1.5,)"
     ordering="AFTER"
     side="BOTH"
+
+[[dependencies.delightful]]
+	modId="windswept"
+	mandatory=false
+	versionRange="[3,)"
+	ordering="AFTER"
+	side="BOTH"
 
 [[dependencies.delightful]]
 	modId="sob"

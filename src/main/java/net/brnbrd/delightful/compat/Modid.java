@@ -103,6 +103,7 @@ public enum Modid {
 	SO("simpleores"),
 	SOB("sob"),
 	SP("spirit"),
+	SS("snowyspirit"),
 	SUP("supplementaries"),
 	TF("twilightforest"),
 	TFD("twilightdelight"),
