@@ -27,6 +27,7 @@
 ### Fixes
 - Features will now not generate in the world if their respective item is disabled (closes [#118](https://github.com/brnbrd/Delightful/issues/118))
 - Cactus Chili and Cactus Soup recipes are no longer swapped (closes [#131](https://github.com/brnbrd/Delightful/issues/131))
+- Fixed Pie Crust recipe from `#forge:flour` requiring 2 instead of 3 (closes [#135](https://github.com/brnbrd/Delightful/issues/135))
 - Update dependency versions (closes [#136](https://github.com/brnbrd/Delightful/issues/136))
 
 ### Coaster models for [Brewin' and Chewin'](https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin)

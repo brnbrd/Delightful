@@ -20,17 +20,23 @@
         "category": "misc",
         "ingredients": [
           {
+            "tag": "forge:dusts/flour/nut"
+          },
+          {
+            "tag": "forge:dusts/flour/nut"
+          },
+          {
+            "tag": "forge:dusts/flour/nut"
+          },
+          {
             "tag": "forge:eggs"
           },
           {
             "item": "minecraft:sugar"
-          },
-          {
-            "tag": "forge:dusts/flour/nut"
           }
         ],
         "result": {
-          "count": 2,
+          "count": 3,
           "item": "delightful:nut_dough"
         }
       }

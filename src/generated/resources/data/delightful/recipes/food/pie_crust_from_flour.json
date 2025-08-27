@@ -15,15 +15,16 @@
         "type": "minecraft:crafting_shaped",
         "category": "misc",
         "key": {
+          "M": {
+            "tag": "forge:milk"
+          },
           "f": {
             "tag": "forge:flour"
-          },
-          "m": {
-            "tag": "forge:milk"
           }
         },
         "pattern": [
-          "fmf"
+          "fMf",
+          " f "
         ],
         "result": {
           "item": "farmersdelight:pie_crust"

@@ -16,13 +16,16 @@
         "category": "misc",
         "ingredients": [
           {
+            "tag": "forge:dusts/flour/wheat"
+          },
+          {
+            "tag": "forge:dusts/flour/wheat"
+          },
+          {
+            "tag": "forge:dusts/flour/wheat"
+          },
+          {
             "tag": "forge:eggs"
-          },
-          {
-            "tag": "forge:dusts/flour/wheat"
-          },
-          {
-            "tag": "forge:dusts/flour/wheat"
           }
         ],
         "result": {
