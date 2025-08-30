@@ -19,9 +19,17 @@
       "recipe": {
         "type": "minecraft:crafting_shapeless",
         "ingredients": [
-          {
-            "item": "minecraft:water_bucket"
-          },
+          [
+            {
+              "tag": "forge:water"
+            },
+            {
+              "count": 1,
+              "type": "forge:nbt",
+              "item": "minecraft:potion",
+              "nbt": "{Potion:\"minecraft:water\"}"
+            }
+          ],
           {
             "tag": "forge:ash"
           },

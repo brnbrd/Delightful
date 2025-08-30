@@ -1,4 +1,4 @@
-// 1.20.1	2025-08-30T11:23:14.7676117	Recipes
+// 1.20.1	2025-08-30T12:07:14.9613751	Recipes
 6c217dd6477efa10f6042809ba959d53036ab5e2 data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 5b82f87851220644287d771121677deac66b3b89 data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
 cf29033c1c919355c261025df529938e6ebc73f8 data/delightful/advancements/recipes/campfire/cactus_steak.json
@@ -51,7 +51,9 @@ a55afd89fc20c41ecf78d788e2cc78fd53b16d43 data/delightful/advancements/recipes/fo
 1d0174f5be8bfa6f204c1332055ca494e5c83c4d data/delightful/advancements/recipes/food/nut_butter_and_jam_sandwich.json
 2185bc7207fc4c559363738f242d4c376fef58cb data/delightful/advancements/recipes/food/nut_dough.json
 815e5f3997d841f2174ea4d84bd37bd975380ae6 data/delightful/advancements/recipes/food/nut_dough_from_flour_and_eggs.json
+b70d1e3c9e034c2622c406ef78c0f46933356fef data/delightful/advancements/recipes/food/pie_crust_from_fat.json
 df888352962a9e46a31a05d6a998466f7fdeacfd data/delightful/advancements/recipes/food/pie_crust_from_flour.json
+d0f9dce97abb7f16333c1e762621d4d12f4308b1 data/delightful/advancements/recipes/food/pie_crust_from_flour_and_fat.json
 65f946d840dac2ea78c6459feb7f22b28448208e data/delightful/advancements/recipes/food/pumpkin_pie.json
 bbd93befe929807dc31910ab7e5fbebc3a19d257 data/delightful/advancements/recipes/food/pumpkin_pie_from_slices.json
 9c3ad26a24644789b6945613bc1a3a3946b0bc02 data/delightful/advancements/recipes/food/salmonberry_ice_cream.json
@@ -211,7 +213,9 @@ f91ed3f632217f18a49d52ee71585fc81cd2bdab data/delightful/recipes/food/matcha_mil
 d1efd68e878a48f58f8eace33c045f8848f10b8a data/delightful/recipes/food/nut_butter_and_jam_sandwich.json
 11f4706e45f8cfd1d00c5357bec8e86f7f987ddb data/delightful/recipes/food/nut_dough.json
 bb3c25c1bd6d1ef93d33847964dd889b84aa8f99 data/delightful/recipes/food/nut_dough_from_flour_and_eggs.json
+bed03c543a51251c5532833d763aeabc27552597 data/delightful/recipes/food/pie_crust_from_fat.json
 e5ec134f222df62b093020a04ac61ece04777f52 data/delightful/recipes/food/pie_crust_from_flour.json
+2b54a27430034db6e79066dc3ba19886531162a9 data/delightful/recipes/food/pie_crust_from_flour_and_fat.json
 e680acd761f4e2835cef385098a98361bdc26c3d data/delightful/recipes/food/pumpkin_pie.json
 90d923e77156948132631f4cf2a6e5a7965de89d data/delightful/recipes/food/pumpkin_pie_from_slices.json
 702827fa80aa411fde79721f1c5495c12174a65d data/delightful/recipes/food/salmonberry_ice_cream.json

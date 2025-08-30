@@ -528,12 +528,26 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 				.unlockedBy("has_wheat_flour", has(DelightfulItemTags.DUSTS_FLOUR_WHEAT)),
 			"food/wheat_dough_from_flour_and_eggs", finished, not(tagEmpty(DelightfulItemTags.DUSTS_FLOUR_WHEAT)));
 		wrap(ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PIE_CRUST.get(), 1)
+				.pattern("fAf")
+				.pattern(" f ")
+				.define('f', ForgeTags.GRAIN_WHEAT)
+				.define('A', DelightfulItems.ANIMAL_FAT.get())
+				.unlockedBy("has_fat", has(DelightfulItems.ANIMAL_FAT.get())),
+			"food/pie_crust_from_fat", finished, enabled(DelightfulItems.ANIMAL_FAT));
+		wrap(ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PIE_CRUST.get(), 1)
 				.pattern("fMf")
 				.pattern(" f ")
 				.define('f', DelightfulItemTags.FLOUR)
 				.define('M', ForgeTags.MILK)
 				.unlockedBy("has_flour", has(DelightfulItemTags.FLOUR)),
 			"food/pie_crust_from_flour", finished, not(tagEmpty(DelightfulItemTags.FLOUR)));
+		wrap(ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PIE_CRUST.get(), 1)
+				.pattern("fAf")
+				.pattern(" f ")
+				.define('f', DelightfulItemTags.FLOUR)
+				.define('A', DelightfulItems.ANIMAL_FAT.get())
+				.unlockedBy("has_flour", has(DelightfulItemTags.FLOUR)),
+			"food/pie_crust_from_flour_and_fat", finished, enabled(DelightfulItems.ANIMAL_FAT), not(tagEmpty(DelightfulItemTags.FLOUR)));
 		wrap(ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Items.TORCH, 8)
 						.define('o', DelightfulItems.ANIMAL_OIL_BOTTLE.get())
 						.define('s', Tags.Items.RODS_WOODEN)

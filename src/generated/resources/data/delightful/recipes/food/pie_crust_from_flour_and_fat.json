@@ -1,0 +1,40 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "animal_fat"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:flour"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "key": {
+          "A": {
+            "item": "delightful:animal_fat"
+          },
+          "f": {
+            "tag": "forge:flour"
+          }
+        },
+        "pattern": [
+          "fAf",
+          " f "
+        ],
+        "result": {
+          "item": "farmersdelight:pie_crust"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

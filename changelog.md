@@ -18,6 +18,7 @@
 - Prickly Pear Juice can now be crafted from any `#forge:fruits/prickly_pear`
   - Can also be brewed in a Kettle in presence of [Farmer's Respite](https://www.curseforge.com/minecraft/mc-mods/farmers-respite)
 - Field Salad can be crafted from any `#forge:cooked_nuts` instead of only Roasted Acorn
+- Pie Crust can be crafted from Animal Fat in place of Milk
 - Acorn can now be acquired by cutting Oak Sapling or Dark Oak Sapling with an Axe
 - Recipes for cutting `#forge:cacti` into Cactus Chunk will now also have a chance to provide Green Dye
 - Nut Butter and Jelly Sandwich now provides Toughness I in presence of [Smidgeon o' Bliss REMASTERED](https://www.curseforge.com/minecraft/mc-mods/smidgeon-o-bliss-remastered)
