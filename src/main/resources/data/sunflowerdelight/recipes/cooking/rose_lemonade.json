@@ -17,6 +17,65 @@
             "type": "forge:tag_empty",
             "tag": "forge:fruits/lemon"
           }
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "farmersrespite:rose_hips"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:glass_bottle"
+        },
+        "cookingtime": 400,
+        "experience": 2.0,
+        "ingredients": [
+          {
+            "item": "farmersrespite:rose_hips"
+          },
+          {
+            "item": "minecraft:sugar"
+          },
+          {
+            "tag": "forge:fruits/lemon"
+          },
+          {
+            "tag": "forge:fruits/melon"
+          },
+          {
+            "item": "minecraft:nether_wart"
+          }
+        ],
+        "recipe_book_tab": "drinks",
+        "result": {
+          "item": "sunflowerdelight:rose_lemonade"
+        }
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "sunflowerdelight"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "sunflowerdelight:rose_lemonade"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:fruits/lemon"
+          }
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:item_exists",
+            "item": "farmersrespite:rose_hips"
+          }
         }
       ],
       "recipe": {

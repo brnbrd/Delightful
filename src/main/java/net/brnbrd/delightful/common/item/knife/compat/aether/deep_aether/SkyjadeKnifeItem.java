@@ -8,10 +8,10 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.ItemStack;
-import org.jetbrains.annotations.NotNull;
 import teamrazor.deepaether.DeepAetherConfig;
 import teamrazor.deepaether.init.DATiers;
 import teamrazor.deepaether.item.gear.skyjade.SkyjadeWeapon;
+import org.jetbrains.annotations.NotNull;
 
 public class SkyjadeKnifeItem extends AetherKnifeItem implements SkyjadeWeapon {
 	public SkyjadeKnifeItem(Properties properties) {

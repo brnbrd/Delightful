@@ -1,9 +1,9 @@
 package net.brnbrd.delightful.common.item.food;
 
+import net.brnbrd.delightful.Util;
+import net.brnbrd.delightful.compat.Modid;
+import net.brnbrd.delightful.compat.Mods;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.item.Item;
-import org.jetbrains.annotations.Nullable;
 
 public class ChoppedCloverItem extends DConsumableItem {
 	public ChoppedCloverItem(Properties properties) {
@@ -11,7 +11,10 @@ public class ChoppedCloverItem extends DConsumableItem {
 	}
 
 	@Override
-	public @Nullable TagKey<Item> getDependencyTag() {
-		return DelightfulItemTags.CLOVER;
+	public boolean enabled() {
+		return super.enabled() && (
+			Mods.loaded(Modid.BB) || // Buzzier Bees loaded (contains purposefully not-tagged clovers)
+			Util.tagPopulated(DelightfulItemTags.CLOVER)
+		);
 	}
 }

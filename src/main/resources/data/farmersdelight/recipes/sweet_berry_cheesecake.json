@@ -5,7 +5,7 @@
       "conditions": [
         {
           "type": "forge:tag_empty",
-          "tag": "forge:cheese"
+          "tag": "forge:cheese/yellow"
         }
       ],
       "recipe": {
@@ -43,7 +43,7 @@
           "type": "forge:not",
           "value": {
             "type": "forge:tag_empty",
-            "tag": "forge:cheese"
+            "tag": "forge:cheese/yellow"
           }
         }
       ],
@@ -56,7 +56,7 @@
             "item": "farmersdelight:pie_crust"
           },
           "c": {
-            "tag": "forge:cheese"
+            "tag": "forge:cheese/yellow"
           },
           "s": {
             "item": "minecraft:sweet_berries"

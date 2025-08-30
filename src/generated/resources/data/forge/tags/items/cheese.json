@@ -1,35 +1,21 @@
 {
   "values": [
+    "#forge:cheese/yellow",
+    "#forge:cheese/scarlet",
     {
       "id": "#forge:cheeses",
       "required": false
     },
     {
-      "id": "#hearthandharvest:cheese_slices",
+      "id": "#brewinandchewin:cheese_wedges",
       "required": false
     },
     {
-      "id": "brewinandchewin:flaxen_cheese_wedge",
-      "required": false
-    },
-    {
-      "id": "croptopia:cheese",
-      "required": false
-    },
-    {
-      "id": "thermal:cheese_wedge",
-      "required": false
-    },
-    {
-      "id": "casualness_delight:cheese_wheel_slice",
+      "id": "hearthandharvest:goat_cheese_slice",
       "required": false
     },
     {
       "id": "farmlife:tribull_cheese_wedge",
-      "required": false
-    },
-    {
-      "id": "ad_astra:cheese",
       "required": false
     }
   ]

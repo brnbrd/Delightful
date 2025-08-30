@@ -11,7 +11,7 @@
           "type": "forge:not",
           "value": {
             "type": "forge:tag_empty",
-            "tag": "forge:lavender"
+            "tag": "delightful:lavender"
           }
         },
         {
@@ -26,6 +26,13 @@
           "value": {
             "type": "forge:mod_loaded",
             "modid": "farmersrespite"
+          }
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:item_exists",
+            "item": "windswept:lavender_tea"
           }
         }
       ],
@@ -49,14 +56,73 @@
             "tag": "forge:tea_leaves"
           },
           {
-            "tag": "forge:lavender"
+            "tag": "delightful:lavender"
           },
           {
-            "tag": "forge:lavender"
+            "tag": "delightful:lavender"
           }
         ],
         "result": {
           "item": "delightful:lavender_tea"
+        }
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "delightful:lavender"
+          }
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:mod_loaded",
+            "modid": "youkaishomecoming"
+          }
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:mod_loaded",
+            "modid": "farmersrespite"
+          }
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "windswept:lavender_tea"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "cookingtime": 200,
+        "experience": 0.35,
+        "ingredients": [
+          [
+            {
+              "tag": "forge:water"
+            },
+            {
+              "count": 1,
+              "type": "forge:nbt",
+              "item": "minecraft:potion",
+              "nbt": "{Potion:\"minecraft:water\"}"
+            }
+          ],
+          {
+            "tag": "forge:tea_leaves"
+          },
+          {
+            "tag": "delightful:lavender"
+          },
+          {
+            "tag": "delightful:lavender"
+          }
+        ],
+        "result": {
+          "item": "windswept:lavender_tea"
         }
       }
     }

@@ -4,6 +4,10 @@
     {
       "conditions": [
         {
+          "type": "delightful:enabled",
+          "value": "pumpkin_pie_slice"
+        },
+        {
           "type": "forge:not",
           "value": {
             "type": "forge:mod_loaded",

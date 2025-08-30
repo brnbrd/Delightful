@@ -1,0 +1,28 @@
+{
+  "values": [
+    {
+      "id": "brewinandchewin:flaxen_cheese_wedge",
+      "required": false
+    },
+    {
+      "id": "hearthandharvest:cheddar_cheese_slice",
+      "required": false
+    },
+    {
+      "id": "croptopia:cheese",
+      "required": false
+    },
+    {
+      "id": "thermal:cheese_wedge",
+      "required": false
+    },
+    {
+      "id": "casualness_delight:cheese_wheel_slice",
+      "required": false
+    },
+    {
+      "id": "ad_astra:cheese",
+      "required": false
+    }
+  ]
+}

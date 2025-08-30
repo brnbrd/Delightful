@@ -88,6 +88,10 @@
       "required": false
     },
     {
+      "id": "windswept:pinecone_jam_bottle",
+      "required": false
+    },
+    {
       "id": "thermal:jelly",
       "required": false
     }

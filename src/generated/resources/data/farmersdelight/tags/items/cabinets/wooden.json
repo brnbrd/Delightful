@@ -1,15 +1,15 @@
 {
   "values": [
     {
-      "id": "arsdelight:archwood_cabinet",
-      "required": false
-    },
-    {
       "id": "windswept:holly_cabinet",
       "required": false
     },
     {
       "id": "windswept:chestnut_cabinet",
+      "required": false
+    },
+    {
+      "id": "arsdelight:archwood_cabinet",
       "required": false
     },
     {

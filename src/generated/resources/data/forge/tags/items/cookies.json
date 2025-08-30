@@ -102,15 +102,19 @@
       "required": false
     },
     {
+      "id": "snowyspirit:gingerbread_cookie",
+      "required": false
+    },
+    {
+      "id": "windswept:gingerbread_cookie",
+      "required": false
+    },
+    {
       "id": "sunflowerdelight:shortbread_cookie",
       "required": false
     },
     {
       "id": "vampiresdelight:orchid_cookie",
-      "required": false
-    },
-    {
-      "id": "snowyspirit:gingerbread_cookie",
       "required": false
     },
     {

@@ -33,6 +33,14 @@
     {
       "id": "farmersrespite:gamblers_tea",
       "required": false
+    },
+    {
+      "id": "windswept:lavender_tea",
+      "required": false
+    },
+    {
+      "id": "windswept:ginger_tea",
+      "required": false
     }
   ]
 }

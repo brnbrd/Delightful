@@ -28,10 +28,10 @@ public class Nutrition {
 	public static final FoodProperties COOKED_MARSHMALLOW_STICK = (new FoodProperties.Builder())
 		.nutrition(5).saturationMod(0.35F)
 		.effect(() -> new MobEffectInstance(NeapolitanCompat.getSugarRush(), 300, 0), 1F)
-		.effect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, 300, 0), 1F).build();
+		.effect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 0), 1F).build();
 	public static final FoodProperties SMORE = (new FoodProperties.Builder())
 		.nutrition(8).saturationMod(0.4F)
-		.effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 3600, 0), 1F)
+		.effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 2400, 0), 1F)
 		.effect(() -> new MobEffectInstance(NeapolitanCompat.getSugarRush(), 600, 1), 1F)
 		.effect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 0), 1F).build();
 	public static final FoodProperties CRAB_RANGOON = (new FoodProperties.Builder())
@@ -155,7 +155,7 @@ public class Nutrition {
 	public static final FoodProperties BERRY_MATCHA_LATTE = (new FoodProperties.Builder()).alwaysEat()
 		.nutrition(8).saturationMod(0.65F)
 		.effect(() -> new MobEffectInstance(TeaCompat.getGreenTeaEffect().get(), 400, 1), 1F)
-		.effect(() -> new MobEffectInstance(TeaCompat.getCaffeinated().get(), 4200, 1), 1F).build();
+		.effect(() -> new MobEffectInstance(TeaCompat.getCaffeinated().get(), 3600, 1), 1F).build();
 	public static final FoodProperties MATCHA_ICE_CREAM = (new FoodProperties.Builder())
 		.nutrition(6).saturationMod(0.5F)
 		.effect(() -> new MobEffectInstance(TeaCompat.getGreenTeaEffect().get(), 500, 1), 1F)

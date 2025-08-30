@@ -11,7 +11,7 @@
           "type": "forge:not",
           "value": {
             "type": "forge:tag_empty",
-            "tag": "forge:lavender"
+            "tag": "delightful:lavender"
           }
         },
         {
@@ -29,7 +29,7 @@
         "experience": 0.35,
         "ingredients": [
           {
-            "tag": "forge:lavender"
+            "tag": "delightful:lavender"
           },
           {
             "tag": "forge:tea_leaves"

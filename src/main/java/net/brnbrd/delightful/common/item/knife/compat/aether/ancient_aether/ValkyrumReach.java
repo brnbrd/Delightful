@@ -14,10 +14,18 @@ public interface ValkyrumReach {
 		if (slot == EquipmentSlot.MAINHAND) {
 			ImmutableMultimap.Builder<Attribute, AttributeModifier> attributeBuilder = ImmutableMultimap.builder();
 			attributeBuilder.putAll(map);
-			attributeBuilder.put(ForgeMod.BLOCK_REACH.get(), new AttributeModifier(Util.BLOCK_REACH,
-					"Block reach modifier", getModifier(), AttributeModifier.Operation.ADDITION));
-			attributeBuilder.put(ForgeMod.ENTITY_REACH.get(), new AttributeModifier(Util.ENTITY_REACH,
-					"Entity reach modifier", getModifier(), AttributeModifier.Operation.ADDITION));
+			attributeBuilder.put(ForgeMod.BLOCK_REACH.get(), new AttributeModifier(
+				Util.BLOCK_REACH,
+				"Block reach modifier",
+				getModifier(),
+				AttributeModifier.Operation.ADDITION
+			));
+			attributeBuilder.put(ForgeMod.ENTITY_REACH.get(), new AttributeModifier(
+				Util.ENTITY_REACH,
+				"Entity reach modifier",
+				getModifier(),
+				AttributeModifier.Operation.ADDITION
+			));
 			map = attributeBuilder.build();
 		}
 		return map;

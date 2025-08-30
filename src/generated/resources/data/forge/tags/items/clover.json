@@ -13,10 +13,6 @@
       "required": false
     },
     {
-      "id": "buzzier_bees:four_leaf_clover",
-      "required": false
-    },
-    {
       "id": "regions_unexplored:clover",
       "required": false
     }

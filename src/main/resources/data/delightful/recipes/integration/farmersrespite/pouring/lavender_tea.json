@@ -11,12 +11,19 @@
           "type": "forge:not",
           "value": {
             "type": "forge:tag_empty",
-            "tag": "forge:lavender"
+            "tag": "delightful:lavender"
           }
         },
         {
           "type": "forge:mod_loaded",
           "modid": "farmersrespite"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:item_exists",
+            "item": "windswept:lavender_tea"
+          }
         }
       ],
       "recipe": {
@@ -28,6 +35,36 @@
         "fluid": "delightful:lavender_tea",
         "output": {
           "item": "delightful:lavender_tea"
+        }
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "delightful:lavender"
+          }
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "farmersrespite"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "windswept:lavender_tea"
+        }
+      ],
+      "recipe": {
+        "type": "farmersrespite:kettle_pouring",
+        "amount": 250,
+        "container": {
+          "item": "minecraft:glass_bottle"
+        },
+        "fluid": "delightful:lavender_tea",
+        "output": {
+          "item": "windswept:lavender_tea"
         }
       }
     }

@@ -141,21 +141,23 @@ public class DelightfulItems {
 	public static final RegistryObject<Item> VENISON_STEW_CUP = registerItem("venison_stew_cup", () -> new VenisonStewCupItem((new Item.Properties()).food(Nutrition.VENISON_STEW_CUP), true, false));
 	public static final RegistryObject<Item> SINIGANG = registerItem("sinigang", () -> new ConsumableItem((new Item.Properties()).food(Nutrition.SINIGANG).craftRemainder(Items.BOWL).stacksTo(16), true, false));
 	public static final RegistryObject<Item> COCONUT_CURRY = registerItem("coconut_curry",
-			() -> new CoconutCurryItem((new Item.Properties()).food(Nutrition.COCONUT_CURRY).stacksTo(16).craftRemainder(Items.BOWL)));
-	public static final RegistryObject<Item> FIELD_SALAD = registerItem("field_salad", () -> new DConsumableItem((new Item.Properties()).food(Nutrition.FIELD_SALAD).stacksTo(16).craftRemainder(Items.BOWL), true, false));
+		() -> new CoconutCurryItem((new Item.Properties()).food(Nutrition.COCONUT_CURRY).stacksTo(16).craftRemainder(Items.BOWL)));
+	public static final RegistryObject<Item> FIELD_SALAD = registerItem("field_salad",
+		() -> new DConsumableItem((new Item.Properties()).food(Nutrition.FIELD_SALAD).stacksTo(16).craftRemainder(Items.BOWL), true, false));
 	public static final RegistryObject<Item> ENDER_NECTAR = registerItem("ender_nectar",
-			() -> new EnderNectarItem((new Item.Properties()).food(Nutrition.ENDER_NECTAR).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16)));
+		() -> new EnderNectarItem((new Item.Properties()).food(Nutrition.ENDER_NECTAR).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16)));
 	public static final RegistryObject<Item> MATCHA_LATTE = registerItem("matcha_latte",
-			() -> new MatchaLatteItem((new Item.Properties()).food(Nutrition.MATCHA_LATTE), true));
+		() -> new MatchaLatteItem((new Item.Properties()).food(Nutrition.MATCHA_LATTE), true));
 	public static final RegistryObject<Item> BERRY_MATCHA_LATTE = registerItem("berry_matcha_latte",
-			() -> new MatchaLatteItem((new Item.Properties()).food(Nutrition.BERRY_MATCHA_LATTE), true));
+		() -> new MatchaLatteItem((new Item.Properties()).food(Nutrition.BERRY_MATCHA_LATTE), true));
 	public static final RegistryObject<Item> AZALEA_TEA = registerItem("azalea_tea",
 		() -> new TeaItem((new Item.Properties()).food(Nutrition.AZALEA_TEA), DelightfulItemTags.FLOWERS_AZALEA, false));
 	public static final RegistryObject<Item> LAVENDER_TEA = registerItem("lavender_tea",
-		() -> new TeaItem((new Item.Properties()).food(Nutrition.LAVENDER_TEA), DelightfulItemTags.LAVENDER, false));
+		() -> new LavenderTeaItem((new Item.Properties()).food(Nutrition.LAVENDER_TEA)));
 	public static final RegistryObject<Item> PRICKLY_PEAR_JUICE = registerItem("prickly_pear_juice",
 		() -> new PricklyPearJuiceItem((new Item.Properties()).food(Nutrition.PRICKLY_PEAR_JUICE).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16)));
-	public static final RegistryObject<Item> JAM_JAR = registerItem("jam_jar", () -> new JamJarItem((new Item.Properties()).food(Nutrition.JAM_JAR).craftRemainder(Items.GLASS_BOTTLE), false, false));
+	public static final RegistryObject<Item> JAM_JAR = registerItem("jam_jar",
+		() -> new JamJarItem((new Item.Properties()).food(Nutrition.JAM_JAR).craftRemainder(Items.GLASS_BOTTLE), false, false));
 	public static final RegistryObject<Item> GLOW_JAM_JAR = registerItem("glow_jam_jar",
 		() -> new JamJarItem((new Item.Properties()).food(Nutrition.GLOW_JAM_JAR).craftRemainder(Items.GLASS_BOTTLE), true, false));
 	public static final RegistryObject<Item> NUT_BUTTER_BOTTLE = registerItem("nut_butter_bottle", () -> new NutButterBottleItem(((new Item.Properties()).food(Nutrition.NUT_BUTTER_BOTTLE).craftRemainder(Items.GLASS_BOTTLE))));

@@ -4,19 +4,19 @@
     {
       "conditions": [
         {
-          "type": "delightful:enabled",
-          "value": "raw_goat"
+          "type": "forge:item_exists",
+          "item": "windswept:cooked_goat"
         },
         {
-          "item": "windswept:goat_shanks",
-          "type": "forge:item_exists"
+          "type": "forge:item_exists",
+          "item": "extra_compat:cooked_chevon_chop"
         }
       ],
       "recipe": {
         "type": "farmersdelight:cutting",
         "ingredients": [
           {
-            "item": "delightful:raw_goat"
+            "item": "windswept:cooked_goat"
           }
         ],
         "tool": {
@@ -24,7 +24,7 @@
         },
         "result": [
           {
-            "item": "windswept:goat_shanks",
+            "item": "extra_compat:cooked_chevon_chop",
             "count": 2
           }
         ]

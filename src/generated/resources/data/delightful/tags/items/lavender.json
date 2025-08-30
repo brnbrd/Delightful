@@ -5,6 +5,10 @@
       "required": false
     },
     {
+      "id": "windswept:lavender",
+      "required": false
+    },
+    {
       "id": "biomesoplenty:lavender",
       "required": false
     },

@@ -20,7 +20,6 @@ import net.brnbrd.delightful.common.item.knife.compat.botania.TerraKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.create_sa.BlazingKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.create_sa.ExperienceKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.create_sa.GildedQuartzKnifeItem;
-import net.brnbrd.delightful.common.item.knife.compat.aether.deep_aether.DummyStratusKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.deeperdarker.ResonariumKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.deeperdarker.WardenKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.forbidden_arcanus.DracoArcanusKnifeItem;
@@ -52,7 +51,6 @@ import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.registries.RegistryObject;
@@ -160,7 +158,7 @@ public class Knives extends DelightfulItems {
 		() -> Modid.DA.loaded() ?
 			DeepAetherCompat.SKYJADE.get() :
 			new DummyKnifeItem(
-				DelightfulItemTags.GEMS_SKYJADE,
+				DelightfulItemTags.SKYJADE_REPAIRING,
 				Ingredient.of(DelightfulItemTags.SKYROOT_STICK),
 				Modid.AE, Modid.DA
 			)
@@ -168,7 +166,11 @@ public class Knives extends DelightfulItems {
 	public static final RegistryObject<Item> STRATUS = registerItem("stratus_knife",
 		() -> Modid.DA.loaded() ?
 			DeepAetherCompat.STRATUS.get() :
-			new DummyStratusKnifeItem(props(), Tiers.IRON)
+			new DummyKnifeItem(
+				DelightfulItemTags.STRATUS_REPAIRING,
+				Ingredient.of(DelightfulItemTags.SKYROOT_STICK),
+				Modid.AE, Modid.DA
+			)
 	);
 	public static final RegistryObject<Item> VALKYRUM = registerItem("valkyrum_knife", () -> new ValkyrumKnifeItem(props()));
 	public static final RegistryObject<Item> CERTUS_QUARTZ = registerKnife("certus_quartz", DelightfulItemTags.CERTUS_QUARTZ, Modid.AE2);

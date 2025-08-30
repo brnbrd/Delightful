@@ -4,11 +4,11 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_skyjade_repairing": {
+          "has_stratus_repairing": {
             "conditions": {
               "items": [
                 {
-                  "tag": "deep_aether:skyjade_repairing"
+                  "tag": "deep_aether:stratus_repairing"
                 }
               ]
             },
@@ -16,20 +16,20 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:knives/skyjade_knife"
+              "recipe": "delightful:knives/stratus_knife"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
         },
         "requirements": [
           [
-            "has_skyjade_repairing",
+            "has_stratus_repairing",
             "has_the_recipe"
           ]
         ],
         "rewards": {
           "recipes": [
-            "delightful:knives/skyjade_knife"
+            "delightful:knives/stratus_knife"
           ]
         },
         "sends_telemetry_event": false
@@ -37,13 +37,13 @@
       "conditions": [
         {
           "type": "delightful:enabled",
-          "value": "skyjade_knife"
+          "value": "stratus_knife"
         },
         {
           "type": "forge:not",
           "value": {
             "type": "forge:tag_empty",
-            "tag": "deep_aether:skyjade_repairing"
+            "tag": "deep_aether:stratus_repairing"
           }
         },
         {

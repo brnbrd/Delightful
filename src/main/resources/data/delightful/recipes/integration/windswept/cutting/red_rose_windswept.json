@@ -1,0 +1,34 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "farmersrespite:rose_hips"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "windswept:red_rose"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "windswept:red_rose"
+          }
+        ],
+        "result": [
+          {
+            "count": 1,
+            "item": "farmersrespite:rose_hips"
+          }
+        ],
+        "tool": {
+          "tag": "forge:tools/knives"
+        }
+      }
+    }
+  ]
+}

@@ -5,13 +5,13 @@
       "conditions": [
         {
           "type": "delightful:enabled",
-          "value": "skyjade_knife"
+          "value": "stratus_knife"
         },
         {
           "type": "forge:not",
           "value": {
             "type": "forge:tag_empty",
-            "tag": "deep_aether:skyjade_repairing"
+            "tag": "deep_aether:stratus_repairing"
           }
         },
         {
@@ -28,7 +28,7 @@
         "category": "equipment",
         "key": {
           "m": {
-            "tag": "deep_aether:skyjade_repairing"
+            "tag": "deep_aether:stratus_repairing"
           },
           "s": {
             "tag": "aether:skyroot_stick"
@@ -39,7 +39,7 @@
           "s"
         ],
         "result": {
-          "item": "delightful:skyjade_knife"
+          "item": "delightful:stratus_knife"
         },
         "show_notification": true
       }

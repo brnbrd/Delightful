@@ -10,6 +10,14 @@
       "required": false
     },
     {
+      "id": "windswept:red_rose",
+      "required": false
+    },
+    {
+      "id": "windswept:red_rose_bush",
+      "required": false
+    },
+    {
       "id": "farmersrespite:rose_hips",
       "required": false
     },

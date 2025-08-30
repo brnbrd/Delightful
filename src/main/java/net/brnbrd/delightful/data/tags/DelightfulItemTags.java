@@ -18,6 +18,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> ROTTEN = d("rotten");
 	public static final TagKey<Item> GIVES_SPITE = d("gives_spite");
 	public static final TagKey<Item> ROSE = d("rose");
+	public static final TagKey<Item> LAVENDER = d("lavender");
 
 	// Minecraft
 	public static final TagKey<Item> FLOWERS_AZALEA = Modid.MC.it("flowers/azalea");
@@ -105,6 +106,8 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> JUICES_LEMON = forge("juices/lemon");
 	public static final TagKey<Item> WATER = forge("water");
 	public static final TagKey<Item> CHEESE = forge("cheese");
+	public static final TagKey<Item> CHEESE_YELLOW = forge("cheese/yellow");
+	public static final TagKey<Item> CHEESE_SCARLET = forge("cheese/scarlet");
 	public static final TagKey<Item> CHOCOLATE = forge("chocolate");
 	public static final TagKey<Item> HOT_SPICE = forge("hot_spice");
 	public static final TagKey<Item> PUMPKINS = forge("pumpkins");
@@ -152,7 +155,6 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> TORTILLA = forge("tortilla");
 	public static final TagKey<Item> SYRUP = forge("syrup");
 	public static final TagKey<Item> SYRUP_BOTTLE = forge("syrup/syrup_bottle");
-	public static final TagKey<Item> LAVENDER = forge("lavender");
 	public static final TagKey<Item> CLOVER = forge("clover");
 	public static final TagKey<Item> CACTI = forge("cacti");
 	public static final TagKey<Item> CACTI_LARGE = forge("cacti/large");
@@ -247,6 +249,8 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> GEMS_SKYJADE = gem("skyjade");
 	public static final TagKey<Item> INGOTS_STRATUS = ingot("stratus");
 	public final static TagKey<Item> STRATUS_UPGRADE = Modid.DA.it("stratus_smithing_template");
+	public final static TagKey<Item> SKYJADE_REPAIRING = Modid.DA.it("skyjade_repairing");
+	public final static TagKey<Item> STRATUS_REPAIRING = Modid.DA.it("stratus_repairing");
 
 	public static TagKey<Item> forge(@NotNull String name) {
 		return Modid.LOADER.it(name);
