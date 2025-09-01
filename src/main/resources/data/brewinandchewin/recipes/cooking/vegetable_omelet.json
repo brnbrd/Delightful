@@ -1,0 +1,42 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "brewinandchewin:vegetable_omelet"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:bowl"
+        },
+        "cookingtime": 200,
+        "experience": 1.0,
+        "ingredients": [
+          {
+            "tag": "forge:cheese"
+          },
+          {
+            "tag": "forge:eggs"
+          },
+          {
+            "tag": "forge:eggs"
+          },
+          {
+            "tag": "forge:vegetables/onion"
+          },
+          {
+            "tag": "forge:vegetables/carrot"
+          }
+        ],
+        "recipe_book_tab": "meals",
+        "result": {
+          "item": "brewinandchewin:vegetable_omelet"
+        }
+      }
+    }
+  ]
+}

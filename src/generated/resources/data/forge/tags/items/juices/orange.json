@@ -1,10 +1,6 @@
 {
   "values": [
     {
-      "id": "#forge:juices/orange_juice",
-      "required": false
-    },
-    {
       "id": "sob:orange_juice",
       "required": false
     }

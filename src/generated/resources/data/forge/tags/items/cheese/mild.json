@@ -9,6 +9,10 @@
       "required": false
     },
     {
+      "id": "hearthandharvest:goat_cheese_slice",
+      "required": false
+    },
+    {
       "id": "croptopia:cheese",
       "required": false
     },

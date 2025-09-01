@@ -18,10 +18,10 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> ROTTEN = d("rotten");
 	public static final TagKey<Item> GIVES_SPITE = d("gives_spite");
 	public static final TagKey<Item> ROSE = d("rose");
-	public static final TagKey<Item> LAVENDER = d("lavender");
 
 	// Minecraft
 	public static final TagKey<Item> FLOWERS_AZALEA = Modid.MC.it("flowers/azalea");
+	public static final TagKey<Item> FLOWERS_LAVENDER = Modid.MC.it("flowers/lavender");
 
 	// Farmers Delight
 	public static final TagKey<Item> STONE_CABINETS = Modid.FD.it("cabinets/stone");
@@ -106,8 +106,10 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> JUICES_LEMON = forge("juices/lemon");
 	public static final TagKey<Item> WATER = forge("water");
 	public static final TagKey<Item> CHEESE = forge("cheese");
-	public static final TagKey<Item> CHEESE_YELLOW = forge("cheese/yellow");
-	public static final TagKey<Item> CHEESE_SCARLET = forge("cheese/scarlet");
+	public static final TagKey<Item> CHEESE_MILD = forge("cheese/mild");
+	public static final TagKey<Item> CHEESE_MILD_CREAM = forge("cheese/mild/cream");
+	public static final TagKey<Item> CHEESE_SPICY = forge("cheese/spicy");
+	public static final TagKey<Item> CHEESE_SWEET = forge("cheese/sweet");
 	public static final TagKey<Item> CHOCOLATE = forge("chocolate");
 	public static final TagKey<Item> HOT_SPICE = forge("hot_spice");
 	public static final TagKey<Item> PUMPKINS = forge("pumpkins");
@@ -132,9 +134,6 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> NUT_BUTTER = forge("nut_butter");
 	public static final TagKey<Item> RAW_RABBIT = forge("raw_rabbit");
 	public static final TagKey<Item> COOKED_RABBIT = forge("cooked_rabbit");
-	public static final TagKey<Item> RAW_FISHES_KOI = forge("raw_fishes/koi");
-	public static final TagKey<Item> RAW_FISHES_TUNA = forge("raw_fishes/tuna");
-	public static final TagKey<Item> COOKED_FISHES_TUNA = forge("cooked_fishes/tuna");
 	public static final TagKey<Item> RAW_SQUID = forge("raw_squid");
 	public static final TagKey<Item> RAW_FISHES_SQUID = forge("raw_fishes/squid");
 	public static final TagKey<Item> RAW_FISHES_SQUID_TENTACLES = forge("raw_fishes/squid/tentacles");

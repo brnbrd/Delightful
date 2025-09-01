@@ -1,10 +1,6 @@
 {
   "values": [
     {
-      "id": "#forge:flowers/lavender",
-      "required": false
-    },
-    {
       "id": "windswept:lavender",
       "required": false
     },

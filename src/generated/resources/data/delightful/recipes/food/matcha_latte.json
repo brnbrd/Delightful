@@ -11,11 +11,14 @@
       "recipe": {
         "type": "farmersdelight:cooking",
         "container": {
-          "item": "minecraft:honey_bottle"
+          "item": "minecraft:glass_bottle"
         },
         "cookingtime": 100,
         "experience": 0.35,
         "ingredients": [
+          {
+            "item": "minecraft:honey_bottle"
+          },
           {
             "tag": "forge:milk"
           },

@@ -1,0 +1,75 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:or",
+          "values": [
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:cheese/mild"
+              }
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:cheese/sweet"
+              }
+            }
+          ]
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:mod_loaded",
+            "modid": "collectorsreap"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "group": "fd_sweet_berry_cheesecake",
+        "ingredients": [
+          {
+            "item": "minecraft:sweet_berries"
+          },
+          {
+            "item": "minecraft:sweet_berries"
+          },
+          {
+            "item": "minecraft:sweet_berries"
+          },
+          {
+            "item": "minecraft:sweet_berries"
+          },
+          {
+            "item": "minecraft:sweet_berries"
+          },
+          {
+            "item": "minecraft:sweet_berries"
+          },
+          [
+            {
+              "tag": "forge:cheese/mild"
+            },
+            {
+              "tag": "forge:cheese/sweet"
+            }
+          ],
+          {
+            "item": "farmersdelight:pie_crust"
+          }
+        ],
+        "result": {
+          "item": "farmersdelight:sweet_berry_cheesecake"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

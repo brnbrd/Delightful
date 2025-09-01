@@ -1,21 +1,14 @@
 {
   "values": [
-    "#forge:cheese/yellow",
-    "#forge:cheese/scarlet",
+    "#forge:cheese/mild",
+    "#forge:cheese/spicy",
+    "#forge:cheese/sweet",
     {
       "id": "#forge:cheeses",
       "required": false
     },
     {
       "id": "#brewinandchewin:cheese_wedges",
-      "required": false
-    },
-    {
-      "id": "hearthandharvest:goat_cheese_slice",
-      "required": false
-    },
-    {
-      "id": "farmlife:tribull_cheese_wedge",
       "required": false
     }
   ]

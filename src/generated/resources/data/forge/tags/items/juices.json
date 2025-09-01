@@ -2,7 +2,11 @@
   "values": [
     "#forge:juices/melon",
     "#forge:juices/prickly_pear",
-    "#forge:juices/orange",
+    "#forge:juices/citrus",
+    {
+      "id": "#forge:juices/citrus_juice",
+      "required": false
+    },
     {
       "id": "hearthandharvest:blueberry_juice",
       "required": false

@@ -1,11 +1,11 @@
 {
   "values": [
     {
-      "id": "environmental:koi",
+      "id": "sob:eumozz_cheese_wedge",
       "required": false
     },
     {
-      "id": "crittersandcompanions:koi_fish",
+      "id": "farmlife:tribull_cheese_wedge",
       "required": false
     }
   ]

@@ -1,0 +1,46 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "brewinandchewin:quiche"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "key": {
+          "C": {
+            "item": "farmersdelight:pie_crust"
+          },
+          "b": {
+            "item": "farmersdelight:cooked_bacon"
+          },
+          "c": {
+            "tag": "forge:cheese"
+          },
+          "e": {
+            "tag": "forge:eggs"
+          },
+          "l": {
+            "tag": "forge:crops/cabbage"
+          },
+          "m": {
+            "tag": "forge:milk"
+          }
+        },
+        "pattern": [
+          "blb",
+          "mcm",
+          "eCe"
+        ],
+        "result": {
+          "item": "brewinandchewin:quiche"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

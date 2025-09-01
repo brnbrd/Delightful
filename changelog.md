@@ -16,14 +16,19 @@
 - Marshmallow on a Stick is now made in the Cooking Pot, requiring Animal Fat or a Slimeball, Sugar, and Dried Vanilla Pods (if [Neapolitan](https://www.curseforge.com/minecraft/mc-mods/neapolitan) is present)
 - All Marshmallow items now provide Slow Falling I
 - Prickly Pear Juice can now be crafted from any `#forge:fruits/prickly_pear`
-  - Can also be brewed in a Kettle in presence of [Farmer's Respite](https://www.curseforge.com/minecraft/mc-mods/farmers-respite)
+  - Can also be brewed in a Kettle with [Farmer's Respite](https://www.curseforge.com/minecraft/mc-mods/farmers-respite)
+- Azalea Tea now provides Resistance II for 4:00 and has some short negative effects
+- Azalea Tea is now brewed from Strong Yellow Tea with [Farmer's Respite](https://www.curseforge.com/minecraft/mc-mods/farmers-respite)
+  - Also requires Cantaloupe to mellow toxic Azalea properties
+- Lavender Tea is now brewed from Black Tea with [Farmer's Respite](https://www.curseforge.com/minecraft/mc-mods/farmers-respite)
+- Lavender Tea will now produce [Windswept!](https://www.curseforge.com/minecraft/mc-mods/windsweptmod)'s version if present
 - Field Salad can be crafted from any `#forge:cooked_nuts` instead of only Roasted Acorn
 - Pie Crust can be crafted from Animal Fat in place of Milk
 - Acorn can now be acquired by cutting Oak Sapling or Dark Oak Sapling with an Axe
 - Recipes for cutting `#forge:cacti` into Cactus Chunk will now also have a chance to provide Green Dye
-- Nut Butter and Jelly Sandwich now provides Toughness I in presence of [Smidgeon o' Bliss REMASTERED](https://www.curseforge.com/minecraft/mc-mods/smidgeon-o-bliss-remastered)
+- Nut Butter and Jelly Sandwich now provides Toughness I with [Smidgeon o' Bliss REMASTERED](https://www.curseforge.com/minecraft/mc-mods/smidgeon-o-bliss-remastered)
 - Field Salad now provides Regeneration I for 0:10
-- Cantaloupe Gummy now provides Resistance III for 0:15
+- Cantaloupe Gummy now provides Resistance IV for 0:20
 
 ### Fixes
 - Features will now not generate in the world if their respective item is disabled (closes [#118](https://github.com/brnbrd/Delightful/issues/118))

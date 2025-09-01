@@ -11,7 +11,7 @@
           "type": "forge:not",
           "value": {
             "type": "forge:tag_empty",
-            "tag": "delightful:lavender"
+            "tag": "minecraft:flowers/lavender"
           }
         },
         {
@@ -56,10 +56,10 @@
             "tag": "forge:tea_leaves"
           },
           {
-            "tag": "delightful:lavender"
+            "tag": "minecraft:flowers/lavender"
           },
           {
-            "tag": "delightful:lavender"
+            "tag": "minecraft:flowers/lavender"
           }
         ],
         "result": {
@@ -73,7 +73,7 @@
           "type": "forge:not",
           "value": {
             "type": "forge:tag_empty",
-            "tag": "delightful:lavender"
+            "tag": "minecraft:flowers/lavender"
           }
         },
         {
@@ -115,10 +115,10 @@
             "tag": "forge:tea_leaves"
           },
           {
-            "tag": "delightful:lavender"
+            "tag": "minecraft:flowers/lavender"
           },
           {
-            "tag": "delightful:lavender"
+            "tag": "minecraft:flowers/lavender"
           }
         ],
         "result": {

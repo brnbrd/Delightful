@@ -151,7 +151,7 @@ public class DelightfulItems {
 	public static final RegistryObject<Item> BERRY_MATCHA_LATTE = registerItem("berry_matcha_latte",
 		() -> new MatchaLatteItem((new Item.Properties()).food(Nutrition.BERRY_MATCHA_LATTE), true));
 	public static final RegistryObject<Item> AZALEA_TEA = registerItem("azalea_tea",
-		() -> new TeaItem((new Item.Properties()).food(Nutrition.AZALEA_TEA), DelightfulItemTags.FLOWERS_AZALEA, false));
+		() -> new AzaleaTeaItem((new Item.Properties()).food(Nutrition.AZALEA_TEA)));
 	public static final RegistryObject<Item> LAVENDER_TEA = registerItem("lavender_tea",
 		() -> new LavenderTeaItem((new Item.Properties()).food(Nutrition.LAVENDER_TEA)));
 	public static final RegistryObject<Item> PRICKLY_PEAR_JUICE = registerItem("prickly_pear_juice",

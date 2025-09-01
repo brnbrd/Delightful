@@ -11,7 +11,7 @@
           "type": "forge:not",
           "value": {
             "type": "forge:tag_empty",
-            "tag": "delightful:lavender"
+            "tag": "minecraft:flowers/lavender"
           }
         },
         {
@@ -54,7 +54,7 @@
           "type": "forge:not",
           "value": {
             "type": "forge:tag_empty",
-            "tag": "delightful:lavender"
+            "tag": "minecraft:flowers/lavender"
           }
         },
         {

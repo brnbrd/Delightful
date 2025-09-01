@@ -144,10 +144,11 @@ public class Nutrition {
 		.effect(() -> new MobEffectInstance(SOBCompat.getSpite().get(), 600, 0), 1F).build();
 	public static final FoodProperties LAVENDER_TEA = (new FoodProperties.Builder()).alwaysEat()
 		.effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 600, 0), 1F)
-		.effect(() -> new MobEffectInstance(TeaCompat.getCaffeinated().get(), 3000, 0), 1F).build();
+		.effect(() -> new MobEffectInstance(TeaCompat.getCaffeinated().get(), 600, 0), 1F).build();
 	public static final FoodProperties AZALEA_TEA = (new FoodProperties.Builder()).alwaysEat()
-		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 600, 0), 1F)
-		.effect(() -> new MobEffectInstance(TeaCompat.getCaffeinated().get(), 3000, 0), 1F).build();
+		.effect(() -> new MobEffectInstance(MobEffects.BLINDNESS, 60, 0), 1F)
+		.effect(() -> new MobEffectInstance(MobEffects.LEVITATION, 200, 1), 1F)
+		.effect(() -> new MobEffectInstance(TeaCompat.getYellowTeaEffect().get(), 4800, 1), 1F).build();
 	public static final FoodProperties MATCHA_LATTE = (new FoodProperties.Builder()).alwaysEat()
 		.nutrition(6).saturationMod(0.5F)
 		.effect(() -> new MobEffectInstance(TeaCompat.getGreenTeaEffect().get(), 400, 1), 1F)
@@ -192,5 +193,5 @@ public class Nutrition {
 		.effect(() -> new MobEffectInstance(TeaCompat.getGreenTeaEffect().get(), 400, 1), 1F).build();
 	public static final FoodProperties CANTALOUPE_GUMMY = (new FoodProperties.Builder())
 		.nutrition(2).saturationMod(0F).alwaysEat()
-		.effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 300, 2), 1F).build();
+		.effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 400, 3), 1F).build();
 }

@@ -5,7 +5,7 @@ import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 
 public class LavenderTeaItem extends TeaItem {
 	public LavenderTeaItem(Properties properties) {
-		super(properties, DelightfulItemTags.LAVENDER, false);
+		super(properties, DelightfulItemTags.FLOWERS_LAVENDER, false);
 	}
 
 	@Override

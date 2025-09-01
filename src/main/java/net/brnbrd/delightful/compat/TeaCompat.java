@@ -14,6 +14,10 @@ public class TeaCompat {
 		));
 	}
 
+	public static Supplier<MobEffect> getYellowTeaEffect() {
+		return () -> MobEffects.DAMAGE_RESISTANCE;
+	}
+
 	public static Supplier<MobEffect> getCaffeinated() {
 		return () ->
 			Util.effect(Modid.FR, "caffeinated",

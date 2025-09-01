@@ -1,17 +1,20 @@
 {
   "values": [
-    "#forge:cooked_fishes/tuna",
     "#forge:cooked_fishes/squid",
     {
       "id": "undergarden:cooked_gwibling",
       "required": false
     },
     {
-      "id": "biomemakeover:cooked_glowfish",
+      "id": "deep_aether:cooked_aerglow_fish",
       "required": false
     },
     {
-      "id": "deep_aether:cooked_aerglow_fish",
+      "id": "spawn:cooked_tuna_chunk",
+      "required": false
+    },
+    {
+      "id": "biomemakeover:cooked_glowfish",
       "required": false
     }
   ]

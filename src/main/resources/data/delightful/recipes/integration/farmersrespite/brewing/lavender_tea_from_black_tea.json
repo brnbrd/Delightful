@@ -5,39 +5,40 @@
       "conditions": [
         {
           "type": "delightful:enabled",
-          "value": "azalea_tea"
+          "value": "lavender_tea"
         },
         {
           "type": "forge:not",
           "value": {
             "type": "forge:tag_empty",
-            "tag": "minecraft:flowers/azalea"
+            "tag": "minecraft:flowers/lavender"
           }
         },
         {
           "type": "forge:mod_loaded",
           "modid": "farmersrespite"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "farmersrespite:black_tea"
         }
       ],
       "recipe": {
         "type": "farmersrespite:brewing",
         "base": {
           "count": 1000,
-          "fluid": "minecraft:water"
+          "fluid": "farmersrespite:black_tea"
         },
-        "cookingtime": 2400,
+        "cookingtime": 1200,
         "experience": 0.35,
         "ingredients": [
           {
-            "tag": "minecraft:flowers/azalea"
-          },
-          {
-            "tag": "forge:tea_leaves"
+            "tag": "minecraft:flowers/lavender"
           }
         ],
         "result": {
           "count": 1000,
-          "fluid": "delightful:azalea_tea"
+          "fluid": "delightful:lavender_tea"
         }
       }
     }

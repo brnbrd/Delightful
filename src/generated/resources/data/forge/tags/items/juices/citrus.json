@@ -3,11 +3,11 @@
     "#forge:juices/orange",
     "#forge:juices/lemon",
     {
-      "id": "#forge:juices/citrus_juice",
+      "id": "#forge:juices/lime",
       "required": false
     },
     {
-      "id": "#forge:juices/lime",
+      "id": "#forge:juices/lime_juice",
       "required": false
     }
   ]

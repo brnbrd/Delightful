@@ -11,7 +11,7 @@
           "type": "forge:not",
           "value": {
             "type": "forge:tag_empty",
-            "tag": "delightful:lavender"
+            "tag": "minecraft:flowers/lavender"
           }
         },
         {
@@ -23,6 +23,13 @@
           "value": {
             "type": "forge:item_exists",
             "item": "windswept:lavender_tea"
+          }
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:mod_loaded",
+            "modid": "farmersrespite"
           }
         }
       ],
@@ -38,10 +45,10 @@
             "tag": "forge:tea_leaves"
           },
           {
-            "tag": "delightful:lavender"
+            "tag": "minecraft:flowers/lavender"
           },
           {
-            "tag": "delightful:lavender"
+            "tag": "minecraft:flowers/lavender"
           }
         ],
         "recipe_book_tab": "drinks",
@@ -60,7 +67,7 @@
           "type": "forge:not",
           "value": {
             "type": "forge:tag_empty",
-            "tag": "delightful:lavender"
+            "tag": "minecraft:flowers/lavender"
           }
         },
         {
@@ -70,6 +77,13 @@
         {
           "type": "forge:item_exists",
           "item": "windswept:lavender_tea"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:mod_loaded",
+            "modid": "farmersrespite"
+          }
         }
       ],
       "recipe": {
@@ -84,10 +98,10 @@
             "tag": "forge:tea_leaves"
           },
           {
-            "tag": "delightful:lavender"
+            "tag": "minecraft:flowers/lavender"
           },
           {
-            "tag": "delightful:lavender"
+            "tag": "minecraft:flowers/lavender"
           }
         ],
         "recipe_book_tab": "drinks",

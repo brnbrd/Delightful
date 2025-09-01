@@ -1,4 +1,4 @@
-// 1.20.1	2025-08-30T12:07:14.9571484	delightful
+// 1.20.1	2025-09-01T14:51:43.9207578	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -31,7 +31,6 @@ ed18beedb5068fe9f48327153c678096971fcd24 data/deep_aether/tags/items/stratus_smi
 ae718511234f1a47f26d2f294e4d17f33374a95d data/delightful/tags/items/cooked_venison_compat.json
 c635f7a0507d48b606bd3d26bfe43ade5cfe05ee data/delightful/tags/items/fire_knives.json
 d53bd21229e9bf9cd03b3c3dea2ebbb08dfede36 data/delightful/tags/items/gives_spite.json
-cb87c5ea4528200e1a67097623d9ec419ff1c5c6 data/delightful/tags/items/lavender.json
 25157ad740de48c4baa7d586db2ff57f50fe0a05 data/delightful/tags/items/quartz_knife.json
 2ff5cfe0c5823c3c18040d2127a488836e4c4908 data/delightful/tags/items/raw_venison_chop_compat.json
 6c2f8fbf4dd74017f049b2ef88a10e285aae2c0c data/delightful/tags/items/raw_venison_compat.json
@@ -59,9 +58,10 @@ e0bed00048e8a625914ba1af64357c9f44d13421 data/forge/tags/items/cacti.json
 025f638468ffff7c04db220b23ce3ca3bdef7cc2 data/forge/tags/items/cacti/large.json
 e323e7d458810ad726aabebee6a2bde8add5c858 data/forge/tags/items/cacti/small.json
 be6d5de873996c5da60b65ae5b85bf54909b7d36 data/forge/tags/items/cattail.json
-8e7fee70257e61aeb6731d1ba9b44b71f459c3e6 data/forge/tags/items/cheese.json
-17db0fc7e0ff7f8c5acd669e2b75be11ce3db83a data/forge/tags/items/cheese/scarlet.json
-3f9b190f83a1587210c528e08e670b73a30df16e data/forge/tags/items/cheese/yellow.json
+f57fbc394cb022a6899e87ca9acfdb3ebcfb1a34 data/forge/tags/items/cheese.json
+c1b24bd437c9d1fa5653bfe94d1f3855d1b7ff33 data/forge/tags/items/cheese/mild.json
+17db0fc7e0ff7f8c5acd669e2b75be11ce3db83a data/forge/tags/items/cheese/spicy.json
+925114e951c4f350d4caea55ddd3dfc0d6b80815 data/forge/tags/items/cheese/sweet.json
 f378d46051fae18380044514f1fe98fc42a2ab76 data/forge/tags/items/chocolate.json
 f3804b752bd412a48169cff4bd2122a0c0242000 data/forge/tags/items/clover.json
 b660f1a0311fc2203d72ff4458a59fc12bbc7db2 data/forge/tags/items/coconut.json
@@ -70,9 +70,8 @@ ae1d52d3b6cc06fbbf712ec1afad143ebfc0a82c data/forge/tags/items/cooked_beef_or_ve
 523f9474e3f5363e43b8a7a0b709f21a04ecb363 data/forge/tags/items/cooked_crab_meat.json
 849216e29c24b6b87c7b85686b75bfd57b460b72 data/forge/tags/items/cooked_duck.json
 5b067065b0eeff7839dcf6dbb72efcdfaa6826ee data/forge/tags/items/cooked_eggs.json
-f22b4c1e330acdb87d41463fa1bbe431b513d330 data/forge/tags/items/cooked_fishes.json
+f30789aec841ac52bfc001e03accfca05f451a92 data/forge/tags/items/cooked_fishes.json
 689b0562d8e01e19142c7bbffa5c17d727f2ca5c data/forge/tags/items/cooked_fishes/squid.json
-48e602c6f4f273972ce8f4a41af2bf1a7c1e42b5 data/forge/tags/items/cooked_fishes/tuna.json
 7180106aeb3e9ecd597a14700f05f7dd965e4fa2 data/forge/tags/items/cooked_goat.json
 a948b48d3cbea884a1ace570d465fb8a81e6973e data/forge/tags/items/cooked_nuts.json
 9f77948b8bcc8ff9ce8d4f192f7156c733795ab7 data/forge/tags/items/cooked_rabbit.json
@@ -157,11 +156,14 @@ df21ab79976e7373593d2fce09cfbf66c595e447 data/forge/tags/items/ingots/steel.json
 d554ed3f6b8762427d8c40a172c78361952260ed data/forge/tags/items/ingots/veridium.json
 0e2a4a3f8acf7437dcac80bc88b43d1a9b51487d data/forge/tags/items/jams.json
 93c48293b9ca80f78879ce37a6dd9be0c45d5fe3 data/forge/tags/items/jams/glow.json
-eeff8f08f0ba805e3e7095967533bcdcb6162a98 data/forge/tags/items/juices.json
-adf750ed79a8b688e05695c39be24ab12de3ae41 data/forge/tags/items/juices/citrus.json
-8a5c102e1a3e01fd63ad11be8839ea8486fed4f5 data/forge/tags/items/juices/lemon.json
+43efffc57d71eb9a285f3c34bbf32b9a39d1c9f8 data/forge/tags/items/juices.json
+aa24b385538f42af00e051bd106ea4e62fa4db8d data/forge/tags/items/juices/citrus.json
+8304d360343c9b6b0d0f2d893fe962047e39ac43 data/forge/tags/items/juices/citrus_juice.json
+f48f1c8ecd084e8be0b0738b14e7806971a983ca data/forge/tags/items/juices/lemon.json
+d1dc791fc1fec2fc4e756e0d7dff0ddab538a57c data/forge/tags/items/juices/lemon_juice.json
 2e32ebd0459136597a1e6db82576dd3a7741ce53 data/forge/tags/items/juices/melon.json
-71fcb52627588fafdfc7aad638db4637811d31ab data/forge/tags/items/juices/orange.json
+9ffc2bcef6352a614b4c48b9f953ecd386dffc9b data/forge/tags/items/juices/orange.json
+9866f72e4ffeb159ccecae5b2a9295656011e4d4 data/forge/tags/items/juices/orange_juice.json
 115bfc292415ed6bd666e9987fe2d57bd17e32bf data/forge/tags/items/juices/prickly_pear.json
 92e1871435d3246a5a0a5dce0c305a6f337ac544 data/forge/tags/items/marshmallow.json
 5160d3e42adb69a7a3e121df7fe653817a5d6b1b data/forge/tags/items/matcha.json
@@ -178,11 +180,9 @@ fecd0addad0c8d2c1b829d5350c240452b0e3807 data/forge/tags/items/pumpkins.json
 18e01eda65d3e6c12efb395ba42802b672fd8fdd data/forge/tags/items/raw_crab.json
 e4bfec188fb63173110be9c4748fef5945689603 data/forge/tags/items/raw_crab_meat.json
 65540c326746380f0b29818f3507d94d7902ab98 data/forge/tags/items/raw_duck.json
-48d8b0b644602d16af1ab53dd4bb6f3013c5ffcc data/forge/tags/items/raw_fishes.json
-7a3289909b879db8b0b7b764c7a4735a44546b3c data/forge/tags/items/raw_fishes/koi.json
+811b65f6a4c7c2d47571e26102d631d2d1412b72 data/forge/tags/items/raw_fishes.json
 78fa002cb40688a9cc4c76ad69a916fe313aab70 data/forge/tags/items/raw_fishes/squid.json
 55dbce77fc249043b9a18cb523af6f0054890d73 data/forge/tags/items/raw_fishes/squid/tentacles.json
-9f462470dc335b8293a9de28fff2b04e59f2b7e6 data/forge/tags/items/raw_fishes/tuna.json
 b674043d5d31d5fb35d4b0eb555cd87fb7205aa6 data/forge/tags/items/raw_goat.json
 676cee16d107d62d62093f32df13eb8e934c7db9 data/forge/tags/items/raw_rabbit.json
 d5df2003d6210b443fc989b821eee01651146c3b data/forge/tags/items/raw_squid.json
@@ -229,7 +229,9 @@ fca3cce73994daa672a8dc1d4e816a0e32d534b3 data/forge/tags/items/water.json
 3e65a1f943cae7927da2f45388efe248474e5397 data/forge/tags/items/wrenches.json
 e7a49e3763378f3280936775b47b91ea4a9b1c5f data/lolenderite/tags/items/enderite_upgrade_smithing_template.json
 2207c783edec132da40cf51fc673387de559ecdb data/lost_aether_content/tags/items/phoenix_tools.json
+698b906c592acc0ef269d9f4b18bcdf8d9cec891 data/minecraft/tags/items/flowers.json
 0ea4f203dcbc5c8ed15973a08aa22975702cb9a1 data/minecraft/tags/items/flowers/azalea.json
+834aa2d8702752f1b7d8b69b0ad4c36c47511210 data/minecraft/tags/items/flowers/lavender.json
 baf6ba0ee848c77356d8dcb20db8b78f5de1a72e data/minecraft/tags/items/fox_food.json
 7a5c9e6e4cea9e6eb6c39631ca0a4a686876331d data/minecraft/tags/items/piglin_loved.json
 6650e90744a669ba97f26352f5edb05740ef68e9 data/minecraft/tags/items/slabs.json
@@ -245,7 +247,7 @@ a95df2279e05baa5f0608937c6c66f68c44ebf2d data/nethersdelight/tags/items/meal_ite
 bd03c94c3be4df3a7a6a198d6d729fad9fb4311f data/phantasm/tags/items/crystal_spike_tips.json
 61d64c77058e1625c2e3b99ed4a928eea28f624e data/phantasm/tags/items/gets_xp_speed_boost.json
 a8f06d7dc1646ce181a8dc82c1d2a179064212a9 data/phantasm/tags/items/void_crystal_block.json
-9e74ac78b0f24b91f473524fd579e5a419f6d57d data/salt/tags/items/can_be_salted.json
+020fae7dac24487fce052e3007851018f1ae935f data/salt/tags/items/can_be_salted.json
 6ee15734ac9331c3a1b186bd12a7cfc07d71273b data/seeds/tags/items/sharp_leaf.json
 e8907bb6383992d824e326f554fcbab430f7e5ce data/sereneseasons/tags/items/summer_crops.json
 5ca5c9750568ae0343de46dc7bae0316ddffd566 data/spirit/tags/items/soul_steel_mainhand.json

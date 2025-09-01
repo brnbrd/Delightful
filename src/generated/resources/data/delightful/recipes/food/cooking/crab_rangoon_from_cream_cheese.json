@@ -5,41 +5,40 @@
       "conditions": [
         {
           "type": "delightful:enabled",
-          "value": "prickly_pear_juice"
+          "value": "crab_rangoon"
         },
         {
           "type": "forge:not",
           "value": {
             "type": "forge:tag_empty",
-            "tag": "forge:fruits/prickly_pear"
+            "tag": "forge:cooked_crab_meat"
           }
         },
         {
           "type": "forge:not",
           "value": {
-            "type": "forge:item_exists",
-            "item": "ecologics:cooked_prickly_pear"
+            "type": "forge:tag_empty",
+            "tag": "forge:cheese/mild/cream"
           }
         }
       ],
       "recipe": {
-        "type": "minecraft:crafting_shapeless",
+        "type": "farmersdelight:cooking",
+        "cookingtime": 200,
+        "experience": 0.35,
         "ingredients": [
           {
-            "tag": "forge:fruits/prickly_pear"
+            "tag": "forge:dough"
           },
           {
-            "tag": "forge:fruits/prickly_pear"
+            "tag": "forge:cheese/mild/cream"
           },
           {
-            "item": "minecraft:sugar"
-          },
-          {
-            "item": "minecraft:glass_bottle"
+            "tag": "forge:cooked_crab_meat"
           }
         ],
         "result": {
-          "item": "delightful:prickly_pear_juice"
+          "item": "delightful:crab_rangoon"
         }
       }
     }

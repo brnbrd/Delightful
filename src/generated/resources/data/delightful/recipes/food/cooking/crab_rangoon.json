@@ -20,6 +20,10 @@
             "type": "forge:tag_empty",
             "tag": "forge:cheese"
           }
+        },
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:cheese/mild/cream"
         }
       ],
       "recipe": {

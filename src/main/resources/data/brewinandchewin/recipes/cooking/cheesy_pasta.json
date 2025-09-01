@@ -1,0 +1,39 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "brewinandchewin:cheesy_pasta"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:bowl"
+        },
+        "cookingtime": 200,
+        "experience": 1.0,
+        "ingredients": [
+          {
+            "tag": "forge:cheese/mild"
+          },
+          {
+            "tag": "forge:pasta/raw_pasta"
+          },
+          {
+            "tag": "forge:vegetables/tomato"
+          },
+          {
+            "tag": "forge:raw_fishes"
+          }
+        ],
+        "recipe_book_tab": "meals",
+        "result": {
+          "item": "brewinandchewin:cheesy_pasta"
+        }
+      }
+    }
+  ]
+}

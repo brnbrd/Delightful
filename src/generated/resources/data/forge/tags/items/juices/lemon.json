@@ -1,10 +1,6 @@
 {
   "values": [
     {
-      "id": "#forge:juices/lemon_juice",
-      "required": false
-    },
-    {
       "id": "fruitsdelight:lemon_juice",
       "required": false
     }

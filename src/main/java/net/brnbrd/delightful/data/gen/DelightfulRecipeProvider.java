@@ -183,7 +183,8 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 						.unlockedBy("has_walnut", has(DelightfulItemTags.NUTS_WALNUT)),
 				"food/honey_glazed_walnut", finished, enabled(DelightfulItems.HONEY_GLAZED_WALNUT), not(tagEmpty(DelightfulItemTags.NUTS_WALNUT)));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-								DelightfulItems.MATCHA_LATTE.get(), 1, CookingRecipes.FAST_COOKING, 0.35F, Items.HONEY_BOTTLE)
+								DelightfulItems.MATCHA_LATTE.get(), 1, CookingRecipes.FAST_COOKING, 0.35F, Items.GLASS_BOTTLE)
+						.addIngredient(Items.HONEY_BOTTLE)
 						.addIngredient(Ingredient.of(ForgeTags.MILK))
 						.addIngredient(Ingredient.of(DelightfulItemTags.MATCHA))
 						.unlockedBy("has_matcha", has(DelightfulItemTags.MATCHA)),
@@ -360,7 +361,8 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 						.unlockedBy("has_cantaloupe_slice", has(DelightfulItemTags.FRUITS_CANTALOUPE)),
 				"food/cantaloupe_bread", finished, enabled(DelightfulItems.CANTALOUPE_BREAD), enabled(DelightfulItems.CANTALOUPE));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-								DelightfulItems.ENDER_NECTAR.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F, Items.HONEY_BOTTLE)
+								DelightfulItems.ENDER_NECTAR.get(), 1, CookingRecipes.SLOW_COOKING, 0.35F, Items.GLASS_BOTTLE)
+						.addIngredient(Items.HONEY_BOTTLE)
 						.addIngredient(ForgeTags.MILK)
 						.addIngredient(Items.ENDER_EYE)
 						.unlockedBy("has_ender_eye", has(Items.ENDER_EYE)),
@@ -509,14 +511,21 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 						.addIngredient(DelightfulItemTags.CHEESE)
 						.addIngredient(DelightfulItemTags.COOKED_CRAB_MEAT)
 						.unlockedBy("has_cooked_crab", has(DelightfulItemTags.COOKED_CRAB_MEAT)),
-				"food/cooking/crab_rangoon", finished, enabled("crab_rangoon"), not(tagEmpty(DelightfulItemTags.COOKED_CRAB_MEAT)), not(tagEmpty(DelightfulItemTags.CHEESE)));
+				"food/cooking/crab_rangoon", finished, enabled(DelightfulItems.CRAB_RANGOON), not(tagEmpty(DelightfulItemTags.COOKED_CRAB_MEAT)), not(tagEmpty(DelightfulItemTags.CHEESE)), tagEmpty(DelightfulItemTags.CHEESE_MILD_CREAM));
+		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
+					DelightfulItems.CRAB_RANGOON.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
+				.addIngredient(ForgeTags.DOUGH)
+				.addIngredient(DelightfulItemTags.CHEESE_MILD_CREAM)
+				.addIngredient(DelightfulItemTags.COOKED_CRAB_MEAT)
+				.unlockedBy("has_cooked_crab", has(DelightfulItemTags.COOKED_CRAB_MEAT)),
+			"food/cooking/crab_rangoon_from_cream_cheese", finished, enabled(DelightfulItems.CRAB_RANGOON), not(tagEmpty(DelightfulItemTags.COOKED_CRAB_MEAT)), not(tagEmpty(DelightfulItemTags.CHEESE_MILD_CREAM)));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
 								DelightfulItems.CRAB_RANGOON.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
 						.addIngredient(ForgeTags.DOUGH)
 						.addIngredient(ForgeTags.MILK)
 						.addIngredient(DelightfulItemTags.COOKED_CRAB_MEAT)
 						.unlockedBy("has_cooked_crab", has(DelightfulItemTags.COOKED_CRAB_MEAT)),
-				"food/cooking/crab_rangoon_from_milk", finished, enabled("crab_rangoon"), not(tagEmpty(DelightfulItemTags.COOKED_CRAB_MEAT)), tagEmpty(DelightfulItemTags.CHEESE));
+				"food/cooking/crab_rangoon_from_milk", finished, enabled(DelightfulItems.CRAB_RANGOON), not(tagEmpty(DelightfulItemTags.COOKED_CRAB_MEAT)), tagEmpty(DelightfulItemTags.CHEESE));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
 								Items.HONEY_BOTTLE, 3, CookingRecipes.NORMAL_COOKING, 0.35F)
 						.addIngredient(Items.HONEY_BOTTLE, 2)

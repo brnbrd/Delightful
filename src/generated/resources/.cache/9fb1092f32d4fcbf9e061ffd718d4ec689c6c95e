@@ -1,4 +1,4 @@
-// 1.20.1	2025-08-30T12:07:14.9613751	Recipes
+// 1.20.1	2025-09-01T14:51:43.9227596	Recipes
 6c217dd6477efa10f6042809ba959d53036ab5e2 data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 5b82f87851220644287d771121677deac66b3b89 data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
 cf29033c1c919355c261025df529938e6ebc73f8 data/delightful/advancements/recipes/campfire/cactus_steak.json
@@ -24,7 +24,8 @@ c02ae2d39fb83be5a5777c88f3d10d6027ced9d4 data/delightful/advancements/recipes/fo
 32a3c677875015fc5e2e028bb9eb4e17aeca8158 data/delightful/advancements/recipes/food/cooking/cactus_soup.json
 9b4fc327bff031551336ad56553bfa158395f445 data/delightful/advancements/recipes/food/cooking/coconut_curry.json
 cf9ff57919e70462a9f5a1edec659fa1f7025750 data/delightful/advancements/recipes/food/cooking/coconut_curry_no_ginger.json
-ab099320773d9a2c236ea999b691980e99089bfd data/delightful/advancements/recipes/food/cooking/crab_rangoon.json
+25ad24a5c645dc89cdaaf7b84fcc51dc9bc30445 data/delightful/advancements/recipes/food/cooking/crab_rangoon.json
+1452e2ca0d391628e162c3bd1f8e46152f9e9ab5 data/delightful/advancements/recipes/food/cooking/crab_rangoon_from_cream_cheese.json
 bdfe0a29e07d6518a96cef4c0f595d7be671f907 data/delightful/advancements/recipes/food/cooking/crab_rangoon_from_milk.json
 1499e66b8288740c89cefe418256eb7b0838e2ba data/delightful/advancements/recipes/food/cooking/ender_nectar.json
 bff3fc76a4bdb6ab58ddf97762e3073b21c6ff99 data/delightful/advancements/recipes/food/cooking/glow_jam_jar.json
@@ -186,9 +187,10 @@ af3129356f249ced73739accf5141965142dfce8 data/delightful/recipes/food/cheeseburg
 d1f17d038f06d6c690336e0bd8fc5b922b081f69 data/delightful/recipes/food/cooking/cactus_soup.json
 daba62a3504783d89d6fe972f0ad14307775220c data/delightful/recipes/food/cooking/coconut_curry.json
 866ab4e55b3a47b487f7e4662d96b3aec17c385e data/delightful/recipes/food/cooking/coconut_curry_no_ginger.json
-af00d59b26c468a67d1535055243622d61743edc data/delightful/recipes/food/cooking/crab_rangoon.json
+09346292e382ff12c4dacf8f3235509e41df6ba8 data/delightful/recipes/food/cooking/crab_rangoon.json
+cc2c4501c54684068f20d197074a78ed3c599993 data/delightful/recipes/food/cooking/crab_rangoon_from_cream_cheese.json
 4c3fa938e1be549abd8b7ca688cc480b917e5d9c data/delightful/recipes/food/cooking/crab_rangoon_from_milk.json
-b65cc57bafa4bd64bfe59e5f14d5eaeefc944363 data/delightful/recipes/food/cooking/ender_nectar.json
+15d67b1a6a6305c71d8753d9658660c2d8485ce9 data/delightful/recipes/food/cooking/ender_nectar.json
 543f5f237b3cc2851ff29f7cc855d1ac67f1ffe9 data/delightful/recipes/food/cooking/glow_jam_jar.json
 1cdf22f2841d75c90c38cb17424ee8934cafb5ff data/delightful/recipes/food/cooking/jam_jar.json
 9c6466cf955ce31fa0e8af84fb4cc15cbc56b076 data/delightful/recipes/food/cooking/nut_butter_bottle.json
@@ -208,7 +210,7 @@ fb0b67132bae982b9c75720f2a14d45afccee39e data/delightful/recipes/food/glow_jam_c
 44a35316e8dc75cdda80313e1da6e44c50e155b5 data/delightful/recipes/food/marshmallow_stick_from_marshmallow.json
 c6ef9dfb30b6e4a86fee425e3b2701803e8a61b4 data/delightful/recipes/food/matcha_ice_cream.json
 20adecd162e16062e058d56c22e5912fd925d904 data/delightful/recipes/food/matcha_ice_cream_no_neapolitan.json
-1b81cd56f336fdc01a31a5ca08a5ddfa8ae84e29 data/delightful/recipes/food/matcha_latte.json
+43f8b4fd9d9c4dc4e46bd19ef67c6e421b7f3805 data/delightful/recipes/food/matcha_latte.json
 f91ed3f632217f18a49d52ee71585fc81cd2bdab data/delightful/recipes/food/matcha_milkshake.json
 d1efd68e878a48f58f8eace33c045f8848f10b8a data/delightful/recipes/food/nut_butter_and_jam_sandwich.json
 11f4706e45f8cfd1d00c5357bec8e86f7f987ddb data/delightful/recipes/food/nut_dough.json

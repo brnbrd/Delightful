@@ -1,10 +1,12 @@
 {
   "values": [
-    "#forge:raw_fishes/koi",
-    "#forge:raw_fishes/tuna",
     "#forge:raw_fishes/squid",
     {
       "id": "#stardew_fishing:starts_minigame",
+      "required": false
+    },
+    {
+      "id": "environmental:koi",
       "required": false
     },
     {
@@ -12,15 +14,23 @@
       "required": false
     },
     {
-      "id": "biomemakeover:glowfish",
-      "required": false
-    },
-    {
       "id": "deep_aether:raw_aerglow_fish",
       "required": false
     },
     {
+      "id": "spawn:tuna_chunk",
+      "required": false
+    },
+    {
       "id": "spawn:angler_fish",
+      "required": false
+    },
+    {
+      "id": "biomemakeover:glowfish",
+      "required": false
+    },
+    {
+      "id": "crittersandcompanions:koi_fish",
       "required": false
     },
     {
