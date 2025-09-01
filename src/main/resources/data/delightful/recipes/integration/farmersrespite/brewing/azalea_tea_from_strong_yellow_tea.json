@@ -1,0 +1,104 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "azalea_tea"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "minecraft:flowers/azalea"
+          }
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "farmersrespite"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "farmersrespite:strong_yellow_tea"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "cantaloupe_slice"
+        }
+      ],
+      "recipe": {
+        "type": "farmersrespite:brewing",
+        "base": {
+          "count": 1000,
+          "fluid": "farmersrespite:strong_yellow_tea"
+        },
+        "cookingtime": 1200,
+        "experience": 0.35,
+        "ingredients": [
+          {
+            "tag": "minecraft:flowers/azalea"
+          },
+          {
+            "tag": "forge:fruits/cantaloupe"
+          }
+        ],
+        "result": {
+          "count": 1000,
+          "fluid": "delightful:azalea_tea"
+        }
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "azalea_tea"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "minecraft:flowers/azalea"
+          }
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "farmersrespite"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "farmersrespite:strong_yellow_tea"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "delightful:enabled",
+            "value": "cantaloupe_slice"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "farmersrespite:brewing",
+        "base": {
+          "count": 1000,
+          "fluid": "farmersrespite:strong_yellow_tea"
+        },
+        "cookingtime": 1200,
+        "experience": 0.35,
+        "ingredients": [
+          {
+            "tag": "minecraft:flowers/azalea"
+          },
+          {
+            "item": "minecraft:sugar"
+          }
+        ],
+        "result": {
+          "count": 1000,
+          "fluid": "delightful:azalea_tea"
+        }
+      }
+    }
+  ]
+}
