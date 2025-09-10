@@ -50,6 +50,18 @@ public class DelightfulFluids {
 		FLOWING_PRICKLY_PEAR_JUICE
 	);
 
+	public static final RegistryObject<FluidType> LONG_PRICKLY_PEAR_JUICE_TYPE = TYPES.register("long_prickly_pear_juice_type",
+		() -> new DFluidType(0xffb83546));
+	public static final RegistryObject<FlowingFluid> LONG_PRICKLY_PEAR_JUICE = FLUIDS.register("long_prickly_pear_juice",
+		() -> new ForgeFlowingFluid.Source(DelightfulFluids.LONG_PRICKLY_PEAR_JUICE_PROPERTIES));
+	public static final RegistryObject<FlowingFluid> FLOWING_LONG_PRICKLY_PEAR_JUICE = FLUIDS.register("flowing_long_prickly_pear_juice",
+		() -> new ForgeFlowingFluid.Flowing(DelightfulFluids.LONG_PRICKLY_PEAR_JUICE_PROPERTIES));
+	public static final ForgeFlowingFluid.Properties LONG_PRICKLY_PEAR_JUICE_PROPERTIES = new ForgeFlowingFluid.Properties(
+		LONG_PRICKLY_PEAR_JUICE_TYPE,
+		LONG_PRICKLY_PEAR_JUICE,
+		FLOWING_LONG_PRICKLY_PEAR_JUICE
+	);
+
 	public static void create(IEventBus bus) {
 		FLUIDS.register(bus);
 		TYPES.register(bus);

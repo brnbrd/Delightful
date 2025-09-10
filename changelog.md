@@ -17,6 +17,7 @@
 - All Marshmallow items now provide Slow Falling I
 - Prickly Pear Juice can now be crafted from any `#forge:fruits/prickly_pear`
   - Can also be brewed in a Kettle with [Farmer's Respite](https://www.curseforge.com/minecraft/mc-mods/farmers-respite)
+  - Can have effect length increased with Milk in a Kettle from [Farmer's Respite](https://www.curseforge.com/minecraft/mc-mods/farmers-respite)
 - Azalea Tea now provides Resistance II for 4:00 and has some short negative effects
 - Azalea Tea is now brewed from Strong Yellow Tea with [Farmer's Respite](https://www.curseforge.com/minecraft/mc-mods/farmers-respite)
   - Also requires Cantaloupe to mellow toxic Azalea properties

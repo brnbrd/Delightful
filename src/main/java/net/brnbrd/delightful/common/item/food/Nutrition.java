@@ -142,6 +142,9 @@ public class Nutrition {
 	public static final FoodProperties PRICKLY_PEAR_JUICE = (new FoodProperties.Builder())
 		.effect(() -> new MobEffectInstance(MobEffects.SATURATION, 600, 0), 1F)
 		.effect(() -> new MobEffectInstance(SOBCompat.getSpite().get(), 600, 0), 1F).build();
+	public static final FoodProperties LONG_PRICKLY_PEAR_JUICE = (new FoodProperties.Builder())
+		.effect(() -> new MobEffectInstance(MobEffects.SATURATION, 1200, 0), 1F)
+		.effect(() -> new MobEffectInstance(SOBCompat.getSpite().get(), 1200, 0), 1F).build();
 	public static final FoodProperties LAVENDER_TEA = (new FoodProperties.Builder()).alwaysEat()
 		.effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 600, 0), 1F)
 		.effect(() -> new MobEffectInstance(TeaCompat.getCaffeinated().get(), 600, 0), 1F).build();

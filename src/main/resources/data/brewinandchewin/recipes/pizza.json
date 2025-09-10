@@ -6,6 +6,10 @@
         {
           "type": "forge:item_exists",
           "item": "brewinandchewin:pizza"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "brewinandchewin:flaxen_cheese_wedge"
         }
       ],
       "recipe": {
@@ -13,7 +17,7 @@
         "category": "misc",
         "key": {
           "f": {
-            "tag": "forge:cheese"
+            "item": "brewinandchewin:flaxen_cheese_wedge"
           },
           "p": {
             "tag": "brewinandchewin:pizza_toppings"

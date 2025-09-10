@@ -43,26 +43,38 @@ public class DelightfulItemModelProvider extends ItemModelProvider {
 	protected void registerModels() {
 		for (RegistryObject<Item> entry : DelightfulItems.ITEMS.getEntries()) {
 			ResourceLocation id = entry.getId();
-			if (EMISSIVE.contains(id)) {
-				emissive(id);
-			} else if (
-				HANDHELD.contains(id) ||
-				entry.get() instanceof DKnifeItem
-			) {
-				handheld(id);
-			} else if (FLAT_BLOCKS.contains(id)) {
-				flatBlock(id);
-			} else if (
-				entry.get() instanceof BlockItem b &&
-				!(entry.get() instanceof ItemNameBlockItem) &&
-				!ITEM_BLOCKS.contains(id)
-			) {
-				if (b.getBlock() instanceof WallBlock) {
-					wallInventory(id.getPath(), Util.rl(id.getNamespace(), "block/" + id.getPath().replace("_wall", "s")));
-				} else {
-					withExistingParent(id.getPath(), Util.rl(this.modid, "block/" + id.getPath()));
+			if (id != null) {
+				if (id.getPath().startsWith("strong_")) {
+					getBuilder(id.toString())
+						.parent(new ModelFile.UncheckedModelFile("item/generated"))
+						.texture("layer0", Util.delight("item/" + id.getPath().replace("strong_", "")));
+					continue;
+				} else if (id.getPath().startsWith("long_")) {
+					getBuilder(id.toString())
+						.parent(new ModelFile.UncheckedModelFile("item/generated"))
+						.texture("layer0", Util.delight("item/" + id.getPath().replace("long_", "")));
+					continue;
+				} else if (EMISSIVE.contains(id)) {
+					emissive(id);
+					continue;
+				} else if (HANDHELD.contains(id) || entry.get() instanceof DKnifeItem) {
+					handheld(id);
+					continue;
+				} else if (FLAT_BLOCKS.contains(id)) {
+					flatBlock(id);
+					continue;
+				} else if (
+					entry.get() instanceof BlockItem b &&
+					!(entry.get() instanceof ItemNameBlockItem) &&
+					!ITEM_BLOCKS.contains(id)
+				) {
+					if (b.getBlock() instanceof WallBlock) {
+						wallInventory(id.getPath(), Util.rl(id.getNamespace(), "block/" + id.getPath().replace("_wall", "s")));
+					} else {
+						withExistingParent(id.getPath(), Util.rl(this.modid, "block/" + id.getPath()));
+					}
+					continue;
 				}
-			} else {
 				basicItem(id);
 			}
 		}

@@ -39,8 +39,7 @@ public class DrinkItem extends DrinkableItem implements IConfigured {
 
 	@Override
 	public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> comps, @NotNull TooltipFlag pIsAdvanced) {
-		if (this.enabledText(comps)) {
-			super.appendHoverText(stack, level, comps, pIsAdvanced);
-		}
+		this.enabledText(comps);
+		super.appendHoverText(stack, level, comps, pIsAdvanced);
 	}
 }

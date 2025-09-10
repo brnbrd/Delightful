@@ -155,7 +155,9 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		addItem(DelightfulItems.LAVENDER_TEA, "Lavender Tea");
 		add("fluid_type." + Delightful.MODID + ".lavender_tea_type", "Lavender Tea");
 		addItem(DelightfulItems.PRICKLY_PEAR_JUICE, "Prickly Pear Juice");
+		addItem(DelightfulItems.LONG_PRICKLY_PEAR_JUICE, "Prickly Pear Juice");
 		add("fluid_type." + Delightful.MODID + ".prickly_pear_juice_type", "Prickly Pear Juice");
+		add("fluid_type." + Delightful.MODID + ".long_prickly_pear_juice_type", "Prickly Pear Juice");
 
 		// Other
 		add("delightful.overhauls", "Overhauls");

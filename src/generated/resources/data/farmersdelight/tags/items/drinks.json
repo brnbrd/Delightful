@@ -1,11 +1,16 @@
 {
   "values": [
-    "delightful:prickly_pear_juice",
+    "#forge:drinks/tequila",
+    "#forge:juices",
     "delightful:ender_nectar",
     "delightful:matcha_latte",
     "delightful:berry_matcha_latte",
     "delightful:azalea_tea",
     "delightful:lavender_tea",
+    {
+      "id": "#brewinandchewin:fermented_drinks",
+      "required": false
+    },
     {
       "id": "farmersrespite:green_tea",
       "required": false

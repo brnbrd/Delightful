@@ -1,0 +1,46 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "farmersrespite"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "prickly_pear_juice"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "long_prickly_pear_juice"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:fruits/prickly_pear"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "farmersrespite:brewing",
+        "base": {
+          "count": 1000,
+          "fluid": "delightful:prickly_pear_juice"
+        },
+        "cookingtime": 2400,
+        "experience": 0.35,
+        "ingredients": [
+          {
+            "tag": "forge:milk"
+          }
+        ],
+        "result": {
+          "count": 1000,
+          "fluid": "delightful:long_prickly_pear_juice"
+        }
+      }
+    }
+  ]
+}

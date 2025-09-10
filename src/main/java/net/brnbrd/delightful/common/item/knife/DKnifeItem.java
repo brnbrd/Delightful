@@ -67,11 +67,11 @@ public class DKnifeItem extends KnifeItem implements ICompat {
 	@Override
 	public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> comps, @NotNull TooltipFlag pIsAdvanced) {
 		if (this.enabledText(comps)) {
-			super.appendHoverText(stack, level, comps, pIsAdvanced);
 			if (!this.getTools().isEmpty()) {
 				comps.addAll(this.getTools());
 			}
 		}
+		super.appendHoverText(stack, level, comps, pIsAdvanced);
 	}
 
 	@Override

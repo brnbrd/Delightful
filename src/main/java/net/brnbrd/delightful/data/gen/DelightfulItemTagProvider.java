@@ -61,22 +61,6 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.add(DelightfulItems.COCONUT_CURRY.get())
 			.add(DelightfulItems.FIELD_SALAD.get())
 			.add(DelightfulItems.STUFFED_CANTALOUPE.get());
-		this.tag(ModTags.DRINKS)
-			.add(DelightfulItems.PRICKLY_PEAR_JUICE.get())
-			.add(DelightfulItems.ENDER_NECTAR.get())
-			.add(DelightfulItems.MATCHA_LATTE.get())
-			.add(DelightfulItems.BERRY_MATCHA_LATTE.get())
-			.add(DelightfulItems.AZALEA_TEA.get())
-			.add(DelightfulItems.LAVENDER_TEA.get())
-			.addOptional(Modid.FR.rl("green_tea"))
-			.addOptional(Modid.FR.rl("yellow_tea"))
-			.addOptional(Modid.FR.rl("black_tea"))
-			.addOptional(Modid.FR.rl("rose_hip_tea"))
-			.addOptional(Modid.FR.rl("dandelion_tea"))
-			.addOptional(Modid.FR.rl("purulent_tea"))
-			.addOptional(Modid.FR.rl("gamblers_tea"))
-			.addOptional(Modid.WS.rl("lavender_tea"))
-			.addOptional(Modid.WS.rl("ginger_tea"));
 		this.tag(ModTags.FEASTS)
 			.add(DelightfulItems.STUFFED_CANTALOUPE_BLOCK.get());
 		this.tag(DelightfulItemTags.STRAW_PLANTS)
@@ -379,31 +363,6 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.TOOLS_WRENCH).addOptional(Modid.FOR.rl("wrench"));
 		this.tag(ItemTags.TOOLS).addTag(DelightfulItemTags.TOOLS_WRENCH);
 		this.tag(DelightfulItemTags.WRENCHES).addTag(DelightfulItemTags.TOOLS_WRENCH);
-		this.tag(DelightfulItemTags.JUICES_MELON)
-			.add(ModItems.MELON_JUICE.get())
-			.addOptional(Modid.FR.rl("strong_melon_juice"));
-		this.tag(DelightfulItemTags.JUICES_PRICKLY_PEAR).add(DelightfulItems.PRICKLY_PEAR_JUICE.get());
-		this.tag(DelightfulItemTags.JUICES_ORANGE).addOptional(Modid.SOB.rl("orange_juice"));
-		this.tag(Modid.LOADER.it("juices/orange_juice")).addTag(DelightfulItemTags.JUICES_ORANGE);
-		this.tag(DelightfulItemTags.JUICES_LEMON).addOptional(Modid.FRD.rl("lemon_juice"));
-		this.tag(Modid.LOADER.it("juices/lemon_juice")).addTag(DelightfulItemTags.JUICES_LEMON);
-		this.tag(DelightfulItemTags.JUICES_CITRUS)
-			.addTag(DelightfulItemTags.JUICES_ORANGE)
-			.addTag(DelightfulItemTags.JUICES_LEMON)
-			.addOptionalTag(Modid.LOADER.rl("juices/lime"))
-			.addOptionalTag(Modid.LOADER.rl("juices/lime_juice"));
-		this.tag(Modid.LOADER.it("juices/citrus_juice")).addTag(DelightfulItemTags.JUICES_CITRUS);
-		this.tag(DelightfulItemTags.JUICES)
-			.addTag(DelightfulItemTags.JUICES_MELON)
-			.addTag(DelightfulItemTags.JUICES_PRICKLY_PEAR)
-			.addTag(DelightfulItemTags.JUICES_CITRUS)
-			.addOptionalTag(Modid.LOADER.rl("juices/citrus_juice"))
-			.addOptional(Modid.HH.rl("blueberry_juice"))
-			.addOptional(Modid.HH.rl("cherry_juice"))
-			.addOptional(Modid.HH.rl("raspberry_juice"))
-			.addOptional(Modid.HH.rl("red_grape_juice"))
-			.addOptional(Modid.HH.rl("green_grape_juice"))
-			.addOptional(Modid.AD.rl("pickerelweed_juice"));
 		this.tag(DelightfulItemTags.WATER)
 			.addTag(ForgeTags.BUCKETS_WATER)
 			.addOptional(Modid.MD.rl("water_cup"));
@@ -818,13 +777,53 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.AUT.rl("snail_shell_piece"));
 		this.tag(DelightfulItemTags.MARSHMALLOW)
 			.addOptional(Util.rl("create_confectionery", "marshmallow"));
+		this.tag(DelightfulItemTags.JUICES_MELON)
+			.add(ModItems.MELON_JUICE.get())
+			.addOptional(Modid.FR.rl("strong_melon_juice"));
+		this.tag(DelightfulItemTags.JUICES_PRICKLY_PEAR)
+			.add(DelightfulItems.PRICKLY_PEAR_JUICE.get())
+			.add(DelightfulItems.LONG_PRICKLY_PEAR_JUICE.get());
+		this.tag(DelightfulItemTags.JUICES_ORANGE).addOptional(Modid.SOB.rl("orange_juice"));
+		this.tag(Modid.LOADER.it("juices/orange_juice")).addTag(DelightfulItemTags.JUICES_ORANGE);
+		this.tag(DelightfulItemTags.JUICES_LEMON).addOptional(Modid.FRD.rl("lemon_juice"));
+		this.tag(Modid.LOADER.it("juices/lemon_juice")).addTag(DelightfulItemTags.JUICES_LEMON);
+		this.tag(DelightfulItemTags.JUICES_CITRUS)
+			.addTag(DelightfulItemTags.JUICES_ORANGE)
+			.addTag(DelightfulItemTags.JUICES_LEMON)
+			.addOptionalTag(Modid.LOADER.rl("juices/lime"))
+			.addOptionalTag(Modid.LOADER.rl("juices/lime_juice"));
+		this.tag(Modid.LOADER.it("juices/citrus_juice")).addTag(DelightfulItemTags.JUICES_CITRUS);
+		this.tag(DelightfulItemTags.JUICES)
+			.addTag(DelightfulItemTags.JUICES_MELON)
+			.addTag(DelightfulItemTags.JUICES_PRICKLY_PEAR)
+			.addTag(DelightfulItemTags.JUICES_CITRUS)
+			.addOptional(Modid.HH.rl("blueberry_juice"))
+			.addOptional(Modid.HH.rl("cherry_juice"))
+			.addOptional(Modid.HH.rl("raspberry_juice"))
+			.addOptional(Modid.HH.rl("red_grape_juice"))
+			.addOptional(Modid.HH.rl("green_grape_juice"));
 		this.tag(DelightfulItemTags.DRINKS_TEQUILA)
 			.addOptional(Modid.CTD.rl("tequila"))
 			.addOptional(Modid.SOB.rl("tequila"));
-		this.tag(DelightfulItemTags.DRINKS)
-			.addTag(ModTags.DRINKS)
+		this.tag(ModTags.DRINKS)
 			.addTag(DelightfulItemTags.DRINKS_TEQUILA)
-			.addTag(DelightfulItemTags.JUICES);
+			.addTag(DelightfulItemTags.JUICES)
+			.add(DelightfulItems.ENDER_NECTAR.get())
+			.add(DelightfulItems.MATCHA_LATTE.get())
+			.add(DelightfulItems.BERRY_MATCHA_LATTE.get())
+			.add(DelightfulItems.AZALEA_TEA.get())
+			.add(DelightfulItems.LAVENDER_TEA.get())
+			.addOptionalTag(Modid.BC.rl("fermented_drinks"))
+			.addOptional(Modid.FR.rl("green_tea"))
+			.addOptional(Modid.FR.rl("yellow_tea"))
+			.addOptional(Modid.FR.rl("black_tea"))
+			.addOptional(Modid.FR.rl("rose_hip_tea"))
+			.addOptional(Modid.FR.rl("dandelion_tea"))
+			.addOptional(Modid.FR.rl("purulent_tea"))
+			.addOptional(Modid.FR.rl("gamblers_tea"))
+			.addOptional(Modid.WS.rl("lavender_tea"))
+			.addOptional(Modid.WS.rl("ginger_tea"));
+		this.tag(DelightfulItemTags.DRINKS).addTag(ModTags.DRINKS);
 
 		// Collector's Reap
 		this.tag(Modid.CR.it("gummies"))

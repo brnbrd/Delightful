@@ -8,9 +8,9 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import java.util.List;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import java.util.List;
 
 public class CompatBlockItem extends BlockItem implements ICompat {
 	private final Modid[] modid;
@@ -21,14 +21,13 @@ public class CompatBlockItem extends BlockItem implements ICompat {
 	}
 
 	@Override
-	public Modid[] getModid() {
-		return modid;
+	public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> comps, @NotNull TooltipFlag pIsAdvanced) {
+		this.enabledText(comps);
+		super.appendHoverText(stack, level, comps, pIsAdvanced);
 	}
 
 	@Override
-	public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> comps, @NotNull TooltipFlag pIsAdvanced) {
-		if (this.enabledText(comps)) {
-			super.appendHoverText(stack, level, comps, pIsAdvanced);
-		}
+	public Modid[] getModid() {
+		return modid;
 	}
 }

@@ -1,0 +1,39 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "farmersrespite"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "prickly_pear_juice"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "long_prickly_pear_juice"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:fruits/prickly_pear"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "farmersrespite:kettle_pouring",
+        "amount": 250,
+        "container": {
+          "item": "minecraft:glass_bottle"
+        },
+        "fluid": "delightful:long_prickly_pear_juice",
+        "output": {
+          "item": "delightful:long_prickly_pear_juice"
+        }
+      }
+    }
+  ]
+}

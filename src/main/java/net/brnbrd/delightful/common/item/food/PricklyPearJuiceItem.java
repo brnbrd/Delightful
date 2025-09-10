@@ -1,12 +1,17 @@
 package net.brnbrd.delightful.common.item.food;
 
+import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 
 public class PricklyPearJuiceItem extends CompatDrinkItem {
 	public PricklyPearJuiceItem(Properties properties) {
-		super(properties, true, false);
+		super(properties.stacksTo(16), true, false);
+	}
+
+	public PricklyPearJuiceItem(Properties properties, Modid... modid) {
+		super(properties.stacksTo(16), true, false, modid);
 	}
 
 	@Override

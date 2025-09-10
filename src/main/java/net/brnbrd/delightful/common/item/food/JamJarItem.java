@@ -4,7 +4,7 @@ import net.brnbrd.delightful.compat.Modid;
 
 public class JamJarItem extends DConsumableItem {
 	public JamJarItem(Properties properties, boolean hasPotionEffectTooltip, boolean hasCustomTooltip) {
-		super(properties, hasPotionEffectTooltip, hasCustomTooltip);
+		super(properties.stacksTo(16), hasPotionEffectTooltip, hasCustomTooltip);
 	}
 
 	@Override
