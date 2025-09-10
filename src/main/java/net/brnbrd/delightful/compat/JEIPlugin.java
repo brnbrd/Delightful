@@ -96,6 +96,7 @@ public class JEIPlugin implements IModPlugin {
 		}
 		if (Util.tagEmpty(DelightfulItemTags.FRUITS_PRICKLY_PEAR)) {
 			hiddenFluids.add(new FluidStack(DelightfulFluids.PRICKLY_PEAR_JUICE.get(), 1000));
+			hiddenFluids.add(new FluidStack(DelightfulFluids.LONG_PRICKLY_PEAR_JUICE.get(), 1000));
 		}
 
 		// Add Knife translations

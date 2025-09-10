@@ -1,4 +1,4 @@
-// 1.20.1	2025-09-09T17:50:03.0349595	Recipes
+// 1.20.1	2025-09-09T21:50:01.8911137	Recipes
 6c217dd6477efa10f6042809ba959d53036ab5e2 data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 5b82f87851220644287d771121677deac66b3b89 data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
 cf29033c1c919355c261025df529938e6ebc73f8 data/delightful/advancements/recipes/campfire/cactus_steak.json
@@ -33,8 +33,8 @@ f7d31d3f87235247bc9a1560f7b6639dd043570f data/delightful/advancements/recipes/fo
 60a2dfd5329664f294779ba9547700ac3857926e data/delightful/advancements/recipes/food/cooking/nut_butter_bottle.json
 680cbf9e972438e222fb03198f6b37bf59d54d9b data/delightful/advancements/recipes/food/cooking/nut_butter_bottle_from_salt.json
 f8b64cbc40cbbe4360b7223029d1758da01949bd data/delightful/advancements/recipes/food/cooking/rock_candy.json
-808d57e73e80475c16702d38d56da6a1d9b17803 data/delightful/advancements/recipes/food/cooking/sinigang.json
-55de7ec53933bc4a9dc9c23c0eb64c8cb34a005e data/delightful/advancements/recipes/food/cooking/sinigang_no_ginger_citrus.json
+6511e3516f333e5a971eec788e2af70212da198f data/delightful/advancements/recipes/food/cooking/sinigang.json
+ceda2a532b7b385b7e33a198e46d7d648b3690d9 data/delightful/advancements/recipes/food/cooking/sinigang_no_ginger_citrus.json
 49065af644fac0c8a4dd758954a39cb4cc2dfe19 data/delightful/advancements/recipes/food/cooking/stuffed_cantaloupe.json
 1ec258bf0bdd96bcb606a2b7b52acb927257c8b2 data/delightful/advancements/recipes/food/cooking/venison_stew.json
 60f019bfab507624f6971a5c8e08967be559576c data/delightful/advancements/recipes/food/cooking/venison_stew_no_animal_fat.json
@@ -196,8 +196,8 @@ cc2c4501c54684068f20d197074a78ed3c599993 data/delightful/recipes/food/cooking/cr
 9c6466cf955ce31fa0e8af84fb4cc15cbc56b076 data/delightful/recipes/food/cooking/nut_butter_bottle.json
 bca3a94a902f6ed6acecc54eaac9dbb4351d5342 data/delightful/recipes/food/cooking/nut_butter_bottle_from_salt.json
 b01a485c2bd108f4bac1c689a8ce4f284a966a75 data/delightful/recipes/food/cooking/rock_candy.json
-5669fe676a9d22dc3017285592c75da51782f723 data/delightful/recipes/food/cooking/sinigang.json
-edc0bc9b6659e49b19b96be96487dc53ee228b76 data/delightful/recipes/food/cooking/sinigang_no_ginger_citrus.json
+b6a4a6beb2952bec7e1cfc171534b1a95b48ea03 data/delightful/recipes/food/cooking/sinigang.json
+da36ac906fdf71f4fbbd2a03d23f8c244a6bddc6 data/delightful/recipes/food/cooking/sinigang_no_ginger_citrus.json
 562fb8d6ee982308c508ca35cbe5d2c64ae58189 data/delightful/recipes/food/cooking/stuffed_cantaloupe.json
 9fe3860225541d871c6bb03f145fe6fc3ef0fea7 data/delightful/recipes/food/cooking/venison_stew.json
 0f84d5316986c2596182d6756b9ff719e654d75a data/delightful/recipes/food/cooking/venison_stew_no_animal_fat.json

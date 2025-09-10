@@ -4,11 +4,11 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_ginger": {
+          "has_citrus": {
             "conditions": {
               "items": [
                 {
-                  "tag": "forge:vegetables/ginger"
+                  "tag": "forge:fruits/citrus"
                 }
               ]
             },
@@ -23,7 +23,7 @@
         },
         "requirements": [
           [
-            "has_ginger",
+            "has_citrus",
             "has_the_recipe"
           ]
         ],

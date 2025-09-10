@@ -15,6 +15,7 @@ public class DelightfulBlockTags {
 	public static final TagKey<Block> ADD_ACORN = bind(Delightful.MODID, "add_acorn");
 	public static final TagKey<Block> DROPS_GREEN_TEA_LEAF = bind(Delightful.MODID, "drops_green_tea_leaf");
 	public static final TagKey<Block> CANTALOUPE_SPAWNS = bind(Delightful.MODID, "cantaloupe_spawns");
+	public static final TagKey<Block> REPLACE_PRICKLY_PEAR = bind(Delightful.MODID, "replace_prickly_pear");
 
 	// Forge
 	public static final TagKey<Block> STORAGE_BLOCKS_SALMONBERRIES = forge("storage_blocks/salmonberries");

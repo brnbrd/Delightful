@@ -31,22 +31,16 @@
         "experience": 1.0,
         "ingredients": [
           {
-            "tag": "forge:raw_fishes"
+            "tag": "forge:raw_pork"
           },
           {
             "item": "farmersdelight:tomato_sauce"
           },
           {
-            "tag": "forge:vegetables/onion"
-          },
-          {
-            "tag": "forge:raw_pork"
+            "tag": "forge:fruits/citrus"
           },
           {
             "tag": "forge:vegetables/ginger"
-          },
-          {
-            "tag": "forge:fruits/citrus"
           }
         ],
         "recipe_book_tab": "meals",

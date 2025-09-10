@@ -485,26 +485,22 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 				"food/cooking/coconut_curry", finished, enabled(DelightfulItems.COCONUT_CURRY), not(tagEmpty(DelightfulItemTags.COCONUT)), not(tagEmpty(DelightfulItemTags.VEGETABLES_GINGER)));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
 								DelightfulItems.SINIGANG.get(), 1, CookingRecipes.NORMAL_COOKING, 1F, Items.BOWL)
-						.addIngredient(ForgeTags.RAW_FISHES)
-						.addIngredient(ModItems.TOMATO_SAUCE.get())
-						.addIngredient(ForgeTags.VEGETABLES_ONION)
 						.addIngredient(ForgeTags.RAW_PORK)
-						.addIngredient(DelightfulItemTags.VEGETABLES_GINGER)
+						.addIngredient(ModItems.TOMATO_SAUCE.get())
 						.addIngredient(DelightfulItemTags.FRUITS_CITRUS)
-						.unlockedBy("has_ginger", has(DelightfulItemTags.VEGETABLES_GINGER))
+						.addIngredient(DelightfulItemTags.VEGETABLES_GINGER)
+						.unlockedBy("has_citrus", has(DelightfulItemTags.FRUITS_CITRUS))
 						.setRecipeBookTab(CookingPotRecipeBookTab.MEALS),
-				"food/cooking/sinigang", finished, enabled("sinigang"), not(tagEmpty(DelightfulItemTags.VEGETABLES_GINGER)), not(tagEmpty(DelightfulItemTags.FRUITS_CITRUS)));
+				"food/cooking/sinigang", finished, enabled(DelightfulItems.SINIGANG), not(tagEmpty(DelightfulItemTags.VEGETABLES_GINGER)), not(tagEmpty(DelightfulItemTags.FRUITS_CITRUS)));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
 								DelightfulItems.SINIGANG.get(), 1, CookingRecipes.NORMAL_COOKING, 1F, Items.BOWL)
 						.addIngredient(ForgeTags.RAW_PORK)
-						.addIngredient(ForgeTags.RAW_FISHES)
-						.addIngredient(ForgeTags.GRAIN_RICE)
-						.addIngredient(ForgeTags.VEGETABLES_TOMATO)
+						.addIngredient(ModItems.TOMATO_SAUCE.get())
 						.addIngredient(DelightfulItemTags.FRUITS)
 						.addIngredient(ForgeTags.VEGETABLES_ONION)
-						.unlockedBy("has_ginger", has(DelightfulItemTags.FRUITS))
+						.unlockedBy("has_pork", has(ForgeTags.RAW_PORK))
 						.setRecipeBookTab(CookingPotRecipeBookTab.MEALS),
-				"food/cooking/sinigang_no_ginger_citrus", finished, enabled("sinigang"), or(tagEmpty(DelightfulItemTags.VEGETABLES_GINGER), tagEmpty(DelightfulItemTags.FRUITS_CITRUS)));
+				"food/cooking/sinigang_no_ginger_citrus", finished, enabled(DelightfulItems.SINIGANG), or(tagEmpty(DelightfulItemTags.VEGETABLES_GINGER), tagEmpty(DelightfulItemTags.FRUITS_CITRUS)));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
 								DelightfulItems.CRAB_RANGOON.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
 						.addIngredient(ForgeTags.DOUGH)

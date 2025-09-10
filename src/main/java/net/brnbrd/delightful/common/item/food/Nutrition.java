@@ -133,7 +133,7 @@ public class Nutrition {
 		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3600, 0), 1F)
 		.effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 600, 0), 1F).build();
 	public static final FoodProperties SINIGANG = (new FoodProperties.Builder())
-		.nutrition(15).saturationMod(0.9F)
+		.nutrition(12).saturationMod(0.7F)
 		.effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 6000, 0), 1F)
 		.effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 600, 0), 1F).build();
 	public static final FoodProperties ENDER_NECTAR = (new FoodProperties.Builder())

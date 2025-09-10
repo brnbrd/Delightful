@@ -2,8 +2,16 @@
   "type": "delightful:replace",
   "conditions": [
     {
-      "condition": "block_state_property",
-      "block": "sob:nopal_crop"
+      "condition": "delightful:mod_loaded",
+      "modid": "sob"
+    },
+    {
+      "condition": "delightful:mod_loaded",
+      "modid": "ecologics"
+    },
+    {
+      "condition": "delightful:is_tag",
+      "tag": "delightful:replace_prickly_pear"
     }
   ],
   "removed_item": "sob:prickly_pear",

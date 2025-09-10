@@ -4,11 +4,11 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_ginger": {
+          "has_pork": {
             "conditions": {
               "items": [
                 {
-                  "tag": "forge:fruits"
+                  "tag": "forge:raw_pork"
                 }
               ]
             },
@@ -23,7 +23,7 @@
         },
         "requirements": [
           [
-            "has_ginger",
+            "has_pork",
             "has_the_recipe"
           ]
         ],

@@ -11,7 +11,7 @@
 - Renamed `Nut Butter Bottle` to `Nut Butter` in English translations
 - Nut Butter now provides 6 nutrition
 - Nut Butter now requires 1 Kelp
-- Nut Butter now requires 1 `#forge:salt` if the tag is not empty
+  - Also requires 1 `#forge:salt` if the tag is not empty
 - Updated texture for Nut Butter
 - Marshmallow on a Stick is now made in the Cooking Pot, requiring Animal Fat or a Slimeball, Sugar, and Dried Vanilla Pods (if [Neapolitan](https://www.curseforge.com/minecraft/mc-mods/neapolitan) is present)
 - All Marshmallow items now provide Slow Falling I
@@ -23,13 +23,14 @@
   - Also requires Cantaloupe to mellow toxic Azalea properties
 - Lavender Tea is now brewed from Black Tea with [Farmer's Respite](https://www.curseforge.com/minecraft/mc-mods/farmers-respite)
 - Lavender Tea will now produce [Windswept!](https://www.curseforge.com/minecraft/mc-mods/windsweptmod)'s version if present
+- Nut Butter and Jelly Sandwich now provides Toughness I with [Smidgeon o' Bliss REMASTERED](https://www.curseforge.com/minecraft/mc-mods/smidgeon-o-bliss-remastered)
+- Field Salad now provides Regeneration I for 0:10
+- Cantaloupe Gummy now provides Resistance IV for 0:20
+- Sinigang now only requires 4 ingredients, and provides 12 nutrition
 - Field Salad can be crafted from any `#forge:cooked_nuts` instead of only Roasted Acorn
 - Pie Crust can be crafted from Animal Fat in place of Milk
 - Acorn can now be acquired by cutting Oak Sapling or Dark Oak Sapling with an Axe
 - Recipes for cutting `#forge:cacti` into Cactus Chunk will now also have a chance to provide Green Dye
-- Nut Butter and Jelly Sandwich now provides Toughness I with [Smidgeon o' Bliss REMASTERED](https://www.curseforge.com/minecraft/mc-mods/smidgeon-o-bliss-remastered)
-- Field Salad now provides Regeneration I for 0:10
-- Cantaloupe Gummy now provides Resistance IV for 0:20
 
 ### Fixes
 - Features will now not generate in the world if their respective item is disabled (closes [#118](https://github.com/brnbrd/Delightful/issues/118))
