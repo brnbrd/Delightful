@@ -33,7 +33,7 @@ public class Nutrition {
 		.effect(() -> new MobEffectInstance(NeapolitanCompat.getSugarRush(), 600, 1), 1F)
 		.effect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 0), 1F).build();
 	public static final FoodProperties CRAB_RANGOON = (new FoodProperties.Builder())
-		.nutrition(9).saturationMod(0.4F)
+		.nutrition(10).saturationMod(0.5F)
 		.effect(() -> CRCompat.getCorrosionInstance(400, 1), 1F).build();
 	public static final FoodProperties CHUNKWICH = (new FoodProperties.Builder())
 		.nutrition(11).saturationMod(0.4F)

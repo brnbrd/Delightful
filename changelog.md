@@ -9,15 +9,15 @@
 - Added Stuffed Cantaloupe to `#feasts`
 - Added all storage blocks to `#forge:storage_blocks`
 - Renamed `Nut Butter Bottle` to `Nut Butter` in English translations
-- Nut Butter now provides 6 nutrition
 - Nut Butter now requires 1 Kelp
   - Also requires 1 `#forge:salt` if the tag is not empty
+  - Now provides 6 nutrition
 - Updated texture for Nut Butter
 - Marshmallow on a Stick is now made in the Cooking Pot, requiring Animal Fat or a Slimeball, Sugar, and Dried Vanilla Pods (if [Neapolitan](https://www.curseforge.com/minecraft/mc-mods/neapolitan) is present)
 - All Marshmallow items now provide Slow Falling I
 - Prickly Pear Juice can now be crafted from any `#forge:fruits/prickly_pear`
   - Can also be brewed in a Kettle with [Farmer's Respite](https://www.curseforge.com/minecraft/mc-mods/farmers-respite)
-  - Can have effect length increased with Mil~~~~k in a Kettle from [Farmer's Respite](https://www.curseforge.com/minecraft/mc-mods/farmers-respite)
+  - Can have effect length increased with Milk in a Kettle from [Farmer's Respite](https://www.curseforge.com/minecraft/mc-mods/farmers-respite)
 - Azalea Tea now provides Resistance II for 4:00 and has some short negative effects
 - Azalea Tea is now brewed from Strong Yellow Tea with [Farmer's Respite](https://www.curseforge.com/minecraft/mc-mods/farmers-respite)
   - Also requires Cantaloupe to mellow toxic Azalea properties
@@ -27,6 +27,7 @@
 - Field Salad now provides Regeneration I for 0:10
 - Cantaloupe Gummy now provides Resistance IV for 0:20
 - Crab Rangoon is now crafted with Cream Cheese if present
+  - Now provides 10 nutrition
   - Now provides Corrosion II for 0:20 with [Collector's Reap](https://www.curseforge.com/minecraft/mc-mods/collectors-reap)
 - Sinigang now only requires 4 ingredients, and provides 12 nutrition
 - Field Salad can be crafted from any `#forge:cooked_nuts` instead of only Roasted Acorn

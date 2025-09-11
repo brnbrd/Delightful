@@ -14,7 +14,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 import vectorwing.farmersdelight.FarmersDelight;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import java.util.function.Supplier;
 
 public enum Modid {
 	LOADER(Util.LOADER),
