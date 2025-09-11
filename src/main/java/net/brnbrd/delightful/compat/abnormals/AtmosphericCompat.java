@@ -1,6 +1,5 @@
 package net.brnbrd.delightful.compat.abnormals;
 
-import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.compat.Modid;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -12,7 +11,7 @@ public class AtmosphericCompat {
 	public static final String passion_fruit_tart = "passion_fruit_tart";
 
 	public static MobEffect getSpitting() {
-		return Util.effect(Modid.AT, "spitting", MobEffects.MOVEMENT_SPEED);
+		return Modid.AT.effect("spitting", MobEffects.MOVEMENT_SPEED);
 	}
 
 	public static final FoodProperties PASSION_FRUIT_TART_SLICE = (new FoodProperties.Builder())

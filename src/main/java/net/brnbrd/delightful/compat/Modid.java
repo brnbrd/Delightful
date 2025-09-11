@@ -6,6 +6,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
@@ -13,6 +14,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import vectorwing.farmersdelight.FarmersDelight;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import java.util.function.Supplier;
 
 public enum Modid {
 	LOADER(Util.LOADER),
@@ -189,7 +191,21 @@ public enum Modid {
 	}
 
 	@Nullable
-	public MobEffect effect(@NotNull String name, MobEffect... backup) {
+	public final MobEffect effect(@NotNull String name, MobEffect... backup) {
 		return Util.effect(this.rl(name), backup);
+	}
+
+	@NotNull
+	public final MobEffectInstance effectInstance(@NotNull final String name, int duration, int amplifier, @NotNull final MobEffect backup, int backupDur, int backupAmp) {
+		final MobEffect effect = this.effect(name, backup);
+		return (effect == null || effect == backup) ?
+			new MobEffectInstance(backup, backupDur, backupAmp) :
+			new MobEffectInstance(effect, duration, amplifier);
+	}
+
+	// Uses same duration and amplifier for backup
+	@NotNull
+	public final MobEffectInstance effectInstance(@NotNull final String name, int duration, int amplifier, @NotNull final MobEffect backup) {
+		return this.effectInstance(name, duration, amplifier, backup, duration, amplifier);
 	}
 }

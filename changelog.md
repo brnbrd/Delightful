@@ -17,7 +17,7 @@
 - All Marshmallow items now provide Slow Falling I
 - Prickly Pear Juice can now be crafted from any `#forge:fruits/prickly_pear`
   - Can also be brewed in a Kettle with [Farmer's Respite](https://www.curseforge.com/minecraft/mc-mods/farmers-respite)
-  - Can have effect length increased with Milk in a Kettle from [Farmer's Respite](https://www.curseforge.com/minecraft/mc-mods/farmers-respite)
+  - Can have effect length increased with Mil~~~~k in a Kettle from [Farmer's Respite](https://www.curseforge.com/minecraft/mc-mods/farmers-respite)
 - Azalea Tea now provides Resistance II for 4:00 and has some short negative effects
 - Azalea Tea is now brewed from Strong Yellow Tea with [Farmer's Respite](https://www.curseforge.com/minecraft/mc-mods/farmers-respite)
   - Also requires Cantaloupe to mellow toxic Azalea properties
@@ -26,6 +26,8 @@
 - Nut Butter and Jelly Sandwich now provides Toughness I with [Smidgeon o' Bliss REMASTERED](https://www.curseforge.com/minecraft/mc-mods/smidgeon-o-bliss-remastered)
 - Field Salad now provides Regeneration I for 0:10
 - Cantaloupe Gummy now provides Resistance IV for 0:20
+- Crab Rangoon is now crafted with Cream Cheese if present
+  - Now provides Corrosion II for 0:20 with [Collector's Reap](https://www.curseforge.com/minecraft/mc-mods/collectors-reap)
 - Sinigang now only requires 4 ingredients, and provides 12 nutrition
 - Field Salad can be crafted from any `#forge:cooked_nuts` instead of only Roasted Acorn
 - Pie Crust can be crafted from Animal Fat in place of Milk
@@ -358,7 +360,7 @@
 - Tree Bark compat for: Ars Nouveau, Ecologics, Undergarden, Spawn, Aether, Deep Aether, Aether Redux
 
 ### Fixes
-- Crab Rangoon now uses tag "forge:crab_meat" rather than "forge:cooked_crab"'
+- Crab Rangoon now uses tag "forge:crab_meat" rather than "forge:cooked_crab"
 - Planted Salmonberry Bushes now correctly drop berries when broken
 - Removed speed from Salmonberry and Source Berry pie slices
 - Crabber's Delight and Ecologics' crafting parity

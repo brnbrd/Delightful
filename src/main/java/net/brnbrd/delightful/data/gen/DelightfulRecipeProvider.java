@@ -584,7 +584,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 						Ingredient.of(DelightfulItemTags.TEA_LEAVES_GREEN),
 						Ingredient.of(ForgeTags.TOOLS_SHOVELS),
 						Items.GREEN_DYE, 1).addResultWithChance(DelightfulItems.MATCHA.get(), 0.4F),
-				"cutting/green_tea_leaves", finished, enabled("matcha"), not(tagEmpty(DelightfulItemTags.TEA_LEAVES_GREEN)), not(modLoaded(Modid.YH.get())));
+				"cutting/green_tea_leaves", finished, enabled(DelightfulItems.MATCHA), not(tagEmpty(DelightfulItemTags.TEA_LEAVES_GREEN)), not(modLoaded(Modid.YH.get())));
 		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
 						Ingredient.of(DelightfulItemTags.CLOVER),
 						Ingredient.of(ForgeTags.TOOLS_KNIVES),

@@ -6,8 +6,8 @@ import net.minecraft.world.item.Item;
 import org.jetbrains.annotations.Nullable;
 
 public class CrabRangoonItem extends DConsumableItem {
-	public CrabRangoonItem(Properties properties) {
-		super(properties);
+	public CrabRangoonItem(Properties properties, boolean hasFoodEffectTooltip) {
+		super(properties, hasFoodEffectTooltip, false);
 	}
 
 	@Override

@@ -36,7 +36,7 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
 [[dependencies.delightful]]
 	modId="collectorsreap"
 	mandatory=false
-	versionRange="[0,)"
+	versionRange="[1.4.1,)"
 	ordering="AFTER"
 	side="BOTH"
 

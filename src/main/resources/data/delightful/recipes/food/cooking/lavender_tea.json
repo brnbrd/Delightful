@@ -18,13 +18,6 @@
           "type": "forge:not",
           "value": {
             "type": "forge:mod_loaded",
-            "modid": "youkaishomecoming"
-          }
-        },
-        {
-          "type": "forge:not",
-          "value": {
-            "type": "forge:mod_loaded",
             "modid": "farmersrespite"
           }
         },
@@ -74,13 +67,6 @@
           "value": {
             "type": "forge:tag_empty",
             "tag": "minecraft:flowers/lavender"
-          }
-        },
-        {
-          "type": "forge:not",
-          "value": {
-            "type": "forge:mod_loaded",
-            "modid": "youkaishomecoming"
           }
         },
         {

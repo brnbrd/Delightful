@@ -1,8 +1,6 @@
 package net.brnbrd.delightful.common.item.food;
 
-import net.brnbrd.delightful.compat.CosmopolitanCompat;
-import net.brnbrd.delightful.compat.SOBCompat;
-import net.brnbrd.delightful.compat.TeaCompat;
+import net.brnbrd.delightful.compat.*;
 import net.brnbrd.delightful.compat.abnormals.NeapolitanCompat;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -35,7 +33,8 @@ public class Nutrition {
 		.effect(() -> new MobEffectInstance(NeapolitanCompat.getSugarRush(), 600, 1), 1F)
 		.effect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 0), 1F).build();
 	public static final FoodProperties CRAB_RANGOON = (new FoodProperties.Builder())
-		.nutrition(9).saturationMod(0.4F).build();
+		.nutrition(9).saturationMod(0.4F)
+		.effect(() -> CRCompat.getCorrosionInstance(400, 1), 1F).build();
 	public static final FoodProperties CHUNKWICH = (new FoodProperties.Builder())
 		.nutrition(11).saturationMod(0.4F)
 		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 600, 0), 1F).build();
@@ -49,8 +48,7 @@ public class Nutrition {
 	public static final FoodProperties NUT_BUTTER_AND_JAM_SANDWICH = (new FoodProperties.Builder())
 		.nutrition(11).saturationMod(0.7F)
 		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3600, 0), 1F)
-		.effect(() -> new MobEffectInstance(SOBCompat.getToughness().get(), 1800, 0), 1F)
-		.build();
+		.effect(() -> new MobEffectInstance(SOBCompat.getToughness().get(), 1800, 0), 1F).build();
 	public static final FoodProperties HONEY_GLAZED_WALNUT = (new FoodProperties.Builder())
 		.nutrition(6).saturationMod(1F).build();
 	public static final FoodProperties ACORN = (new FoodProperties.Builder())

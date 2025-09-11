@@ -94,7 +94,7 @@ public class JEIPlugin implements IModPlugin {
 		if (!farmersRespiteLoaded || Util.tagEmpty(DelightfulItemTags.FLOWERS_AZALEA)) {
 			hiddenFluids.add(new FluidStack(DelightfulFluids.AZALEA_TEA.get(), 1000));
 		}
-		if (Util.tagEmpty(DelightfulItemTags.FRUITS_PRICKLY_PEAR)) {
+		if (!farmersRespiteLoaded || Util.tagEmpty(DelightfulItemTags.FRUITS_PRICKLY_PEAR)) {
 			hiddenFluids.add(new FluidStack(DelightfulFluids.PRICKLY_PEAR_JUICE.get(), 1000));
 			hiddenFluids.add(new FluidStack(DelightfulFluids.LONG_PRICKLY_PEAR_JUICE.get(), 1000));
 		}

@@ -176,7 +176,7 @@ public class DelightfulItems {
 		() -> new MarshmallowStickItem((new Item.Properties()).food(Nutrition.COOKED_MARSHMALLOW_STICK).craftRemainder(Items.STICK), true));
 	public static final RegistryObject<Item> SMORE = registerConsumable("smore", Nutrition.SMORE, null, true, false);
 	public static final RegistryObject<Item> CRAB_RANGOON = registerItem("crab_rangoon",
-		() -> new CrabRangoonItem(new Item.Properties().food(Nutrition.CRAB_RANGOON)));
+		() -> new CrabRangoonItem(new Item.Properties().food(Nutrition.CRAB_RANGOON), true));
 	public static final RegistryObject<Item> HONEY_GLAZED_WALNUT = registerItem("honey_glazed_walnut",
 		() -> new HoneyGlazedWalnutItem(new Item.Properties().food(Nutrition.HONEY_GLAZED_WALNUT)));
 	public static final RegistryObject<Item> VENISON_CHOPS = registerItem("venison_chops",
