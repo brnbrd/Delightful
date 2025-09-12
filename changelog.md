@@ -1,6 +1,12 @@
 ## Version History
 
 
+# 3.7.6
+
+### Fixes
+- Fixed Peculiars dependency version being too high
+
+
 # 3.7.5
 
 ### Updates

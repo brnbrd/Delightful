@@ -113,14 +113,14 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
 [[dependencies.delightful]]
     modId="seasonals"
     mandatory=false
-    versionRange="[1.20.1-5.0.2,)"
+    versionRange="[0,)"
     ordering="AFTER"
     side="BOTH"
 
 [[dependencies.delightful]]
 	modId="peculiars"
 	mandatory=false
-	versionRange="[1.20.1-5.0.1,)"
+	versionRange="[0,)"
 	ordering="AFTER"
 	side="BOTH"
 
