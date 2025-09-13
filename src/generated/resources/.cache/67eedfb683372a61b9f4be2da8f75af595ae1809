@@ -1,4 +1,4 @@
-// 1.20.1	2025-09-11T13:16:20.3310528	Item Models: delightful
+// 1.20.1	2025-09-13T11:04:49.3506194	Item Models: delightful
 f9af973b19b45f34017d8db4e6e54de90668031e assets/delightful/models/item/acorn.json
 9b4daf24b0d8e447735c5836d7ab76a3df1b3c1d assets/delightful/models/item/acorn_sack.json
 5d9531a6795e7d2281f99609672d866743329211 assets/delightful/models/item/adamantium_knife.json
@@ -137,6 +137,7 @@ c85b551a079857106bae590bf01434c23c595a98 assets/delightful/models/item/salmonber
 6b35ac1bf0de23c9caa5f9e4c1ed5ff4d74bb5ed assets/delightful/models/item/salmonberry_sack.json
 272966734912c5d903aa6aaf78ed464b5f03aec9 assets/delightful/models/item/silver_knife.json
 afb0771c1a06574b3e7dd54bd077e2c7ccbce795 assets/delightful/models/item/sinigang.json
+fec38e2d956d5c9f799d5b72ab7b1075954104ba assets/delightful/models/item/sinigang_cup.json
 ef8573110abf1c1b22bccc4fd76c327727ff3f91 assets/delightful/models/item/sinisite_knife.json
 b6e896ce2901df212efd4788515bfe188736b568 assets/delightful/models/item/skyjade_knife.json
 97f0655297b964003ddbbb30b322211d79223dad assets/delightful/models/item/skyroot_knife.json

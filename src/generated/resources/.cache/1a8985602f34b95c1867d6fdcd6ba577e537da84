@@ -1,4 +1,4 @@
-// 1.20.1	2025-09-11T13:16:20.3348539	delightful
+// 1.20.1	2025-09-13T11:04:49.3538014	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -247,7 +247,7 @@ a95df2279e05baa5f0608937c6c66f68c44ebf2d data/nethersdelight/tags/items/meal_ite
 bd03c94c3be4df3a7a6a198d6d729fad9fb4311f data/phantasm/tags/items/crystal_spike_tips.json
 61d64c77058e1625c2e3b99ed4a928eea28f624e data/phantasm/tags/items/gets_xp_speed_boost.json
 a8f06d7dc1646ce181a8dc82c1d2a179064212a9 data/phantasm/tags/items/void_crystal_block.json
-020fae7dac24487fce052e3007851018f1ae935f data/salt/tags/items/can_be_salted.json
+2908f42d098bb991e6e1fc471f611d715c6fc03e data/salt/tags/items/can_be_salted.json
 6ee15734ac9331c3a1b186bd12a7cfc07d71273b data/seeds/tags/items/sharp_leaf.json
 e8907bb6383992d824e326f554fcbab430f7e5ce data/sereneseasons/tags/items/summer_crops.json
 5ca5c9750568ae0343de46dc7bae0316ddffd566 data/spirit/tags/items/soul_steel_mainhand.json

@@ -1,6 +1,17 @@
 ## Version History
 
 
+# 3.7.7
+
+### Updates
+- Sinigang now requires 1 Lime rather than any citrus fruit
+  - Now provides Corrosion I for 0:30
+- Added Sinigang Cup (for [Miner's Delight +](https://www.curseforge.com/minecraft/mc-mods/miners-delight-plus))
+
+### Fixes
+- Fixed Chopped Clover recipe having an empty ingredient in some cases
+
+
 # 3.7.6
 
 ### Fixes

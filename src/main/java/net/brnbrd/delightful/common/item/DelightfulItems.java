@@ -140,6 +140,7 @@ public class DelightfulItems {
 	public static final RegistryObject<Item> VENISON_STEW = registerItem("venison_stew", () -> new VenisonStewItem((new Item.Properties()).food(Nutrition.VENISON_STEW).stacksTo(16).craftRemainder(Items.BOWL), true, false));
 	public static final RegistryObject<Item> VENISON_STEW_CUP = registerItem("venison_stew_cup", () -> new VenisonStewCupItem((new Item.Properties()).food(Nutrition.VENISON_STEW_CUP), true, false));
 	public static final RegistryObject<Item> SINIGANG = registerItem("sinigang", () -> new ConsumableItem((new Item.Properties()).food(Nutrition.SINIGANG).craftRemainder(Items.BOWL).stacksTo(16), true, false));
+	public static final RegistryObject<Item> SINIGANG_CUP = registerItem("sinigang_cup", () -> new CupItem((new Item.Properties()).food(Nutrition.SINIGANG_CUP), true, false));
 	public static final RegistryObject<Item> COCONUT_CURRY = registerItem("coconut_curry",
 		() -> new CoconutCurryItem((new Item.Properties()).food(Nutrition.COCONUT_CURRY).stacksTo(16).craftRemainder(Items.BOWL)));
 	public static final RegistryObject<Item> FIELD_SALAD = registerItem("field_salad",

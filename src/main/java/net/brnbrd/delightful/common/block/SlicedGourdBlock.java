@@ -72,7 +72,7 @@ public class SlicedGourdBlock extends Block implements ISliceable {
 
 	@Override
 	public ItemStack getSliceItem() {
-		return Util.gs(this.sliceItem, 1);
+		return Util.getStack(this.sliceItem, 1);
 	}
 
 	@Override

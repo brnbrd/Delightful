@@ -5,10 +5,10 @@ import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.forge.ForgeTypes;
 import mezz.jei.api.registration.IRecipeRegistration;
+import mezz.jei.api.runtime.IIngredientManager;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.fluid.DelightfulFluids;
 import net.brnbrd.delightful.common.item.DelightfulItems;
-import net.brnbrd.delightful.common.item.IConfigured;
 import net.brnbrd.delightful.common.item.food.GreenTeaLeavesItem;
 import net.brnbrd.delightful.common.item.knife.DKnifeItem;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
@@ -21,6 +21,8 @@ import net.minecraftforge.registries.RegistryObject;
 import vectorwing.farmersdelight.common.utility.TextUtils;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 import javax.annotation.ParametersAreNonnullByDefault;
 import org.jetbrains.annotations.NotNull;
 
@@ -32,16 +34,13 @@ public class JEIPlugin implements IModPlugin {
 
 	@Override
 	public void registerRecipes(IRecipeRegistration registration) {
-		// Hide all disabled items from JEI
-		List<ItemStack> hidden = new ArrayList<>(
-			DelightfulItems.ITEMS.getEntries()
-				.stream()
-				.filter(i -> { // Keep disabled items (to add to hidden list)
-					return !(i.get() instanceof IConfigured c ? c.enabled() : Util.enabled(i));
-				})
-				.map(Util::gs)
-				.toList());
-		List<FluidStack> hiddenFluids = new ArrayList<>();
+		final IIngredientManager manager = registration.getIngredientManager();
+
+		// Keep disabled items (to add to hidden list)
+		final List<ItemStack> hidden = DelightfulItems.ITEMS.getEntries().stream()
+			.filter(Predicate.not(Util::enabled))
+			.map(Util::getStack)
+			.collect(Collectors.toCollection(ArrayList::new)); // Create new mutable list
 
 		// Delightful conflicts
 		this.hide(hidden, Modid.SOB, "pbnj");
@@ -83,11 +82,12 @@ public class JEIPlugin implements IModPlugin {
 		this.hide(hidden, Modid.SOB, "prickly_pear", Modid.ECO);
 
 		if (!hidden.isEmpty()) {
-			registration.getIngredientManager().removeIngredientsAtRuntime(VanillaTypes.ITEM_STACK, hidden);
+			manager.removeIngredientsAtRuntime(VanillaTypes.ITEM_STACK, hidden);
 		}
 
 		// Hide fluids
-		boolean farmersRespiteLoaded = Modid.FR.loaded();
+		final List<FluidStack> hiddenFluids = new ArrayList<>();
+		final boolean farmersRespiteLoaded = Modid.FR.loaded();
 		if (!farmersRespiteLoaded || Util.tagEmpty(DelightfulItemTags.FLOWERS_LAVENDER)) {
 			hiddenFluids.add(new FluidStack(DelightfulFluids.LAVENDER_TEA.get(), 1000));
 		}
@@ -97,6 +97,10 @@ public class JEIPlugin implements IModPlugin {
 		if (!farmersRespiteLoaded || Util.tagEmpty(DelightfulItemTags.FRUITS_PRICKLY_PEAR)) {
 			hiddenFluids.add(new FluidStack(DelightfulFluids.PRICKLY_PEAR_JUICE.get(), 1000));
 			hiddenFluids.add(new FluidStack(DelightfulFluids.LONG_PRICKLY_PEAR_JUICE.get(), 1000));
+		}
+
+		if (!hiddenFluids.isEmpty()) {
+			manager.removeIngredientsAtRuntime(ForgeTypes.FLUID_STACK, hiddenFluids);
 		}
 
 		// Add Knife translations
@@ -114,8 +118,8 @@ public class JEIPlugin implements IModPlugin {
 		if (Util.enabled(DelightfulItems.SALMONBERRIES)) {
 			registration.addIngredientInfo(
 					List.of(
-						Util.gs(DelightfulItems.SALMONBERRIES),
-						Util.gs(DelightfulItems.WILD_SALMONBERRIES)
+						Util.getStack(DelightfulItems.SALMONBERRIES),
+						Util.getStack(DelightfulItems.WILD_SALMONBERRIES)
 					),
 					VanillaTypes.ITEM_STACK,
 				Util.description("salmonberries")
@@ -123,28 +127,28 @@ public class JEIPlugin implements IModPlugin {
 		}
 		if (((GreenTeaLeavesItem) DelightfulItems.GREEN_TEA_LEAF.get()).enabled()) {
 			registration.addIngredientInfo(
-				Util.gs(DelightfulItems.GREEN_TEA_LEAF),
+				Util.getStack(DelightfulItems.GREEN_TEA_LEAF),
 				VanillaTypes.ITEM_STACK,
 				Util.description("green_tea_leaf")
 			);
 		}
 		if (Util.enabled(DelightfulItems.ACORN)) {
 			registration.addIngredientInfo(
-				Util.gs(DelightfulItems.ACORN),
+				Util.getStack(DelightfulItems.ACORN),
 				VanillaTypes.ITEM_STACK,
 				Util.description("acorn")
 			);
 		}
 		if (Util.enabled(DelightfulItems.ANIMAL_FAT)) {
 			registration.addIngredientInfo(
-				Util.gs(DelightfulItems.ANIMAL_FAT),
+				Util.getStack(DelightfulItems.ANIMAL_FAT),
 				VanillaTypes.ITEM_STACK,
 				Util.description("animal_fat")
 			);
 		}
 		if (Util.enabled(DelightfulItems.ANIMAL_OIL_BOTTLE)) {
 			registration.addIngredientInfo(
-				Util.gs(DelightfulItems.ANIMAL_OIL_BOTTLE),
+				Util.getStack(DelightfulItems.ANIMAL_OIL_BOTTLE),
 				VanillaTypes.ITEM_STACK,
 				Util.description("animal_oil_bottle")
 			);
@@ -152,13 +156,13 @@ public class JEIPlugin implements IModPlugin {
 		if (Util.enabled(DelightfulItems.CANTALOUPE)) {
 			if (Util.enabled(DelightfulItems.CANTALOUPE_SEEDS)) {
 				registration.addIngredientInfo(
-					Util.gs(DelightfulItems.CANTALOUPE_SEEDS),
+					Util.getStack(DelightfulItems.CANTALOUPE_SEEDS),
 					VanillaTypes.ITEM_STACK,
 					Util.description("cantaloupe_seeds")
 				);
 			}
 			registration.addIngredientInfo(
-				Util.gs(DelightfulItems.CANTALOUPE),
+				Util.getStack(DelightfulItems.CANTALOUPE),
 				VanillaTypes.ITEM_STACK,
 				Util.description("cantaloupe")
 					.append(" ")
@@ -167,7 +171,7 @@ public class JEIPlugin implements IModPlugin {
 		}
 		if (Util.enabled(DelightfulItems.MINI_MELON)) {
 			registration.addIngredientInfo(
-				Util.gs(DelightfulItems.MINI_MELON),
+				Util.getStack(DelightfulItems.MINI_MELON),
 				VanillaTypes.ITEM_STACK,
 				Util.description("mini_melon")
 					.append(" ")
@@ -184,7 +188,6 @@ public class JEIPlugin implements IModPlugin {
 			VanillaTypes.ITEM_STACK,
 			Util.description("sliceable")
 		);
-		registration.getIngredientManager().removeIngredientsAtRuntime(ForgeTypes.FLUID_STACK, hiddenFluids);
 	}
 
 	private void hide(List<ItemStack> hiddenList, Modid modid, String name, Modid... conflicts) {

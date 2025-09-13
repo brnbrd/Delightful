@@ -1,0 +1,92 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "sinigang"
+        },
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:fruits/lime"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:vegetables/ginger"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:bowl"
+        },
+        "cookingtime": 200,
+        "experience": 1.0,
+        "ingredients": [
+          {
+            "tag": "forge:raw_pork"
+          },
+          {
+            "item": "farmersdelight:tomato_sauce"
+          },
+          {
+            "tag": "forge:fruits"
+          },
+          {
+            "tag": "forge:vegetables/ginger"
+          }
+        ],
+        "recipe_book_tab": "meals",
+        "result": {
+          "item": "delightful:sinigang"
+        }
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "sinigang"
+        },
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:fruits/lime"
+        },
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:vegetables/ginger"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:bowl"
+        },
+        "cookingtime": 200,
+        "experience": 1.0,
+        "ingredients": [
+          {
+            "tag": "forge:raw_pork"
+          },
+          {
+            "item": "farmersdelight:tomato_sauce"
+          },
+          {
+            "tag": "forge:fruits"
+          },
+          {
+            "tag": "forge:vegetables/onion"
+          }
+        ],
+        "recipe_book_tab": "meals",
+        "result": {
+          "item": "delightful:sinigang"
+        }
+      }
+    }
+  ]
+}

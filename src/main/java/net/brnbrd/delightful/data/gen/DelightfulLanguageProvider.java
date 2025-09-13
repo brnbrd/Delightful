@@ -93,6 +93,7 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		addItem(DelightfulItems.COOKED_GOAT, "Cooked Chevon");
 		addItem(DelightfulItems.COCONUT_CURRY, "Coconut Curry");
 		addItem(DelightfulItems.SINIGANG, "Sinigang");
+		addItem(DelightfulItems.SINIGANG_CUP, "Sinigang Cup");
 		addItem(DelightfulItems.SALMONBERRY_GUMMY, "Salmonberry Gummy");
 		addItem(DelightfulItems.MATCHA_GUMMY, "Matcha Gummy");
 		addItem(DelightfulItems.CANTALOUPE_GUMMY, "Cantaloupe Gummy");

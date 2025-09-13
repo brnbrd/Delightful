@@ -7,6 +7,10 @@
     {
       "bowl": "delightful:venison_stew",
       "cup": "delightful:venison_stew_cup"
+    },
+    {
+      "bowl": "delightful:sinigang",
+      "cup": "delightful:sinigang_cup"
     }
   ]
 }

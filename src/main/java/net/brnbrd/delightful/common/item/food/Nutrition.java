@@ -34,7 +34,7 @@ public class Nutrition {
 		.effect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 0), 1F).build();
 	public static final FoodProperties CRAB_RANGOON = (new FoodProperties.Builder())
 		.nutrition(10).saturationMod(0.5F)
-		.effect(() -> CRCompat.getCorrosionInstance(400, 1), 1F).build();
+		.effect(() -> CRCompat.getCorrosionOrResistance(400, 1), 1F).build();
 	public static final FoodProperties CHUNKWICH = (new FoodProperties.Builder())
 		.nutrition(11).saturationMod(0.4F)
 		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 600, 0), 1F).build();
@@ -67,6 +67,7 @@ public class Nutrition {
 		.effect(() -> new MobEffectInstance(TeaCompat.getGreenTeaEffect().get(), 100, 0), 1F).build();
 	public static final FoodProperties ANIMAL_FAT = (new FoodProperties.Builder())
 		.nutrition(1).saturationMod(2F)
+		.meat()
 		.alwaysEat()
 		.fast().build();
 	public static final FoodProperties CHOPPED_CLOVER = (new FoodProperties.Builder())
@@ -77,20 +78,20 @@ public class Nutrition {
 	public static final FoodProperties CACTUS_STEAK = (new FoodProperties.Builder())
 		.nutrition(4).saturationMod(0.5F).build();
 	public static final FoodProperties CACTUS_CHILI = (new FoodProperties.Builder())
-		.nutrition(10).saturationMod(0.85F)
-		.effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 3600, 0), 1F)
-		.effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 3600, 0), 1F).build();
+		.nutrition(10).saturationMod(0.7F)
+		.effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 3600, 0), 1F)
+		.effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 400, 0), 1F).build();
 	public static final FoodProperties CACTUS_SOUP = (new FoodProperties.Builder())
-		.nutrition(12).saturationMod(0.8F)
+		.nutrition(12).saturationMod(0.6F)
 		.effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 3600, 0), 1F).build();
 	public static final FoodProperties CACTUS_SOUP_CUP = (new FoodProperties.Builder())
-		.nutrition(6).saturationMod(0.75F)
+		.nutrition(6).saturationMod(0.3F)
 		.effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 1800, 0), 1F).build();
 	public static final FoodProperties VENISON_STEW = (new FoodProperties.Builder())
 		.nutrition(12).saturationMod(0.8F)
 		.effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 3600, 0), 1F).build();
 	public static final FoodProperties VENISON_STEW_CUP = (new FoodProperties.Builder())
-		.nutrition(6).saturationMod(0.75F)
+		.nutrition(6).saturationMod(0.4F)
 		.effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 1800, 0), 1F).build();
 	public static final FoodProperties FIELD_SALAD = (new FoodProperties.Builder())
 		.nutrition(10).saturationMod(0.6F)
@@ -105,9 +106,11 @@ public class Nutrition {
 		.meat()
 		.fast().build();
 	public static final FoodProperties RAW_GOAT = (new FoodProperties.Builder())
-		.nutrition(2).saturationMod(0.3F).meat().build();
+		.nutrition(2).saturationMod(0.3F)
+		.meat().build();
 	public static final FoodProperties COOKED_GOAT = (new FoodProperties.Builder())
-		.nutrition(6).saturationMod(0.8F).meat().build();
+		.nutrition(6).saturationMod(0.8F)
+		.meat().build();
 	public static final FoodProperties CANTALOUPE_SLICE = (new FoodProperties.Builder())
 		.nutrition(4).saturationMod(0.8F)
 		.effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 200, 0), 1F).build();
@@ -132,8 +135,12 @@ public class Nutrition {
 		.effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 600, 0), 1F).build();
 	public static final FoodProperties SINIGANG = (new FoodProperties.Builder())
 		.nutrition(12).saturationMod(0.7F)
-		.effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 6000, 0), 1F)
-		.effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 600, 0), 1F).build();
+		.effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 3600, 0), 1F)
+		.effect(() -> CRCompat.getCorrosionOrFireResistance(600, 0), 1F).build();
+	public static final FoodProperties SINIGANG_CUP = (new FoodProperties.Builder())
+		.nutrition(6).saturationMod(0.35F)
+		.effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 1800, 0), 1F)
+		.effect(() -> CRCompat.getCorrosionOrFireResistance(300, 0), 1F).build();
 	public static final FoodProperties ENDER_NECTAR = (new FoodProperties.Builder())
 		.nutrition(4).saturationMod(0.1F).alwaysEat()
 		.effect(() -> new MobEffectInstance(MobEffects.BLINDNESS, 60, 0), 1F).build();

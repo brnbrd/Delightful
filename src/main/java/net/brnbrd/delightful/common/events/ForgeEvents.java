@@ -12,11 +12,9 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.trading.MerchantOffer;
@@ -68,17 +66,17 @@ public class ForgeEvents {
 	void onWanderingTrader(WandererTradesEvent e) {
 		List<VillagerTrades.ItemListing> trades = e.getGenericTrades();
 		if (Util.enabled(DelightfulItems.SALMONBERRIES) && Util.enabled(DelightfulItems.SALMONBERRY_PIPS)) {
-			trades.add((ent, r) -> new MerchantOffer(new ItemStack(Items.EMERALD, 2), Util.gs(DelightfulItems.SALMONBERRY_PIPS), 5, 1, 1));
+			trades.add((ent, r) -> new MerchantOffer(new ItemStack(Items.EMERALD, 2), Util.getStack(DelightfulItems.SALMONBERRY_PIPS), 5, 1, 1));
 		}
 		if (Util.enabled(DelightfulItems.CANTALOUPE) && Util.enabled(DelightfulItems.CANTALOUPE_SLICE)) {
-			trades.add((ent, r) -> new MerchantOffer(new ItemStack(Items.EMERALD, 3), Util.gs(DelightfulItems.CANTALOUPE_SLICE, 8), 5, 1, 1));
+			trades.add((ent, r) -> new MerchantOffer(new ItemStack(Items.EMERALD, 3), Util.getStack(DelightfulItems.CANTALOUPE_SLICE, 8), 5, 1, 1));
 		}
 		if (
 			Util.enabled(DelightfulItems.CANTALOUPE) &&
 			Util.enabled(DelightfulItems.STUFFED_CANTALOUPE_BLOCK) &&
 			Util.enabled(DelightfulItems.STUFFED_CANTALOUPE)
 		) {
-			trades.add((ent, r) -> new MerchantOffer(new ItemStack(Items.EMERALD, 5), Util.gs(DelightfulItems.STUFFED_CANTALOUPE_BLOCK, 1), 3, 1, 1));
+			trades.add((ent, r) -> new MerchantOffer(new ItemStack(Items.EMERALD, 5), Util.getStack(DelightfulItems.STUFFED_CANTALOUPE_BLOCK, 1), 3, 1, 1));
 		}
 	}
 

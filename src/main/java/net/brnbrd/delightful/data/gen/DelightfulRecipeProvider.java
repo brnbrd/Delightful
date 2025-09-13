@@ -484,24 +484,6 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 						.setRecipeBookTab(CookingPotRecipeBookTab.MEALS),
 				"food/cooking/coconut_curry", finished, enabled(DelightfulItems.COCONUT_CURRY), not(tagEmpty(DelightfulItemTags.COCONUT)), not(tagEmpty(DelightfulItemTags.VEGETABLES_GINGER)));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-								DelightfulItems.SINIGANG.get(), 1, CookingRecipes.NORMAL_COOKING, 1F, Items.BOWL)
-						.addIngredient(ForgeTags.RAW_PORK)
-						.addIngredient(ModItems.TOMATO_SAUCE.get())
-						.addIngredient(DelightfulItemTags.FRUITS_CITRUS)
-						.addIngredient(DelightfulItemTags.VEGETABLES_GINGER)
-						.unlockedBy("has_citrus", has(DelightfulItemTags.FRUITS_CITRUS))
-						.setRecipeBookTab(CookingPotRecipeBookTab.MEALS),
-				"food/cooking/sinigang", finished, enabled(DelightfulItems.SINIGANG), not(tagEmpty(DelightfulItemTags.VEGETABLES_GINGER)), not(tagEmpty(DelightfulItemTags.FRUITS_CITRUS)));
-		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-								DelightfulItems.SINIGANG.get(), 1, CookingRecipes.NORMAL_COOKING, 1F, Items.BOWL)
-						.addIngredient(ForgeTags.RAW_PORK)
-						.addIngredient(ModItems.TOMATO_SAUCE.get())
-						.addIngredient(DelightfulItemTags.FRUITS)
-						.addIngredient(ForgeTags.VEGETABLES_ONION)
-						.unlockedBy("has_pork", has(ForgeTags.RAW_PORK))
-						.setRecipeBookTab(CookingPotRecipeBookTab.MEALS),
-				"food/cooking/sinigang_no_ginger_citrus", finished, enabled(DelightfulItems.SINIGANG), or(tagEmpty(DelightfulItemTags.VEGETABLES_GINGER), tagEmpty(DelightfulItemTags.FRUITS_CITRUS)));
-		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
 								DelightfulItems.CRAB_RANGOON.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
 						.addIngredient(ForgeTags.DOUGH)
 						.addIngredient(DelightfulItemTags.CHEESE)
@@ -589,7 +571,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 						Ingredient.of(DelightfulItemTags.CLOVER),
 						Ingredient.of(ForgeTags.TOOLS_KNIVES),
 						DelightfulItems.CHOPPED_CLOVER.get(), 2),
-				"cutting/clover", finished, enabled(DelightfulItems.CHOPPED_CLOVER), or(modLoaded(Modid.BB.get()), not(tagEmpty(DelightfulItemTags.CLOVER))));
+				"cutting/clover", finished, enabled(DelightfulItems.CHOPPED_CLOVER), not(tagEmpty(DelightfulItemTags.CLOVER)));
 		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
 						Ingredient.of(DelightfulItems.BAKLAVA.get()),
 						Ingredient.of(ForgeTags.TOOLS_KNIVES),

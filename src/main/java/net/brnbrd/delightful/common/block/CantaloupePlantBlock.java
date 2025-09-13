@@ -52,7 +52,7 @@ public class CantaloupePlantBlock extends BushBlock implements BonemealableBlock
 
 	@Override
 	public ItemStack getCloneItemStack(BlockState state, HitResult target, BlockGetter level, BlockPos pos, Player player) {
-		return Util.gs(this.isMaxAge(state) ? DelightfulItems.CANTALOUPE : DelightfulItems.CANTALOUPE_SEEDS);
+		return Util.getStack(this.isMaxAge(state) ? DelightfulItems.CANTALOUPE : DelightfulItems.CANTALOUPE_SEEDS);
 	}
 
 	@Override
@@ -121,7 +121,7 @@ public class CantaloupePlantBlock extends BushBlock implements BonemealableBlock
 		if (!flag && pPlayer.getItemInHand(pHand).is(Items.BONE_MEAL)) {
 			return InteractionResult.PASS;
 		} else if (flag) {
-			popResource(pLevel, pPos, Util.gs(DelightfulItems.CANTALOUPE));
+			popResource(pLevel, pPos, Util.getStack(DelightfulItems.CANTALOUPE));
 			pLevel.playSound(null, pPos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1F, 0.8F + pLevel.random.nextFloat() * 0.4F);
 			BlockState blockstate = state.setValue(AGE, 0);
 			pLevel.setBlock(pPos, blockstate, 2);

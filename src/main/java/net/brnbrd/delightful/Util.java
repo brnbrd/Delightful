@@ -243,7 +243,7 @@ public class Util {
 		if (me != null) addEffect(entity, me, duration, amp);
 	}
 
-	public static ItemStack gs(@Nullable Supplier<@Nullable Item> r, int... count) { // Only considers first vararg entry
+	public static ItemStack getStack(@Nullable Supplier<@Nullable Item> r, int... count) { // Only considers first vararg entry
 		if (r == null || r.get() == null) return ItemStack.EMPTY;
 		return new ItemStack(Objects.requireNonNull(r.get()), count.length > 0 ? count[0] : 1);
 	}
@@ -339,8 +339,7 @@ public class Util {
 
 	public static boolean enabled(String item) {
 		return (
-			DelightfulItems.ITEMS.getEntries()
-				.stream()
+			DelightfulItems.ITEMS.getEntries().stream()
 				.filter(reg -> reg.getId().getPath().equals(item))
 				.map(Util::enabled)
 				.findAny()

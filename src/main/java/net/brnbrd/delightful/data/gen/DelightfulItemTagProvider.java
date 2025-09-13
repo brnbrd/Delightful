@@ -857,16 +857,17 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.COOKED_CRAB)
 			.addTag(DelightfulItemTags.COOKED_GOAT)
 			.addTag(DelightfulItemTags.COOKED_NUTS)
-			.add(DelightfulItems.COCONUT_CURRY.get())
+			.add(DelightfulItems.SINIGANG.get())
+			.add(DelightfulItems.SINIGANG_CUP.get())
 			.add(DelightfulItems.VENISON_STEW.get())
 			.add(DelightfulItems.VENISON_STEW_CUP.get())
 			.add(DelightfulItems.CACTUS_SOUP.get())
 			.add(DelightfulItems.CACTUS_SOUP_CUP.get())
 			.add(DelightfulItems.CACTUS_CHILI.get())
+			.add(DelightfulItems.COCONUT_CURRY.get())
 			.add(DelightfulItems.CACTUS_STEAK.get())
 			.add(DelightfulItems.CHUNKWICH.get())
 			.add(DelightfulItems.CRAB_RANGOON.get())
-			.add(DelightfulItems.CHUNKWICH.get())
 			.add(DelightfulItems.STUFFED_CANTALOUPE.get());
 
 		// Supplementaries

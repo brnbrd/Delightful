@@ -8,20 +8,11 @@
           "value": "chopped_clover"
         },
         {
-          "type": "forge:or",
-          "values": [
-            {
-              "type": "forge:mod_loaded",
-              "modid": "buzzier_bees"
-            },
-            {
-              "type": "forge:not",
-              "value": {
-                "type": "forge:tag_empty",
-                "tag": "forge:clover"
-              }
-            }
-          ]
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:clover"
+          }
         }
       ],
       "recipe": {
