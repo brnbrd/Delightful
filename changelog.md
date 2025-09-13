@@ -1,7 +1,7 @@
-## Version History
+# Version History
 
 
-# 3.7.7
+## 3.7.7
 
 ### Updates
 - Sinigang now requires 1 Lime rather than any citrus fruit
@@ -10,15 +10,16 @@
 
 ### Fixes
 - Fixed Chopped Clover recipe having an empty ingredient in some cases
+- Adjusted saturation values of Cup soups to be consistent with [Miner's Delight +](https://www.curseforge.com/minecraft/mc-mods/miners-delight-plus)
 
 
-# 3.7.6
+## 3.7.6
 
 ### Fixes
 - Fixed Peculiars dependency version being too high
 
 
-# 3.7.5
+## 3.7.5
 
 ### Updates
 - Added all bowl foods to `#meals`
@@ -63,7 +64,7 @@
 - Fixed Bouddha's Hand model clipping with Coaster
 
 
-# 3.7.4
+## 3.7.4
 
 ### Updates
 - Milk from `#forge:nuts` recipe now uses a Kettle in presence of [Farmer's Respite](https://www.curseforge.com/minecraft/mc-mods/farmers-respite)
@@ -84,7 +85,7 @@
 - Updated ru_ru (merged [#125](https://github.com/brnbrd/Delightful/pull/125))
 
 
-# 3.7.3
+## 3.7.3
 
 ### Updates
 - Changed ingredient in grass cutting recipe from `#straw_plants` to Grass
@@ -116,7 +117,7 @@
 - Added some models for [Nether's Exoticism](https://www.curseforge.com/minecraft/mc-mods/nethers-exoticism)
 
 
-# 3.7.2
+## 3.7.2
 
 ### Updates
 - Added Glow Jam Cookie
