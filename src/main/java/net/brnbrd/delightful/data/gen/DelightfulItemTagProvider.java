@@ -214,10 +214,6 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.FRUITS_BLACKBERRIES).addOptional(Modid.WB.rl("blackberry"));
 		this.tag(DelightfulItemTags.FRUITS_CRANBERRIES).addOptional(Modid.WB.rl("cranberries"));
 		this.tag(DelightfulItemTags.FRUITS_WILD_BERRIES).addOptional(Modid.WS.rl("wild_berries"));
-		this.tag(DelightfulItemTags.FRUITS_STRAWBERRIES)
-				.addOptional(Modid.N.rl("strawberries"))
-				.addOptional(Modid.N.rl("white_strawberries"));
-		this.tag(DelightfulItemTags.FRUITS_BANANA).addOptional(Modid.N.rl("banana"));
 		this.tag(DelightfulItemTags.FRUITS_CHERRY)
 			.addOptional(Modid.HH.rl("cherry"))
 			.addOptional(Modid.FA.rl("cherry_peach"));
@@ -254,9 +250,9 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_BLACKBERRIES)
 			.addTag(DelightfulItemTags.FRUITS_CRANBERRIES)
 			.addTag(DelightfulItemTags.FRUITS_CHERRY)
-			.addTag(DelightfulItemTags.FRUITS_STRAWBERRIES)
 			.addTag(DelightfulItemTags.FRUITS_WILD_BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_GEARO_BERRY)
+			.addOptionalTag(Modid.LOADER.rl("fruits/strawberry"))
 			.addOptionalTag(Modid.LOADER.rl("fruits/mulberry"))
 			.addOptionalTag(Modid.LOADER.rl("fruits/hawberry"))
 			.addOptionalTag(Modid.LOADER.rl("fruits/bayberry"))
@@ -271,7 +267,6 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.AER.rl("zanberry"))
 			.addOptional(Modid.DA.rl("goldenleaf_berries"))
 			.addOptional(Modid.EXQ.rl("midnight_berries"));
-
 		this.tag(DelightfulItemTags.FRUITS_CITRUS).replace(false)
 			.addTag(DelightfulItemTags.FRUITS_CITRON)
 			.addTag(DelightfulItemTags.FRUITS_BLOOD_ORANGE)
@@ -289,8 +284,6 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_CANTALOUPE)
 			.addTag(DelightfulItemTags.FRUITS_KIWI)
 			.addTag(DelightfulItemTags.FRUITS_PRICKLY_PEAR)
-			.addTag(DelightfulItemTags.FRUITS_BANANA)
-			.addTag(DelightfulItemTags.FRUITS_STRAWBERRIES)
 			.addTag(DelightfulItemTags.FRUITS_CHERRY)
 			.addTag(DelightfulItemTags.FRUITS_BLUEBERRIES)
 			.addTag(DelightfulItemTags.FRUITS_RASPBERRIES)
@@ -309,6 +302,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptionalTag(DelightfulItemTags.FRUITS_ORANGE.location())
 			.addOptionalTag(DelightfulItemTags.FRUITS_MANDARIN.location())
 			.addOptionalTag(DelightfulItemTags.FRUITS_PLUM.location())
+			.addOptionalTag(Modid.LOADER.rl("fruits/strawberry"))
+			.addOptionalTag(Modid.LOADER.rl("fruits/banana"))
 			.addOptionalTag(Modid.LOADER.rl("fruits/redlove"))
 			.addOptional(Modid.FRD.rl("hamimelon_slice"));
 		this.tag(DelightfulItemTags.FRUITS_SQUEEZABLE)

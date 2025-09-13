@@ -10,7 +10,7 @@
 
 ### Fixes
 - Fixed Chopped Clover recipe having an empty ingredient in some cases
-- Adjusted saturation values of Cup soups to be consistent with [Miner's Delight +](https://www.curseforge.com/minecraft/mc-mods/miners-delight-plus)
+- Adjusted saturation values of soup Cups to be consistent with [Miner's Delight +](https://www.curseforge.com/minecraft/mc-mods/miners-delight-plus)
 
 
 ## 3.7.6

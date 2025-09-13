@@ -1,0 +1,43 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "upgrade_aquatic:mulberry_jam_bottle"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "upgrade_aquatic:mulberry"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:glass_bottle"
+        },
+        "cookingtime": 200,
+        "experience": 1.0,
+        "ingredients": [
+          {
+            "item": "upgrade_aquatic:mulberry"
+          },
+          {
+            "item": "upgrade_aquatic:mulberry"
+          },
+          {
+            "item": "upgrade_aquatic:mulberry"
+          },
+          {
+            "item": "minecraft:sugar"
+          }
+        ],
+        "recipe_book_tab": "misc",
+        "result": {
+          "item": "upgrade_aquatic:mulberry_jam_bottle"
+        }
+      }
+    }
+  ]
+}

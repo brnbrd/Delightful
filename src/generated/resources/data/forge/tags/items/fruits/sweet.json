@@ -7,8 +7,6 @@
     "#forge:fruits/cantaloupe",
     "#forge:fruits/kiwi",
     "#forge:fruits/prickly_pear",
-    "#forge:fruits/banana",
-    "#forge:fruits/strawberries",
     "#forge:fruits/cherry",
     "#forge:fruits/blueberries",
     "#forge:fruits/raspberries",
@@ -40,6 +38,14 @@
     },
     {
       "id": "#forge:fruits/plum",
+      "required": false
+    },
+    {
+      "id": "#forge:fruits/strawberry",
+      "required": false
+    },
+    {
+      "id": "#forge:fruits/banana",
       "required": false
     },
     {

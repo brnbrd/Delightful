@@ -225,7 +225,7 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
 [[dependencies.delightful]]
     modId="upgrade_aquatic"
     mandatory=false
-    versionRange="[6.0.1,)"
+    versionRange="[6.0.3,)"
     ordering="AFTER"
     side="BOTH"
 

@@ -1,0 +1,49 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "windswept:pinecone_jam_bottle"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "windswept:pinecone"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:glass_bottle"
+        },
+        "cookingtime": 200,
+        "experience": 1.0,
+        "ingredients": [
+          {
+            "item": "windswept:pinecone"
+          },
+          {
+            "item": "windswept:pinecone"
+          },
+          {
+            "item": "windswept:pinecone"
+          },
+          {
+            "item": "minecraft:sugar"
+          },
+          {
+            "item": "minecraft:sugar"
+          },
+          {
+            "item": "minecraft:sugar"
+          }
+        ],
+        "recipe_book_tab": "misc",
+        "result": {
+          "item": "windswept:pinecone_jam_bottle"
+        }
+      }
+    }
+  ]
+}

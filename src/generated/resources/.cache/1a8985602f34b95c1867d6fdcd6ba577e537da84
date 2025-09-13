@@ -1,4 +1,4 @@
-// 1.20.1	2025-09-13T11:04:49.3538014	delightful
+// 1.20.1	2025-09-13T12:17:05.850666	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -49,7 +49,7 @@ e30bd9148472cd3bab0669e057c619ac320ca1d1 data/farmersdelight/tags/items/tools/kn
 46f279b6acd03b06ea14e9f62be7d48e200c002c data/farmersdelight/tags/items/wild_crops.json
 a1edebb3bd4f7f3d7e73d53c915b2fe3203614aa data/forbidden_arcanus/tags/items/draco_arcanus_staff.json
 67b8f22c3fbfa7142b71a6a27d583be2b01e8ceb data/forbidden_arcanus/tags/items/dragon_scale.json
-2b9a1d2e38e9fa74145ce11bb6e270e89fe4cbbc data/forge/tags/items/berries.json
+bb1d93c714242f871a453305de8b34c19aefe436 data/forge/tags/items/berries.json
 3285c8bc271430d8e3ff4305841c7668dc903792 data/forge/tags/items/bones.json
 dabd817095489e486c3fcd0ab4704640d2da84ca data/forge/tags/items/bread.json
 2c61aada43234d73614242ee70d69d914508cfe1 data/forge/tags/items/bread/corn.json
@@ -105,7 +105,6 @@ a83a5a39f9e5995cbec8daac3dc9187ed8fcecae data/forge/tags/items/foods/meat/cooked
 58c87ce86a492ac9b5224e5ecdd0374efadde989 data/forge/tags/items/foods/meat/raw.json
 007369b4faf9e303db45bd422df1187f0e9dd972 data/forge/tags/items/fruits.json
 b33dde3cf95c3f821d49bc84b8c46f9fd65289e8 data/forge/tags/items/fruits/apple.json
-731ca67ac60192e9e45681303589c863b7d3ef83 data/forge/tags/items/fruits/banana.json
 81dca03b7282b921e7f7a58f53ebda8eda0659d6 data/forge/tags/items/fruits/baobab.json
 ad700a43700050836a829c9ef4c67681e84e2c98 data/forge/tags/items/fruits/blackberries.json
 1d44833608b10b814b0a3b85a30b11cb7c10bffb data/forge/tags/items/fruits/blood_orange.json
@@ -135,8 +134,7 @@ e63f4c3f380a4420a369bd6f1f2ccae1eda87135 data/forge/tags/items/fruits/prickly_pe
 bd88975064f14f57a6a7a33a5a2816ef2766c00f data/forge/tags/items/fruits/salmonberries.json
 d3ac5caff21a72e9cde16be715f916d249db85ef data/forge/tags/items/fruits/sourceberry.json
 9ab948bb6902859807e5970ba7e80a1d3b6e459b data/forge/tags/items/fruits/squeezable.json
-07d741d5b697db5683b9373eb3a803310c8c8690 data/forge/tags/items/fruits/strawberries.json
-df13315c9ee3383e45a82f25575c9238421d8060 data/forge/tags/items/fruits/sweet.json
+b8551950f7425494cdd5b8fa2b87cc2c16aaaa2d data/forge/tags/items/fruits/sweet.json
 65a948972be54d0dc9ce5ee6eb59a29341fd6ec0 data/forge/tags/items/fruits/sweet_berries.json
 ef58bcce9f0d3d6e68fdc0afe94d732282c43dba data/forge/tags/items/fruits/torchberries.json
 4fbda205b7c5ed3a2d9763485710d97ba308840f data/forge/tags/items/fruits/whitecurrant.json
