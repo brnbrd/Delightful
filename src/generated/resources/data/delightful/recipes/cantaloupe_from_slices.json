@@ -1,0 +1,34 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "cantaloupe"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "cantaloupe_slice"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "key": {
+          "c": {
+            "item": "delightful:cantaloupe_slice"
+          }
+        },
+        "pattern": [
+          "cc",
+          "cc"
+        ],
+        "result": {
+          "item": "delightful:cantaloupe"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

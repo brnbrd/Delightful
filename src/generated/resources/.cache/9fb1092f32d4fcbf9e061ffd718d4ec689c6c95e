@@ -1,4 +1,4 @@
-// 1.20.1	2025-09-13T12:17:05.8532886	Recipes
+// 1.20.1	2025-09-13T14:05:40.2606911	Recipes
 6c217dd6477efa10f6042809ba959d53036ab5e2 data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 5b82f87851220644287d771121677deac66b3b89 data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
 cf29033c1c919355c261025df529938e6ebc73f8 data/delightful/advancements/recipes/campfire/cactus_steak.json
@@ -6,6 +6,7 @@ cf29033c1c919355c261025df529938e6ebc73f8 data/delightful/advancements/recipes/ca
 cc07a48d6013a795e9dc73605913b2c7153625cc data/delightful/advancements/recipes/campfire/cooked_venison_chops.json
 03b76615a61604248eb0add4f983c8c58310039a data/delightful/advancements/recipes/campfire/marshmallow_stick.json
 7d7ed22654ba27b8dd06abe08523046b8b8d1b5d data/delightful/advancements/recipes/candle_from_animal_fat.json
+f60add3effd7c425e3de2a303b7a6860407c688d data/delightful/advancements/recipes/cantaloupe_from_slices.json
 3d793336b09679a2de66ad81f6717bb9a50676c1 data/delightful/advancements/recipes/cantaloupe_seeds.json
 cebb66af2554ae4a354fc2f0e4bbebb51d10c5c7 data/delightful/advancements/recipes/cantaloupe_slice.json
 ff94c8097c97eeb15909fa193291ff1088a7cd05 data/delightful/advancements/recipes/cooking/animal_oil_bottle.json
@@ -152,6 +153,7 @@ be67bcf5f2d2f280599d38b686b7e27b65492dce data/delightful/advancements/recipes/sm
 07358d985d416b631632a902ffb9c853dbae3be2 data/delightful/recipes/campfire/cooked_venison_chops.json
 2c23c67cf08f93a7235335808ec6ac0afac385a6 data/delightful/recipes/campfire/marshmallow_stick.json
 320c77635e9f705d77357dab52286d99d03ae652 data/delightful/recipes/candle_from_animal_fat.json
+d7b4f79c72ce88fb80cc169df673eb00439b0002 data/delightful/recipes/cantaloupe_from_slices.json
 15e5e52418fb63530b918c59b0aa5cdde1853d78 data/delightful/recipes/cantaloupe_seeds.json
 6ad81d184afec062cdabf2adbb16b10a9086f1a8 data/delightful/recipes/cantaloupe_slice.json
 0ad070142d2c20cf6a500f88ba545b22206aabb8 data/delightful/recipes/cooking/animal_oil_bottle.json

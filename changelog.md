@@ -7,6 +7,7 @@
 - Sinigang now requires 1 Lime rather than any citrus fruit
   - Now provides Corrosion I for 0:30
 - Added Sinigang Cup (for [Miner's Delight +](https://www.curseforge.com/minecraft/mc-mods/miners-delight-plus))
+- Added recipe to craft a Cantaloupe from 4 Cantaloupe Slice
 
 ### Fixes
 - Fixed Chopped Clover recipe having an empty ingredient in some cases
