@@ -4,7 +4,6 @@ import net.brnbrd.delightful.common.item.IConfigured;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -24,17 +23,6 @@ public class DrinkItem extends DrinkableItem implements IConfigured {
 	@Override
 	public @NotNull InteractionResultHolder<ItemStack> use(@NotNull Level world, @NotNull Player player, @NotNull InteractionHand hand) {
 		return ItemUtils.startUsingInstantly(world, player, hand);
-	}
-
-	public float getHeal() {
-		return 0F;
-	}
-
-	@Override
-	public void affectConsumer(@NotNull ItemStack stack, @NotNull Level worldIn, @NotNull LivingEntity consumer) {
-		float heal = this.getHeal();
-		if (heal > 0F) consumer.heal(heal);
-		super.affectConsumer(stack, worldIn, consumer);
 	}
 
 	@Override

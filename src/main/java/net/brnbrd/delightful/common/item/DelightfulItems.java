@@ -145,12 +145,12 @@ public class DelightfulItems {
 		() -> new CoconutCurryItem((new Item.Properties()).food(Nutrition.COCONUT_CURRY).stacksTo(16).craftRemainder(Items.BOWL)));
 	public static final RegistryObject<Item> FIELD_SALAD = registerItem("field_salad",
 		() -> new DConsumableItem((new Item.Properties()).food(Nutrition.FIELD_SALAD).stacksTo(16).craftRemainder(Items.BOWL), true, false));
-	public static final RegistryObject<Item> ENDER_NECTAR = registerItem("ender_nectar",
-		() -> new EnderNectarItem((new Item.Properties()).food(Nutrition.ENDER_NECTAR).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16)));
 	public static final RegistryObject<Item> MATCHA_LATTE = registerItem("matcha_latte",
-		() -> new MatchaLatteItem((new Item.Properties()).food(Nutrition.MATCHA_LATTE), true));
+		() -> new DrinkItem((new Item.Properties()).food(Nutrition.MATCHA_LATTE).stacksTo(16).craftRemainder(Items.GLASS_BOTTLE), true, false));
 	public static final RegistryObject<Item> BERRY_MATCHA_LATTE = registerItem("berry_matcha_latte",
-		() -> new MatchaLatteItem((new Item.Properties()).food(Nutrition.BERRY_MATCHA_LATTE), true));
+		() -> new DrinkItem((new Item.Properties()).food(Nutrition.BERRY_MATCHA_LATTE).stacksTo(16).craftRemainder(Items.GLASS_BOTTLE), true, false));
+	public static final RegistryObject<Item> ENDER_NECTAR = registerItem("ender_nectar",
+		() -> new EnderNectarItem((new Item.Properties()).food(Nutrition.ENDER_NECTAR).stacksTo(16).craftRemainder(Items.GLASS_BOTTLE)));
 	public static final RegistryObject<Item> AZALEA_TEA = registerItem("azalea_tea",
 		() -> new AzaleaTeaItem((new Item.Properties()).food(Nutrition.AZALEA_TEA)));
 	public static final RegistryObject<Item> LAVENDER_TEA = registerItem("lavender_tea",

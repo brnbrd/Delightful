@@ -14,6 +14,30 @@ public class DelightfulFluids {
 	public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(ForgeRegistries.FLUIDS, Delightful.MODID);
 	public static final DeferredRegister<FluidType> TYPES = DeferredRegister.create(ForgeRegistries.Keys.FLUID_TYPES, Delightful.MODID);
 
+	public static final RegistryObject<FluidType> MATCHA_LATTE_TYPE = TYPES.register("matcha_latte_type",
+		() -> new DFluidType(0xff7FA036));
+	public static final RegistryObject<FlowingFluid> MATCHA_LATTE = FLUIDS.register("matcha_latte",
+		() -> new ForgeFlowingFluid.Source(DelightfulFluids.MATCHA_LATTE_PROPERTIES));
+	public static final RegistryObject<FlowingFluid> FLOWING_MATCHA_LATTE = FLUIDS.register("flowing_matcha_latte",
+		() -> new ForgeFlowingFluid.Flowing(DelightfulFluids.MATCHA_LATTE_PROPERTIES));
+	public static final ForgeFlowingFluid.Properties MATCHA_LATTE_PROPERTIES = new ForgeFlowingFluid.Properties(
+		MATCHA_LATTE_TYPE,
+		MATCHA_LATTE,
+		FLOWING_MATCHA_LATTE
+	);
+
+	public static final RegistryObject<FluidType> ENDER_NECTAR_TYPE = TYPES.register("ender_nectar_type",
+		() -> new DFluidType(0xff316364));
+	public static final RegistryObject<FlowingFluid> ENDER_NECTAR = FLUIDS.register("ender_nectar",
+		() -> new ForgeFlowingFluid.Source(DelightfulFluids.ENDER_NECTAR_PROPERTIES));
+	public static final RegistryObject<FlowingFluid> FLOWING_ENDER_NECTAR = FLUIDS.register("flowing_ender_nectar",
+		() -> new ForgeFlowingFluid.Flowing(DelightfulFluids.ENDER_NECTAR_PROPERTIES));
+	public static final ForgeFlowingFluid.Properties ENDER_NECTAR_PROPERTIES = new ForgeFlowingFluid.Properties(
+		ENDER_NECTAR_TYPE,
+		ENDER_NECTAR,
+		FLOWING_ENDER_NECTAR
+	);
+	
 	public static final RegistryObject<FluidType> AZALEA_TEA_TYPE = TYPES.register("azalea_tea_type",
 		() -> new DFluidType(0xffd3619c));
 	public static final RegistryObject<FlowingFluid> AZALEA_TEA = FLUIDS.register("azalea_tea",

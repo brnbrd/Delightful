@@ -1,0 +1,42 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "matcha_latte"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "ender_nectar"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "farmersrespite"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "create"
+        }
+      ],
+      "recipe": {
+        "type": "create:emptying",
+        "ingredients": [
+          {
+            "item": "delightful:ender_nectar"
+          }
+        ],
+        "results": [
+          {
+            "item": "minecraft:glass_bottle"
+          },
+          {
+            "amount": 250,
+            "fluid": "delightful:ender_nectar"
+          }
+        ]
+      }
+    }
+  ]
+}

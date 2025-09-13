@@ -88,6 +88,12 @@ public class JEIPlugin implements IModPlugin {
 		// Hide fluids
 		final List<FluidStack> hiddenFluids = new ArrayList<>();
 		final boolean farmersRespiteLoaded = Modid.FR.loaded();
+		if (!farmersRespiteLoaded) {
+			hiddenFluids.addAll(List.of(
+				new FluidStack(DelightfulFluids.MATCHA_LATTE.get(), 1000),
+				new FluidStack(DelightfulFluids.ENDER_NECTAR.get(), 1000)
+			));
+		}
 		if (!farmersRespiteLoaded || Util.tagEmpty(DelightfulItemTags.FLOWERS_LAVENDER)) {
 			hiddenFluids.add(new FluidStack(DelightfulFluids.LAVENDER_TEA.get(), 1000));
 		}

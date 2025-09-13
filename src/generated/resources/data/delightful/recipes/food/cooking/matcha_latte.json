@@ -6,6 +6,13 @@
         {
           "type": "delightful:enabled",
           "value": "matcha_latte"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:mod_loaded",
+            "modid": "farmersrespite"
+          }
         }
       ],
       "recipe": {
@@ -17,10 +24,10 @@
         "experience": 0.35,
         "ingredients": [
           {
-            "item": "minecraft:honey_bottle"
+            "tag": "forge:milk"
           },
           {
-            "tag": "forge:milk"
+            "item": "minecraft:honey_bottle"
           },
           {
             "tag": "forge:matcha"

@@ -16,7 +16,7 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:food/matcha_latte"
+              "recipe": "delightful:food/cooking/matcha_latte"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
@@ -29,7 +29,7 @@
         ],
         "rewards": {
           "recipes": [
-            "delightful:food/matcha_latte"
+            "delightful:food/cooking/matcha_latte"
           ]
         },
         "sends_telemetry_event": true
@@ -38,6 +38,13 @@
         {
           "type": "delightful:enabled",
           "value": "matcha_latte"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:mod_loaded",
+            "modid": "farmersrespite"
+          }
         }
       ]
     }

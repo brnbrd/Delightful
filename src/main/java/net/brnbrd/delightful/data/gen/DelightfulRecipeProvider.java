@@ -184,25 +184,31 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			"food/honey_glazed_walnut", finished, enabled(DelightfulItems.HONEY_GLAZED_WALNUT), not(tagEmpty(DelightfulItemTags.NUTS_WALNUT)));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
 			DelightfulItems.MATCHA_LATTE.get(), 1, CookingRecipes.FAST_COOKING, 0.35F, Items.GLASS_BOTTLE)
+			.addIngredient(ForgeTags.MILK)
 			.addIngredient(Items.HONEY_BOTTLE)
-			.addIngredient(Ingredient.of(ForgeTags.MILK))
-			.addIngredient(Ingredient.of(DelightfulItemTags.MATCHA))
+			.addIngredient(DelightfulItemTags.MATCHA)
 			.unlockedBy("has_matcha", has(DelightfulItemTags.MATCHA)),
-			"food/matcha_latte", finished, enabled("matcha_latte"));
+			"food/cooking/matcha_latte", finished, enabled(DelightfulItems.MATCHA_LATTE), not(modLoaded(Modid.FR.get())));
+		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
+			DelightfulItems.ENDER_NECTAR.get(), 1, CookingRecipes.SLOW_COOKING, 0.35F, Items.GLASS_BOTTLE)
+			.addIngredient(DelightfulItems.MATCHA_LATTE.get())
+			.addIngredient(Items.ENDER_EYE)
+			.unlockedBy("has_ender_eye", has(Items.ENDER_EYE)),
+			"food/cooking/ender_nectar", finished, enabled(DelightfulItems.MATCHA_LATTE), enabled(DelightfulItems.ENDER_NECTAR), not(modLoaded(Modid.FR.get())));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.BERRY_MATCHA_LATTE.get(), 1)
 			.requires(Items.GLASS_BOTTLE)
 			.requires(DelightfulItems.MATCHA_LATTE.get())
 			.requires(ForgeTags.BERRIES)
 			.requires(Items.ICE)
 			.unlockedBy("has_matcha_latte", has(DelightfulItems.MATCHA_LATTE.get())),
-			"food/berry_matcha_latte", finished, enabled(DelightfulItems.BERRY_MATCHA_LATTE), tagEmpty(DelightfulItemTags.ICE_CUBES));
+			"food/berry_matcha_latte", finished, enabled(DelightfulItems.MATCHA_LATTE), enabled(DelightfulItems.BERRY_MATCHA_LATTE), tagEmpty(DelightfulItemTags.ICE_CUBES));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.BERRY_MATCHA_LATTE.get(), 1)
 			.requires(Items.GLASS_BOTTLE)
 			.requires(DelightfulItems.MATCHA_LATTE.get())
 			.requires(ForgeTags.BERRIES)
 			.requires(DelightfulItemTags.ICE_CUBES)
 			.unlockedBy("has_matcha_latte", has(DelightfulItems.MATCHA_LATTE.get())),
-			"food/berry_matcha_latte_neapolitan", finished, enabled(DelightfulItems.BERRY_MATCHA_LATTE), not(tagEmpty(DelightfulItemTags.ICE_CUBES)));
+			"food/berry_matcha_latte_neapolitan", finished, enabled(DelightfulItems.MATCHA_LATTE), enabled(DelightfulItems.BERRY_MATCHA_LATTE), not(tagEmpty(DelightfulItemTags.ICE_CUBES)));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.FIELD_SALAD.get(), 1)
 			.requires(Items.BOWL)
 			.requires(Ingredient.of(ForgeTags.SALAD_INGREDIENTS), 2)
@@ -366,13 +372,6 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.requires(Items.SUGAR)
 			.unlockedBy("has_cantaloupe_slice", has(DelightfulItemTags.FRUITS_CANTALOUPE)),
 			"food/cantaloupe_bread", finished, enabled(DelightfulItems.CANTALOUPE_BREAD), enabled(DelightfulItems.CANTALOUPE));
-		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-			DelightfulItems.ENDER_NECTAR.get(), 1, CookingRecipes.SLOW_COOKING, 0.35F, Items.GLASS_BOTTLE)
-			.addIngredient(Items.HONEY_BOTTLE)
-			.addIngredient(ForgeTags.MILK)
-			.addIngredient(Items.ENDER_EYE)
-			.unlockedBy("has_ender_eye", has(Items.ENDER_EYE)),
-			"food/cooking/ender_nectar", finished, enabled(DelightfulItems.ENDER_NECTAR));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(DelightfulItems.ROCK_CANDY.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F, Items.STICK)
 			.addIngredient(Ingredient.of(DelightfulItemTags.GEMS_ROSE_QUARTZ), 2)
 			.addIngredient(Items.SUGAR)
@@ -598,6 +597,12 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			Ingredient.of(ForgeTags.TOOLS_KNIVES),
 			Items.MELON_SLICE, 4),
 			"cutting/mini_melon", finished, enabled(DelightfulItems.MINI_MELON));
+		wrap(ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, DelightfulItems.MINI_MELON.get(), 1)
+			.pattern("mm")
+			.pattern("mm")
+			.define('m', Items.MELON_SLICE)
+			.unlockedBy("has_melon_slice", has(Items.MELON_SLICE)),
+			"mini_melon_from_slices", finished, enabled(DelightfulItems.MINI_MELON));
 		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
 			Ingredient.of(DelightfulItemTags.RAW_VENISON_COMPAT),
 			Ingredient.of(ForgeTags.TOOLS_KNIVES),

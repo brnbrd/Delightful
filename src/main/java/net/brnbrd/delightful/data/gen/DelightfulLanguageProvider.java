@@ -38,9 +38,7 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		addItem(DelightfulItems.GLOW_JAM_JAR, "Glow Jam Jar");
 		addItem(DelightfulItems.NUT_BUTTER_BOTTLE, "Nut Butter");
 		addItem(DelightfulItems.NUT_BUTTER_AND_JAM_SANDWICH, "Nut Butter and Jam Sandwich");
-		addItem(DelightfulItems.ENDER_NECTAR, "Ender Nectar");
 		addItem(DelightfulItems.HONEY_GLAZED_WALNUT, "Honey Glazed Walnut");
-		addItem(DelightfulItems.MATCHA_LATTE, "Matcha Latte");
 		addItem(DelightfulItems.BERRY_MATCHA_LATTE, "Iced Berry Matcha Latte");
 		addItem(DelightfulItems.GREEN_TEA_LEAF, "Green Tea Leaves");
 		addItem(DelightfulItems.SALMONBERRIES, "Salmonberries");
@@ -151,6 +149,10 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 
 	private void addOther() {
 		// Fluids
+		addItem(DelightfulItems.MATCHA_LATTE, "Matcha Latte");
+		add("fluid_type." + Delightful.MODID + ".matcha_latte_type", "Matcha Latte");
+		addItem(DelightfulItems.ENDER_NECTAR, "Ender Nectar");
+		add("fluid_type." + Delightful.MODID + ".ender_nectar_type", "Ender Nectar");
 		addItem(DelightfulItems.AZALEA_TEA, "Azalea Tea");
 		add("fluid_type." + Delightful.MODID + ".azalea_tea_type", "Azalea Tea");
 		addItem(DelightfulItems.LAVENDER_TEA, "Lavender Tea");
@@ -173,8 +175,6 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		// Tooltips not specific to Delightful
 		add("tooltip.requires_tag", "Requires tag:");
 		add("tooltip.requires_modid", "Requires modid:");
-		add("farmersdelight.tooltip.matcha_latte", "Minor Instant Health");
-		add("farmersdelight.tooltip.berry_matcha_latte", "Minor Instant Health");
 		add("farmersdelight.tooltip.ender_nectar", "Otherworldly");
 
 		// JEI Descriptions

@@ -12,29 +12,18 @@
           "value": "ender_nectar"
         },
         {
-          "type": "forge:not",
-          "value": {
-            "type": "forge:mod_loaded",
-            "modid": "farmersrespite"
-          }
+          "type": "forge:mod_loaded",
+          "modid": "farmersrespite"
         }
       ],
       "recipe": {
-        "type": "farmersdelight:cooking",
+        "type": "farmersrespite:kettle_pouring",
+        "amount": 250,
         "container": {
           "item": "minecraft:glass_bottle"
         },
-        "cookingtime": 400,
-        "experience": 0.35,
-        "ingredients": [
-          {
-            "item": "delightful:matcha_latte"
-          },
-          {
-            "item": "minecraft:ender_eye"
-          }
-        ],
-        "result": {
+        "fluid": "delightful:ender_nectar",
+        "output": {
           "item": "delightful:ender_nectar"
         }
       }

@@ -39,7 +39,18 @@
       "conditions": [
         {
           "type": "delightful:enabled",
+          "value": "matcha_latte"
+        },
+        {
+          "type": "delightful:enabled",
           "value": "ender_nectar"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:mod_loaded",
+            "modid": "farmersrespite"
+          }
         }
       ]
     }
