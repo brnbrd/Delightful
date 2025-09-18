@@ -5,28 +5,32 @@
       "conditions": [
         {
           "type": "forge:item_exists",
-          "item": "farmersrespite:rose_hips"
+          "item": "vanillabackport:pale_oak_sapling"
         },
         {
-          "type": "forge:item_exists",
-          "item": "windswept:red_rose"
+          "type": "delightful:enabled",
+          "value": "acorn"
         }
       ],
       "recipe": {
         "type": "farmersdelight:cutting",
         "ingredients": [
           {
-            "item": "windswept:red_rose"
+            "item": "vanillabackport:pale_oak_sapling"
           }
         ],
         "result": [
           {
-            "count": 1,
-            "item": "farmersrespite:rose_hips"
+            "item": "minecraft:stick"
+          },
+          {
+            "chance": 0.1,
+            "item": "delightful:acorn"
           }
         ],
         "tool": {
-          "tag": "forge:tools/knives"
+          "type": "farmersdelight:tool_action",
+          "action": "axe_dig"
         }
       }
     }

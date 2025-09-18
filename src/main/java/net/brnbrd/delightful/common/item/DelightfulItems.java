@@ -87,8 +87,8 @@ public class DelightfulItems {
 			() -> new ShakeItem(new Item.Properties().food(Nutrition.SALMONBERRY_MILKSHAKE)));
 	public static final RegistryObject<Item> SOURCE_BERRY_MILKSHAKE = registerItem("source_berry_milkshake",
 			() -> new SourceBerryShakeItem(new Item.Properties().food(ArsNouveauCompat.SOURCE_BERRY_MILKSHAKE)));
-	public static final RegistryObject<Item> MATCHA = registerItem("matcha", () -> new MatchaItem(new Item.Properties().food(Nutrition.MATCHA)));
 	public static final RegistryObject<Item> GREEN_TEA_LEAF = registerItem("green_tea_leaf", () -> new GreenTeaLeavesItem(new Item.Properties().food(Nutrition.GREEN_TEA_LEAF)));
+	public static final RegistryObject<Item> MATCHA = registerItem("matcha", () -> new MatchaItem(new Item.Properties()));
 	public static final RegistryObject<Item> SALMONBERRIES = registerFood("salmonberries", Nutrition.SALMONBERRIES);
 	public static final RegistryObject<Item> SALMONBERRY_PIPS = registerItem("salmonberry_pips",
 			() -> new ItemNameBlockItem(DelightfulBlocks.SALMONBERRY_BUSH.get(), ModItems.basicItem()));

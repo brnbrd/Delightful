@@ -1,0 +1,27 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "brewinandchewin"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "matcha_latte"
+        }
+      ],
+      "recipe": {
+        "type": "brewinandchewin:keg_pouring",
+        "amount": 250,
+        "filling": true,
+        "fluid": "delightful:matcha_latte",
+        "output": {
+          "item": "delightful:matcha_latte"
+        },
+        "strict": false
+      }
+    }
+  ]
+}

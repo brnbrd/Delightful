@@ -17,6 +17,13 @@
             "type": "forge:mod_loaded",
             "modid": "farmersrespite"
           }
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:mod_loaded",
+            "modid": "brewinandchewin"
+          }
         }
       ],
       "recipe": {
@@ -32,7 +39,23 @@
           },
           {
             "item": "minecraft:ender_eye"
-          }
+          },
+          [
+            {
+              "item": "minecraft:chorus_fruit"
+            },
+            {
+              "item": "minecraft:ender_eye"
+            }
+          ],
+          [
+            {
+              "item": "minecraft:chorus_fruit"
+            },
+            {
+              "item": "minecraft:ender_eye"
+            }
+          ]
         ],
         "result": {
           "item": "delightful:ender_nectar"

@@ -34,12 +34,13 @@
             "item": "minecraft:green_dye"
           },
           {
-            "chance": 0.4,
+            "chance": 0.5,
             "item": "delightful:matcha"
           }
         ],
         "tool": {
-          "tag": "forge:tools/shovels"
+          "type": "farmersdelight:tool_action",
+          "action": "shovel_dig"
         }
       }
     }

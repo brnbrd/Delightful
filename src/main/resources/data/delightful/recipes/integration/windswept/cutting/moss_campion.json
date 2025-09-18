@@ -5,28 +5,20 @@
       "conditions": [
         {
           "type": "forge:item_exists",
-          "item": "sunflowerdelight:rosebud"
-        },
-        {
-          "type": "forge:item_exists",
-          "item": "farmersrespite:rose_hips"
+          "item": "windswept:moss_campion"
         }
       ],
       "recipe": {
         "type": "farmersdelight:cutting",
         "ingredients": [
           {
-            "item": "sunflowerdelight:rosebud"
+            "item": "windswept:moss_campion"
           }
         ],
         "result": [
           {
-            "count": 1,
-            "item": "farmersrespite:rose_hips"
-          },
-          {
-            "chance": 0.5,
-            "item": "minecraft:red_dye"
+            "item": "minecraft:magenta_dye",
+            "count": 2
           }
         ],
         "tool": {

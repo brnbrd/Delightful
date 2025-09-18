@@ -5,29 +5,30 @@
       "conditions": [
         {
           "type": "forge:item_exists",
-          "item": "farmersrespite:rose_hips"
+          "item": "windswept:icicles"
         },
         {
           "type": "forge:item_exists",
-          "item": "windswept:red_rose_bush"
+          "item": "neapolitan:ice_cubes"
         }
       ],
       "recipe": {
         "type": "farmersdelight:cutting",
         "ingredients": [
           {
-            "item": "windswept:red_rose_bush"
-          }
-        ],
-        "result": [
-          {
-            "count": 2,
-            "item": "farmersrespite:rose_hips"
+            "item": "windswept:icicles"
           }
         ],
         "tool": {
-          "tag": "forge:tools/knives"
-        }
+          "type": "farmersdelight:tool_action",
+          "action": "pickaxe_dig"
+        },
+        "result": [
+          {
+            "item": "neapolitan:ice_cubes",
+            "count": 1
+          }
+        ]
       }
     }
   ]

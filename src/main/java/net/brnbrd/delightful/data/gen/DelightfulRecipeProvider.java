@@ -24,6 +24,7 @@ import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
+import net.minecraftforge.common.ToolActions;
 import net.minecraftforge.common.crafting.ConditionalRecipe;
 import net.minecraftforge.common.crafting.conditions.ICondition;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
@@ -34,6 +35,7 @@ import net.minecraftforge.registries.RegistryObject;
 import org.apache.commons.lang3.ArrayUtils;
 import vectorwing.farmersdelight.FarmersDelight;
 import vectorwing.farmersdelight.client.recipebook.CookingPotRecipeBookTab;
+import vectorwing.farmersdelight.common.crafting.ingredient.ToolActionIngredient;
 import vectorwing.farmersdelight.common.registry.ModBlocks;
 import vectorwing.farmersdelight.common.registry.ModItems;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
@@ -193,8 +195,10 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			DelightfulItems.ENDER_NECTAR.get(), 1, CookingRecipes.SLOW_COOKING, 0.35F, Items.GLASS_BOTTLE)
 			.addIngredient(DelightfulItems.MATCHA_LATTE.get())
 			.addIngredient(Items.ENDER_EYE)
+			.addIngredient(Ingredient.of(Items.CHORUS_FRUIT, Items.ENDER_EYE))
+			.addIngredient(Ingredient.of(Items.CHORUS_FRUIT, Items.ENDER_EYE))
 			.unlockedBy("has_ender_eye", has(Items.ENDER_EYE)),
-			"food/cooking/ender_nectar", finished, enabled(DelightfulItems.MATCHA_LATTE), enabled(DelightfulItems.ENDER_NECTAR), not(modLoaded(Modid.FR.get())));
+			"food/cooking/ender_nectar", finished, enabled(DelightfulItems.MATCHA_LATTE), enabled(DelightfulItems.ENDER_NECTAR), not(modLoaded(Modid.FR.get())), not(modLoaded(Modid.BC.get())));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.BERRY_MATCHA_LATTE.get(), 1)
 			.requires(Items.GLASS_BOTTLE)
 			.requires(DelightfulItems.MATCHA_LATTE.get())
@@ -280,22 +284,22 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.pattern("nnn")
 			.pattern("sdg")
 			.define('h', Items.HONEY_BOTTLE)
-			.define('n', DelightfulItemTags.NUTS)
+			.define('n', DelightfulItemTags.COOKED_NUTS)
 			.define('d', ForgeTags.DOUGH)
 			.define('s', DelightfulItemTags.FRUITS_CITRUS)
 			.define('g', DelightfulItemTags.HOT_SPICE)
-			.unlockedBy("has_nuts", has(DelightfulItemTags.NUTS)),
+			.unlockedBy("has_nuts", has(DelightfulItemTags.COOKED_NUTS)),
 			"food/baklava", finished, enabled(DelightfulItems.BAKLAVA), not(tagEmpty(DelightfulItemTags.FRUITS_CITRUS)));
 		wrap(ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, DelightfulItems.BAKLAVA.get(), 1)
 			.pattern(" h ")
 			.pattern("nnn")
 			.pattern("sdg")
 			.define('h', Items.HONEY_BOTTLE)
-			.define('n', DelightfulItemTags.NUTS)
+			.define('n', DelightfulItemTags.COOKED_NUTS)
 			.define('d', ForgeTags.DOUGH)
 			.define('s', Items.SUGAR)
 			.define('g', DelightfulItemTags.HOT_SPICE)
-			.unlockedBy("has_nuts", has(DelightfulItemTags.NUTS)),
+			.unlockedBy("has_nuts", has(DelightfulItemTags.COOKED_NUTS)),
 			"food/baklava_no_citrus", finished, enabled(DelightfulItems.BAKLAVA), tagEmpty(DelightfulItemTags.FRUITS_CITRUS));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.BAKLAVA.get(), 1)
 			.requires(DelightfulItems.BAKLAVA_SLICE.get(), 4)
@@ -557,20 +561,21 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			"candle_from_animal_fat", finished, enabled(DelightfulItems.ANIMAL_FAT));
 		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
 			Ingredient.of(Items.OAK_SAPLING),
-			Ingredient.of(ForgeTags.TOOLS_AXES),
+			new ToolActionIngredient(ToolActions.AXE_DIG),
 			Items.STICK, 1)
 			.addResultWithChance(DelightfulItems.ACORN.get(), 0.2F, 1),
 			"cutting/oak_sapling", finished, enabled(DelightfulItems.ACORN));
 		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
 			Ingredient.of(Items.DARK_OAK_SAPLING),
-			Ingredient.of(ForgeTags.TOOLS_AXES),
+			new ToolActionIngredient(ToolActions.AXE_DIG),
 			Items.STICK, 1)
 			.addResultWithChance(DelightfulItems.ACORN.get(), 0.2F, 1),
 			"cutting/dark_oak_sapling", finished, enabled(DelightfulItems.ACORN));
 		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
 			Ingredient.of(DelightfulItemTags.TEA_LEAVES_GREEN),
-			Ingredient.of(ForgeTags.TOOLS_SHOVELS),
-			Items.GREEN_DYE, 1).addResultWithChance(DelightfulItems.MATCHA.get(), 0.4F),
+			new ToolActionIngredient(ToolActions.SHOVEL_DIG),
+			Items.GREEN_DYE, 1)
+			.addResultWithChance(DelightfulItems.MATCHA.get(), 0.5F, 1),
 			"cutting/green_tea_leaves", finished, enabled(DelightfulItems.MATCHA), not(tagEmpty(DelightfulItemTags.TEA_LEAVES_GREEN)), not(modLoaded(Modid.YH.get())));
 		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
 			Ingredient.of(DelightfulItemTags.CLOVER),
@@ -772,7 +777,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.build(finished, Util.delight("cutting/wild_salmonberries"));
 		CuttingBoardRecipeBuilder.cuttingRecipe(
 			Ingredient.of(Items.DEAD_BUSH),
-			Ingredient.of(ForgeTags.TOOLS_AXES),
+			new ToolActionIngredient(ToolActions.AXE_DIG),
 			Items.STICK, 1)
 			.addResultWithChance(Items.STICK, 0.5F, 1)
 			.build(finished, Util.delight("cutting/dead_bush"));

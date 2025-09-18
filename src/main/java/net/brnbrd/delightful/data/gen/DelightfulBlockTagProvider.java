@@ -41,7 +41,8 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 			.addOptional(Util.rl("sprout", "sprouts"));
 		this.tag(DelightfulBlockTags.DROPS_ACORN)
 			.add(Blocks.OAK_LEAVES)
-			.add(Blocks.DARK_OAK_LEAVES);
+			.add(Blocks.DARK_OAK_LEAVES)
+			.addOptional(Modid.VB.rl("pale_oak_leaves"));
 		this.tag(DelightfulBlockTags.ADD_ACORN).addOptional(Util.rl("natural_decoration", "oak_acorn"));
 		this.tag(DelightfulBlockTags.DROPS_GREEN_TEA_LEAF).addTag(BlockTags.LEAVES);
 		this.tag(DelightfulBlockTags.CANTALOUPE_SPAWNS).addTag(Tags.Blocks.SAND);

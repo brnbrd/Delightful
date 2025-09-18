@@ -696,6 +696,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptionalTag(Modid.LOADER.rl("chocolates"))
 			.addOptionalTag(Modid.LOADER.rl("bars/chocolate"))
 			.addOptionalTag(Modid.LOADER.rl("chocolatebar"))
+			.addOptionalTag(Modid.SUP.rl("chocolate_bars"))
 			.addOptional(Modid.N.rl("chocolate_bar"))
 			.addOptional(Modid.C.rl("bar_of_chocolate"))
 			.addOptional(Modid.HH.rl("chocolate_bar"));

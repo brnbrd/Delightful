@@ -15,6 +15,7 @@
     }
   ],
   "tool": {
-    "tag": "forge:tools/axes"
+    "type": "farmersdelight:tool_action",
+    "action": "axe_dig"
   }
 }

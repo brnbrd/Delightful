@@ -4,12 +4,12 @@
     {
       "conditions": [
         {
-          "type": "forge:mod_loaded",
-          "modid": "sunflowerdelight"
+          "type": "forge:item_exists",
+          "item": "sunflowerdelight:rose_lemonade"
         },
         {
           "type": "forge:item_exists",
-          "item": "sunflowerdelight:rose_lemonade"
+          "item": "sunflowerdelight:rosebud"
         },
         {
           "type": "forge:not",
@@ -41,9 +41,6 @@
             "tag": "forge:fruits/lemon"
           },
           {
-            "tag": "forge:fruits/melon"
-          },
-          {
             "item": "minecraft:nether_wart"
           }
         ],
@@ -56,12 +53,12 @@
     {
       "conditions": [
         {
-          "type": "forge:mod_loaded",
-          "modid": "sunflowerdelight"
+          "type": "forge:item_exists",
+          "item": "sunflowerdelight:rose_lemonade"
         },
         {
           "type": "forge:item_exists",
-          "item": "sunflowerdelight:rose_lemonade"
+          "item": "sunflowerdelight:rosebud"
         },
         {
           "type": "forge:not",
@@ -87,16 +84,13 @@
         "experience": 2.0,
         "ingredients": [
           {
-            "tag": "delightful:rose"
+            "item": "sunflowerdelight:rosebud"
           },
           {
             "item": "minecraft:sugar"
           },
           {
             "tag": "forge:fruits/lemon"
-          },
-          {
-            "tag": "forge:fruits/melon"
           },
           {
             "item": "minecraft:nether_wart"
@@ -111,12 +105,12 @@
     {
       "conditions": [
         {
-          "type": "forge:mod_loaded",
-          "modid": "sunflowerdelight"
+          "type": "forge:item_exists",
+          "item": "sunflowerdelight:rose_lemonade"
         },
         {
           "type": "forge:item_exists",
-          "item": "sunflowerdelight:rose_lemonade"
+          "item": "sunflowerdelight:rosebud"
         },
         {
           "type": "forge:not",
@@ -135,16 +129,13 @@
         "experience": 2.0,
         "ingredients": [
           {
-            "tag": "delightful:rose"
+            "item": "sunflowerdelight:rosebud"
           },
           {
             "item": "minecraft:sugar"
           },
           {
             "tag": "forge:fruits/citrus"
-          },
-          {
-            "tag": "forge:fruits/melon"
           },
           {
             "item": "minecraft:nether_wart"
@@ -159,12 +150,12 @@
     {
       "conditions": [
         {
-          "type": "forge:mod_loaded",
-          "modid": "sunflowerdelight"
+          "type": "forge:item_exists",
+          "item": "sunflowerdelight:rose_lemonade"
         },
         {
           "type": "forge:item_exists",
-          "item": "sunflowerdelight:rose_lemonade"
+          "item": "sunflowerdelight:rosebud"
         },
         {
           "type": "forge:tag_empty",
@@ -180,13 +171,10 @@
         "experience": 2.0,
         "ingredients": [
           {
-            "tag": "delightful:rose"
+            "item": "sunflowerdelight:rosebud"
           },
           {
             "item": "minecraft:sugar"
-          },
-          {
-            "tag": "forge:fruits/melon"
           },
           {
             "tag": "forge:fruits/melon"

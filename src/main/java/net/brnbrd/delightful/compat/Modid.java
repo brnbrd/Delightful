@@ -113,6 +113,7 @@ public enum Modid {
 	UE("unusualend"),
 	UG("undergarden"),
 	UGD("undergardendelight"),
+	VB("vanillabackport"),
 	VD("vintagedelight"),
 	VGND("vegandelight"),
 	WB("wildberries"),

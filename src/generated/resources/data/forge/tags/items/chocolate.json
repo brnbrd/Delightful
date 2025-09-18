@@ -13,6 +13,10 @@
       "required": false
     },
     {
+      "id": "#supplementaries:chocolate_bars",
+      "required": false
+    },
+    {
       "id": "neapolitan:chocolate_bar",
       "required": false
     },

@@ -8,10 +8,14 @@
   - Now provides Corrosion I for 0:30
 - Added Sinigang Cup (for [Miner's Delight +](https://www.curseforge.com/minecraft/mc-mods/miners-delight-plus))
 - Matcha Latte can now be brewed in a Kettle with [Farmer's Respite](https://www.curseforge.com/minecraft/mc-mods/farmers-respite)
-- Ender Nectar is now upgraded from Matcha Latte, either in a Kettle or Cooking Pot
-- Matcha Gummy now provides Regeneration III for 0:05
+- Ender Nectar is now upgraded from Matcha Latte
+  - Will be fermented in a Keg with [Brewin' and Chewin'](https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin)
+  - Will be brewed in a Kettle in absence of Brewin' and Chewin' and with [Farmer's Respite](https://www.curseforge.com/minecraft/mc-mods/farmers-respite)
+  - Now provides Resonance for 0:25 with [Exquisito](https://www.curseforge.com/minecraft/mc-mods/exquisito)
 - Added recipe to craft a Mini Melon from 4 Melon Slices
 - Added recipe to craft a Cantaloupe from 4 Cantaloupe Slices
+- Baklava now requires `#forge:cooked_nuts` rather than `#forge:nuts`
+- Matcha Gummy now provides Regeneration III for 0:05
 
 ### Fixes
 - Fixed Chopped Clover recipe having an empty ingredient in some cases

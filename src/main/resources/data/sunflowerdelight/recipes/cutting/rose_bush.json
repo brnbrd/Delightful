@@ -4,41 +4,18 @@
     {
       "conditions": [
         {
-          "type": "forge:mod_loaded",
-          "modid": "sunflowerdelight"
-        },
-        {
-          "type": "forge:item_exists",
-          "item": "sunflowerdelight:rosebud"
-        },
-        {
-          "type": "forge:not",
-          "value": {
-            "type": "forge:mod_loaded",
-            "modid": "farmersrespite"
-          }
+          "type": "forge:false"
         }
       ],
       "recipe": {
-        "type": "farmersdelight:cutting",
+        "type": "minecraft:crafting_shapeless",
         "ingredients": [
           {
-            "item": "minecraft:rose_bush"
+            "item": "this_item:does_not_exist"
           }
         ],
-        "result": [
-          {
-            "count": 2,
-            "item": "minecraft:red_dye"
-          },
-          {
-            "count": 1,
-            "chance": 0.3,
-            "item": "sunflowerdelight:rosebud"
-          }
-        ],
-        "tool": {
-          "tag": "forge:tools/knives"
+        "result": {
+          "item": "this_item:does_not_exist"
         }
       }
     }

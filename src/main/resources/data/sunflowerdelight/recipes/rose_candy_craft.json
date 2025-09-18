@@ -4,73 +4,32 @@
     {
       "conditions": [
         {
-          "type": "forge:mod_loaded",
-          "modid": "sunflowerdelight"
-        },
-        {
           "type": "forge:item_exists",
           "item": "sunflowerdelight:rose_candy"
         },
         {
           "type": "forge:item_exists",
-          "item": "farmersrespite:rose_hips"
+          "item": "sunflowerdelight:rosebud"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shapeless",
+        "group": "rose_candy_craft",
         "category": "misc",
         "ingredients": [
           {
-            "item": "farmersrespite:rose_hips"
-          },
-          {
-            "item": "minecraft:sugar"
+            "item": "sunflowerdelight:rosebud"
           },
           {
             "item": "minecraft:honey_bottle"
-          }
-        ],
-        "result": {
-          "count": 8,
-          "item": "sunflowerdelight:rose_candy"
-        }
-      }
-    },
-    {
-      "conditions": [
-        {
-          "type": "forge:mod_loaded",
-          "modid": "sunflowerdelight"
-        },
-        {
-          "type": "forge:item_exists",
-          "item": "sunflowerdelight:rose_candy"
-        },
-        {
-          "type": "forge:not",
-          "value": {
-            "type": "forge:item_exists",
-            "item": "farmersrespite:rose_hips"
-          }
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:crafting_shapeless",
-        "category": "misc",
-        "ingredients": [
-          {
-            "tag": "delightful:rose"
           },
           {
             "item": "minecraft:sugar"
-          },
-          {
-            "item": "minecraft:honey_bottle"
           }
         ],
         "result": {
-          "count": 8,
-          "item": "sunflowerdelight:rose_candy"
+          "item": "sunflowerdelight:rose_candy",
+          "count": 8
         }
       }
     }

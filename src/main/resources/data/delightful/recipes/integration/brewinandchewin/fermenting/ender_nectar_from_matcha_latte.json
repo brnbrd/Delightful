@@ -13,14 +13,7 @@
         },
         {
           "type": "forge:mod_loaded",
-          "modid": "farmersrespite"
-        },
-        {
-          "type": "forge:not",
-          "value": {
-            "type": "forge:mod_loaded",
-            "modid": "brewinandchewin"
-          }
+          "modid": "brewinandchewin"
         },
         {
           "type": "forge:mod_loaded",
@@ -28,25 +21,30 @@
         }
       ],
       "recipe": {
-        "type": "farmersrespite:brewing",
-        "base": {
+        "type":"brewinandchewin:fermenting",
+        "basefluid":{
           "count": 1000,
           "fluid": "delightful:matcha_latte"
         },
-        "cookingtime": 4800,
-        "experience": 0.35,
-        "ingredients": [
+        "experience": 1.0,
+        "fermentingtime": 12000,
+        "ingredients":[
           {
             "item": "minecraft:ender_eye"
           },
           {
             "tag": "forge:fruits/chorus"
+          },
+          {
+            "tag": "forge:fruits/chorus"
           }
         ],
-        "result": {
+        "recipe_book_tab":"drinks",
+        "result":{
           "count": 1000,
           "fluid": "delightful:ender_nectar"
-        }
+        },
+        "temperature": 4
       }
     },
     {
@@ -61,18 +59,7 @@
         },
         {
           "type": "forge:mod_loaded",
-          "modid": "farmersrespite"
-        },
-        {
-          "type": "forge:not",
-          "value": {
-            "type": "forge:mod_loaded",
-            "modid": "brewinandchewin"
-          }
-        },
-        {
-          "type": "forge:mod_loaded",
-          "modid": "endergetic"
+          "modid": "brewinandchewin"
         },
         {
           "type": "forge:not",
@@ -80,17 +67,21 @@
             "type": "forge:mod_loaded",
             "modid": "exquisito"
           }
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "endergetic"
         }
       ],
       "recipe": {
-        "type": "farmersrespite:brewing",
-        "base": {
+        "type":"brewinandchewin:fermenting",
+        "basefluid":{
           "count": 1000,
           "fluid": "delightful:matcha_latte"
         },
-        "cookingtime": 4800,
-        "experience": 0.35,
-        "ingredients": [
+        "experience": 1.0,
+        "fermentingtime": 12000,
+        "ingredients":[
           {
             "item": "minecraft:ender_eye"
           },
@@ -107,12 +98,28 @@
             {
               "item": "minecraft:ender_eye"
             }
+          ],
+          [
+            {
+              "tag": "forge:fruits/chorus"
+            },
+            {
+              "item": "endergetic:poise_bush"
+            },
+            {
+              "item": "endergetic:tall_poise_bush"
+            },
+            {
+              "item": "minecraft:ender_eye"
+            }
           ]
         ],
-        "result": {
+        "recipe_book_tab":"drinks",
+        "result":{
           "count": 1000,
           "fluid": "delightful:ender_nectar"
-        }
+        },
+        "temperature": 4
       }
     },
     {
@@ -127,13 +134,13 @@
         },
         {
           "type": "forge:mod_loaded",
-          "modid": "farmersrespite"
+          "modid": "brewinandchewin"
         },
         {
           "type": "forge:not",
           "value": {
             "type": "forge:mod_loaded",
-            "modid": "brewinandchewin"
+            "modid": "exquisito"
           }
         },
         {
@@ -142,24 +149,17 @@
             "type": "forge:mod_loaded",
             "modid": "endergetic"
           }
-        },
-        {
-          "type": "forge:not",
-          "value": {
-            "type": "forge:mod_loaded",
-            "modid": "exquisito"
-          }
         }
       ],
       "recipe": {
-        "type": "farmersrespite:brewing",
-        "base": {
+        "type":"brewinandchewin:fermenting",
+        "basefluid":{
           "count": 1000,
           "fluid": "delightful:matcha_latte"
         },
-        "cookingtime": 4800,
-        "experience": 0.35,
-        "ingredients": [
+        "experience": 1.0,
+        "fermentingtime": 12000,
+        "ingredients":[
           {
             "item": "minecraft:ender_eye"
           },
@@ -170,12 +170,22 @@
             {
               "item": "minecraft:ender_eye"
             }
+          ],
+          [
+            {
+              "tag": "forge:fruits/chorus"
+            },
+            {
+              "item": "minecraft:ender_eye"
+            }
           ]
         ],
-        "result": {
+        "recipe_book_tab":"drinks",
+        "result":{
           "count": 1000,
           "fluid": "delightful:ender_nectar"
-        }
+        },
+        "temperature": 4
       }
     }
   ]
