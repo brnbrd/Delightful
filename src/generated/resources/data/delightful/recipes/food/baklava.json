@@ -29,7 +29,7 @@
             "item": "minecraft:honey_bottle"
           },
           "n": {
-            "tag": "forge:nuts"
+            "tag": "forge:cooked_nuts"
           },
           "s": {
             "tag": "forge:fruits/citrus"

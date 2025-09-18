@@ -1,4 +1,4 @@
-// 1.20.1	2025-09-13T15:17:58.3248787	delightful
+// 1.20.1	2025-09-17T15:44:15.1569612	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -62,7 +62,7 @@ f57fbc394cb022a6899e87ca9acfdb3ebcfb1a34 data/forge/tags/items/cheese.json
 c1b24bd437c9d1fa5653bfe94d1f3855d1b7ff33 data/forge/tags/items/cheese/mild.json
 17db0fc7e0ff7f8c5acd669e2b75be11ce3db83a data/forge/tags/items/cheese/spicy.json
 925114e951c4f350d4caea55ddd3dfc0d6b80815 data/forge/tags/items/cheese/sweet.json
-f378d46051fae18380044514f1fe98fc42a2ab76 data/forge/tags/items/chocolate.json
+150b70de01f1d304f9e9b7374eb7be521afa7cb8 data/forge/tags/items/chocolate.json
 f3804b752bd412a48169cff4bd2122a0c0242000 data/forge/tags/items/clover.json
 b660f1a0311fc2203d72ff4458a59fc12bbc7db2 data/forge/tags/items/coconut.json
 ae1d52d3b6cc06fbbf712ec1afad143ebfc0a82c data/forge/tags/items/cooked_beef_or_vegan.json
