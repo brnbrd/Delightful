@@ -9,7 +9,7 @@
 - Added Sinigang Cup (for [Miner's Delight +](https://www.curseforge.com/minecraft/mc-mods/miners-delight-plus))
 - Matcha Latte can now be brewed in a Kettle with [Farmer's Respite](https://www.curseforge.com/minecraft/mc-mods/farmers-respite)
 - Ender Nectar is now upgraded from Matcha Latte
-  - Will be fermented in a Keg with [Brewin' and Chewin'](https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin)
+  - Will be fermented in a Keg and provide Tipsy I for 2:00 with [Brewin' and Chewin'](https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin)
   - Will be brewed in a Kettle in absence of Brewin' and Chewin' and with [Farmer's Respite](https://www.curseforge.com/minecraft/mc-mods/farmers-respite)
   - Now provides Resonance for 0:25 with [Exquisito](https://www.curseforge.com/minecraft/mc-mods/exquisito)
 - Added recipe to craft a Mini Melon from 4 Melon Slices

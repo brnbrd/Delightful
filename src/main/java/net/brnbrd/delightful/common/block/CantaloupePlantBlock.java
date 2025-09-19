@@ -39,10 +39,10 @@ public class CantaloupePlantBlock extends BushBlock implements BonemealableBlock
 	public static final int MAX_AGE = 3;
 	public static final IntegerProperty AGE = BlockStateProperties.AGE_3;
 	private static final VoxelShape[] SHAPE_BY_AGE = new VoxelShape[]{
-			Block.box(3.0D, 0.0D, 3.0D, 13.0D, 2.0D, 13.0D),
-			Block.box(2.0D, 0.0D, 2.0D, 14.0D, 5.0D, 14.0D),
-			Block.box(0.0D, 0.0D, 0.0D, 16.0D, 6.0D, 16.0D),
-			Block.box(0.0D, 0.0D, 0.0D, 16.0D, 8.0D, 16.0D)
+			Block.box(3D, 0D, 3D, 13D, 2D, 13D),
+			Block.box(2D, 0D, 2D, 14D, 5D, 14D),
+			Block.box(0D, 0D, 0D, 16D, 6D, 16D),
+			Block.box(0D, 0D, 0D, 16D, 8D, 16D)
 	};
 
 	public CantaloupePlantBlock(BlockBehaviour.Properties pProperties) {

@@ -83,6 +83,7 @@ dependencies {
     compileOnly fg.deobf("vazkii.botania:Botania:${botania_version}")
     implementation fg.deobf("curse.maven:jade-324717:${jade_version}")
     implementation fg.deobf("curse.maven:miners-delight-plus-689630:${miners_delight_version}")
+    implementation fg.deobf("curse.maven:brewin-and-chewin-637808:${brewin_and_chewin_version}")
     compileOnly fg.deobf("curse.maven:spirit-495509:${spirit_version}")
     compileOnly fg.deobf("curse.maven:aether-255308:${aether_version}")
     compileOnly fg.deobf("curse.maven:aether-redux-867237:${aether_redux_version}")

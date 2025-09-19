@@ -200,7 +200,7 @@ public class DelightfulBlocks {
 
 	private static BlockBehaviour.Properties COOKIE(MapColor color) {
 		return Block.Properties.of()
-			.strength(2.0F, 3.0F)
+			.strength(2F, 3F)
 			.sound(SoundType.WOOD)
 			.mapColor(color);
 	}

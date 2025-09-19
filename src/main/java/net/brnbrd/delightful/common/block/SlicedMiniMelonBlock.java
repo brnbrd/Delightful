@@ -30,10 +30,10 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.items.ItemHandlerHelper;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
 import java.util.function.Supplier;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 public class SlicedMiniMelonBlock extends MelonBlock implements ISliceable {
 	public static final Integer MAX_BITES = 3;
@@ -54,7 +54,7 @@ public class SlicedMiniMelonBlock extends MelonBlock implements ISliceable {
 	}
 
 	public VoxelShape byBite(BlockState state) {
-		return Block.box(3.0D, 0.0D, 3.0D, 13.0D, this.getHeight(state.getValue(BITES)), 13.0D);
+		return Block.box(3D, 0D, 3D, 13D, this.getHeight(state.getValue(BITES)), 13D);
 	}
 
 	@Override

@@ -9,6 +9,7 @@ import net.brnbrd.delightful.compat.*;
 import net.brnbrd.delightful.compat.abnormals.AquaticCompat;
 import net.brnbrd.delightful.compat.abnormals.AtmosphericCompat;
 import net.brnbrd.delightful.compat.ars_nouveau.*;
+import net.brnbrd.delightful.compat.brewinandchewin.BrewinChewinCompat;
 import net.brnbrd.delightful.compat.undergarden.UndergardenCompat;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
@@ -150,7 +151,9 @@ public class DelightfulItems {
 	public static final RegistryObject<Item> BERRY_MATCHA_LATTE = registerItem("berry_matcha_latte",
 		() -> new DrinkItem((new Item.Properties()).food(Nutrition.BERRY_MATCHA_LATTE).stacksTo(16).craftRemainder(Items.GLASS_BOTTLE), true, false));
 	public static final RegistryObject<Item> ENDER_NECTAR = registerItem("ender_nectar",
-		() -> new EnderNectarItem((new Item.Properties()).food(Nutrition.ENDER_NECTAR).stacksTo(16).craftRemainder(Items.GLASS_BOTTLE)));
+		() -> Modid.BC.loaded() ?
+		BrewinChewinCompat.ENDER_NECTAR.get() :
+		new EnderNectarItem((new Item.Properties()).food(Nutrition.ENDER_NECTAR).stacksTo(16).craftRemainder(Items.GLASS_BOTTLE)));
 	public static final RegistryObject<Item> AZALEA_TEA = registerItem("azalea_tea",
 		() -> new AzaleaTeaItem((new Item.Properties()).food(Nutrition.AZALEA_TEA)));
 	public static final RegistryObject<Item> LAVENDER_TEA = registerItem("lavender_tea",

@@ -13,36 +13,39 @@
         },
         {
           "type": "forge:mod_loaded",
-          "modid": "farmersrespite"
-        },
-        {
-          "type": "forge:not",
-          "value": {
-            "type": "forge:mod_loaded",
-            "modid": "brewinandchewin"
-          }
+          "modid": "brewinandchewin"
         }
       ],
       "recipe": {
-        "type": "farmersrespite:brewing",
-        "base": {
+        "type":"brewinandchewin:fermenting",
+        "basefluid":{
           "count": 1000,
           "fluid": "delightful:matcha_latte"
         },
-        "cookingtime": 12000,
-        "experience": 0.35,
-        "ingredients": [
+        "experience": 1.0,
+        "fermentingtime": 12000,
+        "ingredients":[
           {
             "item": "minecraft:ender_eye"
           },
           {
-            "item": "minecraft:ender_eye"
-          }
+            "tag": "forge:fruits/chorus"
+          },
+          [
+            {
+              "item": "minecraft:warped_fungus"
+            },
+            {
+              "item": "minecraft:warped_roots"
+            }
+          ]
         ],
-        "result": {
+        "recipe_book_tab":"drinks",
+        "result":{
           "count": 1000,
           "fluid": "delightful:ender_nectar"
-        }
+        },
+        "temperature": 4
       }
     }
   ]

@@ -6,7 +6,7 @@ import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.knife.DKnifeItem;
 import net.brnbrd.delightful.common.item.knife.Knives;
 import net.brnbrd.delightful.compat.BWGCompat;
-import net.brnbrd.delightful.compat.BrewinChewinCompat;
+import net.brnbrd.delightful.compat.brewinandchewin.BrewinChewinCompat;
 import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.compat.abnormals.AtmosphericCompat;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
@@ -809,7 +809,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.add(DelightfulItems.BERRY_MATCHA_LATTE.get())
 			.add(DelightfulItems.AZALEA_TEA.get())
 			.add(DelightfulItems.LAVENDER_TEA.get())
-			.addOptionalTag(Modid.BC.rl("fermented_drinks"))
+			.addOptionalTag(BrewinChewinCompat.FERMENTED_DRINKS.location())
 			.addOptional(Modid.FR.rl("green_tea"))
 			.addOptional(Modid.FR.rl("yellow_tea"))
 			.addOptional(Modid.FR.rl("black_tea"))
@@ -831,6 +831,9 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.EXQ.rl("ether_bulb_gummy"))
 			.addOptional(Modid.EXQ.rl("nightshade_berry_gummy"))
 			.addOptional(Modid.EXQ.rl("warzipan_gummy"));
+
+		// Brewin and Chewin
+		this.tag(BrewinChewinCompat.FERMENTED_DRINKS).add(DelightfulItems.ENDER_NECTAR.get());
 
 		// Nether's Delight
 		this.tag(Modid.ND.it("meal_item"))

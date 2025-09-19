@@ -11,8 +11,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 
 public class MiniBlock extends MelonBlock {
-
-	private static final VoxelShape SHAPE = Block.box(3.0D, 0.0D, 3.0D, 13.0D, 10.0D, 13.0D);
+	private static final VoxelShape SHAPE = Block.box(3D, 0D, 3D, 13D, 10D, 13D);
 
 	public MiniBlock(Properties pProperties) {
 		super(pProperties);

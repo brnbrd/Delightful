@@ -36,8 +36,8 @@ import org.jetbrains.annotations.NotNull;
 public class SalmonberryBushBlock extends BushBlock implements BonemealableBlock {
 	public static final int MAX_AGE = 4;
 	public static final IntegerProperty AGE = BlockStateProperties.AGE_4;
-	private static final VoxelShape SAPLING_SHAPE = Block.box(3.0D, 0.0D, 3.0D, 13.0D, 8.0D, 13.0D);
-	private static final VoxelShape MID_GROWTH_SHAPE = Block.box(1.0D, 0.0D, 1.0D, 15.0D, 16.0D, 15.0D);
+	private static final VoxelShape SAPLING_SHAPE = Block.box(3D, 0D, 3D, 13D, 8D, 13D);
+	private static final VoxelShape MID_GROWTH_SHAPE = Block.box(1D, 0D, 1D, 15D, 16D, 15D);
 
 	public SalmonberryBushBlock(BlockBehaviour.Properties pProperties) {
 		super(pProperties);

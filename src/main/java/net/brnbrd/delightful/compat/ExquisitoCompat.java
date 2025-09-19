@@ -7,6 +7,6 @@ import org.jetbrains.annotations.NotNull;
 
 public class ExquisitoCompat {
 	public static @NotNull Supplier<MobEffect> getResonance() {
-		return () -> Modid.EXQ.effect("resonance", MobEffects.WEAKNESS);
+		return () -> Modid.EXQ.effect("resonance", MobEffects.DIG_SPEED);
 	}
 }

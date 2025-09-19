@@ -51,7 +51,7 @@ public class SlicedMelonBlock extends Block implements ISliceable {
 	}
 
 	public VoxelShape byBite(BlockState state) {
-		return Block.box(0.0D, 0.0D, 0.0D, 16.0D, this.getHeight(state.getValue(BITES)), 16.0D);
+		return Block.box(0D, 0D, 0D, 16D, this.getHeight(state.getValue(BITES)), 16D);
 	}
 
 	@SuppressWarnings("deprecation")

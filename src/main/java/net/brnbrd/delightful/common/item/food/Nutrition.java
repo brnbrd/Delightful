@@ -2,6 +2,7 @@ package net.brnbrd.delightful.common.item.food;
 
 import net.brnbrd.delightful.compat.*;
 import net.brnbrd.delightful.compat.abnormals.NeapolitanCompat;
+import net.brnbrd.delightful.compat.brewinandchewin.BrewinChewinCompat;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
@@ -161,10 +162,12 @@ public class Nutrition {
 		.effect(() -> new MobEffectInstance(TeaCompat.getGreenTeaEffect().get(), 400, 1), 1F)
 		.effect(() -> new MobEffectInstance(TeaCompat.getCaffeinated().get(), 3600, 1), 1F).build();
 	public static final FoodProperties ENDER_NECTAR = (new FoodProperties.Builder())
-		.nutrition(4).saturationMod(0.5F).alwaysEat()
+		.nutrition(4).saturationMod(0F).alwaysEat()
 		.effect(() -> new MobEffectInstance(MobEffects.HEAL, 1, 0), 1F)
-		.effect(() -> new MobEffectInstance(TeaCompat.getCaffeinated().get(), 3600, 1), 1F)
+		.effect(() -> new MobEffectInstance(TeaCompat.getCaffeinated().get(), 3600, 2), 1F)
 		.effect(() -> new MobEffectInstance(ExquisitoCompat.getResonance().get(), 500, 0), 1F)
+		.effect(() -> new MobEffectInstance(BrewinChewinCompat.getTipsy().get(), 2400, 0), 1F)
+		.effect(() -> BrewinChewinCompat.getIntoxicationOrHalfBadLuck(1800, 0), 1F)
 		.effect(() -> new MobEffectInstance(MobEffects.BLINDNESS, 100, 0), 1F).build();
 	public static final FoodProperties MATCHA_ICE_CREAM = (new FoodProperties.Builder())
 		.nutrition(6).saturationMod(0.5F)

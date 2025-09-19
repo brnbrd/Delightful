@@ -29,7 +29,7 @@ public class AlfKnifeItem extends TerraKnifeItem {
 			builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_UUID,
 					"Attack damage modifier", 9.5D, AttributeModifier.Operation.ADDITION));
 			builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_UUID,
-					"Attack speed modifier", 4.0D, AttributeModifier.Operation.ADDITION));
+					"Attack speed modifier", 4D, AttributeModifier.Operation.ADDITION));
 			return builder.build();
 		});
 	}
