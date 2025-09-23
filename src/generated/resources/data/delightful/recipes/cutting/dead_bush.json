@@ -7,10 +7,7 @@
   ],
   "result": [
     {
-      "item": "minecraft:stick"
-    },
-    {
-      "chance": 0.5,
+      "count": 2,
       "item": "minecraft:stick"
     }
   ],

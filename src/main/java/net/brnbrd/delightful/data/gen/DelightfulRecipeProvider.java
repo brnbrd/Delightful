@@ -778,8 +778,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 		CuttingBoardRecipeBuilder.cuttingRecipe(
 			Ingredient.of(Items.DEAD_BUSH),
 			new ToolActionIngredient(ToolActions.AXE_DIG),
-			Items.STICK, 1)
-			.addResultWithChance(Items.STICK, 0.5F, 1)
+			Items.STICK, 2)
 			.build(finished, Util.delight("cutting/dead_bush"));
 		CuttingBoardRecipeBuilder.cuttingRecipe(
 			Ingredient.of(Items.SUGAR_CANE),
