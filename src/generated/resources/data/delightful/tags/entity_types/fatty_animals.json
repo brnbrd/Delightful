@@ -370,6 +370,10 @@
       "required": false
     },
     {
+      "id": "cold_sweat:chameleon",
+      "required": false
+    },
+    {
       "id": "babyfat:ranchu",
       "required": false
     },

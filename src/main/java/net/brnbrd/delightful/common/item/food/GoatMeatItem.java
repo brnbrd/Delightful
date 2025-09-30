@@ -9,6 +9,6 @@ public class GoatMeatItem extends DConsumableItem {
 
 	@Override
 	public Modid[] getConflicts() {
-		return new Modid[]{Modid.GO, Modid.DTM};
+		return new Modid[]{Modid.GO, Modid.WS, Modid.DTM};
 	}
 }

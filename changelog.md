@@ -28,6 +28,7 @@
 
 ### Fixes
 - Fixed Chopped Clover recipe having an empty ingredient in some cases
+- Fixed Chevon loot modifier to only apply on death (closes [#141](https://github.com/brnbrd/Delightful/issues/141))
 - Adjusted saturation values of soup Cups to be consistent with [Miner's Delight +](https://www.curseforge.com/minecraft/mc-mods/miners-delight-plus)
 
 

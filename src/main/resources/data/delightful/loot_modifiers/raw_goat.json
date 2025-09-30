@@ -6,6 +6,10 @@
       "item": "raw_goat"
     },
     {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:entities/goat"
+    },
+    {
       "chance": 1.0,
       "condition": "minecraft:random_chance_with_looting",
       "looting_multiplier": 0.1
@@ -17,13 +21,6 @@
         "flags": {
           "is_on_fire": false
         }
-      }
-    },
-    {
-      "condition": "minecraft:entity_properties",
-      "entity": "this",
-      "predicate": {
-        "type": "#delightful:drops_raw_goat"
       }
     }
   ],
