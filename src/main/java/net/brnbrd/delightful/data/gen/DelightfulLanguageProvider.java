@@ -84,7 +84,7 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		addItem(DelightfulItems.VENISON_STEW, "Venison Stew");
 		addItem(DelightfulItems.VENISON_STEW_CUP, "Venison Stew Cup");
 		addItem(DelightfulItems.FIELD_SALAD, "Field Salad");
-		addItem(DelightfulItems.ROCK_CANDY, "Rock Candy");
+		addItem(DelightfulItems.ROCK_CANDY, "Rose Rock Candy");
 		addItem(DelightfulItems.VENISON_CHOPS, "Raw Venison Chops");
 		addItem(DelightfulItems.COOKED_VENISON_CHOPS, "Cooked Venison Chops");
 		addItem(DelightfulItems.RAW_GOAT, "Raw Chevon");

@@ -585,3 +585,17 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
 	versionRange="[1.1.4,)"
 	ordering="AFTER"
 	side="BOTH"
+
+[[dependencies.delightful]]
+	modId="dungeonsdelight"
+	mandatory=false
+	versionRange="[1.2,)"
+	ordering="AFTER"
+	side="BOTH"
+
+[[dependencies.delightful]]
+	modId="malum"
+	mandatory=false
+	versionRange="[0,)"
+	ordering="AFTER"
+	side="BOTH"

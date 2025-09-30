@@ -5,20 +5,20 @@
       "conditions": [
         {
           "type": "forge:item_exists",
-          "item": "habitat:tall_white_anthurium"
+          "item": "biomesoplenty:lavender"
         }
       ],
       "recipe": {
         "type": "farmersdelight:cutting",
         "ingredients": [
           {
-            "item": "habitat:tall_white_anthurium"
+            "item": "biomesoplenty:lavender"
           }
         ],
         "result": [
           {
-            "item": "minecraft:white_dye",
-            "count": 4
+            "item": "minecraft:purple_dye",
+            "count": 2
           }
         ],
         "tool": {

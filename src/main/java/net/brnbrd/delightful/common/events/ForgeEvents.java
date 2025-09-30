@@ -51,7 +51,7 @@ public class ForgeEvents {
 				Util.addEffect(entity, Modid.CAD.effect("rotten"), duration, 0);
 			} else if (
 				Modid.SOB.loaded() &&
-				stack.is(DelightfulItemTags.GIVES_SPITE)
+				stack.is(DelightfulItemTags.SPITE)
 			) {
 				int duration = 200;
 				if (stack.is(Modid.ECO.item("cooked_prickly_pear"))) {

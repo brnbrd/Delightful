@@ -5,20 +5,20 @@
       "conditions": [
         {
           "type": "forge:item_exists",
-          "item": "habitat:tall_red_anthurium"
+          "item": "biomesoplenty:orange_cosmos"
         }
       ],
       "recipe": {
         "type": "farmersdelight:cutting",
         "ingredients": [
           {
-            "item": "habitat:tall_red_anthurium"
+            "item": "biomesoplenty:orange_cosmos"
           }
         ],
         "result": [
           {
-            "item": "minecraft:red_dye",
-            "count": 4
+            "item": "minecraft:orange_dye",
+            "count": 2
           }
         ],
         "tool": {

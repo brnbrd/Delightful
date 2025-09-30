@@ -18,16 +18,15 @@ public class Nutrition {
 		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 4800, 0), 1F)
 		.effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 600, 0), 1F).build();
 	public static final FoodProperties ROCK_CANDY = (new FoodProperties.Builder())
-		.nutrition(4).saturationMod(0.2F)
-		.fast()
-		.effect(() -> new MobEffectInstance(NeapolitanCompat.getSugarRush(), 200, 0), 1F).build();
+		.nutrition(4).saturationMod(0.5F)
+		.effect(() -> new MobEffectInstance(NeapolitanCompat.getSugarRush(), 600, 1), 0.7F).build();
 	public static final FoodProperties MARSHMALLOW_STICK = (new FoodProperties.Builder())
 		.nutrition(3).saturationMod(0.35F)
-		.effect(() -> new MobEffectInstance(NeapolitanCompat.getSugarRush(), 200, 0), 1F).build();
+		.effect(() -> new MobEffectInstance(NeapolitanCompat.getSugarRush(), 300, 0), 1F).build();
 	public static final FoodProperties COOKED_MARSHMALLOW_STICK = (new FoodProperties.Builder())
 		.nutrition(5).saturationMod(0.35F)
-		.effect(() -> new MobEffectInstance(NeapolitanCompat.getSugarRush(), 300, 0), 1F)
-		.effect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 0), 1F).build();
+		.effect(() -> new MobEffectInstance(NeapolitanCompat.getSugarRush(), 600, 0), 1F)
+		.effect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, 300, 0), 1F).build();
 	public static final FoodProperties SMORE = (new FoodProperties.Builder())
 		.nutrition(8).saturationMod(0.4F)
 		.effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 2400, 0), 1F)
@@ -149,7 +148,7 @@ public class Nutrition {
 		.effect(() -> new MobEffectInstance(TeaCompat.getCaffeinated().get(), 600, 0), 1F).build();
 	public static final FoodProperties AZALEA_TEA = (new FoodProperties.Builder()).alwaysEat()
 		.effect(() -> new MobEffectInstance(MobEffects.BLINDNESS, 60, 0), 1F)
-		.effect(() -> new MobEffectInstance(MobEffects.LEVITATION, 100, 1), 1F)
+		.effect(() -> new MobEffectInstance(MobEffects.LEVITATION, 60, 1), 1F)
 		.effect(() -> new MobEffectInstance(TeaCompat.getYellowTeaEffect().get(), 4800, 1), 1F).build();
 	public static final FoodProperties MATCHA_LATTE = (new FoodProperties.Builder()).alwaysEat()
 		.nutrition(6).saturationMod(0.5F)
@@ -168,7 +167,7 @@ public class Nutrition {
 		.effect(() -> new MobEffectInstance(ExquisitoCompat.getResonance().get(), 500, 0), 1F)
 		.effect(() -> new MobEffectInstance(BrewinChewinCompat.getTipsy().get(), 2400, 0), 1F)
 		.effect(() -> BrewinChewinCompat.getIntoxicationOrHalfBadLuck(1800, 0), 1F)
-		.effect(() -> new MobEffectInstance(MobEffects.BLINDNESS, 100, 0), 1F).build();
+		.effect(() -> new MobEffectInstance(MobEffects.BLINDNESS, 60, 0), 1F).build();
 	public static final FoodProperties MATCHA_ICE_CREAM = (new FoodProperties.Builder())
 		.nutrition(6).saturationMod(0.5F)
 		.effect(() -> new MobEffectInstance(TeaCompat.getGreenTeaEffect().get(), 500, 1), 1F)
@@ -194,16 +193,18 @@ public class Nutrition {
 		.nutrition(2).saturationMod(0.1F).fast()
 		.effect(() -> new MobEffectInstance(CosmopolitanCompat.getTracer().get(), 300, 0), 1F).build();
 	public static final FoodProperties BAKLAVA_SLICE = (new FoodProperties.Builder())
-		.nutrition(5).saturationMod(0.4F)
+		.nutrition(5).saturationMod(0.6F)
 		.fast()
 		.effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 600, 0, false, false), 1F).build();
 	public static final FoodProperties SALMONBERRY_GUMMY = (new FoodProperties.Builder())
 		.nutrition(2).saturationMod(0F).alwaysEat()
-		.effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 400, 0), 1F).build();
+		.effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 600, 0), 1F).build();
 	public static final FoodProperties MATCHA_GUMMY = (new FoodProperties.Builder())
 		.nutrition(2).saturationMod(0F).alwaysEat()
 		.effect(() -> new MobEffectInstance(TeaCompat.getGreenTeaEffect().get(), 100, 2), 1F).build();
 	public static final FoodProperties CANTALOUPE_GUMMY = (new FoodProperties.Builder())
 		.nutrition(2).saturationMod(0F).alwaysEat()
-		.effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 400, 3), 1F).build();
+		.effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 200, 3), 1F)
+		.effect(() -> new MobEffectInstance(MobEffects.BLINDNESS, 100, 0), 1F)
+		.build();
 }

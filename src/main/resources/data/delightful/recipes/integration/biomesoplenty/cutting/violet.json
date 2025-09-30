@@ -5,20 +5,20 @@
       "conditions": [
         {
           "type": "forge:item_exists",
-          "item": "habitat:tall_purple_anthurium"
+          "item": "biomesoplenty:violet"
         }
       ],
       "recipe": {
         "type": "farmersdelight:cutting",
         "ingredients": [
           {
-            "item": "habitat:tall_purple_anthurium"
+            "item": "biomesoplenty:violet"
           }
         ],
         "result": [
           {
             "item": "minecraft:purple_dye",
-            "count": 4
+            "count": 2
           }
         ],
         "tool": {

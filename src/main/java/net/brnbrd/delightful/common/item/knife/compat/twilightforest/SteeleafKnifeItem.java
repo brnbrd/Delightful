@@ -26,7 +26,7 @@ public class SteeleafKnifeItem extends DKnifeItem {
 
 	@Override
 	public Modid[] getConflicts() {
-		return new Modid[]{Modid.TFD};
+		return new Modid[]{Modid.TFD, Modid.DUNG};
 	}
 
 	@Override

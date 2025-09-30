@@ -1,0 +1,76 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "sob:echo_rock_candy"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "dungeonsdelight"
+        }
+      ],
+      "recipe": {
+        "type": "dungeonsdelight:monster_cooking",
+        "cookingtime": 200,
+        "experience": 0.35,
+        "ingredients": [
+          {
+            "item": "minecraft:echo_shard"
+          },
+          {
+            "item": "minecraft:sugar"
+          },
+          {
+            "tag": "forge:berries"
+          }
+        ],
+        "recipe_book_tab": "misc",
+        "result": {
+          "item": "sob:echo_rock_candy",
+          "count": 2
+        }
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "sob:echo_rock_candy"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:mod_loaded",
+            "modid": "dungeonsdelight"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:stick"
+        },
+        "cookingtime": 200,
+        "experience": 0.35,
+        "ingredients": [
+          {
+            "item": "minecraft:echo_shard"
+          },
+          {
+            "item": "minecraft:sugar"
+          },
+          {
+            "tag": "forge:berries"
+          }
+        ],
+        "result": {
+          "item": "sob:echo_rock_candy",
+          "count": 2
+        }
+      }
+    }
+  ]
+}

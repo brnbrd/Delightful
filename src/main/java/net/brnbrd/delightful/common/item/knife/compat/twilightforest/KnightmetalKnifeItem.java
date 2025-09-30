@@ -23,7 +23,7 @@ public class KnightmetalKnifeItem extends DKnifeItem {
 
 	@Override
 	public Modid[] getConflicts() {
-		return new Modid[]{Modid.TFD};
+		return new Modid[]{Modid.TFD, Modid.DUNG};
 	}
 
 	private void onHurt(LivingHurtEvent e) {

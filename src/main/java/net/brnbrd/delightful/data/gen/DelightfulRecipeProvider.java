@@ -377,10 +377,11 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.unlockedBy("has_cantaloupe_slice", has(DelightfulItemTags.FRUITS_CANTALOUPE)),
 			"food/cantaloupe_bread", finished, enabled(DelightfulItems.CANTALOUPE_BREAD), enabled(DelightfulItems.CANTALOUPE));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(DelightfulItems.ROCK_CANDY.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F, Items.STICK)
-			.addIngredient(Ingredient.of(DelightfulItemTags.GEMS_ROSE_QUARTZ), 2)
+			.addIngredient(DelightfulItemTags.GEMS_ROSE_QUARTZ)
 			.addIngredient(Items.SUGAR)
+			.addIngredient(ForgeTags.BERRIES)
 			.unlockedBy("has_rose_quartz", has(DelightfulItemTags.GEMS_ROSE_QUARTZ)),
-			"food/cooking/rock_candy", finished, enabled(DelightfulItems.ROCK_CANDY), not(tagEmpty(DelightfulItemTags.GEMS_ROSE_QUARTZ)));
+			"food/cooking/rock_candy", finished, enabled(DelightfulItems.ROCK_CANDY), not(tagEmpty(DelightfulItemTags.GEMS_ROSE_QUARTZ)), not(modLoaded(Modid.DUNG.get())));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
 			DelightfulItems.ANIMAL_OIL_BOTTLE.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
 			.addIngredient(DelightfulItems.ANIMAL_FAT.get(), 3)

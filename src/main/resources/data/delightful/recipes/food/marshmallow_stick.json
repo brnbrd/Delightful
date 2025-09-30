@@ -37,13 +37,13 @@
             },
             {
               "tag": "forge:slimeballs"
+            },
+            {
+              "tag": "forge:eggs"
             }
           ],
           {
             "item": "minecraft:sugar"
-          },
-          {
-            "tag": "forge:eggs"
           },
           {
             "item": "neapolitan:dried_vanilla_pods"
@@ -95,6 +95,9 @@
             },
             {
               "tag": "forge:slimeballs"
+            },
+            {
+              "tag": "forge:eggs"
             }
           ],
           {
@@ -102,9 +105,6 @@
           },
           {
             "item": "minecraft:sugar"
-          },
-          {
-            "tag": "forge:eggs"
           }
         ],
         "recipe_book_tab": "misc",

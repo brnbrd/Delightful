@@ -103,7 +103,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.add(Items.ROTTEN_FLESH)
 			.addOptional(Modid.RL.rl("rotten_chunk"))
 			.addOptional(Modid.UG.rl("rotten_blisterberry"));
-		this.tag(DelightfulItemTags.GIVES_SPITE)
+		this.tag(DelightfulItemTags.SPITE)
 			.addOptional(Modid.ECO.rl("prickly_pear"))
 			.addOptional(Modid.ECO.rl("cooked_prickly_pear"));
 		this.tag(DelightfulItemTags.ROSE)
@@ -112,6 +112,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.BWG.rl("osiria_rose"))
 			.addOptional(Modid.WS.rl("red_rose"))
 			.addOptional(Modid.WS.rl("red_rose_bush"))
+			.addOptional(Modid.BOP.rl("rose"))
 			.addOptional(Modid.FR.rl("rose_hips"))
 			.addOptional(Modid.SEED.rl("rosehip"))
 			.addOptional(Util.rl("sunflowerdelight", "rosebud"));

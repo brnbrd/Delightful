@@ -16,7 +16,15 @@
 - Added recipe to craft a Mini Melon from 4 Melon Slices
 - Added recipe to craft a Cantaloupe from 4 Cantaloupe Slices
 - Baklava now requires `#forge:cooked_nuts` rather than `#forge:nuts`
+- Salmonberry Gummy now provides Water Breathing for 0:30
 - Matcha Gummy now provides Regeneration III for 0:05
+- Cantaloupe Gummy now provides Resistance IV for 0:10 and Blindness I for 0:05
+- Renamed `Rock Candy` to `Rose Rock Candy` in English translations
+- Rock Candy now requires 1 `#forge:berries` and only 1 `#forge:gems/rose_quartz`
+  - Now provides Sugar Rush II (if [Neapolitan](https://www.curseforge.com/minecraft/mc-mods/neapolitan) is present) or Speed II for 0:30
+  - Now cooked in a Monster Pot in presence of [Dungeons Delight](https://www.curseforge.com/minecraft/mc-mods/dungeons-delight)
+- Marshmallow on a Stick now provides Sugar Rush I for 0:15
+- Roasted Marshmallow on a Stick now provides Sugar Rush I for 0:30 and Slow Falling I for 0:15
 
 ### Fixes
 - Fixed Chopped Clover recipe having an empty ingredient in some cases

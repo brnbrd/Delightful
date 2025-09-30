@@ -45,6 +45,13 @@
             "type": "forge:tag_empty",
             "tag": "forge:gems/rose_quartz"
           }
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:mod_loaded",
+            "modid": "dungeonsdelight"
+          }
         }
       ]
     }

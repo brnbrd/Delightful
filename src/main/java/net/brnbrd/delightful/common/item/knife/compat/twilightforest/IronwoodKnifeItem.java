@@ -10,9 +10,9 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
+import vectorwing.farmersdelight.common.registry.ModEnchantments;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import vectorwing.farmersdelight.common.registry.ModEnchantments;
 
 public class IronwoodKnifeItem extends DKnifeItem {
 	public IronwoodKnifeItem(Item.Properties properties) {
@@ -32,7 +32,7 @@ public class IronwoodKnifeItem extends DKnifeItem {
 
 	@Override
 	public Modid[] getConflicts() {
-		return new Modid[]{Modid.TFD};
+		return new Modid[]{Modid.TFD, Modid.DUNG};
 	}
 
 	@Override

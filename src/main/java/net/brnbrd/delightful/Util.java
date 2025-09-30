@@ -18,6 +18,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
@@ -34,6 +35,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.tags.ITagManager;
+import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 import java.util.function.Supplier;
@@ -231,6 +233,10 @@ public class Util {
 			effect(Util.rl(modid, name), backup) :
 			getBackup(backup)
 		);
+	}
+
+	public static void addEffects(LivingEntity entity, List<MobEffectInstance> effects) {
+		for (MobEffectInstance effect : effects) entity.addEffect(effect);
 	}
 
 	// Will not add if effect is null

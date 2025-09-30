@@ -4,6 +4,10 @@
     {
       "conditions": [
         {
+          "type": "forge:mod_loaded",
+          "modid": "dungeonsdelight"
+        },
+        {
           "type": "delightful:enabled",
           "value": "rock_candy"
         },
@@ -13,20 +17,10 @@
             "type": "forge:tag_empty",
             "tag": "forge:gems/rose_quartz"
           }
-        },
-        {
-          "type": "forge:not",
-          "value": {
-            "type": "forge:mod_loaded",
-            "modid": "dungeonsdelight"
-          }
         }
       ],
       "recipe": {
-        "type": "farmersdelight:cooking",
-        "container": {
-          "item": "minecraft:stick"
-        },
+        "type": "dungeonsdelight:monster_cooking",
         "cookingtime": 200,
         "experience": 0.35,
         "ingredients": [
@@ -40,6 +34,7 @@
             "tag": "forge:berries"
           }
         ],
+        "recipe_book_tab": "misc",
         "result": {
           "item": "delightful:rock_candy"
         }

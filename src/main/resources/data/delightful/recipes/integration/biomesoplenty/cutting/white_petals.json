@@ -5,20 +5,20 @@
       "conditions": [
         {
           "type": "forge:item_exists",
-          "item": "habitat:tall_yellow_anthurium"
+          "item": "biomesoplenty:white_petals"
         }
       ],
       "recipe": {
         "type": "farmersdelight:cutting",
         "ingredients": [
           {
-            "item": "habitat:tall_yellow_anthurium"
+            "item": "biomesoplenty:white_petals"
           }
         ],
         "result": [
           {
-            "item": "minecraft:yellow_dye",
-            "count": 4
+            "item": "minecraft:white_dye",
+            "count": 2
           }
         ],
         "tool": {

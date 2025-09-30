@@ -1,4 +1,4 @@
-// 1.20.1	2025-09-19T02:54:26.525964	delightful
+// 1.20.1	2025-09-30T09:27:50.815996	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -31,12 +31,12 @@ ed18beedb5068fe9f48327153c678096971fcd24 data/deep_aether/tags/items/stratus_smi
 6c44caac9f1c6b7419020d539d40046963a51ad9 data/delightful/tags/items/cooked_venison_chop_compat.json
 ae718511234f1a47f26d2f294e4d17f33374a95d data/delightful/tags/items/cooked_venison_compat.json
 c635f7a0507d48b606bd3d26bfe43ade5cfe05ee data/delightful/tags/items/fire_knives.json
-d53bd21229e9bf9cd03b3c3dea2ebbb08dfede36 data/delightful/tags/items/gives_spite.json
 25157ad740de48c4baa7d586db2ff57f50fe0a05 data/delightful/tags/items/quartz_knife.json
 2ff5cfe0c5823c3c18040d2127a488836e4c4908 data/delightful/tags/items/raw_venison_chop_compat.json
 6c2f8fbf4dd74017f049b2ef88a10e285aae2c0c data/delightful/tags/items/raw_venison_compat.json
-ecb8672e8b5f40aba4aec448f68ec7f372413f91 data/delightful/tags/items/rose.json
+8bb3cfb117f353b46f4b008ba937e4d226f599c2 data/delightful/tags/items/rose.json
 8a40f7dd6d54c3af598722c99d0c864729ea8dd8 data/delightful/tags/items/rotten.json
+d53bd21229e9bf9cd03b3c3dea2ebbb08dfede36 data/delightful/tags/items/spite.json
 24a3a46496486a8baeb7bd4c1e81c51f14776a15 data/farmersdelight/tags/items/barks.json
 f2edde09d8cbec9661b025fd8d29aa93cb711371 data/farmersdelight/tags/items/cabbage_roll_ingredients.json
 64a54c43e2fc2293d7ba623845ea037bf7b593b8 data/farmersdelight/tags/items/cabinets.json

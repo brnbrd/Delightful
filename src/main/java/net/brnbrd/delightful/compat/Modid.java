@@ -53,6 +53,7 @@ public enum Modid {
 	DA("deep_aether"),
 	DD("deeperdarker"),
 	DTM("dropthemeat"),
+	DUNG("dungeonsdelight"),
 	EE("endergetic"),
 	ECO("ecologics"),
 	EIO("enderio"),

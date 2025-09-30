@@ -24,6 +24,13 @@
             "type": "forge:mod_loaded",
             "modid": "twilightdelight"
           }
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:mod_loaded",
+            "modid": "dungeonsdelight"
+          }
         }
       ],
       "recipe": {

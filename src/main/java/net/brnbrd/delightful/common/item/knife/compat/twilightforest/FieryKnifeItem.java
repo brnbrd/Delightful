@@ -12,8 +12,8 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
-import org.jetbrains.annotations.NotNull;
 import java.util.List;
+import org.jetbrains.annotations.NotNull;
 
 public class FieryKnifeItem extends DKnifeItem {
 	public FieryKnifeItem(Properties properties) {
@@ -34,7 +34,7 @@ public class FieryKnifeItem extends DKnifeItem {
 
 	@Override
 	public Modid[] getConflicts() {
-		return new Modid[]{Modid.TFD};
+		return new Modid[]{Modid.TFD, Modid.DUNG};
 	}
 
 	@Override

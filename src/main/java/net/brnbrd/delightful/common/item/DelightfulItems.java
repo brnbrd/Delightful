@@ -172,11 +172,11 @@ public class DelightfulItems {
 	public static final RegistryObject<Item> DELUXE_CHEESEBURGER = registerConsumable("deluxe_cheeseburger", Nutrition.DELUXE_CHEESEBURGER, null, true, false);
 	public static final RegistryObject<Item> CHUNKWICH = registerCompatFood("chunkwich", Nutrition.CHUNKWICH, true, Modid.RL);
 	public static final RegistryObject<Item> ROCK_CANDY = registerItem("rock_candy",
-		() -> new RockCandyItem((new Item.Properties()).food(Nutrition.ROCK_CANDY).craftRemainder(Items.STICK)));
+		() -> new RockCandyItem((new Item.Properties()).food(Nutrition.ROCK_CANDY).stacksTo(16).craftRemainder(Items.STICK)));
 	public static final RegistryObject<Item> MARSHMALLOW_STICK = registerItem("marshmallow_stick",
-		() -> new MarshmallowStickItem((new Item.Properties()).food(Nutrition.MARSHMALLOW_STICK), true));
+		() -> new MarshmallowStickItem((new Item.Properties()).food(Nutrition.MARSHMALLOW_STICK).stacksTo(16).craftRemainder(Items.STICK), true));
 	public static final RegistryObject<Item> COOKED_MARSHMALLOW_STICK = registerItem("cooked_marshmallow_stick",
-		() -> new MarshmallowStickItem((new Item.Properties()).food(Nutrition.COOKED_MARSHMALLOW_STICK).craftRemainder(Items.STICK), true));
+		() -> new MarshmallowStickItem((new Item.Properties()).food(Nutrition.COOKED_MARSHMALLOW_STICK).stacksTo(16).craftRemainder(Items.STICK), true));
 	public static final RegistryObject<Item> SMORE = registerConsumable("smore", Nutrition.SMORE, null, true, false);
 	public static final RegistryObject<Item> CRAB_RANGOON = registerItem("crab_rangoon",
 		() -> new CrabRangoonItem(new Item.Properties().food(Nutrition.CRAB_RANGOON), true));

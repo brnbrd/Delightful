@@ -1,0 +1,35 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "malum:soul_stained_steel_knife"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "malum:soul_stained_steel_ingot"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "X",
+          "#"
+        ],
+        "key": {
+          "#": {
+            "tag": "forge:rods/wooden"
+          },
+          "X": {
+            "item": "malum:soul_stained_steel_ingot"
+          }
+        },
+        "result": {
+          "item": "malum:soul_stained_steel_knife"
+        }
+      }
+    }
+  ]
+}
