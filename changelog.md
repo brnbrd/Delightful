@@ -22,6 +22,7 @@
 - Renamed `Rock Candy` to `Rose Rock Candy` in English translations
 - Rock Candy now requires 1 `#forge:berries` and only 1 `#forge:gems/rose_quartz`
   - Now provides Sugar Rush II (if [Neapolitan](https://www.curseforge.com/minecraft/mc-mods/neapolitan) is present) or Speed II for 0:30
+  - Can now be fed to tamed animals
   - Now cooked in a Monster Pot in presence of [Dungeons Delight](https://www.curseforge.com/minecraft/mc-mods/dungeons-delight)
 - Marshmallow on a Stick now provides Sugar Rush I for 0:15
 - Roasted Marshmallow on a Stick now provides Sugar Rush I for 0:30 and Slow Falling I for 0:15
@@ -30,6 +31,9 @@
 - Fixed Chopped Clover recipe having an empty ingredient in some cases
 - Fixed Chevon loot modifier to only apply on death (closes [#141](https://github.com/brnbrd/Delightful/issues/141))
 - Adjusted saturation values of soup Cups to be consistent with [Miner's Delight +](https://www.curseforge.com/minecraft/mc-mods/miners-delight-plus)
+
+### Coaster models for [Brewin' and Chewin'](https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin)
+- Added some models for [Windswept!](https://www.curseforge.com/minecraft/mc-mods/windsweptmod)
 
 
 ## 3.7.6

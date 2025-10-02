@@ -1,5 +1,6 @@
 package net.brnbrd.delightful.data.gen;
 
+import com.google.common.collect.Lists;
 import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.block.DelightfulBlocks;
@@ -42,7 +43,6 @@ import vectorwing.farmersdelight.common.tag.ForgeTags;
 import vectorwing.farmersdelight.data.builder.CookingPotRecipeBuilder;
 import vectorwing.farmersdelight.data.builder.CuttingBoardRecipeBuilder;
 import vectorwing.farmersdelight.data.recipe.CookingRecipes;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
@@ -915,7 +915,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			}
 			Modid[] knifeMods = knife.getModid();
 			if (knifeMods.length > 0) {
-			List<String> dependencies = new ArrayList<>(Arrays.stream(knifeMods).map(Modid::get).toList());
+			final List<String> dependencies = Lists.newArrayList(Arrays.stream(knifeMods).map(Modid::get).toList());
 			dependencies.remove(FarmersDelight.MODID);
 			if (!dependencies.isEmpty()) {
 			conds = ArrayUtils.addAll(conds, dependencies.stream()

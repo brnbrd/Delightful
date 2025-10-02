@@ -216,6 +216,7 @@
   "tooltip.delightful.furnace_fuel_burn_time": "燃烧时间",
   "tooltip.delightful.placeable": "可放置",
   "tooltip.delightful.requires_empty_tag": "所需标签为空：",
+  "tooltip.delightful.rose_rock_candy.when_feeding": "When fed to a tamed animal:",
   "tooltip.delightful.sneak_right": "潜行并右键以使用：",
   "tooltip.jade.age": "生长阶段：%s",
   "tooltip.requires_modid": "需安装模组：",

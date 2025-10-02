@@ -216,6 +216,7 @@
   "tooltip.delightful.furnace_fuel_burn_time": "секунд горения",
   "tooltip.delightful.placeable": "Размещаемый",
   "tooltip.delightful.requires_empty_tag": "Требуется пустой тег:",
+  "tooltip.delightful.rose_rock_candy.when_feeding": "When fed to a tamed animal:",
   "tooltip.delightful.sneak_right": "Shift с ПКМ для:",
   "tooltip.jade.age": "Возраст: %s",
   "tooltip.requires_modid": "Требуется ID мода:",

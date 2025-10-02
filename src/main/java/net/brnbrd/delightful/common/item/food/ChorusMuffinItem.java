@@ -20,11 +20,11 @@ public class ChorusMuffinItem extends CompatConsumableItem {
 
 	@SuppressWarnings("NoTranslation")
 	@Override
-	public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> comps, @NotNull TooltipFlag pIsAdvanced) {
+	public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> comps, @NotNull TooltipFlag isAdvanced) {
 		if (this.enabled()) {
 			comps.add(Component.translatable("lore.unusualend.clear_infection").withStyle(ChatFormatting.BLUE));
 		}
-		super.appendHoverText(stack, level, comps, pIsAdvanced);
+		super.appendHoverText(stack, level, comps, isAdvanced);
 	}
 
 	@Override

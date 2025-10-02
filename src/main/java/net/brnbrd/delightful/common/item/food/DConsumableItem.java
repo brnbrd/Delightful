@@ -21,8 +21,8 @@ public class DConsumableItem extends ConsumableItem implements IConfigured {
 	}
 
 	@Override
-	public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> comps, @NotNull TooltipFlag pIsAdvanced) {
+	public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> comps, @NotNull TooltipFlag isAdvanced) {
 		this.enabledText(comps);
-		super.appendHoverText(stack, level, comps, pIsAdvanced);
+		super.appendHoverText(stack, level, comps, isAdvanced);
 	}
 }

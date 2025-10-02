@@ -14,6 +14,7 @@ import net.minecraftforge.common.loot.IGlobalLootModifier;
 import net.minecraftforge.common.loot.LootModifier;
 import java.util.ArrayList;
 import java.util.function.Supplier;
+import org.apache.commons.compress.utils.Lists;
 import org.jetbrains.annotations.NotNull;
 
 public class ReplaceLootModifier extends LootModifier {
@@ -43,8 +44,7 @@ public class ReplaceLootModifier extends LootModifier {
 			final Item removed = Util.item(this.removedItem);
 			final Item added = Util.item(this.addedItem);
 			if (removed != null && added != null) {
-				final ArrayList<ItemStack> newLoot = new ArrayList<>();
-
+				final ArrayList<ItemStack> newLoot = Lists.newArrayList();
 				generatedLoot.forEach((item) -> {
 					if (item.is(removed)) {
 						ItemStack replacement = new ItemStack(added, item.getCount());

@@ -18,6 +18,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.registries.RegistryObject;
+import org.apache.commons.compress.utils.Lists;
 import vectorwing.farmersdelight.common.utility.TextUtils;
 import java.util.ArrayList;
 import java.util.List;
@@ -86,7 +87,7 @@ public class JEIPlugin implements IModPlugin {
 		}
 
 		// Hide fluids
-		final List<FluidStack> hiddenFluids = new ArrayList<>();
+		final List<FluidStack> hiddenFluids = Lists.newArrayList();
 		final boolean farmersRespiteLoaded = Modid.FR.loaded();
 		if (!farmersRespiteLoaded) {
 			hiddenFluids.addAll(List.of(

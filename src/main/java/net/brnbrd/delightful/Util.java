@@ -1,5 +1,6 @@
 package net.brnbrd.delightful;
 
+import com.mojang.datafixers.util.Pair;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.brnbrd.delightful.common.DelightfulConfig;
 import net.brnbrd.delightful.common.item.DelightfulItems;
@@ -18,11 +19,11 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -235,10 +236,6 @@ public class Util {
 		);
 	}
 
-	public static void addEffects(LivingEntity entity, List<MobEffectInstance> effects) {
-		for (MobEffectInstance effect : effects) entity.addEffect(effect);
-	}
-
 	// Will not add if effect is null
 	public static void addEffect(LivingEntity entity, @Nullable MobEffect effect, int duration, int amp) {
 		if (effect != null) entity.addEffect(new MobEffectInstance(effect, duration, amp));
@@ -247,6 +244,18 @@ public class Util {
 	public static void addEffect(LivingEntity entity, String modid, String name, int duration, int amp, MobEffect... backup) {
 		MobEffect me = effect(modid, name, backup);
 		if (me != null) addEffect(entity, me, duration, amp);
+	}
+
+	public static void addEffects(@NotNull final LivingEntity entity, @NotNull List<MobEffectInstance> effects) {
+		for (MobEffectInstance effect : effects) entity.addEffect(new MobEffectInstance(effect));
+	}
+
+	public static List<MobEffectInstance> getFoodEffects(@NotNull final FoodProperties food) {
+		return food.getEffects().stream().map(Pair::getFirst).map(MobEffectInstance::new).toList();
+	}
+
+	public static void addFoodEffects(@NotNull final LivingEntity entity, @NotNull final FoodProperties food) {
+		addEffects(entity, getFoodEffects(food));
 	}
 
 	public static ItemStack getStack(@Nullable Supplier<@Nullable Item> r, int... count) { // Only considers first vararg entry

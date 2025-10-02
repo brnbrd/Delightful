@@ -171,6 +171,7 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		addTooltip("sneak_right", "Sneak R-Click for:");
 		addTooltip("furnace_fuel_burn_time", "s of burn time");
 		addTooltip("requires_empty_tag", "Requires empty tag:");
+		addTooltip("rose_rock_candy.when_feeding", "When fed to a tamed animal:");
 
 		// Tooltips not specific to Delightful
 		add("tooltip.requires_tag", "Requires tag:");
