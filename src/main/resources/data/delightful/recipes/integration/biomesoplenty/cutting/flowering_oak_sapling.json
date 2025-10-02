@@ -1,0 +1,38 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "biomesoplenty:flowering_oak_sapling"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "acorn"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "biomesoplenty:flowering_oak_sapling"
+          }
+        ],
+        "result": [
+          {
+            "item": "minecraft:stick"
+          },
+          {
+            "chance": 0.25,
+            "item": "delightful:acorn"
+          }
+        ],
+        "tool": {
+          "type": "farmersdelight:tool_action",
+          "action": "axe_dig"
+        }
+      }
+    }
+  ]
+}
