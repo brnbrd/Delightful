@@ -299,6 +299,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_BLOOD_ORANGE)
 			.addTag(DelightfulItemTags.FRUITS_DRAGON_FRUIT)
 			.addOptionalTag(DelightfulItemTags.FRUITS_POMEGRANATE.location())
+			.addOptionalTag(DelightfulItemTags.FRUITS_LUCUMA.location())
 			.addOptionalTag(DelightfulItemTags.FRUITS_PASSION_FRUIT.location())
 			.addOptionalTag(DelightfulItemTags.FRUITS_ORANGE.location())
 			.addOptionalTag(DelightfulItemTags.FRUITS_MANDARIN.location())

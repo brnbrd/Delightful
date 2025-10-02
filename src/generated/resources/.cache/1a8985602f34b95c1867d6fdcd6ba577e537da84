@@ -1,4 +1,4 @@
-// 1.20.1	2025-09-30T09:27:50.815996	delightful
+// 1.20.1	2025-10-02T12:19:05.7678306	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -135,7 +135,7 @@ e63f4c3f380a4420a369bd6f1f2ccae1eda87135 data/forge/tags/items/fruits/prickly_pe
 bd88975064f14f57a6a7a33a5a2816ef2766c00f data/forge/tags/items/fruits/salmonberries.json
 d3ac5caff21a72e9cde16be715f916d249db85ef data/forge/tags/items/fruits/sourceberry.json
 9ab948bb6902859807e5970ba7e80a1d3b6e459b data/forge/tags/items/fruits/squeezable.json
-b8551950f7425494cdd5b8fa2b87cc2c16aaaa2d data/forge/tags/items/fruits/sweet.json
+f2b76b817854bec22ce0a8b310338243db3e6de0 data/forge/tags/items/fruits/sweet.json
 65a948972be54d0dc9ce5ee6eb59a29341fd6ec0 data/forge/tags/items/fruits/sweet_berries.json
 ef58bcce9f0d3d6e68fdc0afe94d732282c43dba data/forge/tags/items/fruits/torchberries.json
 4fbda205b7c5ed3a2d9763485710d97ba308840f data/forge/tags/items/fruits/whitecurrant.json

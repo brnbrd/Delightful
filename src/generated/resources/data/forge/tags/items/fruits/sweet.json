@@ -25,6 +25,10 @@
       "required": false
     },
     {
+      "id": "#forge:fruits/lucuma",
+      "required": false
+    },
+    {
       "id": "#forge:fruits/passion_fruit",
       "required": false
     },
