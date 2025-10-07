@@ -124,6 +124,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.VEGETABLES_CACTUS)
 			.addTag(DelightfulItemTags.CROPS_CACTUS)
 			.addOptionalTag(Modid.LOADER.rl("vegetables/cactus_paddle"));
+
 		// Tomato
 		this.tag(ForgeTags.CROPS_TOMATO).addOptional(Modid.SAS.rl("tomato_slices"));
 		this.tag(ForgeTags.VEGETABLES_TOMATO).addTag(ForgeTags.CROPS_TOMATO);
