@@ -200,7 +200,7 @@ public class JEIPlugin implements IModPlugin {
 	private void hide(List<ItemStack> hiddenList, Modid modid, String name, Modid... conflicts) {
 		if (
 			modid.loaded() &&
-			Mods.loaded(Strategy.OR, conflicts)
+			Mods.loaded(Mods.Strategy.OR, conflicts)
 		) {
 			Item found = modid.item(name);
 			if (found != null) {
@@ -212,7 +212,7 @@ public class JEIPlugin implements IModPlugin {
 	private void hideAnd(List<ItemStack> hiddenList, Modid modid, String name, Modid... conflicts) {
 		if (
 			modid.loaded() &&
-			Mods.loaded(Strategy.AND, conflicts)
+			Mods.loaded(Mods.Strategy.AND, conflicts)
 		) {
 			Item found = modid.item(name);
 			if (found != null) {

@@ -169,15 +169,15 @@ public class Nutrition {
 		.effect(() -> BrewinChewinCompat.getIntoxicationOrHalfBadLuck(1800, 0), 1F)
 		.effect(() -> new MobEffectInstance(MobEffects.BLINDNESS, 60, 0), 1F).build();
 	public static final FoodProperties MATCHA_ICE_CREAM = (new FoodProperties.Builder())
-		.nutrition(6).saturationMod(0.5F)
+		.nutrition(6).saturationMod(0.3F)
 		.effect(() -> new MobEffectInstance(TeaCompat.getGreenTeaEffect().get(), 500, 1), 1F)
 		.effect(() -> new MobEffectInstance(TeaCompat.getCaffeinated().get(), 400, 0), 1F).build();
 	public static final FoodProperties 	MATCHA_MILKSHAKE = (new FoodProperties.Builder())
-		.nutrition(2).saturationMod(1.6F).alwaysEat()
+		.nutrition(2).saturationMod(1.5F).alwaysEat()
 		.effect(() -> new MobEffectInstance(TeaCompat.getGreenTeaEffect().get(), 200, 1), 1F)
 		.effect(() -> new MobEffectInstance(TeaCompat.getCaffeinated().get(), 300, 0), 1F).build();
 	public static final FoodProperties SALMONBERRY_ICE_CREAM = (new FoodProperties.Builder())
-		.nutrition(6).saturationMod(0.4F)
+		.nutrition(6).saturationMod(0.3F)
 		.effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 1200), 1F).build();
 	public static final FoodProperties SALMONBERRY_MILKSHAKE = (new FoodProperties.Builder())
 		.nutrition(2).saturationMod(1.5F).alwaysEat()

@@ -1,0 +1,31 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "twigs:pebble"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "minecraft:cobblestone"
+          }
+        ],
+        "tool": {
+          "type": "farmersdelight:tool_action",
+          "action": "pickaxe_dig"
+        },
+        "result": [
+          {
+            "item": "twigs:pebble",
+            "count": 4
+          }
+        ]
+      }
+    }
+  ]
+}

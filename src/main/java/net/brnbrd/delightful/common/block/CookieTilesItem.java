@@ -2,7 +2,7 @@ package net.brnbrd.delightful.common.block;
 
 import net.brnbrd.delightful.common.item.CompatBlockItem;
 import net.brnbrd.delightful.compat.Modid;
-import net.brnbrd.delightful.compat.Strategy;
+import net.brnbrd.delightful.compat.Mods;
 import net.minecraft.world.level.block.Block;
 
 public class CookieTilesItem extends CompatBlockItem {
@@ -15,7 +15,7 @@ public class CookieTilesItem extends CompatBlockItem {
 	}
 
 	@Override
-	public Strategy getStrategy() {
-		return Strategy.AND;
+	public Mods.Strategy getStrategy() {
+		return Mods.Strategy.AND;
 	}
 }

@@ -1,0 +1,52 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "neapolitan:neapolitan_ice_cream"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "neapolitan:vanilla_ice_cream"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:chocolate"
+          }
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:fruits/strawberry"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "neapolitan:vanilla_ice_cream"
+          },
+          {
+            "item": "neapolitan:chocolate_bar"
+          },
+          {
+            "tag": "forge:fruits/strawberry"
+          },
+          {
+            "item": "minecraft:bowl"
+          }
+        ],
+        "result": {
+          "item": "neapolitan:neapolitan_ice_cream"
+        }
+      }
+    }
+  ]
+}

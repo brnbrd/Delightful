@@ -2,11 +2,43 @@
   "values": [
     "#forge:raw_fishes/squid",
     {
-      "id": "#stardew_fishing:starts_minigame",
+      "id": "stardew_fishing:goliath_grouper",
       "required": false
     },
     {
-      "id": "environmental:koi",
+      "id": "stardew_fishing:vampire_payara",
+      "required": false
+    },
+    {
+      "id": "stardew_fishing:golden_snook",
+      "required": false
+    },
+    {
+      "id": "stardew_fishing:sabretoothed_tigerfish",
+      "required": false
+    },
+    {
+      "id": "stardew_fishing:chromatic_arapaima",
+      "required": false
+    },
+    {
+      "id": "stardew_fishing:cyclops_mahimahi",
+      "required": false
+    },
+    {
+      "id": "stardew_fishing:storm_tarpon",
+      "required": false
+    },
+    {
+      "id": "stardew_fishing:blazing_oarfish",
+      "required": false
+    },
+    {
+      "id": "stardew_fishing:crystalline_snakehead",
+      "required": false
+    },
+    {
+      "id": "stardew_fishing:demon_gar",
       "required": false
     },
     {

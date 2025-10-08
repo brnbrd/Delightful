@@ -4,7 +4,6 @@ import joptsimple.internal.Strings;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.compat.Mods;
-import net.brnbrd.delightful.compat.Strategy;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import java.util.List;
@@ -38,7 +37,7 @@ public interface ICompat extends IConfigured {
 		return configured && isLoaded();
 	}
 
-	default Strategy getStrategy() {
-		return Strategy.OR;
+	default Mods.Strategy getStrategy() {
+		return Mods.Strategy.OR;
 	}
 }

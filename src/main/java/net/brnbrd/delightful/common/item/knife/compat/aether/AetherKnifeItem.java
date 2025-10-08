@@ -2,7 +2,7 @@ package net.brnbrd.delightful.common.item.knife.compat.aether;
 
 import net.brnbrd.delightful.common.item.knife.DKnifeItem;
 import net.brnbrd.delightful.compat.Modid;
-import net.brnbrd.delightful.compat.Strategy;
+import net.brnbrd.delightful.compat.Mods;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
@@ -20,8 +20,8 @@ public class AetherKnifeItem extends DKnifeItem {
 	}
 
 	@Override
-	public Strategy getStrategy() {
-		return Strategy.AND;
+	public Mods.Strategy getStrategy() {
+		return Mods.Strategy.AND;
 	}
 
 	@Override

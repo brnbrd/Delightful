@@ -39,4 +39,6 @@ public class Mods {
 	public static boolean loaded(@NotNull Modid... modids) {
 		return loaded(Strategy.AND, modids);
 	}
+
+	public enum Strategy { AND, OR }
 }

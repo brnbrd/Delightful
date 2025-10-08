@@ -1,4 +1,4 @@
-// 1.20.1	2025-10-02T12:19:05.7678306	delightful
+// 1.20.1	2025-10-08T12:13:28.0663038	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -179,7 +179,7 @@ fecd0addad0c8d2c1b829d5350c240452b0e3807 data/forge/tags/items/pumpkins.json
 18e01eda65d3e6c12efb395ba42802b672fd8fdd data/forge/tags/items/raw_crab.json
 e4bfec188fb63173110be9c4748fef5945689603 data/forge/tags/items/raw_crab_meat.json
 65540c326746380f0b29818f3507d94d7902ab98 data/forge/tags/items/raw_duck.json
-811b65f6a4c7c2d47571e26102d631d2d1412b72 data/forge/tags/items/raw_fishes.json
+39dea729b16d9e1b7dbd30474582a869a63a17b3 data/forge/tags/items/raw_fishes.json
 78fa002cb40688a9cc4c76ad69a916fe313aab70 data/forge/tags/items/raw_fishes/squid.json
 55dbce77fc249043b9a18cb523af6f0054890d73 data/forge/tags/items/raw_fishes/squid/tentacles.json
 b674043d5d31d5fb35d4b0eb555cd87fb7205aa6 data/forge/tags/items/raw_goat.json

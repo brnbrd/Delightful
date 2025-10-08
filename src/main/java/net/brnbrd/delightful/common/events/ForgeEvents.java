@@ -64,7 +64,7 @@ public class ForgeEvents {
 
 	@SubscribeEvent
 	void onWanderingTrader(WandererTradesEvent e) {
-		List<VillagerTrades.ItemListing> trades = e.getGenericTrades();
+		final List<VillagerTrades.ItemListing> trades = e.getGenericTrades();
 		if (Util.enabled(DelightfulItems.SALMONBERRIES) && Util.enabled(DelightfulItems.SALMONBERRY_PIPS)) {
 			trades.add((ent, r) -> new MerchantOffer(new ItemStack(Items.EMERALD, 2), Util.getStack(DelightfulItems.SALMONBERRY_PIPS), 5, 1, 1));
 		}

@@ -3,7 +3,6 @@ package net.brnbrd.delightful.common.item;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.compat.Mods;
-import net.brnbrd.delightful.compat.Strategy;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.tags.TagKey;
@@ -18,7 +17,7 @@ public interface IConfigured extends ItemLike {
 	}
 
 	default boolean hasConflict() { // Checks that any defined conflict is loaded
-		return this.getConflicts().length > 0 && Mods.loaded(Strategy.OR, this.getConflicts());
+		return this.getConflicts().length > 0 && Mods.loaded(Mods.Strategy.OR, this.getConflicts());
 	}
 
 	// Tag should be filled (for enabling)
