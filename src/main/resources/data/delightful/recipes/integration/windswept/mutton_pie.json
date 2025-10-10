@@ -1,0 +1,46 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "windswept:mutton_pie"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "mutton_pie_slice"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "#": {
+            "tag": "forge:grain/wheat"
+          },
+          "a": {
+            "tag": "forge:cooked_mutton"
+          },
+          "O": {
+            "item": "farmersdelight:pie_crust"
+          },
+          "x": {
+            "item": "minecraft:sugar"
+          },
+          "e": {
+            "tag": "forge:eggs"
+          }
+        },
+        "pattern": [
+          "###",
+          "axa",
+          "eOe"
+        ],
+        "result": {
+          "count": 1,
+          "item": "windswept:mutton_pie"
+        }
+      }
+    }
+  ]
+}

@@ -7,6 +7,8 @@
 - Sinigang now requires 1 Lime rather than any citrus fruit
   - Now provides Corrosion I for 0:30
 - Added Sinigang Cup (for [Miner's Delight +](https://www.curseforge.com/minecraft/mc-mods/miners-delight-plus))
+- Placeable Mutton Pie, added Slice of Mutton Pie (for [Windswept!](https://www.curseforge.com/minecraft/mc-mods/windsweptmod))
+  - Retexture of Mutton Pie available in `Delightful Overhauls` built-in resource pack
 - Matcha Latte can now be brewed in a Kettle with [Farmer's Respite](https://www.curseforge.com/minecraft/mc-mods/farmers-respite)
 - Ender Nectar is now upgraded from Matcha Latte
   - Will be fermented in a Keg with [Brewin' and Chewin'](https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin)

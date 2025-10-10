@@ -57,6 +57,7 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
 		this.pieBlock(DelightfulBlocks.CHORUS_PIE);
 		this.pieBlock(DelightfulBlocks.MULBERRY_PIE);
 		this.pieBlock(DelightfulBlocks.PASSION_FRUIT_TART);
+		this.pieBlock(DelightfulBlocks.MUTTON_PIE);
 		this.cabinet(DelightfulBlocks.BASALT_CABINET.get());
 		this.cabinet(DelightfulBlocks.QUARTZ_CABINET.get());
 		this.simpleBlock(DelightfulBlocks.SALMONBERRY_ICE_CREAM_BLOCK.get());

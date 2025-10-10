@@ -192,7 +192,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.FRUITS_KIWI).addOptional(Util.rl("hedgehog", "kiwi"));
 		this.tag(DelightfulItemTags.FRUITS_GREEN_APPLE).addOptional(Modid.BWG.rl(BWGCompat.green_apple));
 		this.tag(DelightfulItemTags.FRUITS_YUCCA)
-			.addOptional(Modid.AT.rl(AtmosphericCompat.yucca))
+			.addOptional(Modid.AT.rl(AtmosphericCompat.YUCCA))
 			.addOptional(Modid.BWG.rl(BWGCompat.yucca));
 		this.tag(DelightfulItemTags.FRUITS_BLUEBERRIES)
 			.addOptional(Modid.HH.rl("blueberries"))

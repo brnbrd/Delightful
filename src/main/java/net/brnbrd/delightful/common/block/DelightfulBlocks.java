@@ -109,6 +109,8 @@ public class DelightfulBlocks {
 		() -> new DPieBlock(DelightfulItems.MULBERRY_PIE_SLICE, Modid.UA.rl("mulberry_pie")));
 	public static final RegistryObject<DPieBlock> PASSION_FRUIT_TART = BLOCKS.register("passion_fruit_tart",
 		() -> new DPieBlock(DelightfulItems.PASSION_FRUIT_TART_SLICE, Modid.AT.rl("passion_fruit_tart")));
+	public static final RegistryObject<DPieBlock> MUTTON_PIE = BLOCKS.register("mutton_pie",
+		() -> new DPieBlock(DelightfulItems.MUTTON_PIE_SLICE, Modid.WS.rl("mutton_pie")));
 	public static final RegistryObject<Block> ACORN_SACK = BLOCKS.register("acorn_sack",
 		() -> new Block(SACK(MapColor.COLOR_BROWN)));
 	public static final RegistryObject<Block> SALMONBERRY_ICE_CREAM_BLOCK = BLOCKS.register("salmonberry_ice_cream_block",

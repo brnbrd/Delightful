@@ -70,64 +70,66 @@ public class DelightfulItems {
 			new CookieTilesItem(DelightfulBlocks.SOURCE_BERRY_COOKIE_TILE_WALL.get(), (new Item.Properties()), Modid.AN));
 
 	public static final RegistryObject<Item> MATCHA_ICE_CREAM_BLOCK = registerItem("matcha_ice_cream_block", () ->
-			new CompatBlockItem(DelightfulBlocks.MATCHA_ICE_CREAM_BLOCK.get(), (new Item.Properties()), Modid.N));
+		new CompatBlockItem(DelightfulBlocks.MATCHA_ICE_CREAM_BLOCK.get(), (new Item.Properties()), Modid.N));
 	public static final RegistryObject<Item> SALMONBERRY_ICE_CREAM_BLOCK = registerItem("salmonberry_ice_cream_block", () ->
-			new CompatBlockItem(DelightfulBlocks.SALMONBERRY_ICE_CREAM_BLOCK.get(), (new Item.Properties()), Modid.N));
+		new CompatBlockItem(DelightfulBlocks.SALMONBERRY_ICE_CREAM_BLOCK.get(), (new Item.Properties()), Modid.N));
 	public static final RegistryObject<Item> SOURCE_BERRY_ICE_CREAM_BLOCK = registerItem("source_berry_ice_cream_block", () ->
-			new SourceBerryIceCreamBlockItem(DelightfulBlocks.SOURCE_BERRY_ICE_CREAM_BLOCK.get(), (new Item.Properties())));
+		new SourceBerryIceCreamBlockItem(DelightfulBlocks.SOURCE_BERRY_ICE_CREAM_BLOCK.get(), (new Item.Properties())));
 
 	public static final RegistryObject<Item> MATCHA_ICE_CREAM = registerItem("matcha_ice_cream",
-			() -> new IceCreamItem((new Item.Properties()).food(Nutrition.MATCHA_ICE_CREAM)));
+		() -> new IceCreamItem((new Item.Properties()).food(Nutrition.MATCHA_ICE_CREAM)));
 	public static final RegistryObject<Item> SALMONBERRY_ICE_CREAM = registerItem("salmonberry_ice_cream",
-			() -> new IceCreamItem((new Item.Properties()).food(Nutrition.SALMONBERRY_ICE_CREAM)));
+		() -> new IceCreamItem((new Item.Properties()).food(Nutrition.SALMONBERRY_ICE_CREAM)));
 	public static final RegistryObject<Item> SOURCE_BERRY_ICE_CREAM = registerItem("source_berry_ice_cream",
-			() -> new SourceBerryIceCreamItem((new Item.Properties()).food(ArsNouveauCompat.SOURCE_BERRY_ICE_CREAM)));
+		() -> new SourceBerryIceCreamItem((new Item.Properties()).food(ArsNouveauCompat.SOURCE_BERRY_ICE_CREAM)));
 	public static final RegistryObject<Item> MATCHA_MILKSHAKE = registerItem("matcha_milkshake",
-			() -> new ShakeItem(new Item.Properties().food(Nutrition.MATCHA_MILKSHAKE)));
+		() -> new ShakeItem(new Item.Properties().food(Nutrition.MATCHA_MILKSHAKE)));
 	public static final RegistryObject<Item> SALMONBERRY_MILKSHAKE = registerItem("salmonberry_milkshake",
-			() -> new ShakeItem(new Item.Properties().food(Nutrition.SALMONBERRY_MILKSHAKE)));
+		() -> new ShakeItem(new Item.Properties().food(Nutrition.SALMONBERRY_MILKSHAKE)));
 	public static final RegistryObject<Item> SOURCE_BERRY_MILKSHAKE = registerItem("source_berry_milkshake",
-			() -> new SourceBerryShakeItem(new Item.Properties().food(ArsNouveauCompat.SOURCE_BERRY_MILKSHAKE)));
+		() -> new SourceBerryShakeItem(new Item.Properties().food(ArsNouveauCompat.SOURCE_BERRY_MILKSHAKE)));
 	public static final RegistryObject<Item> GREEN_TEA_LEAF = registerItem("green_tea_leaf", () -> new GreenTeaLeavesItem(new Item.Properties().food(Nutrition.GREEN_TEA_LEAF)));
 	public static final RegistryObject<Item> MATCHA = registerItem("matcha", () -> new MatchaItem(new Item.Properties()));
 	public static final RegistryObject<Item> SALMONBERRIES = registerFood("salmonberries", Nutrition.SALMONBERRIES);
 	public static final RegistryObject<Item> SALMONBERRY_PIPS = registerItem("salmonberry_pips",
-			() -> new ItemNameBlockItem(DelightfulBlocks.SALMONBERRY_BUSH.get(), ModItems.basicItem()));
+		() -> new ItemNameBlockItem(DelightfulBlocks.SALMONBERRY_BUSH.get(), ModItems.basicItem()));
 	public static final RegistryObject<Item> WILD_SALMONBERRIES = registerItem("wild_salmonberries",
-			() -> new BlockItem(DelightfulBlocks.WILD_SALMONBERRIES.get(), ModItems.basicItem()));
+		() -> new BlockItem(DelightfulBlocks.WILD_SALMONBERRIES.get(), ModItems.basicItem()));
 	public static final RegistryObject<Item> SALMONBERRY_PIE = registerItem("salmonberry_pie",
-			() -> new BlockItem(DelightfulBlocks.SALMONBERRY_PIE.get(), ModItems.basicItem()));
+		() -> new BlockItem(DelightfulBlocks.SALMONBERRY_PIE.get(), ModItems.basicItem()));
 	public static final RegistryObject<Item> SALMONBERRY_PIE_SLICE = registerItem("salmonberry_pie_slice",
-			() -> new DConsumableItem((new Item.Properties()).food(Nutrition.SALMONBERRY_PIE_SLICE), true, false));
+		() -> new DConsumableItem((new Item.Properties()).food(Nutrition.SALMONBERRY_PIE_SLICE), true, false));
 	public static final RegistryObject<Item> PUMPKIN_PIE_SLICE = registerItem("pumpkin_pie_slice",
-			() -> new PumpkinPieSliceItem((new Item.Properties()).food(FoodValues.PIE_SLICE)));
+		() -> new PumpkinPieSliceItem((new Item.Properties()).food(FoodValues.PIE_SLICE)));
 	public static final RegistryObject<Item> GLOOMGOURD_PIE_SLICE = registerCompatPieSlice("gloomgourd_pie",
-			UndergardenCompat.GLOOMGOURD_PIE_SLICE.get(), Modid.UG);
+		UndergardenCompat.GLOOMGOURD_PIE_SLICE.get(), Modid.UG);
 	public static final RegistryObject<Item> BLUEBERRY_PIE_SLICE = registerCompatPieSlice(BWGCompat.blueberry_pie,
-			FoodValues.PIE_SLICE, Modid.BWG);
+		FoodValues.PIE_SLICE, Modid.BWG);
 	public static final RegistryObject<Item> GREEN_APPLE_PIE_SLICE = registerCompatPieSlice(BWGCompat.green_apple_pie,
-			BWGCompat.GREEN_APPLE_PIE_SLICE.get(), Modid.BWG);
+		BWGCompat.GREEN_APPLE_PIE_SLICE.get(), Modid.BWG);
 	public static final RegistryObject<Item> MULBERRY_PIE_SLICE = registerCompatPieSlice(AquaticCompat.mulberry_pie,
-			AquaticCompat.MULBERRY_PIE_SLICE, Modid.UA);
-	public static final RegistryObject<Item> PASSION_FRUIT_TART_SLICE = registerCompatPieSlice(AtmosphericCompat.passion_fruit_tart,
-			AtmosphericCompat.PASSION_FRUIT_TART_SLICE, Modid.AT);
+		AquaticCompat.MULBERRY_PIE_SLICE, Modid.UA);
+	public static final RegistryObject<Item> PASSION_FRUIT_TART_SLICE = registerCompatPieSlice(AtmosphericCompat.PASSION_FRUIT_TART,
+		AtmosphericCompat.PASSION_FRUIT_TART_SLICE, Modid.AT);
+	public static final RegistryObject<Item> MUTTON_PIE_SLICE = registerCompatPieSlice(WindsweptCompat.MUTTON_PIE,
+		FoodValues.PIE_SLICE, Modid.WS);
 	public static final RegistryObject<Item> CHORUS_PIE_SLICE = registerCompatPieSlice(UnusualEndCompat.chorus_pie,
-			UnusualEndCompat.CHORUS_PIE_SLICE, Modid.UE);
+		UnusualEndCompat.CHORUS_PIE_SLICE, Modid.UE);
 	public static final RegistryObject<Item> CHORUS_MUFFIN = registerItem("chorus_muffin",
-			() -> new ChorusMuffinItem((new Item.Properties()).food(UnusualEndCompat.CHORUS_MUFFIN)));
+		() -> new ChorusMuffinItem((new Item.Properties()).food(UnusualEndCompat.CHORUS_MUFFIN)));
 	public static final RegistryObject<Item> SOURCE_BERRY_PIE_SLICE = registerItem("source_berry_pie_slice",
-			() -> new SourceBerryPieSliceItem((new Item.Properties()).food(ArsNouveauCompat.SOURCE_BERRY_PIE_SLICE)));
+		() -> new SourceBerryPieSliceItem((new Item.Properties()).food(ArsNouveauCompat.SOURCE_BERRY_PIE_SLICE)));
 	public static final RegistryObject<Item> SOURCE_BERRY_COOKIE = registerItem("source_berry_cookie",
-			() -> new SourceBerryCookieItem((new Item.Properties()).food(ArsNouveauCompat.SOURCE_BERRY_COOKIE)));
+		() -> new SourceBerryCookieItem((new Item.Properties()).food(ArsNouveauCompat.SOURCE_BERRY_COOKIE)));
 	public static final RegistryObject<Item> GLOW_JAM_COOKIE = registerItem("glow_jam_cookie",
-			() -> new ConsumableItem((new Item.Properties()).food(Nutrition.GLOW_JAM_COOKIE), true, false));
+		() -> new ConsumableItem((new Item.Properties()).food(Nutrition.GLOW_JAM_COOKIE), true, false));
 	public static final RegistryObject<Item> BAKLAVA = registerItem("baklava",
-			() -> new BlockItem(DelightfulBlocks.BAKLAVA.get(), ModItems.basicItem()));
+		() -> new BlockItem(DelightfulBlocks.BAKLAVA.get(), ModItems.basicItem()));
 	public static final RegistryObject<Item> BAKLAVA_SLICE = registerItem("baklava_slice",
-			() -> new DConsumableItem((new Item.Properties()).food(Nutrition.BAKLAVA_SLICE), true, false));
+		() -> new DConsumableItem((new Item.Properties()).food(Nutrition.BAKLAVA_SLICE), true, false));
 	public static final RegistryObject<Item> ANIMAL_FAT = registerFood("animal_fat", Nutrition.ANIMAL_FAT);
 	public static final RegistryObject<Item> ANIMAL_OIL_BOTTLE = registerItem("animal_oil_bottle",
-			() -> new FurnaceFuelItem((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE), 3200));
+		() -> new FurnaceFuelItem((new Item.Properties()).craftRemainder(Items.GLASS_BOTTLE), 3200));
 	public static final RegistryObject<Item> ACORN = registerItem("acorn", () ->
 		new AcornItem((new Item.Properties()).food(Nutrition.ACORN)));
 	public static final RegistryObject<Item> ROASTED_ACORN = registerFood("roasted_acorn", Nutrition.ROASTED_ACORN);

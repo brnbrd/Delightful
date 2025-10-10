@@ -8,6 +8,7 @@ import net.brnbrd.delightful.common.block.DelightfulBlocks;
 import net.brnbrd.delightful.compat.BWGCompat;
 import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.compat.UnusualEndCompat;
+import net.brnbrd.delightful.compat.WindsweptCompat;
 import net.brnbrd.delightful.compat.abnormals.AquaticCompat;
 import net.brnbrd.delightful.compat.abnormals.AtmosphericCompat;
 import net.minecraft.ChatFormatting;
@@ -44,7 +45,8 @@ public class PieEvents {
 			.put(Modid.BWG.id(BWGCompat.green_apple_pie), DelightfulBlocks.GREEN_APPLE_PIE)
 			.put(Modid.UE.id(UnusualEndCompat.chorus_pie), DelightfulBlocks.CHORUS_PIE)
 			.put(Modid.UA.id(AquaticCompat.mulberry_pie), DelightfulBlocks.MULBERRY_PIE)
-			.put(Modid.AT.id(AtmosphericCompat.passion_fruit_tart), DelightfulBlocks.PASSION_FRUIT_TART)
+			.put(Modid.AT.id(AtmosphericCompat.PASSION_FRUIT_TART), DelightfulBlocks.PASSION_FRUIT_TART)
+			.put(Modid.WS.id(WindsweptCompat.MUTTON_PIE), DelightfulBlocks.MUTTON_PIE)
 			.build();
 
 	// Adds "Placeable" tooltip to compat pies
@@ -55,7 +57,7 @@ public class PieEvents {
 			(stack.getItem() instanceof BlockItem b && b.getBlock() instanceof PieBlock) ||
 			enabled(stack)
 		) {
-			e.getToolTip().add(Util.delightfulTooltip("placeable")
+			e.getToolTip().add(Util.tooltip("placeable")
 				.withStyle(ChatFormatting.DARK_GRAY)
 				.withStyle(ChatFormatting.ITALIC)
 			);

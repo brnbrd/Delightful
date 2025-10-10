@@ -90,6 +90,7 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 			.add(DelightfulBlocks.CHORUS_PIE.get())
 			.add(DelightfulBlocks.MULBERRY_PIE.get())
 			.add(DelightfulBlocks.PASSION_FRUIT_TART.get())
+			.add(DelightfulBlocks.MUTTON_PIE.get())
 			.addOptional(Modid.UG.rl("gloomgourd"))
 			.addOptional(Modid.UG.rl("carved_gloomgourd"))
 			.addOptional(Modid.SEAS.rl("pumpkin_cake"))

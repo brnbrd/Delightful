@@ -1,0 +1,37 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "windswept:mutton_pie"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "mutton_pie_slice"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "delightful:mutton_pie_slice"
+          },
+          {
+            "item": "delightful:mutton_pie_slice"
+          },
+          {
+            "item": "delightful:mutton_pie_slice"
+          },
+          {
+            "item": "delightful:mutton_pie_slice"
+          }
+        ],
+        "result": {
+          "item": "windswept:mutton_pie"
+        }
+      }
+    }
+  ]
+}

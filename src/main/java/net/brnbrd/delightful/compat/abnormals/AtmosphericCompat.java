@@ -7,8 +7,8 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 
 public class AtmosphericCompat {
-	public static final String yucca = "yucca_fruit";
-	public static final String passion_fruit_tart = "passion_fruit_tart";
+	public static final String YUCCA = "yucca_fruit";
+	public static final String PASSION_FRUIT_TART = "passion_fruit_tart";
 
 	public static MobEffect getSpitting() {
 		return Modid.AT.effect("spitting", MobEffects.MOVEMENT_SPEED);

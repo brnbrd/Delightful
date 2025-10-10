@@ -27,7 +27,8 @@ public class DelightfulConfig {
 		Util.name(DelightfulItems.SOURCE_BERRY_PIE_SLICE),
 		Util.name(DelightfulItems.CHORUS_PIE_SLICE),
 		Util.name(DelightfulItems.MULBERRY_PIE_SLICE),
-		Util.name(DelightfulItems.PASSION_FRUIT_TART_SLICE)
+		Util.name(DelightfulItems.PASSION_FRUIT_TART_SLICE),
+		Util.name(DelightfulItems.MUTTON_PIE_SLICE)
 	);
 	public static ForgeConfigSpec.BooleanValue CRAFT_NUT_MILK;
 	public static ForgeConfigSpec.BooleanValue COOK_CLOVER_HONEY;
