@@ -212,13 +212,13 @@
   "item.delightful.wrapped_cantaloupe": "Becsomagolt sárgadinnye",
   "item.delightful.zanite_knife": "Zanite kés",
   "item.delightful.zinc_knife": "Cinkkés",
-  "tooltip.delightful.disabled": "Letiltva",
   "tooltip.delightful.furnace_fuel_burn_time": "s égési idő",
-  "tooltip.delightful.placeable": "Lehelyezhető",
-  "tooltip.delightful.requires_empty_tag": "Szükséges üres címke:",
   "tooltip.delightful.rose_rock_candy.when_feeding": "When fed to a tamed animal:",
   "tooltip.delightful.sneak_right": "Lopakodás+jobb kattintás:",
+  "tooltip.disabled": "Letiltva",
   "tooltip.jade.age": "Kor: %s",
+  "tooltip.placeable": "Lehelyezhető",
+  "tooltip.requires_empty_tag": "Szükséges üres címke:",
   "tooltip.requires_modid": "Szükséges modid:",
   "tooltip.requires_tag": "Szükséges címke:"
 }

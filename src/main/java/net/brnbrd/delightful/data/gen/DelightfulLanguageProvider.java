@@ -166,16 +166,16 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		add("delightful.overhauls", "Overhauls");
 
 		// Tooltips
-		addTooltip("placeable", "Placeable");
-		addTooltip("disabled", "Disabled");
-		addTooltip("sneak_right", "Sneak R-Click for:");
-		addTooltip("furnace_fuel_burn_time", "s of burn time");
-		addTooltip("requires_empty_tag", "Requires empty tag:");
-		addTooltip("rose_rock_candy.when_feeding", "When fed to a tamed animal:");
+		addDelightfulTooltip("sneak_right", "Sneak R-Click for:");
+		addDelightfulTooltip("furnace_fuel_burn_time", "s of burn time");
+		addDelightfulTooltip("rose_rock_candy.when_feeding", "When fed to a tamed animal:");
 
 		// Tooltips not specific to Delightful
-		add("tooltip.requires_tag", "Requires tag:");
-		add("tooltip.requires_modid", "Requires modid:");
+		addTooltip("placeable", "Placeable");
+		addTooltip("disabled", "Disabled");
+		addTooltip("requires_empty_tag", "Requires empty tag:");
+		addTooltip("requires_tag", "Requires tag:");
+		addTooltip("requires_modid", "Requires modid:");
 		add("farmersdelight.tooltip.ender_nectar", "Otherworldly");
 
 		// JEI Descriptions
@@ -201,7 +201,11 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		add("desc." + Delightful.MODID + "." + key, value);
 	}
 
-	public void addTooltip(String key, String value) {
-		add("tooltip." + Delightful.MODID + "." + key, value);
+	public void addTooltip(String key, String translation) {
+		add("tooltip." + key, translation);
+	}
+
+	public void addDelightfulTooltip(String key, String translation) {
+		addTooltip(Delightful.MODID + "." + key, translation);
 	}
 }

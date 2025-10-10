@@ -212,13 +212,13 @@
   "item.delightful.wrapped_cantaloupe": "Wrapped Cantaloupe",
   "item.delightful.zanite_knife": "Zanite Knife",
   "item.delightful.zinc_knife": "Zinc Knife",
-  "tooltip.delightful.disabled": "Disabled",
   "tooltip.delightful.furnace_fuel_burn_time": "s of burn time",
-  "tooltip.delightful.placeable": "Placeable",
-  "tooltip.delightful.requires_empty_tag": "Requires empty tag:",
   "tooltip.delightful.rose_rock_candy.when_feeding": "When fed to a tamed animal:",
   "tooltip.delightful.sneak_right": "Sneak R-Click for:",
+  "tooltip.disabled": "Disabled",
   "tooltip.jade.age": "Age: %s",
+  "tooltip.placeable": "Placeable",
+  "tooltip.requires_empty_tag": "Requires empty tag:",
   "tooltip.requires_modid": "Requires modid:",
   "tooltip.requires_tag": "Requires tag:"
 }
