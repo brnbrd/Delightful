@@ -220,5 +220,5 @@
   "tooltip.placeable": "設置可能",
   "tooltip.requires_empty_tag": "Requires empty tag:",
   "tooltip.requires_modid": "MODが必要",
-  "tooltip.requires_tag": "Requires non-empty tag:"
+  "tooltip.requires_tag": "Requires tag:"
 }

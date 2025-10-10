@@ -219,6 +219,6 @@
   "tooltip.jade.age": "Age: %s",
   "tooltip.placeable": "Placeable",
   "tooltip.requires_empty_tag": "Requires empty tag:",
-  "tooltip.requires_modid": "Requires modid:",
-  "tooltip.requires_tag": "Requires non-empty tag:"
+  "tooltip.requires_modid": "Requiere el modid:",
+  "tooltip.requires_tag": "Requires tag:"
 }

@@ -87,7 +87,7 @@ public class RockCandyItem extends DConsumableItem {
 		super.appendHoverText(stack, level, comps, isAdvanced);
 		if (this.enabled()) {
 			comps.add(Component.empty());
-			comps.add(Util.tooltip("rose_rock_candy.when_feeding").withStyle(ChatFormatting.GRAY));
+			comps.add(Util.delightfulTooltip("rose_rock_candy.when_feeding").withStyle(ChatFormatting.GRAY));
 			for (MobEffectInstance effectInstance : RockCandyItem.getFeedEffects()) {
 				MutableComponent effectDescription = Component.literal(" ");
 				effectDescription.append(Component.translatable(effectInstance.getDescriptionId()));

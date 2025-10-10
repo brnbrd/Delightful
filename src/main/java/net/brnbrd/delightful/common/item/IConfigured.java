@@ -48,7 +48,7 @@ public interface IConfigured extends ItemLike {
 		if (!this.enabled()) {
 			comps.add(Util.tooltip("disabled").withStyle(ChatFormatting.UNDERLINE));
 			if (!this.isDependencyTag() && this.getDependencyTag() != null) {
-				comps.add(Util.translation("tooltip", "requires_tag"));
+				comps.add(Util.tooltip("requires_tag"));
 				comps.add(Util.tagComponent(this.getDependencyTag()).withStyle(ChatFormatting.UNDERLINE));
 			}
 			if (!this.isEmptyTag() && this.getEmptyTag() != null) {

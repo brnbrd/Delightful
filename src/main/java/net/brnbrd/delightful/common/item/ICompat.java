@@ -30,7 +30,7 @@ public interface ICompat extends IConfigured {
 	default boolean enabledText(List<Component> comps) {
 		boolean configured = IConfigured.super.enabledText(comps);
 		if (!isLoaded() && getModid().length > 0) {
-			comps.add(Util.translation("tooltip", "requires_modid"));
+			comps.add(Util.tooltip("requires_modid"));
 			comps.add(Component.literal(Strings.join(Mods.names(getModid()), ", ")).withStyle(ChatFormatting.UNDERLINE));
 			return false;
 		}

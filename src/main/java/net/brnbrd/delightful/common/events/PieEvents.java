@@ -55,7 +55,7 @@ public class PieEvents {
 			(stack.getItem() instanceof BlockItem b && b.getBlock() instanceof PieBlock) ||
 			enabled(stack)
 		) {
-			e.getToolTip().add(Util.tooltip("placeable")
+			e.getToolTip().add(Util.delightfulTooltip("placeable")
 				.withStyle(ChatFormatting.DARK_GRAY)
 				.withStyle(ChatFormatting.ITALIC)
 			);

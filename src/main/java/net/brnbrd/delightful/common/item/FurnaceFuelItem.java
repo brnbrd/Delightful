@@ -48,7 +48,7 @@ public class FurnaceFuelItem extends DItem {
 	public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> comps, @NotNull TooltipFlag isAdvanced) {
 		if (this.enabled()) {
 			comps.add(
-				Util.tooltip("sneak_right")
+				Util.delightfulTooltip("sneak_right")
 					.withStyle(ChatFormatting.GRAY)
 					.withStyle(ChatFormatting.UNDERLINE)
 			);
@@ -56,7 +56,7 @@ public class FurnaceFuelItem extends DItem {
 				Component.literal(String.valueOf(this.fuelTime / 20))
 					.withStyle(ChatFormatting.YELLOW)
 					.append(
-						Util.tooltip("furnace_fuel_burn_time")
+						Util.delightfulTooltip("furnace_fuel_burn_time")
 							.withStyle(ChatFormatting.WHITE)
 					)
 			);

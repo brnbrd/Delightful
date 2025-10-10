@@ -375,6 +375,10 @@ public class Util {
 	}
 
 	public static MutableComponent tooltip(String key) {
-		return Component.translatable("tooltip." + Delightful.MODID + "." + key);
+		return Component.translatable("tooltip." + key);
+	}
+
+	public static MutableComponent delightfulTooltip(String key) {
+		return tooltip(Delightful.MODID + "." + key);
 	}
 }
