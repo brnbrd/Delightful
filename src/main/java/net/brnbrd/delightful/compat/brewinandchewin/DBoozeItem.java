@@ -1,6 +1,6 @@
 package net.brnbrd.delightful.compat.brewinandchewin;
 
-import net.brnbrd.delightful.common.item.ICompat;
+import net.brnbrd.delightful.common.item.IConfigured;
 import net.brnbrd.delightful.compat.Modid;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
@@ -13,7 +13,7 @@ import java.util.List;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class DBoozeItem extends BoozeItem implements ICompat {
+public class DBoozeItem extends BoozeItem implements IConfigured {
 	public DBoozeItem(Fluid fluid, Item.Properties properties) {
 		super(fluid, properties);
 	}

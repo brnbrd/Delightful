@@ -6,10 +6,10 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 import net.brnbrd.delightful.Util;
+import net.brnbrd.delightful.common.item.IConfigured;
 import net.brnbrd.delightful.compat.Modid;
 import org.codehaus.plexus.util.StringUtils;
 import net.brnbrd.delightful.Delightful;
-import net.brnbrd.delightful.common.item.ICompat;
 import net.minecraft.network.chat.Component;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -28,7 +28,7 @@ import vectorwing.farmersdelight.common.item.KnifeItem;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class DKnifeItem extends KnifeItem implements ICompat {
+public class DKnifeItem extends KnifeItem implements IConfigured {
 	@Nullable private final TagKey<Item> tag;
 	@NotNull private final Modid[] modid;
 

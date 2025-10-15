@@ -1,5 +1,6 @@
 package net.brnbrd.delightful.common.item;
 
+import joptsimple.internal.Strings;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.compat.Mods;
@@ -9,15 +10,25 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.ItemLike;
 import java.util.List;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public interface IConfigured extends ItemLike {
-	default Modid[] getConflicts() {
+	// Can be empty, but not null
+	default @NotNull Modid[] getModid() {
+		return Util.EMPTY;
+	}
+
+	// Can be empty, but not null
+	default @NotNull Modid[] getConflicts() {
 		return Util.EMPTY;
 	}
 
 	default boolean hasConflict() { // Checks that any defined conflict is loaded
-		return this.getConflicts().length > 0 && Mods.loaded(Mods.Strategy.OR, this.getConflicts());
+		return (
+			this.getConflicts().length > 0 &&
+			Mods.loaded(Mods.Strategy.OR, this.getConflicts())
+		);
 	}
 
 	// Tag should be filled (for enabling)
@@ -27,7 +38,7 @@ public interface IConfigured extends ItemLike {
 
 	// Returns true if tag has an entry or is null
 	default boolean isDependencyTag() {
-		return Util.tagPopulated(getDependencyTag());
+		return Util.tagPopulated(this.getDependencyTag());
 	}
 
 	// Tag should be empty (for enabling)
@@ -37,16 +48,35 @@ public interface IConfigured extends ItemLike {
 
 	// Returns true if tag is empty or is null
 	default boolean isEmptyTag() {
-		return Util.tagEmpty(getEmptyTag());
+		return Util.tagEmpty(this.getEmptyTag());
+	}
+
+	default boolean isLoaded() {
+		Modid[] dependencies = getModid();
+		return (
+			getModid().length < 1 || // Empty modid means just load
+			getModid() == null || // Should not be possible, but worth a check
+			Mods.loaded(getStrategy(), dependencies)
+		);
 	}
 
 	default boolean enabled() {
-		return Util.configEnabled(this.asItem()) && !this.hasConflict() && this.isDependencyTag() && this.isEmptyTag();
+		return (
+			Util.configEnabled(this.asItem()) &&
+			this.isLoaded() &&
+			!this.hasConflict() &&
+			this.isDependencyTag() &&
+			this.isEmptyTag()
+		);
 	}
 
 	default boolean enabledText(List<Component> comps) {
 		if (!this.enabled()) {
 			comps.add(Util.tooltip("disabled").withStyle(ChatFormatting.UNDERLINE));
+			if (!this.isLoaded() && this.getModid().length > 0) {
+				comps.add(Util.tooltip("requires_modid"));
+				comps.add(Component.literal(Strings.join(Mods.names(getModid()), ", ")).withStyle(ChatFormatting.UNDERLINE));
+			}
 			if (!this.isDependencyTag() && this.getDependencyTag() != null) {
 				comps.add(Util.tooltip("requires_tag"));
 				comps.add(Util.tagComponent(this.getDependencyTag()).withStyle(ChatFormatting.UNDERLINE));
@@ -58,5 +88,9 @@ public interface IConfigured extends ItemLike {
 			return false;
 		}
 		return true;
+	}
+
+	default Mods.Strategy getStrategy() {
+		return Mods.Strategy.OR;
 	}
 }

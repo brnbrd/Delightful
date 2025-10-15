@@ -6,7 +6,6 @@ import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;
 
 public class ShakeItem extends DrinkItem {
-
 	public ShakeItem(Properties properties) {
 		super(properties, false, false);
 	}

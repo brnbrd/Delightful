@@ -1,11 +1,10 @@
 package net.brnbrd.delightful.compat.ars_nouveau;
 
-import net.brnbrd.delightful.common.item.ICompat;
 import net.brnbrd.delightful.common.item.food.ShakeItem;
 import net.brnbrd.delightful.compat.Modid;
 import org.jetbrains.annotations.NotNull;
 
-public class SourceBerryShakeItem extends ShakeItem implements ICompat {
+public class SourceBerryShakeItem extends ShakeItem {
 	public SourceBerryShakeItem(Properties properties) {
 		super(properties);
 	}

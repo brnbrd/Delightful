@@ -12,7 +12,7 @@ import java.util.List;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class CompatBlockItem extends BlockItem implements ICompat {
+public class CompatBlockItem extends BlockItem implements IConfigured {
 	private final Modid[] modid;
 
 	public CompatBlockItem(Block block, Item.Properties props, Modid... modid) {

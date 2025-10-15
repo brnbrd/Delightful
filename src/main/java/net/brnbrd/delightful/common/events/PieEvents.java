@@ -31,7 +31,6 @@ import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import vectorwing.farmersdelight.common.block.PieBlock;
-import vectorwing.farmersdelight.common.registry.ModBlocks;
 import java.util.function.Supplier;
 import org.jetbrains.annotations.NotNull;
 
@@ -73,16 +72,22 @@ public class PieEvents {
 		}
 	}
 
+	private boolean canPlaceAgainst(BlockState state) {
+		return (
+			!state.hasBlockEntity() &&
+			!(state.getBlock() instanceof PieBlock)
+		);
+	}
+
 	// Right click placing a pie Block using Item
-	@SubscribeEvent
+	@SubscribeEvent(priority = EventPriority.LOWEST)
 	void onPieOverhaul(PlayerInteractEvent.RightClickBlock e) {
-		BlockState clicked = e.getLevel().getBlockState(e.getHitVec().getBlockPos());
+		final BlockState clicked = e.getLevel().getBlockState(e.getHitVec().getBlockPos());
 		if (
 			enabled(e.getItemStack()) &&
-			!(clicked.getBlock() instanceof PieBlock) &&
-			!clicked.is(ModBlocks.CUTTING_BOARD.get()) &&
-			!e.isCanceled() &&
-			Util.block(Delightful.MODID, Util.name(e.getItemStack())) instanceof PieBlock pie
+			(e.getEntity().isCrouching() || this.canPlaceAgainst(clicked)) && // Player is sneaking or block isn't a BlockEntity
+			Util.block(Delightful.MODID, Util.name(e.getItemStack())) instanceof PieBlock pie &&
+			!e.isCanceled()
 		) {
 			InteractionResult place = placePie(pie, new BlockPlaceContext(
 				e.getEntity(),

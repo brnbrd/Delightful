@@ -902,37 +902,37 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 		if (tag != null) {
 			String path = Util.name(knife);
 			ICondition[] conds = new ICondition[]{
-			enabled(path),
-			not(tagEmpty(tag))
+				enabled(path),
+				not(tagEmpty(tag))
 			};
 			Modid[] conflicts = knife.getConflicts();
 			if (conflicts.length > 0) {
-			conds = ArrayUtils.addAll(conds, Arrays.stream(conflicts)
-			.map(conf -> not(modLoaded(conf.get())))
-			.toList()
-			.toArray(new ICondition[0])
-			);
+				conds = ArrayUtils.addAll(conds, Arrays.stream(conflicts)
+					.map(conf -> not(modLoaded(conf.get())))
+					.toList()
+					.toArray(new ICondition[0])
+				);
 			}
 			Modid[] knifeMods = knife.getModid();
 			if (knifeMods.length > 0) {
-			final List<String> dependencies = Lists.newArrayList(Arrays.stream(knifeMods).map(Modid::get).toList());
-			dependencies.remove(FarmersDelight.MODID);
-			if (!dependencies.isEmpty()) {
-			conds = ArrayUtils.addAll(conds, dependencies.stream()
-			.map(this::modLoaded)
-			.toList()
-			.toArray(new ICondition[0])
-			);
-			}
+				final List<String> dependencies = Lists.newArrayList(Arrays.stream(knifeMods).map(Modid::get).toList());
+				dependencies.remove(FarmersDelight.MODID);
+				if (!dependencies.isEmpty()) {
+					conds = ArrayUtils.addAll(conds, dependencies.stream()
+						.map(this::modLoaded)
+						.toList()
+						.toArray(new ICondition[0])
+					);
+				}
 			}
 			if (knife.getRecipeType() == RecipeType.CRAFTING) {
-			wrap(ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, knife)
-			.define('m', Ingredient.of(tag))
-			.define('s', knife.getRod())
-			.pattern("m")
-			.pattern("s")
-			.unlockedBy("has_" + tag.location().getPath(), has(tag)),
-			"knives/" + path, finished, conds);
+				wrap(ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, knife)
+					.define('m', Ingredient.of(tag))
+					.define('s', knife.getRod())
+					.pattern("m")
+					.pattern("s")
+					.unlockedBy("has_" + tag.location().getPath(), has(tag)),
+				"knives/" + path, finished, conds);
 			}
 		}
 	}
