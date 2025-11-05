@@ -8,6 +8,7 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.TagKey;
@@ -56,21 +57,27 @@ public class RockCandyItem extends DConsumableItem {
 	// Can be fed to tamed animals
 	@Override
 	public @NotNull InteractionResult interactLivingEntity(@NotNull ItemStack stack, @NotNull Player player, @NotNull LivingEntity target, @NotNull InteractionHand hand) {
-		boolean clientSide = player.level().isClientSide();
 		if (
-			!clientSide &&
+			player.level() instanceof ServerLevel server &&
 			target.isAlive() &&
 			target.isAffectedByPotions() &&
 			target instanceof TamableAnimal tame &&
 			tame.isTame()
 		) {
 			Util.addEffects(target, RockCandyItem.getFeedEffects());
-			target.level().playSound(null, target.blockPosition(), SoundEvents.GENERIC_EAT, SoundSource.PLAYERS, 0.8F, 0.8F);
-			for (int i = 0; i < 5; ++i) {
-				double xSpeed = MathUtils.RAND.nextGaussian() * 0.02D;
-				double ySpeed = MathUtils.RAND.nextGaussian() * 0.02D;
-				double zSpeed = MathUtils.RAND.nextGaussian() * 0.02D;
-				target.level().addParticle(ModParticleTypes.STAR.get(), target.getRandomX(1.0D), target.getRandomY() + 0.5D, target.getRandomZ(1.0D), xSpeed, ySpeed, zSpeed);
+			server.playSound(null, target.blockPosition(), SoundEvents.GENERIC_EAT, SoundSource.PLAYERS, 0.8F, 0.8F);
+			for (int i = 0; i < 4; ++i) {
+				server.sendParticles(
+					ModParticleTypes.STAR.get(),
+					target.getRandomX(0.55D),
+					target.getRandomY(),
+					target.getRandomZ(0.55D),
+					1,
+					MathUtils.RAND.nextGaussian() * 0.02D,
+					MathUtils.RAND.nextGaussian() * 0.02D,
+					MathUtils.RAND.nextGaussian() * 0.02D,
+					0D
+				);
 			}
 			player.getCooldowns().addCooldown(this, 40);
 			if (!player.getAbilities().instabuild) {
@@ -78,7 +85,7 @@ public class RockCandyItem extends DConsumableItem {
 				ItemHandlerHelper.giveItemToPlayer(player, new ItemStack(Items.STICK));
 			}
 		}
-		return InteractionResult.sidedSuccess(clientSide);
+		return InteractionResult.sidedSuccess(player.level().isClientSide());
 	}
 
 	// Code adapted from: https://github.com/vectorwing/FarmersDelight/blob/1.20/src/main/java/vectorwing/farmersdelight/common/item/DogFoodItem.java

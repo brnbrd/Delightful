@@ -57,7 +57,7 @@ public class ForgeEvents {
 				if (stack.is(Modid.ECO.item("cooked_prickly_pear"))) {
 					duration = 400;
 				}
-				Util.addEffect(entity, SOBCompat.getSpite().get(), duration, 0);
+				Util.addEffect(entity, SOBCompat.getSpite(), duration, 0);
 			}
 		}
 	}

@@ -7,6 +7,10 @@
     {
       "id": "sob:tequila",
       "required": false
+    },
+    {
+      "id": "dolt_mod_how:tequila",
+      "required": false
     }
   ]
 }

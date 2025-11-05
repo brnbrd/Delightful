@@ -36,7 +36,7 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
 [[dependencies.delightful]]
 	modId="collectorsreap"
 	mandatory=false
-	versionRange="[1.4.1,)"
+	versionRange="[1.5,)"
 	ordering="AFTER"
 	side="BOTH"
 
@@ -573,6 +573,13 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
 	side="BOTH"
 
 [[dependencies.delightful]]
+	modId="windswept_delights"
+	mandatory=false
+	versionRange="[1,)"
+	ordering="AFTER"
+	side="BOTH"
+
+[[dependencies.delightful]]
 	modId="oreganized"
 	mandatory=false
 	versionRange="[4.2,)"
@@ -597,5 +604,12 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
 	modId="malum"
 	mandatory=false
 	versionRange="[0,)"
+	ordering="AFTER"
+	side="BOTH"
+
+[[dependencies.delightful]]
+	modId="nirvana"
+	mandatory=false
+	versionRange="[1.2,)"
 	ordering="AFTER"
 	side="BOTH"

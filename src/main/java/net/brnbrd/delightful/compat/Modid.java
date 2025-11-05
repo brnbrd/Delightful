@@ -52,6 +52,7 @@ public enum Modid {
 	CTD("brewincompatdelight"),
 	DA("deep_aether"),
 	DD("deeperdarker"),
+	DOLT("dolt_mod_how"),
 	DTM("dropthemeat"),
 	DUNG("dungeonsdelight"),
 	EE("endergetic"),
@@ -90,6 +91,7 @@ public enum Modid {
 	OAD("oresabovediamonds"),
 	OG("oreganized"),
 	PEC("peculiars"),
+	PN("pneumaticcraft"),
 	Q("quark"),
 	RA("redstone_arsenal"),
 	RC("rootsclassic"),
@@ -116,9 +118,11 @@ public enum Modid {
 	UGD("undergardendelight"),
 	VB("vanillabackport"),
 	VD("vintagedelight"),
+	VEG("veggiesdelight"),
 	VGND("vegandelight"),
 	WB("wildberries"),
 	WS("windswept"),
+	WSD("windswept_delights"),
 	YH("youkaishomecoming");
 
 	@NotNull private final String id;

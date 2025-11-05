@@ -22,6 +22,26 @@
     {
       "id": "hearthandharvest:green_grape_juice",
       "required": false
+    },
+    {
+      "id": "veggiesdelight:carrot_juice",
+      "required": false
+    },
+    {
+      "id": "veggiesdelight:dandelion_juice",
+      "required": false
+    },
+    {
+      "id": "veggiesdelight:turnip_water",
+      "required": false
+    },
+    {
+      "id": "windswept_delights:wild_berry_juice",
+      "required": false
+    },
+    {
+      "id": "abnormals_delight:pickerelweed_juice",
+      "required": false
     }
   ]
 }

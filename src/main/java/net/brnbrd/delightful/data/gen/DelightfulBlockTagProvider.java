@@ -47,7 +47,6 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 		this.tag(DelightfulBlockTags.ADD_ACORN).addOptional(Util.rl("natural_decoration", "oak_acorn"));
 		this.tag(DelightfulBlockTags.DROPS_GREEN_TEA_LEAF).addTag(BlockTags.LEAVES);
 		this.tag(DelightfulBlockTags.CANTALOUPE_SPAWNS).addTag(Tags.Blocks.SAND);
-		this.tag(DelightfulBlockTags.REPLACE_PRICKLY_PEAR).addOptional(Modid.SOB.rl("nopal_crop"));
 
 		// Forge
 		this.tag(DelightfulBlockTags.STORAGE_BLOCKS_SALMONBERRIES).add(DelightfulBlocks.SALMONBERRY_SACK.get());

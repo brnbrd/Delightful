@@ -48,7 +48,7 @@ public class Nutrition {
 	public static final FoodProperties NUT_BUTTER_AND_JAM_SANDWICH = (new FoodProperties.Builder())
 		.nutrition(11).saturationMod(0.7F)
 		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3600, 0), 1F)
-		.effect(() -> new MobEffectInstance(SOBCompat.getToughness().get(), 1800, 0), 1F).build();
+		.effect(() -> new MobEffectInstance(SOBCompat.getToughness(), 1800, 0), 1F).build();
 	public static final FoodProperties HONEY_GLAZED_WALNUT = (new FoodProperties.Builder())
 		.nutrition(6).saturationMod(1F).build();
 	public static final FoodProperties ACORN = (new FoodProperties.Builder())
@@ -139,10 +139,10 @@ public class Nutrition {
 		.effect(() -> CRCompat.getCorrosionOrFireResistance(300, 0), 1F).build();
 	public static final FoodProperties PRICKLY_PEAR_JUICE = (new FoodProperties.Builder())
 		.effect(() -> new MobEffectInstance(MobEffects.SATURATION, 600, 0), 1F)
-		.effect(() -> new MobEffectInstance(SOBCompat.getSpite().get(), 600, 0), 1F).build();
+		.effect(() -> new MobEffectInstance(SOBCompat.getSpite(), 600, 0), 1F).build();
 	public static final FoodProperties LONG_PRICKLY_PEAR_JUICE = (new FoodProperties.Builder())
 		.effect(() -> new MobEffectInstance(MobEffects.SATURATION, 1200, 0), 1F)
-		.effect(() -> new MobEffectInstance(SOBCompat.getSpite().get(), 1200, 0), 1F).build();
+		.effect(() -> new MobEffectInstance(SOBCompat.getSpite(), 1200, 0), 1F).build();
 	public static final FoodProperties LAVENDER_TEA = (new FoodProperties.Builder()).alwaysEat()
 		.effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 600, 0), 1F)
 		.effect(() -> new MobEffectInstance(TeaCompat.getCaffeinated().get(), 600, 0), 1F).build();

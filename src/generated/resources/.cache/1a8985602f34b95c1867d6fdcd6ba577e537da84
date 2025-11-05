@@ -1,4 +1,4 @@
-// 1.20.1	2025-10-15T13:22:14.0259324	delightful
+// 1.20.1	2025-11-04T17:40:38.8990828	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -91,11 +91,11 @@ c464a45fa61577982bb9df35b5cac169eb26e7f3 data/forge/tags/items/dough.json
 7640d02b3c85e174322059097d96b529ba37ac78 data/forge/tags/items/dough/corn.json
 99b0d5003d08c1f6c9d41d27b464d4a911dde6f1 data/forge/tags/items/dough/nut.json
 c6d731fe8fcecc9b674a5d0375fd7c4c58c1d899 data/forge/tags/items/drinks.json
-58d1aa869be73e51dc866bf131aa7e59a4bf9ac2 data/forge/tags/items/drinks/tequila.json
+62d79141dd1f610ef171d595b8058dc98adc3e16 data/forge/tags/items/drinks/tequila.json
 8010011ae631d299f0c5d5f94f527091fc5d70f6 data/forge/tags/items/dusts.json
 1ef3f227733e63c3d14eb69aece003a24674073d data/forge/tags/items/dusts/ender_pearl.json
 10023cdacbd2ad9204299a1dc18bb059d5740574 data/forge/tags/items/dusts/flour.json
-ce5107855392ce6e1f978ef9d93d707e45326f34 data/forge/tags/items/dusts/flour/wheat.json
+77501327b8834a062a662d2faaa885bcdd100be0 data/forge/tags/items/dusts/flour/wheat.json
 ed3c5e94f3393751ee0e75c14d54d4d4b37d5fc5 data/forge/tags/items/dusts/salt.json
 0174d87adbcee332f9afcf23f383c6cb376e2966 data/forge/tags/items/dusts/wood.json
 b4c8d4816b358b269c3373caeaf9fb54fd68d233 data/forge/tags/items/eggs.json
@@ -145,6 +145,7 @@ d6c74500b2d44fbad3f18f4213772b35ce41a9ca data/forge/tags/items/fruits/wild_berri
 dbead92144e09c0641ad9ec77b8da9540e378842 data/forge/tags/items/gems/skyjade.json
 b3d5bd87cc20e4f6a39f331a575350af129f3bc7 data/forge/tags/items/gems/zanite.json
 9100349aee2b100ba35b4ea59151545b8f3b913c data/forge/tags/items/hot_spice.json
+a486c560c13471250db8d3110ea2b042a1c9b93d data/forge/tags/items/ice_cubes.json
 1d56151bc106a5979925295ca4d9faeff01dbe6e data/forge/tags/items/ingots/alfsteel.json
 622c2283c8b92377eca20d8ba9823aa324944b14 data/forge/tags/items/ingots/gravitite.json
 a5708a8ea09880e2d376492b61ffc16aa8437828 data/forge/tags/items/ingots/necronium.json
@@ -155,7 +156,7 @@ df21ab79976e7373593d2fce09cfbf66c595e447 data/forge/tags/items/ingots/steel.json
 d554ed3f6b8762427d8c40a172c78361952260ed data/forge/tags/items/ingots/veridium.json
 0e2a4a3f8acf7437dcac80bc88b43d1a9b51487d data/forge/tags/items/jams.json
 93c48293b9ca80f78879ce37a6dd9be0c45d5fe3 data/forge/tags/items/jams/glow.json
-fcaedda6d1a5df64ca72bc413f7d04ce770f671b data/forge/tags/items/juices.json
+9e2d7b8042ac201e4dc92c4391bae61e87a98db8 data/forge/tags/items/juices.json
 aa24b385538f42af00e051bd106ea4e62fa4db8d data/forge/tags/items/juices/citrus.json
 8304d360343c9b6b0d0f2d893fe962047e39ac43 data/forge/tags/items/juices/citrus_juice.json
 f48f1c8ecd084e8be0b0738b14e7806971a983ca data/forge/tags/items/juices/lemon.json
@@ -163,7 +164,7 @@ d1dc791fc1fec2fc4e756e0d7dff0ddab538a57c data/forge/tags/items/juices/lemon_juic
 2e32ebd0459136597a1e6db82576dd3a7741ce53 data/forge/tags/items/juices/melon.json
 9ffc2bcef6352a614b4c48b9f953ecd386dffc9b data/forge/tags/items/juices/orange.json
 9866f72e4ffeb159ccecae5b2a9295656011e4d4 data/forge/tags/items/juices/orange_juice.json
-cdcce60120ff55f7da02ecef62efc3d538011151 data/forge/tags/items/juices/prickly_pear.json
+27e4d0995e4a5619c2b333c2a1e74d066b10c8ad data/forge/tags/items/juices/prickly_pear.json
 92e1871435d3246a5a0a5dce0c305a6f337ac544 data/forge/tags/items/marshmallow.json
 5160d3e42adb69a7a3e121df7fe653817a5d6b1b data/forge/tags/items/matcha.json
 f2c2fa99846dd38fbcf4460d40f560d57c700ac5 data/forge/tags/items/milk.json

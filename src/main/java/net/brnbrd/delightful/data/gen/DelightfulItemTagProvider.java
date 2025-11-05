@@ -419,6 +419,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.SALT).addTag(DelightfulItemTags.DUSTS_SALT);
 		this.tag(DelightfulItemTags.DUSTS_FLOUR_WHEAT)
 			.addOptional(Modid.C.rl("wheat_flour"))
+			.addOptional(Modid.PN.rl("wheat_flour"))
 			.addOptional(Modid.EIO.rl("flour"));
 		this.tag(DelightfulItemTags.DUSTS_FLOUR)
 			.addTag(DelightfulItemTags.DUSTS_FLOUR_WHEAT)
@@ -774,6 +775,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Util.rl("sunflowerdelight", "shortbread_cookie"))
 			.addOptional(Util.rl("vampiresdelight", "orchid_cookie"))
 			.addOptional(Util.rl("ramadandelight", "date_stuffed_cookie"));
+		this.tag(DelightfulItemTags.ICE_CUBES).addOptional(Modid.WS.rl("icicles"));
 		this.tag(DelightfulItemTags.ROPES)
 			.add(ModItems.ROPE.get())
 			.addOptionalTag(Modid.SUP.rl("ropes"))
@@ -789,7 +791,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.FR.rl("strong_melon_juice"));
 		this.tag(DelightfulItemTags.JUICES_PRICKLY_PEAR)
 			.add(DelightfulItems.PRICKLY_PEAR_JUICE.get())
-			.add(DelightfulItems.LONG_PRICKLY_PEAR_JUICE.get());
+			.add(DelightfulItems.LONG_PRICKLY_PEAR_JUICE.get())
+			.addOptional(Modid.SOB.rl("cactus_juice"));
 		this.tag(DelightfulItemTags.JUICES_ORANGE).addOptional(Modid.SOB.rl("orange_juice"));
 		this.tag(Modid.LOADER.it("juices/orange_juice")).addTag(DelightfulItemTags.JUICES_ORANGE);
 		this.tag(DelightfulItemTags.JUICES_LEMON).addOptional(Modid.FRD.rl("lemon_juice"));
@@ -808,10 +811,16 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.HH.rl("cherry_juice"))
 			.addOptional(Modid.HH.rl("raspberry_juice"))
 			.addOptional(Modid.HH.rl("red_grape_juice"))
-			.addOptional(Modid.HH.rl("green_grape_juice"));
+			.addOptional(Modid.HH.rl("green_grape_juice"))
+			.addOptional(Modid.VEG.rl("carrot_juice"))
+			.addOptional(Modid.VEG.rl("dandelion_juice"))
+			.addOptional(Modid.VEG.rl("turnip_water"))
+			.addOptional(Modid.WSD.rl("wild_berry_juice"))
+			.addOptional(Modid.AD.rl("pickerelweed_juice"));
 		this.tag(DelightfulItemTags.DRINKS_TEQUILA)
 			.addOptional(Modid.CTD.rl("tequila"))
-			.addOptional(Modid.SOB.rl("tequila"));
+			.addOptional(Modid.SOB.rl("tequila"))
+			.addOptional(Modid.DOLT.rl("tequila"));
 		this.tag(ModTags.DRINKS)
 			.addTag(DelightfulItemTags.DRINKS_TEQUILA)
 			.addTag(DelightfulItemTags.JUICES)
@@ -1010,8 +1019,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.add(DelightfulItems.SOURCE_BERRY_GUMMY.get())
 			.add(DelightfulItems.SOURCE_BERRY_ICE_CREAM.get())
 			.add(DelightfulItems.SOURCE_BERRY_MILKSHAKE.get())
-			.addOptional(Util.rl(Modid.COS, "source_berry_ice_cream"))
-			.addOptional(Util.rl(Modid.COS, "source_berry_milkshake"));
+			.addOptional(Modid.COS.rl("source_berry_ice_cream"))
+			.addOptional(Modid.COS.rl("source_berry_milkshake"));
 
 		// Sully's Mod
 		this.tag(Modid.SM.it("tortoise_food"))

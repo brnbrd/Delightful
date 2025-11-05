@@ -5,6 +5,10 @@
       "required": false
     },
     {
+      "id": "pneumaticcraft:wheat_flour",
+      "required": false
+    },
+    {
       "id": "enderio:flour",
       "required": false
     }

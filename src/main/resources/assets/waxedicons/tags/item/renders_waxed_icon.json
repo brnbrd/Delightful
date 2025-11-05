@@ -1,0 +1,249 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "quark:waxed_cut_copper_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "quark:waxed_exposed_cut_copper_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "quark:waxed_weathered_cut_copper_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "quark:waxed_oxidized_cut_copper_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "quark:waxed_red_corundum",
+      "required": false
+    },
+    {
+      "id": "quark:waxed_orange_corundum",
+      "required": false
+    },
+    {
+      "id": "quark:waxed_yellow_corundum",
+      "required": false
+    },
+    {
+      "id": "quark:waxed_green_corundum",
+      "required": false
+    },
+    {
+      "id": "quark:waxed_blue_corundum",
+      "required": false
+    },
+    {
+      "id": "quark:waxed_indigo_corundum",
+      "required": false
+    },
+    {
+      "id": "quark:waxed_violet_corundum",
+      "required": false
+    },
+    {
+      "id": "quark:waxed_white_corundum",
+      "required": false
+    },
+    {
+      "id": "quark:waxed_black_corundum",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:waxed_copper_bars",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:waxed_lightning_rod",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:waxed_copper_button",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:waxed_floodlight",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:waxed_toolbox",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:waxed_exposed_copper_bars",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:waxed_exposed_lightning_rod",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:waxed_exposed_copper_button",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:waxed_exposed_floodlight",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:waxed_exposed_toolbox",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:waxed_weathered_copper_bars",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:waxed_weathered_lightning_rod",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:waxed_weathered_copper_button",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:waxed_weathered_floodlight",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:waxed_weathered_toolbox",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:waxed_oxidized_copper_bars",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:waxed_oxidized_lightning_rod",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:waxed_oxidized_copper_button",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:waxed_oxidized_floodlight",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:waxed_oxidized_toolbox",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:waxed_oxidized_copper_golem",
+      "required": false
+    },
+    {
+      "id": "environmental:waxed_pinecone",
+      "required": false
+    },
+    {
+      "id": "mynethersdelight:waxed_hoglin_trophy",
+      "required": false
+    },
+    {
+      "id": "sullysmod:waxed_copper_button",
+      "required": false
+    },
+    {
+      "id": "sullysmod:waxed_exposed_copper_button",
+      "required": false
+    },
+    {
+      "id": "sullysmod:waxed_weathered_copper_button",
+      "required": false
+    },
+    {
+      "id": "sullysmod:waxed_oxidized_copper_button",
+      "required": false
+    },
+    {
+      "id": "twigs:waxed_copper_pillar",
+      "required": false
+    },
+    {
+      "id": "twigs:waxed_exposed_copper_pillar",
+      "required": false
+    },
+    {
+      "id": "twigs:waxed_weathered_copper_pillar",
+      "required": false
+    },
+    {
+      "id": "twigs:waxed_oxidized_copper_pillar",
+      "required": false
+    },
+    {
+      "id": "oreganized:waxed_spotted_glance",
+      "required": false
+    },
+    {
+      "id": "oreganized:waxed_white_concrete_powder",
+      "required": false
+    },
+    {
+      "id": "oreganized:waxed_orange_concrete_powder",
+      "required": false
+    },
+    {
+      "id": "oreganized:waxed_magenta_concrete_powder",
+      "required": false
+    },
+    {
+      "id": "oreganized:waxed_light_blue_concrete_powder",
+      "required": false
+    },
+    {
+      "id": "oreganized:waxed_yellow_concrete_powder",
+      "required": false
+    },
+    {
+      "id": "oreganized:waxed_lime_concrete_powder",
+      "required": false
+    },
+    {
+      "id": "oreganized:waxed_pink_concrete_powder",
+      "required": false
+    },
+    {
+      "id": "oreganized:waxed_gray_concrete_powder",
+      "required": false
+    },
+    {
+      "id": "oreganized:waxed_light_gray_concrete_powder",
+      "required": false
+    },
+    {
+      "id": "oreganized:waxed_cyan_concrete_powder",
+      "required": false
+    },
+    {
+      "id": "oreganized:waxed_purple_concrete_powder",
+      "required": false
+    },
+    {
+      "id": "oreganized:waxed_blue_concrete_powder",
+      "required": false
+    },
+    {
+      "id": "oreganized:waxed_brown_concrete_powder",
+      "required": false
+    },
+    {
+      "id": "oreganized:waxed_green_concrete_powder",
+      "required": false
+    },
+    {
+      "id": "oreganized:waxed_red_concrete_powder",
+      "required": false
+    },
+    {
+      "id": "oreganized:waxed_black_concrete_powder",
+      "required": false
+    }
+  ]
+}

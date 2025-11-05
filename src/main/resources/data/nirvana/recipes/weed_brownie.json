@@ -1,0 +1,70 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "nirvana:weed_brownie"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:chocolate"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "nirvana:hemp_seeds"
+          },
+          {
+            "tag": "forge:grain/wheat"
+          },
+          {
+            "tag": "forge:chocolate"
+          }
+        ],
+        "result": {
+          "count": 2,
+          "item": "nirvana:weed_brownie"
+        }
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "nirvana:weed_brownie"
+        },
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:chocolate"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "nirvana:hemp_seeds"
+          },
+          {
+            "tag": "forge:grain/wheat"
+          },
+          {
+            "item": "minecraft:cocoa_beans"
+          }
+        ],
+        "result": {
+          "count": 2,
+          "item": "nirvana:weed_brownie"
+        }
+      }
+    }
+  ]
+}

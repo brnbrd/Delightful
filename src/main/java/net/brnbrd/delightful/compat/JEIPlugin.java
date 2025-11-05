@@ -80,7 +80,6 @@ public class JEIPlugin implements IModPlugin {
 		this.hide(hidden, Modid.MOD, "bread_slice", Modid.SAS);
 		this.hide(hidden, Modid.MOD, "toast", Modid.SAS);
 		this.hide(hidden, Modid.AA, "honeyed_apple", Modid.BB);
-		this.hide(hidden, Modid.SOB, "prickly_pear", Modid.ECO);
 
 		if (!hidden.isEmpty()) {
 			manager.removeIngredientsAtRuntime(VanillaTypes.ITEM_STACK, hidden);
