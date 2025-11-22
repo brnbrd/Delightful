@@ -1,0 +1,40 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "brewinandchewin:egg_grog"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "snowyspirit:eggnog"
+        }
+      ],
+      "recipe": {
+        "type": "brewinandchewin:fermenting",
+        "basefluid": {
+          "count": 1000,
+          "fluid": "delightful:eggnog"
+        },
+        "experience": 1.0,
+        "fermentingtime": 7200,
+        "ingredients": [
+          {
+            "tag": "forge:crops/cabbage"
+          },
+          {
+            "item": "minecraft:sugar_cane"
+          }
+        ],
+        "recipe_book_tab": "drinks",
+        "result": {
+          "count": 1000,
+          "fluid": "brewinandchewin:egg_grog"
+        },
+        "temperature": 3
+      }
+    }
+  ]
+}

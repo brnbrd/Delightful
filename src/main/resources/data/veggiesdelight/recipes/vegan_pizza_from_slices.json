@@ -1,0 +1,39 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "veggiesdelight:vegan_pizza"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "veggiesdelight:vegan_pizza_slice"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "veggiesdelight:vegan_pizza_slice"
+          },
+          {
+            "item": "veggiesdelight:vegan_pizza_slice"
+          },
+          {
+            "item": "veggiesdelight:vegan_pizza_slice"
+          },
+          {
+            "item": "veggiesdelight:vegan_pizza_slice"
+          }
+        ],
+        "result": {
+          "item": "veggiesdelight:vegan_pizza"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

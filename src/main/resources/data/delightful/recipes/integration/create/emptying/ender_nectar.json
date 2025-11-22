@@ -4,20 +4,29 @@
     {
       "conditions": [
         {
+          "type": "forge:mod_loaded",
+          "modid": "create"
+        },
+        {
+          "type": "forge:or",
+          "values": [
+            {
+              "type": "forge:mod_loaded",
+              "modid": "farmersrespite"
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "brewinandchewin"
+            }
+          ]
+        },
+        {
           "type": "delightful:enabled",
           "value": "matcha_latte"
         },
         {
           "type": "delightful:enabled",
           "value": "ender_nectar"
-        },
-        {
-          "type": "forge:mod_loaded",
-          "modid": "farmersrespite"
-        },
-        {
-          "type": "forge:mod_loaded",
-          "modid": "create"
         }
       ],
       "recipe": {

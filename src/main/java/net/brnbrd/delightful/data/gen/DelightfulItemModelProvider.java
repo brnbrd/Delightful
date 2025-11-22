@@ -19,6 +19,9 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.List;
 
 public class DelightfulItemModelProvider extends ItemModelProvider {
+	private static final List<ResourceLocation> NO_GEN = List.of(
+		DelightfulItems.AGED_ROE.getId()
+	);
 	private static final List<ResourceLocation> HANDHELD = List.of(
 		DelightfulItems.MARSHMALLOW_STICK.getId(),
 		DelightfulItems.COOKED_MARSHMALLOW_STICK.getId(),
@@ -44,7 +47,9 @@ public class DelightfulItemModelProvider extends ItemModelProvider {
 		for (RegistryObject<Item> entry : DelightfulItems.ITEMS.getEntries()) {
 			ResourceLocation id = entry.getId();
 			if (id != null) {
-				if (id.getPath().startsWith("strong_")) {
+				if (NO_GEN.contains(id)) {
+					continue;
+				} else if (id.getPath().startsWith("strong_")) {
 					getBuilder(id.toString())
 						.parent(new ModelFile.UncheckedModelFile("item/generated"))
 						.texture("layer0", Util.delight("item/" + id.getPath().replace("strong_", "")));

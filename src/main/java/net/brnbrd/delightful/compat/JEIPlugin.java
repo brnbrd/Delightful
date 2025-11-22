@@ -47,9 +47,9 @@ public class JEIPlugin implements IModPlugin {
 		this.hide(hidden, Modid.SOB, "pbnj");
 		this.hide(hidden, Modid.VD, "pb_j");
 		this.hide(hidden, Modid.HH, "peanut_butter_and_jelly_sandwich");
+		this.hide(hidden, Modid.HH, "smore");
 		this.hide(hidden, Modid.SEED, "acorn");
 		this.hide(hidden, Modid.SEED, "acorn_bag");
-		this.hide(hidden, Modid.HH, "smore");
 		this.hide(hidden, Modid.UGD, "gloomgourd_pie_slice");
 
 		// FD conflicts
@@ -68,9 +68,6 @@ public class JEIPlugin implements IModPlugin {
 
 		// Other
 		this.hideAnd(hidden, Modid.CTD, "tequila", Modid.SOB, Modid.AT);
-		this.hide(hidden, Modid.HH, "salt", Modid.S);
-		this.hide(hidden, Modid.HH, "salt_bag", Modid.S);
-		this.hide(hidden, Modid.HH, "sugar_bag", Modid.SUP);
 		this.hide(hidden, Modid.HH, "mashed_potatoes", Modid.COS);
 		this.hide(hidden, Modid.TH, "syrup_bottle", Modid.AUT);
 		this.hide(hidden, Modid.AE2, "ender_dust", Modid.TH);
@@ -88,6 +85,13 @@ public class JEIPlugin implements IModPlugin {
 		// Hide fluids
 		final List<FluidStack> hiddenFluids = Lists.newArrayList();
 		final boolean farmersRespiteLoaded = Modid.FR.loaded();
+		final boolean brewinChewinLoaded = Modid.BC.loaded();
+		if (!Modid.SS.loaded() || (!farmersRespiteLoaded && !brewinChewinLoaded)) {
+			hiddenFluids.add(new FluidStack(DelightfulFluids.EGGNOG.get(), 1000));
+		}
+		if (!brewinChewinLoaded || !Modid.LFL.loaded()) {
+			hiddenFluids.add(new FluidStack(DelightfulFluids.AGED_ROE.get(), 1000));
+		}
 		if (!farmersRespiteLoaded) {
 			hiddenFluids.addAll(List.of(
 				new FluidStack(DelightfulFluids.MATCHA_LATTE.get(), 1000),

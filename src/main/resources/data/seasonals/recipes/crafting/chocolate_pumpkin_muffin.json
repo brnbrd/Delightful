@@ -1,0 +1,42 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "seasonals:chocolate_pumpkin_muffin"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "cookingtime": 200,
+        "experience": 0.35,
+        "ingredients": [
+          {
+            "tag": "forge:chocolate"
+          },
+          {
+            "item": "seasonals:pumpkin_puree"
+          },
+          {
+            "tag": "forge:dough"
+          },
+          {
+            "tag": "forge:milk"
+          },
+          {
+            "tag": "forge:eggs"
+          },
+          {
+            "item": "minecraft:sugar"
+          }
+        ],
+        "result": {
+          "item": "seasonals:chocolate_pumpkin_muffin",
+          "count": 2
+        }
+      }
+    }
+  ]
+}

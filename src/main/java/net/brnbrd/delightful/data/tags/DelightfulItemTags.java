@@ -8,16 +8,18 @@ import org.jetbrains.annotations.NotNull;
 
 public class DelightfulItemTags {
 	// Delightful
+	public static final TagKey<Item> ROASTED_MARSHMALLOWS = d("roasted_marshmallows");
+	public static final TagKey<Item> HOT_SPICES = d("hot_spices");
+	public static final TagKey<Item> PATTIES = d("patties");
+	public static final TagKey<Item> VEGETARIAN_PATTIES = d("patties/vegetarian");
 	public static final TagKey<Item> FIRE_KNIVES = d("fire_knives");
-	public static final TagKey<Item> MARSHMALLOW_STICK = d("marshmallow_stick");
-	public static final TagKey<Item> COOKED_MARSHMALLOW_STICK = d("cooked_marshmallow_stick");
+	public static final TagKey<Item> ROTTEN = d("rotten");
+	public static final TagKey<Item> SPITE = d("spite");
+	public static final TagKey<Item> ROSE = d("rose");
 	public static final TagKey<Item> RAW_VENISON_COMPAT = d("raw_venison_compat");
 	public static final TagKey<Item> RAW_VENISON_CHOP_COMPAT = d("raw_venison_chop_compat");
 	public static final TagKey<Item> COOKED_VENISON_COMPAT = d("cooked_venison_compat");
 	public static final TagKey<Item> COOKED_VENISON_CHOP_COMPAT = d("cooked_venison_chop_compat");
-	public static final TagKey<Item> ROTTEN = d("rotten");
-	public static final TagKey<Item> SPITE = d("spite");
-	public static final TagKey<Item> ROSE = d("rose");
 
 	// Minecraft
 	public static final TagKey<Item> FLOWERS_AZALEA = Modid.MC.it("flowers/azalea");
@@ -37,7 +39,6 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> FRUITS_APPLE = forge("fruits/apple");
 	public static final TagKey<Item> FRUITS_KIWI = forge("fruits/kiwi");
 	public static final TagKey<Item> FRUITS_DRAGON_FRUIT = forge("fruits/dragon_fruit");
-	public static final TagKey<Item> FRUITS_PASSION_FRUIT = forge("fruits/passion_fruit");
 	public static final TagKey<Item> FRUITS_MELON = forge("fruits/melon");
 	public static final TagKey<Item> FRUITS_CANTALOUPE = forge("fruits/cantaloupe");
 	public static final TagKey<Item> FRUITS_CHORUS = forge("fruits/chorus");
@@ -70,8 +71,6 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> FRUITS_JABUTICABA = forge("fruits/jabuticaba");
 	public static final TagKey<Item> FRUITS_KIWANO = forge("fruits/kiwano");
 	public static final TagKey<Item> FRUITS_PRICKLY_PEAR = forge("fruits/prickly_pear");
-	public static final TagKey<Item> FRUITS_SWEET = forge("fruits/sweet");
-	public static final TagKey<Item> FRUITS_SQUEEZABLE = forge("fruits/squeezable");
 
 	// Crops
 	public static final TagKey<Item> CROPS_CACTUS = forge("crops/cactus");
@@ -110,7 +109,6 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> CHEESE_SPICY = forge("cheese/spicy");
 	public static final TagKey<Item> CHEESE_SWEET = forge("cheese/sweet");
 	public static final TagKey<Item> CHOCOLATE = forge("chocolate");
-	public static final TagKey<Item> HOT_SPICE = forge("hot_spice");
 	public static final TagKey<Item> PUMPKINS = forge("pumpkins");
 	public static final TagKey<Item> PUMPKINS_PUMPKIN_BLOCKS = forge("pumpkins/pumpkin_blocks");
 	public static final TagKey<Item> RAW_CRAB = forge("raw_crab");
@@ -146,8 +144,6 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> FOODS_MEAT = forge("foods/meat");
 	public static final TagKey<Item> FOODS_MEAT_RAW = forge("foods/meat/raw");
 	public static final TagKey<Item> FOODS_MEAT_COOKED = forge("foods/meat/cooked");
-	public static final TagKey<Item> PROTEIN_PATTY = forge("protein_patty");
-	public static final TagKey<Item> COOKED_BEEF_OR_VEGAN = forge("cooked_beef_or_vegan");
 	public static final TagKey<Item> CATTAIL = forge("cattail");
 	public static final TagKey<Item> ICE_CUBES = forge("ice_cubes");
 	public static final TagKey<Item> TORTILLA = forge("tortilla");
@@ -160,8 +156,6 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> MATCHA = forge("matcha");
 	public static final TagKey<Item> GEMS_ROSE_QUARTZ = forge("gems/rose_quartz");
 	public static final TagKey<Item> GEMS_ZANITE = forge("gems/zanite");
-	public static final TagKey<Item> INGOTS_STEEL = ingot("steel");
-	public static final TagKey<Item> INGOTS_ZINC = ingot("zinc");
 	public static final TagKey<Item> SEEDS_SALMONBERRY = forge("seeds/salmonberry");
 	public static final TagKey<Item> SEEDS_CANTALOUPE = forge("seeds/cantaloupe");
 	public static final TagKey<Item> BONES = forge("bones");
@@ -175,7 +169,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> DUSTS_FLOUR_NUT = forge("dusts/flour/nut");
 	public static final TagKey<Item> DOUGH_CORN = forge("dough/corn");
 	public static final TagKey<Item> DOUGH_NUT = forge("dough/nut");
-	public static final TagKey<Item> BREAD_CORN = forge("bread/corn");
+	public static final TagKey<Item> CORNBREAD = forge("cornbread");
 	public static final TagKey<Item> BURGER_BUN = forge("burger_bun");
 	public static final TagKey<Item> COOKIES = forge("cookies");
 	public static final TagKey<Item> COOKIES_SOURCE_BERRY = forge("cookies/source_berry");
@@ -187,7 +181,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> DRINKS_TEQUILA = forge("drinks/tequila");
 
 	// Create
-	public static final TagKey<Item> POLISHED_ROSE_QUARTZ = Modid.C.it("polished_rose_quartz");
+	public static final TagKey<Item> POLISHED_ROSE_QUARTZ = Modid.CRE.it("polished_rose_quartz");
 
 	// Forbidden and Arcanus
 	public static final TagKey<Item> DRAGON_SCALE = Modid.FA.it("dragon_scale");

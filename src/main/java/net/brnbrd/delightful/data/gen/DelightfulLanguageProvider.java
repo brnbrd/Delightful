@@ -4,8 +4,12 @@ import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.common.block.DelightfulBlocks;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.knife.DKnifeItem;
+import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.data.PackOutput;
+import net.minecraft.tags.TagKey;
 import net.minecraftforge.common.data.LanguageProvider;
+import org.jetbrains.annotations.NotNull;
+import vectorwing.farmersdelight.common.tag.ForgeTags;
 
 public class DelightfulLanguageProvider extends LanguageProvider {
 	public DelightfulLanguageProvider(PackOutput output) {
@@ -17,6 +21,7 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		addKnives();
 		addItems();
 		addBlocks();
+		addTags();
 		addOther();
 	}
 
@@ -149,8 +154,37 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		addBlock(DelightfulBlocks.SOURCE_BERRY_COOKIE_TILE_WALL, "Source Berry Cookie Tile Wall");
 	}
 
+	private void addTags() {
+		// Delightful
+		addItemTag(DelightfulItemTags.ROASTED_MARSHMALLOWS, "Roasted Marshmallows");
+		addItemTag(DelightfulItemTags.HOT_SPICES, "Hot Spices");
+		addItemTag(DelightfulItemTags.PATTIES, "Patties");
+		addItemTag(DelightfulItemTags.VEGETARIAN_PATTIES, "Vegetarian Patties");
+
+		// Minecraft
+		addItemTag(DelightfulItemTags.FLOWERS_AZALEA, "Azalea Flowers");
+		addItemTag(DelightfulItemTags.FLOWERS_LAVENDER, "Lavender Flowers");
+
+		// Forge
+		addItemTag(DelightfulItemTags.FRUITS, "Fruits");
+		addItemTag(DelightfulItemTags.FRUITS_CITRUS, "Citrus Fruits");
+		addItemTag(DelightfulItemTags.FRUITS_PRICKLY_PEAR, "Prickly Pears");
+		addItemTag(DelightfulItemTags.TEA_LEAVES, "Tea Leaves");
+		addItemTag(DelightfulItemTags.TEA_LEAVES_GREEN, "Green Tea Leaves");
+		addItemTag(DelightfulItemTags.CHEESE, "Cheeses");
+		addItemTag(DelightfulItemTags.JAMS, "Jams");
+		addItemTag(DelightfulItemTags.NUTS, "Nuts");
+		addItemTag(DelightfulItemTags.COOKED_NUTS, "Cooked Nuts");
+		addItemTag(DelightfulItemTags.NUT_BUTTER, "Nut Butters");
+		addItemTag(DelightfulItemTags.ICE_CUBES, "Ice Cubes");
+		addItemTag(ForgeTags.BREAD, "Breads");
+		addItemTag(ForgeTags.DOUGH, "Doughs");
+	}
+
 	private void addOther() {
 		// Fluids
+		addItem(DelightfulItems.AGED_ROE, "Aged Roe");
+		add("fluid_type." + Delightful.MODID + ".aged_roe_type", "Aged Roe");
 		addItem(DelightfulItems.MATCHA_LATTE, "Matcha Latte");
 		add("fluid_type." + Delightful.MODID + ".matcha_latte_type", "Matcha Latte");
 		addItem(DelightfulItems.ENDER_NECTAR, "Ender Nectar");
@@ -163,6 +197,7 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		addItem(DelightfulItems.LONG_PRICKLY_PEAR_JUICE, "Prickly Pear Juice");
 		add("fluid_type." + Delightful.MODID + ".prickly_pear_juice_type", "Prickly Pear Juice");
 		add("fluid_type." + Delightful.MODID + ".long_prickly_pear_juice_type", "Prickly Pear Juice");
+		add("fluid_type." + Delightful.MODID + ".eggnog_type", "Eggnog");
 
 		// Other
 		add("delightful.overhauls", "Overhauls");
@@ -197,6 +232,15 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		add("config.jade.plugin_delightful.crop_progress", "Crop Progress");
 		add("config.jade.plugin_delightful.mushroom_colony", "Mushroom Colony");
 		add("config.jade.plugin_delightful.pie_icons", "Pie Icons");
+	}
+
+	public void addItemTag(@NotNull TagKey<?> tag, @NotNull String translation) {
+		add(
+			"tag.item." + tag.location()
+				.toLanguageKey()
+				.replace("/", "."),
+			translation
+		);
 	}
 
 	public void addDescription(String key, String value) {

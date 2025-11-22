@@ -66,11 +66,11 @@
       "required": false
     },
     {
-      "id": "environmental:fennec_fox",
+      "id": "environmental:koi",
       "required": false
     },
     {
-      "id": "environmental:koi",
+      "id": "environmental:reindeer",
       "required": false
     },
     {
@@ -83,6 +83,10 @@
     },
     {
       "id": "environmental:yak",
+      "required": false
+    },
+    {
+      "id": "environmental:zebra",
       "required": false
     },
     {
@@ -206,67 +210,47 @@
       "required": false
     },
     {
-      "id": "fishofthieves:ancientscale",
+      "id": "frozenup:chilloo",
       "required": false
     },
     {
-      "id": "fishofthieves:battlegill",
+      "id": "frozenup:penguin",
       "required": false
     },
     {
-      "id": "fishofthieves:devilfish",
+      "id": "frozenup:reindeer",
       "required": false
     },
     {
-      "id": "fishofthieves:islehopper",
+      "id": "sullysmod:lanternfish",
       "required": false
     },
     {
-      "id": "fishofthieves:plentifin",
+      "id": "sullysmod:piranha",
       "required": false
     },
     {
-      "id": "fishofthieves:pondie",
+      "id": "sullysmod:tortoise",
       "required": false
     },
     {
-      "id": "fishofthieves:splashtail",
+      "id": "habitat:pooka",
       "required": false
     },
     {
-      "id": "fishofthieves:stormfish",
+      "id": "goated:geep",
       "required": false
     },
     {
-      "id": "fishofthieves:wildsplash",
+      "id": "biomemakeover:glowfish",
       "required": false
     },
     {
-      "id": "fishofthieves:wrecker",
+      "id": "biomemakeover:helmit_crab",
       "required": false
     },
     {
-      "id": "crittersandcompanions:dumbo_octopus",
-      "required": false
-    },
-    {
-      "id": "crittersandcompanions:ferret",
-      "required": false
-    },
-    {
-      "id": "crittersandcompanions:koi_fish",
-      "required": false
-    },
-    {
-      "id": "crittersandcompanions:otter",
-      "required": false
-    },
-    {
-      "id": "crittersandcompanions:red_panda",
-      "required": false
-    },
-    {
-      "id": "friendsandfoes:moobloom",
+      "id": "biomemakeover:toad",
       "required": false
     },
     {
@@ -314,47 +298,71 @@
       "required": false
     },
     {
-      "id": "frozenup:chilloo",
+      "id": "crittersandcompanions:dumbo_octopus",
       "required": false
     },
     {
-      "id": "frozenup:penguin",
+      "id": "crittersandcompanions:ferret",
       "required": false
     },
     {
-      "id": "frozenup:reindeer",
+      "id": "crittersandcompanions:koi_fish",
       "required": false
     },
     {
-      "id": "sullysmod:lanternfish",
+      "id": "crittersandcompanions:otter",
       "required": false
     },
     {
-      "id": "sullysmod:piranha",
+      "id": "crittersandcompanions:red_panda",
       "required": false
     },
     {
-      "id": "sullysmod:tortoise",
+      "id": "hedgehog:hedgehog",
       "required": false
     },
     {
-      "id": "habitat:pooka",
+      "id": "fishofthieves:ancientscale",
       "required": false
     },
     {
-      "id": "goated:geep",
+      "id": "fishofthieves:battlegill",
       "required": false
     },
     {
-      "id": "biomemakeover:glowfish",
+      "id": "fishofthieves:devilfish",
       "required": false
     },
     {
-      "id": "biomemakeover:helmit_crab",
+      "id": "fishofthieves:islehopper",
       "required": false
     },
     {
-      "id": "biomemakeover:toad",
+      "id": "fishofthieves:plentifin",
+      "required": false
+    },
+    {
+      "id": "fishofthieves:pondie",
+      "required": false
+    },
+    {
+      "id": "fishofthieves:splashtail",
+      "required": false
+    },
+    {
+      "id": "fishofthieves:stormfish",
+      "required": false
+    },
+    {
+      "id": "fishofthieves:wildsplash",
+      "required": false
+    },
+    {
+      "id": "fishofthieves:wrecker",
+      "required": false
+    },
+    {
+      "id": "friendsandfoes:moobloom",
       "required": false
     },
     {
@@ -383,10 +391,6 @@
     },
     {
       "id": "farmlife:domestic_tribull",
-      "required": false
-    },
-    {
-      "id": "hedgehog:hedgehog",
       "required": false
     },
     {

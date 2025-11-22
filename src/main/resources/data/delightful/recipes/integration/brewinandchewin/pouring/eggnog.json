@@ -1,0 +1,30 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "brewinandchewin"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "snowyspirit:eggnog"
+        }
+      ],
+      "recipe": {
+        "type": "brewinandchewin:keg_pouring",
+        "container": {
+          "item": "minecraft:glass_bottle"
+        },
+        "amount": 250,
+        "filling": true,
+        "fluid": "delightful:eggnog",
+        "output": {
+          "item": "snowyspirit:eggnog"
+        },
+        "strict": false
+      }
+    }
+  ]
+}

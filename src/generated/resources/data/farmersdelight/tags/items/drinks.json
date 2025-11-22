@@ -46,6 +46,10 @@
     {
       "id": "windswept:ginger_tea",
       "required": false
+    },
+    {
+      "id": "snowyspirit:eggnog",
+      "required": false
     }
   ]
 }

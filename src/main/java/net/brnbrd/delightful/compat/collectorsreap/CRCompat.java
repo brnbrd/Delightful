@@ -1,5 +1,6 @@
-package net.brnbrd.delightful.compat;
+package net.brnbrd.delightful.compat.collectorsreap;
 
+import net.brnbrd.delightful.compat.Modid;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 

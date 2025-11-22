@@ -1,0 +1,61 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "aged_roe"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "brewinandchewin"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "letfishlove"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:roe"
+          }
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:salt"
+          }
+        }
+      ],
+      "recipe": {
+        "type":"brewinandchewin:fermenting",
+        "basefluid": {
+          "count": 250,
+          "fluid": "minecraft:water"
+        },
+        "experience": 1.0,
+        "fermentingtime": 9600,
+        "ingredients":[
+          {
+            "tag": "forge:roe"
+          },
+          {
+            "tag": "forge:roe"
+          },
+          {
+            "tag": "forge:salt"
+          }
+        ],
+        "recipe_book_tab":"meals",
+        "result":{
+          "count": 250,
+          "fluid": "delightful:aged_roe"
+        },
+        "temperature": 2
+      }
+    }
+  ]
+}

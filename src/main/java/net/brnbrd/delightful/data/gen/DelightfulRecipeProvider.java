@@ -163,16 +163,16 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.requires(Items.COCOA_BEANS)
 			.requires(ForgeTags.MILK)
 			.requires(Items.SUGAR)
-			.requires(DelightfulItemTags.COOKED_MARSHMALLOW_STICK)
+			.requires(DelightfulItemTags.ROASTED_MARSHMALLOWS)
 			.requires(ModItems.HONEY_COOKIE.get())
-			.unlockedBy("has_cooked_marshmallow_stick", has(DelightfulItemTags.COOKED_MARSHMALLOW_STICK)),
+			.unlockedBy("has_cooked_marshmallow_stick", has(DelightfulItemTags.ROASTED_MARSHMALLOWS)),
 			"food/smore", finished, enabled(DelightfulItems.SMORE), tagEmpty(DelightfulItemTags.CHOCOLATE));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.SMORE.get())
 			.requires(ModItems.HONEY_COOKIE.get())
 			.requires(DelightfulItemTags.CHOCOLATE)
-			.requires(DelightfulItemTags.COOKED_MARSHMALLOW_STICK)
+			.requires(DelightfulItemTags.ROASTED_MARSHMALLOWS)
 			.requires(ModItems.HONEY_COOKIE.get())
-			.unlockedBy("has_cooked_marshmallow_stick", has(DelightfulItemTags.COOKED_MARSHMALLOW_STICK)),
+			.unlockedBy("has_cooked_marshmallow_stick", has(DelightfulItemTags.ROASTED_MARSHMALLOWS)),
 			"food/smore_from_chocolate", finished, enabled(DelightfulItems.SMORE), not(tagEmpty(DelightfulItemTags.CHOCOLATE)));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.GLOW_JAM_COOKIE.get(), 8)
 			.requires(DelightfulItemTags.JAMS_GLOW)
@@ -287,7 +287,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.define('n', DelightfulItemTags.COOKED_NUTS)
 			.define('d', ForgeTags.DOUGH)
 			.define('s', DelightfulItemTags.FRUITS_CITRUS)
-			.define('g', DelightfulItemTags.HOT_SPICE)
+			.define('g', DelightfulItemTags.HOT_SPICES)
 			.unlockedBy("has_nuts", has(DelightfulItemTags.COOKED_NUTS)),
 			"food/baklava", finished, enabled(DelightfulItems.BAKLAVA), not(tagEmpty(DelightfulItemTags.FRUITS_CITRUS)));
 		wrap(ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, DelightfulItems.BAKLAVA.get(), 1)
@@ -298,7 +298,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.define('n', DelightfulItemTags.COOKED_NUTS)
 			.define('d', ForgeTags.DOUGH)
 			.define('s', Items.SUGAR)
-			.define('g', DelightfulItemTags.HOT_SPICE)
+			.define('g', DelightfulItemTags.HOT_SPICES)
 			.unlockedBy("has_nuts", has(DelightfulItemTags.COOKED_NUTS)),
 			"food/baklava_no_citrus", finished, enabled(DelightfulItems.BAKLAVA), tagEmpty(DelightfulItemTags.FRUITS_CITRUS));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.BAKLAVA.get(), 1)
@@ -389,14 +389,14 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			"cooking/animal_oil_bottle", finished, enabled(DelightfulItems.ANIMAL_OIL_BOTTLE));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
 			DelightfulItems.JAM_JAR.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F, Items.GLASS_BOTTLE)
-			.addIngredient(Ingredient.of(DelightfulItemTags.FRUITS_SWEET), 3)
-			.addIngredient(Items.SUGAR)
-			.unlockedBy("has_sweet_fruit", has(DelightfulItemTags.FRUITS_SWEET)),
+			.addIngredient(Ingredient.of(DelightfulItemTags.FRUITS), 3)
+			.addIngredient(Items.SUGAR, 2)
+			.unlockedBy("has_fruit", has(DelightfulItemTags.FRUITS)),
 			"food/cooking/jam_jar", finished, enabled(DelightfulItems.JAM_JAR), not(modLoaded(Modid.BC.get())), not(modLoaded(Modid.HH.get())), not(modLoaded(Modid.FRD.get())));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
 			DelightfulItems.GLOW_JAM_JAR.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F, Items.GLASS_BOTTLE)
 			.addIngredient(Ingredient.of(DelightfulItemTags.FRUITS_GLOW_BERRIES), 3)
-			.addIngredient(Items.SUGAR)
+			.addIngredient(Items.SUGAR, 3)
 			.unlockedBy("has_glow_berries", has(DelightfulItemTags.FRUITS_GLOW_BERRIES)),
 			"food/cooking/glow_jam_jar", finished, enabled(DelightfulItems.GLOW_JAM_JAR), not(modLoaded(Modid.BC.get())), not(modLoaded(Modid.HH.get())), not(modLoaded(Modid.FRD.get())));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
@@ -429,7 +429,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.addIngredient(ForgeTags.RAW_PORK)
 			.addIngredient(DelightfulItemTags.VEGETABLES_CACTUS)
 			.addIngredient(ModItems.TOMATO_SAUCE.get())
-			.addIngredient(DelightfulItemTags.HOT_SPICE)
+			.addIngredient(DelightfulItemTags.HOT_SPICES)
 			.addIngredient(DelightfulItemTags.VEGETABLES_CORN)
 			.unlockedBy("has_cactus", has(DelightfulItemTags.VEGETABLES_CACTUS))
 			.setRecipeBookTab(CookingPotRecipeBookTab.MEALS),
@@ -439,7 +439,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.addIngredient(ForgeTags.RAW_PORK)
 			.addIngredient(DelightfulItemTags.VEGETABLES_CACTUS)
 			.addIngredient(ModItems.TOMATO_SAUCE.get())
-			.addIngredient(DelightfulItemTags.HOT_SPICE)
+			.addIngredient(DelightfulItemTags.HOT_SPICES)
 			.addIngredient(ForgeTags.VEGETABLES)
 			.unlockedBy("has_cactus", has(DelightfulItemTags.VEGETABLES_CACTUS))
 			.setRecipeBookTab(CookingPotRecipeBookTab.MEALS),
@@ -728,21 +728,21 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.addIngredient(Items.HONEY_BOTTLE)
 			.addIngredient(Items.KELP)
 			.unlockedBy("has_salmonberries", has(DelightfulItemTags.FRUITS_SALMONBERRIES)),
-			"gummy/salmonberries", finished, enabled(DelightfulItems.SALMONBERRIES), enabled(DelightfulItems.SALMONBERRY_GUMMY));
+			"gummy/salmonberries", finished, modLoaded(Modid.CR.get()), enabled(DelightfulItems.SALMONBERRIES), enabled(DelightfulItems.SALMONBERRY_GUMMY));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(DelightfulItems.MATCHA_GUMMY.get(), 1, 200, 1F)
 			.addIngredient(DelightfulItemTags.MATCHA)
 			.addIngredient(Items.SUGAR)
 			.addIngredient(Items.HONEY_BOTTLE)
 			.addIngredient(Items.KELP)
 			.unlockedBy("has_matcha", has(DelightfulItemTags.MATCHA)),
-			"gummy/matcha", finished, enabled(DelightfulItems.MATCHA), enabled(DelightfulItems.MATCHA_GUMMY));
+			"gummy/matcha", finished, modLoaded(Modid.CR.get()), enabled(DelightfulItems.MATCHA), enabled(DelightfulItems.MATCHA_GUMMY));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(DelightfulItems.CANTALOUPE_GUMMY.get(), 1, 200, 1F)
 			.addIngredient(DelightfulItemTags.FRUITS_CANTALOUPE)
 			.addIngredient(Items.SUGAR)
 			.addIngredient(Items.HONEY_BOTTLE)
 			.addIngredient(Items.KELP)
 			.unlockedBy("has_cantaloupe", has(DelightfulItemTags.FRUITS_CANTALOUPE)),
-			"gummy/cantaloupe", finished, enabled(DelightfulItems.CANTALOUPE), enabled(DelightfulItems.CANTALOUPE_GUMMY));
+			"gummy/cantaloupe", finished, modLoaded(Modid.CR.get()), enabled(DelightfulItems.CANTALOUPE), enabled(DelightfulItems.CANTALOUPE_GUMMY));
 
 		// Unwrappables
 		ConditionalRecipe.builder()

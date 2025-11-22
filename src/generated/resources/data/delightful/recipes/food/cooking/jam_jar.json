@@ -38,13 +38,16 @@
         "experience": 0.35,
         "ingredients": [
           {
-            "tag": "forge:fruits/sweet"
+            "tag": "forge:fruits"
           },
           {
-            "tag": "forge:fruits/sweet"
+            "tag": "forge:fruits"
           },
           {
-            "tag": "forge:fruits/sweet"
+            "tag": "forge:fruits"
+          },
+          {
+            "item": "minecraft:sugar"
           },
           {
             "item": "minecraft:sugar"

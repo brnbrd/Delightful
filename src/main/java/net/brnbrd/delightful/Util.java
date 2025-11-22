@@ -48,6 +48,7 @@ public class Util {
 	public static final Modid[] EMPTY = new Modid[]{};
 	public static final String MC = "minecraft";
 	public static final String LOADER = "forge";
+	public static final String COMMON = "c";
 	public static final UUID BLOCK_REACH = UUID.fromString("C18598A9-F66A-44E7-9CE1-99B1EE178678");
 	public static final UUID ENTITY_REACH = UUID.fromString("61F992E6-276F-4D2B-88A7-823CB64BA459");
 

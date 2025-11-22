@@ -120,7 +120,7 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
 [[dependencies.delightful]]
     modId="seasonals"
     mandatory=false
-    versionRange="[0,)"
+    versionRange="[1.20.1-5,)"
     ordering="AFTER"
     side="BOTH"
 
@@ -218,7 +218,7 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
 [[dependencies.delightful]]
     modId="atmospheric"
     mandatory=false
-    versionRange="[6,)"
+    versionRange="[6.1,)"
     ordering="AFTER"
     side="BOTH"
 
@@ -611,5 +611,33 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
 	modId="nirvana"
 	mandatory=false
 	versionRange="[1.2,)"
+	ordering="AFTER"
+	side="BOTH"
+
+[[dependencies.delightful]]
+	modId="letfishlove"
+	mandatory=false
+	versionRange="[2.1,)"
+	ordering="AFTER"
+	side="BOTH"
+
+[[dependencies.delightful]]
+	modId="veggiesdelight"
+	mandatory=false
+	versionRange="[1.9,)"
+	ordering="AFTER"
+	side="BOTH"
+
+[[dependencies.delightful]]
+	modId="oceansdelight"
+	mandatory=false
+	versionRange="[1,)"
+	ordering="AFTER"
+	side="BOTH"
+
+[[dependencies.delightful]]
+	modId="snowyspirit"
+	mandatory=false
+	versionRange="[1.20-3,)"
 	ordering="AFTER"
 	side="BOTH"

@@ -1,6 +1,6 @@
 package net.brnbrd.delightful.compat.ars_nouveau;
 
-import net.brnbrd.delightful.common.item.food.GummyItem;
+import net.brnbrd.delightful.compat.collectorsreap.GummyItem;
 import net.brnbrd.delightful.compat.Modid;
 
 public class SourceBerryGummyItem extends GummyItem {

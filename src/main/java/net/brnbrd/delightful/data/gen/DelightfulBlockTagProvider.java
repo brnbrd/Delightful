@@ -32,7 +32,6 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 			.add(DelightfulBlocks.WILD_SALMONBERRIES.get());
 		this.tag(ModTags.MINEABLE_WITH_KNIFE).addTag(ForgeTags.MINEABLE_WITH_KNIFE);
 
-
 		// Delightful
 		this.tag(DelightfulBlockTags.DROPS_STRAW)
 			.addOptional(Modid.BWG.rl(BWGCompat.prairie_grass))

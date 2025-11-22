@@ -1,0 +1,43 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "brewinandchewin"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "brewincompatdelight:blue_curacao"
+        }
+      ],
+      "recipe": {
+        "type": "brewinandchewin:fermenting",
+        "basefluid": {
+          "count": 1000,
+          "fluid": "minecraft:water"
+        },
+        "experience": 1.0,
+        "fermentingtime": 9600,
+        "ingredients": [
+          {
+            "tag":"forge:fruits/orange"
+          },
+          {
+            "tag":"forge:fruits/orange"
+          },
+          {
+            "item":"minecraft:lapis_lazuli"
+          }
+        ],
+        "recipe_book_tab": "drinks",
+        "result": {
+          "count": 1000,
+          "fluid": "brewincompatdelight:blue_curacao"
+        },
+        "temperature": 3
+      }
+    }
+  ]
+}

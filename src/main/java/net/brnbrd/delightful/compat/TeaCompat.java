@@ -8,7 +8,7 @@ import java.util.function.Supplier;
 public class TeaCompat {
 	public static Supplier<MobEffect> getGreenTeaEffect() {
 		return () ->
-			Modid.FR.effect("vitality",
+			Modid.RESP.effect("vitality",
 			Modid.YH.effect("tea_polyphenols",
 			MobEffects.REGENERATION // Backup effect
 		));

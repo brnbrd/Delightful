@@ -1,11 +1,18 @@
 {
   "values": [
     "#forge:berries",
-    "#forge:fruits/sweet",
     "#forge:fruits/citrus",
     "#forge:fruits/chorus",
     "#forge:fruits/green_apple",
     "#forge:fruits/yucca",
+    {
+      "id": "#forge:black_grapes",
+      "required": false
+    },
+    {
+      "id": "#forge:green_grapes",
+      "required": false
+    },
     {
       "id": "ars_nouveau:mendosteen_pod",
       "required": false

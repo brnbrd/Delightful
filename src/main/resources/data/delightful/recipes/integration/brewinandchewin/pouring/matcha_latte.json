@@ -14,6 +14,9 @@
       ],
       "recipe": {
         "type": "brewinandchewin:keg_pouring",
+        "container": {
+          "item": "minecraft:glass_bottle"
+        },
         "amount": 250,
         "filling": true,
         "fluid": "delightful:matcha_latte",

@@ -4,6 +4,18 @@
     "#forge:juices/prickly_pear",
     "#forge:juices/citrus",
     {
+      "id": "fruitsdelight:hamimelon_juice",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:pear_juice",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:kiwi_juice",
+      "required": false
+    },
+    {
       "id": "hearthandharvest:blueberry_juice",
       "required": false
     },

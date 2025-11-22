@@ -1,6 +1,7 @@
 package net.brnbrd.delightful.common.fluid;
 
 import net.brnbrd.delightful.Delightful;
+import net.brnbrd.delightful.compat.brewinandchewin.AgedRoeFluidType;
 import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -13,6 +14,18 @@ import net.minecraftforge.registries.RegistryObject;
 public class DelightfulFluids {
 	public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(ForgeRegistries.FLUIDS, Delightful.MODID);
 	public static final DeferredRegister<FluidType> TYPES = DeferredRegister.create(ForgeRegistries.Keys.FLUID_TYPES, Delightful.MODID);
+
+	public static final RegistryObject<FluidType> AGED_ROE_TYPE = TYPES.register("aged_roe_type",
+		AgedRoeFluidType::new);
+	public static final RegistryObject<FlowingFluid> AGED_ROE = FLUIDS.register("aged_roe",
+		() -> new ForgeFlowingFluid.Source(DelightfulFluids.AGED_ROE_PROPERTIES));
+	public static final RegistryObject<FlowingFluid> FLOWING_AGED_ROE = FLUIDS.register("flowing_aged_roe",
+		() -> new ForgeFlowingFluid.Flowing(DelightfulFluids.AGED_ROE_PROPERTIES));
+	public static final ForgeFlowingFluid.Properties AGED_ROE_PROPERTIES = new ForgeFlowingFluid.Properties(
+		AGED_ROE_TYPE,
+		AGED_ROE,
+		FLOWING_AGED_ROE
+	);
 
 	public static final RegistryObject<FluidType> MATCHA_LATTE_TYPE = TYPES.register("matcha_latte_type",
 		() -> new DFluidType(0xff7FA036));
@@ -84,6 +97,18 @@ public class DelightfulFluids {
 		LONG_PRICKLY_PEAR_JUICE_TYPE,
 		LONG_PRICKLY_PEAR_JUICE,
 		FLOWING_LONG_PRICKLY_PEAR_JUICE
+	);
+
+	public static final RegistryObject<FluidType> EGGNOG_TYPE = TYPES.register("eggnog_type",
+		() -> new DFluidType(0xffD8D5B6));
+	public static final RegistryObject<FlowingFluid> EGGNOG = FLUIDS.register("eggnog",
+		() -> new ForgeFlowingFluid.Source(DelightfulFluids.EGGNOG_PROPERTIES));
+	public static final RegistryObject<FlowingFluid> FLOWING_EGGNOG = FLUIDS.register("flowing_eggnog",
+		() -> new ForgeFlowingFluid.Flowing(DelightfulFluids.EGGNOG_PROPERTIES));
+	public static final ForgeFlowingFluid.Properties EGGNOG_PROPERTIES = new ForgeFlowingFluid.Properties(
+		EGGNOG_TYPE,
+		EGGNOG,
+		FLOWING_EGGNOG
 	);
 
 	public static void create(IEventBus bus) {

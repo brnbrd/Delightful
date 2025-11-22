@@ -1,6 +1,10 @@
 {
   "values": [
     {
+      "id": "environmental:zebra",
+      "required": false
+    },
+    {
       "id": "naturalist:zebra",
       "required": false
     }

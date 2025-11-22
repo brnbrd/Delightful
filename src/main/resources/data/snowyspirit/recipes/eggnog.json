@@ -1,0 +1,55 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:mod_loaded",
+            "modid": "farmersrespite"
+          }
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "snowyspirit"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "snowyspirit:eggnog"
+        },
+        {
+          "type": "snowyspirit:flag",
+          "flag": "eggnog"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "recipe_book_tab": "misc",
+        "cookingtime": 100,
+        "experience": 1.0,
+        "ingredients": [
+          {
+            "tag": "forge:milk"
+          },
+          {
+            "tag": "forge:eggs"
+          },
+          {
+            "item": "minecraft:sugar"
+          },
+          {
+            "tag": "forge:vegetables/ginger"
+          }
+        ],
+        "container": {
+          "item": "minecraft:glass_bottle"
+        },
+        "result": {
+          "item": "snowyspirit:eggnog",
+          "count": 1
+        }
+      }
+    }
+  ]
+}

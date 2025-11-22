@@ -1,0 +1,42 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "seasonals:mixed_berry_muffin"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "cookingtime": 200,
+        "experience": 0.35,
+        "ingredients": [
+          {
+            "tag": "forge:fruits/sweet_berries"
+          },
+          {
+            "tag": "forge:fruits/glow_berries"
+          },
+          {
+            "tag": "forge:dough"
+          },
+          {
+            "tag": "forge:milk"
+          },
+          {
+            "tag": "forge:eggs"
+          },
+          {
+            "item": "minecraft:sugar"
+          }
+        ],
+        "result": {
+          "item": "seasonals:mixed_berry_muffin",
+          "count": 2
+        }
+      }
+    }
+  ]
+}

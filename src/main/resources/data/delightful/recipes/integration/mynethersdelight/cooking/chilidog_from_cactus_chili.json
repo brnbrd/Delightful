@@ -21,7 +21,7 @@
         "experience": 0.35,
         "ingredients": [
           {
-            "tag": "forge:hot_spice"
+            "tag": "delightful:hot_spices"
           },
           {
             "tag": "forge:raw_pork"

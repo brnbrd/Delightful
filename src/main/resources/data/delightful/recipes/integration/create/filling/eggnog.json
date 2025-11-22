@@ -1,0 +1,48 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "create"
+        },
+        {
+          "type": "forge:or",
+          "values": [
+            {
+              "type": "forge:mod_loaded",
+              "modid": "farmersrespite"
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "brewinandchewin"
+            }
+          ]
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "snowyspirit:eggnog"
+        }
+      ],
+      "recipe": {
+        "type": "create:filling",
+        "ingredients": [
+          {
+            "item": "minecraft:glass_bottle"
+          },
+          {
+            "amount": 250,
+            "fluid": "delightful:eggnog",
+            "nbt": {}
+          }
+        ],
+        "results": [
+          {
+            "item": "snowyspirit:eggnog"
+          }
+        ]
+      }
+    }
+  ]
+}

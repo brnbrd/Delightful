@@ -1,0 +1,43 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "veggiesdelight:vegan_pizza"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "key": {
+          "b": {
+            "tag": "forge:crops/bellpepper"
+          },
+          "v": {
+            "tag": "forge:vegetables"
+          },
+          "o": {
+            "tag": "forge:vegetables/onion"
+          },
+          "t": {
+            "item": "farmersdelight:tomato_sauce"
+          },
+          "w": {
+            "tag": "forge:grain/wheat"
+          }
+        },
+        "pattern": [
+          " b ",
+          "vto",
+          "www"
+        ],
+        "result": {
+          "item": "veggiesdelight:vegan_pizza"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

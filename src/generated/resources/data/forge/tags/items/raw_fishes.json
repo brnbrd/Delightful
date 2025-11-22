@@ -50,19 +50,19 @@
       "required": false
     },
     {
-      "id": "spawn:tuna_chunk",
-      "required": false
-    },
-    {
-      "id": "spawn:angler_fish",
-      "required": false
-    },
-    {
       "id": "biomemakeover:glowfish",
       "required": false
     },
     {
       "id": "crittersandcompanions:koi_fish",
+      "required": false
+    },
+    {
+      "id": "spawn:tuna_chunk",
+      "required": false
+    },
+    {
+      "id": "spawn:angler_fish",
       "required": false
     },
     {

@@ -52,10 +52,9 @@ public interface IConfigured extends ItemLike {
 	}
 
 	default boolean isLoaded() {
-		Modid[] dependencies = getModid();
+		final Modid[] dependencies = this.getModid();
 		return (
-			getModid().length < 1 || // Empty modid means just load
-			getModid() == null || // Should not be possible, but worth a check
+			dependencies.length < 1 || // Empty modid means just load
 			Mods.loaded(getStrategy(), dependencies)
 		);
 	}

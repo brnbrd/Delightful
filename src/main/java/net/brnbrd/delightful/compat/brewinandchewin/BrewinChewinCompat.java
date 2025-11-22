@@ -16,6 +16,7 @@ import org.jetbrains.annotations.NotNull;
 public class BrewinChewinCompat {
 	public static final ResourceLocation glowMarmalade = Modid.BC.rl("glow_berry_marmalade");
 	public static final TagKey<Item> FERMENTED_DRINKS = Modid.BC.it("fermented_drinks");
+	public static final TagKey<Item> PIZZA_TOPPINGS = Modid.BC.it("pizza_toppings");
 
 	public static @NotNull Supplier<MobEffect> getTipsy() {
 		return () -> Modid.BC.effect("tipsy", MobEffects.WEAKNESS);

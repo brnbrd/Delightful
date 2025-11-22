@@ -10,6 +10,7 @@ import net.brnbrd.delightful.compat.abnormals.AquaticCompat;
 import net.brnbrd.delightful.compat.abnormals.AtmosphericCompat;
 import net.brnbrd.delightful.compat.ars_nouveau.*;
 import net.brnbrd.delightful.compat.brewinandchewin.BrewinChewinCompat;
+import net.brnbrd.delightful.compat.collectorsreap.GummyItem;
 import net.brnbrd.delightful.compat.undergarden.UndergardenCompat;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
@@ -148,12 +149,14 @@ public class DelightfulItems {
 		() -> new CoconutCurryItem((new Item.Properties()).food(Nutrition.COCONUT_CURRY).stacksTo(16).craftRemainder(Items.BOWL)));
 	public static final RegistryObject<Item> FIELD_SALAD = registerItem("field_salad",
 		() -> new DConsumableItem((new Item.Properties()).food(Nutrition.FIELD_SALAD).stacksTo(16).craftRemainder(Items.BOWL), true, false));
+	public static final RegistryObject<Item> AGED_ROE = registerItem("aged_roe",
+		() -> new CompatConsumableItem((new Item.Properties()).stacksTo(16).food(Nutrition.AGED_ROE).craftRemainder(Items.GLASS_BOTTLE), true, false, Modid.BC, Modid.LFL));
 	public static final RegistryObject<Item> MATCHA_LATTE = registerItem("matcha_latte",
 		() -> new DrinkItem((new Item.Properties()).food(Nutrition.MATCHA_LATTE).stacksTo(16).craftRemainder(Items.GLASS_BOTTLE), true, false));
 	public static final RegistryObject<Item> BERRY_MATCHA_LATTE = registerItem("berry_matcha_latte",
 		() -> new DrinkItem((new Item.Properties()).food(Nutrition.BERRY_MATCHA_LATTE).stacksTo(16).craftRemainder(Items.GLASS_BOTTLE), true, false));
-	public static final RegistryObject<Item> ENDER_NECTAR = registerItem("ender_nectar",
-		() -> Modid.BC.loaded() ?
+	public static final RegistryObject<Item> ENDER_NECTAR = registerItem("ender_nectar", () ->
+		Modid.BC.loaded() ?
 		BrewinChewinCompat.ENDER_NECTAR.get() :
 		new EnderNectarItem((new Item.Properties()).food(Nutrition.ENDER_NECTAR).stacksTo(16).craftRemainder(Items.GLASS_BOTTLE)));
 	public static final RegistryObject<Item> AZALEA_TEA = registerItem("azalea_tea",
@@ -207,14 +210,14 @@ public class DelightfulItems {
 	public static final RegistryObject<Item> STUFFED_CANTALOUPE = registerConsumable("stuffed_cantaloupe", Nutrition.STUFFED_CANTALOUPE, Items.BOWL, true, false);
 
 	// Gummies
-	public static final RegistryObject<Item> SALMONBERRY_GUMMY = registerItem("salmonberry_gummy",
-			() -> new GummyItem((new Item.Properties()).food(Nutrition.SALMONBERRY_GUMMY)));
-	public static final RegistryObject<Item> MATCHA_GUMMY = registerItem("matcha_gummy",
-			() -> new GummyItem((new Item.Properties()).food(Nutrition.MATCHA_GUMMY)));
-	public static final RegistryObject<Item> CANTALOUPE_GUMMY = registerItem("cantaloupe_gummy",
-			() -> new GummyItem((new Item.Properties()).food(Nutrition.CANTALOUPE_GUMMY)));
-	public static final RegistryObject<Item> SOURCE_BERRY_GUMMY = registerItem("source_berry_gummy",
-			() -> new SourceBerryGummyItem((new Item.Properties()).food(ArsNouveauCompat.SOURCE_BERRY_GUMMY)));
+	public static final RegistryObject<Item> SALMONBERRY_GUMMY = registerItem("salmonberry_gummy", () ->
+		new GummyItem((new Item.Properties()).food(Nutrition.SALMONBERRY_GUMMY)));
+	public static final RegistryObject<Item> MATCHA_GUMMY = registerItem("matcha_gummy", () ->
+		new GummyItem((new Item.Properties()).food(Nutrition.MATCHA_GUMMY)));
+	public static final RegistryObject<Item> CANTALOUPE_GUMMY = registerItem("cantaloupe_gummy", () ->
+		new GummyItem((new Item.Properties()).food(Nutrition.CANTALOUPE_GUMMY)));
+	public static final RegistryObject<Item> SOURCE_BERRY_GUMMY = registerItem("source_berry_gummy", () ->
+		new SourceBerryGummyItem((new Item.Properties()).food(ArsNouveauCompat.SOURCE_BERRY_GUMMY)));
 
 	// Registers food, optional craftRemainder
 	public static RegistryObject<Item> registerFood(String name, FoodProperties food, Item... remainder) {

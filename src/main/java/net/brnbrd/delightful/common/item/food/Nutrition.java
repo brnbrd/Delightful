@@ -3,6 +3,7 @@ package net.brnbrd.delightful.common.item.food;
 import net.brnbrd.delightful.compat.*;
 import net.brnbrd.delightful.compat.abnormals.NeapolitanCompat;
 import net.brnbrd.delightful.compat.brewinandchewin.BrewinChewinCompat;
+import net.brnbrd.delightful.compat.collectorsreap.CRCompat;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
@@ -45,6 +46,9 @@ public class Nutrition {
 		.effect(() -> new MobEffectInstance(CosmopolitanCompat.getTracer().get(), 1200, 0), 1F).build();
 	public static final FoodProperties NUT_BUTTER_BOTTLE = (new FoodProperties.Builder())
 		.nutrition(6).saturationMod(0.6F).build();
+	public static final FoodProperties AGED_ROE = (new FoodProperties.Builder())
+		.nutrition(8).saturationMod(0.75F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3600, 0), 1F).build();
 	public static final FoodProperties NUT_BUTTER_AND_JAM_SANDWICH = (new FoodProperties.Builder())
 		.nutrition(11).saturationMod(0.7F)
 		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3600, 0), 1F)

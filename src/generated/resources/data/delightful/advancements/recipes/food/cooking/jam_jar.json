@@ -4,11 +4,11 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_sweet_fruit": {
+          "has_fruit": {
             "conditions": {
               "items": [
                 {
-                  "tag": "forge:fruits/sweet"
+                  "tag": "forge:fruits"
                 }
               ]
             },
@@ -23,7 +23,7 @@
         },
         "requirements": [
           [
-            "has_sweet_fruit",
+            "has_fruit",
             "has_the_recipe"
           ]
         ],
