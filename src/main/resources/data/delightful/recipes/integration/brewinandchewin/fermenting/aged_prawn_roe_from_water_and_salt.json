@@ -5,7 +5,7 @@
       "conditions": [
         {
           "type": "delightful:enabled",
-          "value": "aged_roe"
+          "value": "aged_fish_roe"
         },
         {
           "type": "forge:mod_loaded",
@@ -19,37 +19,43 @@
           "type": "forge:not",
           "value": {
             "type": "forge:tag_empty",
-            "tag": "forge:roe"
+            "tag": "forge:roe/prawn"
           }
         },
         {
-          "type": "forge:tag_empty",
-          "tag": "forge:salt"
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:salt"
+          }
         }
       ],
       "recipe": {
         "type":"brewinandchewin:fermenting",
         "basefluid": {
-          "count": 250,
+          "count": 1000,
           "fluid": "minecraft:water"
         },
         "experience": 1.0,
         "fermentingtime": 9600,
         "ingredients":[
           {
-            "tag": "forge:roe"
+            "tag": "forge:roe/prawn"
           },
           {
-            "tag": "forge:roe"
+            "tag": "forge:roe/prawn"
           },
           {
-            "item": "minecraft:sea_pickle"
+            "tag": "forge:roe/prawn"
+          },
+          {
+            "tag": "forge:salt"
           }
         ],
         "recipe_book_tab":"meals",
         "result":{
-          "count": 250,
-          "fluid": "delightful:aged_roe"
+          "count": 1000,
+          "fluid": "delightful:aged_prawn_roe"
         },
         "temperature": 2
       }

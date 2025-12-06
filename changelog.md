@@ -4,7 +4,8 @@
 ## 3.7.7
 
 ### Updates
-- Added Aged Roe (for [Let Fish Love](https://www.curseforge.com/minecraft/mc-mods/let-fish-love))
+- Added Aged Fish Roe (for [Let Fish Love](https://www.curseforge.com/minecraft/mc-mods/let-fish-love) and [Brewin' and Chewin'](https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin))
+- Added Aged Prawn Roe (for [Let Fish Love](https://www.curseforge.com/minecraft/mc-mods/let-fish-love), [Brewin' and Chewin'](https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin), and [Collector's Reap](https://www.curseforge.com/minecraft/mc-mods/collectors-reap))
 - Added Sinigang Cup (for [Miner's Delight +](https://www.curseforge.com/minecraft/mc-mods/miners-delight-plus))
 - Placeable Mutton Pie, added Slice of Mutton Pie (for [Windswept!](https://www.curseforge.com/minecraft/mc-mods/windsweptmod))
   - Retexture of Mutton Pie available in `Delightful Overhauls` built-in resource pack

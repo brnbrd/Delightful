@@ -149,8 +149,6 @@ public class DelightfulItems {
 		() -> new CoconutCurryItem((new Item.Properties()).food(Nutrition.COCONUT_CURRY).stacksTo(16).craftRemainder(Items.BOWL)));
 	public static final RegistryObject<Item> FIELD_SALAD = registerItem("field_salad",
 		() -> new DConsumableItem((new Item.Properties()).food(Nutrition.FIELD_SALAD).stacksTo(16).craftRemainder(Items.BOWL), true, false));
-	public static final RegistryObject<Item> AGED_ROE = registerItem("aged_roe",
-		() -> new CompatConsumableItem((new Item.Properties()).stacksTo(16).food(Nutrition.AGED_ROE).craftRemainder(Items.GLASS_BOTTLE), true, false, Modid.BC, Modid.LFL));
 	public static final RegistryObject<Item> MATCHA_LATTE = registerItem("matcha_latte",
 		() -> new DrinkItem((new Item.Properties()).food(Nutrition.MATCHA_LATTE).stacksTo(16).craftRemainder(Items.GLASS_BOTTLE), true, false));
 	public static final RegistryObject<Item> BERRY_MATCHA_LATTE = registerItem("berry_matcha_latte",
@@ -167,6 +165,10 @@ public class DelightfulItems {
 		() -> new PricklyPearJuiceItem((new Item.Properties()).food(Nutrition.PRICKLY_PEAR_JUICE).craftRemainder(Items.GLASS_BOTTLE)));
 	public static final RegistryObject<Item> LONG_PRICKLY_PEAR_JUICE = registerItem("long_prickly_pear_juice",
 		() -> new PricklyPearJuiceItem((new Item.Properties()).food(Nutrition.LONG_PRICKLY_PEAR_JUICE).craftRemainder(Items.GLASS_BOTTLE), Modid.FR));
+	public static final RegistryObject<Item> AGED_FISH_ROE = registerItem("aged_fish_roe",
+		() -> new AgedFishRoeItem((new Item.Properties()).stacksTo(16).food(Nutrition.AGED_FISH_ROE).craftRemainder(Items.GLASS_BOTTLE), false));
+	public static final RegistryObject<Item> AGED_PRAWN_ROE = registerItem("aged_prawn_roe",
+		() -> new AgedPrawnRoeItem((new Item.Properties()).stacksTo(16).food(Nutrition.AGED_PRAWN_ROE).craftRemainder(Items.GLASS_BOTTLE), false));
 	public static final RegistryObject<Item> JAM_JAR = registerItem("jam_jar",
 		() -> new JamJarItem((new Item.Properties()).food(Nutrition.JAM_JAR).craftRemainder(Items.GLASS_BOTTLE), false, false));
 	public static final RegistryObject<Item> GLOW_JAM_JAR = registerItem("glow_jam_jar",

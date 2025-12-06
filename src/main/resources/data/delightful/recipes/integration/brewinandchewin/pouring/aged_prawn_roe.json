@@ -5,7 +5,11 @@
       "conditions": [
         {
           "type": "delightful:enabled",
-          "value": "aged_roe"
+          "value": "aged_fish_roe"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "aged_prawn_roe"
         },
         {
           "type": "forge:mod_loaded",
@@ -14,6 +18,10 @@
         {
           "type": "forge:mod_loaded",
           "modid": "letfishlove"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "letfishlove:pufferfish_roe"
         }
       ],
       "recipe": {
@@ -23,9 +31,9 @@
         },
         "amount": 250,
         "filling": true,
-        "fluid": "delightful:aged_roe",
+        "fluid": "delightful:aged_prawn_roe",
         "output": {
-          "item": "delightful:aged_roe"
+          "item": "delightful:aged_prawn_roe"
         },
         "strict": false
       }

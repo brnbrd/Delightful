@@ -90,7 +90,17 @@ public class JEIPlugin implements IModPlugin {
 			hiddenFluids.add(new FluidStack(DelightfulFluids.EGGNOG.get(), 1000));
 		}
 		if (!brewinChewinLoaded || !Modid.LFL.loaded()) {
-			hiddenFluids.add(new FluidStack(DelightfulFluids.AGED_ROE.get(), 1000));
+			hiddenFluids.addAll(List.of(
+				new FluidStack(DelightfulFluids.AGED_FISH_ROE.get(), 1000),
+				new FluidStack(DelightfulFluids.AGED_PRAWN_ROE.get(), 1000)
+			));
+		} else {
+			if (Util.tagEmpty(DelightfulItemTags.FISH_ROE)) {
+				hiddenFluids.add(new FluidStack(DelightfulFluids.AGED_FISH_ROE.get(), 1000));
+			}
+			if (Util.tagEmpty(DelightfulItemTags.PRAWN_ROE)) {
+				hiddenFluids.add(new FluidStack(DelightfulFluids.AGED_PRAWN_ROE.get(), 1000));
+			}
 		}
 		if (!farmersRespiteLoaded) {
 			hiddenFluids.addAll(List.of(

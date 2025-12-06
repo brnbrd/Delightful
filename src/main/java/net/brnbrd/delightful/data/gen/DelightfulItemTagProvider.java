@@ -336,6 +336,19 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.TOOLS_WRENCH).addOptional(Modid.FOR.rl("wrench"));
 		this.tag(ItemTags.TOOLS).addTag(DelightfulItemTags.TOOLS_WRENCH);
 		this.tag(DelightfulItemTags.WRENCHES).addTag(DelightfulItemTags.TOOLS_WRENCH);
+		this.tag(DelightfulItemTags.FISH_ROE)
+			.addOptional(Modid.LFL.rl("tropical_fish_roe"))
+			.addOptional(Modid.LFL.rl("salmon_roe"))
+			.addOptional(Modid.LFL.rl("pufferfish_roe"))
+			.addOptional(Modid.LFL.rl("cod_roe"))
+			.addOptional(Modid.LFL.rl("lanternfish_roe"))
+			.addOptional(Modid.LFL.rl("pike_roe"))
+			.addOptional(Modid.LFL.rl("lionfish_roe"))
+			.addOptional(Modid.LFL.rl("perch_roe"));
+		this.tag(DelightfulItemTags.PRAWN_ROE).addOptional(Modid.CR.rl("tiger_prawn_roe"));
+		this.tag(DelightfulItemTags.ROE)
+			.addTag(DelightfulItemTags.FISH_ROE)
+			.addTag(DelightfulItemTags.PRAWN_ROE);
 		this.tag(DelightfulItemTags.WATER)
 			.addTag(ForgeTags.BUCKETS_WATER)
 			.addOptional(Modid.MD.rl("water_cup"));
@@ -741,8 +754,9 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.EXQ.rl("ether_bulb_cookie"))
 			.addOptional(Modid.EXQ.rl("nightshade_berry_cookie"))
 			.addOptional(Modid.EXQ.rl("chorus_cookie"))
-			.addOptional(Modid.SEED.rl("rose_cookie"))
 			.addOptional(Modid.END.rl("chorus_cookie"))
+			.addOptional(Modid.ENDR.rl("uncanny_cookie"))
+			.addOptional(Modid.SEED.rl("rose_cookie"))
 			.addOptional(Modid.SS.rl("gingerbread_cookie"))
 			.addOptional(Modid.WS.rl("gingerbread_cookie"))
 			.addOptional(Util.rl("sunflowerdelight", "shortbread_cookie"))
@@ -901,7 +915,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.JAMS)
 			.addTag(DelightfulItemTags.NUT_BUTTER)
 			.add(DelightfulItems.ANIMAL_OIL_BOTTLE.get())
-			.add(DelightfulItems.AGED_ROE.get())
+			.add(DelightfulItems.AGED_FISH_ROE.get())
+			.add(DelightfulItems.AGED_PRAWN_ROE.get())
 			.add(DelightfulItems.SALMONBERRY_PIE.get())
 			.add(DelightfulItems.BAKLAVA.get());
 		this.addSelf(DelightfulItemTags.POLISHED_ROSE_QUARTZ);

@@ -1,4 +1,4 @@
-// 1.20.1	2025-11-15T12:18:12.1411784	delightful
+// 1.20.1	2025-12-06T12:30:00.0695229	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -19,7 +19,7 @@ fc7871a514ce92a33729b5ec2874b741254e5e97 data/brewinandchewin/tags/items/pizza_t
 9720eaa25059db4d31e67bec3e13db181891785c data/collectorsreap/tags/items/gummies.json
 eb347da20a32d366a80660d57d24de89df517142 data/cosmopolitan/tags/items/tracer_sources.json
 ed89bd00684e45c4198269c0053267c257e784c6 data/create/tags/items/polished_rose_quartz.json
-76d60280263bc5d0a4f2722a749caf4f24385e70 data/create/tags/items/upright_on_belt.json
+7aef960e3879d0dd1ec8257a9a5ce7da2912df8e data/create/tags/items/upright_on_belt.json
 3ec615c3b0619071ee2425164230a78256598991 data/create_sa/tags/items/heap_of_experience.json
 93e27377ca1c64c862cd4f76810c65106f132cea data/create_sa/tags/items/zinc_handle.json
 b306cd52d0a89b88fd149766a3ccc1f9d27d4e5f data/deeperdarker/tags/items/reinforced_echo_shard.json
@@ -79,7 +79,7 @@ eb335c62be7ce6cc733670d07248f7e305b31611 data/forge/tags/items/cooked_fishes.jso
 a948b48d3cbea884a1ace570d465fb8a81e6973e data/forge/tags/items/cooked_nuts.json
 9f77948b8bcc8ff9ce8d4f192f7156c733795ab7 data/forge/tags/items/cooked_rabbit.json
 522cf04b2689c42171edbe4fe3fa6e3fa9651b1f data/forge/tags/items/cooked_venison.json
-0c118f42af9b49c5a97eff49a37de6e0e7868a77 data/forge/tags/items/cookies.json
+0241b8264463bdfb13ee0fb533f130b9f9d07d6a data/forge/tags/items/cookies.json
 b909ff8d1fa9d605fe5c66fa82057da1bcfbc4cc data/forge/tags/items/cookies/source_berry.json
 2c61aada43234d73614242ee70d69d914508cfe1 data/forge/tags/items/cornbread.json
 7c0edbb702d3fbe9e1c68f07804da13ef22fe6ea data/forge/tags/items/crab_claw.json
@@ -185,6 +185,9 @@ b674043d5d31d5fb35d4b0eb555cd87fb7205aa6 data/forge/tags/items/raw_goat.json
 676cee16d107d62d62093f32df13eb8e934c7db9 data/forge/tags/items/raw_rabbit.json
 d5df2003d6210b443fc989b821eee01651146c3b data/forge/tags/items/raw_squid.json
 c28b2966b7751691456f3c7ae84cb77f31a4f245 data/forge/tags/items/raw_venison.json
+b19668ebca12404ae89df0122f89f248f93193e6 data/forge/tags/items/roe.json
+a1a30327f76baf85fdcf3271cbffea7a0f2a2e40 data/forge/tags/items/roe/fish.json
+0710de5847241f4563ef4c29c20f4f2e59fce1df data/forge/tags/items/roe/prawn.json
 eede30f09088aaf8a642eb4ea1ebc60e3b69e020 data/forge/tags/items/ropes.json
 848b08c97c587fbcfb7a9888e8c5ec73d0195075 data/forge/tags/items/salt.json
 1863090a459a6bd3ea7c25da18b235d67f6b4135 data/forge/tags/items/seeds.json

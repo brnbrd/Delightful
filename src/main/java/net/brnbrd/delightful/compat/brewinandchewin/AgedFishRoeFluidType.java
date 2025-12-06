@@ -8,11 +8,11 @@ import net.minecraftforge.common.SoundActions;
 import net.minecraftforge.fluids.FluidType;
 import java.util.function.Consumer;
 
-public class AgedRoeFluidType extends FluidType {
-	public static final ResourceLocation AGED_ROE_STILL_TEXTURE = Util.delight("block/aged_roe_still");
-	public static final ResourceLocation AGED_ROE_FLOWING_TEXTURE = Util.delight("block/aged_roe_flow");
+public class AgedFishRoeFluidType extends FluidType {
+	public static final ResourceLocation AGED_FISH_ROE_STILL_TEXTURE = Util.delight("block/aged_fish_roe_still");
+	public static final ResourceLocation AGED_FISH_ROE_FLOWING_TEXTURE = Util.delight("block/aged_fish_roe_flow");
 
-	public AgedRoeFluidType() {
+	public AgedFishRoeFluidType() {
 		super(FluidType.Properties.create()
 			.sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL)
 			.sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY)
@@ -25,12 +25,12 @@ public class AgedRoeFluidType extends FluidType {
 		consumer.accept(new IClientFluidTypeExtensions() {
 			@Override
 			public ResourceLocation getStillTexture() {
-				return AGED_ROE_STILL_TEXTURE;
+				return AGED_FISH_ROE_STILL_TEXTURE;
 			}
 
 			@Override
 			public ResourceLocation getFlowingTexture() {
-				return AGED_ROE_FLOWING_TEXTURE;
+				return AGED_FISH_ROE_FLOWING_TEXTURE;
 			}
 		});
 	}

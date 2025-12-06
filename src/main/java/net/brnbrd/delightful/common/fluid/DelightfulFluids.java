@@ -1,7 +1,8 @@
 package net.brnbrd.delightful.common.fluid;
 
 import net.brnbrd.delightful.Delightful;
-import net.brnbrd.delightful.compat.brewinandchewin.AgedRoeFluidType;
+import net.brnbrd.delightful.compat.brewinandchewin.AgedFishRoeFluidType;
+import net.brnbrd.delightful.compat.brewinandchewin.AgedPrawnRoeFluidType;
 import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -14,18 +15,6 @@ import net.minecraftforge.registries.RegistryObject;
 public class DelightfulFluids {
 	public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(ForgeRegistries.FLUIDS, Delightful.MODID);
 	public static final DeferredRegister<FluidType> TYPES = DeferredRegister.create(ForgeRegistries.Keys.FLUID_TYPES, Delightful.MODID);
-
-	public static final RegistryObject<FluidType> AGED_ROE_TYPE = TYPES.register("aged_roe_type",
-		AgedRoeFluidType::new);
-	public static final RegistryObject<FlowingFluid> AGED_ROE = FLUIDS.register("aged_roe",
-		() -> new ForgeFlowingFluid.Source(DelightfulFluids.AGED_ROE_PROPERTIES));
-	public static final RegistryObject<FlowingFluid> FLOWING_AGED_ROE = FLUIDS.register("flowing_aged_roe",
-		() -> new ForgeFlowingFluid.Flowing(DelightfulFluids.AGED_ROE_PROPERTIES));
-	public static final ForgeFlowingFluid.Properties AGED_ROE_PROPERTIES = new ForgeFlowingFluid.Properties(
-		AGED_ROE_TYPE,
-		AGED_ROE,
-		FLOWING_AGED_ROE
-	);
 
 	public static final RegistryObject<FluidType> MATCHA_LATTE_TYPE = TYPES.register("matcha_latte_type",
 		() -> new DFluidType(0xff7FA036));
@@ -97,6 +86,30 @@ public class DelightfulFluids {
 		LONG_PRICKLY_PEAR_JUICE_TYPE,
 		LONG_PRICKLY_PEAR_JUICE,
 		FLOWING_LONG_PRICKLY_PEAR_JUICE
+	);
+
+	public static final RegistryObject<FluidType> AGED_FISH_ROE_TYPE = TYPES.register("aged_fish_roe_type",
+		AgedFishRoeFluidType::new);
+	public static final RegistryObject<FlowingFluid> AGED_FISH_ROE = FLUIDS.register("aged_fish_roe",
+		() -> new ForgeFlowingFluid.Source(DelightfulFluids.AGED_FISH_ROE_PROPERTIES));
+	public static final RegistryObject<FlowingFluid> FLOWING_AGED_FISH_ROE = FLUIDS.register("flowing_aged_fish_roe",
+		() -> new ForgeFlowingFluid.Flowing(DelightfulFluids.AGED_FISH_ROE_PROPERTIES));
+	public static final ForgeFlowingFluid.Properties AGED_FISH_ROE_PROPERTIES = new ForgeFlowingFluid.Properties(
+		AGED_FISH_ROE_TYPE,
+		AGED_FISH_ROE,
+		FLOWING_AGED_FISH_ROE
+	);
+
+	public static final RegistryObject<FluidType> AGED_PRAWN_ROE_TYPE = TYPES.register("aged_prawn_roe_type",
+		AgedPrawnRoeFluidType::new);
+	public static final RegistryObject<FlowingFluid> AGED_PRAWN_ROE = FLUIDS.register("aged_prawn_roe",
+		() -> new ForgeFlowingFluid.Source(DelightfulFluids.AGED_PRAWN_ROE_PROPERTIES));
+	public static final RegistryObject<FlowingFluid> FLOWING_AGED_PRAWN_ROE = FLUIDS.register("flowing_aged_prawn_roe",
+		() -> new ForgeFlowingFluid.Flowing(DelightfulFluids.AGED_PRAWN_ROE_PROPERTIES));
+	public static final ForgeFlowingFluid.Properties AGED_PRAWN_ROE_PROPERTIES = new ForgeFlowingFluid.Properties(
+		AGED_PRAWN_ROE_TYPE,
+		AGED_PRAWN_ROE,
+		FLOWING_AGED_PRAWN_ROE
 	);
 
 	public static final RegistryObject<FluidType> EGGNOG_TYPE = TYPES.register("eggnog_type",

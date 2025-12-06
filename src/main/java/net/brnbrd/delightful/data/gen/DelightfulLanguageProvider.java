@@ -183,8 +183,10 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 
 	private void addOther() {
 		// Fluids
-		addItem(DelightfulItems.AGED_ROE, "Aged Roe");
-		add("fluid_type." + Delightful.MODID + ".aged_roe_type", "Aged Roe");
+		addItem(DelightfulItems.AGED_FISH_ROE, "Aged Fish Roe");
+		add("fluid_type." + Delightful.MODID + ".aged_fish_roe_type", "Aged Fish Roe");
+		addItem(DelightfulItems.AGED_PRAWN_ROE, "Aged Prawn Roe");
+		add("fluid_type." + Delightful.MODID + ".aged_prawn_roe_type", "Aged Prawn Roe");
 		addItem(DelightfulItems.MATCHA_LATTE, "Matcha Latte");
 		add("fluid_type." + Delightful.MODID + ".matcha_latte_type", "Matcha Latte");
 		addItem(DelightfulItems.ENDER_NECTAR, "Ender Nectar");

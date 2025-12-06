@@ -19,19 +19,19 @@
           "type": "forge:not",
           "value": {
             "type": "forge:tag_empty",
-            "tag": "forge:roe"
+            "tag": "forge:roe/prawn"
           }
         },
         {
           "type": "delightful:enabled",
-          "value": "aged_roe"
+          "value": "aged_prawn_roe"
         }
       ],
       "recipe": {
         "type": "create:emptying",
         "ingredients": [
           {
-            "item": "delightful:aged_roe"
+            "item": "delightful:aged_prawn_roe"
           }
         ],
         "results": [
@@ -40,7 +40,7 @@
           },
           {
             "amount": 250,
-            "fluid": "delightful:aged_roe"
+            "fluid": "delightful:aged_prawn_roe"
           }
         ]
       }

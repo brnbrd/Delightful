@@ -19,29 +19,28 @@
           "type": "forge:not",
           "value": {
             "type": "forge:tag_empty",
-            "tag": "forge:roe"
+            "tag": "forge:roe/fish"
           }
         },
         {
           "type": "delightful:enabled",
-          "value": "aged_roe"
+          "value": "aged_fish_roe"
         }
       ],
       "recipe": {
-        "type": "create:filling",
+        "type": "create:emptying",
         "ingredients": [
+          {
+            "item": "delightful:aged_fish_roe"
+          }
+        ],
+        "results": [
           {
             "item": "minecraft:glass_bottle"
           },
           {
             "amount": 250,
-            "fluid": "delightful:aged_roe",
-            "nbt": {}
-          }
-        ],
-        "results": [
-          {
-            "item": "delightful:aged_roe"
+            "fluid": "delightful:aged_fish_roe"
           }
         ]
       }

@@ -66,6 +66,7 @@ public enum Modid {
 	EP("phantasm"),
 	EN("enlightened_end"),
 	END("ends_delight"),
+	ENDR("endersdelight"),
 	ENV("environmental"),
 	EXC("extra_compat"),
 	EXQ("exquisito"),

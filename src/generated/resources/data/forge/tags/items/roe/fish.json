@@ -1,0 +1,36 @@
+{
+  "values": [
+    {
+      "id": "letfishlove:tropical_fish_roe",
+      "required": false
+    },
+    {
+      "id": "letfishlove:salmon_roe",
+      "required": false
+    },
+    {
+      "id": "letfishlove:pufferfish_roe",
+      "required": false
+    },
+    {
+      "id": "letfishlove:cod_roe",
+      "required": false
+    },
+    {
+      "id": "letfishlove:lanternfish_roe",
+      "required": false
+    },
+    {
+      "id": "letfishlove:pike_roe",
+      "required": false
+    },
+    {
+      "id": "letfishlove:lionfish_roe",
+      "required": false
+    },
+    {
+      "id": "letfishlove:perch_roe",
+      "required": false
+    }
+  ]
+}
