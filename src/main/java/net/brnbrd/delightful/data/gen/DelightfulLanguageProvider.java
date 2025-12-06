@@ -174,6 +174,7 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		addItemTag(DelightfulItemTags.TEA_LEAVES_GREEN, "Green Tea Leaves");
 		addItemTag(DelightfulItemTags.CHEESE, "Cheeses");
 		addItemTag(DelightfulItemTags.JAMS, "Jams");
+		addItemTag(DelightfulItemTags.JAMS_GLOW, "Glow Jams");
 		addItemTag(DelightfulItemTags.NUTS, "Nuts");
 		addItemTag(DelightfulItemTags.COOKED_NUTS, "Cooked Nuts");
 		addItemTag(DelightfulItemTags.NUT_BUTTER, "Nut Butters");
