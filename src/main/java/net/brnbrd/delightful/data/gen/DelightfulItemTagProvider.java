@@ -446,6 +446,9 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.add(Items.BLAZE_POWDER)
 			.addTag(DelightfulItemTags.VEGETABLES_SPICY)
 			.addOptionalTag(Modid.MND.rl("hot_spice"));
+		this.tag(DelightfulItemTags.AGED_ROES)
+			.add(DelightfulItems.AGED_FISH_ROE.get())
+			.add(DelightfulItems.AGED_PRAWN_ROE.get());
 		this.tag(DelightfulItemTags.PUMPKINS_PUMPKIN_BLOCKS)
 			.add(Items.PUMPKIN)
 			.add(Items.CARVED_PUMPKIN)

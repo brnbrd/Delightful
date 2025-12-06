@@ -12,6 +12,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> HOT_SPICES = d("hot_spices");
 	public static final TagKey<Item> PATTIES = d("patties");
 	public static final TagKey<Item> VEGETARIAN_PATTIES = d("patties/vegetarian");
+	public static final TagKey<Item> AGED_ROES = d("aged_roes");
 	public static final TagKey<Item> FIRE_KNIVES = d("fire_knives");
 	public static final TagKey<Item> ROTTEN = d("rotten");
 	public static final TagKey<Item> SPITE = d("spite");

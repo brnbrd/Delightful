@@ -1,4 +1,4 @@
-// 1.20.1	2025-12-06T12:30:00.0695229	delightful
+// 1.20.1	2025-12-06T12:47:41.6818707	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -28,6 +28,7 @@ ea08bf83fedea8a54423800d88b8e9df50cd0449 data/deeperdarker/tags/items/resonarium
 537fd1275c6c5457b5a81a205c0ee3c457276cda data/deep_aether/tags/items/skyjade_repairing.json
 82f68fa10ecaf7bb62d6d2559bba429eb401a25b data/deep_aether/tags/items/stratus_repairing.json
 ed18beedb5068fe9f48327153c678096971fcd24 data/deep_aether/tags/items/stratus_smithing_template.json
+c3a762a6d3819752abd1e47d146b0c06f8b2943d data/delightful/tags/items/aged_roes.json
 6c44caac9f1c6b7419020d539d40046963a51ad9 data/delightful/tags/items/cooked_venison_chop_compat.json
 ae718511234f1a47f26d2f294e4d17f33374a95d data/delightful/tags/items/cooked_venison_compat.json
 c635f7a0507d48b606bd3d26bfe43ade5cfe05ee data/delightful/tags/items/fire_knives.json

@@ -158,6 +158,7 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		// Delightful
 		addItemTag(DelightfulItemTags.ROASTED_MARSHMALLOWS, "Roasted Marshmallows");
 		addItemTag(DelightfulItemTags.HOT_SPICES, "Hot Spices");
+		addItemTag(DelightfulItemTags.AGED_ROES, "Aged Roes");
 		addItemTag(DelightfulItemTags.PATTIES, "Patties");
 		addItemTag(DelightfulItemTags.VEGETARIAN_PATTIES, "Vegetarian Patties");
 
