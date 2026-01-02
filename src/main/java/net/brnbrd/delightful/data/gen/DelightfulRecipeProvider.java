@@ -141,6 +141,12 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.requires(DelightfulItemTags.FRUITS_SALMONBERRIES)
 			.unlockedBy("has_aged_roe", has(DelightfulItemTags.AGED_ROES)),
 			"food/salmon_and_roe_blini_from_bread_and_milk", finished, enabled(DelightfulItems.SALMON_AND_ROE_BLINI), tagEmpty(DelightfulItemTags.PANCAKES), tagEmpty(DelightfulItemTags.CHEESE_MILD_CREAM), not(tagEmpty(DelightfulItemTags.ROE)), modLoaded(Modid.BC.get()), modLoaded(Modid.LFL.get()));
+		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.SALMON_AND_ROE_BLINI.get())
+			.requires(DelightfulItems.ROE_BLINI.get())
+			.requires(ModItems.SALMON_SLICE.get())
+			.requires(DelightfulItemTags.FRUITS_SALMONBERRIES)
+			.unlockedBy("has_roe_blini", has(DelightfulItems.ROE_BLINI.get())),
+			"food/salmon_and_roe_blini_from_roe_blini", finished, enabled(DelightfulItems.SALMON_AND_ROE_BLINI), enabled(DelightfulItems.ROE_BLINI), not(tagEmpty(DelightfulItemTags.ROE)), modLoaded(Modid.BC.get()), modLoaded(Modid.LFL.get()));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.CHEESEBURGER.get())
 			.requires(ForgeTags.BREAD)
 			.requires(ModItems.BEEF_PATTY.get())

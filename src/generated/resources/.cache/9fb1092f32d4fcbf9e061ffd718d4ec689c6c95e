@@ -1,4 +1,4 @@
-// 1.20.1	2026-01-01T22:19:05.5225356	Recipes
+// 1.20.1	2026-01-01T23:55:30.886533	Recipes
 6c217dd6477efa10f6042809ba959d53036ab5e2 data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 5b82f87851220644287d771121677deac66b3b89 data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
 cf29033c1c919355c261025df529938e6ebc73f8 data/delightful/advancements/recipes/campfire/cactus_steak.json
@@ -71,6 +71,7 @@ b4a25a2ba8615e954b665bbf5bab79ec0b76f513 data/delightful/advancements/recipes/fo
 d6c782b8f188986a9bdf2079df9349db304612d4 data/delightful/advancements/recipes/food/salmon_and_roe_blini_from_bread.json
 9a3070483c711c0022dcf2fd0d7a2c31050fe6d8 data/delightful/advancements/recipes/food/salmon_and_roe_blini_from_bread_and_milk.json
 d9410c47d5de599ff91bb593b6e2d841517b0765 data/delightful/advancements/recipes/food/salmon_and_roe_blini_from_milk.json
+d8e241f3fd086d58c34f5e822e99b76640034a03 data/delightful/advancements/recipes/food/salmon_and_roe_blini_from_roe_blini.json
 26abf042ab6127ea50aa0d751f1f8abce3a16b65 data/delightful/advancements/recipes/food/smore.json
 0a086e054968bf2b4c2328b6adf8419bfa00763b data/delightful/advancements/recipes/food/smore_from_chocolate.json
 5e5d1a8480194bdd354dfe4e49c196c7848af746 data/delightful/advancements/recipes/food/wheat_dough_from_flour_and_eggs.json
@@ -244,6 +245,7 @@ e7771b43b23c1e560c8d64ab2d6295d98abf4881 data/delightful/recipes/food/salmonberr
 0ffc7a5cd5645824bf68f7fd129ffa384723449d data/delightful/recipes/food/salmon_and_roe_blini_from_bread.json
 992729364ac8a51f2b2365518d3fccaea107323c data/delightful/recipes/food/salmon_and_roe_blini_from_bread_and_milk.json
 e6f15f41ca3470ae1c853eac4d5b347a31838996 data/delightful/recipes/food/salmon_and_roe_blini_from_milk.json
+e6897503791425cf69a7f9730de619fecee534ce data/delightful/recipes/food/salmon_and_roe_blini_from_roe_blini.json
 0984891ce9c15394499368244c6cc4660a28c92c data/delightful/recipes/food/smore.json
 c2833c0b8aa14210dac0930918e7210635480afd data/delightful/recipes/food/smore_from_chocolate.json
 dfe2fe3ba12853ba4cfd80c7ef7804be35a6d516 data/delightful/recipes/food/wheat_dough_from_flour_and_eggs.json

@@ -1,0 +1,50 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "salmon_and_roe_blini"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "roe_blini"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:roe"
+          }
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "brewinandchewin"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "letfishlove"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "delightful:roe_blini"
+          },
+          {
+            "item": "farmersdelight:salmon_slice"
+          },
+          {
+            "tag": "forge:fruits/salmonberries"
+          }
+        ],
+        "result": {
+          "item": "delightful:salmon_and_roe_blini"
+        }
+      }
+    }
+  ]
+}
