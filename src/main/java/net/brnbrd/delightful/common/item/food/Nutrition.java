@@ -214,7 +214,7 @@ public class Nutrition {
 		.effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 600, 0, false, false), 1F).build();
 	public static final FoodProperties SALMONBERRY_GUMMY = (new FoodProperties.Builder())
 		.nutrition(2).saturationMod(0F).alwaysEat()
-		.effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 600, 0), 1F).build();
+		.effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 900, 0), 1F).build();
 	public static final FoodProperties MATCHA_GUMMY = (new FoodProperties.Builder())
 		.nutrition(2).saturationMod(0F).alwaysEat()
 		.effect(() -> new MobEffectInstance(TeaCompat.getGreenTeaEffect().get(), 100, 2), 1F).build();

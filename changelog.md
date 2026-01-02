@@ -34,7 +34,7 @@
 - Marshmallow on a Stick now provides Sugar Rush I for 0:15
 - Roasted Marshmallow on a Stick now provides Sugar Rush I for 0:30 and Slow Falling I for 0:15
 - Baklava now requires `#forge:cooked_nuts` rather than `#forge:nuts`
-- Salmonberry Gummy now provides Water Breathing for 0:30
+- Salmonberry Gummy now provides Water Breathing for 0:45
 - Matcha Gummy now provides Regeneration III for 0:05
 - Cantaloupe Gummy now provides Resistance IV for 0:10 and Blindness I for 0:05
 
