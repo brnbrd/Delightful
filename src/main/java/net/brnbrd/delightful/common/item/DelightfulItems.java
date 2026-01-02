@@ -165,21 +165,21 @@ public class DelightfulItems {
 		() -> new PricklyPearJuiceItem((new Item.Properties()).food(Nutrition.PRICKLY_PEAR_JUICE).craftRemainder(Items.GLASS_BOTTLE)));
 	public static final RegistryObject<Item> LONG_PRICKLY_PEAR_JUICE = registerItem("long_prickly_pear_juice",
 		() -> new PricklyPearJuiceItem((new Item.Properties()).food(Nutrition.LONG_PRICKLY_PEAR_JUICE).craftRemainder(Items.GLASS_BOTTLE), Modid.FR));
-	public static final RegistryObject<Item> AGED_FISH_ROE = registerItem("aged_fish_roe",
-		() -> new AgedFishRoeItem((new Item.Properties()).stacksTo(16).food(Nutrition.AGED_FISH_ROE).craftRemainder(Items.GLASS_BOTTLE), false));
-	public static final RegistryObject<Item> AGED_PRAWN_ROE = registerItem("aged_prawn_roe",
-		() -> new AgedPrawnRoeItem((new Item.Properties()).stacksTo(16).food(Nutrition.AGED_PRAWN_ROE).craftRemainder(Items.GLASS_BOTTLE), false));
 	public static final RegistryObject<Item> JAM_JAR = registerItem("jam_jar",
 		() -> new JamJarItem((new Item.Properties()).food(Nutrition.JAM_JAR).craftRemainder(Items.GLASS_BOTTLE), false, false));
 	public static final RegistryObject<Item> GLOW_JAM_JAR = registerItem("glow_jam_jar",
 		() -> new JamJarItem((new Item.Properties()).food(Nutrition.GLOW_JAM_JAR).craftRemainder(Items.GLASS_BOTTLE), true, false));
 	public static final RegistryObject<Item> NUT_BUTTER_BOTTLE = registerItem("nut_butter_bottle", () -> new NutButterBottleItem(((new Item.Properties()).food(Nutrition.NUT_BUTTER_BOTTLE).craftRemainder(Items.GLASS_BOTTLE))));
+	public static final RegistryObject<Item> AGED_FISH_ROE = registerItem("aged_fish_roe",
+		() -> new AgedFishRoeItem((new Item.Properties()).stacksTo(16).food(Nutrition.AGED_FISH_ROE).craftRemainder(Items.GLASS_BOTTLE), false));
+	public static final RegistryObject<Item> AGED_PRAWN_ROE = registerItem("aged_prawn_roe",
+		() -> new AgedPrawnRoeItem((new Item.Properties()).stacksTo(16).food(Nutrition.AGED_PRAWN_ROE).craftRemainder(Items.GLASS_BOTTLE), false));
 	public static final RegistryObject<Item> NUT_BUTTER_AND_JAM_SANDWICH = registerItem("nut_butter_and_jam_sandwich", () -> new NutButterJamSandwichItem((new Item.Properties()).food(Nutrition.NUT_BUTTER_AND_JAM_SANDWICH)));
-	public static final RegistryObject<Item> ROE_BLINI = registerItem("roe_blini", () -> new RoeBliniItem((new Item.Properties()).food(Nutrition.ROE_BLINI)));
-	public static final RegistryObject<Item> SALMON_AND_ROE_BLINI = registerItem("salmon_and_roe_blini", () -> new RoeBliniItem((new Item.Properties()).food(Nutrition.SALMON_AND_ROE_BLINI)));
 	public static final RegistryObject<Item> CHEESEBURGER = registerItem("cheeseburger", () -> new CheeseburgerItem((new Item.Properties()).food(Nutrition.CHEESEBURGER)));
 	public static final RegistryObject<Item> DELUXE_CHEESEBURGER = registerConsumable("deluxe_cheeseburger", Nutrition.DELUXE_CHEESEBURGER, null, true, false);
 	public static final RegistryObject<Item> CHUNKWICH = registerCompatFood("chunkwich", Nutrition.CHUNKWICH, true, Modid.RL);
+	public static final RegistryObject<Item> ROE_BLINI = registerItem("roe_blini", () -> new RoeBliniItem((new Item.Properties()).food(Nutrition.ROE_BLINI)));
+	public static final RegistryObject<Item> SALMON_AND_ROE_BLINI = registerItem("salmon_and_roe_blini", () -> new RoeBliniItem((new Item.Properties()).food(Nutrition.SALMON_AND_ROE_BLINI)));
 	public static final RegistryObject<Item> ROCK_CANDY = registerItem("rock_candy",
 		() -> new RockCandyItem((new Item.Properties()).food(Nutrition.ROCK_CANDY).stacksTo(16).craftRemainder(Items.STICK)));
 	public static final RegistryObject<Item> MARSHMALLOW_STICK = registerItem("marshmallow_stick",

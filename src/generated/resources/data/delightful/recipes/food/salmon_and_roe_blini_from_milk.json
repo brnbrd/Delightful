@@ -28,6 +28,10 @@
         {
           "type": "forge:mod_loaded",
           "modid": "brewinandchewin"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "letfishlove"
         }
       ],
       "recipe": {
@@ -41,13 +45,13 @@
             "tag": "forge:milk"
           },
           {
-            "item": "farmersdelight:salmon_slice"
-          },
-          {
             "tag": "delightful:aged_roes"
           },
           {
-            "item": "minecraft:dried_kelp"
+            "item": "farmersdelight:salmon_slice"
+          },
+          {
+            "tag": "forge:fruits/salmonberries"
           }
         ],
         "result": {

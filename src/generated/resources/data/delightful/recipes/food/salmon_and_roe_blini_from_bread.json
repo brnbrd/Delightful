@@ -8,8 +8,15 @@
           "value": "salmon_and_roe_blini"
         },
         {
-          "type": "delightful:enabled",
-          "value": "roe_blini"
+          "type": "forge:tag_empty",
+          "tag": "forge:pancakes"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:cheese/mild/cream"
+          }
         },
         {
           "type": "forge:not",
@@ -21,6 +28,10 @@
         {
           "type": "forge:mod_loaded",
           "modid": "brewinandchewin"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "letfishlove"
         }
       ],
       "recipe": {
@@ -28,10 +39,19 @@
         "category": "misc",
         "ingredients": [
           {
-            "item": "delightful:roe_blini"
+            "tag": "forge:bread"
+          },
+          {
+            "tag": "forge:cheese/mild/cream"
+          },
+          {
+            "tag": "delightful:aged_roes"
           },
           {
             "item": "farmersdelight:salmon_slice"
+          },
+          {
+            "tag": "forge:fruits/salmonberries"
           }
         ],
         "result": {

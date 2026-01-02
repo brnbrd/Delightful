@@ -16,7 +16,7 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:food/roe_blini"
+              "recipe": "delightful:food/salmon_and_roe_blini_from_bread"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
@@ -29,7 +29,7 @@
         ],
         "rewards": {
           "recipes": [
-            "delightful:food/roe_blini"
+            "delightful:food/salmon_and_roe_blini_from_bread"
           ]
         },
         "sends_telemetry_event": false
@@ -37,14 +37,11 @@
       "conditions": [
         {
           "type": "delightful:enabled",
-          "value": "roe_blini"
+          "value": "salmon_and_roe_blini"
         },
         {
-          "type": "forge:not",
-          "value": {
-            "type": "forge:tag_empty",
-            "tag": "forge:pancakes"
-          }
+          "type": "forge:tag_empty",
+          "tag": "forge:pancakes"
         },
         {
           "type": "forge:not",

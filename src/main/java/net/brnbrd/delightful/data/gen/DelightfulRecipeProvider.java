@@ -87,35 +87,60 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.requires(DelightfulItemTags.AGED_ROES)
 			.requires(Items.DRIED_KELP)
 			.unlockedBy("has_aged_roe", has(DelightfulItemTags.AGED_ROES)),
-			"food/roe_blini", finished, enabled(DelightfulItems.ROE_BLINI), not(tagEmpty(DelightfulItemTags.PANCAKES)), not(tagEmpty(DelightfulItemTags.CHEESE_MILD_CREAM)), not(tagEmpty(DelightfulItemTags.ROE)), modLoaded(Modid.BC.get()));
+			"food/roe_blini", finished, enabled(DelightfulItems.ROE_BLINI), not(tagEmpty(DelightfulItemTags.PANCAKES)), not(tagEmpty(DelightfulItemTags.CHEESE_MILD_CREAM)), not(tagEmpty(DelightfulItemTags.ROE)), modLoaded(Modid.BC.get()), modLoaded(Modid.LFL.get()));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.ROE_BLINI.get())
 			.requires(DelightfulItemTags.PANCAKES)
 			.requires(ForgeTags.MILK)
 			.requires(DelightfulItemTags.AGED_ROES)
 			.requires(Items.DRIED_KELP)
 			.unlockedBy("has_aged_roe", has(DelightfulItemTags.AGED_ROES)),
-			"food/roe_blini_from_milk", finished, enabled(DelightfulItems.ROE_BLINI), not(tagEmpty(DelightfulItemTags.PANCAKES)), tagEmpty(DelightfulItemTags.CHEESE_MILD_CREAM), not(tagEmpty(DelightfulItemTags.ROE)), modLoaded(Modid.BC.get()));
+			"food/roe_blini_from_milk", finished, enabled(DelightfulItems.ROE_BLINI), not(tagEmpty(DelightfulItemTags.PANCAKES)), tagEmpty(DelightfulItemTags.CHEESE_MILD_CREAM), not(tagEmpty(DelightfulItemTags.ROE)), modLoaded(Modid.BC.get()), modLoaded(Modid.LFL.get()));
+		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.ROE_BLINI.get())
+			.requires(ForgeTags.BREAD)
+			.requires(DelightfulItemTags.CHEESE_MILD_CREAM)
+			.requires(DelightfulItemTags.AGED_ROES)
+			.requires(Items.DRIED_KELP)
+			.unlockedBy("has_aged_roe", has(DelightfulItemTags.AGED_ROES)),
+			"food/roe_blini_from_bread", finished, enabled(DelightfulItems.ROE_BLINI), tagEmpty(DelightfulItemTags.PANCAKES), not(tagEmpty(DelightfulItemTags.CHEESE_MILD_CREAM)), not(tagEmpty(DelightfulItemTags.ROE)), modLoaded(Modid.BC.get()), modLoaded(Modid.LFL.get()));
+		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.ROE_BLINI.get())
+			.requires(ForgeTags.BREAD)
+			.requires(ForgeTags.MILK)
+			.requires(DelightfulItemTags.AGED_ROES)
+			.requires(Items.DRIED_KELP)
+			.unlockedBy("has_aged_roe", has(DelightfulItemTags.AGED_ROES)),
+			"food/roe_blini_from_bread_and_milk", finished, enabled(DelightfulItems.ROE_BLINI), tagEmpty(DelightfulItemTags.PANCAKES), tagEmpty(DelightfulItemTags.CHEESE_MILD_CREAM), not(tagEmpty(DelightfulItemTags.ROE)), modLoaded(Modid.BC.get()), modLoaded(Modid.LFL.get()));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.SALMON_AND_ROE_BLINI.get())
 			.requires(DelightfulItemTags.PANCAKES)
 			.requires(DelightfulItemTags.CHEESE_MILD_CREAM)
 			.requires(DelightfulItemTags.AGED_ROES)
 			.requires(ModItems.SALMON_SLICE.get())
-			.requires(Items.DRIED_KELP)
+			.requires(DelightfulItemTags.FRUITS_SALMONBERRIES)
 			.unlockedBy("has_aged_roe", has(DelightfulItemTags.AGED_ROES)),
-			"food/salmon_and_roe_blini", finished, enabled(DelightfulItems.SALMON_AND_ROE_BLINI), not(tagEmpty(DelightfulItemTags.PANCAKES)), not(tagEmpty(DelightfulItemTags.CHEESE_MILD_CREAM)), not(tagEmpty(DelightfulItemTags.ROE)), modLoaded(Modid.BC.get()));
+			"food/salmon_and_roe_blini", finished, enabled(DelightfulItems.SALMON_AND_ROE_BLINI), not(tagEmpty(DelightfulItemTags.PANCAKES)), not(tagEmpty(DelightfulItemTags.CHEESE_MILD_CREAM)), not(tagEmpty(DelightfulItemTags.ROE)), modLoaded(Modid.BC.get()), modLoaded(Modid.LFL.get()));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.SALMON_AND_ROE_BLINI.get())
 			.requires(DelightfulItemTags.PANCAKES)
 			.requires(ForgeTags.MILK)
-			.requires(ModItems.SALMON_SLICE.get())
 			.requires(DelightfulItemTags.AGED_ROES)
-			.requires(Items.DRIED_KELP)
-			.unlockedBy("has_aged_roe", has(DelightfulItemTags.AGED_ROES)),
-			"food/salmon_and_roe_blini_from_milk", finished, enabled(DelightfulItems.SALMON_AND_ROE_BLINI), not(tagEmpty(DelightfulItemTags.PANCAKES)), tagEmpty(DelightfulItemTags.CHEESE_MILD_CREAM), not(tagEmpty(DelightfulItemTags.ROE)), modLoaded(Modid.BC.get()));
-		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.SALMON_AND_ROE_BLINI.get())
-			.requires(DelightfulItems.ROE_BLINI.get())
 			.requires(ModItems.SALMON_SLICE.get())
-			.unlockedBy("has_roe_blini", has(DelightfulItems.ROE_BLINI.get())),
-			"food/salmon_and_roe_blini_from_roe_blini", finished, enabled(DelightfulItems.SALMON_AND_ROE_BLINI), enabled(DelightfulItems.ROE_BLINI), not(tagEmpty(DelightfulItemTags.ROE)), modLoaded(Modid.BC.get()));
+			.requires(DelightfulItemTags.FRUITS_SALMONBERRIES)
+			.unlockedBy("has_aged_roe", has(DelightfulItemTags.AGED_ROES)),
+			"food/salmon_and_roe_blini_from_milk", finished, enabled(DelightfulItems.SALMON_AND_ROE_BLINI), not(tagEmpty(DelightfulItemTags.PANCAKES)), tagEmpty(DelightfulItemTags.CHEESE_MILD_CREAM), not(tagEmpty(DelightfulItemTags.ROE)), modLoaded(Modid.BC.get()), modLoaded(Modid.LFL.get()));
+		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.SALMON_AND_ROE_BLINI.get())
+			.requires(ForgeTags.BREAD)
+			.requires(DelightfulItemTags.CHEESE_MILD_CREAM)
+			.requires(DelightfulItemTags.AGED_ROES)
+			.requires(ModItems.SALMON_SLICE.get())
+			.requires(DelightfulItemTags.FRUITS_SALMONBERRIES)
+			.unlockedBy("has_aged_roe", has(DelightfulItemTags.AGED_ROES)),
+			"food/salmon_and_roe_blini_from_bread", finished, enabled(DelightfulItems.SALMON_AND_ROE_BLINI), tagEmpty(DelightfulItemTags.PANCAKES), not(tagEmpty(DelightfulItemTags.CHEESE_MILD_CREAM)), not(tagEmpty(DelightfulItemTags.ROE)), modLoaded(Modid.BC.get()), modLoaded(Modid.LFL.get()));
+		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.SALMON_AND_ROE_BLINI.get())
+			.requires(ForgeTags.BREAD)
+			.requires(ForgeTags.MILK)
+			.requires(DelightfulItemTags.AGED_ROES)
+			.requires(ModItems.SALMON_SLICE.get())
+			.requires(DelightfulItemTags.FRUITS_SALMONBERRIES)
+			.unlockedBy("has_aged_roe", has(DelightfulItemTags.AGED_ROES)),
+			"food/salmon_and_roe_blini_from_bread_and_milk", finished, enabled(DelightfulItems.SALMON_AND_ROE_BLINI), tagEmpty(DelightfulItemTags.PANCAKES), tagEmpty(DelightfulItemTags.CHEESE_MILD_CREAM), not(tagEmpty(DelightfulItemTags.ROE)), modLoaded(Modid.BC.get()), modLoaded(Modid.LFL.get()));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.CHEESEBURGER.get())
 			.requires(ForgeTags.BREAD)
 			.requires(ModItems.BEEF_PATTY.get())

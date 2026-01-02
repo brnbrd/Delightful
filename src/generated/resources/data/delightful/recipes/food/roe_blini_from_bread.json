@@ -5,14 +5,11 @@
       "conditions": [
         {
           "type": "delightful:enabled",
-          "value": "salmon_and_roe_blini"
+          "value": "roe_blini"
         },
         {
-          "type": "forge:not",
-          "value": {
-            "type": "forge:tag_empty",
-            "tag": "forge:pancakes"
-          }
+          "type": "forge:tag_empty",
+          "tag": "forge:pancakes"
         },
         {
           "type": "forge:not",
@@ -42,7 +39,7 @@
         "category": "misc",
         "ingredients": [
           {
-            "tag": "forge:pancakes"
+            "tag": "forge:bread"
           },
           {
             "tag": "forge:cheese/mild/cream"
@@ -51,14 +48,11 @@
             "tag": "delightful:aged_roes"
           },
           {
-            "item": "farmersdelight:salmon_slice"
-          },
-          {
-            "tag": "forge:fruits/salmonberries"
+            "item": "minecraft:dried_kelp"
           }
         ],
         "result": {
-          "item": "delightful:salmon_and_roe_blini"
+          "item": "delightful:roe_blini"
         }
       }
     }

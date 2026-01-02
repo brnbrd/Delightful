@@ -63,6 +63,10 @@
         {
           "type": "forge:mod_loaded",
           "modid": "brewinandchewin"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "letfishlove"
         }
       ]
     }

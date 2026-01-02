@@ -4,13 +4,11 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_roe_blini": {
+          "has_aged_roe": {
             "conditions": {
               "items": [
                 {
-                  "items": [
-                    "delightful:roe_blini"
-                  ]
+                  "tag": "delightful:aged_roes"
                 }
               ]
             },
@@ -18,20 +16,20 @@
           },
           "has_the_recipe": {
             "conditions": {
-              "recipe": "delightful:food/salmon_and_roe_blini_from_roe_blini"
+              "recipe": "delightful:food/roe_blini_from_bread"
             },
             "trigger": "minecraft:recipe_unlocked"
           }
         },
         "requirements": [
           [
-            "has_roe_blini",
+            "has_aged_roe",
             "has_the_recipe"
           ]
         ],
         "rewards": {
           "recipes": [
-            "delightful:food/salmon_and_roe_blini_from_roe_blini"
+            "delightful:food/roe_blini_from_bread"
           ]
         },
         "sends_telemetry_event": false
@@ -39,11 +37,18 @@
       "conditions": [
         {
           "type": "delightful:enabled",
-          "value": "salmon_and_roe_blini"
+          "value": "roe_blini"
         },
         {
-          "type": "delightful:enabled",
-          "value": "roe_blini"
+          "type": "forge:tag_empty",
+          "tag": "forge:pancakes"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:cheese/mild/cream"
+          }
         },
         {
           "type": "forge:not",
@@ -55,6 +60,10 @@
         {
           "type": "forge:mod_loaded",
           "modid": "brewinandchewin"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "letfishlove"
         }
       ]
     }

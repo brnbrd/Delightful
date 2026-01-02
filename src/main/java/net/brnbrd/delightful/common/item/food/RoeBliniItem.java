@@ -1,6 +1,7 @@
 package net.brnbrd.delightful.common.item.food;
 
 import net.brnbrd.delightful.compat.Modid;
+import net.brnbrd.delightful.compat.Mods;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
@@ -13,7 +14,12 @@ public class RoeBliniItem extends DConsumableItem {
 
 	@Override
 	public Modid[] getModid() {
-		return new Modid[]{Modid.BC};
+		return new Modid[]{Modid.BC, Modid.LFL};
+	}
+
+	@Override
+	public Mods.Strategy getStrategy() {
+		return Mods.Strategy.AND;
 	}
 
 	@Override
