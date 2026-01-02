@@ -1,4 +1,4 @@
-// 1.20.1	2025-12-06T12:30:00.0564993	Item Models: delightful
+// 1.20.1	2025-12-28T19:52:29.9945511	Item Models: delightful
 f9af973b19b45f34017d8db4e6e54de90668031e assets/delightful/models/item/acorn.json
 9b4daf24b0d8e447735c5836d7ab76a3df1b3c1d assets/delightful/models/item/acorn_sack.json
 5d9531a6795e7d2281f99609672d866743329211 assets/delightful/models/item/adamantium_knife.json
@@ -128,6 +128,7 @@ cb9fa05efea319871868b246c6e53c7e53974de4 assets/delightful/models/item/refined_g
 7aa13ffc4c9cc72ebd5efc73b7ca8c73ceefe834 assets/delightful/models/item/resonarium_knife.json
 1af77a1d0c4a45ddeda5fb41cf684f5aca6131d2 assets/delightful/models/item/roasted_acorn.json
 eb60e7225d2de5028799847a9d6260cd3787c192 assets/delightful/models/item/rock_candy.json
+3b2086a66fcf11a5d3bdd281376328ba39140c86 assets/delightful/models/item/roe_blini.json
 ef574a89968acc18b16ce581b3af588c16d81d63 assets/delightful/models/item/rose_gold_knife.json
 e8851e8a9cf72237cbcb58703316f012d965c5ae assets/delightful/models/item/salmonberries.json
 faf1a238d449659e09435230101ee18aa1eff0a5 assets/delightful/models/item/salmonberry_gummy.json
@@ -138,6 +139,7 @@ c49aa91484e622afeee4037b2de92bb39519a38f assets/delightful/models/item/salmonber
 c85b551a079857106bae590bf01434c23c595a98 assets/delightful/models/item/salmonberry_pie_slice.json
 929deaa04cf179dc86268dc6d88494287c8fc874 assets/delightful/models/item/salmonberry_pips.json
 6b35ac1bf0de23c9caa5f9e4c1ed5ff4d74bb5ed assets/delightful/models/item/salmonberry_sack.json
+572660fcc9a644b74fa8386f2c379260c523c97d assets/delightful/models/item/salmon_and_roe_blini.json
 272966734912c5d903aa6aaf78ed464b5f03aec9 assets/delightful/models/item/silver_knife.json
 afb0771c1a06574b3e7dd54bd077e2c7ccbce795 assets/delightful/models/item/sinigang.json
 fec38e2d956d5c9f799d5b72ab7b1075954104ba assets/delightful/models/item/sinigang_cup.json

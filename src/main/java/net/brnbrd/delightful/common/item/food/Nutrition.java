@@ -11,7 +11,7 @@ import vectorwing.farmersdelight.common.registry.ModEffects;
 
 public class Nutrition {
 	public static final FoodProperties CHEESEBURGER = (new FoodProperties.Builder())
-		.nutrition(12).saturationMod(0.8F)
+		.nutrition(11).saturationMod(0.85F)
 		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 1200, 0), 1F)
 		.effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 400, 0), 1F).build();
 	public static final FoodProperties DELUXE_CHEESEBURGER = (new FoodProperties.Builder())
@@ -56,6 +56,12 @@ public class Nutrition {
 		.nutrition(11).saturationMod(0.7F)
 		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3600, 0), 1F)
 		.effect(() -> new MobEffectInstance(SOBCompat.getToughness(), 1800, 0), 1F).build();
+	public static final FoodProperties ROE_BLINI = (new FoodProperties.Builder())
+		.nutrition(11).saturationMod(0.7F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3600, 0), 1F).build();
+	public static final FoodProperties SALMON_AND_ROE_BLINI = (new FoodProperties.Builder())
+		.nutrition(11).saturationMod(0.75F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 6000, 0), 1F).build();
 	public static final FoodProperties HONEY_GLAZED_WALNUT = (new FoodProperties.Builder())
 		.nutrition(6).saturationMod(1F).build();
 	public static final FoodProperties ACORN = (new FoodProperties.Builder())

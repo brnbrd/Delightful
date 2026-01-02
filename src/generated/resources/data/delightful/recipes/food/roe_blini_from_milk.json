@@ -1,0 +1,56 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "roe_blini"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:pancakes"
+          }
+        },
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:cheese/mild/cream"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:roe"
+          }
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "brewinandchewin"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "tag": "forge:pancakes"
+          },
+          {
+            "tag": "forge:milk"
+          },
+          {
+            "tag": "delightful:aged_roes"
+          },
+          {
+            "item": "minecraft:dried_kelp"
+          }
+        ],
+        "result": {
+          "item": "delightful:roe_blini"
+        }
+      }
+    }
+  ]
+}

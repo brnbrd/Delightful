@@ -2,6 +2,10 @@
   "values": [
     "delightful:raw_goat",
     {
+      "id": "functionality:chevon",
+      "required": false
+    },
+    {
       "id": "extra_compat:chevon_chop",
       "required": false
     }

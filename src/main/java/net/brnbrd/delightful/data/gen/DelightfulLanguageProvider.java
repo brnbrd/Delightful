@@ -43,6 +43,8 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		addItem(DelightfulItems.GLOW_JAM_JAR, "Glow Jam Jar");
 		addItem(DelightfulItems.NUT_BUTTER_BOTTLE, "Nut Butter");
 		addItem(DelightfulItems.NUT_BUTTER_AND_JAM_SANDWICH, "Nut Butter and Jam Sandwich");
+		addItem(DelightfulItems.ROE_BLINI, "Roe Blini");
+		addItem(DelightfulItems.SALMON_AND_ROE_BLINI, "Salmon and Roe Blini");
 		addItem(DelightfulItems.HONEY_GLAZED_WALNUT, "Honey Glazed Walnut");
 		addItem(DelightfulItems.BERRY_MATCHA_LATTE, "Iced Berry Matcha Latte");
 		addItem(DelightfulItems.GREEN_TEA_LEAF, "Green Tea Leaves");
@@ -159,6 +161,7 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		addItemTag(DelightfulItemTags.ROASTED_MARSHMALLOWS, "Roasted Marshmallows");
 		addItemTag(DelightfulItemTags.HOT_SPICES, "Hot Spices");
 		addItemTag(DelightfulItemTags.AGED_ROES, "Aged Roes");
+		addItemTag(DelightfulItemTags.PANCAKES, "Pancakes");
 		addItemTag(DelightfulItemTags.PATTIES, "Patties");
 		addItemTag(DelightfulItemTags.VEGETARIAN_PATTIES, "Vegetarian Patties");
 

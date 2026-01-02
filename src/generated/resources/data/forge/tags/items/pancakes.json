@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "supplementaries:pancake",
+      "required": false
+    },
+    {
+      "id": "autumnity:pancake",
+      "required": false
+    }
+  ]
+}

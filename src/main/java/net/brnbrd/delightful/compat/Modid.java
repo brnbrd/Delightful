@@ -76,6 +76,7 @@ public enum Modid {
 	FRD("fruitsdelight"),
 	FRIGHT("frightsdelight"),
 	FU("frozenup"),
+	FUNC("functionality"),
 	FUS("fusion"),
 	GO("goated"),
 	GOOD("goodall"),

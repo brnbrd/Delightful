@@ -58,6 +58,10 @@
       "required": false
     },
     {
+      "id": "functionality:cooked_frog_leg",
+      "required": false
+    },
+    {
       "id": "frog_legs:cooked_frog_legs",
       "required": false
     }

@@ -6,9 +6,9 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import org.jetbrains.annotations.Nullable;
 
-public class AgedFishRoeItem extends AgedRoeItem {
-	public AgedFishRoeItem(Properties properties, boolean hasCustomTooltip) {
-		super(properties, hasCustomTooltip);
+public class RoeBliniItem extends DConsumableItem {
+	public RoeBliniItem(Properties properties) {
+		super(properties, true, false);
 	}
 
 	@Override
@@ -18,6 +18,6 @@ public class AgedFishRoeItem extends AgedRoeItem {
 
 	@Override
 	public @Nullable TagKey<Item> getDependencyTag() {
-		return DelightfulItemTags.FISH_ROE;
+		return DelightfulItemTags.ROE;
 	}
 }

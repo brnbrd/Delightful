@@ -439,6 +439,9 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.CORN.rl("cornbread"))
 			.addOptional(Util.rl("hauntedharvest", "cornbread"));
 		this.tag(DelightfulItemTags.BURGER_BUN).addOptional(Modid.SAS.rl("burger_bun"));
+		this.tag(DelightfulItemTags.PANCAKES)
+			.addOptional(Modid.SUP.rl("pancake"))
+			.addOptional(Modid.AUT.rl("pancake"));
 		this.tag(ForgeTags.BREAD)
 			.addTag(DelightfulItemTags.CORNBREAD)
 			.addTag(DelightfulItemTags.BURGER_BUN);
@@ -627,9 +630,11 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.COOKED_VENISON_COMPAT);
 		this.tag(DelightfulItemTags.RAW_GOAT)
 			.add(DelightfulItems.RAW_GOAT.get())
+			.addOptional(Modid.FUNC.rl("chevon"))
 			.addOptional(Modid.EXC.rl("chevon_chop"));
 		this.tag(DelightfulItemTags.COOKED_GOAT)
 			.add(DelightfulItems.COOKED_GOAT.get())
+			.addOptional(Modid.FUNC.rl("cooked_chevon"))
 			.addOptional(Modid.EXC.rl("cooked_chevon_chop"));
 		this.tag(DelightfulItemTags.RAW_DUCK).addOptional(Modid.NA.rl("duck"));
 		this.tag(DelightfulItemTags.COOKED_DUCK).addOptional(Modid.NA.rl("cooked_duck"));
@@ -655,6 +660,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.UG.rl("raw_dweller_meat"))
 			.addOptional(Modid.UG.rl("raw_gloomper_leg"))
 			.addOptional(Modid.EP.rl("behemoth_meat"))
+			.addOptional(Modid.FUNC.rl("frog_leg"))
 			.addOptional(Util.rl("frog_legs", "frog_legs"));
 		this.tag(DelightfulItemTags.FOODS_MEAT_COOKED)
 			.addOptionalTag(Modid.LOADER.rl("cooked_meat"))
@@ -678,6 +684,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.UG.rl("dweller_steak"))
 			.addOptional(Modid.UG.rl("gloomper_leg"))
 			.addOptional(Modid.EP.rl("behemoth_steak"))
+			.addOptional(Modid.FUNC.rl("cooked_frog_leg"))
 			.addOptional(Util.rl("frog_legs", "cooked_frog_legs"));
 		this.tag(DelightfulItemTags.FOODS_MEAT)
 			.addTag(DelightfulItemTags.FOODS_MEAT_RAW)

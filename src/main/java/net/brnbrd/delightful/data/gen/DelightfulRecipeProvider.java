@@ -81,6 +81,41 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.requires(DelightfulItemTags.JAMS)
 			.unlockedBy("has_nut_butter", has(DelightfulItems.NUT_BUTTER_BOTTLE.get())),
 			"food/nut_butter_and_jam_sandwich", finished, enabled(DelightfulItems.NUT_BUTTER_AND_JAM_SANDWICH), not(tagEmpty(DelightfulItemTags.NUTS)), not(modLoaded(Modid.CT.get())));
+		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.ROE_BLINI.get())
+			.requires(DelightfulItemTags.PANCAKES)
+			.requires(DelightfulItemTags.CHEESE_MILD_CREAM)
+			.requires(DelightfulItemTags.AGED_ROES)
+			.requires(Items.DRIED_KELP)
+			.unlockedBy("has_aged_roe", has(DelightfulItemTags.AGED_ROES)),
+			"food/roe_blini", finished, enabled(DelightfulItems.ROE_BLINI), not(tagEmpty(DelightfulItemTags.PANCAKES)), not(tagEmpty(DelightfulItemTags.CHEESE_MILD_CREAM)), not(tagEmpty(DelightfulItemTags.ROE)), modLoaded(Modid.BC.get()));
+		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.ROE_BLINI.get())
+			.requires(DelightfulItemTags.PANCAKES)
+			.requires(ForgeTags.MILK)
+			.requires(DelightfulItemTags.AGED_ROES)
+			.requires(Items.DRIED_KELP)
+			.unlockedBy("has_aged_roe", has(DelightfulItemTags.AGED_ROES)),
+			"food/roe_blini_from_milk", finished, enabled(DelightfulItems.ROE_BLINI), not(tagEmpty(DelightfulItemTags.PANCAKES)), tagEmpty(DelightfulItemTags.CHEESE_MILD_CREAM), not(tagEmpty(DelightfulItemTags.ROE)), modLoaded(Modid.BC.get()));
+		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.SALMON_AND_ROE_BLINI.get())
+			.requires(DelightfulItemTags.PANCAKES)
+			.requires(DelightfulItemTags.CHEESE_MILD_CREAM)
+			.requires(DelightfulItemTags.AGED_ROES)
+			.requires(ModItems.SALMON_SLICE.get())
+			.requires(Items.DRIED_KELP)
+			.unlockedBy("has_aged_roe", has(DelightfulItemTags.AGED_ROES)),
+			"food/salmon_and_roe_blini", finished, enabled(DelightfulItems.SALMON_AND_ROE_BLINI), not(tagEmpty(DelightfulItemTags.PANCAKES)), not(tagEmpty(DelightfulItemTags.CHEESE_MILD_CREAM)), not(tagEmpty(DelightfulItemTags.ROE)), modLoaded(Modid.BC.get()));
+		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.SALMON_AND_ROE_BLINI.get())
+			.requires(DelightfulItemTags.PANCAKES)
+			.requires(ForgeTags.MILK)
+			.requires(ModItems.SALMON_SLICE.get())
+			.requires(DelightfulItemTags.AGED_ROES)
+			.requires(Items.DRIED_KELP)
+			.unlockedBy("has_aged_roe", has(DelightfulItemTags.AGED_ROES)),
+			"food/salmon_and_roe_blini_from_milk", finished, enabled(DelightfulItems.SALMON_AND_ROE_BLINI), not(tagEmpty(DelightfulItemTags.PANCAKES)), tagEmpty(DelightfulItemTags.CHEESE_MILD_CREAM), not(tagEmpty(DelightfulItemTags.ROE)), modLoaded(Modid.BC.get()));
+		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.SALMON_AND_ROE_BLINI.get())
+			.requires(DelightfulItems.ROE_BLINI.get())
+			.requires(ModItems.SALMON_SLICE.get())
+			.unlockedBy("has_roe_blini", has(DelightfulItems.ROE_BLINI.get())),
+			"food/salmon_and_roe_blini_from_roe_blini", finished, enabled(DelightfulItems.SALMON_AND_ROE_BLINI), enabled(DelightfulItems.ROE_BLINI), not(tagEmpty(DelightfulItemTags.ROE)), modLoaded(Modid.BC.get()));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.CHEESEBURGER.get())
 			.requires(ForgeTags.BREAD)
 			.requires(ModItems.BEEF_PATTY.get())
@@ -108,6 +143,11 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.requires(ForgeTags.VEGETABLES_ONION)
 			.unlockedBy("has_beef_patty", has(ModItems.BEEF_PATTY.get())),
 			"food/cheeseburger_from_bun", finished, enabled(DelightfulItems.CHEESEBURGER), not(tagEmpty(DelightfulItemTags.BURGER_BUN)), not(tagEmpty(DelightfulItemTags.CHEESE)), not(modLoaded(Modid.VD.get())));
+		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.CHEESEBURGER.get())
+			.requires(ModItems.HAMBURGER.get())
+			.requires(DelightfulItemTags.CHEESE)
+			.unlockedBy("has_hamburger", has(ModItems.HAMBURGER.get())),
+			"food/cheeseburger_from_hamburger", finished, enabled(DelightfulItems.CHEESEBURGER), not(tagEmpty(DelightfulItemTags.CHEESE)));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.DELUXE_CHEESEBURGER.get())
 			.requires(ForgeTags.BREAD)
 			.requires(ModItems.BEEF_PATTY.get())
@@ -144,6 +184,13 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.requires(ForgeTags.VEGETABLES_ONION)
 			.unlockedBy("has_bacon", has(ModItems.COOKED_BACON.get())),
 			"food/deluxe_cheeseburger_from_bun", finished, enabled("deluxe_cheeseburger"), not(tagEmpty(DelightfulItemTags.BURGER_BUN)), not(tagEmpty(DelightfulItemTags.CHEESE)));
+		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.DELUXE_CHEESEBURGER.get())
+			.requires(DelightfulItems.CHEESEBURGER.get())
+			.requires(ModItems.BEEF_PATTY.get())
+			.requires(DelightfulItemTags.CHEESE)
+			.requires(ModItems.COOKED_BACON.get())
+			.unlockedBy("has_cheeseburger", has(DelightfulItems.CHEESEBURGER.get())),
+			"food/deluxe_cheeseburger_from_cheeseburger", finished, enabled(DelightfulItems.DELUXE_CHEESEBURGER), enabled(DelightfulItems.CHEESEBURGER));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.MARSHMALLOW_STICK.get())
 			.requires(DelightfulItemTags.MARSHMALLOW)
 			.requires(Tags.Items.RODS_WOODEN)

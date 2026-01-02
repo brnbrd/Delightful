@@ -58,6 +58,10 @@
       "required": false
     },
     {
+      "id": "functionality:frog_leg",
+      "required": false
+    },
+    {
       "id": "frog_legs:frog_legs",
       "required": false
     }

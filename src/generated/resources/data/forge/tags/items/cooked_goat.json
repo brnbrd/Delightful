@@ -2,6 +2,10 @@
   "values": [
     "delightful:cooked_goat",
     {
+      "id": "functionality:cooked_chevon",
+      "required": false
+    },
+    {
       "id": "extra_compat:cooked_chevon_chop",
       "required": false
     }
