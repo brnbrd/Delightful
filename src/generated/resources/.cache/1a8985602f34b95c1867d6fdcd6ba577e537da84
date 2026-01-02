@@ -1,4 +1,4 @@
-// 1.20.1	2026-01-01T21:54:21.9789323	delightful
+// 1.20.1	2026-01-01T22:19:05.5210307	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -19,7 +19,7 @@ fc7871a514ce92a33729b5ec2874b741254e5e97 data/brewinandchewin/tags/items/pizza_t
 9720eaa25059db4d31e67bec3e13db181891785c data/collectorsreap/tags/items/gummies.json
 eb347da20a32d366a80660d57d24de89df517142 data/cosmopolitan/tags/items/tracer_sources.json
 ed89bd00684e45c4198269c0053267c257e784c6 data/create/tags/items/polished_rose_quartz.json
-7aef960e3879d0dd1ec8257a9a5ce7da2912df8e data/create/tags/items/upright_on_belt.json
+61e94e8f11956933f281067426ad0147755e9660 data/create/tags/items/upright_on_belt.json
 3ec615c3b0619071ee2425164230a78256598991 data/create_sa/tags/items/heap_of_experience.json
 93e27377ca1c64c862cd4f76810c65106f132cea data/create_sa/tags/items/zinc_handle.json
 b306cd52d0a89b88fd149766a3ccc1f9d27d4e5f data/deeperdarker/tags/items/reinforced_echo_shard.json
@@ -188,7 +188,7 @@ fd1e4120705811d14bd54017e0cd078c71b5fab3 data/forge/tags/items/raw_fishes.json
 d5df2003d6210b443fc989b821eee01651146c3b data/forge/tags/items/raw_squid.json
 c28b2966b7751691456f3c7ae84cb77f31a4f245 data/forge/tags/items/raw_venison.json
 b19668ebca12404ae89df0122f89f248f93193e6 data/forge/tags/items/roe.json
-a1a30327f76baf85fdcf3271cbffea7a0f2a2e40 data/forge/tags/items/roe/fish.json
+e8e6a5741ebd98ba0e3c37959dac3bd02f50180f data/forge/tags/items/roe/fish.json
 0710de5847241f4563ef4c29c20f4f2e59fce1df data/forge/tags/items/roe/prawn.json
 eede30f09088aaf8a642eb4ea1ebc60e3b69e020 data/forge/tags/items/ropes.json
 848b08c97c587fbcfb7a9888e8c5ec73d0195075 data/forge/tags/items/salt.json

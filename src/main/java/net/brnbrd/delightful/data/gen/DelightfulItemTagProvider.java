@@ -337,14 +337,18 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(ItemTags.TOOLS).addTag(DelightfulItemTags.TOOLS_WRENCH);
 		this.tag(DelightfulItemTags.WRENCHES).addTag(DelightfulItemTags.TOOLS_WRENCH);
 		this.tag(DelightfulItemTags.FISH_ROE)
-			.addOptional(Modid.LFL.rl("tropical_fish_roe"))
-			.addOptional(Modid.LFL.rl("salmon_roe"))
-			.addOptional(Modid.LFL.rl("pufferfish_roe"))
 			.addOptional(Modid.LFL.rl("cod_roe"))
-			.addOptional(Modid.LFL.rl("lanternfish_roe"))
-			.addOptional(Modid.LFL.rl("pike_roe"))
-			.addOptional(Modid.LFL.rl("lionfish_roe"))
-			.addOptional(Modid.LFL.rl("perch_roe"));
+			.addOptional(Modid.LFL.rl("pufferfish_roe"))
+			.addOptional(Modid.LFL.rl("salmon_roe"))
+			.addOptional(Modid.LFL.rl("tropical_fish_roe"))
+			.addOptional(Modid.LMFL.rl("bass_roe"))
+			.addOptional(Modid.LMFL.rl("blizzard_fin_roe"))
+			.addOptional(Modid.LMFL.rl("catfish_roe"))
+			.addOptional(Modid.LMFL.rl("koi_roe"))
+			.addOptional(Modid.LMFL.rl("lanternfish_roe"))
+			.addOptional(Modid.LMFL.rl("lionfish_roe"))
+			.addOptional(Modid.LMFL.rl("perch_roe"))
+			.addOptional(Modid.LMFL.rl("pike_roe"));
 		this.tag(DelightfulItemTags.PRAWN_ROE).addOptional(Modid.CR.rl("tiger_prawn_roe"));
 		this.tag(DelightfulItemTags.ROE)
 			.addTag(DelightfulItemTags.FISH_ROE)
@@ -924,9 +928,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.JUICES)
 			.addTag(DelightfulItemTags.JAMS)
 			.addTag(DelightfulItemTags.NUT_BUTTER)
+			.addTag(DelightfulItemTags.AGED_ROES)
 			.add(DelightfulItems.ANIMAL_OIL_BOTTLE.get())
-			.add(DelightfulItems.AGED_FISH_ROE.get())
-			.add(DelightfulItems.AGED_PRAWN_ROE.get())
 			.add(DelightfulItems.SALMONBERRY_PIE.get())
 			.add(DelightfulItems.BAKLAVA.get());
 		this.addSelf(DelightfulItemTags.POLISHED_ROSE_QUARTZ);
