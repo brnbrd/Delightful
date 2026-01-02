@@ -1,0 +1,78 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:ice_cubes"
+          }
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "mini_melon"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "key": {
+          "-": {
+            "tag": "forge:rods/wooden"
+          },
+          "i": {
+            "tag": "forge:ice_cubes"
+          },
+          "m": {
+            "item": "delightful:mini_melon"
+          }
+        },
+        "pattern": [
+          "im",
+          "-i"
+        ],
+        "result": {
+          "item": "farmersdelight:melon_popsicle"
+        },
+        "show_notification": true
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:ice_cubes"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "mini_melon"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "key": {
+          "-": {
+            "tag": "forge:rods/wooden"
+          },
+          "i": {
+            "item": "minecraft:ice"
+          },
+          "m": {
+            "item": "delightful:mini_melon"
+          }
+        },
+        "pattern": [
+          "im",
+          "-i"
+        ],
+        "result": {
+          "item": "farmersdelight:melon_popsicle"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}
