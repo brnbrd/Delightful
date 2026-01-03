@@ -43,7 +43,7 @@ public class Nutrition {
 		.nutrition(5).saturationMod(0.3F).build();
 	public static final FoodProperties GLOW_JAM_JAR = (new FoodProperties.Builder())
 		.nutrition(5).saturationMod(0.3F)
-		.effect(() -> new MobEffectInstance(CosmopolitanCompat.getTracer().get(), 1200, 0), 1F).build();
+		.effect(() -> new MobEffectInstance(CosmopolitanCompat.getTracer(), 1200, 0), 1F).build();
 	public static final FoodProperties NUT_BUTTER_BOTTLE = (new FoodProperties.Builder())
 		.nutrition(6).saturationMod(0.6F).build();
 	public static final FoodProperties AGED_FISH_ROE = (new FoodProperties.Builder())
@@ -161,37 +161,37 @@ public class Nutrition {
 		.effect(() -> new MobEffectInstance(SOBCompat.getSpite(), 1200, 0), 1F).build();
 	public static final FoodProperties LAVENDER_TEA = (new FoodProperties.Builder()).alwaysEat()
 		.effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 600, 0), 1F)
-		.effect(() -> new MobEffectInstance(TeaCompat.getCaffeinated().get(), 600, 0), 1F).build();
+		.effect(() -> new MobEffectInstance(TeaCompat.getCaffeinated(), 600, 0), 1F).build();
 	public static final FoodProperties AZALEA_TEA = (new FoodProperties.Builder()).alwaysEat()
 		.effect(() -> new MobEffectInstance(MobEffects.BLINDNESS, 60, 0), 1F)
 		.effect(() -> new MobEffectInstance(MobEffects.LEVITATION, 60, 1), 1F)
-		.effect(() -> new MobEffectInstance(TeaCompat.getYellowTeaEffect().get(), 4800, 1), 1F).build();
+		.effect(() -> new MobEffectInstance(TeaCompat.getYellowTeaEffect(), 4800, 1), 1F).build();
 	public static final FoodProperties MATCHA_LATTE = (new FoodProperties.Builder()).alwaysEat()
 		.nutrition(6).saturationMod(0.5F)
 		.effect(() -> new MobEffectInstance(MobEffects.HEAL, 1, 0), 1F)
-		.effect(() -> new MobEffectInstance(TeaCompat.getGreenTeaEffect().get(), 400, 1), 1F)
-		.effect(() -> new MobEffectInstance(TeaCompat.getCaffeinated().get(), 3600, 1), 1F).build();
+		.effect(() -> new MobEffectInstance(TeaCompat.getGreenTeaEffect(), 400, 1), 1F)
+		.effect(() -> new MobEffectInstance(TeaCompat.getCaffeinated(), 3600, 1), 1F).build();
 	public static final FoodProperties BERRY_MATCHA_LATTE = (new FoodProperties.Builder()).alwaysEat()
 		.nutrition(8).saturationMod(0.65F)
 		.effect(() -> new MobEffectInstance(MobEffects.HEAL, 1, 0), 1F)
-		.effect(() -> new MobEffectInstance(TeaCompat.getGreenTeaEffect().get(), 400, 1), 1F)
-		.effect(() -> new MobEffectInstance(TeaCompat.getCaffeinated().get(), 3600, 1), 1F).build();
+		.effect(() -> new MobEffectInstance(TeaCompat.getGreenTeaEffect(), 400, 1), 1F)
+		.effect(() -> new MobEffectInstance(TeaCompat.getCaffeinated(), 3600, 1), 1F).build();
 	public static final FoodProperties ENDER_NECTAR = (new FoodProperties.Builder())
 		.nutrition(4).saturationMod(0F).alwaysEat()
 		.effect(() -> new MobEffectInstance(MobEffects.HEAL, 1, 0), 1F)
-		.effect(() -> new MobEffectInstance(TeaCompat.getCaffeinated().get(), 3600, 2), 1F)
-		.effect(() -> new MobEffectInstance(ExquisitoCompat.getResonance().get(), 500, 0), 1F)
-		.effect(() -> new MobEffectInstance(BrewinChewinCompat.getTipsy().get(), 2400, 0), 1F)
+		.effect(() -> new MobEffectInstance(TeaCompat.getCaffeinated(), 3600, 2), 1F)
+		.effect(() -> new MobEffectInstance(ExquisitoCompat.getResonance(), 500, 0), 1F)
+		.effect(() -> new MobEffectInstance(BrewinChewinCompat.getTipsy(), 2400, 0), 1F)
 		.effect(() -> BrewinChewinCompat.getIntoxicationOrHalfBadLuck(1800, 0), 1F)
 		.effect(() -> new MobEffectInstance(MobEffects.BLINDNESS, 60, 0), 1F).build();
 	public static final FoodProperties MATCHA_ICE_CREAM = (new FoodProperties.Builder())
 		.nutrition(6).saturationMod(0.3F)
-		.effect(() -> new MobEffectInstance(TeaCompat.getGreenTeaEffect().get(), 500, 1), 1F)
-		.effect(() -> new MobEffectInstance(TeaCompat.getCaffeinated().get(), 400, 0), 1F).build();
+		.effect(() -> new MobEffectInstance(TeaCompat.getGreenTeaEffect(), 500, 1), 1F)
+		.effect(() -> new MobEffectInstance(TeaCompat.getCaffeinated(), 400, 0), 1F).build();
 	public static final FoodProperties 	MATCHA_MILKSHAKE = (new FoodProperties.Builder())
 		.nutrition(2).saturationMod(1.5F).alwaysEat()
-		.effect(() -> new MobEffectInstance(TeaCompat.getGreenTeaEffect().get(), 200, 1), 1F)
-		.effect(() -> new MobEffectInstance(TeaCompat.getCaffeinated().get(), 300, 0), 1F).build();
+		.effect(() -> new MobEffectInstance(TeaCompat.getGreenTeaEffect(), 200, 1), 1F)
+		.effect(() -> new MobEffectInstance(TeaCompat.getCaffeinated(), 300, 0), 1F).build();
 	public static final FoodProperties SALMONBERRY_ICE_CREAM = (new FoodProperties.Builder())
 		.nutrition(6).saturationMod(0.3F)
 		.effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 1200), 1F).build();
@@ -207,7 +207,7 @@ public class Nutrition {
 		.effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 600, 0), 1F).build();
 	public static final FoodProperties GLOW_JAM_COOKIE = (new FoodProperties.Builder())
 		.nutrition(2).saturationMod(0.1F).fast()
-		.effect(() -> new MobEffectInstance(CosmopolitanCompat.getTracer().get(), 300, 0), 1F).build();
+		.effect(() -> new MobEffectInstance(CosmopolitanCompat.getTracer(), 300, 0), 1F).build();
 	public static final FoodProperties BAKLAVA_SLICE = (new FoodProperties.Builder())
 		.nutrition(5).saturationMod(0.6F)
 		.fast()
@@ -217,7 +217,7 @@ public class Nutrition {
 		.effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 900, 0), 1F).build();
 	public static final FoodProperties MATCHA_GUMMY = (new FoodProperties.Builder())
 		.nutrition(2).saturationMod(0F).alwaysEat()
-		.effect(() -> new MobEffectInstance(TeaCompat.getGreenTeaEffect().get(), 100, 2), 1F).build();
+		.effect(() -> new MobEffectInstance(TeaCompat.getGreenTeaEffect(), 100, 2), 1F).build();
 	public static final FoodProperties CANTALOUPE_GUMMY = (new FoodProperties.Builder())
 		.nutrition(2).saturationMod(0F).alwaysEat()
 		.effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 200, 3), 1F)

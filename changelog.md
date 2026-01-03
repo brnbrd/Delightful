@@ -1,6 +1,15 @@
 # Version History
 
 
+## 3.7.8
+
+### Fixes
+- Fixed crash when [Brewin' and Chewin'](https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin) is not loaded (closes [#144](https://github.com/brnbrd/Delightful/issues/144))
+
+### Translations
+- Updated ru_ru (merged [#145](https://github.com/brnbrd/Delightful/pull/145))
+
+
 ## 3.7.7
 
 ### Updates

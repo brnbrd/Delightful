@@ -155,7 +155,7 @@ public class DelightfulItems {
 		() -> new DrinkItem((new Item.Properties()).food(Nutrition.BERRY_MATCHA_LATTE).stacksTo(16).craftRemainder(Items.GLASS_BOTTLE), true, false));
 	public static final RegistryObject<Item> ENDER_NECTAR = registerItem("ender_nectar", () ->
 		Modid.BC.loaded() ?
-		BrewinChewinCompat.ENDER_NECTAR.get() :
+		BrewinChewinCompat.getEnderNectar() :
 		new EnderNectarItem((new Item.Properties()).food(Nutrition.ENDER_NECTAR).stacksTo(16).craftRemainder(Items.GLASS_BOTTLE)));
 	public static final RegistryObject<Item> AZALEA_TEA = registerItem("azalea_tea",
 		() -> new AzaleaTeaItem((new Item.Properties()).food(Nutrition.AZALEA_TEA)));
