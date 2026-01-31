@@ -1,5 +1,6 @@
 package net.brnbrd.delightful.data.tags;
 
+import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.compat.Modid;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
@@ -98,8 +99,8 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> TOOLS_WRENCH = forge("tools/wrench");
 	public static final TagKey<Item> WRENCHES = forge("wrenches");
 	public static final TagKey<Item> ROE = forge("roe");
-	public static final TagKey<Item> FISH_ROE = forge("roe/fish");
 	public static final TagKey<Item> PRAWN_ROE = forge("roe/prawn");
+	public static final TagKey<Item> FISH_ROE = forge("roe/fish");
 	public static final TagKey<Item> JUICES = forge("juices");
 	public static final TagKey<Item> JUICES_MELON = forge("juices/melon");
 	public static final TagKey<Item> JUICES_PRICKLY_PEAR = forge("juices/prickly_pear");
@@ -136,6 +137,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> RAW_RABBIT = forge("raw_rabbit");
 	public static final TagKey<Item> COOKED_RABBIT = forge("cooked_rabbit");
 	public static final TagKey<Item> RAW_SQUID = forge("raw_squid");
+	public static final TagKey<Item> RAW_FISHES_STURGEON = forge("raw_fishes/sturgeon");
 	public static final TagKey<Item> RAW_FISHES_SQUID = forge("raw_fishes/squid");
 	public static final TagKey<Item> RAW_FISHES_SQUID_TENTACLES = forge("raw_fishes/squid/tentacles");
 	public static final TagKey<Item> COOKED_FISHES_SQUID = forge("cooked_fishes/squid");
@@ -248,6 +250,10 @@ public class DelightfulItemTags {
 	public final static TagKey<Item> STRATUS_UPGRADE = Modid.DA.it("stratus_smithing_template");
 	public final static TagKey<Item> SKYJADE_REPAIRING = Modid.DA.it("skyjade_repairing");
 	public final static TagKey<Item> STRATUS_REPAIRING = Modid.DA.it("stratus_repairing");
+
+	// Let Fish Love
+	public static final TagKey<Item> FISH_FOOD_STURGEON = Util.it(Modid.LFL.get(),
+		"fish_food/" + Modid.TIDE.get() + "/sturgeon");
 
 	public static TagKey<Item> forge(@NotNull String name) {
 		return Modid.LOADER.it(name);
