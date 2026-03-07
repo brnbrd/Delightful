@@ -1,13 +1,16 @@
 package net.brnbrd.delightful.common.events;
 
+import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.block.DelightfulBlocks;
 import net.brnbrd.delightful.common.block.ISliceable;
+import net.brnbrd.delightful.common.fluid.DelightfulFluids;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.compat.SOBCompat;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
@@ -29,11 +32,27 @@ import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.MissingMappingsEvent;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
 import java.util.List;
 import java.util.Objects;
 
 public class ForgeEvents {
+	@SubscribeEvent
+	void onMissingMappings(MissingMappingsEvent e) {
+		e.getMappings(Registries.ITEM, Delightful.MODID).stream()
+			.filter(this::checkRoeMap)
+			.forEach(map -> map.remap(DelightfulItems.AGED_ROE.get()));
+		e.getMappings(Registries.FLUID, Delightful.MODID).stream()
+			.filter(this::checkRoeMap)
+			.forEach(map -> map.remap(DelightfulFluids.AGED_ROE.get()));
+	}
+
+	private boolean checkRoeMap(final MissingMappingsEvent.Mapping<?> mapping) {
+		final String path = mapping.getKey().getPath();
+		return path.equals("aged_fish_roe") || path.equals("aged_prawn_roe");
+	}
+
 	@SubscribeEvent
 	void onEatEffectProvider(LivingEntityUseItemEvent.Finish e) {
 		if (e.getResult() != Event.Result.DENY) {

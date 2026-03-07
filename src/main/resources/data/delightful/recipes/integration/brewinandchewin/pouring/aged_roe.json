@@ -1,0 +1,34 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "aged_roe"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "brewinandchewin"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "letfishlove"
+        }
+      ],
+      "recipe": {
+        "type": "brewinandchewin:keg_pouring",
+        "container": {
+          "item": "minecraft:glass_bottle"
+        },
+        "amount": 250,
+        "filling": true,
+        "fluid": "delightful:aged_roe",
+        "output": {
+          "item": "delightful:aged_roe"
+        },
+        "strict": false
+      }
+    }
+  ]
+}

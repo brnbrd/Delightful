@@ -31,7 +31,8 @@ public class DelightfulItemModelProvider extends ItemModelProvider {
 	);
 	private static final List<ResourceLocation> ITEM_BLOCKS = List.of(
 		DelightfulItems.SALMONBERRY_PIE.getId(),
-		DelightfulItems.BAKLAVA.getId()
+		DelightfulItems.BAKLAVA.getId(),
+		DelightfulItems.STURGEON_ROE.getId()
 	);
 	private static final List<ResourceLocation> EMISSIVE = List.of(
 		Knives.FIERY.getId()

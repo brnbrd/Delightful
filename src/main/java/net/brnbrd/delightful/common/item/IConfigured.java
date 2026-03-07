@@ -9,6 +9,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.ItemLike;
+import java.util.Arrays;
 import java.util.List;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -73,8 +74,14 @@ public interface IConfigured extends ItemLike {
 		if (!this.enabled()) {
 			comps.add(Util.tooltip("disabled").withStyle(ChatFormatting.UNDERLINE));
 			if (!this.isLoaded() && this.getModid().length > 0) {
-				comps.add(Util.tooltip("requires_modid"));
-				comps.add(Component.literal(Strings.join(Mods.names(getModid()), ", ")).withStyle(ChatFormatting.UNDERLINE));
+				final String[] notLoaded = Arrays.stream(this.getModid())
+					.filter(modid -> !modid.loaded())
+					.map(Modid::get)
+					.toArray(String[]::new);
+				if (notLoaded.length > 0) {
+					comps.add(Util.tooltip("requires_modid"));
+					comps.add(Component.literal(Strings.join(notLoaded, ", ")).withStyle(ChatFormatting.UNDERLINE));
+				}
 			}
 			if (!this.isDependencyTag() && this.getDependencyTag() != null) {
 				comps.add(Util.tooltip("requires_tag"));

@@ -56,14 +56,13 @@ import net.minecraftforge.common.Tags;
 import net.minecraftforge.registries.RegistryObject;
 
 public class Knives extends DelightfulItems {
-
 	// Knives
 	public static final RegistryObject<Item> BONE = registerKnife("bone", Tags.Items.BONES);
 	public static final RegistryObject<Item> LAPIS_LAZULI = registerKnife("lapis_lazuli", Tags.Items.GEMS_LAPIS);
-	public static final RegistryObject<Item> AMETHYST = registerGemKnife("amethyst");
 	public static final RegistryObject<Item> EMERALD = registerGemKnife("emerald");
 	public static final RegistryObject<Item> COPPER = registerIngotKnife("copper");
-	public static final RegistryObject<Item> NETHER_QUARTZ = registerKnife("nether_quartz", Tags.Items.GEMS_QUARTZ);
+	public static final RegistryObject<Item> AMETHYST = registerItem("amethyst_knife", () -> new AmethystKnifeItem(props()));
+	public static final RegistryObject<Item> NETHER_QUARTZ = registerItem("nether_quartz_knife", () -> new NetherQuartzKnifeItem(props()));
 
 	public static final RegistryObject<Item> TIN = registerIngotKnife("tin");
 	public static final RegistryObject<Item> STEEL = registerIngotKnife("steel");

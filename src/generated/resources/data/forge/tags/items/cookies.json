@@ -114,6 +114,14 @@
       "required": false
     },
     {
+      "id": "foragersinsight:acorn_cookie",
+      "required": false
+    },
+    {
+      "id": "foragersinsight:rose_cookie",
+      "required": false
+    },
+    {
       "id": "sunflowerdelight:shortbread_cookie",
       "required": false
     },

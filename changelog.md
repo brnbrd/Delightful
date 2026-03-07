@@ -1,6 +1,19 @@
 # Version History
 
 
+## 3.7.9
+
+### Updates
+- Added Sturgeon Roe (for [Let Fish Love](https://www.curseforge.com/minecraft/mc-mods/let-fish-love) and [Tide](https://www.curseforge.com/minecraft/mc-mods/tide))
+- Added Caviar (for [Let Fish Love](https://www.curseforge.com/minecraft/mc-mods/let-fish-love), [Tide](https://www.curseforge.com/minecraft/mc-mods/tide), and [Brewin' and Chewin'](https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin))
+- Merged Aged Fish Roe and Aged Prawn Roe into a single Aged Roe item
+- Added compat between [Just Enough Breeding](https://www.curseforge.com/minecraft/mc-mods/justenoughbreeding) and [Let Fish Love](https://www.curseforge.com/minecraft/mc-mods/let-fish-love) + [Let More Fish Love](https://www.curseforge.com/minecraft/mc-mods/letmorefishlove)
+- Added some item tag translations
+
+### Fixes
+- Replaced `#farmersdelight:tools/knives` tag with individual knives in `#forge:tools/knives` (fixes [#146](https://github.com/brnbrd/Delightful/issues/146))
+
+
 ## 3.7.8
 
 ### Fixes

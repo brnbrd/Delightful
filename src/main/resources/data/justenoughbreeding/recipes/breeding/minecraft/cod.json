@@ -1,0 +1,41 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "justenoughbreeding"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "letfishlove"
+        }
+      ],
+      "recipe": {
+        "type": "justenoughbreeding:breeding",
+        "mod": "minecraft",
+        "mobs": [
+          {
+            "cod": {
+              "inputs": [
+                {
+                  "tag": "letfishlove:fish_food/minecraft/cod"
+                }
+              ],
+              "outputs": [
+                {
+                  "item": "letfishlove:cod_roe",
+                  "amount": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "justenoughbreeding"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "letfishlove"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "tide"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "sturgeon_roe"
+        }
+      ],
+      "recipe": {
+        "type": "justenoughbreeding:breeding",
+        "mod": "tide",
+        "mobs": [
+          {
+            "sturgeon": {
+              "inputs": [
+                {
+                  "tag": "letfishlove:fish_food/tide/sturgeon"
+                }
+              ],
+              "outputs": [
+                {
+                  "item": "delightful:sturgeon_roe",
+                  "amount": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-// 1.20.1	2026-01-01T23:55:30.886533	Recipes
+// 1.20.1	2026-03-06T23:08:11.567482	Recipes
 6c217dd6477efa10f6042809ba959d53036ab5e2 data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 5b82f87851220644287d771121677deac66b3b89 data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
 cf29033c1c919355c261025df529938e6ebc73f8 data/delightful/advancements/recipes/campfire/cactus_steak.json
@@ -90,7 +90,7 @@ a382b221716bfea152f215548a58ef1c14c68bee data/delightful/advancements/recipes/in
 3455b420f9e46bf763ca358e061820b97228fd61 data/delightful/advancements/recipes/knives/adamantium_knife.json
 b4b2b0db05cdda67370b4e1e93d4a672aec30686 data/delightful/advancements/recipes/knives/allthemodium_knife.json
 b0c6f8965b972812ffae15bbf7af8f0b121a4e9c data/delightful/advancements/recipes/knives/aluminum_knife.json
-8c8f8b22672457830b412724d98924770a98084e data/delightful/advancements/recipes/knives/amethyst_knife.json
+9eae7db3e2655ff7656b2bf353df2d0298043967 data/delightful/advancements/recipes/knives/amethyst_knife.json
 124d490cd8600cd51baefec2fcbd79911f96bffd data/delightful/advancements/recipes/knives/black_opal_knife.json
 9e6761271a0506281e11ebeb88f05368c974e15c data/delightful/advancements/recipes/knives/blasting/bone/knife_minecraft.json
 5ca616855925169427b28cb7d8559c63f772eedb data/delightful/advancements/recipes/knives/bone_knife.json
@@ -120,7 +120,7 @@ c9e0369e18a0cf8fcfa91c965336093ce13c3c38 data/delightful/advancements/recipes/kn
 211e511b7b4ea74b36c7c5424f31c995959963b7 data/delightful/advancements/recipes/knives/manasteel_knife.json
 c160bc5358c60c47b9e94c3fe32c45b4dbca62bf data/delightful/advancements/recipes/knives/mythril_knife.json
 06ba93c376e6ce56a37b2d7a84b5221518114eac data/delightful/advancements/recipes/knives/necronium_knife.json
-195a95e66a9379bb853c0f77e92d30a39fb5a31f data/delightful/advancements/recipes/knives/nether_quartz_knife.json
+da2484a5cfd4edede2ef1102adbf8ccd67e8354b data/delightful/advancements/recipes/knives/nether_quartz_knife.json
 cab1461787aa4695cc8aa9feeb15e4bacd67e458 data/delightful/advancements/recipes/knives/nickel_knife.json
 cb5651b1dc86cc5f3533bb902d623e1fc0af69ac data/delightful/advancements/recipes/knives/onyx_knife.json
 0d94c24b9f859cdf19ff9151abfa793dbe34569c data/delightful/advancements/recipes/knives/osmium_knife.json
@@ -264,7 +264,7 @@ efd2f63b946697520a87bcc018b65b4839eaa0cc data/delightful/recipes/integration/coo
 fbac8c0402192383851454836c668a10abcf4fd9 data/delightful/recipes/knives/adamantium_knife.json
 dfd72b00ea687b759de6808e6af28561dd893fab data/delightful/recipes/knives/allthemodium_knife.json
 d323a787aa27d8838c97c1fe4a420eb33cccb70f data/delightful/recipes/knives/aluminum_knife.json
-72a092b9a1f410d23277d87adf5694a6a7ff8954 data/delightful/recipes/knives/amethyst_knife.json
+dbc635dcc497250cc17d0bdda5a2b73b4c2183c4 data/delightful/recipes/knives/amethyst_knife.json
 660db77a732981f053639781ac6e7628e734046a data/delightful/recipes/knives/black_opal_knife.json
 0823399ef926ae8a7e8e53f9b86eb9a9a145619d data/delightful/recipes/knives/blasting/bone/knife_minecraft.json
 e55e253a0fb08d5a2e83537d294dc4917d82bb8e data/delightful/recipes/knives/bone_knife.json
@@ -294,7 +294,7 @@ b8e5f5b6d7faad9e57ea5b615ef2cfaeaed1aba1 data/delightful/recipes/knives/leaf_kni
 daa5b8a3107fa80ea4e1492774e550fc2d5a28d9 data/delightful/recipes/knives/manasteel_knife.json
 fb202a2501aa1757eee7df89a9fb89c0cce60409 data/delightful/recipes/knives/mythril_knife.json
 e4503d55e555c4beb5f497c56f3b8dd5bbaf2d22 data/delightful/recipes/knives/necronium_knife.json
-7e2a9de1a729a92e1880e92fe7a4ced76765fa4c data/delightful/recipes/knives/nether_quartz_knife.json
+c7a288c977e7b64de25714164503037f89c10814 data/delightful/recipes/knives/nether_quartz_knife.json
 64eb121a9056de77473df5b3a6d094a6299430f3 data/delightful/recipes/knives/nickel_knife.json
 43bf82f0f2bc0fb015c528a6dc591b4c582056f0 data/delightful/recipes/knives/onyx_knife.json
 5d9084477afb1edc65deac35bd1f3d04a8d06b0f data/delightful/recipes/knives/osmium_knife.json

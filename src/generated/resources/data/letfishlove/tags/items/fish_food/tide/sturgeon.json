@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "tide:incandescent_larva",
+      "required": false
+    },
+    {
+      "id": "collectorsreap:tiger_prawn",
+      "required": false
+    }
+  ]
+}

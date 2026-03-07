@@ -1,4 +1,4 @@
-// 1.20.1	2026-01-01T22:19:05.5245445	Tags for minecraft:block mod id delightful
+// 1.20.1	2026-03-06T23:08:11.569487	Tags for minecraft:block mod id delightful
 2469f55332d27164e5aade020a5d1f0d44c68df5 data/delightful/tags/blocks/add_acorn.json
 bbd8407927efc4c85da90a5569654ea62dd49d70 data/delightful/tags/blocks/cantaloupe_spawns.json
 e45854277225121f314d81675c04ced01411537d data/delightful/tags/blocks/drops_acorn.json
@@ -19,11 +19,12 @@ ac858dd81b235514728341501eca0c15abc5d52f data/forge/tags/blocks/storage_blocks/g
 4d6246a4c357f74db59508a66a7d8eb618ca997a data/forge/tags/blocks/storage_blocks/mendosteen.json
 910a2f723b246f6301b45d099d22354ad0c850c3 data/forge/tags/blocks/storage_blocks/salmonberries.json
 1fba4a9f3d99bf10665e6ce2385f4c8b5eb51921 data/forge/tags/blocks/storage_blocks/yucca_fruit.json
+c4bbf8755957edcbe9e362ab5c0b889890a0d294 data/letfishlove/tags/blocks/fish_roe/tide/sturgeon.json
 c7cbd868b80f2a96c1442a45ac361caee67e6839 data/minecraft/tags/blocks/cauldrons.json
 7076aa6d8c569d949c9e526982a7619cda3286fc data/minecraft/tags/blocks/mineable/axe.json
 730974ec2410f38962e7268c36a358efb820a4cc data/minecraft/tags/blocks/mineable/hoe.json
 56652c93f5e1505b2c4875c8d14635f2a2c72350 data/minecraft/tags/blocks/mineable/pickaxe.json
-631ba79d80459337b3933cc2f0ec7af095ceb533 data/minecraft/tags/blocks/mineable/shovel.json
+2bab8f0fed2dd98f9cdd82a46235944ce524c27e data/minecraft/tags/blocks/mineable/shovel.json
 6650e90744a669ba97f26352f5edb05740ef68e9 data/minecraft/tags/blocks/slabs.json
 ed2c2757f59849017bb6717aa71e58742f546890 data/minecraft/tags/blocks/small_flowers.json
 ccf8a58ba350ded67f8a3689f5b1419c159e2cef data/minecraft/tags/blocks/stairs.json

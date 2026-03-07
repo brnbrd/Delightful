@@ -11,6 +11,10 @@
     {
       "id": "thermal:syrup_bottle",
       "required": false
+    },
+    {
+      "id": "foragersinsight:birch_syrup_bottle",
+      "required": false
     }
   ]
 }

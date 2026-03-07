@@ -2,14 +2,17 @@ package net.brnbrd.delightful.data.gen;
 
 import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.common.block.DelightfulBlocks;
+import net.brnbrd.delightful.common.fluid.DelightfulFluids;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.knife.DKnifeItem;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.TagKey;
 import net.minecraftforge.common.data.LanguageProvider;
-import org.jetbrains.annotations.NotNull;
+import net.minecraftforge.fluids.FluidType;
+import net.minecraftforge.registries.RegistryObject;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
+import org.jetbrains.annotations.NotNull;
 
 public class DelightfulLanguageProvider extends LanguageProvider {
 	public DelightfulLanguageProvider(PackOutput output) {
@@ -154,6 +157,7 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		addBlock(DelightfulBlocks.SOURCE_BERRY_COOKIE_TILE_STAIRS, "Source Berry Cookie Tile Stairs");
 		addBlock(DelightfulBlocks.SOURCE_BERRY_COOKIE_TILE_SLAB, "Source Berry Cookie Tile Slab");
 		addBlock(DelightfulBlocks.SOURCE_BERRY_COOKIE_TILE_WALL, "Source Berry Cookie Tile Wall");
+		addBlock(DelightfulBlocks.STURGEON_ROE, "Sturgeon Roe");
 	}
 
 	private void addTags() {
@@ -176,35 +180,43 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		addItemTag(DelightfulItemTags.TEA_LEAVES, "Tea Leaves");
 		addItemTag(DelightfulItemTags.TEA_LEAVES_GREEN, "Green Tea Leaves");
 		addItemTag(DelightfulItemTags.CHEESE, "Cheeses");
+		addItemTag(DelightfulItemTags.ICE_CUBES, "Ice Cubes");
+		addItemTag(DelightfulItemTags.CHOCOLATE, "Chocolates");
+		addItemTag(DelightfulItemTags.SALT, "Salts");
 		addItemTag(DelightfulItemTags.JAMS, "Jams");
 		addItemTag(DelightfulItemTags.JAMS_GLOW, "Glow Jams");
+		addItemTag(DelightfulItemTags.NUT_BUTTER, "Nut Butters");
 		addItemTag(DelightfulItemTags.NUTS, "Nuts");
 		addItemTag(DelightfulItemTags.COOKED_NUTS, "Cooked Nuts");
-		addItemTag(DelightfulItemTags.NUT_BUTTER, "Nut Butters");
-		addItemTag(DelightfulItemTags.ICE_CUBES, "Ice Cubes");
+		addItemTag(DelightfulItemTags.COOKED_CRAB_MEAT, "Cooked Crab Meats");
+		addItemTag(DelightfulItemTags.RAW_CRAB_MEAT, "Raw Crab Meats");
+		addItemTag(ForgeTags.MILK, "Milks");
 		addItemTag(ForgeTags.BREAD, "Breads");
 		addItemTag(ForgeTags.DOUGH, "Doughs");
+		addItemTag(ForgeTags.SALAD_INGREDIENTS, "Salad Ingredients");
+		addItemTag(DelightfulItemTags.FISH_FOOD_SALMON, "Salmon Food");
+		addItemTag(DelightfulItemTags.FISH_FOOD_STURGEON, "Sturgeon Food");
 	}
 
 	private void addOther() {
 		// Fluids
-		addItem(DelightfulItems.AGED_FISH_ROE, "Aged Fish Roe");
-		add("fluid_type." + Delightful.MODID + ".aged_fish_roe_type", "Aged Fish Roe");
-		addItem(DelightfulItems.AGED_PRAWN_ROE, "Aged Prawn Roe");
-		add("fluid_type." + Delightful.MODID + ".aged_prawn_roe_type", "Aged Prawn Roe");
+		addItem(DelightfulItems.AGED_ROE, "Aged Roe");
+		addFluidType(DelightfulFluids.AGED_ROE_TYPE, "Aged Roe");
+		addItem(DelightfulItems.CAVIAR, "Caviar");
+		addFluidType(DelightfulFluids.CAVIAR_TYPE, "Caviar");
 		addItem(DelightfulItems.MATCHA_LATTE, "Matcha Latte");
-		add("fluid_type." + Delightful.MODID + ".matcha_latte_type", "Matcha Latte");
+		addFluidType(DelightfulFluids.MATCHA_LATTE_TYPE, "Matcha Latte");
 		addItem(DelightfulItems.ENDER_NECTAR, "Ender Nectar");
-		add("fluid_type." + Delightful.MODID + ".ender_nectar_type", "Ender Nectar");
+		addFluidType(DelightfulFluids.ENDER_NECTAR_TYPE, "Ender Nectar");
 		addItem(DelightfulItems.AZALEA_TEA, "Azalea Tea");
-		add("fluid_type." + Delightful.MODID + ".azalea_tea_type", "Azalea Tea");
+		addFluidType(DelightfulFluids.AZALEA_TEA_TYPE, "Azalea Tea");
 		addItem(DelightfulItems.LAVENDER_TEA, "Lavender Tea");
-		add("fluid_type." + Delightful.MODID + ".lavender_tea_type", "Lavender Tea");
+		addFluidType(DelightfulFluids.LAVENDER_TEA_TYPE, "Lavender Tea");
 		addItem(DelightfulItems.PRICKLY_PEAR_JUICE, "Prickly Pear Juice");
+		addFluidType(DelightfulFluids.PRICKLY_PEAR_JUICE_TYPE, "Prickly Pear Juice");
 		addItem(DelightfulItems.LONG_PRICKLY_PEAR_JUICE, "Prickly Pear Juice");
-		add("fluid_type." + Delightful.MODID + ".prickly_pear_juice_type", "Prickly Pear Juice");
-		add("fluid_type." + Delightful.MODID + ".long_prickly_pear_juice_type", "Prickly Pear Juice");
-		add("fluid_type." + Delightful.MODID + ".eggnog_type", "Eggnog");
+		addFluidType(DelightfulFluids.LONG_PRICKLY_PEAR_JUICE_TYPE, "Prickly Pear Juice");
+		addFluidType(DelightfulFluids.EGGNOG_TYPE, "Eggnog");
 
 		// Other
 		add("delightful.overhauls", "Overhauls");
@@ -248,6 +260,10 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 				.replace("/", "."),
 			translation
 		);
+	}
+
+	public void addFluidType(@NotNull RegistryObject<FluidType> fluid, String translation) {
+		add("fluid_type." + Delightful.MODID + "." + fluid.getId().getPath(), translation);
 	}
 
 	public void addDescription(String key, String value) {

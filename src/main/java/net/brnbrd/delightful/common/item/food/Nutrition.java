@@ -46,12 +46,18 @@ public class Nutrition {
 		.effect(() -> new MobEffectInstance(CosmopolitanCompat.getTracer(), 1200, 0), 1F).build();
 	public static final FoodProperties NUT_BUTTER_BOTTLE = (new FoodProperties.Builder())
 		.nutrition(6).saturationMod(0.6F).build();
-	public static final FoodProperties AGED_FISH_ROE = (new FoodProperties.Builder())
-		.nutrition(8).saturationMod(0.7F)
-		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3600, 0), 1F).build();
-	public static final FoodProperties AGED_PRAWN_ROE = (new FoodProperties.Builder())
-		.nutrition(8).saturationMod(0.8F)
-		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3600, 0), 1F).build();
+	public static final FoodProperties AGED_ROE = (new FoodProperties.Builder())
+		.nutrition(7).saturationMod(0.7F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3600, 0), 1F)
+		.effect(() -> new MobEffectInstance(BrewinChewinCompat.getTipsy(), 300, 0), 1F)
+		.effect(() -> BrewinChewinCompat.getIntoxicationOrHalfBadLuck(200, 0), 1F).build();
+	public static final FoodProperties CAVIAR = (new FoodProperties.Builder())
+		.nutrition(8).saturationMod(1F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 6000, 0), 1F)
+		.effect(() -> new MobEffectInstance(MobEffects.GLOWING, 900), 1F)
+		.effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 900), 1F)
+		.effect(() -> new MobEffectInstance(BrewinChewinCompat.getTipsy(), 300, 0), 1F)
+		.effect(() -> BrewinChewinCompat.getIntoxicationOrHalfBadLuck(200, 0), 1F).build();
 	public static final FoodProperties NUT_BUTTER_AND_JAM_SANDWICH = (new FoodProperties.Builder())
 		.nutrition(11).saturationMod(0.7F)
 		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3600, 0), 1F)

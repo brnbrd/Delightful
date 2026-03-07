@@ -4,14 +4,9 @@ import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
 import net.minecraftforge.fml.ModList;
 import vectorwing.farmersdelight.FarmersDelight;
-import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
 
 public class Mods {
-	public static String[] names(@NotNull Modid[] modids) {
-		return Arrays.stream(modids).map(Modid::get).toArray(String[]::new);
-	}
-
 	public static boolean stringLoaded(@NotNull String stringId) {
 		return (
 			stringId.equals(Delightful.MODID) ||

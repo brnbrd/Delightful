@@ -8,6 +8,10 @@
       "required": false
     },
     {
+      "id": "thermal:hazelnut",
+      "required": false
+    },
+    {
       "id": "alexscaves:pine_nuts",
       "required": false
     }

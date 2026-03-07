@@ -1,5 +1,6 @@
 {
   "values": [
+    "#forge:raw_fishes/sturgeon",
     "#forge:raw_fishes/squid",
     {
       "id": "stardew_fishing:goliath_grouper",

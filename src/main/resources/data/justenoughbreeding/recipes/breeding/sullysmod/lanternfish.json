@@ -1,0 +1,45 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "justenoughbreeding"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "letmorefishlove"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "sullysmod"
+        }
+      ],
+      "recipe": {
+        "type": "justenoughbreeding:breeding",
+        "mod": "sullysmod",
+        "mobs": [
+          {
+            "lanternfish": {
+              "inputs": [
+                {
+                  "tag": "letfishlove:fish_food/sullysmod/lanternfish"
+                }
+              ],
+              "outputs": [
+                {
+                  "item": "letmorefishlove:lanternfish_roe",
+                  "amount": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

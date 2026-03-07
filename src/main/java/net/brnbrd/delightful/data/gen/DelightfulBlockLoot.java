@@ -22,7 +22,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class DelightfulBlockLoot extends BlockLootSubProvider {
 	private final static List<ResourceLocation> NO_GEN = List.of(
-			DelightfulBlocks.WILD_SALMONBERRIES.getId()
+		DelightfulBlocks.WILD_SALMONBERRIES.getId()
 	);
 
 	protected DelightfulBlockLoot() {
@@ -175,6 +175,8 @@ public class DelightfulBlockLoot extends BlockLootSubProvider {
 					.add(LootItem.lootTableItem(DelightfulItems.STUFFED_CANTALOUPE_BLOCK.get())));
 			return applyExplosionDecay(b, loot);
 		});
+
+		this.dropOther(DelightfulBlocks.STURGEON_ROE.get(), DelightfulItems.STURGEON_ROE.get());
 	}
 
 	@Override

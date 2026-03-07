@@ -140,7 +140,8 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 		this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
 			.add(DelightfulBlocks.MATCHA_ICE_CREAM_BLOCK.get())
 			.add(DelightfulBlocks.SALMONBERRY_ICE_CREAM_BLOCK.get())
-			.add(DelightfulBlocks.SOURCE_BERRY_ICE_CREAM_BLOCK.get());
+			.add(DelightfulBlocks.SOURCE_BERRY_ICE_CREAM_BLOCK.get())
+			.add(DelightfulBlocks.STURGEON_ROE.get());
 		this.tag(BlockTags.MINEABLE_WITH_HOE)
 			.add(DelightfulBlocks.ACORN_SACK.get())
 			.add(DelightfulBlocks.SALMONBERRY_SACK.get())
@@ -176,5 +177,8 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 		this.tag(CompatibilityTags.SERENE_SEASONS_SUMMER_CROPS_BLOCK)
 			.add(DelightfulBlocks.SALMONBERRY_BUSH.get())
 			.add(DelightfulBlocks.CANTALOUPE_PLANT.get());
+
+		// Let Fish Love
+		this.tag(DelightfulBlockTags.FISH_ROE_STURGEON).add(DelightfulBlocks.STURGEON_ROE.get());
 	}
 }

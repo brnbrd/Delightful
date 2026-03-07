@@ -28,6 +28,10 @@ public class DelightfulBlockTags {
 	public static final TagKey<Block> STORAGE_BLOCKS_YUCCA_FRUIT = forge("storage_blocks/yucca_fruit");
 	public static final TagKey<Block> STORAGE_BLOCKS_BAOBAB_FRUIT = forge("storage_blocks/baobab_fruit");
 
+	// Let Fish Love
+	public static final TagKey<Block> FISH_ROE_STURGEON = bind(Modid.LFL.get(),
+		"fish_roe/" + Modid.TIDE.get() + "/sturgeon");
+
 	private static TagKey<Block> bind(@NotNull String modid, @NotNull String name) {
 		return BlockTags.create(Util.rl(modid, name));
 	}

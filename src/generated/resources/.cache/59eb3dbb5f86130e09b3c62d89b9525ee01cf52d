@@ -1,4 +1,4 @@
-// 1.20.1	2026-01-01T22:19:05.5200303	Loot Tables
+// 1.20.1	2026-03-06T23:08:11.5654777	Loot Tables
 2b9b2e38c5ea1b16ab49d97e8273a06d9522ff89 data/delightful/loot_tables/blocks/acorn_sack.json
 9d5b84ac2d4addf19f3e04c606d85bceee5f2519 data/delightful/loot_tables/blocks/baklava.json
 1363024576f5e67e0984401cb699644221da8f5b data/delightful/loot_tables/blocks/baobab_fruit_crate.json
@@ -45,4 +45,5 @@ c96eed4104700c907b062256c20713a5be884ee9 data/delightful/loot_tables/blocks/sour
 384c8d70fd08801218ae8cbb1c505d557c887d25 data/delightful/loot_tables/blocks/source_berry_milkshake_cauldron.json
 a5acb2b852aec5de4bc965f8ccbf9429644d24fa data/delightful/loot_tables/blocks/source_berry_pie.json
 147d0f076e40d0c52fc9b235c70da4436a39a499 data/delightful/loot_tables/blocks/stuffed_cantaloupe_block.json
+dc5039de4e6ba55883bd7c599b98ff8dfd18e050 data/delightful/loot_tables/blocks/sturgeon_roe_block.json
 a9c8051e1859c3a162fe354fb7c1300c8f592515 data/delightful/loot_tables/blocks/yucca_fruit_crate.json

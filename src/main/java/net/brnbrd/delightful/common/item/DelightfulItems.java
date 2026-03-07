@@ -9,8 +9,9 @@ import net.brnbrd.delightful.compat.*;
 import net.brnbrd.delightful.compat.abnormals.AquaticCompat;
 import net.brnbrd.delightful.compat.abnormals.AtmosphericCompat;
 import net.brnbrd.delightful.compat.ars_nouveau.*;
-import net.brnbrd.delightful.compat.brewinandchewin.BrewinChewinCompat;
+import net.brnbrd.delightful.compat.brewinandchewin.*;
 import net.brnbrd.delightful.compat.collectorsreap.GummyItem;
+import net.brnbrd.delightful.compat.letfishlove.LetFishLoveCompat;
 import net.brnbrd.delightful.compat.undergarden.UndergardenCompat;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
@@ -170,10 +171,16 @@ public class DelightfulItems {
 	public static final RegistryObject<Item> GLOW_JAM_JAR = registerItem("glow_jam_jar",
 		() -> new JamJarItem((new Item.Properties()).food(Nutrition.GLOW_JAM_JAR).craftRemainder(Items.GLASS_BOTTLE), true, false));
 	public static final RegistryObject<Item> NUT_BUTTER_BOTTLE = registerItem("nut_butter_bottle", () -> new NutButterBottleItem(((new Item.Properties()).food(Nutrition.NUT_BUTTER_BOTTLE).craftRemainder(Items.GLASS_BOTTLE))));
-	public static final RegistryObject<Item> AGED_FISH_ROE = registerItem("aged_fish_roe",
-		() -> new AgedFishRoeItem((new Item.Properties()).stacksTo(16).food(Nutrition.AGED_FISH_ROE).craftRemainder(Items.GLASS_BOTTLE), false));
-	public static final RegistryObject<Item> AGED_PRAWN_ROE = registerItem("aged_prawn_roe",
-		() -> new AgedPrawnRoeItem((new Item.Properties()).stacksTo(16).food(Nutrition.AGED_PRAWN_ROE).craftRemainder(Items.GLASS_BOTTLE), false));
+	public static final RegistryObject<Item> AGED_ROE = registerItem("aged_roe", () ->
+		Modid.BC.loaded() && Modid.LFL.loaded() ?
+		BrewinChewinCompat.getAgedRoe() :
+		new CompatConsumableItem((new Item.Properties()).stacksTo(16).food(Nutrition.AGED_ROE).craftRemainder(Items.GLASS_BOTTLE), false, false, Mods.Strategy.AND, Modid.BC, Modid.LFL)
+	);
+	public static final RegistryObject<Item> CAVIAR = registerItem("caviar", () ->
+		Modid.BC.loaded() && Modid.LFL.loaded() && Modid.TIDE.loaded() ?
+		BrewinChewinCompat.getCaviar() :
+		new CompatConsumableItem((new Item.Properties()).stacksTo(16).food(Nutrition.CAVIAR).craftRemainder(Items.GLASS_BOTTLE), false, false, Mods.Strategy.AND, Modid.BC, Modid.LFL, Modid.TIDE)
+	);
 	public static final RegistryObject<Item> NUT_BUTTER_AND_JAM_SANDWICH = registerItem("nut_butter_and_jam_sandwich", () -> new NutButterJamSandwichItem((new Item.Properties()).food(Nutrition.NUT_BUTTER_AND_JAM_SANDWICH)));
 	public static final RegistryObject<Item> CHEESEBURGER = registerItem("cheeseburger", () -> new CheeseburgerItem((new Item.Properties()).food(Nutrition.CHEESEBURGER)));
 	public static final RegistryObject<Item> DELUXE_CHEESEBURGER = registerConsumable("deluxe_cheeseburger", Nutrition.DELUXE_CHEESEBURGER, null, true, false);
@@ -212,6 +219,13 @@ public class DelightfulItems {
 	public static final RegistryObject<Item> STUFFED_CANTALOUPE_BLOCK = registerItem("stuffed_cantaloupe_block",
 		() -> new BlockItem(DelightfulBlocks.STUFFED_CANTALOUPE_BLOCK.get(), ModItems.basicItem().stacksTo(1)));
 	public static final RegistryObject<Item> STUFFED_CANTALOUPE = registerConsumable("stuffed_cantaloupe", Nutrition.STUFFED_CANTALOUPE, Items.BOWL, true, false);
+
+	// Roe
+	public static final RegistryObject<Item> STURGEON_ROE = registerItem("sturgeon_roe", () ->
+		Modid.LFL.loaded() ?
+		LetFishLoveCompat.sturgeonRoeItem() :
+		new CompatItem(new Item.Properties(), Modid.LFL)
+	);
 
 	// Gummies
 	public static final RegistryObject<Item> SALMONBERRY_GUMMY = registerItem("salmonberry_gummy", () ->

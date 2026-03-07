@@ -264,6 +264,11 @@ public class Util {
 		return new ItemStack(Objects.requireNonNull(r.get()), count.length > 0 ? count[0] : 1);
 	}
 
+	@Nullable
+	public static EntityType<?> entity(ResourceLocation rl) {
+		return ForgeRegistries.ENTITY_TYPES.getValue(rl);
+	}
+
 	public static String nameSpace(ItemLike itemLike) {
 		return rl(itemLike).getNamespace();
 	}

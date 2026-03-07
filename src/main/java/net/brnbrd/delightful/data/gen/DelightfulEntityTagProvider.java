@@ -159,5 +159,10 @@ public class DelightfulEntityTagProvider extends EntityTypeTagsProvider {
 			.addOptional(Util.rl("wandering_trapper", "trapper_dog"));
 		this.tag(DelightfulEntityTags.DROPS_CRAB_LEGS).addOptional(Modid.ECO.rl("coconut_crab"));
 		this.tag(DelightfulEntityTags.DROPS_HAM).addOptional(Modid.NA.rl("boar"));
+
+		// Let Fish Love
+		this.tag(DelightfulEntityTags.BREEDABLE_FISH)
+			.replace(false)
+			.addOptional(Modid.TIDE.rl("sturgeon"));
 	}
 }

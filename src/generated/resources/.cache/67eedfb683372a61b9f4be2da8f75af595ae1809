@@ -1,9 +1,8 @@
-// 1.20.1	2026-01-01T22:19:05.5180311	Item Models: delightful
+// 1.20.1	2026-03-06T23:08:11.5634733	Item Models: delightful
 f9af973b19b45f34017d8db4e6e54de90668031e assets/delightful/models/item/acorn.json
 9b4daf24b0d8e447735c5836d7ab76a3df1b3c1d assets/delightful/models/item/acorn_sack.json
 5d9531a6795e7d2281f99609672d866743329211 assets/delightful/models/item/adamantium_knife.json
-04d0a7ead934d3b3b1bc18d672a4a20ce0988195 assets/delightful/models/item/aged_fish_roe.json
-270007e7b2e0462295228e2a86c44d12bb0362bf assets/delightful/models/item/aged_prawn_roe.json
+9bed6ea65d9efc3315fce339129daa0464c4985e assets/delightful/models/item/aged_roe.json
 5bf1129b15b338737f94f8a09d77a504b2fb8a6f assets/delightful/models/item/alf_knife.json
 652bb5e284080120c04443e97bd3fbd0df0fc3dd assets/delightful/models/item/allthemodium_knife.json
 bb1057cb3c736f5aaac5e699c485d7e0be68d56a assets/delightful/models/item/aluminum_knife.json
@@ -36,6 +35,7 @@ c086142da53f90fe1c1d65bd20d3b625173ad239 assets/delightful/models/item/cantaloup
 e99631c5bf267d82d68c0c59258f7a8b60f9d97e assets/delightful/models/item/cantaloupe_popsicle.json
 c3c8cd60e0c07762582487e409f48737987e296a assets/delightful/models/item/cantaloupe_seeds.json
 5411e7eae57d359607e6fd217e53ee1441f5bb85 assets/delightful/models/item/cantaloupe_slice.json
+9e45b6adbdab66bf265218cd4755f8a63647a778 assets/delightful/models/item/caviar.json
 35d1251c68e25ffa5a12a584ab4ce57ebb198465 assets/delightful/models/item/certus_quartz_knife.json
 f27ba77606c1ed18944838b5945589a5d207bf41 assets/delightful/models/item/cheeseburger.json
 277fc9fc32d17bb07955cd8444911097c121c17d assets/delightful/models/item/chopped_clover.json
@@ -163,6 +163,7 @@ fa21d3f6934a3d417d47702d35401da6f8c681fd assets/delightful/models/item/steel_kni
 f142325442ee5a0f708f475d41a7c5ffe7c79fca assets/delightful/models/item/stratus_knife.json
 5e57620e177876c585344c551c2447ddce1a6bf8 assets/delightful/models/item/stuffed_cantaloupe.json
 a0af49bc2f408e1e6f725a69b419f786b34de6a0 assets/delightful/models/item/stuffed_cantaloupe_block.json
+87a4aa472d93a3ca4f58632bda74f62653f637b2 assets/delightful/models/item/sturgeon_roe.json
 905fabc071918d1e2f0935e6b66a658c7096b4ec assets/delightful/models/item/terra_knife.json
 0ab74d74b4514b342efd03b05a9dba44d592f5de assets/delightful/models/item/thyrium_knife.json
 1ad81cca1db81723a6158d578021fb2706b28124 assets/delightful/models/item/tin_knife.json

@@ -1,0 +1,41 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "justenoughbreeding"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "letfishlove"
+        }
+      ],
+      "recipe": {
+        "type": "justenoughbreeding:breeding",
+        "mod": "minecraft",
+        "mobs": [
+          {
+            "tropical_fish": {
+              "inputs": [
+                {
+                  "tag": "letfishlove:fish_food/minecraft/tropical_fish"
+                }
+              ],
+              "outputs": [
+                {
+                  "item": "letfishlove:tropical_fish_roe",
+                  "amount": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

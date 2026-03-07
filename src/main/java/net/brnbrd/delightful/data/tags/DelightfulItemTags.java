@@ -75,6 +75,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> FRUITS_PRICKLY_PEAR = forge("fruits/prickly_pear");
 
 	// Crops
+	public static final TagKey<Item> CROPS_ACORN = forge("crops/acorn");
 	public static final TagKey<Item> CROPS_CACTUS = forge("crops/cactus");
 
 	// Vegetables
@@ -99,8 +100,6 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> TOOLS_WRENCH = forge("tools/wrench");
 	public static final TagKey<Item> WRENCHES = forge("wrenches");
 	public static final TagKey<Item> ROE = forge("roe");
-	public static final TagKey<Item> PRAWN_ROE = forge("roe/prawn");
-	public static final TagKey<Item> FISH_ROE = forge("roe/fish");
 	public static final TagKey<Item> JUICES = forge("juices");
 	public static final TagKey<Item> JUICES_MELON = forge("juices/melon");
 	public static final TagKey<Item> JUICES_PRICKLY_PEAR = forge("juices/prickly_pear");
@@ -252,6 +251,8 @@ public class DelightfulItemTags {
 	public final static TagKey<Item> STRATUS_REPAIRING = Modid.DA.it("stratus_repairing");
 
 	// Let Fish Love
+	public static final TagKey<Item> FISH_FOOD_SALMON = Util.it(Modid.LFL.get(),
+		"fish_food/minecraft/salmon");
 	public static final TagKey<Item> FISH_FOOD_STURGEON = Util.it(Modid.LFL.get(),
 		"fish_food/" + Modid.TIDE.get() + "/sturgeon");
 

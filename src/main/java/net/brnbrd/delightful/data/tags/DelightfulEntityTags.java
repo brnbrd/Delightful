@@ -15,6 +15,9 @@ public class DelightfulEntityTags {
 	public static final TagKey<EntityType<?>> NO_AMBROSIUM_DROPS = Util.et(Modid.AE, "no_ambrosium_drops");
 	public static final TagKey<EntityType<?>> UNLAUNCHABLE = Util.et(Modid.AE, "unlaunchable");
 
+	// Let Fish Love
+	public static final TagKey<EntityType<?>> BREEDABLE_FISH = Util.et(Modid.LFL, "breedable_fish");
+
 	private static TagKey<EntityType<?>> create(String pName) {
 		return Util.et(Delightful.MODID, pName);
 	}

@@ -86,6 +86,7 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
 			this.resourceBlock("source_berry_cookie_tiles"), this.resourceBlock("source_berry_cookie_tiles"));
 		this.wallBlock(DelightfulBlocks.SOURCE_BERRY_COOKIE_TILE_WALL.get(),
 			this.resourceBlock("source_berry_cookie_tiles"));
+		this.roeBlock(DelightfulBlocks.STURGEON_ROE.get());
 	}
 
 	// Adapted from: https://github.com/vectorwing/FarmersDelight/blob/1.19/src/main/java/vectorwing/farmersdelight/data/BlockStates.java
@@ -278,11 +279,27 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
 		);
 	}
 
+	private void roeBlock(Block block) {
+		getVariantBuilder(block).forAllStates(state -> {
+			String name = Util.name(block);
+			return ConfiguredModel.builder().modelFile(models()
+				.withExistingParent(name, vanillaBlock("frogspawn"))
+				.texture("particle", resourceBlock(name))
+				.texture("texture", resourceBlock(name))
+				.renderType("translucent")
+			).build();
+		});
+	}
+
 	public ModelFile existingModel(String path) {
 		return new ModelFile.ExistingModelFile(resourceBlock(path), models().existingFileHelper);
 	}
 
 	public ResourceLocation resourceBlock(String path) {
 		return Util.delight("block/" + path);
+	}
+
+	public static ResourceLocation vanillaBlock(String path) {
+		return Modid.MC.rl("block/" + path);
 	}
 }

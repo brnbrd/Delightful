@@ -28,4 +28,12 @@ public class BrewinChewinCompat {
 	public static Item getEnderNectar() {
 		return BCEnderNectarCompat.ENDER_NECTAR.get();
 	}
+
+	public static Item getAgedRoe() {
+		return BCLFLCompat.AGED_ROE.get();
+	}
+
+	public static Item getCaviar() {
+		return BCLFLCompat.CAVIAR.get();
+	}
 }

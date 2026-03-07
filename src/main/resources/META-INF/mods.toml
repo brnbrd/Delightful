@@ -582,7 +582,7 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
 [[dependencies.delightful]]
 	modId="oreganized"
 	mandatory=false
-	versionRange="[4.2,)"
+	versionRange="[0,)"
 	ordering="AFTER"
 	side="BOTH"
 
@@ -620,6 +620,13 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
 	versionRange="[2.1,)"
 	ordering="AFTER"
 	side="BOTH"
+
+[[dependencies.delightful]]
+    modId="tide"
+    mandatory=false
+    versionRange="[2,)"
+    ordering="AFTER"
+    side="BOTH"
 
 [[dependencies.delightful]]
 	modId="veggiesdelight"

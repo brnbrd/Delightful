@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/frogspawn",
+  "render_type": "minecraft:translucent",
+  "textures": {
+    "particle": "delightful:block/sturgeon_roe_block",
+    "texture": "delightful:block/sturgeon_roe_block"
+  }
+}

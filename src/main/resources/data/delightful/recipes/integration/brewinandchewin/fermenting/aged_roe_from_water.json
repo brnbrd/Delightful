@@ -1,0 +1,109 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "aged_roe"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "brewinandchewin"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "letfishlove"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:salt"
+          }
+        }
+      ],
+      "recipe": {
+        "type":"brewinandchewin:fermenting",
+        "basefluid": {
+          "count": 1000,
+          "fluid": "minecraft:water"
+        },
+        "experience": 1.0,
+        "fermentingtime": 12000,
+        "ingredients":[
+          {
+            "tag": "forge:roe"
+          },
+          {
+            "tag": "forge:roe"
+          },
+          {
+            "tag": "forge:roe"
+          },
+          [
+            {
+              "item": "minecraft:sea_pickle"
+            },
+            {
+              "tag": "forge:salt"
+            }
+          ]
+        ],
+        "result":{
+          "count": 1000,
+          "fluid": "delightful:aged_roe"
+        },
+        "temperature": 2
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "aged_roe"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "brewinandchewin"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "letfishlove"
+        },
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:salt"
+        }
+      ],
+      "recipe": {
+        "type":"brewinandchewin:fermenting",
+        "basefluid": {
+          "count": 1000,
+          "fluid": "minecraft:water"
+        },
+        "experience": 1.0,
+        "fermentingtime": 12000,
+        "ingredients":[
+          {
+            "tag": "forge:roe"
+          },
+          {
+            "tag": "forge:roe"
+          },
+          {
+            "tag": "forge:roe"
+          },
+          {
+            "item": "minecraft:sea_pickle"
+          }
+        ],
+        "result":{
+          "count": 1000,
+          "fluid": "delightful:aged_roe"
+        },
+        "temperature": 2
+      }
+    }
+  ]
+}

@@ -4,6 +4,7 @@ import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.compat.UnusualEndCompat;
+import net.brnbrd.delightful.compat.letfishlove.LetFishLoveCompat;
 import net.brnbrd.delightful.compat.undergarden.SlicedGloomgourdBlock;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.core.cauldron.CauldronInteraction;
@@ -175,6 +176,12 @@ public class DelightfulBlocks {
 		() -> new SlabBlock(COOKIE(MapColor.COLOR_PURPLE)));
 	public static final RegistryObject<WallBlock> SOURCE_BERRY_COOKIE_TILE_WALL = BLOCKS.register("source_berry_cookie_tile_wall",
 		() -> new WallBlock(COOKIE(MapColor.COLOR_PURPLE)));
+
+	public static final RegistryObject<Block> STURGEON_ROE = BLOCKS.register("sturgeon_roe_block", () ->
+		Modid.LFL.loaded() && Modid.TIDE.loaded() ?
+		LetFishLoveCompat.sturgeonRoeBlock() :
+		new Block(BlockBehaviour.Properties.of())
+	);
 
 	public static RegistryObject<Block> registerBlock(String name, Supplier<Block> block) {
 		return BLOCKS.register(name, block);
