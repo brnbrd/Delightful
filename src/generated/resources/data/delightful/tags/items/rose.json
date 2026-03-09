@@ -18,6 +18,22 @@
       "required": false
     },
     {
+      "id": "foragersinsight:stout_beach_rose_bush",
+      "required": false
+    },
+    {
+      "id": "foragersinsight:tall_beach_rose_bush",
+      "required": false
+    },
+    {
+      "id": "foragersinsight:rose_hip",
+      "required": false
+    },
+    {
+      "id": "foragersinsight:rose_petals",
+      "required": false
+    },
+    {
       "id": "collectorsreap:bulbous_rose",
       "required": false
     },

@@ -1,0 +1,32 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "foragersinsight:acorn_cookie"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "tag": "forge:crops/wheat"
+          },
+          {
+            "tag": "forge:crops/acorn"
+          },
+          {
+            "tag": "forge:crops/wheat"
+          }
+        ],
+        "result": {
+          "count": 8,
+          "item": "foragersinsight:acorn_cookie"
+        }
+      }
+    }
+  ]
+}

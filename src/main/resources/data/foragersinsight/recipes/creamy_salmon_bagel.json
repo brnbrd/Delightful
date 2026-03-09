@@ -1,0 +1,32 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "foragersinsight:creamy_salmon_bagel"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "foragersinsight:poppy_seed_bagel"
+          },
+          {
+            "tag": "forge:milk"
+          },
+          {
+            "item": "farmersdelight:salmon_slice"
+          }
+        ],
+        "result": {
+          "count": 2,
+          "item": "foragersinsight:creamy_salmon_bagel"
+        }
+      }
+    }
+  ]
+}

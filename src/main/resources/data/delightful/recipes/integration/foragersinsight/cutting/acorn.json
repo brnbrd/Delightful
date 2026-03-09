@@ -1,0 +1,37 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "foragersinsight:acorn_meal"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:tools/mallets"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "delightful:acorn"
+          }
+        ],
+        "result": [
+          {
+            "count": 1,
+            "item": "foragersinsight:acorn_meal"
+          }
+        ],
+        "tool": {
+          "tag": "forge:tools/mallets"
+        }
+      }
+    }
+  ]
+}

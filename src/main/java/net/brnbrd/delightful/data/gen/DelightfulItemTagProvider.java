@@ -112,6 +112,10 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.BWG.rl("osiria_rose"))
 			.addOptional(Modid.WS.rl("red_rose"))
 			.addOptional(Modid.WS.rl("red_rose_bush"))
+			.addOptional(Modid.FORA.rl("stout_beach_rose_bush"))
+			.addOptional(Modid.FORA.rl("tall_beach_rose_bush"))
+			.addOptional(Modid.FORA.rl("rose_hip"))
+			.addOptional(Modid.FORA.rl("rose_petals"))
 			.addOptional(Modid.CR.rl("bulbous_rose"))
 			.addOptional(Modid.BOP.rl("rose"))
 			.addOptional(Modid.FR.rl("rose_hips"))
@@ -337,6 +341,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.STORAGE_BLOCKS_GREEN_APPLE)
 			.addTag(DelightfulItemTags.STORAGE_BLOCKS_YUCCA_FRUIT)
 			.addTag(DelightfulItemTags.STORAGE_BLOCKS_BAOBAB_FRUIT);
+		this.tag(Tags.Items.MUSHROOMS).addOptional(Modid.FORA.rl("blewit_mushroom"));
 		this.tag(Tags.Items.TOOLS_FISHING_RODS).addOptional(Modid.RA.rl("flux_fishing_rod"));
 		this.tag(DelightfulItemTags.TOOLS_WRENCH).addOptional(Modid.FOR.rl("wrench"));
 		this.tag(ItemTags.TOOLS).addTag(DelightfulItemTags.TOOLS_WRENCH);
@@ -468,6 +473,11 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.PUMPKINS_PUMPKIN_BLOCKS)
 			.add(ModItems.PUMPKIN_SLICE.get());
 		this.tag(DelightfulItemTags.COCONUT).addOptional(Modid.ECO.rl("coconut_slice"));
+		this.tag(DelightfulItemTags.CROPS_ACORN).addTag(DelightfulItemTags.NUTS_ACORN);
+		this.tag(DelightfulItemTags.NUTS_ACORN)
+			.add(DelightfulItems.ACORN.get())
+			.addOptional(Modid.SEED.rl("acorn"))
+			.addOptional(Modid.FORA.rl("black_acorn"));
 		this.tag(DelightfulItemTags.NUTS_WALNUT)
 			.addOptionalTag(Modid.LOADER.rl("walnut"))
 			.addOptionalTag(Modid.LOADER.rl("fruits/walnut"))
@@ -479,9 +489,6 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptionalTag(Modid.LOADER.rl("crops/peanut"))
 			.addOptional(Modid.HH.rl("peanut"))
 			.addOptional(Util.rl("sprout", "peanut"));
-		this.tag(DelightfulItemTags.NUTS_ACORN)
-			.add(DelightfulItems.ACORN.get())
-			.addOptional(Modid.SEED.rl("acorn"));
 		this.tag(DelightfulItemTags.NUTS)
 			.addTag(DelightfulItemTags.NUTS_ACORN)
 			.addTag(DelightfulItemTags.NUTS_WALNUT)
@@ -495,8 +502,6 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.SOB.rl("roasted_peanuts"))
 			.addOptional(Modid.HH.rl("roasted_peanuts"))
 			.addOptional(Modid.VD.rl("roasted_peanut"));
-		this.tag(ForgeTags.CROPS).addTag(DelightfulItemTags.NUTS);
-		this.tag(DelightfulItemTags.CROPS_ACORN).addTag(DelightfulItemTags.NUTS_ACORN);
 		this.tag(Tags.Items.STRING).addOptional(Modid.AN.rl("magebloom_fiber"));
 		this.tag(DelightfulItemTags.JAMS_GLOW)
 			.add(DelightfulItems.GLOW_JAM_JAR.get())
@@ -788,7 +793,9 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Util.rl("sunflowerdelight", "shortbread_cookie"))
 			.addOptional(Util.rl("vampiresdelight", "orchid_cookie"))
 			.addOptional(Util.rl("ramadandelight", "date_stuffed_cookie"));
-		this.tag(DelightfulItemTags.ICE_CUBES).addOptional(Modid.WS.rl("icicles"));
+		this.tag(DelightfulItemTags.ICE_CUBES)
+			.addOptional(Modid.WS.rl("icicles"))
+			.addOptional(Modid.FORA.rl("crushed_ice"));
 		this.tag(DelightfulItemTags.ROPES)
 			.add(ModItems.ROPE.get())
 			.addOptionalTag(Modid.SUP.rl("ropes"))

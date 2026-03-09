@@ -1,0 +1,31 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "foragersinsight:seed_butter_jamwich"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "tag": "forge:bread"
+          },
+          {
+            "item": "foragersinsight:seed_butter"
+          },
+          {
+            "tag": "forge:jams"
+          }
+        ],
+        "result": {
+          "item": "foragersinsight:seed_butter_jamwich"
+        }
+      }
+    }
+  ]
+}

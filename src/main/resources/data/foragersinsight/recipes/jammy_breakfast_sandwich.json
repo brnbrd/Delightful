@@ -1,0 +1,34 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "foragersinsight:jammy_breakfast_sandwich"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "foragersinsight:poppy_seed_bagel"
+          },
+          {
+            "tag": "forge:cooked_bacon"
+          },
+          {
+            "tag": "forge:cooked_eggs"
+          },
+          {
+            "tag": "forge:jams"
+          }
+        ],
+        "result": {
+          "item": "foragersinsight:jammy_breakfast_sandwich"
+        }
+      }
+    }
+  ]
+}

@@ -4,6 +4,10 @@
     {
       "id": "seeddelight:acorn",
       "required": false
+    },
+    {
+      "id": "foragersinsight:black_acorn",
+      "required": false
     }
   ]
 }

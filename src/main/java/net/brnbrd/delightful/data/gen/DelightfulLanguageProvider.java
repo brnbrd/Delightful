@@ -186,13 +186,15 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		addItemTag(DelightfulItemTags.JAMS, "Jams");
 		addItemTag(DelightfulItemTags.JAMS_GLOW, "Glow Jams");
 		addItemTag(DelightfulItemTags.NUT_BUTTER, "Nut Butters");
-		addItemTag(DelightfulItemTags.NUTS, "Nuts");
 		addItemTag(DelightfulItemTags.COOKED_NUTS, "Cooked Nuts");
+		addItemTag(DelightfulItemTags.NUTS, "Nuts");
+		addItemTag(DelightfulItemTags.NUTS_ACORN, "Acorns");
 		addItemTag(DelightfulItemTags.COOKED_CRAB_MEAT, "Cooked Crab Meats");
 		addItemTag(DelightfulItemTags.RAW_CRAB_MEAT, "Raw Crab Meats");
 		addItemTag(ForgeTags.MILK, "Milks");
 		addItemTag(ForgeTags.BREAD, "Breads");
 		addItemTag(ForgeTags.DOUGH, "Doughs");
+		addItemTag(ForgeTags.COOKED_EGGS, "Cooked Eggs");
 		addItemTag(ForgeTags.SALAD_INGREDIENTS, "Salad Ingredients");
 		addItemTag(DelightfulItemTags.FISH_FOOD_SALMON, "Salmon Food");
 		addItemTag(DelightfulItemTags.FISH_FOOD_STURGEON, "Sturgeon Food");
