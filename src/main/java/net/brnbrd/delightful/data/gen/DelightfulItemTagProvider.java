@@ -494,7 +494,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.NUTS_WALNUT)
 			.addTag(DelightfulItemTags.NUTS_PEANUT)
 			.addOptional(Modid.WS.rl("chestnuts"))
-			.addOptional(Modid.TH.rl("hazelnut"))
+			.addOptional(Modid.THI.rl("hazelnut"))
 			.addOptional(Util.rl("alexscaves", "pine_nuts"));
 		this.tag(DelightfulItemTags.COOKED_NUTS)
 			.add(DelightfulItems.ROASTED_ACORN.get())
@@ -542,7 +542,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.NUT_BUTTER)
 			.addTag(DelightfulItemTags.PEANUT_BUTTER)
 			.add(DelightfulItems.NUT_BUTTER_BOTTLE.get())
-			.addOptional(Modid.TH.rl("hazelbutter"))
+			.addOptional(Modid.THI.rl("hazelbutter"))
 			.addOptional(Modid.VD.rl("nut_mash_bottle"));
 		this.tag(ForgeTags.MILK_BUCKET)
 			.addOptional(Modid.AE.rl("skyroot_milk_bucket"))

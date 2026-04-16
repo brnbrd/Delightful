@@ -3,7 +3,7 @@
     "#forge:peanut_butter",
     "delightful:nut_butter_bottle",
     {
-      "id": "thermal:hazelbutter",
+      "id": "thicket:hazelbutter",
       "required": false
     },
     {

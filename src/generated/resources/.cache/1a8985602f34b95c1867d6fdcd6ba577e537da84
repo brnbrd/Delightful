@@ -1,4 +1,4 @@
-// 1.20.1	2026-03-08T22:28:09.7774714	delightful
+// 1.20.1	2026-04-15T21:59:46.0608774	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -170,11 +170,11 @@ d1dc791fc1fec2fc4e756e0d7dff0ddab538a57c data/forge/tags/items/juices/lemon_juic
 5160d3e42adb69a7a3e121df7fe653817a5d6b1b data/forge/tags/items/matcha.json
 a7ec5b3d9c5286ad76db3eef46949080d58753dc data/forge/tags/items/milk/milk.json
 15459fe0494722e0eceafcd15d6524b9604fc8b3 data/forge/tags/items/mushrooms.json
-b2804a6ccc2ced37f1a39aba205f3a9f1e0a353c data/forge/tags/items/nuts.json
+aa9dd2ed7e383a350f923e74f354d2727179bf7c data/forge/tags/items/nuts.json
 8fdf38820789892cafc01db71be040112868526e data/forge/tags/items/nuts/acorn.json
 b03de3a7a899e79f07eb00c920a4140fa958b2da data/forge/tags/items/nuts/peanut.json
 43ff3b1d9b96e92650d782eb6631a869680f8078 data/forge/tags/items/nuts/walnut.json
-09e1f82c2b1d662e3f04381ffc4c5652416919dc data/forge/tags/items/nut_butter.json
+22665be4ae51f2bbd11b14301906a7394cb54438 data/forge/tags/items/nut_butter.json
 c79498f4b3ff406c850a8097764da7aea24de8d5 data/forge/tags/items/pancakes.json
 73625a13040054a157ad409cbc941fbe17d0325b data/forge/tags/items/peanut_butter.json
 fecd0addad0c8d2c1b829d5350c240452b0e3807 data/forge/tags/items/pumpkins.json

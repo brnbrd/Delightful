@@ -4,6 +4,7 @@
 ## 3.7.9
 
 ### Updates
+- Added Ikura (for [Let Fish Love](https://www.curseforge.com/minecraft/mc-mods/let-fish-love))
 - Added Sturgeon Roe (for [Let Fish Love](https://www.curseforge.com/minecraft/mc-mods/let-fish-love) and [Tide](https://www.curseforge.com/minecraft/mc-mods/tide))
 - Added Caviar (for [Let Fish Love](https://www.curseforge.com/minecraft/mc-mods/let-fish-love), [Tide](https://www.curseforge.com/minecraft/mc-mods/tide), and [Brewin' and Chewin'](https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin))
 - Merged Aged Fish Roe and Aged Prawn Roe into a single Aged Roe item
