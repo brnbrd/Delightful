@@ -22,10 +22,10 @@
             "tag": "forge:salad_ingredients/cabbage"
           },
           {
-            "tag": "forge:vegetables/tomato"
+            "tag": "forge:crops/tomato"
           },
           {
-            "tag": "forge:vegetables/onion"
+            "tag": "forge:crops/onion"
           }
         ],
         "result": {
@@ -57,10 +57,10 @@
             "tag": "forge:salad_ingredients/cabbage"
           },
           {
-            "tag": "forge:vegetables/tomato"
+            "tag": "forge:crops/tomato"
           },
           {
-            "tag": "forge:vegetables/onion"
+            "tag": "forge:crops/onion"
           }
         ],
         "result": {

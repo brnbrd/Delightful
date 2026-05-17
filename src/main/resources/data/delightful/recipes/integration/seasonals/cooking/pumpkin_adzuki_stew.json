@@ -29,10 +29,10 @@
             "item": "neapolitan:adzuki_beans"
           },
           {
-            "tag": "forge:vegetables/beetroot"
+            "tag": "forge:crops/beetroot"
           },
           {
-            "tag": "forge:vegetables/tomato"
+            "tag": "forge:crops/tomato"
           },
           {
             "item": "minecraft:brown_mushroom"

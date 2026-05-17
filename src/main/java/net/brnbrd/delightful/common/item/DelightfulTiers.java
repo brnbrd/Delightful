@@ -1,6 +1,5 @@
 package net.brnbrd.delightful.common.item;
 
-import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.world.item.Tier;

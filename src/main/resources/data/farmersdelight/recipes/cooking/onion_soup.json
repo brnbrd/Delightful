@@ -23,7 +23,7 @@
             "tag": "forge:milk"
           },
           {
-            "tag": "forge:vegetables/onion"
+            "tag": "forge:crops/onion"
           }
         ],
         "recipe_book_tab": "meals",

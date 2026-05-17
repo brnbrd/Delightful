@@ -38,13 +38,13 @@
         "fermentingtime":9600,
         "ingredients":[
           {
-            "tag": "forge:vegetables/cactus"
+            "tag": "forge:crops/cactus"
           },
           {
-            "tag": "forge:vegetables/cactus"
+            "tag": "forge:crops/cactus"
           },
           {
-            "tag": "forge:vegetables/cactus"
+            "tag": "forge:crops/cactus"
           },
           {
             "item":"minecraft:sugar"

@@ -23,13 +23,13 @@
             "item": "twilightforest:experiment_115"
           },
           {
-            "tag": "forge:vegetables/beetroot"
+            "tag": "forge:crops/beetroot"
           },
           {
-            "tag": "forge:vegetables/tomato"
+            "tag": "forge:crops/tomato"
           },
           {
-            "tag": "forge:vegetables/onion"
+            "tag": "forge:crops/onion"
           }
         ],
         "result": {
@@ -62,13 +62,13 @@
             "item": "twilightforest:experiment_115"
           },
           {
-            "tag": "forge:vegetables/beetroot"
+            "tag": "forge:crops/beetroot"
           },
           {
-            "tag": "forge:vegetables/tomato"
+            "tag": "forge:crops/tomato"
           },
           {
-            "tag": "forge:vegetables/onion"
+            "tag": "forge:crops/onion"
           }
         ],
         "result": {

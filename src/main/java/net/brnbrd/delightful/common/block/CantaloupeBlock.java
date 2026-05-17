@@ -11,7 +11,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
-import vectorwing.farmersdelight.common.tag.ForgeTags;
+import vectorwing.farmersdelight.common.tag.ModTags;
 import org.jetbrains.annotations.NotNull;
 
 public class CantaloupeBlock extends MiniBlock {
@@ -22,7 +22,7 @@ public class CantaloupeBlock extends MiniBlock {
 	@SuppressWarnings("deprecation")
 	@Override
 	public @NotNull InteractionResult use(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult hit) {
-		if (player.getItemInHand(hand).is(ForgeTags.TOOLS_KNIVES)) {
+		if (player.getItemInHand(hand).is(ModTags.Items.KNIVES)) {
 			if (!level.isClientSide()) {
 				SlicedMiniMelonBlock sliced = (SlicedMiniMelonBlock) DelightfulBlocks.SLICED_CANTALOUPE.get();
 				level.setBlock(pos, sliced.defaultBlockState(), 2);

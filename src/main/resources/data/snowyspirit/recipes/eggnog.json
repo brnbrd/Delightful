@@ -39,7 +39,7 @@
             "item": "minecraft:sugar"
           },
           {
-            "tag": "forge:vegetables/ginger"
+            "tag": "forge:crops/ginger"
           }
         ],
         "container": {

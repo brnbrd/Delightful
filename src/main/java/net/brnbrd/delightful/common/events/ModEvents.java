@@ -54,7 +54,6 @@ public class ModEvents {
 			ComposterBlock.COMPOSTABLES.put(DelightfulItems.SALMONBERRY_PIPS.get(), 0.3F);
 			ComposterBlock.COMPOSTABLES.put(DelightfulItems.SALMONBERRY_PIE.get(), 1F);
 			ComposterBlock.COMPOSTABLES.put(DelightfulItems.SALMONBERRY_PIE_SLICE.get(), 0.85F);
-			ComposterBlock.COMPOSTABLES.put(DelightfulItems.PUMPKIN_PIE_SLICE.get(), 0.85F);
 			ComposterBlock.COMPOSTABLES.put(DelightfulItems.MULBERRY_PIE_SLICE.get(), 0.85F);
 			ComposterBlock.COMPOSTABLES.put(DelightfulItems.PASSION_FRUIT_TART_SLICE.get(), 0.85F);
 			ComposterBlock.COMPOSTABLES.put(DelightfulItems.MUTTON_PIE_SLICE.get(), 0.85F);
@@ -128,7 +127,10 @@ public class ModEvents {
 		ResourceLocation TOAST_WITH_BLUEBERRIES = Util.rl(Modid.MOD, "toast_with_blueberries");
 		// Delightful Items
 		if (event.getTabKey() == ModCreativeTabs.TAB_FARMERS_DELIGHT.getKey()) {
-			DelightfulItems.ITEMS.getEntries().stream().filter(RegistryObject::isPresent).forEach((item) -> {
+			DelightfulItems.ITEMS.getEntries().stream()
+				.filter(RegistryObject::isPresent)
+				.filter((object) -> !DelightfulItems.NO_GEN.contains(object.getId()))
+				.forEach((item) -> {
 				Item i = item.get();
 				ItemStack inst = i instanceof DKnifeItem ? ((DKnifeItem) i).getCreativeItem() : new ItemStack(i);
 				if (

@@ -27,7 +27,7 @@
             "tag": "forge:raw_pork"
           },
           {
-            "tag": "forge:vegetables/cactus"
+            "tag": "forge:crops/cactus"
           }
         ],
         "recipe_book_tab": "meals",

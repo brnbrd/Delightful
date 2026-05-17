@@ -22,6 +22,7 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> RAW_VENISON_CHOP_COMPAT = d("raw_venison_chop_compat");
 	public static final TagKey<Item> COOKED_VENISON_COMPAT = d("cooked_venison_compat");
 	public static final TagKey<Item> COOKED_VENISON_CHOP_COMPAT = d("cooked_venison_chop_compat");
+	public static final TagKey<Item> COMPAT_PIES = d("compat_pies");
 
 	// Minecraft
 	public static final TagKey<Item> FLOWERS_AZALEA = Modid.MC.it("flowers/azalea");
@@ -77,13 +78,14 @@ public class DelightfulItemTags {
 	// Crops
 	public static final TagKey<Item> CROPS_ACORN = forge("crops/acorn");
 	public static final TagKey<Item> CROPS_CACTUS = forge("crops/cactus");
+	public static final TagKey<Item> CROPS_CORN = forge("crops/corn");
+	public static final TagKey<Item> CROPS_GINGER = forge("crops/ginger");
+
+	// Salad Ingredients
+	public static final TagKey<Item> SALAD_INGREDIENTS_CLOVER = forge("salad_ingredients/clover");
 
 	// Vegetables
-	public static final TagKey<Item> VEGETABLES_CACTUS = forge("vegetables/cactus");
-	public static final TagKey<Item> VEGETABLES_CLOVER = forge("vegetables/clover");
 	public static final TagKey<Item> VEGETABLES_SPICY = forge("vegetables/spicy");
-	public static final TagKey<Item> VEGETABLES_CORN = forge("vegetables/corn");
-	public static final TagKey<Item> VEGETABLES_GINGER = forge("vegetables/ginger");
 	public static final TagKey<Item> VEGETABLES_CUCUMBER = forge("vegetables/cucumber");
 
 	// Forge
@@ -156,8 +158,6 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> SYRUP_BOTTLE = forge("syrup/syrup_bottle");
 	public static final TagKey<Item> CLOVER = forge("clover");
 	public static final TagKey<Item> CACTI = forge("cacti");
-	public static final TagKey<Item> CACTI_LARGE = forge("cacti/large");
-	public static final TagKey<Item> CACTI_SMALL = forge("cacti/small");
 	public static final TagKey<Item> MATCHA = forge("matcha");
 	public static final TagKey<Item> GEMS_ROSE_QUARTZ = forge("gems/rose_quartz");
 	public static final TagKey<Item> GEMS_ZANITE = forge("gems/zanite");

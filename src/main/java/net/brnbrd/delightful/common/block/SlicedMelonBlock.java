@@ -28,9 +28,9 @@ import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.items.ItemHandlerHelper;
-import org.jetbrains.annotations.NotNull;
-import vectorwing.farmersdelight.common.tag.ForgeTags;
 import java.util.function.Supplier;
+import vectorwing.farmersdelight.common.tag.ModTags;
+import org.jetbrains.annotations.NotNull;
 
 public class SlicedMelonBlock extends Block implements ISliceable {
 	public static final Integer MAX_BITES = 8;
@@ -99,7 +99,7 @@ public class SlicedMelonBlock extends Block implements ISliceable {
 	@Override
 	public @NotNull InteractionResult use(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult hit) {
 		ItemStack heldStack = player.getItemInHand(hand);
-		if (heldStack.is(ForgeTags.TOOLS_KNIVES)) {
+		if (heldStack.is(ModTags.Items.KNIVES)) {
 			return this.cutSlice(level, pos, state, player, hand, hit);
 		} else if (heldStack.is(Items.GLASS_BOTTLE) && DelightfulConfig.MELON_JUICING.get()) {
 			return this.bottleJuice(level, pos, state, player, hand);

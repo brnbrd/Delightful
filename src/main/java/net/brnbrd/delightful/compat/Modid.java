@@ -83,6 +83,7 @@ public enum Modid {
 	GO("goated"),
 	GOOD("goodall"),
 	HAB("habitat"),
+	HAUN("hauntedharvest"),
 	HED("hedgehog"),
 	HH("hearthandharvest"),
 	IN("incubation"),

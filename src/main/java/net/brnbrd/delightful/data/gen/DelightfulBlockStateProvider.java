@@ -49,7 +49,6 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
 		this.bigSlicedBlock(DelightfulBlocks.SLICED_GLOOMGOURD.get(),
 				this.resourceBlock("gloomgourd_inside_rind"), Modid.UG.rl("block/gloomgourd_side"), Modid.UG.rl("block/gloomgourd_top"));
 		this.pieBlock(DelightfulBlocks.SALMONBERRY_PIE);
-		this.pieBlock(DelightfulBlocks.PUMPKIN_PIE);
 		this.pieBlock(DelightfulBlocks.SOURCE_BERRY_PIE);
 		this.pieBlock(DelightfulBlocks.GLOOMGOURD_PIE);
 		this.pieBlock(DelightfulBlocks.GREEN_APPLE_PIE);
@@ -265,7 +264,7 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
 					String name = Util.name(block);
 					String suffix = bites > 0 ? "_slice" + bites : Util.EMPTY_STR;
 					var mod = models()
-							.withExistingParent("block/" + name + suffix, Util.rl(FarmersDelight.MODID, "pie" + suffix))
+							.withExistingParent("block/template_" + name + suffix, Util.rl(FarmersDelight.MODID, "template_pie" + suffix))
 							.texture("top", resourceBlock(name + "_top"))
 							.texture("bottom", resourceBlock(name + "_bottom"))
 							.texture("side", resourceBlock(name + "_side"))

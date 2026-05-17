@@ -1,0 +1,38 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "cactus_flesh"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "biomesoplenty:tiny_cactus"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "biomesoplenty:tiny_cactus"
+          }
+        ],
+        "tool": {
+          "tag": "forge:tools/knives"
+        },
+        "result": [
+          {
+            "count": 1,
+            "item": "delightful:cactus_flesh"
+          },
+          {
+            "chance": 0.33,
+            "item": "minecraft:green_dye"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,10 +1,6 @@
 {
   "values": [
-    "#forge:vegetables/corn",
-    "#forge:vegetables/ginger",
     "#forge:vegetables/cucumber",
-    "#forge:vegetables/cactus",
-    "#forge:vegetables/clover",
     "#forge:vegetables/spicy"
   ]
 }

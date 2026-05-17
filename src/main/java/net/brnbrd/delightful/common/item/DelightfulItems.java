@@ -13,17 +13,24 @@ import net.brnbrd.delightful.compat.brewinandchewin.*;
 import net.brnbrd.delightful.compat.collectorsreap.GummyItem;
 import net.brnbrd.delightful.compat.letfishlove.LetFishLoveCompat;
 import net.brnbrd.delightful.compat.undergarden.UndergardenCompat;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import java.util.List;
 import java.util.function.Supplier;
+import org.jetbrains.annotations.NotNull;
 import vectorwing.farmersdelight.common.FoodValues;
 import vectorwing.farmersdelight.common.item.ConsumableItem;
+import vectorwing.farmersdelight.common.item.PlaceableItem;
 import vectorwing.farmersdelight.common.registry.ModItems;
 import org.jetbrains.annotations.Nullable;
+import vectorwing.farmersdelight.common.utility.TextUtils;
 
 public class DelightfulItems {
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Delightful.MODID);
@@ -98,11 +105,9 @@ public class DelightfulItems {
 	public static final RegistryObject<Item> WILD_SALMONBERRIES = registerItem("wild_salmonberries",
 		() -> new BlockItem(DelightfulBlocks.WILD_SALMONBERRIES.get(), ModItems.basicItem()));
 	public static final RegistryObject<Item> SALMONBERRY_PIE = registerItem("salmonberry_pie",
-		() -> new BlockItem(DelightfulBlocks.SALMONBERRY_PIE.get(), ModItems.basicItem()));
+		() -> new PlaceableItem(DelightfulBlocks.SALMONBERRY_PIE.get(), ModItems.basicItem()));
 	public static final RegistryObject<Item> SALMONBERRY_PIE_SLICE = registerItem("salmonberry_pie_slice",
 		() -> new DConsumableItem((new Item.Properties()).food(Nutrition.SALMONBERRY_PIE_SLICE), true, false));
-	public static final RegistryObject<Item> PUMPKIN_PIE_SLICE = registerItem("pumpkin_pie_slice",
-		() -> new PumpkinPieSliceItem((new Item.Properties()).food(FoodValues.PIE_SLICE)));
 	public static final RegistryObject<Item> GLOOMGOURD_PIE_SLICE = registerCompatPieSlice("gloomgourd_pie",
 		UndergardenCompat.GLOOMGOURD_PIE_SLICE.get(), Modid.UG);
 	public static final RegistryObject<Item> BLUEBERRY_PIE_SLICE = registerCompatPieSlice(BWGCompat.blueberry_pie,
@@ -126,7 +131,7 @@ public class DelightfulItems {
 	public static final RegistryObject<Item> GLOW_JAM_COOKIE = registerItem("glow_jam_cookie",
 		() -> new ConsumableItem((new Item.Properties()).food(Nutrition.GLOW_JAM_COOKIE), true, false));
 	public static final RegistryObject<Item> BAKLAVA = registerItem("baklava",
-		() -> new BlockItem(DelightfulBlocks.BAKLAVA.get(), ModItems.basicItem()));
+		() -> new PlaceableItem(DelightfulBlocks.BAKLAVA.get(), ModItems.basicItem()));
 	public static final RegistryObject<Item> BAKLAVA_SLICE = registerItem("baklava_slice",
 		() -> new DConsumableItem((new Item.Properties()).food(Nutrition.BAKLAVA_SLICE), true, false));
 	public static final RegistryObject<Item> ANIMAL_FAT = registerFood("animal_fat", Nutrition.ANIMAL_FAT);
@@ -217,7 +222,7 @@ public class DelightfulItems {
 	public static final RegistryObject<Item> WRAPPED_CANTALOUPE = registerConsumable("wrapped_cantaloupe", Nutrition.WRAPPED_CANTALOUPE, null, true, false);
 	public static final RegistryObject<Item> CANTALOUPE_POPSICLE = registerConsumable("cantaloupe_popsicle", Nutrition.CANTALOUPE_POPSICLE, Items.STICK, true, false);
 	public static final RegistryObject<Item> STUFFED_CANTALOUPE_BLOCK = registerItem("stuffed_cantaloupe_block",
-		() -> new BlockItem(DelightfulBlocks.STUFFED_CANTALOUPE_BLOCK.get(), ModItems.basicItem().stacksTo(1)));
+		() -> new PlaceableItem(DelightfulBlocks.STUFFED_CANTALOUPE_BLOCK.get(), ModItems.basicItem().stacksTo(1)));
 	public static final RegistryObject<Item> STUFFED_CANTALOUPE = registerConsumable("stuffed_cantaloupe", Nutrition.STUFFED_CANTALOUPE, Items.BOWL, true, false);
 
 	// Roe
@@ -236,6 +241,64 @@ public class DelightfulItems {
 		new GummyItem((new Item.Properties()).food(Nutrition.CANTALOUPE_GUMMY)));
 	public static final RegistryObject<Item> SOURCE_BERRY_GUMMY = registerItem("source_berry_gummy", () ->
 		new SourceBerryGummyItem((new Item.Properties()).food(ArsNouveauCompat.SOURCE_BERRY_GUMMY)));
+
+	// Debug Items
+	public static final RegistryObject<Item> DEBUG_GLOOMGOURD_PIE = registerItem("debug_gloomgourd_pie",
+		() -> new BlockItem(DelightfulBlocks.GLOOMGOURD_PIE.get(), (new Item.Properties())) {
+			@Override
+			public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> tooltip, @NotNull TooltipFlag flag) {
+				tooltip.add(TextUtils.DEBUG_ITEM);
+			}
+		});
+	public static final RegistryObject<Item> DEBUG_BLUEBERRY_PIE = registerItem("debug_blueberry_pie",
+		() -> new BlockItem(DelightfulBlocks.BLUEBERRY_PIE.get(), (new Item.Properties())) {
+			@Override
+			public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> tooltip, @NotNull TooltipFlag flag) {
+				tooltip.add(TextUtils.DEBUG_ITEM);
+			}
+		});
+	public static final RegistryObject<Item> DEBUG_GREEN_APPLE_PIE = registerItem("debug_green_apple_pie",
+		() -> new BlockItem(DelightfulBlocks.GREEN_APPLE_PIE.get(), (new Item.Properties())) {
+			@Override
+			public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> tooltip, @NotNull TooltipFlag flag) {
+				tooltip.add(TextUtils.DEBUG_ITEM);
+			}
+		});
+	public static final RegistryObject<Item> DEBUG_CHORUS_PIE = registerItem("debug_chorus_pie",
+		() -> new BlockItem(DelightfulBlocks.CHORUS_PIE.get(), (new Item.Properties())) {
+			@Override
+			public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> tooltip, @NotNull TooltipFlag flag) {
+				tooltip.add(TextUtils.DEBUG_ITEM);
+			}
+		});
+	public static final RegistryObject<Item> DEBUG_MULBERRY_PIE = registerItem("debug_mulberry_pie",
+		() -> new BlockItem(DelightfulBlocks.MULBERRY_PIE.get(), (new Item.Properties())) {
+			@Override
+			public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> tooltip, @NotNull TooltipFlag flag) {
+				tooltip.add(TextUtils.DEBUG_ITEM);
+			}
+		});
+	public static final RegistryObject<Item> DEBUG_PASSION_FRUIT_TART = registerItem("debug_passion_fruit_tart",
+		() -> new BlockItem(DelightfulBlocks.PASSION_FRUIT_TART.get(), (new Item.Properties())) {
+			@Override
+			public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> tooltip, @NotNull TooltipFlag flag) {
+				tooltip.add(TextUtils.DEBUG_ITEM);
+			}
+		});
+	public static final RegistryObject<Item> DEBUG_MUTTON_PIE = registerItem("debug_mutton_pie",
+		() -> new BlockItem(DelightfulBlocks.MUTTON_PIE.get(), (new Item.Properties())) {
+			@Override
+			public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> tooltip, @NotNull TooltipFlag flag) {
+				tooltip.add(TextUtils.DEBUG_ITEM);
+			}
+		});
+	public static final RegistryObject<Item> DEBUG_SOURCE_BERRY_PIE = registerItem("debug_source_berry_pie",
+		() -> new BlockItem(DelightfulBlocks.SOURCE_BERRY_PIE.get(), (new Item.Properties())) {
+			@Override
+			public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> tooltip, @NotNull TooltipFlag flag) {
+				tooltip.add(TextUtils.DEBUG_ITEM);
+			}
+		});
 
 	// Registers food, optional craftRemainder
 	public static RegistryObject<Item> registerFood(String name, FoodProperties food, Item... remainder) {
@@ -272,4 +335,15 @@ public class DelightfulItems {
 	public static void create(IEventBus bus) {
 		ITEMS.register(bus);
 	}
+
+	public static final List<ResourceLocation> NO_GEN = List.of(
+		DEBUG_BLUEBERRY_PIE.getId(),
+		DEBUG_CHORUS_PIE.getId(),
+		DEBUG_GLOOMGOURD_PIE.getId(),
+		DEBUG_MUTTON_PIE.getId(),
+		DEBUG_MULBERRY_PIE.getId(),
+		DEBUG_GREEN_APPLE_PIE.getId(),
+		DEBUG_PASSION_FRUIT_TART.getId(),
+		DEBUG_SOURCE_BERRY_PIE.getId()
+	);
 }

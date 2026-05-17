@@ -29,7 +29,7 @@
             "tag": "forge:salad_ingredients/cabbage"
           },
           {
-            "tag": "forge:vegetables/tomato"
+            "tag": "forge:crops/tomato"
           }
         ],
         "result": {
@@ -62,7 +62,7 @@
             "tag": "forge:salad_ingredients/cabbage"
           },
           {
-            "tag": "forge:vegetables/tomato"
+            "tag": "forge:crops/tomato"
           }
         ],
         "result": {

@@ -20,7 +20,6 @@ public class DelightfulConfig {
 			Util.name(Knives.NETHER_QUARTZ)
 	);
 	private static final ImmutableList<String> BAKED_GOODS = ImmutableList.of(
-		Util.name(DelightfulItems.PUMPKIN_PIE_SLICE),
 		Util.name(DelightfulItems.BLUEBERRY_PIE_SLICE),
 		Util.name(DelightfulItems.GREEN_APPLE_PIE_SLICE),
 		Util.name(DelightfulItems.GLOOMGOURD_PIE_SLICE),

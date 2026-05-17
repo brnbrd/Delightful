@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "net.brnbrd.delightful.common.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "delightful.refmap.json",
+  "mixins": [
+    "PlacePieMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8",
+  "verbose": true
+}

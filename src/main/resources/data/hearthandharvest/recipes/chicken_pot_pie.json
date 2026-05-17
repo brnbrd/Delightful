@@ -19,7 +19,7 @@
             "tag": "forge:milk"
           },
           "O": {
-            "tag": "forge:vegetables/onion"
+            "tag": "forge:crops/onion"
           },
           "P": {
             "item": "farmersdelight:pie_crust"
@@ -28,10 +28,10 @@
             "tag": "forge:salt"
           },
           "T": {
-            "tag": "forge:vegetables/potato"
+            "tag": "forge:crops/potato"
           },
           "V": {
-            "tag": "forge:vegetables/carrot"
+            "tag": "forge:crops/carrot"
           }
         },
         "pattern": [

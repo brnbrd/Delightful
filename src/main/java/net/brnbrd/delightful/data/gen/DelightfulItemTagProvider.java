@@ -6,6 +6,9 @@ import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.knife.DKnifeItem;
 import net.brnbrd.delightful.common.item.knife.Knives;
 import net.brnbrd.delightful.compat.BWGCompat;
+import net.brnbrd.delightful.compat.UnusualEndCompat;
+import net.brnbrd.delightful.compat.WindsweptCompat;
+import net.brnbrd.delightful.compat.abnormals.AquaticCompat;
 import net.brnbrd.delightful.compat.brewinandchewin.BrewinChewinCompat;
 import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.compat.abnormals.AtmosphericCompat;
@@ -23,8 +26,8 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 import vectorwing.farmersdelight.common.item.KnifeItem;
 import vectorwing.farmersdelight.common.registry.ModItems;
+import vectorwing.farmersdelight.common.tag.CommonTags;
 import vectorwing.farmersdelight.common.tag.CompatibilityTags;
-import vectorwing.farmersdelight.common.tag.ForgeTags;
 import vectorwing.farmersdelight.common.tag.ModTags;
 import java.util.concurrent.CompletableFuture;
 import org.jetbrains.annotations.NotNull;
@@ -42,7 +45,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(ItemTags.SMALL_FLOWERS)
 			.addTag(DelightfulItemTags.FLOWERS_AZALEA)
 			.add(DelightfulItems.WILD_SALMONBERRIES.get());
-		this.tag(ItemTags.FOX_FOOD).addTag(ForgeTags.BERRIES);
+		this.tag(ItemTags.FOX_FOOD).addTag(CommonTags.Items.BERRIES);
 		this.tag(ItemTags.STAIRS)
 			.add(DelightfulItems.GLOW_JAM_COOKIE_TILE_STAIRS.get())
 			.add(DelightfulItems.SOURCE_BERRY_COOKIE_TILE_STAIRS.get());
@@ -54,7 +57,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.add(DelightfulItems.SOURCE_BERRY_COOKIE_TILE_WALL.get());
 
 		// Farmer's Delight
-		this.tag(ModTags.MEALS)
+		this.tag(ModTags.Items.MEALS)
 			.add(DelightfulItems.CACTUS_CHILI.get())
 			.add(DelightfulItems.CACTUS_SOUP.get())
 			.add(DelightfulItems.VENISON_STEW.get())
@@ -62,7 +65,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.add(DelightfulItems.COCONUT_CURRY.get())
 			.add(DelightfulItems.FIELD_SALAD.get())
 			.add(DelightfulItems.STUFFED_CANTALOUPE.get());
-		this.tag(ModTags.FEASTS)
+		this.tag(ModTags.Items.FEASTS)
 			.add(DelightfulItems.STUFFED_CANTALOUPE_BLOCK.get());
 		this.tag(DelightfulItemTags.STRAW_PLANTS)
 			.add(Items.GRASS)
@@ -71,29 +74,20 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.UA.rl("beachgrass"))
 			.addOptional(Modid.UA.rl("tall_beachgrass"));
 		this.tag(DelightfulItemTags.BARKS).add(ModItems.TREE_BARK.get());
-		this.tag(ModTags.WOODEN_CABINETS)
-			.addOptional(Modid.WS.rl("holly_cabinet"))
-			.addOptional(Modid.WS.rl("chestnut_cabinet"))
-			.addOptional(Modid.AND.rl("archwood_cabinet"))
-			.addOptional(Util.rl("fruittrees", "citrus_cabinet"))
-			.addOptional(Util.rl("fruittrees", "cherry_cabinet"));
 		this.tag(DelightfulItemTags.STONE_CABINETS)
 			.add(DelightfulItems.BASALT_CABINET.get())
 			.add(DelightfulItems.QUARTZ_CABINET.get());
-		this.tag(ModTags.CABINETS).addTag(DelightfulItemTags.STONE_CABINETS);
-		this.tag(ModTags.WILD_CROPS_ITEM).add(DelightfulItems.WILD_SALMONBERRIES.get());
+		this.tag(ModTags.Items.CABINETS).addTag(DelightfulItemTags.STONE_CABINETS);
+		this.tag(ModTags.Items.WILD_CROPS).add(DelightfulItems.WILD_SALMONBERRIES.get());
 
 		// Knives
-		var fdKnives = this.tag(ModTags.KNIVES);
-		var forgeKnives = this.tag(ForgeTags.TOOLS_KNIVES);
+		var FDknives = this.tag(ModTags.Items.KNIVES);
+		var toolsknives = this.tag(CommonTags.Items.TOOLS_KNIVES);
 		DelightfulItems.ITEMS.getEntries().stream()
-			.map(RegistryObject::get)
-			.filter(item -> item instanceof KnifeItem)
-			.forEach(knife -> {
-				fdKnives.add(knife);
-				forgeKnives.add(knife);
+			.map(RegistryObject::get).filter(i -> i instanceof KnifeItem).forEach(knife -> {
+				FDknives.add(knife);
+				toolsknives.add(knife);
 			});
-		forgeKnives.addOptionalTag(Modid.THI.rl("pocket_knives"));
 		this.tag(ItemTags.PIGLIN_LOVED).add(Knives.REFINED_GLOWSTONE.get());
 
 		// Delightful
@@ -132,47 +126,51 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.add(Knives.FIERY.get())
 			.add(Knives.KIWANO.get())
 			.add(Knives.BLAZING.get());
+		this.tag(DelightfulItemTags.COMPAT_PIES)
+			.addOptional(Modid.AN.rl("source_berry_pie"))
+			.addOptional(Modid.UG.rl("gloomgourd_pie"))
+			.addOptional(Modid.BWG.rl(BWGCompat.blueberry_pie))
+			.addOptional(Modid.BWG.rl(BWGCompat.green_apple_pie))
+			.addOptional(Modid.UE.rl(UnusualEndCompat.chorus_pie))
+			.addOptional(Modid.UA.rl(AquaticCompat.mulberry_pie))
+			.addOptional(Modid.AT.rl(AtmosphericCompat.PASSION_FRUIT_TART))
+			.addOptional(Modid.WS.rl(WindsweptCompat.MUTTON_PIE));
 
-		// Cactus
-		this.tag(DelightfulItemTags.CROPS_CACTUS)
-			.add(DelightfulItems.CACTUS_FLESH.get())
-			.addOptionalTag(Modid.LOADER.rl("crops/cactus_paddle"));
-		this.tag(DelightfulItemTags.VEGETABLES_CACTUS)
-			.addTag(DelightfulItemTags.CROPS_CACTUS)
-			.addOptionalTag(Modid.LOADER.rl("vegetables/cactus_paddle"));
-
-		// Tomato
-		this.tag(ForgeTags.CROPS_TOMATO).addOptional(Modid.SAS.rl("tomato_slices"));
-		this.tag(ForgeTags.VEGETABLES_TOMATO).addTag(ForgeTags.CROPS_TOMATO);
-
-		// Onion
-		this.tag(ForgeTags.CROPS_ONION)
+		// FD/Vanilla Crops
+		this.tag(CommonTags.Items.CROPS_TOMATO).addOptional(Modid.SAS.rl("tomato_slices"));
+		this.tag(CommonTags.Items.CROPS_ONION)
 			.addOptional(Modid.BWG.rl("oddion_bulb"))
 			.addOptional(Modid.SAS.rl("sliced_onion"));
-		this.tag(ForgeTags.VEGETABLES_ONION).addTag(ForgeTags.CROPS_ONION);
-
-		// Potato
 		this.tag(Tags.Items.CROPS_POTATO)
 			.addOptional(Modid.MOD.rl("diced_potatoes"))
 			.addOptional(Modid.CAD.rl("potato_slice"));
-		this.tag(ForgeTags.VEGETABLES_POTATO).addTag(Tags.Items.CROPS_POTATO);
-
-		// Carrot
 		this.tag(Tags.Items.CROPS_CARROT).addOptional(Modid.SAS.rl("chopped_carrot"));
-		this.tag(ForgeTags.VEGETABLES_CARROT).addTag(Tags.Items.CROPS_CARROT);
-
-		// Beetroot
 		this.tag(Tags.Items.CROPS_BEETROOT).addOptional(Modid.SAS.rl("chopped_beetroot"));
-		this.tag(ForgeTags.VEGETABLES_BEETROOT).addTag(Tags.Items.CROPS_BEETROOT);
 
-		this.tag(ModTags.CABBAGE_ROLL_INGREDIENTS)
-			.addTag(DelightfulItemTags.RAW_VENISON)
-			.addTag(DelightfulItemTags.RAW_GOAT)
-			.addOptionalTag(Modid.LOADER.rl("raw_duck"))
-			.addOptionalTag(Modid.LOADER.rl("raw_turkey"));
+		// Other Crops
+		this.tag(DelightfulItemTags.CROPS_ACORN).addTag(DelightfulItemTags.NUTS_ACORN);
+		this.tag(DelightfulItemTags.CROPS_CACTUS)
+			.add(DelightfulItems.CACTUS_FLESH.get())
+			.addOptionalTag(Modid.LOADER.rl("crops/cactus_paddle"));
+		this.tag(DelightfulItemTags.CROPS_CORN)
+			.addOptional(Modid.CD.rl("corn_cob"))
+			.addOptional(Modid.HH.rl("corn"))
+			.addOptional(Modid.CORN.rl("corn"));
+		this.tag(DelightfulItemTags.CROPS_GINGER)
+			.addOptionalTag(Modid.LOADER.rl("vegetables/ginger"))
+			.addOptional(Modid.SS.rl("ginger"))
+			.addOptional(Modid.WS.rl("ginger_root"));
+		this.tag(CommonTags.Items.CROPS).replace(false)
+			.addTag(DelightfulItemTags.CROPS_ACORN)
+			.addTag(DelightfulItemTags.CROPS_CACTUS)
+			.addTag(DelightfulItemTags.CROPS_CORN)
+			.addTag(DelightfulItemTags.CROPS_GINGER);
+
+		// Salad Ingredients
+		this.tag(DelightfulItemTags.SALAD_INGREDIENTS_CLOVER).add(DelightfulItems.CHOPPED_CLOVER.get());
+		this.tag(CommonTags.Items.SALAD_INGREDIENTS).addTag(DelightfulItemTags.SALAD_INGREDIENTS_CLOVER);
 
 		// Vegetables
-		this.tag(DelightfulItemTags.VEGETABLES_CLOVER).add(DelightfulItems.CHOPPED_CLOVER.get());
 		this.tag(DelightfulItemTags.VEGETABLES_SPICY)
 			.addOptionalTag(Modid.LOADER.rl("vegetables/ghost_pepper"))
 			.addOptionalTag(Modid.LOADER.rl("chilipepper"))
@@ -180,21 +178,9 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptionalTag(Modid.LOADER.rl("crops/chile_pepper"))
 			.addOptionalTag(Modid.CR.rl("hot_nether_fruits"))
 			.addOptional(Modid.MND.rl("bullet_pepper"));
-		this.tag(DelightfulItemTags.VEGETABLES_CORN)
-			.addOptionalTag(Modid.LOADER.rl("grain/corn"))
-			.addOptional(Modid.CD.rl("corn_cob"))
-			.addOptional(Util.rl("hauntedharvest", "corn"))
-			.addOptional(Modid.CORN.rl("corn"));
-		this.tag(DelightfulItemTags.VEGETABLES_GINGER)
-			.addOptional(Modid.SS.rl("ginger"))
-			.addOptional(Modid.WS.rl("ginger_root"));
 		this.tag(DelightfulItemTags.VEGETABLES_CUCUMBER).addOptional(Modid.CD.rl("cucumber"));
-		this.tag(ForgeTags.VEGETABLES).replace(false)
-			.addTag(DelightfulItemTags.VEGETABLES_CORN)
-			.addTag(DelightfulItemTags.VEGETABLES_GINGER)
+		this.tag(CommonTags.Items.VEGETABLES).replace(false)
 			.addTag(DelightfulItemTags.VEGETABLES_CUCUMBER)
-			.addTag(DelightfulItemTags.VEGETABLES_CACTUS)
-			.addTag(DelightfulItemTags.VEGETABLES_CLOVER)
 			.addTag(DelightfulItemTags.VEGETABLES_SPICY);
 
 		// Fruits
@@ -239,7 +225,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.FRUITS_BLOOD_ORANGE).addOptional(Modid.AT.rl("blood_orange"));
 		this.tag(DelightfulItemTags.FRUITS_DRAGON_FRUIT).addOptionalTag(Modid.LOADER.rl("fruits/pitaya"));
 		this.tag(DelightfulItemTags.FRUITS).replace(false)
-			.addTag(ForgeTags.BERRIES)
+			.addTag(CommonTags.Items.BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_CITRUS)
 			.addTag(DelightfulItemTags.FRUITS_CHORUS)
 			.addTag(DelightfulItemTags.FRUITS_GREEN_APPLE)
@@ -254,7 +240,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.EP.rl("oblifruit"))
 			.addOptional(Modid.UG.rl("droopvine_item"))
 			.addOptional(Util.rl("ars_elemental", "flashpine_pod"));
-		this.tag(ForgeTags.BERRIES).replace(false)
+		this.tag(CommonTags.Items.BERRIES).replace(false)
 			.addTag(DelightfulItemTags.FRUITS_SWEET_BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_GLOW_BERRIES)
 			.addTag(DelightfulItemTags.FRUITS_SALMONBERRIES)
@@ -362,7 +348,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.LMFL.rl("pike_roe"))
 			.addOptional(Modid.CR.rl("tiger_prawn_roe"));
 		this.tag(DelightfulItemTags.WATER)
-			.addTag(ForgeTags.BUCKETS_WATER)
+			.addTag(CommonTags.Items.BUCKETS_WATER)
 			.addOptional(Modid.MD.rl("water_cup"));
 		this.tag(DelightfulItemTags.FLOWERS_AZALEA)
 			.addOptional(Modid.ECO.rl("azalea_flower"))
@@ -376,24 +362,22 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.BWG.rl("clover_patch"))
 			.addOptional(Modid.TF.rl("clover_patch"))
 			.addOptional(Util.rl("regions_unexplored", "clover"));
-		this.tag(DelightfulItemTags.CACTI_LARGE)
+		this.tag(DelightfulItemTags.CACTI)
+			// Large
 			.add(Items.CACTUS)
 			.addOptional(Modid.BWG.rl("barrel_cactus"))
 			.addOptional(Modid.BWG.rl("flowering_barrel_cactus"))
 			.addOptional(Modid.BWG.rl("prickly_pear_cactus"))
 			.addOptional(Modid.BWG.rl("golden_spined_cactus"))
 			.addOptional(Modid.HAB.rl("ball_cactus_block"))
-			.addOptional(Modid.BM.rl("saguaro_cactus"));
-		this.tag(DelightfulItemTags.CACTI_SMALL)
+			.addOptional(Modid.BM.rl("saguaro_cactus"))
+			// Small
 			.addOptionalTag(Modid.HAB.rl("ball_cacti"))
 			.addOptional(Modid.BWG.rl("mini_cactus"))
 			.addOptional(Modid.BOP.rl("tiny_cactus"))
 			.addOptional(Modid.AT.rl("barrel_cactus"))
 			.addOptional(Modid.BM.rl("barrel_cactus"))
 			.addOptional(Util.rl("naturesaura", "aura_cactus"));
-		this.tag(DelightfulItemTags.CACTI)
-			.addTag(DelightfulItemTags.CACTI_LARGE)
-			.addTag(DelightfulItemTags.CACTI_SMALL);
 		this.tag(DelightfulItemTags.MATCHA).add(DelightfulItems.MATCHA.get());
 		this.tag(Tags.Items.EGGS)
 			.add(Items.TURTLE_EGG)
@@ -409,7 +393,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.DA.rl("quail_egg"))
 			.addOptional(Util.rl("farmlife", "galliraptor_egg"))
 			.addOptional(Util.rl("etcetera", "eggple"));
-		this.tag(ForgeTags.COOKED_EGGS)
+		this.tag(CommonTags.Items.COOKED_EGGS)
 			.addOptional(Modid.AA.rl("fried_egg"))
 			.addOptional(Modid.IN.rl("fried_egg"))
 			.addOptional(Modid.NA.rl("cooked_egg"));
@@ -444,17 +428,17 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptionalTag(Modid.LOADER.rl("dusts/stellarium"));
 		this.tag(DelightfulItemTags.DOUGH_CORN).addOptional(Modid.CD.rl("corn_dough"));
 		this.tag(DelightfulItemTags.DOUGH_NUT).add(DelightfulItems.NUT_DOUGH.get());
-		this.tag(ForgeTags.DOUGH)
+		this.tag(CommonTags.Items.DOUGH)
 			.addTag(DelightfulItemTags.DOUGH_NUT)
 			.addTag(DelightfulItemTags.DOUGH_CORN);
 		this.tag(DelightfulItemTags.CORNBREAD)
 			.addOptional(Modid.CORN.rl("cornbread"))
-			.addOptional(Util.rl("hauntedharvest", "cornbread"));
+			.addOptional(Modid.HH.rl("cornbread"));
 		this.tag(DelightfulItemTags.BURGER_BUN).addOptional(Modid.SAS.rl("burger_bun"));
 		this.tag(DelightfulItemTags.PANCAKES)
 			.addOptional(Modid.SUP.rl("pancake"))
 			.addOptional(Modid.AUT.rl("pancake"));
-		this.tag(ForgeTags.BREAD)
+		this.tag(CommonTags.Items.BREAD)
 			.addTag(DelightfulItemTags.CORNBREAD)
 			.addTag(DelightfulItemTags.BURGER_BUN);
 		this.tag(DelightfulItemTags.HOT_SPICES)
@@ -473,7 +457,6 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.PUMPKINS_PUMPKIN_BLOCKS)
 			.add(ModItems.PUMPKIN_SLICE.get());
 		this.tag(DelightfulItemTags.COCONUT).addOptional(Modid.ECO.rl("coconut_slice"));
-		this.tag(DelightfulItemTags.CROPS_ACORN).addTag(DelightfulItemTags.NUTS_ACORN);
 		this.tag(DelightfulItemTags.NUTS_ACORN)
 			.add(DelightfulItems.ACORN.get())
 			.addOptional(Modid.SEED.rl("acorn"))
@@ -544,7 +527,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.add(DelightfulItems.NUT_BUTTER_BOTTLE.get())
 			.addOptional(Modid.THI.rl("hazelbutter"))
 			.addOptional(Modid.VD.rl("nut_mash_bottle"));
-		this.tag(ForgeTags.MILK_BUCKET)
+		this.tag(CommonTags.Items.MILK_BUCKET)
 			.addOptional(Modid.AE.rl("skyroot_milk_bucket"))
 			.addOptional(Modid.BS.rl("ventium_milk_bucket"))
 			.addOptional(Modid.FA.rl("edelwood_milk_bucket"));
@@ -589,7 +572,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.RAW_FISHES_SQUID)
 			.addTag(DelightfulItemTags.RAW_FISHES_SQUID_TENTACLES)
 			.addTag(DelightfulItemTags.RAW_SQUID);
-		this.tag(ForgeTags.RAW_FISHES)
+		this.tag(CommonTags.Items.RAW_FISHES)
 			.addTag(DelightfulItemTags.RAW_FISHES_STURGEON)
 			.addTag(DelightfulItemTags.RAW_FISHES_SQUID)
 			.addOptional(Modid.SF.rl("goliath_grouper"))
@@ -612,7 +595,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.COOKED_FISHES_SQUID)
 			.addOptional(Modid.CD.rl("cooked_squid"))
 			.addOptional(Modid.CD.rl("cooked_calamari"));
-		this.tag(ForgeTags.COOKED_FISHES)
+		this.tag(CommonTags.Items.COOKED_FISHES)
 			.addTag(DelightfulItemTags.COOKED_FISHES_SQUID)
 			.addOptionalTag(Modid.TIDE.rl("cooked_fish"))
 			.addOptional(Modid.TIDE.rl("cooked_fish_slice"))
@@ -658,11 +641,11 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.COOKED_DUCK).addOptional(Modid.NA.rl("cooked_duck"));
 		this.tag(DelightfulItemTags.FOODS_MEAT_RAW)
 			.addOptionalTag(Modid.LOADER.rl("raw_meat"))
-			.addTag(ForgeTags.RAW_FISHES)
-			.addTag(ForgeTags.RAW_CHICKEN)
-			.addTag(ForgeTags.RAW_BEEF)
-			.addTag(ForgeTags.RAW_PORK)
-			.addTag(ForgeTags.RAW_MUTTON)
+			.addTag(CommonTags.Items.RAW_FISHES)
+			.addTag(CommonTags.Items.RAW_CHICKEN)
+			.addTag(CommonTags.Items.RAW_BEEF)
+			.addTag(CommonTags.Items.RAW_PORK)
+			.addTag(CommonTags.Items.RAW_MUTTON)
 			.addTag(DelightfulItemTags.RAW_RABBIT)
 			.addTag(DelightfulItemTags.RAW_VENISON)
 			.addTag(DelightfulItemTags.RAW_CRAB)
@@ -682,11 +665,11 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Util.rl("frog_legs", "frog_legs"));
 		this.tag(DelightfulItemTags.FOODS_MEAT_COOKED)
 			.addOptionalTag(Modid.LOADER.rl("cooked_meat"))
-			.addTag(ForgeTags.COOKED_FISHES)
-			.addTag(ForgeTags.COOKED_CHICKEN)
-			.addTag(ForgeTags.COOKED_BEEF)
-			.addTag(ForgeTags.COOKED_PORK)
-			.addTag(ForgeTags.COOKED_MUTTON)
+			.addTag(CommonTags.Items.COOKED_FISHES)
+			.addTag(CommonTags.Items.COOKED_CHICKEN)
+			.addTag(CommonTags.Items.COOKED_BEEF)
+			.addTag(CommonTags.Items.COOKED_PORK)
+			.addTag(CommonTags.Items.COOKED_MUTTON)
 			.addTag(DelightfulItemTags.COOKED_RABBIT)
 			.addTag(DelightfulItemTags.COOKED_VENISON)
 			.addTag(DelightfulItemTags.COOKED_CRAB)
@@ -726,7 +709,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.HH.rl("chocolate_bar"));
 		this.tag(DelightfulItemTags.SEEDS_SALMONBERRY).add(DelightfulItems.SALMONBERRY_PIPS.get());
 		this.tag(DelightfulItemTags.SEEDS_CANTALOUPE).add(DelightfulItems.CANTALOUPE_SEEDS.get());
-		this.tag(ForgeTags.SEEDS)
+		this.tag(CommonTags.Items.SEEDS)
 			.addTag(ItemTags.VILLAGER_PLANTABLE_SEEDS)
 			.addTag(DelightfulItemTags.SEEDS_SALMONBERRY)
 			.addTag(DelightfulItemTags.SEEDS_CANTALOUPE)
@@ -844,7 +827,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.CTD.rl("tequila"))
 			.addOptional(Modid.SOB.rl("tequila"))
 			.addOptional(Modid.DOLT.rl("tequila"));
-		this.tag(ModTags.DRINKS)
+		this.tag(ModTags.Items.DRINKS)
 			.addTag(DelightfulItemTags.DRINKS_TEQUILA)
 			.addTag(DelightfulItemTags.JUICES)
 			.add(DelightfulItems.ENDER_NECTAR.get())
@@ -863,7 +846,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.WS.rl("lavender_tea"))
 			.addOptional(Modid.WS.rl("ginger_tea"))
 			.addOptional(Modid.SS.rl("eggnog"));
-		this.tag(DelightfulItemTags.DRINKS).addTag(ModTags.DRINKS);
+		this.tag(DelightfulItemTags.DRINKS).addTag(ModTags.Items.DRINKS);
 
 		// Collector's Reap
 		this.tag(Modid.CR.it("gummies"))
@@ -898,7 +881,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 
 		// Salt
 		this.tag(Modid.S.it("can_be_salted"))
-			.addTag(ForgeTags.COOKED_EGGS)
+			.addTag(CommonTags.Items.COOKED_EGGS)
 			.addTag(DelightfulItemTags.CHEESE)
 			.addTag(DelightfulItemTags.COOKED_CRAB)
 			.addTag(DelightfulItemTags.COOKED_GOAT)
@@ -1052,8 +1035,8 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 
 		// Sully's Mod
 		this.tag(Modid.SM.it("tortoise_food"))
-			.addTag(ForgeTags.BERRIES)
-			.addTag(DelightfulItemTags.VEGETABLES_CACTUS)
+			.addTag(CommonTags.Items.BERRIES)
+			.addTag(DelightfulItemTags.CROPS_CACTUS)
 			.addTag(DelightfulItemTags.FRUITS_CANTALOUPE)
 			.add(Items.BAMBOO)
 			.add(ModItems.PUMPKIN_SLICE.get())

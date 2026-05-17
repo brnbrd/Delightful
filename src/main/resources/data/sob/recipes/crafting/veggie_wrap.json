@@ -22,7 +22,7 @@
             "tag": "forge:tortilla"
           },
           {
-            "tag": "forge:vegetables/cactus"
+            "tag": "forge:crops/cactus"
           },
           {
             "tag": "forge:vegetables"
@@ -54,7 +54,7 @@
             "tag": "forge:bread"
           },
           {
-            "tag": "forge:vegetables/cactus"
+            "tag": "forge:crops/cactus"
           },
           {
             "tag": "forge:vegetables"

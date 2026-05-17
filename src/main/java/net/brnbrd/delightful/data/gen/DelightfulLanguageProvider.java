@@ -1,6 +1,7 @@
 package net.brnbrd.delightful.data.gen;
 
 import net.brnbrd.delightful.Delightful;
+import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.block.DelightfulBlocks;
 import net.brnbrd.delightful.common.fluid.DelightfulFluids;
 import net.brnbrd.delightful.common.item.DelightfulItems;
@@ -11,8 +12,8 @@ import net.minecraft.tags.TagKey;
 import net.minecraftforge.common.data.LanguageProvider;
 import net.minecraftforge.fluids.FluidType;
 import net.minecraftforge.registries.RegistryObject;
-import vectorwing.farmersdelight.common.tag.ForgeTags;
 import org.jetbrains.annotations.NotNull;
+import vectorwing.farmersdelight.FarmersDelight;
 
 public class DelightfulLanguageProvider extends LanguageProvider {
 	public DelightfulLanguageProvider(PackOutput output) {
@@ -54,7 +55,6 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		addItem(DelightfulItems.SALMONBERRIES, "Salmonberries");
 		addItem(DelightfulItems.SALMONBERRY_PIPS, "Salmonberry Pips");
 		addItem(DelightfulItems.SALMONBERRY_PIE_SLICE, "Slice of Salmonberry Pie");
-		addItem(DelightfulItems.PUMPKIN_PIE_SLICE, "Slice of Pumpkin Pie");
 		addItem(DelightfulItems.SOURCE_BERRY_PIE_SLICE, "Slice of Source Berry Pie");
 		addItem(DelightfulItems.SOURCE_BERRY_COOKIE, "Source Berry Cookie");
 		addItem(DelightfulItems.GLOW_JAM_COOKIE, "Glow Jam Cookie");
@@ -119,7 +119,6 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		addBlock(DelightfulBlocks.SLICED_PUMPKIN, "Sliced Pumpkin");
 		addBlock(DelightfulBlocks.SLICED_GLOOMGOURD, "Sliced Gloomgourd");
 		addBlock(DelightfulBlocks.BAKLAVA, "Baklava");
-		addBlock(DelightfulBlocks.PUMPKIN_PIE, "Pumpkin Pie");
 		addBlock(DelightfulBlocks.SOURCE_BERRY_PIE, "Source Berry Pie");
 		addBlock(DelightfulBlocks.GLOOMGOURD_PIE, "Gloomgourd Pie");
 		addBlock(DelightfulBlocks.GREEN_APPLE_PIE, "Green Apple Pie");
@@ -162,40 +161,36 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 
 	private void addTags() {
 		// Delightful
-		addItemTag(DelightfulItemTags.ROASTED_MARSHMALLOWS, "Roasted Marshmallows");
+		addItemTag(DelightfulItemTags.ROASTED_MARSHMALLOWS, "Roasted Marshmallow");
 		addItemTag(DelightfulItemTags.HOT_SPICES, "Hot Spices");
-		addItemTag(DelightfulItemTags.AGED_ROES, "Aged Roes");
-		addItemTag(DelightfulItemTags.PANCAKES, "Pancakes");
-		addItemTag(DelightfulItemTags.PATTIES, "Patties");
-		addItemTag(DelightfulItemTags.VEGETARIAN_PATTIES, "Vegetarian Patties");
+		addItemTag(DelightfulItemTags.AGED_ROES, "Aged Roe");
+		addItemTag(DelightfulItemTags.PANCAKES, "Pancake");
+		addItemTag(DelightfulItemTags.PATTIES, "Patty");
+		addItemTag(DelightfulItemTags.VEGETARIAN_PATTIES, "Vegetarian Patty");
 
 		// Minecraft
 		addItemTag(DelightfulItemTags.FLOWERS_AZALEA, "Azalea Flowers");
 		addItemTag(DelightfulItemTags.FLOWERS_LAVENDER, "Lavender Flowers");
 
 		// Forge
-		addItemTag(DelightfulItemTags.FRUITS, "Fruits");
-		addItemTag(DelightfulItemTags.FRUITS_CITRUS, "Citrus Fruits");
-		addItemTag(DelightfulItemTags.FRUITS_PRICKLY_PEAR, "Prickly Pears");
 		addItemTag(DelightfulItemTags.TEA_LEAVES, "Tea Leaves");
 		addItemTag(DelightfulItemTags.TEA_LEAVES_GREEN, "Green Tea Leaves");
-		addItemTag(DelightfulItemTags.CHEESE, "Cheeses");
+		addItemTag(DelightfulItemTags.FRUITS, "Fruits");
+		addItemTag(DelightfulItemTags.FRUITS_CITRUS, "Citrus Fruits");
+		addItemTag(DelightfulItemTags.FRUITS_PRICKLY_PEAR, "Prickly Pear");
+		addItemTag(DelightfulItemTags.CROPS_GINGER, "Ginger");
+		addItemTag(DelightfulItemTags.CHEESE, "Cheese");
 		addItemTag(DelightfulItemTags.ICE_CUBES, "Ice Cubes");
-		addItemTag(DelightfulItemTags.CHOCOLATE, "Chocolates");
-		addItemTag(DelightfulItemTags.SALT, "Salts");
-		addItemTag(DelightfulItemTags.JAMS, "Jams");
-		addItemTag(DelightfulItemTags.JAMS_GLOW, "Glow Jams");
-		addItemTag(DelightfulItemTags.NUT_BUTTER, "Nut Butters");
-		addItemTag(DelightfulItemTags.COOKED_NUTS, "Cooked Nuts");
+		addItemTag(DelightfulItemTags.CHOCOLATE, "Chocolate");
+		addItemTag(DelightfulItemTags.SALT, "Salt");
+		addItemTag(DelightfulItemTags.JAMS, "Jam");
+		addItemTag(DelightfulItemTags.JAMS_GLOW, "Glow Jam");
 		addItemTag(DelightfulItemTags.NUTS, "Nuts");
-		addItemTag(DelightfulItemTags.NUTS_ACORN, "Acorns");
-		addItemTag(DelightfulItemTags.COOKED_CRAB_MEAT, "Cooked Crab Meats");
-		addItemTag(DelightfulItemTags.RAW_CRAB_MEAT, "Raw Crab Meats");
-		addItemTag(ForgeTags.MILK, "Milks");
-		addItemTag(ForgeTags.BREAD, "Breads");
-		addItemTag(ForgeTags.DOUGH, "Doughs");
-		addItemTag(ForgeTags.COOKED_EGGS, "Cooked Eggs");
-		addItemTag(ForgeTags.SALAD_INGREDIENTS, "Salad Ingredients");
+		addItemTag(DelightfulItemTags.NUTS_ACORN, "Acorn");
+		addItemTag(DelightfulItemTags.NUT_BUTTER, "Nut Butter");
+		addItemTag(DelightfulItemTags.COOKED_NUTS, "Cooked Nuts");
+		addItemTag(DelightfulItemTags.COOKED_CRAB_MEAT, "Cooked Crab Meat");
+		addItemTag(DelightfulItemTags.RAW_CRAB_MEAT, "Raw Crab Meat");
 		addItemTag(DelightfulItemTags.FISH_FOOD_SALMON, "Salmon Food");
 		addItemTag(DelightfulItemTags.FISH_FOOD_STURGEON, "Sturgeon Food");
 	}
@@ -227,26 +222,25 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		addDelightfulTooltip("sneak_right", "Sneak R-Click for:");
 		addDelightfulTooltip("furnace_fuel_burn_time", "s of burn time");
 		addDelightfulTooltip("rose_rock_candy.when_feeding", "When fed to a tamed animal:");
+		addDelightfulTooltip(Util.name(DelightfulItems.ENDER_NECTAR), "Otherworldly");
 
 		// Tooltips not specific to Delightful
-		addTooltip("placeable", "Placeable");
 		addTooltip("disabled", "Disabled");
 		addTooltip("requires_empty_tag", "Requires empty tag:");
 		addTooltip("requires_tag", "Requires tag:");
 		addTooltip("requires_modid", "Requires modid:");
-		add("farmersdelight.tooltip.ender_nectar", "Otherworldly");
 
 		// JEI Descriptions
-		addDescription("matcha", "Green Tea Powder");
-		addDescription("green_tea_leaf", "Get lucky using a Knife on any Leaves block.");
-		addDescription("animal_fat", "Can be scavenged from some dead animals.");
-		addDescription("animal_oil_bottle", "Use on any furnace for a small amount of heat.");
-		addDescription("acorn", "Acorns are tough nuts that drop from Oak Leaves or Squirrels.");
-		addDescription("salmonberries", "Salmonberries can be commonly found as a wild plant in forests.");
-		addDescription("mini_melon", "Mini Melons can be commonly found in plains. Can grow into a big Melon or be sliced with a Knife.");
-		addDescription("cantaloupe", "Cantaloupes can be commonly found on beaches.");
-		addDescription("cantaloupe_seeds", "Cantaloupe Seeds will sprout when planted in sand.");
-		addDescription("sliceable", "Sliceable with a Knife.");
+		addInfo("matcha", "Green Tea Powder");
+		addInfo("green_tea_leaf", "Get lucky using a Knife on any Leaves block.");
+		addInfo("animal_fat", "Can be scavenged from some dead animals.");
+		addInfo("animal_oil_bottle", "Use on any furnace for a small amount of heat.");
+		addInfo("acorn", "Acorns are tough nuts that drop from Oak Leaves or Squirrels.");
+		addInfo("salmonberries", "Salmonberries can be commonly found as a wild plant in forests.");
+		addInfo("mini_melon", "Mini Melons can be commonly found in plains. Can grow into a big Melon or be sliced with a Knife.");
+		addInfo("cantaloupe", "Cantaloupes can be commonly found on beaches.");
+		addInfo("cantaloupe_seeds", "Cantaloupe Seeds will sprout when planted in sand.");
+		addInfo("sliceable", "Sliceable with a Knife.");
 
 		// Jade
 		add("tooltip.jade.age", "Age: %s");
@@ -268,12 +262,16 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		add("fluid_type." + Delightful.MODID + "." + fluid.getId().getPath(), translation);
 	}
 
-	public void addDescription(String key, String value) {
-		add("desc." + Delightful.MODID + "." + key, value);
+	public void addInfo(String key, String value) {
+		add("jei." + Delightful.MODID + ".info." + key, value);
 	}
 
 	public void addTooltip(String key, String translation) {
 		add("tooltip." + key, translation);
+	}
+
+	public void addFDTooltip(String key, String translation) {
+		addTooltip(FarmersDelight.MODID + "." + key, translation);
 	}
 
 	public void addDelightfulTooltip(String key, String translation) {

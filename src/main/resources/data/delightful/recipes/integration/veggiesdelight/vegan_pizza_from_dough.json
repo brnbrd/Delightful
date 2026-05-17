@@ -19,7 +19,7 @@
             "tag": "forge:vegetables"
           },
           {
-            "tag": "forge:vegetables/onion"
+            "tag": "forge:crops/onion"
           },
           {
             "item": "farmersdelight:tomato_sauce"

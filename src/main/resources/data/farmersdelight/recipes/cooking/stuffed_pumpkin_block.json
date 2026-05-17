@@ -13,13 +13,13 @@
       "tag": "forge:vegetables"
     },
     {
-      "tag": "forge:vegetables/onion"
+      "tag": "forge:crops/onion"
     },
     {
       "item": "minecraft:brown_mushroom"
     },
     {
-      "tag": "forge:vegetables/potato"
+      "tag": "forge:crops/potato"
     },
     {
       "tag": "forge:berries"

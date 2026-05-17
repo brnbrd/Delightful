@@ -25,8 +25,8 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import vectorwing.farmersdelight.common.tag.ForgeTags;
 import java.util.function.Supplier;
+import vectorwing.farmersdelight.common.tag.ModTags;
 import org.jetbrains.annotations.NotNull;
 
 public class SlicedGourdBlock extends Block implements ISliceable {
@@ -83,7 +83,7 @@ public class SlicedGourdBlock extends Block implements ISliceable {
 	@Override
 	public @NotNull InteractionResult use(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult hit) {
 		ItemStack heldStack = player.getItemInHand(hand);
-		if (heldStack.is(ForgeTags.TOOLS_KNIVES)) {
+		if (heldStack.is(ModTags.Items.KNIVES)) {
 			return this.cutSlice(level, pos, state, player, hand, hit);
 		}
 		return this.consumeBite(level, pos, state, player);

@@ -33,9 +33,11 @@ import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.MissingMappingsEvent;
-import vectorwing.farmersdelight.common.tag.ForgeTags;
 import java.util.List;
 import java.util.Objects;
+import vectorwing.farmersdelight.common.registry.ModBlocks;
+import vectorwing.farmersdelight.common.registry.ModItems;
+import vectorwing.farmersdelight.common.tag.ModTags;
 
 public class ForgeEvents {
 	@SubscribeEvent
@@ -46,6 +48,16 @@ public class ForgeEvents {
 		e.getMappings(Registries.FLUID, Delightful.MODID).stream()
 			.filter(this::checkRoeMap)
 			.forEach(map -> map.remap(DelightfulFluids.AGED_ROE.get()));
+		for (var map : e.getMappings(Registries.BLOCK, Delightful.MODID)) {
+			if (map.getKey().getPath().equals("pumpkin_pie")) {
+				map.remap(ModBlocks.PUMPKIN_PIE.get());
+			}
+		}
+		for (var map : e.getMappings(Registries.ITEM, Delightful.MODID)) {
+			if (map.getKey().getPath().equals("pumpkin_pie_slice")) {
+				map.remap(ModItems.PUMPKIN_PIE_SLICE.get());
+			}
+		}
 	}
 
 	private boolean checkRoeMap(final MissingMappingsEvent.Mapping<?> mapping) {
@@ -104,7 +116,7 @@ public class ForgeEvents {
 	void onInteract(PlayerInteractEvent.RightClickBlock e) {
 		Level level = e.getLevel();
 		BlockPos pos = e.getPos();
-		if (e.getItemStack().is(ForgeTags.TOOLS_KNIVES) && !e.getEntity().isCrouching()) {
+		if (e.getItemStack().is(ModTags.Items.KNIVES) && !e.getEntity().isCrouching()) {
 			Block current = level.getBlockState(pos).getBlock();
 			Block newBlock;
 			if (current == Blocks.MELON) {

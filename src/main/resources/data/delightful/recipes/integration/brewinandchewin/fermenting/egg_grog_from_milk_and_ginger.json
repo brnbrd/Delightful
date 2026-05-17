@@ -11,7 +11,7 @@
           "type": "forge:not",
           "value": {
             "type": "forge:tag_empty",
-            "tag": "forge:vegetables/ginger"
+            "tag": "forge:crops/ginger"
           }
         }
       ],
@@ -28,7 +28,7 @@
             "tag": "forge:eggs"
           },
           {
-            "tag": "forge:vegetables/ginger"
+            "tag": "forge:crops/ginger"
           },
           {
             "tag": "forge:crops/cabbage"

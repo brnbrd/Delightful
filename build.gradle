@@ -8,7 +8,7 @@ buildscript {
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
-        classpath 'org.spongepowered:mixingradle:0.7.+'
+        classpath group: 'org.spongepowered', name: 'mixingradle', version: '0.7-SNAPSHOT'
         classpath 'org.parchmentmc:librarian:1.+'
     }
 }
@@ -20,6 +20,10 @@ apply plugin: 'idea'
 apply plugin: 'maven-publish'
 apply plugin: "org.spongepowered.mixin"
 
+mixin {
+    add sourceSets.main, "delightful.refmap.json"
+}
+
 version = "${mc_version}-${mod_version}"
 group = 'net.brnbrd.delightful'
 archivesBaseName = 'Delightful'
@@ -28,32 +32,63 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 minecraft {
     mappings channel: 'parchment', version: "${parchment_version}-${mc_version}"
+
     accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+
     runs {
-        configureEach {
+        client {
             workingDirectory project.file('run')
-            property 'forge.logging.markers', 'REGISTRIES'
+            arg '-mixin.config=delightful.mixins.json'
+
+            // Recommended logging data for a userdev environment
+            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+
+            // Recommended logging level for the console
             property 'forge.logging.console.level', 'debug'
+
             mods {
                 delightful {
                     source sourceSets.main
                 }
             }
         }
-        client {
-
-        }
         server {
-            args '--nogui'
+            workingDirectory project.file('run')
+            arg "-mixin.config=delightful.mixins.json"
+
+            // Recommended logging data for a userdev environment
+            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+
+            // Recommended logging level for the console
+            property 'forge.logging.console.level', 'debug'
+
+            mods {
+                delightful {
+                    source sourceSets.main
+                }
+            }
         }
         data {
             workingDirectory project.file('run')
+
+            // Recommended logging data for a userdev environment
+            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+
+            // Recommended logging level for the console
+            property 'forge.logging.console.level', 'debug'
+
             args '--mod', 'delightful', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/'), '--existing-mod', 'farmersdelight', '--existing-mod', 'undergarden'
+
+            environment 'target', 'fmluserdevdata'
+
+            mods {
+                delightful {
+                    source sourceSets.main
+                }
+            }
         }
     }
 }
-
-sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
     maven {
@@ -71,18 +106,21 @@ repositories {
     maven { url "https://maven.ryanliptak.com/" }
 }
 
+sourceSets.main.resources {
+    exclude(".cache")
+    srcDirs += 'src/generated/resources'
+}
+
 dependencies {
     minecraft "net.minecraftforge:forge:${mc_version}-${forge_version}"
-
-    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
     implementation fg.deobf("curse.maven:farmers-delight-398521:${farmers_delight_version}")
     compileOnly fg.deobf("mezz.jei:jei-${mc_version}-common-api:${jei_version}")
     compileOnly fg.deobf("mezz.jei:jei-${mc_version}-forge-api:${jei_version}")
     runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}-forge:${jei_version}")
     compileOnly fg.deobf("vazkii.botania:Botania:${botania_version}")
+    compileOnly fg.deobf("curse.maven:miners-delight-plus-689630:${miners_delight_version}")
     implementation fg.deobf("curse.maven:jade-324717:${jade_version}")
-    implementation fg.deobf("curse.maven:miners-delight-plus-689630:${miners_delight_version}")
     implementation fg.deobf("curse.maven:brewin-and-chewin-637808:${brewin_and_chewin_version}")
     implementation fg.deobf("curse.maven:let-fish-love-941186:${let_fish_love_version}")
     compileOnly fg.deobf("curse.maven:spirit-495509:${spirit_version}")
@@ -95,6 +133,19 @@ dependencies {
     compileOnly fg.deobf("squeek.appleskin:appleskin-forge:${appleskin_version}:api")
     runtimeOnly fg.deobf("squeek.appleskin:appleskin-forge:${appleskin_version}")
     runtimeOnly fg.deobf("curse.maven:collectors-reap-807101:${collectors_reap_version}")
+
+    // Mixin
+    compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:${mixin_extras_version}"))
+    implementation(jarJar("io.github.llamalad7:mixinextras-forge:${mixin_extras_version}")) {
+        jarJar.ranged(it, "[${mixin_extras_version},)")
+    }
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+}
+
+jarJar.enable()
+
+tasks.jarJar.configure {
+    classifier ''
 }
 
 jar {
@@ -106,7 +157,8 @@ jar {
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : "${mod_version}",
                 "Implementation-Vendor"   : "brnbrd",
-                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
+                "MixinConfigs"            : "delightful.mixins.json"
         ])
     }
 }

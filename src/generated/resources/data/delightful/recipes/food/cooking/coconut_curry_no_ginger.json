@@ -16,7 +16,7 @@
         },
         {
           "type": "forge:tag_empty",
-          "tag": "forge:vegetables/ginger"
+          "tag": "forge:crops/ginger"
         }
       ],
       "recipe": {
@@ -40,7 +40,7 @@
             "item": "farmersdelight:tomato_sauce"
           },
           {
-            "tag": "forge:vegetables/onion"
+            "tag": "forge:crops/onion"
           },
           {
             "tag": "forge:tea_leaves"

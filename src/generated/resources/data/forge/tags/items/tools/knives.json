@@ -70,10 +70,6 @@
     "delightful:stratus_knife",
     "delightful:valkyrum_knife",
     "delightful:certus_quartz_knife",
-    "delightful:fluix_knife",
-    {
-      "id": "#thicket:pocket_knives",
-      "required": false
-    }
+    "delightful:fluix_knife"
   ]
 }

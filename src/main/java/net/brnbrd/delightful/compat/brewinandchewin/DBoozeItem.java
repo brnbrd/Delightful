@@ -26,6 +26,7 @@ public class DBoozeItem extends BoozeItem implements IConfigured {
 	@Override
 	public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> comps, @NotNull TooltipFlag pIsAdvanced) {
 		this.enabledText(comps);
+
 		super.appendHoverText(stack, level, comps, pIsAdvanced);
 	}
 }

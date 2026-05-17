@@ -87,8 +87,6 @@ public class DelightfulBlocks {
 		() -> new Block(SACK(MapColor.COLOR_ORANGE)));
 	public static final RegistryObject<Block> SALMONBERRY_PIE = BLOCKS.register("salmonberry_pie",
 		() -> new PieBlock(Block.Properties.copy(ModBlocks.APPLE_PIE.get()), DelightfulItems.SALMONBERRY_PIE_SLICE));
-	public static final RegistryObject<PumpkinPieBlock> PUMPKIN_PIE = BLOCKS.register("pumpkin_pie",
-		() -> new PumpkinPieBlock(DelightfulItems.PUMPKIN_PIE_SLICE));
 	public static final RegistryObject<Block> BAKLAVA = BLOCKS.register("baklava",
 		() -> new BaklavaBlock(Block.Properties.copy(ModBlocks.APPLE_PIE.get()), DelightfulItems.BAKLAVA_SLICE));
 	public static final RegistryObject<DPieBlock> SOURCE_BERRY_PIE = BLOCKS.register("source_berry_pie",
@@ -98,6 +96,7 @@ public class DelightfulBlocks {
 			DelightfulItems.SOURCE_BERRY_PIE_SLICE,
 			Modid.AN.rl("source_berry_pie")
 		));
+	// Compat Pie Blocks
 	public static final RegistryObject<DPieBlock> CHORUS_PIE = BLOCKS.register(UnusualEndCompat.chorus_pie,
 		() -> new DPieBlock(DelightfulItems.CHORUS_PIE_SLICE, Modid.UE.rl(UnusualEndCompat.chorus_pie)));
 	public static final RegistryObject<DPieBlock> GLOOMGOURD_PIE = BLOCKS.register("gloomgourd_pie",

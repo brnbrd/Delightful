@@ -34,13 +34,13 @@
             "tag": "forge:raw_venison"
           },
           {
-            "tag": "forge:vegetables/carrot"
+            "tag": "forge:crops/carrot"
           },
           {
-            "tag": "forge:vegetables/potato"
+            "tag": "forge:crops/potato"
           },
           {
-            "tag": "forge:vegetables/potato"
+            "tag": "forge:crops/potato"
           }
         ],
         "recipe_book_tab": "meals",

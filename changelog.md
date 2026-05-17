@@ -1,9 +1,11 @@
 # Version History
 
 
-## 3.7.9
+## 3.8
 
 ### Updates
+- Update dependencies (Farmer's Delight 1.3.2)
+- Removed Pumpkin Pie Slice (and block) - now added by Farmer's Delight
 - Added Ikura (for [Let Fish Love](https://www.curseforge.com/minecraft/mc-mods/let-fish-love))
 - Added Sturgeon Roe (for [Let Fish Love](https://www.curseforge.com/minecraft/mc-mods/let-fish-love) and [Tide](https://www.curseforge.com/minecraft/mc-mods/tide))
 - Added Caviar (for [Let Fish Love](https://www.curseforge.com/minecraft/mc-mods/let-fish-love), [Tide](https://www.curseforge.com/minecraft/mc-mods/tide), and [Brewin' and Chewin'](https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin))

@@ -26,10 +26,10 @@
             "tag": "forge:eggs"
           },
           {
-            "tag": "forge:vegetables/onion"
+            "tag": "forge:crops/onion"
           },
           {
-            "tag": "forge:vegetables/carrot"
+            "tag": "forge:crops/carrot"
           }
         ],
         "recipe_book_tab": "meals",

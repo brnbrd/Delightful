@@ -9,7 +9,7 @@
         },
         {
           "type": "forge:tag_empty",
-          "tag": "forge:vegetables/corn"
+          "tag": "forge:crops/corn"
         }
       ],
       "recipe": {
@@ -24,7 +24,7 @@
             "tag": "forge:raw_pork"
           },
           {
-            "tag": "forge:vegetables/cactus"
+            "tag": "forge:crops/cactus"
           },
           {
             "item": "farmersdelight:tomato_sauce"

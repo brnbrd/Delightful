@@ -75,6 +75,10 @@ public class Util {
 		return rl(EMPTY_STR, EMPTY_STR);
 	}
 
+	public static ResourceLocation rl(ItemStack stack) {
+		return rl(stack.getItem());
+	}
+
 	public static ResourceLocation delight(String path) {
 		return rl(Delightful.MODID, path);
 	}
@@ -138,7 +142,11 @@ public class Util {
 	}
 
 	public static boolean itemExists(ResourceLocation location) {
-		return Mods.stringLoaded(location.getNamespace()) && ForgeRegistries.ITEMS.containsKey(location);
+		final String modid = location.getNamespace();
+		return (
+			(modid.equals(Delightful.MODID) || Mods.stringLoaded(location.getNamespace())) &&
+			ForgeRegistries.ITEMS.containsKey(location)
+		);
 	}
 
 	public static boolean blockExists(ResourceLocation location) {
@@ -358,6 +366,10 @@ public class Util {
 		return enabled(item.get());
 	}
 
+	public static boolean enabled(ItemStack stack) {
+		return enabled(stack.getItem());
+	}
+
 	public static boolean enabled(String item) {
 		return (
 			DelightfulItems.ITEMS.getEntries().stream()
@@ -368,16 +380,8 @@ public class Util {
 		);
 	}
 
-	public static MutableComponent translation(String modid, String key) {
-		return Component.translatable(modid + "." + key);
-	}
-
-	public static MutableComponent translation(String modid, String prefix, String key) {
-		return Component.translatable(prefix + "." + modid + "." + key);
-	}
-
-	public static MutableComponent description(String key) {
-		return Component.translatable("desc." + Delightful.MODID + "." + key);
+	public static MutableComponent info(String key) {
+		return Component.translatable("jei." + Delightful.MODID + ".info." + key);
 	}
 
 	public static MutableComponent tooltip(String key) {

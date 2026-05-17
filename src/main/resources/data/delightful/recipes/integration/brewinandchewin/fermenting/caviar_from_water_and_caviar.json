@@ -1,0 +1,54 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "caviar"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "brewinandchewin"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "letfishlove"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "tide"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "caverns_and_chasms:caviar"
+        }
+      ],
+      "recipe": {
+        "type":"brewinandchewin:fermenting",
+        "basefluid": {
+          "count": 1000,
+          "fluid": "minecraft:water"
+        },
+        "experience": 1.0,
+        "fermentingtime": 12000,
+        "ingredients":[
+          {
+            "item": "delightful:sturgeon_roe"
+          },
+          {
+            "item": "delightful:sturgeon_roe"
+          },
+          {
+            "item": "caverns_and_chasms:caviar"
+          }
+        ],
+        "result":{
+          "count": 1000,
+          "fluid": "delightful:caviar"
+        },
+        "temperature": 2
+      }
+    }
+  ]
+}

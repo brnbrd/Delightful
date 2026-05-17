@@ -21,10 +21,10 @@ public class DelightfulEntityTagProvider extends EntityTypeTagsProvider {
 	@Override
 	protected void addTags(HolderLookup.@NotNull Provider provider) {
 		// Farmer's Delight
-		this.tag(ModTags.HORSE_FEED_TEMPTED)
+		this.tag(ModTags.EntityTypes.HORSE_FEED_TEMPTED)
 			.addOptional(Modid.ENV.rl("zebra"))
 			.addOptional(Modid.NA.rl("zebra"));
-		this.tag(ModTags.HORSE_FEED_USERS)
+		this.tag(ModTags.EntityTypes.HORSE_FEED_USERS)
 			.addOptional(Modid.ENV.rl("zebra"))
 			.addOptional(Modid.NA.rl("zebra"));
 

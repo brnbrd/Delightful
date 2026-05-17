@@ -22,7 +22,7 @@
             "tag": "forge:salad_ingredients"
           },
           {
-            "tag": "forge:vegetables/onion"
+            "tag": "forge:crops/onion"
           }
         ],
         "result": {
@@ -54,7 +54,7 @@
             "tag": "forge:salad_ingredients"
           },
           {
-            "tag": "forge:vegetables/onion"
+            "tag": "forge:crops/onion"
           }
         ],
         "result": {

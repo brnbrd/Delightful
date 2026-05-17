@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "culturaldelights:corn_cob",
+      "required": false
+    },
+    {
+      "id": "hearthandharvest:corn",
+      "required": false
+    },
+    {
+      "id": "corn_delight:corn",
+      "required": false
+    }
+  ]
+}

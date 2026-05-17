@@ -1,4 +1,4 @@
-// 1.20.1	2026-03-06T23:08:11.5654777	Loot Tables
+// 1.20.1	2026-05-23T11:00:40.9081765	Loot Tables
 2b9b2e38c5ea1b16ab49d97e8273a06d9522ff89 data/delightful/loot_tables/blocks/acorn_sack.json
 9d5b84ac2d4addf19f3e04c606d85bceee5f2519 data/delightful/loot_tables/blocks/baklava.json
 1363024576f5e67e0984401cb699644221da8f5b data/delightful/loot_tables/blocks/baobab_fruit_crate.json
@@ -25,7 +25,6 @@ e8d6647c78a4420c1f325b8d6ba27ed83defcff7 data/delightful/loot_tables/blocks/mend
 6998c77f2d7b1047da496d0b8046c6a4fc3d0ee8 data/delightful/loot_tables/blocks/mulberry_pie.json
 7c0f66ef210e374dc056c9b503b17e9b76fb223f data/delightful/loot_tables/blocks/mutton_pie.json
 1edaada6909495178ad81cf103e6831254a805a0 data/delightful/loot_tables/blocks/passion_fruit_tart.json
-a7ae700762d9f1280f78fe183e7a08ef8c1454d6 data/delightful/loot_tables/blocks/pumpkin_pie.json
 c5fd2099e0d7c4ce13c429f69ac8c3e797f94a64 data/delightful/loot_tables/blocks/quartz_cabinet.json
 c3ebebce4bd2b1b925274f5aeb1520e476aa5cd8 data/delightful/loot_tables/blocks/salmonberry_bush.json
 b5cdb0727bd106aab19da3a674caceafb8c6e847 data/delightful/loot_tables/blocks/salmonberry_ice_cream_block.json

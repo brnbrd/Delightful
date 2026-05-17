@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "tag": "forge:vegetables/onion"
+      "tag": "forge:crops/onion"
     },
     {
       "tag": "forge:eggs"
@@ -12,7 +12,7 @@
       "tag": "forge:bread"
     },
     {
-      "tag": "forge:vegetables/carrot"
+      "tag": "forge:crops/carrot"
     },
     {
       "item": "minecraft:cooked_chicken"
@@ -21,7 +21,7 @@
       "item": "minecraft:baked_potato"
     },
     {
-      "tag": "forge:vegetables/carrot"
+      "tag": "forge:crops/carrot"
     },
     {
       "item": "minecraft:bowl"

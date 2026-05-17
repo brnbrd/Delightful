@@ -18,7 +18,7 @@
           "type": "forge:not",
           "value": {
             "type": "forge:tag_empty",
-            "tag": "forge:vegetables/ginger"
+            "tag": "forge:crops/ginger"
           }
         }
       ],
@@ -40,7 +40,7 @@
             "tag": "forge:fruits/lime"
           },
           {
-            "tag": "forge:vegetables/ginger"
+            "tag": "forge:crops/ginger"
           }
         ],
         "recipe_book_tab": "meals",
@@ -64,7 +64,7 @@
         },
         {
           "type": "forge:tag_empty",
-          "tag": "forge:vegetables/ginger"
+          "tag": "forge:crops/ginger"
         }
       ],
       "recipe": {
@@ -85,7 +85,7 @@
             "tag": "forge:fruits/lime"
           },
           {
-            "tag": "forge:vegetables/onion"
+            "tag": "forge:crops/onion"
           }
         ],
         "recipe_book_tab": "meals",

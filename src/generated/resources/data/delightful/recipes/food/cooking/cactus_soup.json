@@ -17,16 +17,16 @@
         "experience": 1.0,
         "ingredients": [
           {
-            "tag": "forge:vegetables/cactus"
+            "tag": "forge:crops/cactus"
           },
           {
             "tag": "forge:grain/rice"
           },
           {
-            "tag": "forge:vegetables/tomato"
+            "tag": "forge:crops/tomato"
           },
           {
-            "tag": "forge:vegetables/onion"
+            "tag": "forge:crops/onion"
           }
         ],
         "recipe_book_tab": "meals",

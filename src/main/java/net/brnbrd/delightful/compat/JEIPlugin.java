@@ -43,6 +43,11 @@ public class JEIPlugin implements IModPlugin {
 			.map(Util::getStack)
 			.collect(Collectors.toCollection(ArrayList::new)); // Create new mutable list
 
+		DelightfulItems.NO_GEN.forEach(item -> {
+			Item found = Util.item(item);
+			if (found != null) hidden.add(new ItemStack(found));
+		});
+
 		// Delightful conflicts
 		this.hide(hidden, Modid.SOB, "pbnj");
 		this.hide(hidden, Modid.VD, "pb_j");
@@ -131,7 +136,7 @@ public class JEIPlugin implements IModPlugin {
 				.forEach(knifeStack -> registration.addIngredientInfo(
 					knifeStack,
 					VanillaTypes.ITEM_STACK,
-					TextUtils.getTranslation("jei.info.knife")
+					TextUtils.JEI("info.knife")
 				));
 
 		// Add other descriptions
@@ -142,35 +147,35 @@ public class JEIPlugin implements IModPlugin {
 						Util.getStack(DelightfulItems.WILD_SALMONBERRIES)
 					),
 					VanillaTypes.ITEM_STACK,
-				Util.description("salmonberries")
+				Util.info("salmonberries")
 			);
 		}
 		if (((GreenTeaLeavesItem) DelightfulItems.GREEN_TEA_LEAF.get()).enabled()) {
 			registration.addIngredientInfo(
 				Util.getStack(DelightfulItems.GREEN_TEA_LEAF),
 				VanillaTypes.ITEM_STACK,
-				Util.description("green_tea_leaf")
+				Util.info("green_tea_leaf")
 			);
 		}
 		if (Util.enabled(DelightfulItems.ACORN)) {
 			registration.addIngredientInfo(
 				Util.getStack(DelightfulItems.ACORN),
 				VanillaTypes.ITEM_STACK,
-				Util.description("acorn")
+				Util.info("acorn")
 			);
 		}
 		if (Util.enabled(DelightfulItems.ANIMAL_FAT)) {
 			registration.addIngredientInfo(
 				Util.getStack(DelightfulItems.ANIMAL_FAT),
 				VanillaTypes.ITEM_STACK,
-				Util.description("animal_fat")
+				Util.info("animal_fat")
 			);
 		}
 		if (Util.enabled(DelightfulItems.ANIMAL_OIL_BOTTLE)) {
 			registration.addIngredientInfo(
 				Util.getStack(DelightfulItems.ANIMAL_OIL_BOTTLE),
 				VanillaTypes.ITEM_STACK,
-				Util.description("animal_oil_bottle")
+				Util.info("animal_oil_bottle")
 			);
 		}
 		if (Util.enabled(DelightfulItems.CANTALOUPE)) {
@@ -178,35 +183,35 @@ public class JEIPlugin implements IModPlugin {
 				registration.addIngredientInfo(
 					Util.getStack(DelightfulItems.CANTALOUPE_SEEDS),
 					VanillaTypes.ITEM_STACK,
-					Util.description("cantaloupe_seeds")
+					Util.info("cantaloupe_seeds")
 				);
 			}
 			registration.addIngredientInfo(
 				Util.getStack(DelightfulItems.CANTALOUPE),
 				VanillaTypes.ITEM_STACK,
-				Util.description("cantaloupe")
+				Util.info("cantaloupe")
 					.append(" ")
-					.append(Util.description("sliceable"))
+					.append(Util.info("sliceable"))
 			);
 		}
 		if (Util.enabled(DelightfulItems.MINI_MELON)) {
 			registration.addIngredientInfo(
 				Util.getStack(DelightfulItems.MINI_MELON),
 				VanillaTypes.ITEM_STACK,
-				Util.description("mini_melon")
+				Util.info("mini_melon")
 					.append(" ")
-					.append(Util.description("sliceable"))
+					.append(Util.info("sliceable"))
 			);
 		}
 		registration.addIngredientInfo(
 			new ItemStack(Items.MELON),
 			VanillaTypes.ITEM_STACK,
-			Util.description("sliceable")
+			Util.info("sliceable")
 		);
 		registration.addIngredientInfo(
 			new ItemStack(Items.PUMPKIN),
 			VanillaTypes.ITEM_STACK,
-			Util.description("sliceable")
+			Util.info("sliceable")
 		);
 	}
 

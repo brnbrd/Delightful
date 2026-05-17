@@ -14,7 +14,6 @@ import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import vectorwing.farmersdelight.common.tag.CompatibilityTags;
-import vectorwing.farmersdelight.common.tag.ForgeTags;
 import vectorwing.farmersdelight.common.tag.ModTags;
 import java.util.concurrent.CompletableFuture;
 import org.jetbrains.annotations.NotNull;
@@ -28,9 +27,8 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 	@Override
 	protected void addTags(HolderLookup.@NotNull Provider provider) {
 		// Farmer's Delight
-		this.tag(ModTags.WILD_CROPS)
+		this.tag(ModTags.Blocks.WILD_CROPS)
 			.add(DelightfulBlocks.WILD_SALMONBERRIES.get());
-		this.tag(ModTags.MINEABLE_WITH_KNIFE).addTag(ForgeTags.MINEABLE_WITH_KNIFE);
 
 		// Delightful
 		this.tag(DelightfulBlockTags.DROPS_STRAW)
@@ -70,7 +68,7 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 			.addTag(DelightfulBlockTags.STORAGE_BLOCKS_YUCCA_FRUIT)
 			.addTag(DelightfulBlockTags.STORAGE_BLOCKS_BAOBAB_FRUIT);
 		this.tag(Tags.Blocks.SAND).addTag(BlockTags.SAND);
-		this.tag(ForgeTags.MINEABLE_WITH_KNIFE)
+		this.tag(ModTags.Blocks.MINEABLE_WITH_KNIFE)
 			.add(DelightfulBlocks.SLICED_PUMPKIN.get())
 			.add(DelightfulBlocks.SLICED_MELON.get())
 			.add(DelightfulBlocks.MINI_MELON.get())
@@ -80,7 +78,6 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 			.add(DelightfulBlocks.SLICED_GLOOMGOURD.get())
 			.add(DelightfulBlocks.BAKLAVA.get())
 			.add(DelightfulBlocks.SALMONBERRY_PIE.get())
-			.add(DelightfulBlocks.PUMPKIN_PIE.get())
 			.add(DelightfulBlocks.BLUEBERRY_PIE.get())
 			.add(DelightfulBlocks.GREEN_APPLE_PIE.get())
 			.add(DelightfulBlocks.SOURCE_BERRY_PIE.get())

@@ -8,6 +8,6 @@ import squeek.appleskin.api.event.TooltipOverlayEvent;
 public class AppleSkinEventHandler {
 	@SubscribeEvent(priority = EventPriority.LOWEST)
 	public void onPreTooltipEvent(TooltipOverlayEvent.Pre e) {
-		e.setCanceled(PieEvents.enabled(e.itemStack));
+		e.setCanceled(PieEvents.isCompatPie(e.itemStack));
 	}
 }

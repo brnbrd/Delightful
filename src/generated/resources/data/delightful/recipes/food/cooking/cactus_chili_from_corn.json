@@ -11,7 +11,7 @@
           "type": "forge:not",
           "value": {
             "type": "forge:tag_empty",
-            "tag": "forge:vegetables/corn"
+            "tag": "forge:crops/corn"
           }
         }
       ],
@@ -27,7 +27,7 @@
             "tag": "forge:raw_pork"
           },
           {
-            "tag": "forge:vegetables/cactus"
+            "tag": "forge:crops/cactus"
           },
           {
             "item": "farmersdelight:tomato_sauce"
@@ -36,7 +36,7 @@
             "tag": "delightful:hot_spices"
           },
           {
-            "tag": "forge:vegetables/corn"
+            "tag": "forge:crops/corn"
           }
         ],
         "recipe_book_tab": "meals",

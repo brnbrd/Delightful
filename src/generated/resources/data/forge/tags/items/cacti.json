@@ -1,6 +1,53 @@
 {
   "values": [
-    "#forge:cacti/large",
-    "#forge:cacti/small"
+    "minecraft:cactus",
+    {
+      "id": "biomeswevegone:barrel_cactus",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:flowering_barrel_cactus",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:prickly_pear_cactus",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:golden_spined_cactus",
+      "required": false
+    },
+    {
+      "id": "habitat:ball_cactus_block",
+      "required": false
+    },
+    {
+      "id": "biomemakeover:saguaro_cactus",
+      "required": false
+    },
+    {
+      "id": "#habitat:ball_cacti",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:mini_cactus",
+      "required": false
+    },
+    {
+      "id": "biomesoplenty:tiny_cactus",
+      "required": false
+    },
+    {
+      "id": "atmospheric:barrel_cactus",
+      "required": false
+    },
+    {
+      "id": "biomemakeover:barrel_cactus",
+      "required": false
+    },
+    {
+      "id": "naturesaura:aura_cactus",
+      "required": false
+    }
   ]
 }

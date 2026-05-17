@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "#forge:vegetables/ginger",
+      "required": false
+    },
+    {
+      "id": "snowyspirit:ginger",
+      "required": false
+    },
+    {
+      "id": "windswept:ginger_root",
+      "required": false
+    }
+  ]
+}

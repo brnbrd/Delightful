@@ -23,13 +23,13 @@
             }
           ],
           {
-            "tag": "forge:vegetables/corn"
+            "tag": "forge:crops/corn"
           },
           {
-            "tag": "forge:vegetables/corn"
+            "tag": "forge:crops/corn"
           },
           {
-            "tag": "forge:vegetables/corn"
+            "tag": "forge:crops/corn"
           }
         ],
         "result": {

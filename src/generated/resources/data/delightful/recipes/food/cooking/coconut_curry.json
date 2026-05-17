@@ -18,7 +18,7 @@
           "type": "forge:not",
           "value": {
             "type": "forge:tag_empty",
-            "tag": "forge:vegetables/ginger"
+            "tag": "forge:crops/ginger"
           }
         }
       ],
@@ -43,7 +43,7 @@
             "item": "farmersdelight:tomato_sauce"
           },
           {
-            "tag": "forge:vegetables/ginger"
+            "tag": "forge:crops/ginger"
           },
           {
             "tag": "forge:tea_leaves"
