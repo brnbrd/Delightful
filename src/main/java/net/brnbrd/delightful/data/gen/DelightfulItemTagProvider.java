@@ -945,13 +945,6 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.SEEDS_SALMONBERRY)
 			.addTag(DelightfulItemTags.SEEDS_CANTALOUPE);
 
-		// Phantasm
-		this.addSelf(DelightfulItemTags.VOID_CRYSTAL_BLOCK);
-		this.tag(DelightfulItemTags.CRYSTAL_SPIKE_TIPS)
-			.addOptional(Modid.EP.rl("crystal_spike_tip"))
-			.addOptional(Modid.EP.rl("void_crystal_spike_tip"));
-		this.tag(DelightfulItemTags.XP_BOOSTED).add(Knives.CRYSTALLINE.get());
-
 		// Spirit
 		this.tag(DelightfulItemTags.SOUL_STEEL_INGOT).addOptional(Modid.SP.rl("soul_steel_ingot"));
 		this.tag(DelightfulItemTags.SOUL_STEEL_MAINHAND).add(Knives.SOUL_STEEL.get());

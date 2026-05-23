@@ -1,4 +1,4 @@
-// 1.20.1	2026-05-23T11:42:31.3040303	Recipes
+// 1.20.1	2026-05-23T12:14:20.6013219	Recipes
 6c217dd6477efa10f6042809ba959d53036ab5e2 data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 5b82f87851220644287d771121677deac66b3b89 data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
 cf29033c1c919355c261025df529938e6ebc73f8 data/delightful/advancements/recipes/campfire/cactus_steak.json
@@ -99,7 +99,6 @@ b97296132f4a47a38a46aeedeea68afa696bd69e data/delightful/advancements/recipes/kn
 6940cfddc767ba625db21b50e762d1866387ec98 data/delightful/advancements/recipes/knives/cloggrum_knife.json
 f62e346a54af19d5f7b6d5aca50e82e4080dbdb8 data/delightful/advancements/recipes/knives/constantan_knife.json
 f259c0055095914964532ad548293c04d6066e4c data/delightful/advancements/recipes/knives/copper_knife.json
-f9e6ef3e6aa52d8371207afd06089b859c850e9f data/delightful/advancements/recipes/knives/crystalline_knife.json
 78b1db456e155cd13abacc894787e4094a20002c data/delightful/advancements/recipes/knives/draco_arcanus_knife.json
 05cfb25992565a6e7e46af98a6ee92c322131451 data/delightful/advancements/recipes/knives/electrum_knife.json
 e4354831baf8f0f45a0cdf0ebc4099a20fd2a894 data/delightful/advancements/recipes/knives/elementium_knife.json
@@ -271,7 +270,6 @@ e55e253a0fb08d5a2e83537d294dc4917d82bb8e data/delightful/recipes/knives/bone_kni
 79bb009baa1ee6cdf0b2dc83a719c2eecbadf2a0 data/delightful/recipes/knives/cloggrum_knife.json
 1c45e2abbedeab494f3c6e9045369ac4d6aa1ad2 data/delightful/recipes/knives/constantan_knife.json
 efd0c6f7a5efb0d0e45444405453e60706f4b72d data/delightful/recipes/knives/copper_knife.json
-e767368a8dee0098a631dacacabd30929bb96dd3 data/delightful/recipes/knives/crystalline_knife.json
 79b829713a1b451768192af995c6c0798cd67a99 data/delightful/recipes/knives/draco_arcanus_knife.json
 b7dd18aef42507bc58969b28e57cfa8e4b28e00f data/delightful/recipes/knives/electrum_knife.json
 3a464be3eaa241b39e1b52d9bf5fa163b67e0508 data/delightful/recipes/knives/elementium_knife.json

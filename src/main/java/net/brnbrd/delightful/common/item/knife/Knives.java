@@ -105,7 +105,6 @@ public class Knives extends DelightfulItems {
 	public static final RegistryObject<Item> BLAZING = registerItem("blazing_knife", () -> new BlazingKnifeItem(props()));
 	public static final RegistryObject<Item> LEAF = registerItem("leaf_knife", () -> new LeafKnifeItem(props()));
 	public static final RegistryObject<Item> KIWANO = registerItem("kiwano_knife", () -> new KiwanoKnifeItem(props()));
-	public static final RegistryObject<Item> CRYSTALLINE = registerKnife("crystalline", DelightfulItemTags.VOID_CRYSTAL_BLOCK, Modid.EP);
 	public static final RegistryObject<Item> SOUL_STEEL = registerItem("soul_steel_knife", () -> new SoulSteelKnifeItem(props()));
 	public static final RegistryObject<Item> ROSE_GOLD = registerItem("rose_gold_knife", () -> new RoseGoldKnifeItem(props()));
 	public static final RegistryObject<Item> GILDED_NETHERITE = registerItem("gilded_netherite_knife", () -> new GildedNetheriteKnifeItem(props()));

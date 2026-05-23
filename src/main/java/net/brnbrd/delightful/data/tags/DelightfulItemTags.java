@@ -208,11 +208,6 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> SHARP_LEAF = Modid.SE.it("sharp_leaf");
 	public static final TagKey<Item> KIWANO_PEEL = Modid.NE.it("kiwano_peel");
 
-	// Phantasm
-	public static final TagKey<Item> VOID_CRYSTAL_BLOCK = Modid.EP.it("void_crystal_block");
-	public static final TagKey<Item> CRYSTAL_SPIKE_TIPS = Modid.EP.it("crystal_spike_tips");
-	public static final TagKey<Item> XP_BOOSTED = Modid.EP.it("gets_xp_speed_boost");
-
 	// Unusual End
 	public static final TagKey<Item> INGOTS_PEARLESCENT = ingot("pearlescent");
 

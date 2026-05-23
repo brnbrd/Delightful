@@ -11,6 +11,7 @@ import net.brnbrd.delightful.compat.SOBCompat;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
@@ -42,17 +43,22 @@ import vectorwing.farmersdelight.common.tag.ModTags;
 public class ForgeEvents {
 	@SubscribeEvent
 	void onMissingMappings(MissingMappingsEvent e) {
-		e.getMappings(Registries.ITEM, Delightful.MODID).stream()
-			.filter(this::checkRoeMap)
-			.forEach(map -> map.remap(DelightfulItems.AGED_ROE.get()));
-		e.getMappings(Registries.FLUID, Delightful.MODID).stream()
-			.filter(this::checkRoeMap)
-			.forEach(map -> map.remap(DelightfulFluids.AGED_ROE.get()));
+		for (var map : e.getMappings(Registries.ITEM, Delightful.MODID)) {
+			final ResourceLocation crystalline = Util.rl(Modid.EP, "crystalline_knife");
+			if (checkRoeMap(map)) {
+				map.remap(DelightfulItems.AGED_ROE.get());
+			} else if (map.getKey().getPath().equals("crystalline_knife") && Util.itemExists(crystalline)) {
+				map.remap(Util.item(crystalline));
+			}
+		}
 		for (var map : e.getMappings(Registries.BLOCK, Delightful.MODID)) {
 			if (map.getKey().getPath().equals("pumpkin_pie")) {
 				map.remap(ModBlocks.PUMPKIN_PIE.get());
 			}
 		}
+		e.getMappings(Registries.FLUID, Delightful.MODID).stream()
+			.filter(this::checkRoeMap)
+			.forEach(map -> map.remap(DelightfulFluids.AGED_ROE.get()));
 		for (var map : e.getMappings(Registries.ITEM, Delightful.MODID)) {
 			if (map.getKey().getPath().equals("pumpkin_pie_slice")) {
 				map.remap(ModItems.PUMPKIN_PIE_SLICE.get());

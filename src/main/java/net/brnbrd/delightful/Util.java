@@ -159,8 +159,13 @@ public class Util {
 	}
 
 	@Nullable
-	public static Item item(String id, String path) {
-		return item(rl(id, path));
+	public static Item item(String modid, String path) {
+		return item(rl(modid, path));
+	}
+
+	@Nullable
+	public static Item item(Modid modid, String path) {
+		return item(rl(modid, path));
 	}
 
 	@NotNull

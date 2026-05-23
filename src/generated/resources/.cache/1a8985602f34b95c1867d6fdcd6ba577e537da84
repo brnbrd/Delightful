@@ -1,4 +1,4 @@
-// 1.20.1	2026-05-23T11:42:31.3020314	delightful
+// 1.20.1	2026-05-23T12:14:20.5983113	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -50,7 +50,7 @@ e41f65e6194cdfd6013e5c56afe891777082d87a data/farmersdelight/tags/items/drinks.j
 079e0e0155f3a70ae2fa16bb5b79c676f3ad3301 data/farmersdelight/tags/items/feasts.json
 ae26d2f7725b91d3f31ae4445df3ae7c741d7f40 data/farmersdelight/tags/items/meals.json
 6f93ecf481fdd6945e4e869a3242e5d8351c55d9 data/farmersdelight/tags/items/straw_plants.json
-006d45a00a90cccefab4fe37210cdc0f599df582 data/farmersdelight/tags/items/tools/knives.json
+249447df7c8283e548637a96ebb06b76ea9fdff1 data/farmersdelight/tags/items/tools/knives.json
 46f279b6acd03b06ea14e9f62be7d48e200c002c data/farmersdelight/tags/items/wild_crops.json
 a1edebb3bd4f7f3d7e73d53c915b2fe3203614aa data/forbidden_arcanus/tags/items/draco_arcanus_staff.json
 67b8f22c3fbfa7142b71a6a27d583be2b01e8ceb data/forbidden_arcanus/tags/items/dragon_scale.json
@@ -216,7 +216,7 @@ de9b7d6110a5a6e85ee178b72221ee4036a81df5 data/forge/tags/items/syrup/syrup_bottl
 2fba44995a5f721459f4b86e00d530e1544fb501 data/forge/tags/items/tea_leaves.json
 b4088db8c78220bdadc8c24288bd4da0fe773e25 data/forge/tags/items/tea_leaves/green.json
 4c059403da24f6205854d1125cba7633614fe525 data/forge/tags/items/tools/fishing_rods.json
-006d45a00a90cccefab4fe37210cdc0f599df582 data/forge/tags/items/tools/knives.json
+249447df7c8283e548637a96ebb06b76ea9fdff1 data/forge/tags/items/tools/knives.json
 78df9c1afac893dbe4ecae6bc0328b820eaba60b data/forge/tags/items/tools/wrench.json
 3f42128b4b110e2faf9c39acc4ea8cec58684613 data/forge/tags/items/tortilla.json
 245ece554925374980405bf8ed93cb98e5760dda data/forge/tags/items/vegetables.json
@@ -243,9 +243,6 @@ f3d389bd6892248142900ae5f52fe8a51dae2311 data/minecraft/tags/items/walls.json
 a95df2279e05baa5f0608937c6c66f68c44ebf2d data/nethersdelight/tags/items/meal_item.json
 39eb11aaa538dbe439118c3d75817b4407cf07a0 data/nethers_exoticism/tags/items/kiwano_peel.json
 03f129936289d77fd6e02c93156c4b31152fbbf8 data/nourished_nether/tags/items/necronium_tools.json
-bd03c94c3be4df3a7a6a198d6d729fad9fb4311f data/phantasm/tags/items/crystal_spike_tips.json
-61d64c77058e1625c2e3b99ed4a928eea28f624e data/phantasm/tags/items/gets_xp_speed_boost.json
-a8f06d7dc1646ce181a8dc82c1d2a179064212a9 data/phantasm/tags/items/void_crystal_block.json
 2908f42d098bb991e6e1fc471f611d715c6fc03e data/salt/tags/items/can_be_salted.json
 6ee15734ac9331c3a1b186bd12a7cfc07d71273b data/seeds/tags/items/sharp_leaf.json
 e8907bb6383992d824e326f554fcbab430f7e5ce data/sereneseasons/tags/items/summer_crops.json

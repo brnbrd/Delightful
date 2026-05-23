@@ -1,4 +1,4 @@
-// 1.20.1	2026-05-23T11:42:31.298026	Item Models: delightful
+// 1.20.1	2026-05-23T12:14:20.592283	Item Models: delightful
 f9af973b19b45f34017d8db4e6e54de90668031e assets/delightful/models/item/acorn.json
 9b4daf24b0d8e447735c5836d7ab76a3df1b3c1d assets/delightful/models/item/acorn_sack.json
 5d9531a6795e7d2281f99609672d866743329211 assets/delightful/models/item/adamantium_knife.json
@@ -50,7 +50,6 @@ f4a29efce7681dc639e7985c137e1717acff2ee2 assets/delightful/models/item/cooked_go
 e920d5a427106cffc7537868c68c064515f70af8 assets/delightful/models/item/cooked_venison_chops.json
 1d708f56a97d1d713bd45fd75a1ed429c24fe0b5 assets/delightful/models/item/copper_knife.json
 f8c415a412361a11d9969ce96c931d9ece975c0f assets/delightful/models/item/crab_rangoon.json
-cf3fd3306f69fd4411233a7d642e7ed6ce9bd268 assets/delightful/models/item/crystalline_knife.json
 178e937739c494c695ad811e18919cd7a743d1c2 assets/delightful/models/item/deluxe_cheeseburger.json
 b06cd1ddc4fc9b1fa65a1a2a85b37a20b22765b0 assets/delightful/models/item/draco_arcanus_knife.json
 40a8454755d4b8c17f0650a59dec3e4b7a3bb786 assets/delightful/models/item/electrum_knife.json

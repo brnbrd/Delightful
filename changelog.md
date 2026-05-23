@@ -6,6 +6,7 @@
 ### Updates
 - Update dependencies (Farmer's Delight 1.3.2)
 - Removed Pumpkin Pie Slice (and block) - now added by Farmer's Delight
+- Removed Crystalline Knife - now added by End's Phantasm (closes [#149](https://github.com/brnbrd/Delightful/issues/149))
 - Added Sturgeon Roe (for [Let Fish Love](https://www.curseforge.com/minecraft/mc-mods/let-fish-love) and [Tide](https://www.curseforge.com/minecraft/mc-mods/tide))
 - Added Caviar (for [Let Fish Love](https://www.curseforge.com/minecraft/mc-mods/let-fish-love), [Tide](https://www.curseforge.com/minecraft/mc-mods/tide), and [Brewin' and Chewin'](https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin))
 - Added Roe Roll (for [Let Fish Love](https://www.curseforge.com/minecraft/mc-mods/let-fish-love) and [Brewin' and Chewin'](https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin))
