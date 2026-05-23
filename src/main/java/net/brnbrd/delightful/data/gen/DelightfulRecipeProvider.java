@@ -81,6 +81,12 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.requires(DelightfulItemTags.JAMS)
 			.unlockedBy("has_nut_butter", has(DelightfulItems.NUT_BUTTER_BOTTLE.get())),
 			"food/nut_butter_and_jam_sandwich", finished, enabled(DelightfulItems.NUT_BUTTER_AND_JAM_SANDWICH), not(tagEmpty(DelightfulItemTags.NUTS)), not(modLoaded(Modid.CT.get())));
+		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.ROE_ROLL.get())
+			.requires(DelightfulItemTags.AGED_ROES)
+			.requires(ModItems.COOKED_RICE.get())
+			.requires(Items.DRIED_KELP)
+			.unlockedBy("has_aged_roe", has(DelightfulItemTags.AGED_ROES)),
+			"food/roe_roll", finished, enabled(DelightfulItems.ROE_ROLL), not(tagEmpty(DelightfulItemTags.ROE)), modLoaded(Modid.BC.get()), modLoaded(Modid.LFL.get()));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.ROE_BLINI.get())
 			.requires(DelightfulItemTags.PANCAKES)
 			.requires(DelightfulItemTags.CHEESE_MILD_CREAM)

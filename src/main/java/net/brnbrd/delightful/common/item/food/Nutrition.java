@@ -58,6 +58,10 @@ public class Nutrition {
 		.effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 900), 1F)
 		.effect(() -> new MobEffectInstance(BrewinChewinCompat.getTipsy(), 300, 0), 1F)
 		.effect(() -> BrewinChewinCompat.getIntoxicationOrHalfBadLuck(200, 0), 1F).build();
+	public static final FoodProperties ROE_ROLL = (new FoodProperties.Builder())
+		.nutrition(8).saturationMod(0.7F)
+		.fast()
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3600, 0), 1F).build();
 	public static final FoodProperties NUT_BUTTER_AND_JAM_SANDWICH = (new FoodProperties.Builder())
 		.nutrition(11).saturationMod(0.7F)
 		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3600, 0), 1F)

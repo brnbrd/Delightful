@@ -1,4 +1,4 @@
-// 1.20.1	2026-05-23T11:00:40.9121829	Recipes
+// 1.20.1	2026-05-23T11:42:31.3040303	Recipes
 6c217dd6477efa10f6042809ba959d53036ab5e2 data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 5b82f87851220644287d771121677deac66b3b89 data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
 cf29033c1c919355c261025df529938e6ebc73f8 data/delightful/advancements/recipes/campfire/cactus_steak.json
@@ -60,6 +60,7 @@ d0f9dce97abb7f16333c1e762621d4d12f4308b1 data/delightful/advancements/recipes/fo
 d73ec604ece849179a0d7f06505a1d3276570f93 data/delightful/advancements/recipes/food/roe_blini_from_bread.json
 12ae502c96dc38813c7294e544e8b34cbe282ec9 data/delightful/advancements/recipes/food/roe_blini_from_bread_and_milk.json
 224961bcec99f8be56cb327e5e58ff207f9bcce7 data/delightful/advancements/recipes/food/roe_blini_from_milk.json
+cf20d15002012ac04f0f88516085b58ee59541d1 data/delightful/advancements/recipes/food/roe_roll.json
 9c3ad26a24644789b6945613bc1a3a3946b0bc02 data/delightful/advancements/recipes/food/salmonberry_ice_cream.json
 5b5f3393b8d14f3b2f5ffebe79412750d0609a13 data/delightful/advancements/recipes/food/salmonberry_ice_cream_no_neapolitan.json
 b4a25a2ba8615e954b665bbf5bab79ec0b76f513 data/delightful/advancements/recipes/food/salmonberry_milkshake.json
@@ -231,6 +232,7 @@ e5ec134f222df62b093020a04ac61ece04777f52 data/delightful/recipes/food/pie_crust_
 cb6e828c29d991b3c70f76ed0fca5a7e3392c57b data/delightful/recipes/food/roe_blini_from_bread.json
 01bd768bcb117897a277c50478889187ad939a1b data/delightful/recipes/food/roe_blini_from_bread_and_milk.json
 99aae4a680f8ef1e55fc6b93abb495d18f1cd9d0 data/delightful/recipes/food/roe_blini_from_milk.json
+cb6567101069db7496fe43f7e06a967750cb55b0 data/delightful/recipes/food/roe_roll.json
 702827fa80aa411fde79721f1c5495c12174a65d data/delightful/recipes/food/salmonberry_ice_cream.json
 e7771b43b23c1e560c8d64ab2d6295d98abf4881 data/delightful/recipes/food/salmonberry_ice_cream_no_neapolitan.json
 5faf85e63e4b6cd205090db2de10164677e5bc81 data/delightful/recipes/food/salmonberry_milkshake.json

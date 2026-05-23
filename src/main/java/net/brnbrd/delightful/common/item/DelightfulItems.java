@@ -186,12 +186,15 @@ public class DelightfulItems {
 		BrewinChewinCompat.getCaviar() :
 		new CompatConsumableItem((new Item.Properties()).stacksTo(16).food(Nutrition.CAVIAR).craftRemainder(Items.GLASS_BOTTLE), false, false, Mods.Strategy.AND, Modid.BC, Modid.LFL, Modid.TIDE)
 	);
+	public static final RegistryObject<Item> ROE_ROLL = registerCompatFood("roe_roll", Nutrition.ROE_ROLL, true, Modid.BC, Modid.LFL);
+	public static final RegistryObject<Item> ROE_BLINI = registerItem("roe_blini", () -> new RoeBliniItem((new Item.Properties()).food(Nutrition.ROE_BLINI)));
+	public static final RegistryObject<Item> SALMON_AND_ROE_BLINI = registerItem("salmon_and_roe_blini", () -> new RoeBliniItem((new Item.Properties()).food(Nutrition.SALMON_AND_ROE_BLINI)));
+	public static final RegistryObject<Item> CRAB_RANGOON = registerItem("crab_rangoon",
+		() -> new CrabRangoonItem(new Item.Properties().food(Nutrition.CRAB_RANGOON), true));
 	public static final RegistryObject<Item> NUT_BUTTER_AND_JAM_SANDWICH = registerItem("nut_butter_and_jam_sandwich", () -> new NutButterJamSandwichItem((new Item.Properties()).food(Nutrition.NUT_BUTTER_AND_JAM_SANDWICH)));
 	public static final RegistryObject<Item> CHEESEBURGER = registerItem("cheeseburger", () -> new CheeseburgerItem((new Item.Properties()).food(Nutrition.CHEESEBURGER)));
 	public static final RegistryObject<Item> DELUXE_CHEESEBURGER = registerConsumable("deluxe_cheeseburger", Nutrition.DELUXE_CHEESEBURGER, null, true, false);
 	public static final RegistryObject<Item> CHUNKWICH = registerCompatFood("chunkwich", Nutrition.CHUNKWICH, true, Modid.RL);
-	public static final RegistryObject<Item> ROE_BLINI = registerItem("roe_blini", () -> new RoeBliniItem((new Item.Properties()).food(Nutrition.ROE_BLINI)));
-	public static final RegistryObject<Item> SALMON_AND_ROE_BLINI = registerItem("salmon_and_roe_blini", () -> new RoeBliniItem((new Item.Properties()).food(Nutrition.SALMON_AND_ROE_BLINI)));
 	public static final RegistryObject<Item> ROCK_CANDY = registerItem("rock_candy",
 		() -> new RockCandyItem((new Item.Properties()).food(Nutrition.ROCK_CANDY).stacksTo(16).craftRemainder(Items.STICK)));
 	public static final RegistryObject<Item> MARSHMALLOW_STICK = registerItem("marshmallow_stick",
@@ -199,8 +202,6 @@ public class DelightfulItems {
 	public static final RegistryObject<Item> COOKED_MARSHMALLOW_STICK = registerItem("cooked_marshmallow_stick",
 		() -> new MarshmallowStickItem((new Item.Properties()).food(Nutrition.COOKED_MARSHMALLOW_STICK).stacksTo(16).craftRemainder(Items.STICK), true));
 	public static final RegistryObject<Item> SMORE = registerConsumable("smore", Nutrition.SMORE, null, true, false);
-	public static final RegistryObject<Item> CRAB_RANGOON = registerItem("crab_rangoon",
-		() -> new CrabRangoonItem(new Item.Properties().food(Nutrition.CRAB_RANGOON), true));
 	public static final RegistryObject<Item> HONEY_GLAZED_WALNUT = registerItem("honey_glazed_walnut",
 		() -> new HoneyGlazedWalnutItem(new Item.Properties().food(Nutrition.HONEY_GLAZED_WALNUT)));
 	public static final RegistryObject<Item> VENISON_CHOPS = registerItem("venison_chops",
@@ -318,7 +319,7 @@ public class DelightfulItems {
 			() -> new DConsumableItem((new Item.Properties()).food(food).craftRemainder(remainder), hasFoodEffectTooltip, hasCustomTooltip));
 	}
 
-	public static RegistryObject<Item> registerCompatFood(String name, FoodProperties food, boolean hasFoodEffectTooltip, Modid modid) {
+	public static RegistryObject<Item> registerCompatFood(String name, FoodProperties food, boolean hasFoodEffectTooltip, Modid... modid) {
 		return registerItem(name,
 			() -> new CompatConsumableItem((new Item.Properties().food(food)), hasFoodEffectTooltip, false, modid));
 	}

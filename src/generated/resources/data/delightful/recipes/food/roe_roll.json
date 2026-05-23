@@ -1,0 +1,46 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "roe_roll"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:roe"
+          }
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "brewinandchewin"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "letfishlove"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "tag": "delightful:aged_roes"
+          },
+          {
+            "item": "farmersdelight:cooked_rice"
+          },
+          {
+            "item": "minecraft:dried_kelp"
+          }
+        ],
+        "result": {
+          "item": "delightful:roe_roll"
+        }
+      }
+    }
+  ]
+}

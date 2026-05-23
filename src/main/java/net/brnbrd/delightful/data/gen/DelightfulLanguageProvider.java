@@ -47,6 +47,7 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		addItem(DelightfulItems.GLOW_JAM_JAR, "Glow Jam Jar");
 		addItem(DelightfulItems.NUT_BUTTER_BOTTLE, "Nut Butter");
 		addItem(DelightfulItems.NUT_BUTTER_AND_JAM_SANDWICH, "Nut Butter and Jam Sandwich");
+		addItem(DelightfulItems.ROE_ROLL, "Roe Roll");
 		addItem(DelightfulItems.ROE_BLINI, "Roe Blini");
 		addItem(DelightfulItems.SALMON_AND_ROE_BLINI, "Salmon and Roe Blini");
 		addItem(DelightfulItems.HONEY_GLAZED_WALNUT, "Honey Glazed Walnut");

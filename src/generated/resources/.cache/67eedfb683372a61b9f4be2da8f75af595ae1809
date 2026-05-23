@@ -1,4 +1,4 @@
-// 1.20.1	2026-05-23T11:00:40.9056655	Item Models: delightful
+// 1.20.1	2026-05-23T11:42:31.298026	Item Models: delightful
 f9af973b19b45f34017d8db4e6e54de90668031e assets/delightful/models/item/acorn.json
 9b4daf24b0d8e447735c5836d7ab76a3df1b3c1d assets/delightful/models/item/acorn_sack.json
 5d9531a6795e7d2281f99609672d866743329211 assets/delightful/models/item/adamantium_knife.json
@@ -128,6 +128,7 @@ cb9fa05efea319871868b246c6e53c7e53974de4 assets/delightful/models/item/refined_g
 1af77a1d0c4a45ddeda5fb41cf684f5aca6131d2 assets/delightful/models/item/roasted_acorn.json
 eb60e7225d2de5028799847a9d6260cd3787c192 assets/delightful/models/item/rock_candy.json
 3b2086a66fcf11a5d3bdd281376328ba39140c86 assets/delightful/models/item/roe_blini.json
+489e1a2503a0134c64fbcb4fbbf64b1b3b32bb53 assets/delightful/models/item/roe_roll.json
 ef574a89968acc18b16ce581b3af588c16d81d63 assets/delightful/models/item/rose_gold_knife.json
 e8851e8a9cf72237cbcb58703316f012d965c5ae assets/delightful/models/item/salmonberries.json
 faf1a238d449659e09435230101ee18aa1eff0a5 assets/delightful/models/item/salmonberry_gummy.json
