@@ -56,6 +56,7 @@ public enum Modid {
 	CT("croptopia"),
 	CTD("brewincompatdelight"),
 	DA("deep_aether"),
+	DIET("diet"),
 	DD("deeperdarker"),
 	DOLT("dolt_mod_how"),
 	DTM("dropthemeat"),

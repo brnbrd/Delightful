@@ -3,10 +3,8 @@
 ## 3.8.1
 
 ### Updates
-- A
-
-### Fixes
-- B
+- Added a mixin to disable food properties on pie items
+  - Can be disabled in the config
 
 
 ## 3.8

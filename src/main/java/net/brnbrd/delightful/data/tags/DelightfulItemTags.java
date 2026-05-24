@@ -251,6 +251,9 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> FISH_FOOD_STURGEON = Util.it(Modid.LFL.get(),
 		"fish_food/" + Modid.TIDE.get() + "/sturgeon");
 
+	// Diet
+	public static final TagKey<Item> SPECIAL_FOOD = Modid.DIET.it("special_food");
+
 	public static TagKey<Item> forge(@NotNull String name) {
 		return Modid.LOADER.it(name);
 	}

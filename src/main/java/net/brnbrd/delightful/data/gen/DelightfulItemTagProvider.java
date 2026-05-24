@@ -1066,6 +1066,12 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.FISH_FOOD_STURGEON)
 			.addOptional(Modid.TIDE.rl("incandescent_larva"))
 			.addOptional(Modid.CR.rl("tiger_prawn"));
+
+		// Diet
+		this.tag(DelightfulItemTags.SPECIAL_FOOD)
+			.addTag(ModTags.Items.PIES)
+			.add(DelightfulItems.BAKLAVA.get());
+
 	}
 
 	@Override
