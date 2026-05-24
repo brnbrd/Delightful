@@ -29,7 +29,7 @@ public class FermentedEnderNectarItem extends DBoozeItem {
 	@Override
 	public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> comps, @NotNull TooltipFlag pIsAdvanced) {
 		if (Configuration.ENABLE_FOOD_EFFECT_TOOLTIP.get()) {
-			comps.add(Util.delightfulTooltip(this.toString()).withStyle(ChatFormatting.BLUE));
+			comps.add(Util.fdTooltip(this.toString()).withStyle(ChatFormatting.BLUE));
 		}
 		super.appendHoverText(stack, level, comps, pIsAdvanced);
 	}

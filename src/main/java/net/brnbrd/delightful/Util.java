@@ -42,6 +42,7 @@ import java.util.UUID;
 import java.util.function.Supplier;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import vectorwing.farmersdelight.FarmersDelight;
 
 public class Util {
 	public static final String EMPTY_STR = "";
@@ -391,6 +392,10 @@ public class Util {
 
 	public static MutableComponent tooltip(String key) {
 		return Component.translatable("tooltip." + key);
+	}
+
+	public static MutableComponent fdTooltip(String key) {
+		return tooltip(FarmersDelight.MODID + "." + key);
 	}
 
 	public static MutableComponent delightfulTooltip(String key) {

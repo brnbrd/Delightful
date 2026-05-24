@@ -1,4 +1,4 @@
-// 1.20.1	2026-05-23T19:43:22.085561	Recipes
+// 1.20.1	2026-05-23T22:14:29.2207152	Recipes
 6c217dd6477efa10f6042809ba959d53036ab5e2 data/delightful/advancements/recipes/cabinets/basalt_cabinet.json
 5b82f87851220644287d771121677deac66b3b89 data/delightful/advancements/recipes/cabinets/quartz_cabinet.json
 cf29033c1c919355c261025df529938e6ebc73f8 data/delightful/advancements/recipes/campfire/cactus_steak.json
@@ -41,7 +41,7 @@ ba986023d871b1c1d1bb85f52f035b8b889844de data/delightful/advancements/recipes/fo
 60f019bfab507624f6971a5c8e08967be559576c data/delightful/advancements/recipes/food/cooking/venison_stew_no_animal_fat.json
 fa81f81acd56cbff1741ba952e94ed1ad90a31f4 data/delightful/advancements/recipes/food/deluxe_cheeseburger.json
 40aa1720793f8640778ef2c602a247282564a6bf data/delightful/advancements/recipes/food/deluxe_cheeseburger_from_bun.json
-ba5156f44786a1fe3194b085f8f41a2bc1c36147 data/delightful/advancements/recipes/food/deluxe_cheeseburger_from_cheeseburger.json
+6a11abf9894253c422c238a4bde5f5d0eebf7e3b data/delightful/advancements/recipes/food/deluxe_cheeseburger_from_cheeseburger.json
 d718a28228d94886e877b9425e33b81aa63f3c0a data/delightful/advancements/recipes/food/deluxe_cheeseburger_from_milk.json
 6a585016183d9d7da3ac58132a263d56a8bed37f data/delightful/advancements/recipes/food/field_salad.json
 2a9f82357ff82729893cdb3db4d8199287f2f641 data/delightful/advancements/recipes/food/glow_jam_cookie.json
@@ -212,7 +212,7 @@ ad6373eb2ae8244378f84d62e88a59e69af38e44 data/delightful/recipes/food/cooking/ve
 b5630310e018da0c428a770ff08b5eadd9c7281d data/delightful/recipes/food/cooking/venison_stew_no_animal_fat.json
 289d419f3e2fd47958fe6bc3d55056385d3505e4 data/delightful/recipes/food/deluxe_cheeseburger.json
 6c6e68ad32bd52b5907d8aa9115e1a82e0723f18 data/delightful/recipes/food/deluxe_cheeseburger_from_bun.json
-48f28d80e63c4ec6ecd0e6151980f2ddbe42141f data/delightful/recipes/food/deluxe_cheeseburger_from_cheeseburger.json
+86faf06e618433315e571528ae16df813844074f data/delightful/recipes/food/deluxe_cheeseburger_from_cheeseburger.json
 60ae56a120c36da0333231f51dc0b81fec68f52d data/delightful/recipes/food/deluxe_cheeseburger_from_milk.json
 5f6faddfc66fcdc323cfa0d2bd3382b0b00240c7 data/delightful/recipes/food/field_salad.json
 fb0b67132bae982b9c75720f2a14d45afccee39e data/delightful/recipes/food/glow_jam_cookie.json

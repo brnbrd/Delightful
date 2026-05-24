@@ -10,6 +10,13 @@
         {
           "type": "delightful:enabled",
           "value": "cheeseburger"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:cheese"
+          }
         }
       ],
       "recipe": {

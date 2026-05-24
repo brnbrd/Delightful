@@ -223,9 +223,9 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		addDelightfulTooltip("sneak_right", "Sneak R-Click for:");
 		addDelightfulTooltip("furnace_fuel_burn_time", "s of burn time");
 		addDelightfulTooltip("rose_rock_candy.when_feeding", "When fed to a tamed animal:");
-		addDelightfulTooltip(Util.name(DelightfulItems.ENDER_NECTAR), "Otherworldly");
 
 		// Tooltips not specific to Delightful
+		addFDTooltip(Util.name(DelightfulItems.ENDER_NECTAR), "Otherworldly");
 		addTooltip("disabled", "Disabled");
 		addTooltip("requires_empty_tag", "Requires empty tag:");
 		addTooltip("requires_tag", "Requires tag:");

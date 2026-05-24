@@ -227,7 +227,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.requires(DelightfulItemTags.CHEESE)
 			.requires(ModItems.COOKED_BACON.get())
 			.unlockedBy("has_cheeseburger", has(DelightfulItems.CHEESEBURGER.get())),
-			"food/deluxe_cheeseburger_from_cheeseburger", finished, enabled(DelightfulItems.DELUXE_CHEESEBURGER), enabled(DelightfulItems.CHEESEBURGER));
+			"food/deluxe_cheeseburger_from_cheeseburger", finished, enabled(DelightfulItems.DELUXE_CHEESEBURGER), enabled(DelightfulItems.CHEESEBURGER), not(tagEmpty(DelightfulItemTags.CHEESE)));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.MARSHMALLOW_STICK.get())
 			.requires(DelightfulItemTags.MARSHMALLOW)
 			.requires(Tags.Items.RODS_WOODEN)
