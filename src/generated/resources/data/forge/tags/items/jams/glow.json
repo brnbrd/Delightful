@@ -12,6 +12,14 @@
     {
       "id": "brewinandchewin:glow_berry_marmalade",
       "required": false
+    },
+    {
+      "id": "fruitsdelight:glowberry_jelly",
+      "required": false
+    },
+    {
+      "id": "hearthandharvest:glow_berry_jam",
+      "required": false
     }
   ]
 }

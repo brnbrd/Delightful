@@ -57,6 +57,28 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.add(DelightfulItems.SOURCE_BERRY_COOKIE_TILE_WALL.get());
 
 		// Farmer's Delight
+		this.tag(ModTags.Items.SNACKS) // multi-ingredient food which don't need a container
+			.add(DelightfulItems.CHEESEBURGER.get())
+			.add(DelightfulItems.CHUNKWICH.get())
+			.add(DelightfulItems.CRAB_RANGOON.get())
+			.add(DelightfulItems.DELUXE_CHEESEBURGER.get())
+			.add(DelightfulItems.NUT_BUTTER_AND_JAM_SANDWICH.get())
+			.add(DelightfulItems.ROASTED_ACORN.get())
+			.add(DelightfulItems.ROE_ROLL.get())
+			.add(DelightfulItems.ROE_BLINI.get())
+			.add(DelightfulItems.SALMON_AND_ROE_BLINI.get())
+			.add(DelightfulItems.WRAPPED_CANTALOUPE.get());
+		this.tag(ModTags.Items.SWEETS) // sweet prepared foods, usually desserts
+			.add(DelightfulItems.CANTALOUPE_BREAD.get())
+			.add(DelightfulItems.CANTALOUPE_POPSICLE.get())
+			.add(DelightfulItems.CHORUS_MUFFIN.get())
+			.add(DelightfulItems.COOKED_MARSHMALLOW_STICK.get())
+			.add(DelightfulItems.GLOW_JAM_COOKIE.get())
+			.add(DelightfulItems.HONEY_GLAZED_WALNUT.get())
+			.add(DelightfulItems.MARSHMALLOW_STICK.get())
+			.add(DelightfulItems.ROCK_CANDY.get())
+			.add(DelightfulItems.SMORE.get())
+			.add(DelightfulItems.SOURCE_BERRY_COOKIE.get());
 		this.tag(ModTags.Items.MEALS)
 			.add(DelightfulItems.CACTUS_CHILI.get())
 			.add(DelightfulItems.CACTUS_SOUP.get())
@@ -491,7 +513,9 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.add(DelightfulItems.GLOW_JAM_JAR.get())
 			.addOptionalTag(Modid.LOADER.rl("jams/glow_berries"))
 			.addOptionalTag(Modid.LOADER.rl("jams/glow_berry"))
-			.addOptional(BrewinChewinCompat.glowMarmalade);
+			.addOptional(BrewinChewinCompat.glowMarmalade)
+			.addOptional(Modid.FRD.rl("glowberry_jelly"))
+			.addOptional(Modid.HH.rl("glow_berry_jam"));
 		this.tag(DelightfulItemTags.JAMS)
 			.addTag(DelightfulItemTags.JAMS_GLOW)
 			.add(DelightfulItems.JAM_JAR.get())
