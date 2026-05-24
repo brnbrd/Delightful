@@ -67,6 +67,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.add(DelightfulItems.STUFFED_CANTALOUPE.get());
 		this.tag(ModTags.Items.FEASTS)
 			.add(DelightfulItems.STUFFED_CANTALOUPE_BLOCK.get());
+		this.tag(ModTags.Items.PIES).addTag(DelightfulItemTags.COMPAT_PIES);
 		this.tag(DelightfulItemTags.STRAW_PLANTS)
 			.add(Items.GRASS)
 			.add(Items.TALL_GRASS)
