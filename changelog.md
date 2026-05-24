@@ -1,5 +1,13 @@
 # Version History
 
+## 3.8.1
+
+### Updates
+- A
+
+### Fixes
+- B
+
 
 ## 3.8
 
