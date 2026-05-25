@@ -1,6 +1,8 @@
 package net.brnbrd.delightful.common.mixin;
 
 import net.brnbrd.delightful.common.DelightfulConfig;
+import net.brnbrd.delightful.common.events.PieEvents;
+import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -18,7 +20,12 @@ public abstract class PieFoodPropertiesMixin {
 
 	@Inject(method = "getFoodProperties", at = @At("TAIL"), cancellable = true)
 	private void foodProperties(CallbackInfoReturnable<FoodProperties> cir) {
-		if (this.getDefaultInstance().is(ModTags.Items.PIES) && DelightfulConfig.PIE_EDIBLE_MIXIN.get()) {
+		final ItemStack stack = getDefaultInstance();
+		if (
+			stack.is(ModTags.Items.PIES) &&
+			DelightfulConfig.PIE_EDIBLE_MIXIN.get() &&
+			(!stack.is(DelightfulItemTags.COMPAT_PIES) || PieEvents.isCompatPie(stack))
+		) {
 			cir.setReturnValue(null);
 		}
 	}

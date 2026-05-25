@@ -59,6 +59,9 @@ public class DelightfulConfig {
 		items.stream()
 				.filter(BAKED_GOODS::contains)
 				.forEach(knife -> put(builder, stuff, knife, !DEFAULT_DISABLED.contains(knife)));
+		PIE_EDIBLE_MIXIN = builder
+			.comment("Use a mixin to remove food properties from pie items (tag #farmersdelight:pies)?")
+			.define("pie_edible_mixin", true);
 		builder.pop();
 		builder.push("Registry & Recipes");
 		items.stream()
@@ -80,9 +83,6 @@ public class DelightfulConfig {
 		MELON_JUICING = builder
 				.comment("Allow sliced melons to be juiced in-world (right click)")
 				.define("melon_juicing", true);
-		PIE_EDIBLE_MIXIN = builder
-			.comment("Use a mixin to remove food properties from pie items (tag #farmersdelight:pies)?")
-			.define("pie_edible_mixin", true);
 		builder.pop();
 	}
 

@@ -192,6 +192,8 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		addItemTag(DelightfulItemTags.COOKED_NUTS, "Cooked Nuts");
 		addItemTag(DelightfulItemTags.COOKED_CRAB_MEAT, "Cooked Crab Meat");
 		addItemTag(DelightfulItemTags.RAW_CRAB_MEAT, "Raw Crab Meat");
+		addItemTag(DelightfulItemTags.COOKED_VENISON, "Cooked Venison");
+		addItemTag(DelightfulItemTags.RAW_VENISON, "Raw Venison");
 		addItemTag(DelightfulItemTags.FISH_FOOD_SALMON, "Salmon Food");
 		addItemTag(DelightfulItemTags.FISH_FOOD_STURGEON, "Sturgeon Food");
 	}
