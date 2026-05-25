@@ -3,6 +3,8 @@
 ## 3.8.1
 
 ### Updates
+- Wild Salmonberries can now be picked by hand or using Shears
+- Cutting Wild Salmonberries on a Cutting Board now provides 2 Salmonberries
 - Added a mixin to disable food properties on pie items
   - Can be disabled in the config
 

@@ -836,10 +836,10 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.generateAdvancement()
 			.build(finished, ModItems.CHOCOLATE_PIE.getId());
 		CuttingBoardRecipeBuilder.cuttingRecipe(
-			Ingredient.of(DelightfulItems.WILD_SALMONBERRIES.get()),
-			Ingredient.of(CommonTags.Items.TOOLS_KNIVES),
-			DelightfulItems.SALMONBERRIES.get(), 1
-			).addResult(Items.ORANGE_DYE, 1)
+				Ingredient.of(DelightfulItems.WILD_SALMONBERRIES.get()),
+				Ingredient.of(CommonTags.Items.TOOLS_KNIVES),
+				DelightfulItems.SALMONBERRIES.get(), 2
+			).addResultWithChance(Items.ORANGE_DYE, 0.5F)
 			.save(finished, Util.delight("cutting/wild_salmonberries"));
 		CuttingBoardRecipeBuilder.cuttingRecipe(
 			Ingredient.of(Items.DEAD_BUSH),
