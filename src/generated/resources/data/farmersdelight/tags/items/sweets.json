@@ -1,13 +1,22 @@
 {
   "values": [
+    "delightful:baklava_slice",
+    "delightful:blueberry_pie_slice",
     "delightful:cantaloupe_bread",
     "delightful:cantaloupe_popsicle",
     "delightful:chorus_muffin",
+    "delightful:chorus_pie_slice",
     "delightful:cooked_marshmallow_stick",
+    "delightful:gloomgourd_pie_slice",
     "delightful:glow_jam_cookie",
+    "delightful:green_apple_pie_slice",
     "delightful:honey_glazed_walnut",
     "delightful:marshmallow_stick",
+    "delightful:mulberry_pie_slice",
+    "delightful:mutton_pie_slice",
+    "delightful:passion_fruit_tart_slice",
     "delightful:rock_candy",
+    "delightful:salmonberry_pie_slice",
     "delightful:smore",
     "delightful:source_berry_cookie"
   ]

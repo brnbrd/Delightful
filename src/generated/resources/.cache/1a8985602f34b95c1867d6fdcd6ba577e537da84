@@ -1,4 +1,4 @@
-// 1.20.1	2026-05-24T17:01:28.5607165	delightful
+// 1.20.1	2026-05-24T18:56:04.4543738	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -53,7 +53,7 @@ ae26d2f7725b91d3f31ae4445df3ae7c741d7f40 data/farmersdelight/tags/items/meals.js
 dd339329f9fefc3c22d810c461ed6eb0a2bf05ea data/farmersdelight/tags/items/pies.json
 1e6b2f3b494a3c4bd2eaefcfd56d472166700be2 data/farmersdelight/tags/items/snacks.json
 6f93ecf481fdd6945e4e869a3242e5d8351c55d9 data/farmersdelight/tags/items/straw_plants.json
-bdf44fe2f3926f025770182318c0dec62e8916d4 data/farmersdelight/tags/items/sweets.json
+6fab03c34386fe083ff26ada5357cf09714a03fa data/farmersdelight/tags/items/sweets.json
 249447df7c8283e548637a96ebb06b76ea9fdff1 data/farmersdelight/tags/items/tools/knives.json
 46f279b6acd03b06ea14e9f62be7d48e200c002c data/farmersdelight/tags/items/wild_crops.json
 a1edebb3bd4f7f3d7e73d53c915b2fe3203614aa data/forbidden_arcanus/tags/items/draco_arcanus_staff.json

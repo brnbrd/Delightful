@@ -69,14 +69,23 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.add(DelightfulItems.SALMON_AND_ROE_BLINI.get())
 			.add(DelightfulItems.WRAPPED_CANTALOUPE.get());
 		this.tag(ModTags.Items.SWEETS) // sweet prepared foods, usually desserts
+			.add(DelightfulItems.BAKLAVA_SLICE.get())
+			.add(DelightfulItems.BLUEBERRY_PIE_SLICE.get())
 			.add(DelightfulItems.CANTALOUPE_BREAD.get())
 			.add(DelightfulItems.CANTALOUPE_POPSICLE.get())
 			.add(DelightfulItems.CHORUS_MUFFIN.get())
+			.add(DelightfulItems.CHORUS_PIE_SLICE.get())
 			.add(DelightfulItems.COOKED_MARSHMALLOW_STICK.get())
+			.add(DelightfulItems.GLOOMGOURD_PIE_SLICE.get())
 			.add(DelightfulItems.GLOW_JAM_COOKIE.get())
+			.add(DelightfulItems.GREEN_APPLE_PIE_SLICE.get())
 			.add(DelightfulItems.HONEY_GLAZED_WALNUT.get())
 			.add(DelightfulItems.MARSHMALLOW_STICK.get())
+			.add(DelightfulItems.MULBERRY_PIE_SLICE.get())
+			.add(DelightfulItems.MUTTON_PIE_SLICE.get())
+			.add(DelightfulItems.PASSION_FRUIT_TART_SLICE.get())
 			.add(DelightfulItems.ROCK_CANDY.get())
+			.add(DelightfulItems.SALMONBERRY_PIE_SLICE.get())
 			.add(DelightfulItems.SMORE.get())
 			.add(DelightfulItems.SOURCE_BERRY_COOKIE.get());
 		this.tag(ModTags.Items.MEALS)
