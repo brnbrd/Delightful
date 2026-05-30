@@ -27,8 +27,11 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 	@Override
 	protected void addTags(HolderLookup.@NotNull Provider provider) {
 		// Farmer's Delight
-		this.tag(ModTags.Blocks.WILD_CROPS)
-			.add(DelightfulBlocks.WILD_SALMONBERRIES.get());
+		this.tag(ModTags.Blocks.WILD_CROPS).add(DelightfulBlocks.WILD_SALMONBERRIES.get());
+		this.tag(DelightfulBlockTags.STONE_CABINETS)
+			.add(DelightfulBlocks.BASALT_CABINET.get())
+			.add(DelightfulBlocks.QUARTZ_CABINET.get());
+		this.tag(ModTags.Blocks.CABINETS).addTag(DelightfulBlockTags.STONE_CABINETS);
 
 		// Delightful
 		this.tag(DelightfulBlockTags.DROPS_STRAW)

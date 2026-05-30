@@ -6,6 +6,7 @@ import net.brnbrd.delightful.common.block.DelightfulBlocks;
 import net.brnbrd.delightful.common.fluid.DelightfulFluids;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.knife.DKnifeItem;
+import net.brnbrd.delightful.data.tags.DelightfulBlockTags;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.TagKey;
@@ -169,6 +170,10 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		addItemTag(DelightfulItemTags.PATTIES, "Patty");
 		addItemTag(DelightfulItemTags.VEGETARIAN_PATTIES, "Vegetarian Patty");
 
+		// Farmer's Delight
+		addBlockTag(DelightfulBlockTags.STONE_CABINETS, "Stone Cabinets");
+		addItemTag(DelightfulItemTags.STONE_CABINETS, "Stone Cabinets");
+
 		// Minecraft
 		addItemTag(DelightfulItemTags.FLOWERS_AZALEA, "Azalea Flowers");
 		addItemTag(DelightfulItemTags.FLOWERS_LAVENDER, "Lavender Flowers");
@@ -255,6 +260,15 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 	public void addItemTag(@NotNull TagKey<?> tag, @NotNull String translation) {
 		add(
 			"tag.item." + tag.location()
+				.toLanguageKey()
+				.replace("/", "."),
+			translation
+		);
+	}
+
+	public void addBlockTag(@NotNull TagKey<?> tag, @NotNull String translation) {
+		add(
+			"tag.block." + tag.location()
 				.toLanguageKey()
 				.replace("/", "."),
 			translation

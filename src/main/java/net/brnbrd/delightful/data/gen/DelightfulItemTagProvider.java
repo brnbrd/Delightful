@@ -106,11 +106,11 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.UA.rl("beachgrass"))
 			.addOptional(Modid.UA.rl("tall_beachgrass"));
 		this.tag(DelightfulItemTags.BARKS).add(ModItems.TREE_BARK.get());
+		this.tag(ModTags.Items.WILD_CROPS).add(DelightfulItems.WILD_SALMONBERRIES.get());
 		this.tag(DelightfulItemTags.STONE_CABINETS)
 			.add(DelightfulItems.BASALT_CABINET.get())
 			.add(DelightfulItems.QUARTZ_CABINET.get());
 		this.tag(ModTags.Items.CABINETS).addTag(DelightfulItemTags.STONE_CABINETS);
-		this.tag(ModTags.Items.WILD_CROPS).add(DelightfulItems.WILD_SALMONBERRIES.get());
 
 		// Knives
 		var FDknives = this.tag(ModTags.Items.KNIVES);
