@@ -99,13 +99,6 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(ModTags.Items.FEASTS)
 			.add(DelightfulItems.STUFFED_CANTALOUPE_BLOCK.get());
 		this.tag(ModTags.Items.PIES).addTag(DelightfulItemTags.COMPAT_PIES);
-		this.tag(DelightfulItemTags.STRAW_PLANTS)
-			.add(Items.GRASS)
-			.add(Items.TALL_GRASS)
-			.add(ModItems.SANDY_SHRUB.get())
-			.addOptional(Modid.UA.rl("beachgrass"))
-			.addOptional(Modid.UA.rl("tall_beachgrass"));
-		this.tag(DelightfulItemTags.BARKS).add(ModItems.TREE_BARK.get());
 		this.tag(ModTags.Items.WILD_CROPS).add(DelightfulItems.WILD_SALMONBERRIES.get());
 		this.tag(DelightfulItemTags.STONE_CABINETS)
 			.add(DelightfulItems.BASALT_CABINET.get())
@@ -1065,7 +1058,6 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.SPECIAL_FOOD)
 			.addTag(ModTags.Items.PIES)
 			.add(DelightfulItems.BAKLAVA.get());
-
 	}
 
 	@Override

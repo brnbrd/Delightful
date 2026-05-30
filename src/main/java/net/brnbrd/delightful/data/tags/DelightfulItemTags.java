@@ -29,8 +29,6 @@ public class DelightfulItemTags {
 
 	// Farmers Delight
 	public static final TagKey<Item> STONE_CABINETS = Modid.FD.it("cabinets/stone");
-	public static final TagKey<Item> STRAW_PLANTS = Modid.FD.it("straw_plants");
-	public static final TagKey<Item> BARKS = Modid.FD.it("barks");
 
 	// Fruits
 	public static final TagKey<Item> FRUITS = forge("fruits");
