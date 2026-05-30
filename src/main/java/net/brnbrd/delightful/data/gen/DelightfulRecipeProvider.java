@@ -157,7 +157,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.requires(CommonTags.Items.BREAD)
 			.requires(ModItems.BEEF_PATTY.get())
 			.requires(DelightfulItemTags.CHEESE)
-			.requires(CommonTags.Items.SALAD_INGREDIENTS_CABBAGE)
+			.requires(CommonTags.Items.SALAD_INGREDIENTS)
 			.requires(CommonTags.Items.CROPS_TOMATO)
 			.requires(CommonTags.Items.CROPS_ONION)
 			.unlockedBy("has_cheese", has(DelightfulItemTags.CHEESE)),
@@ -166,7 +166,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.requires(CommonTags.Items.BREAD)
 			.requires(ModItems.BEEF_PATTY.get())
 			.requires(CommonTags.Items.MILK)
-			.requires(CommonTags.Items.SALAD_INGREDIENTS_CABBAGE)
+			.requires(CommonTags.Items.SALAD_INGREDIENTS)
 			.requires(CommonTags.Items.CROPS_TOMATO)
 			.requires(CommonTags.Items.CROPS_ONION)
 			.unlockedBy("has_beef_patty", has(ModItems.BEEF_PATTY.get())),
@@ -175,7 +175,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.requires(DelightfulItemTags.BURGER_BUN)
 			.requires(ModItems.BEEF_PATTY.get())
 			.requires(DelightfulItemTags.CHEESE)
-			.requires(CommonTags.Items.SALAD_INGREDIENTS_CABBAGE)
+			.requires(CommonTags.Items.SALAD_INGREDIENTS)
 			.requires(CommonTags.Items.CROPS_TOMATO)
 			.requires(CommonTags.Items.CROPS_ONION)
 			.unlockedBy("has_beef_patty", has(ModItems.BEEF_PATTY.get())),
@@ -192,7 +192,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.requires(ModItems.BEEF_PATTY.get())
 			.requires(DelightfulItemTags.CHEESE)
 			.requires(ModItems.COOKED_BACON.get())
-			.requires(CommonTags.Items.SALAD_INGREDIENTS_CABBAGE)
+			.requires(CommonTags.Items.SALAD_INGREDIENTS)
 			.requires(CommonTags.Items.CROPS_TOMATO)
 			.requires(CommonTags.Items.CROPS_ONION)
 			.unlockedBy("has_bacon", has(ModItems.COOKED_BACON.get())),
@@ -204,7 +204,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.requires(ModItems.BEEF_PATTY.get())
 			.requires(CommonTags.Items.MILK)
 			.requires(ModItems.COOKED_BACON.get())
-			.requires(CommonTags.Items.SALAD_INGREDIENTS_CABBAGE)
+			.requires(CommonTags.Items.SALAD_INGREDIENTS)
 			.requires(CommonTags.Items.CROPS_TOMATO)
 			.requires(CommonTags.Items.CROPS_ONION)
 			.unlockedBy("has_bacon", has(ModItems.COOKED_BACON.get())),
@@ -216,7 +216,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.requires(ModItems.BEEF_PATTY.get())
 			.requires(DelightfulItemTags.CHEESE)
 			.requires(ModItems.COOKED_BACON.get())
-			.requires(CommonTags.Items.SALAD_INGREDIENTS_CABBAGE)
+			.requires(CommonTags.Items.SALAD_INGREDIENTS)
 			.requires(CommonTags.Items.CROPS_TOMATO)
 			.requires(CommonTags.Items.CROPS_ONION)
 			.unlockedBy("has_bacon", has(ModItems.COOKED_BACON.get())),

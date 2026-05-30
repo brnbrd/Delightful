@@ -10,6 +10,7 @@
 - Mini Melons now only spawn in biome `minecraft:plains`
 - Cantaloupes now only spawn in biome `minecraft:beach` (and `biomesoplenty:tropics`)
 - Gummy crafting recipes no longer require [Collector's Reap](https://www.curseforge.com/minecraft/mc-mods/collectors-reap)
+- Burger recipes now accept all Salad Ingredients
 
 ### Fixes
 - Removed some recipe overrides (fixes [#153](https://github.com/brnbrd/Delightful/issues/153))

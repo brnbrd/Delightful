@@ -400,7 +400,7 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
 [[dependencies.delightful]]
     modId="culturaldelights"
     mandatory=false
-    versionRange="[0.16.5,)"
+    versionRange="[0.16.6,)"
     ordering="AFTER"
     side="BOTH"
 
