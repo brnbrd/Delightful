@@ -3,10 +3,13 @@
 ## 3.8.1
 
 ### Updates
-- Wild Salmonberries can now be picked by hand or using Shears
+- Wild Salmonberries can now be picked by hand or using Shears (closes [#147](https://github.com/brnbrd/Delightful/issues/147))
 - Cutting Wild Salmonberries on a Cutting Board now provides 2 Salmonberries
 - Added a mixin to disable food properties on pie items
-  - Can be disabled in the config
+  - Can be toggled in the config
+
+### Fixes
+- Removed some recipe overrides (fixes [#153](https://github.com/brnbrd/Delightful/issues/153))
 
 
 ## 3.8
