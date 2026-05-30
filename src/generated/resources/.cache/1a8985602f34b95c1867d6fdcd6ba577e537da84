@@ -1,4 +1,4 @@
-// 1.20.1	2026-05-25T11:19:57.0433093	delightful
+// 1.20.1	2026-05-30T09:48:15.7108642	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -40,7 +40,6 @@ c136db00204949ac06e5f146923a591bc2151c58 data/delightful/tags/items/patties.json
 2ff5cfe0c5823c3c18040d2127a488836e4c4908 data/delightful/tags/items/raw_venison_chop_compat.json
 6c2f8fbf4dd74017f049b2ef88a10e285aae2c0c data/delightful/tags/items/raw_venison_compat.json
 2e9b30605537e40a9badb5ca15c86f34a0da44a3 data/delightful/tags/items/roasted_marshmallows.json
-45616be5848ba65be6a73acb2e53efd090d2ad63 data/delightful/tags/items/rose.json
 8a40f7dd6d54c3af598722c99d0c864729ea8dd8 data/delightful/tags/items/rotten.json
 d53bd21229e9bf9cd03b3c3dea2ebbb08dfede36 data/delightful/tags/items/spite.json
 60ff347ef51fc95e8d4b57277c757e4d22b240c1 data/diet/tags/items/special_food.json

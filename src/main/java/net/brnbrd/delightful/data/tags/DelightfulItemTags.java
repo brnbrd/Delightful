@@ -17,7 +17,6 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> FIRE_KNIVES = d("fire_knives");
 	public static final TagKey<Item> ROTTEN = d("rotten");
 	public static final TagKey<Item> SPITE = d("spite");
-	public static final TagKey<Item> ROSE = d("rose");
 	public static final TagKey<Item> RAW_VENISON_COMPAT = d("raw_venison_compat");
 	public static final TagKey<Item> RAW_VENISON_CHOP_COMPAT = d("raw_venison_chop_compat");
 	public static final TagKey<Item> COOKED_VENISON_COMPAT = d("cooked_venison_compat");
