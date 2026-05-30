@@ -9,6 +9,7 @@
   - Can be toggled in the config
 - Mini Melons now only spawn in biome `minecraft:plains`
 - Cantaloupes now only spawn in biome `minecraft:beach` (and `biomesoplenty:tropics`)
+- Gummy crafting recipes no longer require Collector's Reap
 
 ### Fixes
 - Removed some recipe overrides (fixes [#153](https://github.com/brnbrd/Delightful/issues/153))

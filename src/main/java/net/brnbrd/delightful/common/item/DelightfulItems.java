@@ -226,13 +226,6 @@ public class DelightfulItems {
 		() -> new PlaceableItem(DelightfulBlocks.STUFFED_CANTALOUPE_BLOCK.get(), ModItems.basicItem().stacksTo(1)));
 	public static final RegistryObject<Item> STUFFED_CANTALOUPE = registerConsumable("stuffed_cantaloupe", Nutrition.STUFFED_CANTALOUPE, Items.BOWL, true, false);
 
-	// Roe
-	public static final RegistryObject<Item> STURGEON_ROE = registerItem("sturgeon_roe", () ->
-		Modid.LFL.loaded() ?
-		LetFishLoveCompat.sturgeonRoeItem() :
-		new CompatItem(new Item.Properties(), Modid.LFL)
-	);
-
 	// Gummies
 	public static final RegistryObject<Item> SALMONBERRY_GUMMY = registerItem("salmonberry_gummy", () ->
 		new GummyItem((new Item.Properties()).food(Nutrition.SALMONBERRY_GUMMY)));
@@ -242,6 +235,13 @@ public class DelightfulItems {
 		new GummyItem((new Item.Properties()).food(Nutrition.CANTALOUPE_GUMMY)));
 	public static final RegistryObject<Item> SOURCE_BERRY_GUMMY = registerItem("source_berry_gummy", () ->
 		new SourceBerryGummyItem((new Item.Properties()).food(ArsNouveauCompat.SOURCE_BERRY_GUMMY)));
+
+	// Roe
+	public static final RegistryObject<Item> STURGEON_ROE = registerItem("sturgeon_roe", () ->
+		Modid.LFL.loaded() ?
+		LetFishLoveCompat.sturgeonRoeItem() :
+		new CompatItem(new Item.Properties(), Modid.LFL)
+	);
 
 	// Debug Items
 	public static final RegistryObject<Item> DEBUG_GLOOMGOURD_PIE = registerItem("debug_gloomgourd_pie",

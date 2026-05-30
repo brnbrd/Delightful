@@ -793,21 +793,21 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.addIngredient(Items.HONEY_BOTTLE)
 			.addIngredient(Items.KELP)
 			.unlockedBy("has_salmonberries", has(DelightfulItemTags.FRUITS_SALMONBERRIES)),
-			"gummy/salmonberries", finished, modLoaded(Modid.CR.get()), enabled(DelightfulItems.SALMONBERRIES), enabled(DelightfulItems.SALMONBERRY_GUMMY));
+			"gummy/salmonberries", finished, enabled(DelightfulItems.SALMONBERRIES), enabled(DelightfulItems.SALMONBERRY_GUMMY));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(DelightfulItems.MATCHA_GUMMY.get(), 1, 200, 1F)
 			.addIngredient(DelightfulItemTags.MATCHA)
 			.addIngredient(Items.SUGAR)
 			.addIngredient(Items.HONEY_BOTTLE)
 			.addIngredient(Items.KELP)
 			.unlockedBy("has_matcha", has(DelightfulItemTags.MATCHA)),
-			"gummy/matcha", finished, modLoaded(Modid.CR.get()), enabled(DelightfulItems.MATCHA), enabled(DelightfulItems.MATCHA_GUMMY));
+			"gummy/matcha", finished, enabled(DelightfulItems.MATCHA), enabled(DelightfulItems.MATCHA_GUMMY));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(DelightfulItems.CANTALOUPE_GUMMY.get(), 1, 200, 1F)
 			.addIngredient(DelightfulItemTags.FRUITS_CANTALOUPE)
 			.addIngredient(Items.SUGAR)
 			.addIngredient(Items.HONEY_BOTTLE)
 			.addIngredient(Items.KELP)
 			.unlockedBy("has_cantaloupe", has(DelightfulItemTags.FRUITS_CANTALOUPE)),
-			"gummy/cantaloupe", finished, modLoaded(Modid.CR.get()), enabled(DelightfulItems.CANTALOUPE), enabled(DelightfulItems.CANTALOUPE_GUMMY));
+			"gummy/cantaloupe", finished, enabled(DelightfulItems.CANTALOUPE), enabled(DelightfulItems.CANTALOUPE_GUMMY));
 
 		// Unwrappables
 		ConditionalRecipe.builder()
