@@ -1,0 +1,96 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "rusticdelight:chocolate_pancakes"
+        },
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:chocolate"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:bowl"
+        },
+        "cookingtime": 400,
+        "experience": 2.0,
+        "ingredients": [
+          {
+            "tag": "forge:batter"
+          },
+          {
+            "tag": "forge:milk"
+          },
+          {
+            "item": "minecraft:cocoa_beans"
+          },
+          {
+            "item": "minecraft:cocoa_beans"
+          },
+          {
+            "item": "minecraft:cocoa_beans"
+          },
+          {
+            "item": "minecraft:cocoa_beans"
+          }
+        ],
+        "recipe_book_tab": "misc",
+        "result": {
+          "item": "rusticdelight:chocolate_pancakes"
+        }
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "rusticdelight:chocolate_pancakes"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:chocolate"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:bowl"
+        },
+        "cookingtime": 400,
+        "experience": 2.0,
+        "ingredients": [
+          {
+            "tag": "forge:batter"
+          },
+          {
+            "tag": "forge:milk"
+          },
+          {
+            "tag": "forge:chocolate"
+          },
+          {
+            "tag": "forge:chocolate"
+          },
+          {
+            "tag": "forge:chocolate"
+          },
+          {
+            "tag": "forge:chocolate"
+          }
+        ],
+        "recipe_book_tab": "misc",
+        "result": {
+          "item": "rusticdelight:chocolate_pancakes"
+        }
+      }
+    }
+  ]
+}

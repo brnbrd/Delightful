@@ -1,0 +1,43 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "hearthandharvest:batter"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "tag": "forge:milk"
+          },
+          {
+            "tag": "forge:eggs"
+          },
+          {
+            "item": "minecraft:sugar"
+          },
+          {
+            "tag": "forge:grain/wheat"
+          },
+          {
+            "tag": "forge:grain/wheat"
+          },
+          {
+            "item": "minecraft:bowl"
+          },
+          {
+            "item": "minecraft:bowl"
+          }
+        ],
+        "result": {
+          "item": "hearthandharvest:batter",
+          "count": 2
+        }
+      }
+    }
+  ]
+}

@@ -445,9 +445,18 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.CORN.rl("cornbread"))
 			.addOptional(Modid.HH.rl("cornbread"));
 		this.tag(DelightfulItemTags.BURGER_BUN).addOptional(Modid.SAS.rl("burger_bun"));
+		this.tag(DelightfulItemTags.BATTER)
+			.addOptional(Modid.RUST.rl("batter"))
+			.addOptional(Modid.HH.rl("batter"));
 		this.tag(DelightfulItemTags.PANCAKES)
 			.addOptional(Modid.SUP.rl("pancake"))
-			.addOptional(Modid.AUT.rl("pancake"));
+			.addOptional(Modid.AUT.rl("pancake"))
+			.addOptional(Modid.RUST.rl("pancake"))
+			.addOptional(Modid.RUST.rl("honey_pancake"))
+			.addOptional(Modid.RUST.rl("chocolate_pancake"))
+			.addOptional(Modid.RUST.rl("cherry_blossom_pancake"))
+			.addOptional(Modid.RUST.rl("vegetable_pancake"))
+			.addOptional(Modid.RUST.rl("pumpkin_pancake"));
 		this.tag(CommonTags.Items.BREAD)
 			.addTag(DelightfulItemTags.CORNBREAD)
 			.addTag(DelightfulItemTags.BURGER_BUN);
@@ -740,6 +749,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.SM.rl("piranha_tooth"))
 			.addOptional(Util.rl("alexscaves", "heavy_bone"));
 		this.tag(DelightfulItemTags.SYRUP_BOTTLE)
+			.addOptionalTag(Modid.RUST.rl("syrup"))
 			.addOptional(Modid.AUT.rl("syrup_bottle"))
 			.addOptional(Modid.HH.rl("syrup_bottle"))
 			.addOptional(Modid.TH.rl("syrup_bottle"))

@@ -113,6 +113,7 @@ public enum Modid {
 	RC("rootsclassic"),
 	RESP("respiteful"),
 	RL("rottenleather"),
+	RUST("rusticdelight"),
 	S("salt"),
 	SAS("some_assembly_required"),
 	SE("seeds"),

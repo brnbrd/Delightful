@@ -4,6 +4,10 @@
     {
       "conditions": [
         {
+          "type": "forge:item_exists",
+          "item": "rusticdelight:pumpkin_pancakes"
+        },
+        {
           "type": "forge:false"
         }
       ],

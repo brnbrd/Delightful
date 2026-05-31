@@ -1,0 +1,39 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "rusticdelight:fried_chicken"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:bowl"
+        },
+        "cookingtime": 200,
+        "experience": 1.0,
+        "ingredients": [
+          {
+            "tag": "rusticdelight:cooking_oil"
+          },
+          {
+            "tag": "forge:batter"
+          },
+          {
+            "tag": "forge:raw_chicken"
+          },
+          {
+            "tag": "forge:vegetables/onion"
+          }
+        ],
+        "recipe_book_tab": "meals",
+        "result": {
+          "item": "rusticdelight:fried_chicken"
+        }
+      }
+    }
+  ]
+}

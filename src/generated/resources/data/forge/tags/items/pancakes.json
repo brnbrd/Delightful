@@ -7,6 +7,30 @@
     {
       "id": "autumnity:pancake",
       "required": false
+    },
+    {
+      "id": "rusticdelight:pancake",
+      "required": false
+    },
+    {
+      "id": "rusticdelight:honey_pancake",
+      "required": false
+    },
+    {
+      "id": "rusticdelight:chocolate_pancake",
+      "required": false
+    },
+    {
+      "id": "rusticdelight:cherry_blossom_pancake",
+      "required": false
+    },
+    {
+      "id": "rusticdelight:vegetable_pancake",
+      "required": false
+    },
+    {
+      "id": "rusticdelight:pumpkin_pancake",
+      "required": false
     }
   ]
 }

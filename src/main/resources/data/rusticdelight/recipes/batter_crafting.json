@@ -1,0 +1,40 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "rusticdelight:batter"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "tag": "forge:milk"
+          },
+          {
+            "tag": "forge:eggs"
+          },
+          {
+            "tag": "forge:grain/wheat"
+          },
+          {
+            "tag": "forge:grain/wheat"
+          },
+          {
+            "item": "minecraft:bowl"
+          },
+          {
+            "item": "minecraft:bowl"
+          }
+        ],
+        "result": {
+          "item": "rusticdelight:batter",
+          "count": 2
+        }
+      }
+    }
+  ]
+}

@@ -5,7 +5,7 @@
       "conditions": [
         {
           "type": "forge:item_exists",
-          "item": "supplementaries:pancake"
+          "item": "autumnity:pancake"
         },
         {
           "type": "forge:tag_empty",
@@ -13,12 +13,6 @@
         }
       ],
       "recipe": {
-        "global_conditions": [
-          {
-            "type": "supplementaries:flag",
-            "flag": "pancake"
-          }
-        ],
         "type": "farmersdelight:cooking",
         "cookingtime": 400,
         "experience": 2.0,
@@ -33,7 +27,7 @@
             "tag": "forge:grain/wheat"
           },
           {
-            "tag": "forge:grain/wheat"
+            "tag": "forge:syrup"
           },
           {
             "item": "minecraft:sugar"
@@ -44,7 +38,7 @@
         ],
         "recipe_book_tab": "misc",
         "result": {
-          "item": "supplementaries:pancake",
+          "item": "autumnity:pancake",
           "count": 6
         }
       }
