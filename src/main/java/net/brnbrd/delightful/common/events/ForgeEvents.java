@@ -41,29 +41,29 @@ import vectorwing.farmersdelight.common.registry.ModItems;
 import vectorwing.farmersdelight.common.tag.ModTags;
 
 public class ForgeEvents {
+	private final ResourceLocation crystalline = Util.rl(Modid.EP, "crystalline_knife");
 	@SubscribeEvent
 	void onMissingMappings(MissingMappingsEvent e) {
+		// Item
 		for (var map : e.getMappings(Registries.ITEM, Delightful.MODID)) {
-			final ResourceLocation crystalline = Util.rl(Modid.EP, "crystalline_knife");
 			if (checkRoeMap(map)) {
 				map.remap(DelightfulItems.AGED_ROE.get());
 			} else if (map.getKey().getPath().equals("crystalline_knife") && Util.itemExists(crystalline)) {
 				map.remap(Util.item(crystalline));
+			} else if (map.getKey().getPath().equals("pumpkin_pie_slice")) {
+				map.remap(ModItems.PUMPKIN_PIE_SLICE.get());
 			}
 		}
+		// Block
 		for (var map : e.getMappings(Registries.BLOCK, Delightful.MODID)) {
 			if (map.getKey().getPath().equals("pumpkin_pie")) {
 				map.remap(ModBlocks.PUMPKIN_PIE.get());
 			}
 		}
+		// Fluid
 		e.getMappings(Registries.FLUID, Delightful.MODID).stream()
 			.filter(this::checkRoeMap)
 			.forEach(map -> map.remap(DelightfulFluids.AGED_ROE.get()));
-		for (var map : e.getMappings(Registries.ITEM, Delightful.MODID)) {
-			if (map.getKey().getPath().equals("pumpkin_pie_slice")) {
-				map.remap(ModItems.PUMPKIN_PIE_SLICE.get());
-			}
-		}
 	}
 
 	private boolean checkRoeMap(final MissingMappingsEvent.Mapping<?> mapping) {

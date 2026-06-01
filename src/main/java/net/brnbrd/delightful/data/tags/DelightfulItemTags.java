@@ -17,7 +17,6 @@ public class DelightfulItemTags {
 	public static final TagKey<Item> FIRE_KNIVES = d("fire_knives");
 	public static final TagKey<Item> ROTTEN = d("rotten");
 	public static final TagKey<Item> SPITE = d("spite");
-	public static final TagKey<Item> ROSE = d("rose");
 	public static final TagKey<Item> RAW_VENISON_COMPAT = d("raw_venison_compat");
 	public static final TagKey<Item> RAW_VENISON_CHOP_COMPAT = d("raw_venison_chop_compat");
 	public static final TagKey<Item> COOKED_VENISON_COMPAT = d("cooked_venison_compat");
@@ -30,8 +29,6 @@ public class DelightfulItemTags {
 
 	// Farmers Delight
 	public static final TagKey<Item> STONE_CABINETS = Modid.FD.it("cabinets/stone");
-	public static final TagKey<Item> STRAW_PLANTS = Modid.FD.it("straw_plants");
-	public static final TagKey<Item> BARKS = Modid.FD.it("barks");
 
 	// Fruits
 	public static final TagKey<Item> FRUITS = forge("fruits");
@@ -250,6 +247,9 @@ public class DelightfulItemTags {
 		"fish_food/minecraft/salmon");
 	public static final TagKey<Item> FISH_FOOD_STURGEON = Util.it(Modid.LFL.get(),
 		"fish_food/" + Modid.TIDE.get() + "/sturgeon");
+
+	// Diet
+	public static final TagKey<Item> SPECIAL_FOOD = Modid.DIET.it("special_food");
 
 	public static TagKey<Item> forge(@NotNull String name) {
 		return Modid.LOADER.it(name);

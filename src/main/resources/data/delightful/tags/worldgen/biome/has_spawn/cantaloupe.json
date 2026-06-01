@@ -1,5 +1,13 @@
 {
   "values": [
-    "#minecraft:is_beach"
+    "minecraft:beach",
+    {
+      "id": "biomesoplenty:tropics",
+      "required": false
+    },
+    {
+      "id": "biomesoplenty:dune_beach",
+      "required": false
+    }
   ]
 }

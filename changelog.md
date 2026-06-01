@@ -1,5 +1,21 @@
 # Version History
 
+## 3.8.1
+
+### Updates
+- Wild Salmonberries can now be picked by hand or using Shears (closes [#147](https://github.com/brnbrd/Delightful/issues/147))
+- Cutting Wild Salmonberries on a Cutting Board now provides 2 Salmonberries
+- Added a mixin to disable food properties on pie items
+  - Can be toggled in the config
+- Mini Melons now only spawn in biome `minecraft:plains`
+- Cantaloupes now only spawn in biome `minecraft:beach` (and `biomesoplenty:tropics`)
+- Gummy crafting recipes no longer require [Collector's Reap](https://www.curseforge.com/minecraft/mc-mods/collectors-reap)
+- Burger recipes now accept all Salad Ingredients
+
+### Fixes
+- Removed some recipe overrides (fixes [#153](https://github.com/brnbrd/Delightful/issues/153))
+- Fixed feature spawning (closes [#152](https://github.com/brnbrd/Delightful/issues/152))
+
 
 ## 3.8
 

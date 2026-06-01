@@ -6,6 +6,7 @@ import net.brnbrd.delightful.compat.Modid;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
+import vectorwing.farmersdelight.FarmersDelight;
 import org.jetbrains.annotations.NotNull;
 
 public class DelightfulBlockTags {
@@ -27,6 +28,9 @@ public class DelightfulBlockTags {
 	public static final TagKey<Block> STORAGE_BLOCKS_GREEN_APPLE = forge("storage_blocks/green_apple");
 	public static final TagKey<Block> STORAGE_BLOCKS_YUCCA_FRUIT = forge("storage_blocks/yucca_fruit");
 	public static final TagKey<Block> STORAGE_BLOCKS_BAOBAB_FRUIT = forge("storage_blocks/baobab_fruit");
+
+	// Farmer's Delight
+	public static final TagKey<Block> STONE_CABINETS = bind(FarmersDelight.MODID, "cabinets/stone");
 
 	// Let Fish Love
 	public static final TagKey<Block> FISH_ROE_STURGEON = bind(Modid.LFL.get(),

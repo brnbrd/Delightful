@@ -142,10 +142,10 @@ public class Util {
 		return with(before, addition, 1);
 	}
 
-	public static boolean itemExists(ResourceLocation location) {
+	public static boolean itemExists(final ResourceLocation location) {
 		final String modid = location.getNamespace();
 		return (
-			(modid.equals(Delightful.MODID) || Mods.stringLoaded(location.getNamespace())) &&
+			(modid.equals(Delightful.MODID) || Mods.stringLoaded(modid)) &&
 			ForgeRegistries.ITEMS.containsKey(location)
 		);
 	}

@@ -157,7 +157,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.requires(CommonTags.Items.BREAD)
 			.requires(ModItems.BEEF_PATTY.get())
 			.requires(DelightfulItemTags.CHEESE)
-			.requires(CommonTags.Items.SALAD_INGREDIENTS_CABBAGE)
+			.requires(CommonTags.Items.SALAD_INGREDIENTS)
 			.requires(CommonTags.Items.CROPS_TOMATO)
 			.requires(CommonTags.Items.CROPS_ONION)
 			.unlockedBy("has_cheese", has(DelightfulItemTags.CHEESE)),
@@ -166,7 +166,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.requires(CommonTags.Items.BREAD)
 			.requires(ModItems.BEEF_PATTY.get())
 			.requires(CommonTags.Items.MILK)
-			.requires(CommonTags.Items.SALAD_INGREDIENTS_CABBAGE)
+			.requires(CommonTags.Items.SALAD_INGREDIENTS)
 			.requires(CommonTags.Items.CROPS_TOMATO)
 			.requires(CommonTags.Items.CROPS_ONION)
 			.unlockedBy("has_beef_patty", has(ModItems.BEEF_PATTY.get())),
@@ -175,7 +175,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.requires(DelightfulItemTags.BURGER_BUN)
 			.requires(ModItems.BEEF_PATTY.get())
 			.requires(DelightfulItemTags.CHEESE)
-			.requires(CommonTags.Items.SALAD_INGREDIENTS_CABBAGE)
+			.requires(CommonTags.Items.SALAD_INGREDIENTS)
 			.requires(CommonTags.Items.CROPS_TOMATO)
 			.requires(CommonTags.Items.CROPS_ONION)
 			.unlockedBy("has_beef_patty", has(ModItems.BEEF_PATTY.get())),
@@ -192,7 +192,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.requires(ModItems.BEEF_PATTY.get())
 			.requires(DelightfulItemTags.CHEESE)
 			.requires(ModItems.COOKED_BACON.get())
-			.requires(CommonTags.Items.SALAD_INGREDIENTS_CABBAGE)
+			.requires(CommonTags.Items.SALAD_INGREDIENTS)
 			.requires(CommonTags.Items.CROPS_TOMATO)
 			.requires(CommonTags.Items.CROPS_ONION)
 			.unlockedBy("has_bacon", has(ModItems.COOKED_BACON.get())),
@@ -204,7 +204,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.requires(ModItems.BEEF_PATTY.get())
 			.requires(CommonTags.Items.MILK)
 			.requires(ModItems.COOKED_BACON.get())
-			.requires(CommonTags.Items.SALAD_INGREDIENTS_CABBAGE)
+			.requires(CommonTags.Items.SALAD_INGREDIENTS)
 			.requires(CommonTags.Items.CROPS_TOMATO)
 			.requires(CommonTags.Items.CROPS_ONION)
 			.unlockedBy("has_bacon", has(ModItems.COOKED_BACON.get())),
@@ -216,7 +216,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.requires(ModItems.BEEF_PATTY.get())
 			.requires(DelightfulItemTags.CHEESE)
 			.requires(ModItems.COOKED_BACON.get())
-			.requires(CommonTags.Items.SALAD_INGREDIENTS_CABBAGE)
+			.requires(CommonTags.Items.SALAD_INGREDIENTS)
 			.requires(CommonTags.Items.CROPS_TOMATO)
 			.requires(CommonTags.Items.CROPS_ONION)
 			.unlockedBy("has_bacon", has(ModItems.COOKED_BACON.get())),
@@ -793,21 +793,21 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.addIngredient(Items.HONEY_BOTTLE)
 			.addIngredient(Items.KELP)
 			.unlockedBy("has_salmonberries", has(DelightfulItemTags.FRUITS_SALMONBERRIES)),
-			"gummy/salmonberries", finished, modLoaded(Modid.CR.get()), enabled(DelightfulItems.SALMONBERRIES), enabled(DelightfulItems.SALMONBERRY_GUMMY));
+			"gummy/salmonberries", finished, enabled(DelightfulItems.SALMONBERRIES), enabled(DelightfulItems.SALMONBERRY_GUMMY));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(DelightfulItems.MATCHA_GUMMY.get(), 1, 200, 1F)
 			.addIngredient(DelightfulItemTags.MATCHA)
 			.addIngredient(Items.SUGAR)
 			.addIngredient(Items.HONEY_BOTTLE)
 			.addIngredient(Items.KELP)
 			.unlockedBy("has_matcha", has(DelightfulItemTags.MATCHA)),
-			"gummy/matcha", finished, modLoaded(Modid.CR.get()), enabled(DelightfulItems.MATCHA), enabled(DelightfulItems.MATCHA_GUMMY));
+			"gummy/matcha", finished, enabled(DelightfulItems.MATCHA), enabled(DelightfulItems.MATCHA_GUMMY));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(DelightfulItems.CANTALOUPE_GUMMY.get(), 1, 200, 1F)
 			.addIngredient(DelightfulItemTags.FRUITS_CANTALOUPE)
 			.addIngredient(Items.SUGAR)
 			.addIngredient(Items.HONEY_BOTTLE)
 			.addIngredient(Items.KELP)
 			.unlockedBy("has_cantaloupe", has(DelightfulItemTags.FRUITS_CANTALOUPE)),
-			"gummy/cantaloupe", finished, modLoaded(Modid.CR.get()), enabled(DelightfulItems.CANTALOUPE), enabled(DelightfulItems.CANTALOUPE_GUMMY));
+			"gummy/cantaloupe", finished, enabled(DelightfulItems.CANTALOUPE), enabled(DelightfulItems.CANTALOUPE_GUMMY));
 
 		// Unwrappables
 		ConditionalRecipe.builder()
@@ -836,10 +836,10 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.generateAdvancement()
 			.build(finished, ModItems.CHOCOLATE_PIE.getId());
 		CuttingBoardRecipeBuilder.cuttingRecipe(
-			Ingredient.of(DelightfulItems.WILD_SALMONBERRIES.get()),
-			Ingredient.of(CommonTags.Items.TOOLS_KNIVES),
-			DelightfulItems.SALMONBERRIES.get(), 1
-			).addResult(Items.ORANGE_DYE, 1)
+				Ingredient.of(DelightfulItems.WILD_SALMONBERRIES.get()),
+				Ingredient.of(CommonTags.Items.TOOLS_KNIVES),
+				DelightfulItems.SALMONBERRIES.get(), 2
+			).addResultWithChance(Items.ORANGE_DYE, 0.5F)
 			.save(finished, Util.delight("cutting/wild_salmonberries"));
 		CuttingBoardRecipeBuilder.cuttingRecipe(
 			Ingredient.of(Items.DEAD_BUSH),

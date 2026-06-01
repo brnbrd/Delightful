@@ -4,22 +4,23 @@
     {
       "conditions": [
         {
-          "type": "delightful:enabled",
-          "value": "cactus_flesh"
+          "type": "forge:item_exists",
+          "item": "habitat:orange_ball_cactus"
         },
         {
-          "type": "forge:not",
-          "value": {
-            "type": "forge:tag_empty",
-            "tag": "habitat:ball_cacti"
-          }
+          "type": "forge:item_exists",
+          "item": "habitat:orange_ball_cactus_flower"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "cactus_flesh"
         }
       ],
       "recipe": {
         "type": "farmersdelight:cutting",
         "ingredients": [
           {
-            "tag": "habitat:ball_cacti"
+            "item": "habitat:orange_ball_cactus"
           }
         ],
         "result": [
@@ -27,8 +28,7 @@
             "item": "delightful:cactus_flesh"
           },
           {
-            "chance": 0.33,
-            "item": "minecraft:green_dye"
+            "item": "habitat:orange_ball_cactus_flower"
           }
         ],
         "tool": {

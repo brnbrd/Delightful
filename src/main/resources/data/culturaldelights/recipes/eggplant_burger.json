@@ -8,32 +8,29 @@
           "item": "culturaldelights:eggplant_burger"
         },
         {
-          "type": "forge:not",
-          "value": {
-            "type": "forge:tag_empty",
-            "tag": "forge:burger_bun"
-          }
+          "type": "forge:tag_empty",
+          "tag": "forge:burger_bun"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shapeless",
-        "category": "misc",
         "ingredients": [
           {
-            "tag": "forge:burger_bun"
+            "item": "minecraft:bread"
           },
           {
             "tag": "culturaldelights:smoked_regular_eggplants"
           },
           {
-            "tag": "forge:salad_ingredients/cabbage"
+            "tag": "forge:salad_ingredients"
           },
           {
             "tag": "forge:crops/tomato"
           }
         ],
         "result": {
-          "item": "culturaldelights:eggplant_burger"
+          "item": "culturaldelights:eggplant_burger",
+          "count": 1
         }
       }
     },
@@ -44,29 +41,32 @@
           "item": "culturaldelights:eggplant_burger"
         },
         {
-          "type": "forge:tag_empty",
-          "tag": "forge:burger_bun"
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:burger_bun"
+          }
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shapeless",
-        "category": "misc",
         "ingredients": [
           {
-            "tag": "forge:bread"
+            "tag": "forge:burger_bun"
           },
           {
             "tag": "culturaldelights:smoked_regular_eggplants"
           },
           {
-            "tag": "forge:salad_ingredients/cabbage"
+            "tag": "forge:salad_ingredients"
           },
           {
             "tag": "forge:crops/tomato"
           }
         ],
         "result": {
-          "item": "culturaldelights:eggplant_burger"
+          "item": "culturaldelights:eggplant_burger",
+          "count": 1
         }
       }
     }

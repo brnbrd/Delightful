@@ -1,0 +1,26 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "value": "tin_knife",
+          "type": "delightful:enabled"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "caverns_and_chasms:tin_nugget"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:smelting",
+        "ingredient": {
+          "item": "delightful:tin_knife"
+        },
+        "result": "caverns_and_chasms:tin_nugget",
+        "experience": 0.1,
+        "cookingtime": 200
+      }
+    }
+  ]
+}

@@ -2,7 +2,6 @@ package net.brnbrd.delightful.common.mixin;
 
 // Code adapted from: https://github.com/vectorwing/FarmersDelight/blob/1.20/src/main/java/vectorwing/farmersdelight/common/mixin/PlacePumpkinPieMixin.java
 
-import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.events.PieEvents;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -23,7 +22,7 @@ public class PlacePieMixin {
 	private void usePie(UseOnContext context, CallbackInfoReturnable<InteractionResult> cir) {
 		final ItemStack stack = context.getItemInHand();
 		if (PieEvents.isCompatPie(stack)) {
-			final @Nullable BlockItem pieBlock = PieEvents.getPieBlockItem(Util.name(stack));
+			final @Nullable BlockItem pieBlock = PieEvents.getPieBlockItem(stack);
 			final Player player = context.getPlayer();
 			if (pieBlock != null && player != null && (
 				!Configuration.ENABLE_PUMPKIN_PIE_SNEAK_TO_PLACE.get() || player.isSecondaryUseActive()

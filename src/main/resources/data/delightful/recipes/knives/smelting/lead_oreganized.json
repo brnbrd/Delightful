@@ -1,0 +1,26 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "value": "lead_knife",
+          "type": "delightful:enabled"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "oreganized:lead_nugget"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:smelting",
+        "ingredient": {
+          "item": "delightful:lead_knife"
+        },
+        "result": "oreganized:lead_nugget",
+        "experience": 0.1,
+        "cookingtime": 200
+      }
+    }
+  ]
+}

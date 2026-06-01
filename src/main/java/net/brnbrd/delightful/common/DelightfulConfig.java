@@ -33,6 +33,7 @@ public class DelightfulConfig {
 	public static ForgeConfigSpec.BooleanValue COOK_CLOVER_HONEY;
 	public static ForgeConfigSpec.BooleanValue GIVE_SLICED_DIRECTLY;
 	public static ForgeConfigSpec.BooleanValue MELON_JUICING;
+	public static ForgeConfigSpec.BooleanValue PIE_EDIBLE_MIXIN;
 
 	static {
 		var pair = new ForgeConfigSpec.Builder().configure(DelightfulConfig::new);
@@ -58,11 +59,16 @@ public class DelightfulConfig {
 		items.stream()
 				.filter(BAKED_GOODS::contains)
 				.forEach(knife -> put(builder, stuff, knife, !DEFAULT_DISABLED.contains(knife)));
+		PIE_EDIBLE_MIXIN = builder
+			.comment("Use a mixin to remove food properties from pie items (tag #farmersdelight:pies)?")
+			.define("pie_edible_mixin", true);
 		builder.pop();
 		builder.push("Registry & Recipes");
 		items.stream()
 				.filter(path -> !path.contains("_knife") && !BAKED_GOODS.contains(path))
 				.forEach(not -> put(builder, stuff, not, !DEFAULT_DISABLED.contains(not)));
+		builder.pop();
+		builder.push("Behavior");
 		CRAFT_NUT_MILK = builder
 				.comment("Allow cooking milk from nuts")
 				.define("nut_milk", true);

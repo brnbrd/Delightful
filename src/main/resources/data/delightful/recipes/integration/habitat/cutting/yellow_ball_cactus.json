@@ -1,0 +1,40 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "habitat:yellow_ball_cactus"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "habitat:yellow_ball_cactus_flower"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "cactus_flesh"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "habitat:yellow_ball_cactus"
+          }
+        ],
+        "result": [
+          {
+            "item": "delightful:cactus_flesh"
+          },
+          {
+            "item": "habitat:yellow_ball_cactus_flower"
+          }
+        ],
+        "tool": {
+          "tag": "forge:tools/knives"
+        }
+      }
+    }
+  ]
+}

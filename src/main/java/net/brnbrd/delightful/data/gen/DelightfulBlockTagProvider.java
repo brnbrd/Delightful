@@ -27,8 +27,11 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 	@Override
 	protected void addTags(HolderLookup.@NotNull Provider provider) {
 		// Farmer's Delight
-		this.tag(ModTags.Blocks.WILD_CROPS)
-			.add(DelightfulBlocks.WILD_SALMONBERRIES.get());
+		this.tag(ModTags.Blocks.WILD_CROPS).add(DelightfulBlocks.WILD_SALMONBERRIES.get());
+		this.tag(DelightfulBlockTags.STONE_CABINETS)
+			.add(DelightfulBlocks.BASALT_CABINET.get())
+			.add(DelightfulBlocks.QUARTZ_CABINET.get());
+		this.tag(ModTags.Blocks.CABINETS).addTag(DelightfulBlockTags.STONE_CABINETS);
 
 		// Delightful
 		this.tag(DelightfulBlockTags.DROPS_STRAW)
@@ -43,7 +46,9 @@ public class DelightfulBlockTagProvider extends BlockTagsProvider {
 			.addOptional(Modid.VB.rl("pale_oak_leaves"));
 		this.tag(DelightfulBlockTags.ADD_ACORN).addOptional(Util.rl("natural_decoration", "oak_acorn"));
 		this.tag(DelightfulBlockTags.DROPS_GREEN_TEA_LEAF).addTag(BlockTags.LEAVES);
-		this.tag(DelightfulBlockTags.CANTALOUPE_SPAWNS).addTag(Tags.Blocks.SAND);
+		this.tag(DelightfulBlockTags.CANTALOUPE_SPAWNS)
+			.addTag(Tags.Blocks.SAND)
+			.addTag(Tags.Blocks.SANDSTONE);
 
 		// Forge
 		this.tag(DelightfulBlockTags.STORAGE_BLOCKS_SALMONBERRIES).add(DelightfulBlocks.SALMONBERRY_SACK.get());

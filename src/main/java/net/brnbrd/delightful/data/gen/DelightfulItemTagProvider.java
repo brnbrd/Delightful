@@ -69,14 +69,23 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.add(DelightfulItems.SALMON_AND_ROE_BLINI.get())
 			.add(DelightfulItems.WRAPPED_CANTALOUPE.get());
 		this.tag(ModTags.Items.SWEETS) // sweet prepared foods, usually desserts
+			.add(DelightfulItems.BAKLAVA_SLICE.get())
+			.add(DelightfulItems.BLUEBERRY_PIE_SLICE.get())
 			.add(DelightfulItems.CANTALOUPE_BREAD.get())
 			.add(DelightfulItems.CANTALOUPE_POPSICLE.get())
 			.add(DelightfulItems.CHORUS_MUFFIN.get())
+			.add(DelightfulItems.CHORUS_PIE_SLICE.get())
 			.add(DelightfulItems.COOKED_MARSHMALLOW_STICK.get())
+			.add(DelightfulItems.GLOOMGOURD_PIE_SLICE.get())
 			.add(DelightfulItems.GLOW_JAM_COOKIE.get())
+			.add(DelightfulItems.GREEN_APPLE_PIE_SLICE.get())
 			.add(DelightfulItems.HONEY_GLAZED_WALNUT.get())
 			.add(DelightfulItems.MARSHMALLOW_STICK.get())
+			.add(DelightfulItems.MULBERRY_PIE_SLICE.get())
+			.add(DelightfulItems.MUTTON_PIE_SLICE.get())
+			.add(DelightfulItems.PASSION_FRUIT_TART_SLICE.get())
 			.add(DelightfulItems.ROCK_CANDY.get())
+			.add(DelightfulItems.SALMONBERRY_PIE_SLICE.get())
 			.add(DelightfulItems.SMORE.get())
 			.add(DelightfulItems.SOURCE_BERRY_COOKIE.get());
 		this.tag(ModTags.Items.MEALS)
@@ -90,18 +99,11 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(ModTags.Items.FEASTS)
 			.add(DelightfulItems.STUFFED_CANTALOUPE_BLOCK.get());
 		this.tag(ModTags.Items.PIES).addTag(DelightfulItemTags.COMPAT_PIES);
-		this.tag(DelightfulItemTags.STRAW_PLANTS)
-			.add(Items.GRASS)
-			.add(Items.TALL_GRASS)
-			.add(ModItems.SANDY_SHRUB.get())
-			.addOptional(Modid.UA.rl("beachgrass"))
-			.addOptional(Modid.UA.rl("tall_beachgrass"));
-		this.tag(DelightfulItemTags.BARKS).add(ModItems.TREE_BARK.get());
+		this.tag(ModTags.Items.WILD_CROPS).add(DelightfulItems.WILD_SALMONBERRIES.get());
 		this.tag(DelightfulItemTags.STONE_CABINETS)
 			.add(DelightfulItems.BASALT_CABINET.get())
 			.add(DelightfulItems.QUARTZ_CABINET.get());
 		this.tag(ModTags.Items.CABINETS).addTag(DelightfulItemTags.STONE_CABINETS);
-		this.tag(ModTags.Items.WILD_CROPS).add(DelightfulItems.WILD_SALMONBERRIES.get());
 
 		// Knives
 		var FDknives = this.tag(ModTags.Items.KNIVES);
@@ -123,21 +125,6 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.PATTIES)
 			.addTag(DelightfulItemTags.VEGETARIAN_PATTIES)
 			.add(ModItems.BEEF_PATTY.get());
-		this.tag(DelightfulItemTags.ROSE)
-			.add(Items.ROSE_BUSH)
-			.addOptional(Modid.BWG.rl("rose"))
-			.addOptional(Modid.BWG.rl("osiria_rose"))
-			.addOptional(Modid.WS.rl("red_rose"))
-			.addOptional(Modid.WS.rl("red_rose_bush"))
-			.addOptional(Modid.FORA.rl("stout_beach_rose_bush"))
-			.addOptional(Modid.FORA.rl("tall_beach_rose_bush"))
-			.addOptional(Modid.FORA.rl("rose_hip"))
-			.addOptional(Modid.FORA.rl("rose_petals"))
-			.addOptional(Modid.CR.rl("bulbous_rose"))
-			.addOptional(Modid.BOP.rl("rose"))
-			.addOptional(Modid.FR.rl("rose_hips"))
-			.addOptional(Modid.SEED.rl("rosehip"))
-			.addOptional(Util.rl("sunflowerdelight", "rosebud"));
 		this.tag(DelightfulItemTags.ROTTEN)
 			.add(Items.ROTTEN_FLESH)
 			.addOptional(Modid.RL.rl("rotten_chunk"))
@@ -1066,6 +1053,11 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 		this.tag(DelightfulItemTags.FISH_FOOD_STURGEON)
 			.addOptional(Modid.TIDE.rl("incandescent_larva"))
 			.addOptional(Modid.CR.rl("tiger_prawn"));
+
+		// Diet
+		this.tag(DelightfulItemTags.SPECIAL_FOOD)
+			.addTag(ModTags.Items.PIES)
+			.add(DelightfulItems.BAKLAVA.get());
 	}
 
 	@Override

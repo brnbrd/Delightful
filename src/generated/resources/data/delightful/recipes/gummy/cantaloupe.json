@@ -4,10 +4,6 @@
     {
       "conditions": [
         {
-          "type": "forge:mod_loaded",
-          "modid": "collectorsreap"
-        },
-        {
           "type": "delightful:enabled",
           "value": "cantaloupe"
         },

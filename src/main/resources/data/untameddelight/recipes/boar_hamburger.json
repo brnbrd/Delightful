@@ -23,7 +23,7 @@
             "item": "untameddelight:cooked_boar_chop"
           },
           {
-            "tag": "forge:salad_ingredients/cabbage"
+            "tag": "forge:salad_ingredients"
           },
           {
             "tag": "forge:crops/tomato"
@@ -62,7 +62,7 @@
             "item": "untameddelight:cooked_boar_chop"
           },
           {
-            "tag": "forge:salad_ingredients/cabbage"
+            "tag": "forge:salad_ingredients"
           },
           {
             "tag": "forge:crops/tomato"
