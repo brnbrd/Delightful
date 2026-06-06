@@ -1,6 +1,10 @@
 {
   "values": [
     {
+      "id": "#rusticdelight:syrup",
+      "required": false
+    },
+    {
       "id": "autumnity:syrup_bottle",
       "required": false
     },

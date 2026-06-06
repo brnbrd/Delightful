@@ -1,0 +1,45 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "rusticdelight:vegetable_pancakes"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:bowl"
+        },
+        "cookingtime": 400,
+        "experience": 2.0,
+        "ingredients": [
+          {
+            "tag": "forge:batter"
+          },
+          {
+            "tag": "forge:milk"
+          },
+          {
+            "tag": "forge:vegetables"
+          },
+          {
+            "tag": "forge:vegetables"
+          },
+          {
+            "tag": "forge:salad_ingredients"
+          },
+          {
+            "tag": "forge:salad_ingredients"
+          }
+        ],
+        "recipe_book_tab": "misc",
+        "result": {
+          "item": "rusticdelight:vegetable_pancakes"
+        }
+      }
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-// 1.20.1	2026-05-30T09:52:31.127181	delightful
+// 1.20.1	2026-05-31T11:35:57.3973258	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -55,6 +55,7 @@ dd339329f9fefc3c22d810c461ed6eb0a2bf05ea data/farmersdelight/tags/items/pies.jso
 46f279b6acd03b06ea14e9f62be7d48e200c002c data/farmersdelight/tags/items/wild_crops.json
 a1edebb3bd4f7f3d7e73d53c915b2fe3203614aa data/forbidden_arcanus/tags/items/draco_arcanus_staff.json
 67b8f22c3fbfa7142b71a6a27d583be2b01e8ceb data/forbidden_arcanus/tags/items/dragon_scale.json
+67b179269a1e222662c5bfdf4c1100cc357648c3 data/forge/tags/items/batter.json
 bb1d93c714242f871a453305de8b34c19aefe436 data/forge/tags/items/berries.json
 52ce87bae11d0c24403dc711445b250ba7a1cd21 data/forge/tags/items/bones.json
 4b13fa40762a9acf6dcd87437b39b640d19873b4 data/forge/tags/items/bread.json
@@ -176,7 +177,7 @@ aa9dd2ed7e383a350f923e74f354d2727179bf7c data/forge/tags/items/nuts.json
 b03de3a7a899e79f07eb00c920a4140fa958b2da data/forge/tags/items/nuts/peanut.json
 43ff3b1d9b96e92650d782eb6631a869680f8078 data/forge/tags/items/nuts/walnut.json
 22665be4ae51f2bbd11b14301906a7394cb54438 data/forge/tags/items/nut_butter.json
-c79498f4b3ff406c850a8097764da7aea24de8d5 data/forge/tags/items/pancakes.json
+e8e26d091206f92c561549acd4866a68894834c8 data/forge/tags/items/pancakes.json
 73625a13040054a157ad409cbc941fbe17d0325b data/forge/tags/items/peanut_butter.json
 fecd0addad0c8d2c1b829d5350c240452b0e3807 data/forge/tags/items/pumpkins.json
 431a726f847e40b3e6866e9677d0202cc5855e6a data/forge/tags/items/pumpkins/pumpkin_blocks.json
@@ -213,7 +214,7 @@ ac858dd81b235514728341501eca0c15abc5d52f data/forge/tags/items/storage_blocks/gr
 1fba4a9f3d99bf10665e6ce2385f4c8b5eb51921 data/forge/tags/items/storage_blocks/yucca_fruit.json
 30f21ef97c6cf8efce09fce76cfb776d9373fa10 data/forge/tags/items/string.json
 5120406cd632defdaaf5d84491da9772a9320b05 data/forge/tags/items/syrup.json
-de9b7d6110a5a6e85ee178b72221ee4036a81df5 data/forge/tags/items/syrup/syrup_bottle.json
+d5fbcc95cf74ee7a55919e57de16fc18afeacd0b data/forge/tags/items/syrup/syrup_bottle.json
 2fba44995a5f721459f4b86e00d530e1544fb501 data/forge/tags/items/tea_leaves.json
 b4088db8c78220bdadc8c24288bd4da0fe773e25 data/forge/tags/items/tea_leaves/green.json
 4c059403da24f6205854d1125cba7633614fe525 data/forge/tags/items/tools/fishing_rods.json

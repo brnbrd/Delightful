@@ -113,7 +113,7 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
 [[dependencies.delightful]]
     modId="hearthandharvest"
     mandatory=false
-    versionRange="[1.0.11,)"
+    versionRange="[1.0.12,)"
     ordering="AFTER"
     side="BOTH"
 
@@ -554,7 +554,7 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
 [[dependencies.delightful]]
     modId="supplementaries"
     mandatory=false
-    versionRange="[1.20-3.1.30,)"
+    versionRange="[1.20-3.1.40,)"
     ordering="AFTER"
     side="BOTH"
 
@@ -653,5 +653,12 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
     modId="foragersinsight"
     mandatory=false
     versionRange="[0,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.delightful]]
+    modId="rusticdelight"
+    mandatory=false
+    versionRange="[1.6.1,)"
     ordering="AFTER"
     side="BOTH"

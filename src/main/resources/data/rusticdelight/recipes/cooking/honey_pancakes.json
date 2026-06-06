@@ -5,35 +5,28 @@
       "conditions": [
         {
           "type": "forge:item_exists",
-          "item": "supplementaries:pancake"
-        },
-        {
-          "type": "forge:tag_empty",
-          "tag": "forge:batter"
+          "item": "rusticdelight:honey_pancakes"
         }
       ],
       "recipe": {
-        "global_conditions": [
-          {
-            "type": "supplementaries:flag",
-            "flag": "pancake"
-          }
-        ],
         "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:bowl"
+        },
         "cookingtime": 400,
         "experience": 2.0,
         "ingredients": [
           {
-            "tag": "forge:milk"
+            "tag": "forge:batter"
           },
           {
-            "tag": "forge:eggs"
+            "item": "minecraft:honey_bottle"
           },
           {
-            "tag": "forge:grain/wheat"
+            "item": "minecraft:sweet_berries"
           },
           {
-            "tag": "forge:grain/wheat"
+            "item": "minecraft:sweet_berries"
           },
           {
             "item": "minecraft:sugar"
@@ -44,8 +37,7 @@
         ],
         "recipe_book_tab": "misc",
         "result": {
-          "item": "supplementaries:pancake",
-          "count": 6
+          "item": "rusticdelight:honey_pancakes"
         }
       }
     }

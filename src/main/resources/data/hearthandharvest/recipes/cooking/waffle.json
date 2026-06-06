@@ -1,0 +1,34 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "hearthandharvest:waffle"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "cookingtime": 100,
+        "experience": 0.35,
+        "ingredients": [
+          {
+            "item": "hearthandharvest:batter"
+          },
+          {
+            "item": "minecraft:sugar"
+          },
+          {
+            "tag": "forge:syrup"
+          }
+        ],
+        "recipe_book_tab": "meals",
+        "result": {
+          "item": "hearthandharvest:waffle",
+          "count": 3
+        }
+      }
+    }
+  ]
+}

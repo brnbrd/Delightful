@@ -1,0 +1,45 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "rusticdelight:cherry_blossom_pancakes"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:bowl"
+        },
+        "cookingtime": 400,
+        "experience": 2.0,
+        "ingredients": [
+          {
+            "tag": "forge:batter"
+          },
+          {
+            "tag": "forge:milk"
+          },
+          {
+            "tag": "rusticdelight:cherry_blossom_ingredients"
+          },
+          {
+            "tag": "rusticdelight:cherry_blossom_ingredients"
+          },
+          {
+            "tag": "rusticdelight:cherry_blossom_ingredients"
+          },
+          {
+            "tag": "rusticdelight:cherry_blossom_ingredients"
+          }
+        ],
+        "recipe_book_tab": "misc",
+        "result": {
+          "item": "rusticdelight:cherry_blossom_pancakes"
+        }
+      }
+    }
+  ]
+}

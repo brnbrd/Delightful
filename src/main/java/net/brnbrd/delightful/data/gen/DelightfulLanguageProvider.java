@@ -166,7 +166,6 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		addItemTag(DelightfulItemTags.ROASTED_MARSHMALLOWS, "Roasted Marshmallow");
 		addItemTag(DelightfulItemTags.HOT_SPICES, "Hot Spices");
 		addItemTag(DelightfulItemTags.AGED_ROES, "Aged Roe");
-		addItemTag(DelightfulItemTags.PANCAKES, "Pancake");
 		addItemTag(DelightfulItemTags.PATTIES, "Patty");
 		addItemTag(DelightfulItemTags.VEGETARIAN_PATTIES, "Vegetarian Patty");
 
@@ -190,6 +189,9 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		addItemTag(DelightfulItemTags.ICE_CUBES, "Ice Cubes");
 		addItemTag(DelightfulItemTags.CHOCOLATE, "Chocolate");
 		addItemTag(DelightfulItemTags.SALT, "Salt");
+		addItemTag(DelightfulItemTags.SYRUP, "Syrup");
+		addItemTag(DelightfulItemTags.BATTER, "Batter");
+		addItemTag(DelightfulItemTags.PANCAKES, "Pancake");
 		addItemTag(DelightfulItemTags.JAMS, "Jam");
 		addItemTag(DelightfulItemTags.JAMS_GLOW, "Glow Jam");
 		addItemTag(DelightfulItemTags.NUTS, "Nuts");

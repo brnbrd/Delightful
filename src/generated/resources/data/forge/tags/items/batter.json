@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "rusticdelight:batter",
+      "required": false
+    },
+    {
+      "id": "hearthandharvest:batter",
+      "required": false
+    }
+  ]
+}
