@@ -11,6 +11,7 @@
 - Cantaloupes now only spawn in biome `minecraft:beach` (and `biomesoplenty:tropics`)
 - Gummy crafting recipes no longer require [Collector's Reap](https://www.curseforge.com/minecraft/mc-mods/collectors-reap)
 - Burger recipes now accept all Salad Ingredients
+- Added some language changes for similar items to the `Delightful Overhauls` built-in resource pack
 
 ### Fixes
 - Removed some recipe overrides (fixes [#153](https://github.com/brnbrd/Delightful/issues/153))
