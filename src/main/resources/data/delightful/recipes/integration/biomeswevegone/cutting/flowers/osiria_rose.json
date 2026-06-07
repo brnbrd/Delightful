@@ -19,9 +19,15 @@
             "item": "biomeswevegone:osiria_rose"
           }
         ],
-        "tool": {
-          "tag": "forge:tools/knives"
-        },
+        "tool": [
+          {
+            "type": "farmersdelight:tool_action",
+            "action": "knife_dig"
+          },
+          {
+            "tag": "forge:tools/knives"
+          }
+        ],
         "result": [
           {
             "count": 1,
@@ -51,9 +57,15 @@
             "item": "biomeswevegone:osiria_rose"
           }
         ],
-        "tool": {
-          "tag": "forge:tools/knives"
-        },
+        "tool": [
+          {
+            "type": "farmersdelight:tool_action",
+            "action": "knife_dig"
+          },
+          {
+            "tag": "forge:tools/knives"
+          }
+        ],
         "result": [
           {
             "count": 2,

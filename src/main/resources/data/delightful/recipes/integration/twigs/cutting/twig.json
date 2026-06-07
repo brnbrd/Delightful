@@ -15,10 +15,15 @@
             "item": "twigs:twig"
           }
         ],
-        "tool": {
-          "type": "farmersdelight:tool_action",
-          "action": "axe_dig"
-        },
+        "tool": [
+          {
+            "type": "farmersdelight:tool_action",
+            "action": "axe_dig"
+          },
+          {
+            "tag": "minecraft:axes"
+          }
+        ],
         "result": [
           {
             "item": "minecraft:stick",

@@ -5,26 +5,19 @@
       "conditions": [
         {
           "type": "forge:item_exists",
-          "item": "habitat:red_anthurium"
-        },
-        {
-          "type": "forge:not",
-          "value": {
-            "type": "forge:mod_loaded",
-            "modid": "extra_compat"
-          }
+          "item": "minecraft:wildflowers"
         }
       ],
       "recipe": {
         "type": "farmersdelight:cutting",
         "ingredients": [
           {
-            "item": "habitat:red_anthurium"
+            "item": "minecraft:wildflowers"
           }
         ],
         "result": [
           {
-            "item": "minecraft:red_dye",
+            "item": "minecraft:yellow_dye",
             "count": 2
           }
         ],

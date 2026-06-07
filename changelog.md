@@ -1,5 +1,12 @@
 # Version History
 
+## 3.8.2
+
+### Updates
+- All cutting recipes now check for both a tag and a "tool action"
+- Updated modid of VanillaBackport items to `minecraft`
+
+
 ## 3.8.1
 
 ### Updates

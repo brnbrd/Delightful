@@ -17,14 +17,14 @@
         }
       ],
       "recipe": {
-        "type":"brewinandchewin:fermenting",
-        "basefluid":{
+        "type": "brewinandchewin:fermenting",
+        "basefluid": {
           "count": 1000,
           "fluid": "delightful:matcha_latte"
         },
         "experience": 1.0,
         "fermentingtime": 12000,
-        "ingredients":[
+        "ingredients": [
           {
             "item": "minecraft:ender_eye"
           },
@@ -40,8 +40,8 @@
             }
           ]
         ],
-        "recipe_book_tab":"drinks",
-        "result":{
+        "recipe_book_tab": "drinks",
+        "result": {
           "count": 1000,
           "fluid": "delightful:ender_nectar"
         },

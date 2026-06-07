@@ -21,14 +21,14 @@
         }
       ],
       "recipe": {
-        "type":"brewinandchewin:fermenting",
+        "type": "brewinandchewin:fermenting",
         "basefluid": {
           "count": 1000,
           "fluid": "minecraft:water"
         },
         "experience": 1.0,
         "fermentingtime": 12000,
-        "ingredients":[
+        "ingredients": [
           {
             "item": "delightful:sturgeon_roe"
           },
@@ -42,7 +42,7 @@
             "item": "minecraft:glow_ink_sac"
           }
         ],
-        "result":{
+        "result": {
           "count": 1000,
           "fluid": "delightful:caviar"
         },

@@ -5,7 +5,7 @@
       "conditions": [
         {
           "type": "forge:item_exists",
-          "item": "vanillabackport:pale_oak_sapling"
+          "item": "minecraft:pale_oak_sapling"
         },
         {
           "type": "delightful:enabled",
@@ -16,7 +16,7 @@
         "type": "farmersdelight:cutting",
         "ingredients": [
           {
-            "item": "vanillabackport:pale_oak_sapling"
+            "item": "minecraft:pale_oak_sapling"
           }
         ],
         "result": [
@@ -24,14 +24,19 @@
             "item": "minecraft:stick"
           },
           {
-            "chance": 0.1,
+            "chance": 0.15,
             "item": "delightful:acorn"
           }
         ],
-        "tool": {
-          "type": "farmersdelight:tool_action",
-          "action": "axe_dig"
-        }
+        "tool": [
+          {
+            "type": "farmersdelight:tool_action",
+            "action": "axe_dig"
+          },
+          {
+            "tag": "minecraft:axes"
+          }
+        ]
       }
     }
   ]

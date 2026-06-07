@@ -1,4 +1,4 @@
-// 1.20.1	2026-05-31T11:35:57.3973258	delightful
+// 1.20.1	2026-06-07T11:17:18.0126058	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -57,7 +57,7 @@ a1edebb3bd4f7f3d7e73d53c915b2fe3203614aa data/forbidden_arcanus/tags/items/draco
 67b8f22c3fbfa7142b71a6a27d583be2b01e8ceb data/forbidden_arcanus/tags/items/dragon_scale.json
 67b179269a1e222662c5bfdf4c1100cc357648c3 data/forge/tags/items/batter.json
 bb1d93c714242f871a453305de8b34c19aefe436 data/forge/tags/items/berries.json
-52ce87bae11d0c24403dc711445b250ba7a1cd21 data/forge/tags/items/bones.json
+e185458fa4388358546c2d96052f11c76dccd50b data/forge/tags/items/bones.json
 4b13fa40762a9acf6dcd87437b39b640d19873b4 data/forge/tags/items/bread.json
 cbd47de368751306e7d7f0cfb8054fc816b1695d data/forge/tags/items/burger_bun.json
 da7396ec88fe02416ba90505a88d552045499872 data/forge/tags/items/cacti.json

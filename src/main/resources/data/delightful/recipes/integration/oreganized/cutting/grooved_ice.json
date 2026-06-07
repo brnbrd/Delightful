@@ -19,10 +19,15 @@
             "item": "oreganized:grooved_ice"
           }
         ],
-        "tool": {
-          "type": "farmersdelight:tool_action",
-          "action": "pickaxe_dig"
-        },
+        "tool": [
+          {
+            "type": "farmersdelight:tool_action",
+            "action": "pickaxe_dig"
+          },
+          {
+            "tag": "minecraft:pickaxes"
+          }
+        ],
         "result": [
           {
             "item": "neapolitan:ice_cubes",

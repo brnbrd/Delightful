@@ -743,9 +743,10 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.FRD.rl("lemon_seeds"))
 			.addOptional(Modid.FRD.rl("hamimelon_seeds"));
 		this.tag(DelightfulItemTags.BONES)
-			.addOptional(Modid.UA.rl("thrasher_tooth"))
-			.addOptional(Modid.TIDE.rl("fish_bone"))
 			.addOptional(Modid.DD.rl("sculk_bone"))
+			.addOptional(Modid.TIDE.rl("fish_bone"))
+			.addOptional(Modid.NDU.rl("bonefish"))
+			.addOptional(Modid.UA.rl("thrasher_tooth"))
 			.addOptional(Modid.SM.rl("piranha_tooth"))
 			.addOptional(Util.rl("alexscaves", "heavy_bone"));
 		this.tag(DelightfulItemTags.SYRUP_BOTTLE)

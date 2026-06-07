@@ -32,9 +32,15 @@
             "item": "delightful:cooked_venison_chops"
           }
         ],
-        "tool": {
-          "tag": "forge:tools/knives"
-        }
+        "tool": [
+          {
+            "type": "farmersdelight:tool_action",
+            "action": "knife_dig"
+          },
+          {
+            "tag": "forge:tools/knives"
+          }
+        ]
       }
     }
   ]

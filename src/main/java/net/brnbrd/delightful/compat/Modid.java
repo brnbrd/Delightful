@@ -101,6 +101,7 @@ public enum Modid {
 	NA("naturalist"),
 	NF("nutritious_feast"),
 	ND("nethersdelight"),
+	NDU("netherdepthsupgrade"),
 	NE("nethers_exoticism"),
 	NN("nourished_nether"),
 	OAD("oresabovediamonds"),

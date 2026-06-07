@@ -15,9 +15,15 @@
             "item": "biomeswevegone:silver_vase_flower"
           }
         ],
-        "tool": {
-          "tag": "forge:tools/knives"
-        },
+        "tool": [
+          {
+            "type": "farmersdelight:tool_action",
+            "action": "knife_dig"
+          },
+          {
+            "tag": "forge:tools/knives"
+          }
+        ],
         "result": [
           {
             "count": 2,

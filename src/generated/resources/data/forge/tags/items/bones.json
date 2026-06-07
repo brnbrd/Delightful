@@ -1,7 +1,7 @@
 {
   "values": [
     {
-      "id": "upgrade_aquatic:thrasher_tooth",
+      "id": "deeperdarker:sculk_bone",
       "required": false
     },
     {
@@ -9,7 +9,11 @@
       "required": false
     },
     {
-      "id": "deeperdarker:sculk_bone",
+      "id": "netherdepthsupgrade:bonefish",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:thrasher_tooth",
       "required": false
     },
     {

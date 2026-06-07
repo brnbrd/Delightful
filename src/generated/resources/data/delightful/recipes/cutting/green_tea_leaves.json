@@ -38,10 +38,15 @@
             "item": "delightful:matcha"
           }
         ],
-        "tool": {
-          "type": "farmersdelight:tool_action",
-          "action": "shovel_dig"
-        }
+        "tool": [
+          {
+            "type": "farmersdelight:tool_action",
+            "action": "shovel_dig"
+          },
+          {
+            "tag": "minecraft:shovels"
+          }
+        ]
       }
     }
   ]

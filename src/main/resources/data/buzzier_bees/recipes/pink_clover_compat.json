@@ -19,9 +19,15 @@
             "item": "buzzier_bees:pink_clover"
           }
         ],
-        "tool": {
-          "tag": "forge:tools/knives"
-        },
+        "tool": [
+          {
+            "type": "farmersdelight:tool_action",
+            "action": "knife_dig"
+          },
+          {
+            "tag": "forge:tools/knives"
+          }
+        ],
         "result": [
           {
             "item": "delightful:chopped_clover",

@@ -22,13 +22,13 @@
         "fermentingtime": 9600,
         "ingredients": [
           {
-            "tag":"forge:fruits/orange"
+            "tag": "forge:fruits/orange"
           },
           {
-            "tag":"forge:fruits/orange"
+            "tag": "forge:fruits/orange"
           },
           {
-            "item":"minecraft:lapis_lazuli"
+            "item": "minecraft:lapis_lazuli"
           }
         ],
         "recipe_book_tab": "drinks",

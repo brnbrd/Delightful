@@ -5,14 +5,14 @@
       "conditions": [
         {
           "type": "forge:item_exists",
-          "item": "vanillabackport:closed_eyeblossom"
+          "item": "minecraft:closed_eyeblossom"
         }
       ],
       "recipe": {
         "type": "farmersdelight:cutting",
         "ingredients": [
           {
-            "item": "vanillabackport:closed_eyeblossom"
+            "item": "minecraft:closed_eyeblossom"
           }
         ],
         "result": [
@@ -21,9 +21,15 @@
             "count": 2
           }
         ],
-        "tool": {
-          "tag": "forge:tools/knives"
-        }
+        "tool": [
+          {
+            "type": "farmersdelight:tool_action",
+            "action": "knife_dig"
+          },
+          {
+            "tag": "forge:tools/knives"
+          }
+        ]
       }
     }
   ]

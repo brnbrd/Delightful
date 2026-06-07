@@ -9,38 +9,38 @@
         },
         {
           "type": "forge:item_exists",
-          "item":"brewincompatdelight:margarita"
+          "item": "brewincompatdelight:margarita"
         },
         {
-          "type":"forge:not",
-          "value":{
-            "type":"forge:tag_empty",
-            "tag":"forge:drinks/tequila"
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:drinks/tequila"
           }
         },
         {
-          "type":"forge:not",
-          "value":{
-            "type":"forge:tag_empty",
-            "tag":"forge:fruits/lime"
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:fruits/lime"
           }
         }
       ],
       "recipe": {
-        "type":"minecraft:crafting_shapeless",
-        "ingredients":[
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
           {
-            "tag":"forge:fruits/lime"
+            "tag": "forge:fruits/lime"
           },
           {
-            "tag":"forge:drinks/tequila"
+            "tag": "forge:drinks/tequila"
           },
           {
-            "tag":"forge:fruits/lime"
+            "tag": "forge:fruits/lime"
           }
         ],
-        "result":{
-          "item":"brewincompatdelight:margarita",
+        "result": {
+          "item": "brewincompatdelight:margarita",
           "count": 1
         }
       }

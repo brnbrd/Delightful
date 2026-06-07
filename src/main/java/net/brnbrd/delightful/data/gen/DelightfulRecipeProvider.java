@@ -25,7 +25,6 @@ import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
-import net.minecraftforge.common.ToolActions;
 import net.minecraftforge.common.crafting.ConditionalRecipe;
 import net.minecraftforge.common.crafting.conditions.ICondition;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
@@ -36,7 +35,6 @@ import net.minecraftforge.registries.RegistryObject;
 import org.apache.commons.lang3.ArrayUtils;
 import vectorwing.farmersdelight.FarmersDelight;
 import vectorwing.farmersdelight.client.recipebook.CookingPotRecipeBookTab;
-import vectorwing.farmersdelight.common.crafting.ingredient.ToolActionIngredient;
 import vectorwing.farmersdelight.common.registry.ModBlocks;
 import vectorwing.farmersdelight.common.registry.ModItems;
 import vectorwing.farmersdelight.common.tag.CommonTags;
@@ -47,6 +45,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 import java.util.function.Consumer;
+import vectorwing.farmersdelight.data.recipe.CuttingRecipes;
 import org.jetbrains.annotations.NotNull;
 
 public class DelightfulRecipeProvider extends RecipeProvider implements IConditionBuilder {
@@ -233,13 +232,8 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.requires(Tags.Items.RODS_WOODEN)
 			.unlockedBy("has_marshmallow", has(DelightfulItemTags.MARSHMALLOW)),
 			"food/marshmallow_stick_from_marshmallow", finished, enabled(DelightfulItems.MARSHMALLOW_STICK), not(tagEmpty(DelightfulItemTags.MARSHMALLOW)), not(modLoaded(Modid.HH.get())));
-		wrap(SimpleCookingRecipeBuilder.campfireCooking(
-			Ingredient.of(DelightfulItems.MARSHMALLOW_STICK.get()),
-			RecipeCategory.FOOD,
-			DelightfulItems.COOKED_MARSHMALLOW_STICK.get(),
-			0.5F,
-			600
-			).unlockedBy("has_marshmallow_stick", has(DelightfulItems.MARSHMALLOW_STICK.get())),
+		wrap(SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(DelightfulItems.MARSHMALLOW_STICK.get()), RecipeCategory.FOOD, DelightfulItems.COOKED_MARSHMALLOW_STICK.get(), 0.5F, 600)
+			.unlockedBy("has_marshmallow_stick", has(DelightfulItems.MARSHMALLOW_STICK.get())),
 			"campfire/marshmallow_stick", finished,
 			enabled(DelightfulItems.COOKED_MARSHMALLOW_STICK), not(modLoaded(Modid.HH.get())));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.SMORE.get())
@@ -268,15 +262,13 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.requires(Items.HONEY_BOTTLE)
 			.unlockedBy("has_walnut", has(DelightfulItemTags.NUTS_WALNUT)),
 			"food/honey_glazed_walnut", finished, enabled(DelightfulItems.HONEY_GLAZED_WALNUT), not(tagEmpty(DelightfulItemTags.NUTS_WALNUT)));
-		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-			DelightfulItems.MATCHA_LATTE.get(), 1, CookingRecipes.FAST_COOKING, 0.35F, Items.GLASS_BOTTLE)
+		wrap(CookingPotRecipeBuilder.cookingPotRecipe(DelightfulItems.MATCHA_LATTE.get(), 1, CookingRecipes.FAST_COOKING, 0.35F, Items.GLASS_BOTTLE)
 			.addIngredient(CommonTags.Items.MILK)
 			.addIngredient(Items.HONEY_BOTTLE)
 			.addIngredient(DelightfulItemTags.MATCHA)
 			.unlockedBy("has_matcha", has(DelightfulItemTags.MATCHA)),
 			"food/cooking/matcha_latte", finished, enabled(DelightfulItems.MATCHA_LATTE), not(modLoaded(Modid.FR.get())));
-		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-			DelightfulItems.ENDER_NECTAR.get(), 1, CookingRecipes.SLOW_COOKING, 0.35F, Items.GLASS_BOTTLE)
+		wrap(CookingPotRecipeBuilder.cookingPotRecipe(DelightfulItems.ENDER_NECTAR.get(), 1, CookingRecipes.SLOW_COOKING, 0.35F, Items.GLASS_BOTTLE)
 			.addIngredient(DelightfulItems.MATCHA_LATTE.get())
 			.addIngredient(Items.ENDER_EYE)
 			.addIngredient(Ingredient.of(Items.CHORUS_FRUIT, Items.ENDER_EYE))
@@ -417,17 +409,13 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.define('c', DelightfulItems.CANTALOUPE_SLICE.get())
 			.unlockedBy("has_cantaloupe_slice", has(DelightfulItems.CANTALOUPE_SLICE.get())),
 			"cantaloupe_from_slices", finished, enabled(DelightfulItems.CANTALOUPE), enabled(DelightfulItems.CANTALOUPE_SLICE));
-		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
-			Ingredient.of(DelightfulItems.CANTALOUPE.get()),
-			Ingredient.of(CommonTags.Items.TOOLS_KNIVES),
-			DelightfulItems.CANTALOUPE_SLICE.get(), 4),
+		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(DelightfulItems.CANTALOUPE.get()), CuttingRecipes.KNIVES, DelightfulItems.CANTALOUPE_SLICE.get(), 4),
 			"cutting/cantaloupe", finished, enabled(DelightfulItems.CANTALOUPE), enabled(DelightfulItems.CANTALOUPE_SLICE));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelightfulItems.CANTALOUPE_SEEDS.get())
 			.requires(DelightfulItems.CANTALOUPE_SLICE.get())
 			.unlockedBy("has_cantaloupe", has(DelightfulItemTags.FRUITS_CANTALOUPE)),
 			"cantaloupe_seeds", finished, enabled(DelightfulItems.CANTALOUPE), enabled(DelightfulItems.CANTALOUPE_SEEDS));
-		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-			DelightfulItems.STUFFED_CANTALOUPE_BLOCK.get(), 1, CookingRecipes.SLOW_COOKING, 0.35F, DelightfulItems.CANTALOUPE.get())
+		wrap(CookingPotRecipeBuilder.cookingPotRecipe(DelightfulItems.STUFFED_CANTALOUPE_BLOCK.get(), 1, CookingRecipes.SLOW_COOKING, 0.35F, DelightfulItems.CANTALOUPE.get())
 			.addIngredient(CommonTags.Items.GRAIN_RICE)
 			.addIngredient(CommonTags.Items.COOKED_MUTTON)
 			.addIngredient(CommonTags.Items.CROPS_ONION)
@@ -452,50 +440,34 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.addIngredient(CommonTags.Items.BERRIES)
 			.unlockedBy("has_rose_quartz", has(DelightfulItemTags.GEMS_ROSE_QUARTZ)),
 			"food/cooking/rock_candy", finished, enabled(DelightfulItems.ROCK_CANDY), not(tagEmpty(DelightfulItemTags.GEMS_ROSE_QUARTZ)), not(modLoaded(Modid.DUNG.get())));
-		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-			DelightfulItems.ANIMAL_OIL_BOTTLE.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
+		wrap(CookingPotRecipeBuilder.cookingPotRecipe(DelightfulItems.ANIMAL_OIL_BOTTLE.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
 			.addIngredient(DelightfulItems.ANIMAL_FAT.get(), 3)
 			.unlockedBy("has_animal_fat", has(DelightfulItems.ANIMAL_FAT.get())),
 			"cooking/animal_oil_bottle", finished, enabled(DelightfulItems.ANIMAL_OIL_BOTTLE));
-		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-			DelightfulItems.JAM_JAR.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F, Items.GLASS_BOTTLE)
+		wrap(CookingPotRecipeBuilder.cookingPotRecipe(DelightfulItems.JAM_JAR.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F, Items.GLASS_BOTTLE)
 			.addIngredient(Ingredient.of(DelightfulItemTags.FRUITS), 3)
 			.addIngredient(Items.SUGAR, 2)
 			.unlockedBy("has_fruit", has(DelightfulItemTags.FRUITS)),
 			"food/cooking/jam_jar", finished, enabled(DelightfulItems.JAM_JAR), not(modLoaded(Modid.BC.get())), not(modLoaded(Modid.HH.get())), not(modLoaded(Modid.FRD.get())));
-		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-			DelightfulItems.GLOW_JAM_JAR.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F, Items.GLASS_BOTTLE)
+		wrap(CookingPotRecipeBuilder.cookingPotRecipe(DelightfulItems.GLOW_JAM_JAR.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F, Items.GLASS_BOTTLE)
 			.addIngredient(Ingredient.of(DelightfulItemTags.FRUITS_GLOW_BERRIES), 3)
 			.addIngredient(Items.SUGAR, 3)
 			.unlockedBy("has_glow_berries", has(DelightfulItemTags.FRUITS_GLOW_BERRIES)),
 			"food/cooking/glow_jam_jar", finished, enabled(DelightfulItems.GLOW_JAM_JAR), not(modLoaded(Modid.BC.get())), not(modLoaded(Modid.HH.get())), not(modLoaded(Modid.FRD.get())));
-		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-			DelightfulItems.NUT_BUTTER_BOTTLE.get(),
-			1,
-			CookingRecipes.NORMAL_COOKING,
-			0.35F,
-			Items.GLASS_BOTTLE
-			)
+		wrap(CookingPotRecipeBuilder.cookingPotRecipe(DelightfulItems.NUT_BUTTER_BOTTLE.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F, Items.GLASS_BOTTLE)
 			.addIngredient(Ingredient.of(DelightfulItemTags.NUTS), 3)
 			.addIngredient(Items.KELP)
 			.addIngredient(Items.SUGAR)
 			.unlockedBy("has_nuts", has(DelightfulItemTags.NUTS)),
 			"food/cooking/nut_butter_bottle", finished, enabled(DelightfulItems.NUT_BUTTER_BOTTLE), not(tagEmpty(DelightfulItemTags.NUTS)), tagEmpty(DelightfulItemTags.SALT), not(modLoaded(Modid.VD.get())));
-		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-			DelightfulItems.NUT_BUTTER_BOTTLE.get(),
-			1,
-			CookingRecipes.NORMAL_COOKING,
-			0.35F,
-			Items.GLASS_BOTTLE
-			)
+		wrap(CookingPotRecipeBuilder.cookingPotRecipe(DelightfulItems.NUT_BUTTER_BOTTLE.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F, Items.GLASS_BOTTLE)
 			.addIngredient(Ingredient.of(DelightfulItemTags.NUTS), 3)
 			.addIngredient(Items.KELP)
 			.addIngredient(DelightfulItemTags.SALT)
 			.addIngredient(Items.SUGAR)
 			.unlockedBy("has_nuts", has(DelightfulItemTags.NUTS)),
 			"food/cooking/nut_butter_bottle_from_salt", finished, enabled(DelightfulItems.NUT_BUTTER_BOTTLE), not(tagEmpty(DelightfulItemTags.NUTS)), not(tagEmpty(DelightfulItemTags.SALT)), not(modLoaded(Modid.VD.get())));
-		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-			DelightfulItems.CACTUS_CHILI.get(), 1, CookingRecipes.NORMAL_COOKING, 1F, Items.BOWL)
+		wrap(CookingPotRecipeBuilder.cookingPotRecipe(DelightfulItems.CACTUS_CHILI.get(), 1, CookingRecipes.NORMAL_COOKING, 1F, Items.BOWL)
 			.addIngredient(CommonTags.Items.RAW_PORK)
 			.addIngredient(DelightfulItemTags.CROPS_CACTUS)
 			.addIngredient(ModItems.TOMATO_SAUCE.get())
@@ -504,8 +476,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.unlockedBy("has_cactus", has(DelightfulItemTags.CROPS_CACTUS))
 			.setRecipeBookTab(CookingPotRecipeBookTab.MEALS),
 			"food/cooking/cactus_chili_from_corn", finished, enabled(DelightfulItems.CACTUS_CHILI), not(tagEmpty(DelightfulItemTags.CROPS_CORN)));
-		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-			DelightfulItems.CACTUS_CHILI.get(), 1, CookingRecipes.NORMAL_COOKING, 1F, Items.BOWL)
+		wrap(CookingPotRecipeBuilder.cookingPotRecipe(DelightfulItems.CACTUS_CHILI.get(), 1, CookingRecipes.NORMAL_COOKING, 1F, Items.BOWL)
 			.addIngredient(CommonTags.Items.RAW_PORK)
 			.addIngredient(DelightfulItemTags.CROPS_CACTUS)
 			.addIngredient(ModItems.TOMATO_SAUCE.get())
@@ -514,8 +485,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.unlockedBy("has_cactus", has(DelightfulItemTags.CROPS_CACTUS))
 			.setRecipeBookTab(CookingPotRecipeBookTab.MEALS),
 			"food/cooking/cactus_chili", finished, enabled(DelightfulItems.CACTUS_CHILI), tagEmpty(DelightfulItemTags.CROPS_CORN));
-		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-			DelightfulItems.CACTUS_SOUP.get(), 1, CookingRecipes.NORMAL_COOKING, 1F, Items.BOWL)
+		wrap(CookingPotRecipeBuilder.cookingPotRecipe(DelightfulItems.CACTUS_SOUP.get(), 1, CookingRecipes.NORMAL_COOKING, 1F, Items.BOWL)
 			.addIngredient(DelightfulItemTags.CROPS_CACTUS)
 			.addIngredient(CommonTags.Items.GRAIN_RICE)
 			.addIngredient(CommonTags.Items.CROPS_TOMATO)
@@ -523,8 +493,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.unlockedBy("has_cactus_chunk", has(DelightfulItemTags.CROPS_CACTUS))
 			.setRecipeBookTab(CookingPotRecipeBookTab.MEALS),
 			"food/cooking/cactus_soup", finished, enabled(DelightfulItems.CACTUS_SOUP));
-		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-			DelightfulItems.VENISON_STEW.get(), 1, CookingRecipes.NORMAL_COOKING, 1F, Items.BOWL)
+		wrap(CookingPotRecipeBuilder.cookingPotRecipe(DelightfulItems.VENISON_STEW.get(), 1, CookingRecipes.NORMAL_COOKING, 1F, Items.BOWL)
 			.addIngredient(DelightfulItemTags.RAW_VENISON)
 			.addIngredient(Tags.Items.CROPS_CARROT)
 			.addIngredient(Tags.Items.CROPS_POTATO)
@@ -532,8 +501,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.unlockedBy("has_raw_venison", has(DelightfulItemTags.RAW_VENISON))
 			.setRecipeBookTab(CookingPotRecipeBookTab.MEALS),
 			"food/cooking/venison_stew", finished, enabled(DelightfulItems.VENISON_STEW), not(tagEmpty(DelightfulItemTags.RAW_VENISON_COMPAT)), enabled(DelightfulItems.ANIMAL_FAT));
-		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-			DelightfulItems.VENISON_STEW.get(), 1, CookingRecipes.NORMAL_COOKING, 1F, Items.BOWL)
+		wrap(CookingPotRecipeBuilder.cookingPotRecipe(DelightfulItems.VENISON_STEW.get(), 1, CookingRecipes.NORMAL_COOKING, 1F, Items.BOWL)
 			.addIngredient(DelightfulItemTags.RAW_VENISON)
 			.addIngredient(Tags.Items.CROPS_CARROT)
 			.addIngredient(Tags.Items.CROPS_POTATO)
@@ -541,8 +509,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.unlockedBy("has_raw_venison", has(DelightfulItemTags.RAW_VENISON))
 			.setRecipeBookTab(CookingPotRecipeBookTab.MEALS),
 			"food/cooking/venison_stew_no_animal_fat", finished, enabled(DelightfulItems.VENISON_STEW), not(tagEmpty(DelightfulItemTags.RAW_VENISON_COMPAT)), not(enabled(DelightfulItems.ANIMAL_FAT)));
-		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-			DelightfulItems.COCONUT_CURRY.get(), 1, CookingRecipes.NORMAL_COOKING, 1F, Items.BOWL)
+		wrap(CookingPotRecipeBuilder.cookingPotRecipe(DelightfulItems.COCONUT_CURRY.get(), 1, CookingRecipes.NORMAL_COOKING, 1F, Items.BOWL)
 			.addIngredient(DelightfulItemTags.COCONUT)
 			.addIngredient(CommonTags.Items.MILK)
 			.addIngredient(CommonTags.Items.RAW_CHICKEN)
@@ -552,8 +519,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.unlockedBy("has_coconut", has(DelightfulItemTags.COCONUT))
 			.setRecipeBookTab(CookingPotRecipeBookTab.MEALS),
 			"food/cooking/coconut_curry_no_ginger", finished, enabled(DelightfulItems.COCONUT_CURRY), not(tagEmpty(DelightfulItemTags.COCONUT)), tagEmpty(DelightfulItemTags.CROPS_GINGER));
-		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-			DelightfulItems.COCONUT_CURRY.get(), 1, CookingRecipes.NORMAL_COOKING, 1F, Items.BOWL)
+		wrap(CookingPotRecipeBuilder.cookingPotRecipe(DelightfulItems.COCONUT_CURRY.get(), 1, CookingRecipes.NORMAL_COOKING, 1F, Items.BOWL)
 			.addIngredient(DelightfulItemTags.COCONUT)
 			.addIngredient(CommonTags.Items.MILK)
 			.addIngredient(CommonTags.Items.RAW_CHICKEN)
@@ -563,29 +529,25 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.unlockedBy("has_coconut", has(DelightfulItemTags.COCONUT))
 			.setRecipeBookTab(CookingPotRecipeBookTab.MEALS),
 			"food/cooking/coconut_curry", finished, enabled(DelightfulItems.COCONUT_CURRY), not(tagEmpty(DelightfulItemTags.COCONUT)), not(tagEmpty(DelightfulItemTags.CROPS_GINGER)));
-		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-			DelightfulItems.CRAB_RANGOON.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
+		wrap(CookingPotRecipeBuilder.cookingPotRecipe(DelightfulItems.CRAB_RANGOON.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
 			.addIngredient(CommonTags.Items.DOUGH)
 			.addIngredient(DelightfulItemTags.CHEESE)
 			.addIngredient(DelightfulItemTags.COOKED_CRAB_MEAT)
 			.unlockedBy("has_cooked_crab", has(DelightfulItemTags.COOKED_CRAB_MEAT)),
 			"food/cooking/crab_rangoon", finished, enabled(DelightfulItems.CRAB_RANGOON), not(tagEmpty(DelightfulItemTags.COOKED_CRAB_MEAT)), not(tagEmpty(DelightfulItemTags.CHEESE)), tagEmpty(DelightfulItemTags.CHEESE_MILD_CREAM));
-		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-			DelightfulItems.CRAB_RANGOON.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
+		wrap(CookingPotRecipeBuilder.cookingPotRecipe(DelightfulItems.CRAB_RANGOON.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
 			.addIngredient(CommonTags.Items.DOUGH)
 			.addIngredient(DelightfulItemTags.CHEESE_MILD_CREAM)
 			.addIngredient(DelightfulItemTags.COOKED_CRAB_MEAT)
 			.unlockedBy("has_cooked_crab", has(DelightfulItemTags.COOKED_CRAB_MEAT)),
 			"food/cooking/crab_rangoon_from_cream_cheese", finished, enabled(DelightfulItems.CRAB_RANGOON), not(tagEmpty(DelightfulItemTags.COOKED_CRAB_MEAT)), not(tagEmpty(DelightfulItemTags.CHEESE_MILD_CREAM)));
-		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-			DelightfulItems.CRAB_RANGOON.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
+		wrap(CookingPotRecipeBuilder.cookingPotRecipe(DelightfulItems.CRAB_RANGOON.get(), 1, CookingRecipes.NORMAL_COOKING, 0.35F)
 			.addIngredient(CommonTags.Items.DOUGH)
 			.addIngredient(CommonTags.Items.MILK)
 			.addIngredient(DelightfulItemTags.COOKED_CRAB_MEAT)
 			.unlockedBy("has_cooked_crab", has(DelightfulItemTags.COOKED_CRAB_MEAT)),
 			"food/cooking/crab_rangoon_from_milk", finished, enabled(DelightfulItems.CRAB_RANGOON), not(tagEmpty(DelightfulItemTags.COOKED_CRAB_MEAT)), tagEmpty(DelightfulItemTags.CHEESE));
-		wrap(CookingPotRecipeBuilder.cookingPotRecipe(
-			Items.HONEY_BOTTLE, 3, CookingRecipes.NORMAL_COOKING, 0.35F)
+		wrap(CookingPotRecipeBuilder.cookingPotRecipe(Items.HONEY_BOTTLE, 3, CookingRecipes.NORMAL_COOKING, 0.35F)
 			.addIngredient(Items.HONEY_BOTTLE, 2)
 			.addIngredient(DelightfulItems.CHOPPED_CLOVER.get(), 4),
 			"food/clover_honey", finished, enabled("clover_honey"), enabled(DelightfulItems.CHOPPED_CLOVER), or(modLoaded(Modid.BB.get()), not(tagEmpty(DelightfulItemTags.CLOVER))));
@@ -630,43 +592,22 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.pattern("f")
 			.unlockedBy("has_fat", has(DelightfulItems.ANIMAL_FAT.get())),
 			"candle_from_animal_fat", finished, enabled(DelightfulItems.ANIMAL_FAT));
-		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
-			Ingredient.of(Items.OAK_SAPLING),
-			new ToolActionIngredient(ToolActions.AXE_DIG),
-			Items.STICK, 1)
+		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(Items.OAK_SAPLING), CuttingRecipes.AXES, Items.STICK, 1)
 			.addResultWithChance(DelightfulItems.ACORN.get(), 0.2F, 1),
 			"cutting/oak_sapling", finished, enabled(DelightfulItems.ACORN));
-		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
-			Ingredient.of(Items.DARK_OAK_SAPLING),
-			new ToolActionIngredient(ToolActions.AXE_DIG),
-			Items.STICK, 1)
+		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(Items.DARK_OAK_SAPLING), CuttingRecipes.AXES, Items.STICK, 1)
 			.addResultWithChance(DelightfulItems.ACORN.get(), 0.2F, 1),
 			"cutting/dark_oak_sapling", finished, enabled(DelightfulItems.ACORN));
-		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
-			Ingredient.of(DelightfulItemTags.TEA_LEAVES_GREEN),
-			new ToolActionIngredient(ToolActions.SHOVEL_DIG),
-			Items.GREEN_DYE, 1)
+		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(DelightfulItemTags.TEA_LEAVES_GREEN), CuttingRecipes.SHOVELS, Items.GREEN_DYE, 1)
 			.addResultWithChance(DelightfulItems.MATCHA.get(), 0.5F, 1),
 			"cutting/green_tea_leaves", finished, enabled(DelightfulItems.MATCHA), not(tagEmpty(DelightfulItemTags.TEA_LEAVES_GREEN)), not(modLoaded(Modid.YH.get())));
-		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
-			Ingredient.of(DelightfulItemTags.CLOVER),
-			Ingredient.of(CommonTags.Items.TOOLS_KNIVES),
-			DelightfulItems.CHOPPED_CLOVER.get(), 2),
+		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(DelightfulItemTags.CLOVER), CuttingRecipes.KNIVES, DelightfulItems.CHOPPED_CLOVER.get(), 2),
 			"cutting/clover", finished, enabled(DelightfulItems.CHOPPED_CLOVER), not(tagEmpty(DelightfulItemTags.CLOVER)));
-		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
-			Ingredient.of(DelightfulItems.BAKLAVA.get()),
-			Ingredient.of(CommonTags.Items.TOOLS_KNIVES),
-			DelightfulItems.BAKLAVA_SLICE.get(), 4),
+		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(DelightfulItems.BAKLAVA.get()), CuttingRecipes.KNIVES, DelightfulItems.BAKLAVA_SLICE.get(), 4),
 			"cutting/baklava", finished, enabled(DelightfulItems.BAKLAVA), enabled(DelightfulItems.BAKLAVA_SLICE));
-		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
-			Ingredient.of(DelightfulItems.SALMONBERRY_PIE.get()),
-			Ingredient.of(CommonTags.Items.TOOLS_KNIVES),
-			DelightfulItems.SALMONBERRY_PIE_SLICE.get(), 4),
+		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(DelightfulItems.SALMONBERRY_PIE.get()), CuttingRecipes.KNIVES, DelightfulItems.SALMONBERRY_PIE_SLICE.get(), 4),
 			"cutting/salmonberry_pie", finished, enabled("salmonberry_pie"), enabled("salmonberry_pie_slice"));
-		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
-			Ingredient.of(DelightfulItems.MINI_MELON.get()),
-			Ingredient.of(CommonTags.Items.TOOLS_KNIVES),
-			Items.MELON_SLICE, 4),
+		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(DelightfulItems.MINI_MELON.get()), CuttingRecipes.KNIVES, Items.MELON_SLICE, 4),
 			"cutting/mini_melon", finished, enabled(DelightfulItems.MINI_MELON));
 		wrap(ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, DelightfulItems.MINI_MELON.get(), 1)
 			.pattern("mm")
@@ -674,20 +615,11 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.define('m', Items.MELON_SLICE)
 			.unlockedBy("has_melon_slice", has(Items.MELON_SLICE)),
 			"mini_melon_from_slices", finished, enabled(DelightfulItems.MINI_MELON));
-		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
-			Ingredient.of(DelightfulItemTags.RAW_VENISON_COMPAT),
-			Ingredient.of(CommonTags.Items.TOOLS_KNIVES),
-			DelightfulItems.VENISON_CHOPS.get(), 2),
+		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(DelightfulItemTags.RAW_VENISON_COMPAT), CuttingRecipes.KNIVES, DelightfulItems.VENISON_CHOPS.get(), 2),
 			"cutting/raw_venison", finished, enabled(DelightfulItems.VENISON_CHOPS), not(tagEmpty(DelightfulItemTags.RAW_VENISON_COMPAT)), tagEmpty(DelightfulItemTags.RAW_VENISON_CHOP_COMPAT));
-		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
-			Ingredient.of(DelightfulItemTags.COOKED_VENISON_COMPAT),
-			Ingredient.of(CommonTags.Items.TOOLS_KNIVES),
-			DelightfulItems.COOKED_VENISON_CHOPS.get(), 2),
+		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(DelightfulItemTags.COOKED_VENISON_COMPAT), CuttingRecipes.KNIVES, DelightfulItems.COOKED_VENISON_CHOPS.get(), 2),
 			"cutting/cooked_venison", finished, enabled(DelightfulItems.COOKED_VENISON_CHOPS), not(tagEmpty(DelightfulItemTags.COOKED_VENISON_COMPAT)), tagEmpty(DelightfulItemTags.COOKED_VENISON_CHOP_COMPAT));
-		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(
-			Ingredient.of(DelightfulItems.CACTUS_STEAK.get()),
-			Ingredient.of(CommonTags.Items.TOOLS_KNIVES),
-			Items.GREEN_DYE, 1),
+		wrap(CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(DelightfulItems.CACTUS_STEAK.get()), CuttingRecipes.KNIVES, Items.GREEN_DYE, 1),
 			"cutting/cactus_steak", finished, enabled(DelightfulItems.CACTUS_STEAK));
 		wrap(ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.MELON_SLICE, 2)
 			.requires(DelightfulItems.MINI_MELON.get())
@@ -835,27 +767,14 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			.save(f))
 			.generateAdvancement()
 			.build(finished, ModItems.CHOCOLATE_PIE.getId());
-		CuttingBoardRecipeBuilder.cuttingRecipe(
-				Ingredient.of(DelightfulItems.WILD_SALMONBERRIES.get()),
-				Ingredient.of(CommonTags.Items.TOOLS_KNIVES),
-				DelightfulItems.SALMONBERRIES.get(), 2
-			).addResultWithChance(Items.ORANGE_DYE, 0.5F)
+		CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(DelightfulItems.WILD_SALMONBERRIES.get()), CuttingRecipes.KNIVES, DelightfulItems.SALMONBERRIES.get(), 2)
+			.addResultWithChance(Items.ORANGE_DYE, 0.5F)
 			.save(finished, Util.delight("cutting/wild_salmonberries"));
-		CuttingBoardRecipeBuilder.cuttingRecipe(
-			Ingredient.of(Items.DEAD_BUSH),
-			new ToolActionIngredient(ToolActions.AXE_DIG),
-			Items.STICK, 2)
+		CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(Items.DEAD_BUSH), CuttingRecipes.AXES, Items.STICK, 2)
 			.save(finished, Util.delight("cutting/dead_bush"));
-		CuttingBoardRecipeBuilder.cuttingRecipe(
-			Ingredient.of(Items.SUGAR_CANE),
-			Ingredient.of(CommonTags.Items.TOOLS_KNIVES),
-			Items.SUGAR, 1)
+		CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(Items.SUGAR_CANE), CuttingRecipes.KNIVES, Items.SUGAR, 1)
 			.addResultWithChance(Items.SUGAR, 0.5F, 1)
 			.save(finished, Util.delight("cutting/sugar_cane"));
-	}
-
-	private InventoryChangeTrigger.TriggerInstance has(ItemLike... items) {
-		return InventoryChangeTrigger.TriggerInstance.hasItems(items);
 	}
 
 	private void wrap(RecipeBuilder builder, String name, Consumer<FinishedRecipe> consumer, ICondition... conds) {
@@ -877,21 +796,6 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 			cond.addCondition(new NotCondition(new ModLoadedCondition(conflict.get())));
 			}
 		}
-		cond.addRecipe(recipe[0])
-			.generateAdvancement()
-			.build(consumer, loc);
-	}
-
-	private void wrap(SmithingTransformRecipeBuilder builder, String name, Consumer<FinishedRecipe> consumer, ICondition... conds) {
-		ResourceLocation loc = Util.delight(name);
-		ConditionalRecipe.Builder cond = ConditionalRecipe.builder();
-		if (conds.length >= 1) {
-			for (ICondition currentCond : conds) {
-			cond.addCondition(currentCond);
-			}
-		}
-		FinishedRecipe[] recipe = new FinishedRecipe[1];
-		builder.save(f -> recipe[0] = f, loc);
 		cond.addRecipe(recipe[0])
 			.generateAdvancement()
 			.build(consumer, loc);
@@ -1035,9 +939,5 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
 
 	private ShapedRecipeBuilder shaped(RecipeCategory category, RegistryObject<Item> returns, int count) {
 		return ShapedRecipeBuilder.shaped(category, returns.get(), count);
-	}
-
-	private ShapedRecipeBuilder shaped(RecipeCategory category, RegistryObject<Item> returns) {
-		return shaped(category, returns, 1);
 	}
 }

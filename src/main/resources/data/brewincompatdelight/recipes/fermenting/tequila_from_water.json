@@ -12,7 +12,7 @@
           "item": "brewincompatdelight:tequila"
         },
         {
-          "type":"forge:not",
+          "type": "forge:not",
           "value": {
             "type": "forge:and",
             "values": [
@@ -29,14 +29,14 @@
         }
       ],
       "recipe": {
-        "type":"brewinandchewin:fermenting",
-        "basefluid":{
-          "count":1000,
-          "fluid":"minecraft:water"
+        "type": "brewinandchewin:fermenting",
+        "basefluid": {
+          "count": 1000,
+          "fluid": "minecraft:water"
         },
-        "experience":1.0,
-        "fermentingtime":9600,
-        "ingredients":[
+        "experience": 1.0,
+        "fermentingtime": 9600,
+        "ingredients": [
           {
             "tag": "forge:crops/cactus"
           },
@@ -47,13 +47,13 @@
             "tag": "forge:crops/cactus"
           },
           {
-            "item":"minecraft:sugar"
+            "item": "minecraft:sugar"
           }
         ],
-        "recipe_book_tab":"drinks",
-        "result":{
+        "recipe_book_tab": "drinks",
+        "result": {
           "count": 1000,
-          "fluid":"brewincompatdelight:tequila"
+          "fluid": "brewincompatdelight:tequila"
         },
         "temperature": 5
       }

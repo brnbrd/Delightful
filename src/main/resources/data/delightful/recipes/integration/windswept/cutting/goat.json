@@ -19,9 +19,15 @@
             "item": "windswept:goat"
           }
         ],
-        "tool": {
-          "tag": "forge:tools/knives"
-        },
+        "tool": [
+          {
+            "type": "farmersdelight:tool_action",
+            "action": "knife_dig"
+          },
+          {
+            "tag": "forge:tools/knives"
+          }
+        ],
         "result": [
           {
             "item": "extra_compat:chevon_chop",

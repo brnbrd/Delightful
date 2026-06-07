@@ -12,32 +12,32 @@
           "item": "brewincompatdelight:tequila_sunrise"
         },
         {
-          "type":"forge:not",
+          "type": "forge:not",
           "value": {
-            "type":"forge:tag_empty",
-            "tag":"forge:drinks/tequila"
+            "type": "forge:tag_empty",
+            "tag": "forge:drinks/tequila"
           }
         },
         {
-          "type":"forge:not",
+          "type": "forge:not",
           "value": {
-            "type":"forge:tag_empty",
-            "tag":"forge:juices/orange"
+            "type": "forge:tag_empty",
+            "tag": "forge:juices/orange"
           }
         }
       ],
       "recipe": {
-        "type":"minecraft:crafting_shapeless",
-        "ingredients":[
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
           {
-            "tag":"forge:drinks/tequila"
+            "tag": "forge:drinks/tequila"
           },
           {
-            "tag":"forge:juices/orange"
+            "tag": "forge:juices/orange"
           }
         ],
         "result": {
-          "item":"brewincompatdelight:tequila_sunrise",
+          "item": "brewincompatdelight:tequila_sunrise",
           "count": 2
         }
       }
