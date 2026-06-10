@@ -176,7 +176,7 @@ configBackground="farmersdelight:textures/block/tatami_mat_half.png"
 [[dependencies.delightful]]
     modId="corn_delight"
     mandatory=false
-    versionRange="[1.1,)"
+    versionRange="[1.2.11,)"
     ordering="AFTER"
     side="BOTH"
 

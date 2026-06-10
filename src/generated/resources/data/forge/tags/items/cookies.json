@@ -6,6 +6,10 @@
     "farmersdelight:sweet_berry_cookie",
     "delightful:glow_jam_cookie",
     {
+      "id": "#supplementaries:cookies",
+      "required": false
+    },
+    {
       "id": "farmersrespite:green_tea_cookie",
       "required": false
     },

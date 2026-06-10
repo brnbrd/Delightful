@@ -184,6 +184,7 @@ public class DelightfulLanguageProvider extends LanguageProvider {
 		addItemTag(DelightfulItemTags.FRUITS_CITRUS, "Citrus Fruits");
 		addItemTag(DelightfulItemTags.FRUITS_PRICKLY_PEAR, "Prickly Pear");
 		addItemTag(DelightfulItemTags.CROPS_GINGER, "Ginger");
+		addItemTag(DelightfulItemTags.CROPS_CORN, "Corn");
 		addItemTag(DelightfulItemTags.CHEESE, "Cheese");
 		addItemTag(DelightfulItemTags.BURGER_BUN, "Burger Bun");
 		addItemTag(DelightfulItemTags.ICE_CUBES, "Ice Cubes");

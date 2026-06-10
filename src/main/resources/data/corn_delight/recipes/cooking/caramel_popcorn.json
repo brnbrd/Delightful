@@ -1,0 +1,78 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "corn_delight:caramel_popcorn"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:seeds/corn"
+          }
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:caramel"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "ingredients": [
+          {
+            "tag": "forge:seeds/corn"
+          },
+          {
+            "tag": "forge:caramel"
+          }
+        ],
+        "result": {
+          "item": "corn_delight:caramel_popcorn"
+        },
+        "experience": 0.35,
+        "cookingtime": 200
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "corn_delight:caramel_popcorn"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:seeds/corn"
+          }
+        },
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:caramel"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "ingredients": [
+          {
+            "tag": "forge:seeds/corn"
+          },
+          {
+            "item": "minecraft:sugar"
+          }
+        ],
+        "result": {
+          "item": "corn_delight:caramel_popcorn"
+        },
+        "experience": 0.35,
+        "cookingtime": 200
+      }
+    }
+  ]
+}

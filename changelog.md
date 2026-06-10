@@ -6,6 +6,10 @@
 - All cutting recipes now check for both a tag and a "tool action"
 - Updated modid of VanillaBackport items to `minecraft`
 
+### Translations
+- Added `tr_tr` (merged [#154](https://github.com/brnbrd/Delightful/pull/154))
+- Updated `ru_ru` (merged [#155](https://github.com/brnbrd/Delightful/pull/155))
+
 
 ## 3.8.1
 

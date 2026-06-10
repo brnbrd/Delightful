@@ -1,4 +1,4 @@
-// 1.20.1	2026-06-07T11:17:18.0126058	delightful
+// 1.20.1	2026-06-09T19:54:53.6270116	delightful
 8980358a7235536580c6b076956e78e18eca38e9 data/additionaladditions/tags/items/gilded_netherite_upgrade.json
 251ab39f668c15d972d4630264e39f06ec646606 data/additionaladditions/tags/items/gold_ring.json
 9136930399e99d219f34c05a02844b699ef0873a data/additionaladditions/tags/items/rose_gold_alloy.json
@@ -61,6 +61,7 @@ e185458fa4388358546c2d96052f11c76dccd50b data/forge/tags/items/bones.json
 4b13fa40762a9acf6dcd87437b39b640d19873b4 data/forge/tags/items/bread.json
 cbd47de368751306e7d7f0cfb8054fc816b1695d data/forge/tags/items/burger_bun.json
 da7396ec88fe02416ba90505a88d552045499872 data/forge/tags/items/cacti.json
+adeb7d54598045bfd6a3b740df0f13cb0c2fd8cd data/forge/tags/items/caramel.json
 be6d5de873996c5da60b65ae5b85bf54909b7d36 data/forge/tags/items/cattail.json
 f57fbc394cb022a6899e87ca9acfdb3ebcfb1a34 data/forge/tags/items/cheese.json
 c1b24bd437c9d1fa5653bfe94d1f3855d1b7ff33 data/forge/tags/items/cheese/mild.json
@@ -79,7 +80,7 @@ a7608c3cfb4abd95bcb2481c958e85ea3d99f561 data/forge/tags/items/cooked_goat.json
 a948b48d3cbea884a1ace570d465fb8a81e6973e data/forge/tags/items/cooked_nuts.json
 9f77948b8bcc8ff9ce8d4f192f7156c733795ab7 data/forge/tags/items/cooked_rabbit.json
 522cf04b2689c42171edbe4fe3fa6e3fa9651b1f data/forge/tags/items/cooked_venison.json
-bf49ff1fa29ae415dd618ae8e464650d2ac75353 data/forge/tags/items/cookies.json
+d481f695605143cf4df146514fe161774165cabe data/forge/tags/items/cookies.json
 b909ff8d1fa9d605fe5c66fa82057da1bcfbc4cc data/forge/tags/items/cookies/source_berry.json
 f5e3bd9ca2ad5fe644f414c1b701920c77f05156 data/forge/tags/items/cornbread.json
 7c0edbb702d3fbe9e1c68f07804da13ef22fe6ea data/forge/tags/items/crab_claw.json

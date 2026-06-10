@@ -728,6 +728,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addOptional(Modid.N.rl("chocolate_bar"))
 			.addOptional(Modid.CRE.rl("bar_of_chocolate"))
 			.addOptional(Modid.HH.rl("chocolate_bar"));
+		this.tag(DelightfulItemTags.CARAMEL).addOptional(Modid.HH.rl("caramel"));
 		this.tag(DelightfulItemTags.SEEDS_SALMONBERRY).add(DelightfulItems.SALMONBERRY_PIPS.get());
 		this.tag(DelightfulItemTags.SEEDS_CANTALOUPE).add(DelightfulItems.CANTALOUPE_SEEDS.get());
 		this.tag(CommonTags.Items.SEEDS)
@@ -767,6 +768,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.add(ModItems.HONEY_COOKIE.get())
 			.add(ModItems.SWEET_BERRY_COOKIE.get())
 			.add(DelightfulItems.GLOW_JAM_COOKIE.get())
+			.addOptionalTag(Modid.SUP.rl("cookies"))
 			.addOptional(Modid.FR.rl("green_tea_cookie"))
 			.addOptional(Modid.AD.rl("mulberry_cookie"))
 			.addOptional(Modid.AD.rl("maple_cookie"))
